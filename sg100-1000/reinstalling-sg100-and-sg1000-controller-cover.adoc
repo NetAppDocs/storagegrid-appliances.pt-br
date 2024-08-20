@@ -1,0 +1,63 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, cover, install, installing, installation, reinstall, reinstalling, reinstallation, remove, removing, removal 
+summary: Retire a tampa do aparelho para aceder aos componentes internos para manutenção e volte a colocar a tampa quando terminar. 
+---
+= Substitua a tampa do aparelho SG100 ou SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire a tampa do aparelho para aceder aos componentes internos para manutenção e volte a colocar a tampa quando terminar.
+
+
+
+== Retire a tampa do aparelho SG100 ou SG1000
+
+Retire a tampa do aparelho para aceder aos componentes internos para manutenção.
+
+.Antes de começar
+Retire o aparelho do armário ou do rack para aceder à tampa superior.
+
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Remova o aparelho SG100 ou SG1000 do gabinete ou rack"]
+
+.Passos
+. Certifique-se de que o trinco da tampa do aparelho não está bloqueado. Se necessário, rode o bloqueio do trinco de plástico azul um quarto de volta na direção de desbloqueio, conforme ilustrado no bloqueio do trinco.
+. Rode o trinco para cima e para trás em direção à parte traseira do chassis do aparelho até parar; em seguida, levante cuidadosamente a tampa do chassis e coloque-a de lado.
++
+image::../media/sg6060_cover_latch_open.jpg[Trinco da tampa aberto]
+
++
+
+CAUTION: Enrole a extremidade da correia de uma pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas ao trabalhar no interior do aparelho.
+
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+
+
+== Volte a instalar a tampa do aparelho SG100 ou SG1000
+
+Volte a instalar a tampa do aparelho quando a manutenção interna do hardware estiver concluída.
+
+.Antes de começar
+Concluiu todos os procedimentos de manutenção no interior do aparelho.
+
+.Passos
+. Com a trava da tampa aberta, segure a tampa acima do chassi e alinhe o orifício no trinco da tampa superior com o pino no chassi. Quando a tampa estiver alinhada, baixe-a sobre o chassis.
++
+image::../media/sg6060_cover_latch_alignment_pin.jpg[Pino de alinhamento do trinco da tampa]
+
+. Rode o trinco da tampa para a frente e para baixo até parar e a tampa assentar totalmente no chassis. Verifique se não existem folgas ao longo da extremidade dianteira da tampa.
++
+Se a tampa não estiver totalmente encaixada, poderá não conseguir deslizar o aparelho para dentro do rack.
+
+. Opcional: Rode o fecho de plástico azul um quarto de volta na direção do bloqueio, conforme ilustrado no bloqueio do trinco, para o bloquear.
+
+
+.Depois de terminar
+link:reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html["Volte a instalar o aparelho no armário ou no rack."]

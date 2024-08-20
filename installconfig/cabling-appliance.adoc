@@ -1,0 +1,1127 @@
+---
+permalink: installconfig/cabling-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, cabling, wiring, connecting, cable, wire, connect 
+summary: Ligue as portas de rede do dispositivo ou controlador à rede de grelha e à rede de cliente opcional para StorageGRID. Para alguns aparelhos, você também coneta a porta de gerenciamento do aparelho ao laptop de serviço ou faz conexões entre as portas de gerenciamento do controlador. 
+---
+= Aparelho de cabo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ligue as portas de rede do dispositivo ou controlador à rede de grelha e à rede de cliente opcional para StorageGRID. Para alguns aparelhos, você também coneta a porta de gerenciamento do aparelho ao laptop de serviço ou faz conexões entre as portas de gerenciamento do controlador.
+
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+Você deve conetar a porta de gerenciamento do dispositivo ao laptop de serviço e conetar as portas de rede do dispositivo à rede de grade e à rede de cliente opcional para StorageGRID.
+
+.Antes de começar
+* Você tem um cabo Ethernet RJ-45 para conetar a porta de gerenciamento.
+* Tem uma das seguintes opções para as portas de rede. Estes itens não são fornecidos com o aparelho.
++
+** Um a quatro cabos Twinax para ligar as quatro portas de rede.
+** Para o SG100, um a quatro transcetores SFP ou SFP28 se você planeja usar cabos óticos para as portas.
+** Para o SG1000, um a quatro transcetores QSFP ou QSFP28 se você planeja usar cabos óticos para as portas.
+
+
+
+
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte ou remova qualquer parte de um transcetor SFP ou QSFP. Você pode estar exposto à radiação laser.
+
+.Sobre esta tarefa
+As figuras a seguir mostram as portas na parte traseira do aparelho.
+
+Conexões de porta SG100:
+
+image::../media/sg100_connections.png[SG100 conetores traseiros]
+
+Conexões de porta SG1000:
+
+image::../media/sg1000_connections.png[Conexões de SG1000 portas]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Porta de gerenciamento BMC no dispositivo
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede à interface BMC.
+
+
+
+ a| 
+2
+ a| 
+Quatro portas de rede no dispositivo
+ a| 
+* Para o SG100: 10/25-GbE
+* Para o SG1000: 10/25/40/100-GbE
+
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. link:../installconfig/gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modos Port bond (modos Port bond (SG100 e SG1000)"]Consulte .
+
+
+
+ a| 
+3
+ a| 
+Porta de rede de administração no dispositivo (identificada como P1 nas figuras)
+ a| 
+1 GbE (RJ-45)
+
+*Atenção:* esta porta funciona apenas a 1000 BaseT/full e não suporta velocidades de 10 ou 100 megabits.
+ a| 
+Liga o dispositivo à rede de administração para StorageGRID.
+
+
+
+ a| 
+ a| 
+Porta RJ-45 mais à direita no aparelho
+ a| 
+1 GbE (RJ-45)
+
+*Atenção:* esta porta funciona apenas a 1000 BaseT/full e não suporta velocidades de 10 ou 100 megabits.
+ a| 
+* Pode ser ligado com a porta de gerenciamento 1 se você quiser uma conexão redundante com a rede de administração.
+* Pode ser deixado desconetado e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, pode ser utilizado para ligar o dispositivo a um computador portátil de serviço se os endereços IP atribuídos por DHCP não estiverem disponíveis.
+
+
+|===
+.Passos
+. Conete a porta de gerenciamento BMC do dispositivo à rede de gerenciamento, usando um cabo Ethernet.
++
+Embora essa conexão seja opcional, recomenda-se facilitar o suporte.
+
+. Ligue as portas de rede do aparelho aos comutadores de rede adequados, utilizando cabos Twinax ou cabos óticos e transcetores.
++
+Consulte a tabela a seguir para saber o equipamento necessário para o hardware e a velocidade da ligação.
+
++
+[cols="2a,2a"]
+|===
+| Velocidade da ligação de SG100 (GbE) | Equipamento necessário 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP
+
+
+
+ a| 
+25
+ a| 
+Transcetor SFP28
+
+
+
+| Velocidade da ligação de SG1000 (GbE) | Equipamento necessário 
+
+
+ a| 
+10
+ a| 
+Transceptor QSA e SFP
+
+
+
+ a| 
+25
+ a| 
+Transcetor QSA e SFP28
+
+
+
+ a| 
+40
+ a| 
+Transceptor QSFP
+
+
+
+ a| 
+100
+ a| 
+Transcetor QFSP28
+
+|===
++
+** Em modelos que suportam negociação automática como uma opção de velocidade de porta, se o modo de ligação de porta fixa estiver selecionado, você pode executar as portas dedicadas à rede de Grade StorageGRID a uma velocidade diferente das portas dedicadas à rede do cliente.
+** Em modelos que não suportam negociação automática como opção de velocidade de porta, todas as quatro portas de rede devem usar a mesma velocidade de link.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,2a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
+** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+. Se pretender utilizar a rede de administração para StorageGRID, ligue a porta de rede de administração do dispositivo à rede de administração, utilizando um cabo Ethernet.
+
+
+--
+.SG110 e SG1100
+--
+Ligue a porta de gestão do dispositivo ao computador portátil de serviço e ligue as portas de rede do dispositivo à rede de grelha e à rede de cliente opcional para StorageGRID.
+
+.Antes de começar
+* Você tem um cabo Ethernet RJ-45 para conetar a porta de gerenciamento.
+* Tem uma das seguintes opções para as portas de rede. Estes itens não são fornecidos com o aparelho.
++
+** Um a quatro cabos Twinax para ligar as quatro portas de rede.
+** Para o SG110, um a quatro transcetores SFP ou SFP28 se você planeja usar cabos óticos para as portas.
+** Para o SG1100, um a quatro transcetores QSFP ou QSFP28 se você planeja usar cabos óticos para as portas.
+
+
+
+
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte ou remova qualquer parte de um transcetor SFP ou QSFP. Você pode estar exposto à radiação laser.
+
+.Sobre esta tarefa
+As figuras a seguir mostram as portas na parte traseira do aparelho.
+
+Conexões de porta SG110:
+
+image::../media/sgf6112_connections.png[SG110 conetores traseiros]
+
+Conexões de porta SG1100:
+
+image::../media/sg1100_connections.png[Conexões de SG1000 portas]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Porta de gerenciamento BMC no dispositivo
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede à interface BMC.
+
+
+
+ a| 
+2
+ a| 
+Quatro portas de rede no dispositivo
+ a| 
+* Para o SG110: 10/25-GbE
+* Para o SG1100: 10/25/40/100-GbE
+
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. Consulte link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de ligação de porta (SG110 e SG1100)"]
+
+
+
+ a| 
+3
+ a| 
+Porta de rede Admin no dispositivo
+ a| 
+1 GbE (RJ-45)
+
+*Importante:* esta porta opera apenas a 1/10-GbE (RJ-45) e não suporta velocidades de 100 megabits.
+ a| 
+Liga o dispositivo à rede de administração para StorageGRID.
+
+
+
+ a| 
+ a| 
+Porta RJ-45 mais à direita no aparelho
+ a| 
+1 GbE (RJ-45)
+
+*Importante:* esta porta opera apenas a 1/10-GbE (RJ-45) e não suporta velocidades de 100 megabits.
+ a| 
+* Pode ser ligado com a porta de gerenciamento 1 se você quiser uma conexão redundante com a rede de administração.
+* Pode ser deixado desconetado e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, pode ser utilizado para ligar o dispositivo a um computador portátil de serviço se os endereços IP atribuídos por DHCP não estiverem disponíveis.
+
+
+|===
+.Passos
+. Conete a porta de gerenciamento BMC do dispositivo à rede de gerenciamento, usando um cabo Ethernet.
++
+Embora essa conexão seja opcional, recomenda-se facilitar o suporte.
+
+. Ligue as portas de rede do aparelho aos comutadores de rede adequados, utilizando cabos Twinax ou cabos óticos e transcetores.
++
+Consulte a tabela a seguir para saber o equipamento necessário para o hardware e a velocidade da ligação.
+
++
+[cols="2a,2a"]
+|===
+| Velocidade da ligação de SG110 (GbE) | Equipamento necessário 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP
+
+
+
+ a| 
+25
+ a| 
+Transcetor SFP28
+
+
+
+| Velocidade da ligação de SG1100 (GbE) | Equipamento necessário 
+
+
+ a| 
+10
+ a| 
+Transceptor QSA e SFP
+
+
+
+ a| 
+25
+ a| 
+Transcetor QSA e SFP28
+
+
+
+ a| 
+40
+ a| 
+Transceptor QSFP
+
+
+
+ a| 
+100
+ a| 
+Transcetor QFSP28
+
+|===
++
+** Em modelos que suportam negociação automática como uma opção de velocidade de porta, se o modo de ligação de porta fixa estiver selecionado, você pode executar as portas dedicadas à rede de Grade StorageGRID a uma velocidade diferente das portas dedicadas à rede do cliente.
+** Em modelos que não suportam negociação automática como opção de velocidade de porta, todas as quatro portas de rede devem usar a mesma velocidade de link.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,2a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
+** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+. Se pretender utilizar a rede de administração para StorageGRID, ligue a porta de rede de administração do dispositivo à rede de administração, utilizando um cabo Ethernet.
+
+
+--
+.SG5700
+--
+Você coneta os dois controladores um ao outro, coneta as portas de gerenciamento em cada controlador e coneta as portas 10/25-GbE do controlador E5700SG à rede de Grade e à rede de cliente opcional para StorageGRID.
+
+.Antes de começar
+* Desembalou os seguintes itens, que estão incluídos no aparelho:
++
+** Dois cabos de energia.
+** Dois cabos óticos para as portas de interconexão FC nas controladoras.
+** Oito transcetores SFP mais, que suportam FC de 10 GbE ou 16 Gbps. Os transcetores podem ser usados com as duas portas de interconexão em ambos os controladores e com as quatro portas de rede 10/25-GbE no controlador E5700SG, supondo que você queira que as portas de rede usem uma velocidade de link de 10 GbE.
+
+
+* Obteve os seguintes itens, que não estão incluídos no aparelho:
++
+** Um a quatro cabos óticos para as portas de 10/25 GbE que você planeja usar.
+** Um a quatro transcetores SFP28, se você planeja usar a velocidade de link de 25 GbE.
+** Cabos Ethernet para conexão das portas de gerenciamento.
+
+
+
+
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte nem remova qualquer parte de um transcetor SFP. Você pode estar exposto à radiação laser.
+
+.Sobre esta tarefa
+As figuras mostram os dois controladores nos modelos SG5760 e SG5760X, com o controlador de armazenamento da série E2800 na parte superior e o controlador E5700SG na parte inferior. Nos modelos SG5712 e SG5712X, o controlador de armazenamento da série E2800 fica à esquerda do controlador E5700SG quando visto a partir da parte de trás.
+
+SG5760 ligações:
+
+image::../media/sg5760_connections.gif[Ligações no aparelho SG5760]
+
+SG5760X ligações:
+
+image::../media/sg5760X_connections.png[Ligações no aparelho SG5760X]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Duas portas de interconexão em cada controlador
+ a| 
+SFP ótico FC de 16GB GB/s.
+ a| 
+Conete os dois controladores um ao outro.
+
+
+
+ a| 
+2
+ a| 
+Porta de gerenciamento 1 no controlador da série E2800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede ao Gestor de sistema SANtricity. Pode utilizar a rede de administração para StorageGRID ou uma rede de gestão independente.
+
+
+
+ a| 
+2
+ a| 
+Porta de gerenciamento 2 no controlador da série E2800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Reservado para suporte técnico.
+
+
+
+ a| 
+3
+ a| 
+Porta de gerenciamento 1 no controlador E5700SG
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga o controlador E5700SG à rede de administração para StorageGRID.
+
+
+
+ a| 
+3
+ a| 
+Porta de gerenciamento 2 no controlador E5700SG
+ a| 
+1 GbE (RJ-45)
+ a| 
+* Pode ser ligado com a porta de gerenciamento 1 se você quiser uma conexão redundante com a rede de administração.
+* Pode ser deixado sem fios e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, pode ser utilizado para ligar o controlador E5700SG a um computador portátil de serviço se os endereços IP atribuídos por DHCP não estiverem disponíveis.
+
+
+
+
+ a| 
+4
+ a| 
+Portas 10/25-GbE 1-4 na controladora E5700SG
+ a| 
+10-GbE ou 25-GbE
+
+*Observação:* os transcetores SFP incluídos com o dispositivo suportam velocidades de link de 10 GbE. Se você quiser usar velocidades de link de 25 GbE para as quatro portas de rede, você deve fornecer transcetores de SFP28 GbE.
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de ligação de porta (controlador E5700SG)"]Consulte .
+
+|===
+.Passos
+. Conete o controlador E2800 ao controlador E5700SG usando dois cabos óticos e quatro dos oito transcetores SFP.
++
+[cols="1a,1a"]
+|===
+| Ligar esta porta... | Para este porto... 
+
+
+ a| 
+Porta de interconexão 1 no controlador E2800
+ a| 
+Porta de interconexão 1 no controlador E5700SG
+
+
+
+ a| 
+Porta de interconexão 2 no controlador E2800
+ a| 
+Porta de interconexão 2 no controlador E5700SG
+
+|===
+. Se você planeja usar o Gerenciador de sistemas SANtricity, conete a porta de gerenciamento 1 (P1) no controlador E2800 (a porta RJ-45 à esquerda) à rede de gerenciamento do Gerenciador de sistemas SANtricity, usando um cabo Ethernet.
++
+Não use a porta de gerenciamento 2 (P2) no controlador E2800 (a porta RJ-45 à direita). Esta porta está reservada para suporte técnico.
+
+. Se você planeja usar a rede de administração para StorageGRID, conete a porta de gerenciamento 1 no controlador E5700SG (a porta RJ-45 à esquerda) à rede de administração, usando um cabo Ethernet.
++
+Se você planeja usar o modo de ligação de rede de backup ativo para a rede Admin, conete a porta de gerenciamento 2 no controlador E5700SG (a porta RJ-45 à direita) à rede Admin, usando um cabo Ethernet.
+
+. Conete as portas 10/25-GbE no controlador E5700SG aos switches de rede apropriados, usando cabos óticos e transcetores SFP ou SFP28.
++
+
+NOTE: Instale transcetores SFP se você planeja usar velocidades de link de 10 GbE. Instale os transcetores SFP28 se você planeja usar velocidades de link de 25 GbE.
+
++
+** Em modelos que suportam negociação automática como uma opção de velocidade de porta, se o modo de ligação de porta fixa estiver selecionado, você pode executar as portas dedicadas à rede de Grade StorageGRID a uma velocidade diferente das portas dedicadas à rede do cliente.
+** Em modelos que não suportam negociação automática como opção de velocidade de porta, todas as quatro portas de rede devem usar a mesma velocidade de link.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,1a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
+** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+
+
+--
+.SG5800
+--
+Você coneta os dois controladores um ao outro, coneta as portas de gerenciamento em cada controlador e coneta as portas 10/25-GbE do controlador SG5800 à rede de Grade e à rede de cliente opcional para StorageGRID.
+
+.Antes de começar
+* Desembalou os seguintes itens, que estão incluídos no aparelho:
++
+** Dois cabos de energia.
+** Dois cabos para as portas de interconexão iSCSI nos controladores.
+
+
+* Obteve os seguintes itens, que não estão incluídos no aparelho:
++
+** Um a quatro cabos óticos ou de cobre para as portas de 10/25 GbE que você planeja usar.
+** Um a oito transcetores SFP mais, se você planeja usar cabos óticos e velocidade de link de 10 GbE.
+** Um a oito transcetores SFP28, se você planeja usar cabos óticos e velocidade de link de 25 GbE.
+** Cabos Ethernet para conexão das portas de gerenciamento.
+
+
+
+
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte nem remova qualquer parte de um transcetor SFP. Você pode estar exposto à radiação laser.
+
+.Sobre esta tarefa
+As figuras mostram os dois controladores no SG5860, com o controlador de armazenamento da série E4000 na parte superior e o controlador SG5800 na parte inferior. No SG5812, o controlador de armazenamento da série E4000 fica à esquerda do controlador SG5800 quando visto a partir da parte de trás.
+
+SG5860 ligações:
+
+image::../media/sg5860_connections.png[Ligações no aparelho SG5860]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Duas portas de interconexão em cada controlador
+ a| 
+ISCSI de 25GbE GB (SFP28 GB)
+ a| 
+Conete os dois controladores um ao outro.
+
+
+
+ a| 
+2
+ a| 
+Porta de gerenciamento 1 no controlador da série E4000
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede ao Gestor de sistema SANtricity. Pode utilizar a rede de administração para StorageGRID ou uma rede de gestão independente.
+
+
+
+ a| 
+3
+ a| 
+Porta de gerenciamento 1 no controlador SG5800
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga o controlador SG5800 à rede de administração para StorageGRID.
+
+
+
+ a| 
+4
+ a| 
+Portas 10/25-GbE 1-4 na controladora SG5800
+ a| 
+10-GbE ou 25-GbE
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (controlador SG5800)"]Consulte .
+
+|===
+.Passos
+. Conete o controlador E4000 ao controlador SG5800 usando os dois cabos fornecidos.
++
+[cols="1a,1a"]
+|===
+| Ligar esta porta... | Para este porto... 
+
+
+ a| 
+Porta de interconexão 1 no controlador E4000
+ a| 
+Porta de interconexão 1 no controlador SG5800
+
+
+
+ a| 
+Porta de interconexão 2 no controlador E4000
+ a| 
+Porta de interconexão 2 no controlador SG5800
+
+|===
+. Opcionalmente, conete a porta de gerenciamento 1 (P1) no controlador E4000 (a porta RJ-45 à esquerda) à rede de gerenciamento do Gerenciador de sistemas SANtricity usando um cabo Ethernet.
+. Se você planeja usar a rede de administração para StorageGRID, conete a porta de gerenciamento 1 no controlador SG5800 (a porta RJ-45 à esquerda) à rede de administração, usando um cabo Ethernet.
+. Conete as portas 10/25-GbE no controlador SG5800 aos switches de rede apropriados, usando cabos de cobre ou cabos óticos e transcetores SFP ou SFP28.
++
+
+NOTE: Instale transcetores SFP se você planeja usar velocidades de link de 10 GbE. Instale os transcetores SFP28 se você planeja usar velocidades de link de 25 GbE.
+
++
+** Em modelos que suportam negociação automática como uma opção de velocidade de porta, se o modo de ligação de porta fixa estiver selecionado, você pode executar as portas dedicadas à rede de Grade StorageGRID a uma velocidade diferente das portas dedicadas à rede do cliente.
+** Em modelos que não suportam negociação automática como opção de velocidade de porta, todas as quatro portas de rede devem usar a mesma velocidade de link.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,1a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
+** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+
+
+--
+.SG6000
+--
+Você coneta os controladores de armazenamento ao controlador SG6000-CN, coneta as portas de gerenciamento em todos os três controladores e coneta as portas de rede no controlador SG6000-CN à rede de grade e à rede cliente opcional para StorageGRID.
+
+.Antes de começar
+* Você tem os quatro cabos óticos fornecidos com o aparelho para conetar os dois controladores de armazenamento ao controlador SG6000-CN.
+* Você tem cabos Ethernet RJ-45 (quatro no mínimo) para conetar as portas de gerenciamento.
+* Tem uma das seguintes opções para as portas de rede. Estes itens não são fornecidos com o aparelho.
++
+** Um a quatro cabos Twinax para ligar as quatro portas de rede.
+** Um a quatro transcetores SFP ou SFP28G se você planeja usar cabos óticos para as portas.
++
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte nem remova qualquer parte de um transcetor SFP. Você pode estar exposto à radiação laser.
+
+
+
+
+
+.Sobre esta tarefa
+As figuras a seguir mostram os três controladores nos dispositivos SG6060 e SG6060X, com o controlador de computação SG6000-CN na parte superior e os dois controladores de storage E2800 na parte inferior. O SG6060 usa controladores E2800A e o SG6060X usa uma das duas versões de controlador E2800B.
+
+
+NOTE: Ambas as versões do controlador E2800 têm especificações e funções idênticas, exceto para a localização das portas de interconexão.
+
+
+CAUTION: Não utilize um controlador E2800A e E2800B no mesmo aparelho.
+
+SG6060 ligações:
+
+image::../media/sg6000_e2800_connections.png[SG6060 a E2800A ligações]
+
+SG6060X ligações:
+
+* Versão 1
++
+image::../media/sg6000x_e2800B_connections.png[SG6060 a E2800B ligações]
+
+* Versão 2
++
+
+NOTE: Se os transcetores FC na controladora E2800B estiverem instalados nas portas de conexão FC superior (6), mova-os para as portas de conexão FC inferior direita (7).
+
++
+image::../media/sg6000x_e2800B2_connections.png[SG6060 a E2800B ligações]
+
+
+
+A figura a seguir mostra as três controladoras no dispositivo SGF6024, com o controlador de computação SG6000-CN na parte superior e as duas controladoras de storage EF570 lado a lado abaixo do controlador de computação.
+
+SGF6024 ligações:
+
+image::../media/sg6000_ef570_connections.png[SG6000 a SGF570 ligações]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Porta de gerenciamento BMC no controlador SG6000-CN
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede à interface BMC.
+
+
+
+ a| 
+2
+ a| 
+Portas de conexão FC:
+
+* 4 no controlador SG6000-CN
+* 2 em cada controlador de storage
+
+ a| 
+SFP ótico FC de 16 GB/s.
+ a| 
+Ligue cada controlador de armazenamento ao controlador SG6000-CN.
+
+
+
+ a| 
+3
+ a| 
+Quatro portas de rede no controlador SG6000-CN
+ a| 
+10/25-GbE
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Modos de ligação de porta (controlador SG6000-CN)"]Consulte .
+
+
+
+ a| 
+4
+ a| 
+Porta Admin Network no controlador SG6000-CN (identificada como P1 na figura)
+ a| 
+1 GbE (RJ-45)
+
+*Atenção:* esta porta funciona apenas a 1000 BaseT/full e não suporta velocidades de 10 ou 100 megabits.
+ a| 
+Liga o controlador SG6000-CN à rede de administração para StorageGRID.
+
+
+
+ a| 
+ a| 
+Porta RJ-45 mais à direita no controlador SG6000-CN
+ a| 
+1 GbE (RJ-45)
+
+*Atenção:* esta porta funciona apenas a 1000 BaseT/full e não suporta velocidades de 10 ou 100 megabits.
+ a| 
+* Pode ser ligado com a porta de gerenciamento 1 se você quiser uma conexão redundante com a rede de administração.
+* Pode ser deixado sem fios e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, pode ser usado para conetar o controlador SG6000-CN a um laptop de serviço se os endereços IP atribuídos por DHCP não estiverem disponíveis.
+
+
+
+
+ a| 
+5
+ a| 
+Porta de gerenciamento 1 em cada controlador de storage
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede ao Gestor de sistema SANtricity.
+
+
+
+ a| 
+ a| 
+Porta de gerenciamento 2 em cada controlador de storage
+ a| 
+1 GbE (RJ-45)
+ a| 
+Reservado para suporte técnico.
+
+|===
+.Passos
+. Conete a porta de gerenciamento BMC no controlador SG6000-CN à rede de gerenciamento, usando um cabo Ethernet.
++
+Embora essa conexão seja opcional, recomenda-se facilitar o suporte.
+
+. Conete as duas portas FC em cada controlador de storage às portas FC no controlador SG6000-CN, usando quatro cabos óticos e quatro transcetores SFP mais para os controladores de storage.
+. Conete as portas de rede do controlador SG6000-CN aos switches de rede apropriados, usando cabos Twinax ou cabos óticos e transcetores SFP ou SFP28.
++
+
+NOTE: Instale transcetores SFP se você planeja usar velocidades de link de 10 GbE. Instale os transcetores SFP28 se você planeja usar velocidades de link de 25 GbE.
+
++
+** Em modelos que suportam negociação automática como uma opção de velocidade de porta, se o modo de ligação de porta fixa estiver selecionado, você pode executar as portas dedicadas à rede de Grade StorageGRID a uma velocidade diferente das portas dedicadas à rede do cliente.
+** Em modelos que não suportam negociação automática como opção de velocidade de porta, todas as quatro portas de rede devem usar a mesma velocidade de link.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,2a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
++
+*** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+
+
+. Se pretender utilizar a rede de administração para StorageGRID, ligue a porta de rede de administração do controlador SG6000-CN à rede de administração, utilizando um cabo Ethernet.
+. Se você planeja usar a rede de gerenciamento para o Gerenciador de sistemas SANtricity, conete a porta de gerenciamento 1 (P1) em cada controlador de armazenamento (a porta RJ-45 à esquerda) à rede de gerenciamento do Gerenciador de sistemas SANtricity, usando um cabo Ethernet.
++
+Não use a porta de gerenciamento 2 (P2) nos controladores de storage (a porta RJ-45 à direita). Esta porta está reservada para suporte técnico.
+
+
+
+--
+.SG6100
+--
+Ligue a porta de gestão do dispositivo ao computador portátil de serviço e ligue as portas de rede do dispositivo à rede de grelha e à rede de cliente opcional para StorageGRID.
+
+.Antes de começar
+* Apenas SG6160: Tem o cabo multicondutor 100GbE a 4x25GbE fornecido com o aparelho para ligar os dois controladores de armazenamento ao controlador SG6100-CN.
+* Você tem cabos Ethernet RJ-45:
++
+** Um cabo RJ-45 para conetar a porta de gerenciamento.
+** Somente SG6160: Até quatro cabos Ethernet RJ-45 adicionais para as portas opcionais que você planeja usar, incluindo a segunda porta Admin e a porta BMC no SG6100-CN, e as portas de manutenção em cada um dos dois controladores E4000.
+
+
+* Tem uma das seguintes opções para as portas de rede. Estes itens não são fornecidos com o aparelho.
++
+** Um a quatro cabos Twinax para ligar as quatro portas de rede.
+** Um a oito transcetores SFP ou SFP28G se você planeja usar cabos óticos para as portas.
+
+
+
+
+
+CAUTION: *Risco de exposição à radiação laser* -- não desmonte nem remova qualquer parte de um transcetor SFP. Você pode estar exposto à radiação laser.
+
+.Sobre esta tarefa
+As figuras a seguir mostram as portas na parte traseira do SGF6112 e os três controladores no dispositivo SG6160. O dispositivo SG6160 inclui um controlador de computação SG6100-CN na parte superior e dois controladores de storage E4000 na parte inferior.
+
+SGF6112 ligações:
+
+image::../media/sgf6112_connections.png[SGF6112 conetores traseiros]
+
+SG6160 ligações:
+
+image::../media/sg6100_e4000_connections.png[SG6100-CN a E4000 ligações]
+
+[cols="1a,2a,2a,3a"]
+|===
+| Legenda | Porta | Tipo de porta | Utilização 
+
+
+ a| 
+1
+ a| 
+Porta de gerenciamento BMC no dispositivo
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede à interface BMC.
+
+
+
+ a| 
+2
+ a| 
+Quatro portas de rede 10/25-GbE no dispositivo
+ a| 
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID. Consulte link:gathering-installation-information-sg6100.html#port-bond-modes["Modos de ligação de porta (SG6100)"]
+
+
+
+ a| 
+3
+ a| 
+Porta de rede de administração no dispositivo (identificada como P1 na figura)
+ a| 
+1/10-GbE (RJ-45)
+
+*Importante:* esta porta opera apenas a 1/10-GbE (RJ-45) e não suporta velocidades de 100 megabits.
+ a| 
+Liga o dispositivo à rede de administração para StorageGRID.
+
+
+
+ a| 
+ a| 
+Porta RJ-45 mais à direita no aparelho
+ a| 
+1/10-GbE (RJ-45)
+
+*Atenção:* esta porta opera apenas a 1/10-GbE (RJ-45) e não suporta velocidades de 100 megabits.
+ a| 
+* Pode ser ligado com a porta de gerenciamento 1 se você quiser uma conexão redundante com a rede de administração.
+* Pode ser deixado desconetado e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, pode ser utilizado para ligar o dispositivo a um computador portátil de serviço se os endereços IP atribuídos por DHCP não estiverem disponíveis.
+
+
+
+
+ a| 
+4 (apenas SG6160)
+ a| 
+Cinco portas de conexão totais
+ a| 
+* Uma porta 100GbE no SG6100-CN
+* Duas portas 10/25GbE em cada uma das controladoras de storage
+
+ a| 
+Ligue cada controlador de armazenamento ao controlador SG6100-CN.
+
+
+
+ a| 
+5 (apenas SG6160)
+ a| 
+Porta de gerenciamento 1 em cada controlador de storage
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede ao Gestor de sistema SANtricity.
+
+
+
+ a| 
+ a| 
+Porta de gerenciamento 2 em cada controlador de storage
+ a| 
+1 GbE (RJ-45)
+ a| 
+Liga-se à rede onde acede ao Gestor de sistema SANtricity.
+
+|===
+.Passos
+. Conete a porta de gerenciamento BMC do dispositivo à rede de gerenciamento, usando um cabo Ethernet.
++
+Embora essa conexão seja opcional, recomenda-se facilitar o suporte.
+
+. Conete as duas portas de interconexão em cada controlador de armazenamento à porta 100GbE no controlador SG6100-CN, usando um cabo de 100 GbE QSFP28 a 4x25-GbE SFP28.
+. Ligue as portas de rede do aparelho aos comutadores de rede adequados, utilizando cabos Twinax ou cabos óticos e transcetores.
++
+[cols="2a,2a"]
+|===
+| Velocidade da ligação (GbE) | Equipamento necessário 
+
+
+ a| 
+10
+ a| 
+Transceptor SFP
+
+
+
+ a| 
+25
+ a| 
+Transcetor SFP28
+
+|===
++
+** As portas de rede Grid e Client podem ser executadas em velocidades diferentes somente se a negociação automática for selecionada como a velocidade do link, e fixed for selecionado como o modo de ligação de porta. Caso contrário, todas as quatro portas serão executadas na mesma velocidade.
+** Se você planeja usar o modo de ligação de porta fixa (padrão), conete as portas à rede StorageGRID e às redes de clientes, conforme mostrado na tabela.
++
+[cols="1a,2a"]
+|===
+| Porta | Liga a... 
+
+
+ a| 
+Porta 1
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 2
+ a| 
+Rede de rede
+
+
+
+ a| 
+Porta 3
+ a| 
+Rede cliente (opcional)
+
+
+
+ a| 
+Porta 4
+ a| 
+Rede de rede
+
+|===
+** Se você planeja usar o modo de ligação de porta agregada, conete uma ou mais portas de rede a um ou mais switches. Você deve conetar pelo menos duas das quatro portas para evitar ter um único ponto de falha. Se você usar mais de um switch para uma única ligação LACP, os switches devem suportar MLAG ou equivalente.
+
+
+. Se pretender utilizar a rede de administração para StorageGRID, ligue a porta de rede de administração do dispositivo à rede de administração, utilizando um cabo Ethernet.
+
+
+--
+====

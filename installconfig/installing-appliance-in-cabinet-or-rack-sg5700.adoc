@@ -1,0 +1,93 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, sg5712, sg5760, install, cabinet, rack, rails, drives 
+summary: Você instala um conjunto de trilhos em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos. Se tiver um SG5760, instale as unidades depois de instalar o aparelho. 
+---
+= Instalar no gabinete ou rack (SG5700)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você instala um conjunto de trilhos em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos. Se tiver um SG5760, instale as unidades depois de instalar o aparelho.
+
+.Antes de começar
+* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você tem as instruções fornecidas com o kit de trilho.
+
+
+
+
+== Instale o SG5712
+
+Siga estas etapas para instalar um dispositivo SG5712 em um rack ou gabinete.
+
+
+CAUTION: O SG5712 pesa aproximadamente 64 lb (29 kg) quando totalmente carregado com unidades. Duas pessoas ou um elevador mecanizado são necessários para mover com segurança o SG5712.
+
+
+CAUTION: Instale o hardware a partir da parte inferior do rack ou gabinete ou rack para cima para evitar que o equipamento tombe.
+
+.Passos
+. Siga as instruções do kit de trilho para instalar os trilhos.
+. Coloque a parte de trás do aparelho (a extremidade com os conetores) nos trilhos.
+. Deslize cuidadosamente o aparelho de volta para dentro do armário ou rack.
+. Fixe o aparelho ao armário ou ao rack conforme indicado nas instruções do kit de calhas.
+. Fixe a moldura à frente.
+
+
+
+
+== Instale o SG5760
+
+Siga estas etapas para instalar um dispositivo SG5760 e quaisquer prateleiras de expansão em um rack ou gabinete.
+
+
+CAUTION: Instale o hardware a partir da parte inferior do rack ou gabinete ou rack para cima para evitar que o equipamento tombe.
+
+
+CAUTION: O SG5760 pesa aproximadamente 132 lb (60 kg) sem unidades instaladas. Quatro pessoas ou um elevador mecanizado são necessários para mover com segurança um SG5760 vazio.
+
+
+CAUTION: Para evitar danificar o hardware, nunca mova um SG5760 se as unidades estiverem instaladas. É necessário remover todas as unidades antes de mover a gaveta.
+
+.Passos
+. Siga as instruções do kit de trilho para instalar os trilhos em seu gabinete ou rack.
+. Prepare-se para mover o aparelho:
++
+.. Retire a caixa de embalagem exterior.
+.. Dobre as abas da caixa interior para baixo.
+.. Se estiver a levantar o SG5760 manualmente, fixe as quatro pegas nas laterais do chassis.
++
+Retire estas pegas enquanto desliza o aparelho sobre os trilhos.
+
+
+
+. Se o seu gabinete tiver um orifício quadrado, instale as porcas da gaiola para que você possa fixar a parte frontal e traseira da prateleira com parafusos.
+. Coloque a parte de trás do aparelho (a extremidade com os conetores) nos trilhos.
+. Apoiando o aparelho a partir da parte inferior, deslize-o para dentro do rack ou gabinete.
++
+Utilize as patilhas para soltar as pegas enquanto desliza o aparelho para dentro.
+
+. Fixe o aparelho à parte frontal do rack inserindo dois parafusos no primeiro e no terceiro orifícios (contando de cima para baixo) de cada lado.
+. Fixe o aparelho na parte de trás do rack ou gabinete com os suportes.
+. Instale 12 unidades em cada uma das cinco gavetas de unidade.
++
+Você deve instalar todas as unidades 60 para garantir o funcionamento correto.
+
++
+.. Coloque a pulseira ESD e remova as unidades da embalagem.
+.. Solte as alavancas na gaveta superior da unidade e deslize a gaveta para fora usando as alavancas.
+.. Levante a alça da unidade para a vertical e alinhe os botões da unidade com os entalhes na gaveta.
++
+image::../media/appliance_drive_insertion.gif[Instale a unidade no dispositivo de 60 unidades]
+
+.. Pressionando suavemente a parte superior da unidade, gire a alça da unidade para baixo até que ela se encaixe no lugar.
+.. Depois de instalar as primeiras 12 unidades, deslize a gaveta para dentro, empurrando o centro e fechando ambas as alavancas com cuidado.
+.. Repita estes passos para as outras quatro gavetas.
+
+
+. Fixe a moldura frontal.
+

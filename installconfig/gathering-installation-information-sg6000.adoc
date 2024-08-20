@@ -1,0 +1,556 @@
+---
+permalink: installconfig/gathering-installation-information-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance StorageGRID, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
+summary: Utilizando as tabelas, registe as informações necessárias para cada rede que ligar ao aparelho. Esses valores são necessários para instalar e configurar o hardware. 
+---
+= Reunir informações de rede (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizando as tabelas, registe as informações necessárias para cada rede que ligar ao aparelho. Esses valores são necessários para instalar e configurar o hardware.
+
+
+TIP: Em vez de usar as tabelas, use a pasta de trabalho fornecida com o ConfigBuilder. O uso da pasta de trabalho do ConfigBuilder permite que você carregue as informações do sistema e gere um arquivo JSON para concluir automaticamente algumas etapas de configuração no Instalador do StorageGRID Appliance. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
+
+
+
+== Informações necessárias para se conectar ao Gerenciador de sistema do SANtricity em controladores de storage
+
+Você conecta ambos os controladores de storage no dispositivo (controladores da série E2800 ou controladores EF570) à rede de gerenciamento usada no Gerenciador de sistema do SANtricity. Os controladores estão localizados em cada dispositivo da seguinte forma:
+
+* SG6060 e SG6060X: O controlador A está na parte superior e o controlador B está na parte inferior.
+* SGF6024: O controlador A está à esquerda e o controlador B está à direita.
+
+
+[cols="2a,1a,1a"]
+|===
+| Informações necessárias | O seu valor para o controlador A | O seu valor para o controlador B 
+
+
+ a| 
+Porta do switch Ethernet você conetará à porta de gerenciamento 1 (identificada como P1 no controlador)
+ a| 
+ a| 
+
+
+
+ a| 
+Endereço MAC da porta de gerenciamento 1 (impresso em uma etiqueta próxima à porta P1)
+ a| 
+ a| 
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a porta de gerenciamento 1, se disponível após a ativação
+
+*Observação:* se a rede que você se conetará ao controlador de armazenamento incluir um servidor DHCP, o administrador de rede poderá usar o endereço MAC para determinar o endereço IP atribuído pelo servidor DHCP.
+ a| 
+ a| 
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o dispositivo na rede de gestão
+ a| 
+Para IPv4:
+
+* Endereço IPv4:
+* Máscara de sub-rede:
+* Gateway:
+
+
+Para IPv6:
+
+* Endereço IPv6:
+* Endereço IP roteável:
+* Endereço IP do router do controlador de armazenamento:
+
+ a| 
+Para IPv4:
+
+* Endereço IPv4:
+* Máscara de sub-rede:
+* Gateway:
+
+
+Para IPv6:
+
+* Endereço IPv6:
+* Endereço IP roteável:
+* Endereço IP do router do controlador de armazenamento:
+
+
+
+
+ a| 
+Formato do endereço IP
+ a| 
+Escolha uma:
+
+* IPv4
+* IPv6
+
+ a| 
+Escolha uma:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Velocidade e modo duplex
+
+*Observação:* você deve certificar-se de que o switch Ethernet da rede de gerenciamento do Gerenciador de sistema do SANtricity esteja definido como negociação automática.
+ a| 
+Deve ser:
+
+* Negociação automática (padrão)
+
+ a| 
+Deve ser:
+
+* Negociação automática (padrão)
+
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG6000-CN à rede de administração
+
+A rede de administração para StorageGRID é uma rede opcional, usada para administração e manutenção do sistema. O dispositivo se coneta à rede Admin usando as seguintes portas de gerenciamento de 1 GbE no controlador SG6000-CN.
+
+image::../media/rj_45_ports_circled.png[Portas RJ-45]
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Rede de administração ativada
+ a| 
+Escolha uma:
+
+* Não
+* Sim (predefinição)
+
+
+
+
+ a| 
+Modo de ligação de rede
+ a| 
+Escolha uma:
+
+* Independente (predefinição)
+* Ative-Backup
+
+
+
+
+ a| 
+Porta do switch para a porta esquerda no círculo vermelho no diagrama (porta ativa padrão para o modo de ligação de rede independente)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta direita no círculo vermelho no diagrama (apenas modo de ligação de rede ative-Backup)
+ a| 
+
+
+
+ a| 
+Endereço MAC para a porta Admin Network
+
+*Nota:* a etiqueta de endereço MAC na parte frontal do controlador SG6000-CN lista o endereço MAC da porta de gerenciamento BMC. Para determinar o endereço MAC da porta Admin Network, você deve adicionar *2* ao número hexadecimal na etiqueta. Por exemplo, se o endereço MAC na etiqueta terminar em *09*, o endereço MAC da porta Admin terminaria em *0B*. Se o endereço MAC na etiqueta terminar em *(_y_)FF*, o endereço MAC da porta Admin terminaria em *(_y_(1)01*. Você pode facilmente fazer esse cálculo abrindo o Calculator no Windows, definindo-o para o modo Programador, selecionando Hex, digitando o endereço MAC e, em seguida, digitando * 2 *.
+ a| 
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a porta Admin Network, se disponível após a ativação
+
+*Observação:* você pode determinar o endereço IP atribuído pelo DHCP usando o endereço MAC para procurar o IP atribuído.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede de administração
+
+*Nota:* se a rede não tiver um gateway, especifique o mesmo endereço IPv4 estático para o gateway.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Sub-redes de rede Admin (CIDR)
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar e configurar portas 10/25-GbE no controlador SG6000-CN
+
+As quatro portas 10/25-GbE no controlador SG6000-CN conetam-se à rede de Grade StorageGRID e à rede de Cliente opcional.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Velocidade da ligação
+ a| 
+Escolha uma:
+
+* Auto (predefinição)
+* 10 GbE
+* 25 GbE
+
+
+
+
+ a| 
+Modo de ligação da porta
+ a| 
+Escolha uma:
+
+* Fixo (padrão)
+* Agregado
+
+
+
+
+ a| 
+Porta do switch para a porta 1 (rede do cliente para o modo fixo)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 2 (rede de grade para modo fixo)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 3 (rede do cliente para o modo fixo)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 4 (rede de grade para modo fixo)
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG6000-CN à rede de Grade
+
+A rede de Grade para StorageGRID é uma rede necessária, usada para todo o tráfego interno de StorageGRID. O dispositivo se coneta à rede de Grade usando as portas 10/25-GbE no controlador SG6000-CN.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Modo de ligação de rede
+ a| 
+Escolha uma:
+
+* Ative-Backup (padrão)
+* Bola de Futsal (802,3ad)
+
+
+
+
+ a| 
+Marcação de VLAN ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Etiqueta VLAN (se a marcação VLAN estiver ativada)
+ a| 
+Introduza um valor entre 0 e 4095:
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a rede de Grade, se disponível após a ativação
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede de grelha
+
+*Nota:* se a rede não tiver um gateway, especifique o mesmo endereço IPv4 estático para o gateway.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Sub-redes de rede de rede (CIDR)
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG6000-CN à rede do cliente
+
+A rede de cliente para StorageGRID é uma rede opcional, normalmente usada para fornecer acesso de protocolo de cliente à grade. O dispositivo se coneta à rede do cliente usando as portas 10/25-GbE no controlador SG6000-CN.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Rede cliente ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Modo de ligação de rede
+ a| 
+Escolha uma:
+
+* Ative-Backup (padrão)
+* Bola de Futsal (802,3ad)
+
+
+
+
+ a| 
+Marcação de VLAN ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Etiqueta VLAN (se a marcação VLAN estiver ativada)
+ a| 
+Introduza um valor entre 0 e 4095:
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a rede do cliente, se disponível após a ligação
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede do cliente
+
+*Nota:* se a rede do cliente estiver ativada, a rota padrão no controlador usará o gateway especificado aqui.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG6000-CN à rede de gerenciamento BMC
+
+Você pode acessar a interface BMC no controlador SG6000-CN usando a seguinte porta de gerenciamento de 1 GbE. Esta porta suporta a gestão remota do hardware do controlador através de Ethernet, utilizando a norma IPMI (Intelligent Platform Management Interface).
+
+image::../media/bmc_management_port.gif[Porta de gerenciamento de BMC]
+
+
+NOTE: Você pode ativar ou desativar o acesso remoto IPMI para todos os dispositivos que contêm um BMC. A interface IPMI remota permite o acesso de hardware de baixo nível aos seus dispositivos StorageGRID por qualquer pessoa com uma conta e senha do BMC. Se você não precisar de acesso remoto IPMI ao BMC, desative esta opção usando um dos seguintes métodos: No Gerenciador de Grade, vá para *CONFIGURATION* > *Security* > *Security* > *Security settings* > *Appliances* e desmarque a caixa de seleção *Enable Remote IPMI Access*. Na API de gerenciamento de grade, use o endpoint privado: `PUT /private/bmc`.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Porta do switch Ethernet, você se conetará à porta de gerenciamento BMC (circulada no diagrama)
+ a| 
+
+
+
+ a| 
+Endereço IP atribuído por DHCP para a rede de gerenciamento BMC, se disponível após a inicialização
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para a porta de gestão BMC
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Modos de ligação de porta
+
+Quando link:configuring-network-links.html["configurando links de rede"] para o controlador SG6000-CN, você pode usar a ligação de porta para as portas 10/25-GbE que se conetam à rede de Grade e à rede de cliente opcional, e as portas de gerenciamento de 1-GbE que se conetam à rede de administração opcional. A ligação de portas ajuda a proteger os seus dados fornecendo caminhos redundantes entre as redes StorageGRID e o dispositivo.
+
+
+
+=== Modos de ligação de rede para portas de 10/25 GbE
+
+As portas de rede 10/25-GbE no controlador SG6000-CN suportam o modo de ligação de porta fixa ou modo de ligação de porta agregada para as conexões de rede de Grade e rede de cliente.
+
+
+
+==== Modo de ligação de porta fixa
+
+O modo fixo é a configuração padrão para as portas de rede 10/25-GbE.
+
+image::../media/sg6000_cn_fixed_port.gif[Modo de ligação de porta fixa]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+C
+ a| 
+As portas 1 e 3 são Unidas para a rede do cliente, se esta rede for utilizada.
+
+
+
+ a| 
+G
+ a| 
+As portas 2 e 4 são Unidas para a rede de Grade.
+
+|===
+Ao usar o modo de ligação de porta fixa, as portas podem ser coladas usando o modo de backup ativo ou o modo de protocolo de controle de agregação de link (LACP 802,3ad).
+
+* No modo de backup ativo (padrão), apenas uma porta está ativa por vez. Se a porta ativa falhar, sua porta de backup fornecerá automaticamente uma conexão de failover. A porta 4 fornece um caminho de backup para a porta 2 (rede de Grade) e a porta 3 fornece um caminho de backup para a porta 1 (rede de cliente).
+* No modo LACP, cada par de portas forma um canal lógico entre o controlador e a rede, permitindo maior produtividade. Se uma porta falhar, a outra continua a fornecer o canal. A taxa de transferência é reduzida, mas a conetividade não é afetada.
+
+
+
+NOTE: Se você não precisar de conexões redundantes, você pode usar apenas uma porta para cada rede. No entanto, esteja ciente de que um alerta será acionado no Gerenciador de Grade após a instalação do StorageGRID, indicando que o link está inativo. Uma vez que esta porta está desligada de propósito, pode desativar este alerta com segurança.
+
+No Gerenciador de Grade, selecione *Alerta* > *regras*, selecione a regra e clique em *Editar regra*. Em seguida, desmarque a caixa de seleção *Enabled*.
+
+
+
+==== Modo de ligação de porta agregada
+
+O modo de ligação de porta agregada aumenta significativamente o em toda a rede StorageGRID e fornece caminhos de failover adicionais.
+
+image::../media/sg6000_cn_aggregate_port.gif[Modo de ligação de porta agregada]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+1
+ a| 
+Todas as portas conetadas são agrupadas em uma única ligação LACP, permitindo que todas as portas sejam usadas para o tráfego de rede de Grade e rede de Cliente.
+
+|===
+Se você planeja usar o modo de ligação de porta agregada:
+
+* Você deve usar o modo de ligação de rede LACP.
+* Você deve especificar uma tag VLAN exclusiva para cada rede. Essa tag VLAN será adicionada a cada pacote de rede para garantir que o tráfego de rede seja roteado para a rede correta.
+* As portas devem ser conetadas a switches que possam suportar VLAN e LACP. Se vários switches estiverem participando da ligação LACP, os switches devem suportar grupos de agregação de links de vários gabinetes (MLAG) ou equivalente.
+* Você entende como configurar os switches para usar VLAN, LACP e MLAG, ou equivalente.
+
+
+Se você não quiser usar todas as quatro portas 10/25 GbE, pode usar uma, duas ou três portas. O uso de mais de uma porta maximiza a chance de que alguma conetividade de rede permaneça disponível se uma das portas 10/25-GbE falhar.
+
+
+NOTE: Se você optar por usar menos de quatro portas, esteja ciente de que um ou mais alarmes serão levantados no Gerenciador de Grade após a instalação do StorageGRID, indicando que os cabos estão desconetados. Você pode reconhecer os alarmes com segurança para limpá-los.
+
+
+
+=== Modos de ligação de rede para portas de gerenciamento de 1 GbE
+
+Para as duas portas de gerenciamento de 1 GbE no controlador SG6000-CN, você pode escolher o modo de ligação de rede independente ou o modo de ligação de rede ative-Backup para se conetar à rede Admin opcional.
+
+No modo independente, apenas a porta de gerenciamento à esquerda está conetada à rede de administração. Este modo não fornece um caminho redundante. A porta de gerenciamento à direita está desconetada e disponível para conexões locais temporárias (usa o endereço IP 169.254.0.1)
+
+No modo ative-Backup, ambas as portas de gerenciamento estão conetadas à rede Admin. Apenas uma porta está ativa de cada vez. Se a porta ativa falhar, sua porta de backup fornecerá automaticamente uma conexão de failover. A ligação dessas duas portas físicas em uma porta de gerenciamento lógico fornece um caminho redundante para a rede de administração.
+
+
+NOTE: Se você precisar fazer uma conexão local temporária com o controlador SG6000-CN quando as portas de gerenciamento de 1 GbE estiverem configuradas para o modo ative-Backup, remova os cabos de ambas as portas de gerenciamento, conete o cabo temporário à porta de gerenciamento à direita e acesse o dispositivo usando o endereço IP 169.254.0.1.
+
+image::../media/sg6000_cn_bonded_managemente_ports.png[Portas de 1 GbE]
+
+[cols="1a,3a"]
+|===
+| Legenda | Modo de ligação de rede 
+
+
+ a| 
+A
+ a| 
+Ambas as portas de gerenciamento são ligadas a uma porta de gerenciamento lógico conetada à rede de administração.
+
+
+
+ a| 
+I
+ a| 
+A porta à esquerda está ligada à rede de administração. A porta à direita está disponível para conexões locais temporárias (endereço IP 169.254.0.1).
+
+|===
+.Informações relacionadas
+* link:../installconfig/hardware-description-sg6000.html#sg6000-controllers["SG6000 controladoras"]
+* link:../installconfig/reviewing-appliance-network-connections.html["Determine as conexões de rede do dispositivo"]
+* link:../installconfig/gathering-installation-information-sg6000.html#port-bond-modes["Modos de ligação de porta (controlador SG6000-CN)"]
+* link:cabling-appliance.html["Aparelho de cabo"]
+* link:../installconfig/setting-ip-configuration.html["Configurar endereços IP do StorageGRID"]
+

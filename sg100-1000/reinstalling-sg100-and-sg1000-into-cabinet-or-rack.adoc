@@ -1,0 +1,99 @@
+---
+permalink: sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, appliance, install, installing, installation, cabinet, rack, controller, remove, removing, removal 
+summary: Retire o SG100 ou o SG1000 de um gabinete ou rack para acessar a tampa superior ou mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída. 
+---
+= Reposicione SG100 ou SG1000 no gabinete ou rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire o aparelho SG100 ou SG1000 de um gabinete ou rack para acessar a tampa superior ou para mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída.
+
+
+
+== Remova SG100 ou SG1000 do gabinete ou rack
+
+Retire o SG100 ou o SG1000 de um armário ou rack para aceder à tampa superior ou para mover o aparelho para um local diferente.
+
+.Antes de começar
+* Tem etiquetas para identificar cada cabo ligado ao aparelho SG100 ou SG1000.
+* Você localizou fisicamente o dispositivo SG100 ou SG1000 onde está realizando manutenção no data center.
++
+link:locating-controller-in-data-center.html["Localize o dispositivo no data center"]
+
+* Você link:shut-down-sg100-and-sg1000.html["Desligue o aparelho SG100 ou SG1000"]tem .
++
+
+CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
+
+
+
+.Passos
+. Identifique e, em seguida, desligue os cabos de alimentação do controlador.
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Identifique e desconete os cabos de dados do controlador e quaisquer transcetores SFP ou SFP28.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Desaperte os dois parafusos integrados no painel frontal do controlador.
++
+image::../media/sg6060_rack_retaining_screws.png[SG6060 parafusos de fixação da cremalheira]
+
+. Deslize o aparelho para a frente para fora do rack até que os trilhos de montagem estejam totalmente estendidos e você ouvir os trincos em ambos os lados estalarem.
++
+A tampa superior do controlador está acessível.
+
+. Opcional: Se estiver a remover totalmente o aparelho do armário ou do rack, siga as instruções para o kit de calhas para remover o aparelho dos trilhos.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+
+
+== Reinstale SG100 ou SG1000 no gabinete ou rack
+
+Reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída.
+
+.Antes de começar
+Reinstalou a tampa do aparelho.
+
+link:reinstalling-sg100-and-sg1000-controller-cover.html["Reinstale a tampa SG100 ou SG1000"]
+
+.Passos
+. Prima o botão azul para libertar ambos os trilhos do rack ao mesmo tempo e deslize o aparelho para dentro do rack até que esteja totalmente assente.
++
+Quando não conseguir mover o aparelho mais, puxe os trincos azuis de ambos os lados do chassis para fazer deslizar o aparelho completamente para dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[Aplicação deslizando sobre trilhos]
+
++
+
+NOTE: Não fixe a moldura frontal até que o aparelho seja ligado.
+
+. Aperte os parafusos integrados no painel frontal do aparelho para fixar o aparelho no rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Parafusos de fixação da cremalheira]
+
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Reconecte os cabos de dados do controlador e quaisquer transcetores SFP ou SFP28.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
++
+link:../installconfig/cabling-appliance.html["Aparelho de cabo"]
+
+. Volte a ligar os cabos de alimentação do aparelho.
++
+link:../installconfig/connecting-power-cords-and-applying-power.html["Conete os cabos de energia e ligue a energia (SG100 ou SG1000)"]
+
+
+
+.Depois de terminar
+O aparelho pode ser reiniciado.

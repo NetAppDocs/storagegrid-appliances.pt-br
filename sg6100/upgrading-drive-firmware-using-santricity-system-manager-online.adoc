@@ -1,0 +1,136 @@
+---
+permalink: sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Você atualiza o firmware da sua unidade para garantir que você tenha todos os recursos mais recentes e correções de bugs. 
+---
+= Atualize o firmware da unidade SG6100 usando o método online do Gerenciador de sistema SANtricity (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use o método on-line do Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do seu dispositivo para garantir que você tenha todos os recursos e correções de bugs mais recentes.
+
+
+NOTE: Este procedimento *não* se aplica aos SSDs NVMe no SG6100-CN, que são atualizados durante as atualizações de software do StorageGRID. Somente as unidades no E4000 podem ser atualizadas usando este procedimento.
+
+.Antes de começar
+* O dispositivo de armazenamento tem um status ideal.
+* Todas as unidades têm um status ideal.
+
+
+
+CAUTION: Não atualize o firmware da unidade em mais de um dispositivo StorageGRID de cada vez. Isso pode causar indisponibilidade de dados, dependendo do modelo de implantação e da política de ILM.
+
+.Sobre esta tarefa
+As unidades são atualizadas uma de cada vez enquanto o dispositivo está executando e/S. Este método não requer que coloque o aparelho no modo de manutenção. No entanto, o desempenho do sistema pode ser afetado e a atualização pode demorar várias horas mais do que o método offline.
+
+[NOTE]
+====
+As unidades pertencentes a volumes que não têm redundância devem ser atualizadas usando o link:upgrading-drive-firmware-using-santricity-system-manager-offline.html["método offline"]. O método off-line deve ser usado para qualquer pool ou grupo de volume que esteja degradado atualmente.
+
+====
+.Passos
+. Acesse o Gerenciador de sistemas do SANtricity usando um destes métodos:
++
+** Use o Instalador de dispositivos StorageGRID e selecione *Avançado* > *Gerenciador de sistemas SANtricity*
+** Use o Gerenciador de Grade e selecione *NÓS* > *_nó de armazenamento_* > *Gerenciador do sistema SANtricity*
+** Use o Gerenciador do sistema SANtricity navegando até o IP do controlador de armazenamento:
++
+`*https://_Storage_Controller_IP_*`
+
+
+
+. Introduza o nome de utilizador e a palavra-passe do administrador do Gestor do sistema SANtricity, se necessário.
+. Verifique a versão do firmware da unidade atualmente instalada no dispositivo de armazenamento:
++
+.. No Gerenciador de sistema SANtricity, selecione *SUPORTE* > *Centro de Atualização*.
+.. Em Drive firmware upgrade, selecione *Begin Upgrade* (Iniciar atualização).
++
+A página Atualizar firmware da unidade exibe os arquivos de firmware da unidade atualmente instalados.
+
+.. Observe as revisões atuais do firmware da unidade e os identificadores da unidade na coluna firmware da unidade atual.
++
+image::../media/storagegrid_update_drive_firmware.png[Atualize o firmware da unidade]
+
++
+Neste exemplo:
+
++
+*** A revisão do firmware da unidade é *MS02*.
+*** O identificador da unidade é *KPM51VUG800G*.
+
+
+.. Selecione *Exibir unidades* na coluna unidades associadas para exibir onde essas unidades estão instaladas no seu dispositivo de armazenamento.
+.. Feche a janela Upgrade Drive firmware (Atualizar firmware da unidade).
+
+
+. Transfira e prepare a atualização de firmware da unidade disponível:
++
+.. Em Atualização do firmware da unidade, selecione *suporte NetApp*.
+.. No site de suporte da NetApp, selecione a guia *Downloads* e, em seguida, selecione *firmware da unidade de disco da série e*.
++
+É apresentada a página firmware do disco e-Series.
+
+.. Procure cada *Drive Identifier* instalado no seu dispositivo de armazenamento e verifique se cada identificador de unidade tem a revisão de firmware mais recente.
++
+*** Se a revisão do firmware não for um link, esse identificador de unidade terá a revisão de firmware mais recente.
+*** Se um ou mais números de peça de unidade forem listados para um identificador de unidade, uma atualização de firmware estará disponível para essas unidades. Pode selecionar qualquer ligação para transferir o ficheiro de firmware.
++
+image::../media/storagegrid_drive_firmware_download.png[Página do firmware do disco da série E.]
+
+
+
+.. Se estiver listada uma revisão de firmware posterior, selecione o link na coluna firmware Rev. (Download) para baixar um `.zip` arquivo contendo o arquivo de firmware.
+.. Extraia (descompacte) os arquivos de arquivo de firmware da unidade que você baixou do site de suporte.
+
+
+. Instale a atualização do firmware da unidade:
++
+.. No Gerenciador de sistema do SANtricity, em Atualização do firmware da unidade, selecione *Begin Upgrade*.
+.. Selecione *Procurar* e selecione os novos arquivos de firmware da unidade que você baixou no site de suporte.
++
+Os arquivos de firmware da unidade têm um nome de arquivo semelhante `D_HUC101212CSS600_30602291_MS01_2800_0002.dlp` ao .
+
++
+Você pode selecionar até quatro arquivos de firmware da unidade, um de cada vez. Se mais de um arquivo de firmware de unidade for compatível com a mesma unidade, você receberá um erro de conflito de arquivo. Decida qual arquivo de firmware da unidade você deseja usar para a atualização e remova o outro.
+
+.. Selecione *seguinte*.
++
+*Selecionar unidades* lista as unidades que você pode atualizar com os arquivos de firmware selecionados.
+
++
+Apenas as unidades compatíveis aparecem.
+
++
+O firmware selecionado para a unidade aparece na coluna *firmware proposto*. Se tiver de alterar este firmware, selecione *voltar*.
+
+.. Selecione *Atualizar todas as unidades on-line* – atualiza as unidades que podem suportar um download de firmware enquanto a matriz de armazenamento está processando e/S Você não precisa parar a e/S para os volumes associados usando essas unidades quando você selecionar esse método de atualização.
++
+
+NOTE: Uma atualização online pode demorar várias horas mais do que uma atualização offline.
+
+.. Na primeira coluna da tabela, selecione a unidade ou unidades que deseja atualizar.
++
+A prática recomendada é atualizar todas as unidades do mesmo modelo para a mesma revisão de firmware.
+
+.. Selecione *Start* (Iniciar) e confirme que pretende efetuar a atualização.
++
+Se você precisar parar a atualização, selecione *Stop*. Todas as transferências de firmware atualmente em curso são concluídas. Quaisquer downloads de firmware que não tenham sido iniciados são cancelados.
+
++
+
+CAUTION: Parar a atualização do firmware da unidade pode resultar em perda de dados ou unidades indisponíveis.
+
+.. (Opcional) para ver uma lista do que foi atualizado, selecione *Save Log*.
++
+O arquivo de log é salvo na pasta de downloads do navegador com o `latest-upgrade-log-timestamp.txt` nome .
+
++
+link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html["Se necessário, solucione os erros de atualização do firmware do driver"].
+
+
+
+

@@ -1,0 +1,65 @@
+---
+settings:
+  name: StorageGRID Appliances
+  search: storagegrid-enable,storagegrid-118,storagegrid-appliances
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: false
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+    hide_language_selector: false
+  langs: pt-br,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Documentos do StorageGRID Appliance
+    url: "/index.html"
+  - title: Documentação do software StorageGRID
+    url: "/storagegrid-documentation.html"
+  - title: Comece agora
+    url: "/landing-learn-hdwr/index.html"
+    entries:
+    - title: O que há de novo para aparelhos
+      url: "/whats-new-appliances.html"
+    - title: Saiba mais sobre os dispositivos StorageGRID
+      entries:
+      - title: Aparelhos de serviços SG100 e SG1000
+        url: "/installconfig/hardware-description-sg100-and-1000.html"
+      - title: Aparelhos de serviços SG110 e SG1100
+        url: "/installconfig/hardware-description-sg110-and-1100.html"
+      - title: SG5700 dispositivos de armazenamento
+        url: "/installconfig/hardware-description-sg5700.html"
+      - title: SG5800 dispositivos de armazenamento
+        url: "/installconfig/hardware-description-sg5800.html"
+      - title: SG6000 dispositivos de armazenamento
+        url: "/installconfig/hardware-description-sg6000.html"
+      - title: SG6100 dispositivos de armazenamento
+        url: "/installconfig/hardware-description-sg6100.html"
+  - section: installconfig
+  - title: Mantenha o hardware do dispositivo
+    url: "/landing-maintain-hdwr/index.html"
+    entries:
+    - section: commonhardware
+    - title: Clonagem do nó do dispositivo
+      entries:
+      - title: Visão geral
+        pdf-filename: Clonagem do nó do dispositivo
+        url: "/commonhardware/how-appliance-node-cloning-works.html"
+      - title: Considerações e requisitos para clonagem de nós do dispositivo
+        url: "/commonhardware/considerations-and-requirements-for-appliance-node-cloning.html"
+      - title: Nó do dispositivo clone
+        url: "/commonhardware/appliance-node-cloning-procedure.html"
+    - section: sg100-1000
+    - section: sg110-1100
+    - section: sg5600
+    - section: sg5700
+    - section: sg5800
+    - section: sg6000
+    - section: sg6100
+  - title: Ative o StorageGRID
+    url: "/storagegrid-enable.html"
+  - title: Avisos legais
+    url: "/legal-notices.html"
+product-family:
+  name: StorageGRID documentation
+  repo: storagegrid-family

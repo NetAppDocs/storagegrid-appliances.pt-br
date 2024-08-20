@@ -1,0 +1,64 @@
+---
+permalink: sg5800/changing-link-configuration-of-sg5800-controller.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Altere a configuração do link do controlador SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode alterar a configuração da ligação Ethernet do controlador SG5800. Pode alterar o modo de ligação de porta, o modo de ligação de rede e a velocidade de ligação.
+
+.Antes de começar
+link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o controlador SG5800 no modo de manutenção"].
+
+
+NOTE: Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.
+
+.Sobre esta tarefa
+As opções para alterar a configuração do link Ethernet do controlador SG5800 incluem:
+
+* Alterar o modo *Port bond* de fixo para agregado, ou de agregado para fixo
+* Alteração do *modo de ligação de rede* de ative-Backup para LACP ou de LACP para ative-Backup
+* Ativar ou desativar a marcação de VLAN ou alterar o valor de uma tag VLAN
+* Alteração da velocidade do link de ou para Auto (recomendado), 10 GbE ou 25 GbE.
+
+
+.Passos
+. Selecione *Configure Networking* > *Link Configuration* no menu.
++
+image::../media/link_configuration_option.gif[Configuração da ligação]
+
+. [[change_link_Configuration_sg5800, start-2]]Faça as alterações desejadas na configuração do link.
++
+Para obter mais informações sobre as opções, link:../installconfig/configuring-network-links.html["Configurar ligações de rede"]consulte .
+
+. Quando estiver satisfeito com suas seleções, clique em *Salvar*.
++
+
+NOTE: Poderá perder a ligação se tiver efetuado alterações à rede ou à ligação através da qual está ligado. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do Instalador de appliance StorageGRID usando um dos outros endereços IP atribuídos ao appliance
+`*https://_SG5800_Controller_IP_:8443*`
+
++
+Se você fez alterações nas configurações de VLAN, a sub-rede do dispositivo pode ter sido alterada. Se precisar alterar os endereços IP do aparelho, siga as link:../installconfig/setting-ip-configuration.html["Configurar endereços IP do StorageGRID"] instruções.
+
+. No Instalador do StorageGRID Appliance, selecione *Configurar rede* > *Teste de ping*.
+. Use a ferramenta Teste de ping para verificar a conetividade com endereços IP em qualquer rede que possa ter sido afetada pelas alterações de configuração de link feitas na <<change_link_configuration_sg5700,Alterar a configuração do link>> etapa.
++
+Além de quaisquer outros testes que você escolher executar, confirme que você pode fazer ping no endereço IP da grade do nó Admin principal e no endereço IP da grade de pelo menos um outro nó de armazenamento. Se necessário, corrija quaisquer problemas de configuração do link.
+
+. Uma vez que você estiver satisfeito que as alterações de configuração do link estão funcionando, reinicie o nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+

@@ -1,0 +1,22 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Encontre o dispositivo no data center.
++
+** Procure um LED de identificação azul aceso na parte frontal ou traseira do aparelho.
++
+O LED de identificação frontal está atrás da moldura frontal e pode ser difícil ver se a moldura está instalada.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[LED de identificação dianteira - ligado]
+
++
+O LED de identificação traseiro encontra-se no centro do aparelho, por baixo da ranhura Micro-SD.
+
+** Verifique as etiquetas anexadas à parte frontal do aparelho quanto a um número de peça correspondente para confirmar que encontrou o aparelho correto.
+
+
+. Retire a moldura frontal, se estiver instalada, para aceder aos controlos e indicadores do painel frontal.
+

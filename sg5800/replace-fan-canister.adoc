@@ -1,0 +1,126 @@
+---
+permalink: sg5800/replace-fan-canister.html 
+sidebar: sidebar 
+keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
+summary: Rever os tipos e requisitos do recipiente E4000. 
+---
+= Substitua o recipiente do ventilador em SG5860
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um recipiente de ventilador em um SG5860.
+
+.Sobre esta tarefa
+Cada aparelho inclui dois coletores de ventilador. Se um recipiente do ventilador falhar, você deve substituí-lo o mais rápido possível para garantir que a prateleira tenha resfriamento adequado.
+
+
+CAUTION: *Possíveis danos ao equipamento* -- se você executar este procedimento com a energia ligada, você deve concluí-lo em até 30 minutos para evitar a possibilidade de superaquecimento do equipamento.
+
+.Antes de começar
+* Reveja os detalhes no Recovery Guru para confirmar que existe um problema com o recipiente da ventoinha e selecione *Reverifique* a partir do Recovery Guru para garantir que nenhum outro item deve ser resolvido primeiro.
+* Verifique se o LED âmbar de atenção no recipiente da ventoinha está aceso, indicando que a ventoinha tem uma avaria. Contacte o suporte técnico para obter assistência se ambos os coletores do ventilador na prateleira tiverem os respetivos LEDs de atenção âmbar ligados.
+* Certifique-se de que tem o seguinte:
++
+** Um recipiente da ventoinha de substituição (ventoinha) suportado para o modelo do seu aparelho.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+
+
+
+
+
+
+== Passo 1: Prepare-se para substituir o recipiente do ventilador
+
+Prepare-se para substituir um recipiente de ventilador coletando dados de suporte sobre sua matriz de armazenamento e localizando o componente com falha.
+
+.Passos
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. A partir do Gerenciador do sistema do SANtricity, determine qual o recipiente do ventilador falhou.
++
+.. Selecione *hardware*.
+.. Olhe para o ícone do ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""]à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.
++
+Se um componente tiver falhado, este ícone fica vermelho.
+
+.. Quando encontrar a prateleira com um ícone vermelho, selecione *Mostrar parte posterior da prateleira*.
+.. Selecione o recipiente da ventoinha ou o ícone da ventoinha vermelha.
+.. No separador *ventiladores*, observe os Estados dos coletores do ventilador para determinar qual o recipiente do ventilador deve ser substituído.
++
+Um componente com um estado *Failed* deve ser substituído.
+
++
+
+NOTE: Se o segundo recipiente do ventilador na prateleira não tiver o status *ótimo*, não tente trocar a caixa do ventilador com falha. Em vez disso, entre em Contato com o suporte técnico para obter assistência.
+
+
+
++
+Você também pode encontrar informações sobre o recipiente de ventilador com falha na área Detalhes do Recovery Guru, ou você pode revisar o Registro de eventos em suporte e filtrar por tipo de componente.
+
+. Na parte de trás da matriz de armazenamento, observe os LEDs de atenção para localizar o recipiente do ventilador que você precisa remover.
++
+Tem de substituir o recipiente da ventoinha que tem o respetivo LED de atenção ligado.
+
+
+
+
+
+== Passo 2: Remova o recipiente do ventilador com falha e instale um novo
+
+Remova um recipiente do ventilador com falha para que você possa substituí-lo por um novo.
+
+
+CAUTION: Se não desligar a alimentação da matriz de armazenamento, certifique-se de que remove e substitui o recipiente do ventilador no espaço de 30 minutos para evitar o sobreaquecimento do sistema.
+
+.Passos
+. Desembale o novo recipiente da ventoinha e coloque-o numa superfície nivelada perto da prateleira.
++
+Guarde todo o material de embalagem para utilização quando devolver o ventilador avariado.
+
+. Prima a patilha cor-de-laranja para soltar a pega do recipiente da ventoinha.
+. Utilize a pega do recipiente do ventilador para puxar o recipiente do ventilador para fora da prateleira.
+. Deslize o recipiente da ventoinha de substituição totalmente para a prateleira e, em seguida, mova o manípulo do recipiente da ventoinha até este encaixar com a patilha cor-de-laranja.
+
+
+
+
+== Passo 3: Substituição completa do recipiente do ventilador
+
+Confirme se o novo recipiente da ventoinha está a funcionar corretamente, recolha dados de suporte e retome as operações normais.
+
+.Passos
+. Verifique o LED de atenção âmbar no novo recipiente da ventoinha.
++
+
+NOTE: Depois de substituir o recipiente do ventilador, o LED de atenção permanece aceso (âmbar fixo) enquanto o firmware verifica se o recipiente do ventilador foi instalado corretamente. O LED apaga-se após este processo estar concluído.
+
+. No Recovery Guru (Guru de recuperação) no Gerenciador do sistema do SANtricity, selecione *Reverificar* para garantir que o problema foi resolvido.
+. Se um recipiente do ventilador com falha ainda estiver sendo relatado, repita as etapas em <<Passo 2: Remova o recipiente do ventilador com falha e instale um novo>>. Se o problema persistir, entre em Contato com o suporte técnico.
+. Retire a proteçãoão antiestática.
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+
+
+.O que se segue?
+A substituição do recipiente do ventilador está concluída. Pode retomar as operações normais.

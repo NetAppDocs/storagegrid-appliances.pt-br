@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6100.html 
+sidebar: sidebar 
+keywords: install, sg6100, sg6112, expansion shelf, cabinet, rack, drives 
+summary: Para o SG6160 e o SGF6112, você instala os trilhos em seu gabinete ou rack e desliza o compartimento do controlador, todas as gavetas de expansão e o controlador de computação nos trilhos. 
+---
+= Instalar no gabinete ou rack (SG6100)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o SG6160 e o SGF6112, você instala os trilhos em seu gabinete ou rack e desliza o compartimento do controlador, todas as gavetas de expansão e o controlador de computação nos trilhos.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obter informações 
+
+
+ a| 
+SG6160
+ a| 
+compartimento do controlador de 60 unidades e todas as gavetas de expansão de 60 unidades
+ a| 
+link:sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale as gavetas de 60 unidades"]
+
+
+
+ a| 
+SG6112
+ a| 
+compartimento do dispositivo de 12 unidades
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6112.html["Instale as gavetas de 12 unidades"]
+
+
+
+ a| 
+SG6160
+ a| 
+Controlador de computação SG6100-CN
+ a| 
+link:sg6100-cn-installing-into-cabinet-or-rack.html["Instale o controlador SG6100-CN"]
+
+|===

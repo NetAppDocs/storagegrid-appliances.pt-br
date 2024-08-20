@@ -1,0 +1,26 @@
+= Passo 3: Remova o controlador
+:allow-uri-read: 
+
+
+
+
+== Passo 3: Remova o controlador
+
+Retire o controlador com falha do aparelho.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique os cabos e, em seguida, desligue os cabos e SFPs.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Solte o controlador do aparelho apertando o trinco na pega do came até soltar e, em seguida, abra a pega do came para a direita.
+. Utilizando as duas mãos e a pega do came, deslize o controlador para fora do aparelho.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso do controlador.
+
+. Coloque o controlador numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Remova a tampa pressionando o botão e deslizando a tampa para fora.
+

@@ -1,0 +1,118 @@
+---
+permalink: sg110-1100/power-sg110-and-sg1100-off-on.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
+summary: Pode desligar o aparelho SGF6112 e ligá-lo novamente para efetuar a manutenção. 
+---
+= Ligue e desligue o SG110 ou SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode desligar o aparelho SG110 ou SG1100 e ligá-lo novamente para efetuar a manutenção.
+
+
+
+== Desligue o aparelho SG110 ou SG1100
+
+Desligue o aparelho para efetuar a manutenção do hardware.
+
+.Antes de começar
+* Você link:locating-sg110-and-sg1100-in-data-center.html["localizado fisicamente o aparelho"]tem .
+
+
+.Sobre esta tarefa
+Para evitar interrupções de serviço, desligue o aparelho durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis.
+
+.Passos
+. Desligue o aparelho:
++
+
+CAUTION: Tem de efetuar um corte de funcionamento controlado do aparelho introduzindo os comandos especificados abaixo. É uma prática recomendada executar um desligamento controlado quando possível para evitar alertas desnecessários, garantir que Registros completos estejam disponíveis e evitar interrupções de serviço.
+
++
+.. Se você ainda não fez login no nó de grade, faça login usando PuTTY ou outro cliente ssh:
++
+... Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Desligue o aparelho
+`*shutdown -h now*`
++
+Esse comando pode levar até 10 minutos para ser concluído.
+
+
+
+. Utilize um dos seguintes métodos para verificar se o aparelho está desligado:
++
+** Olhe para o LED de alimentação na parte frontal do aparelho e confirme que está desligado.
+** Verifique a página Power Control (controlo de alimentação) da interface do BMC para confirmar que o aparelho está desligado.
+
+
+
+
+
+
+== Ligue SG110 ou SG1100 e verifique a operação
+
+Ligue o controlador após concluir a manutenção.
+
+.Antes de começar
+* Você tem link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["instalado o controlador em um gabinete ou rack"] e conetou os cabos de dados e alimentação.
+* Você link:locating-sg110-and-sg1100-in-data-center.html["localizado fisicamente o controlador no data center"]tem .
+
+
+.Passos
+. Ligue o aparelho.
++
+Poderá ter de remover a moldura para aceder ao interrutor de alimentação; em caso afirmativo, lembre-se de a voltar a instalá-la posteriormente.
+
+. Monitore os LEDs do controlador e os códigos de inicialização usando um dos seguintes métodos:
++
+** Prima o interrutor de alimentação na parte frontal do controlador.
+** Use a interface BMC do controlador:
++
+... link:../installconfig/accessing-bmc-interface.html["Acesse a interface BMC do controlador"].
+... Selecione *Power Control*.
+... Selecione *ligar* e, em seguida, selecione *Executar ação*.
++
+image::../media/sgf6112_power_on_from_bmc.png[Ligue o aparelho da BMC]
+
++
+Use a interface BMC para monitorar o status de inicialização.
+
+
+
+
+
+. Confirme se o controlador do dispositivo é apresentado no Gestor de grelha e sem alertas.
++
+Pode levar até 20 minutos para o controlador ser exibido no Gerenciador de Grade.
+
++
+
+CAUTION: Não coloque outro nó de dispositivo offline a menos que este dispositivo tenha um ícone verde.
+
+. Confirme se o novo dispositivo está totalmente operacional fazendo login no nó da grade usando PuTTY ou outro cliente ssh:
++
+.. Introduza o seguinte comando: `ssh _Appliance_IP_`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+.. Digite o seguinte comando para mudar para root: `su -`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+
+
+.Informações relacionadas
+link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]

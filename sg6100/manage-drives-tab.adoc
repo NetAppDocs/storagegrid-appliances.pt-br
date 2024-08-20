@@ -1,0 +1,96 @@
+---
+permalink: sg6100/manage-drives-tab.html 
+sidebar: sidebar 
+keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
+summary: Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades no dispositivo SGF6112. 
+---
+= Usar a guia Gerenciar unidades (SGF6112)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades no dispositivo SGF6112.
+
+.Antes de começar
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+
+
+.Sobre esta tarefa
+Se você tiver um dispositivo SGF6112 e o https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Administrador do dispositivo de storage ou permissão de acesso à raiz"^], uma guia Gerenciar unidades será exibida na página de detalhes do dispositivo.
+
+A guia Gerenciar unidades contém as seguintes exibições:
+
+Layout:: Layout das unidades de armazenamento de dados no dispositivo. Selecione uma unidade para ver os detalhes da unidade.
++
+--
+image:../media/manage_drives_tab.png["Exibição de layout da guia Gerenciar unidades"]
+
+--
+Tabela:: Lista informações para cada unidade. Selecione uma unidade para ver os detalhes da unidade.
++
+--
+image:../media/manage_drives_tab_table.png["Exibição de tabela da guia Gerenciar unidades"]
+
+--
+Detalhes da unidade:: Resumo para cada unidade. Selecione o botão de tarefa apropriado, conforme descrito nas etapas abaixo.
++
+--
+image:../media/manage_drives_tab_details.png["Guia gerir unidades Detalhes da unidade"]
+
+--
+
+
+
+
+== Ligue ou desligue a luz do localizador
+
+Para localizar fisicamente uma unidade no aparelho:
+
+. No Gerenciador de Grade, selecione *NÓS* > *_data center_*.
+. Selecione *_Appliance storage node_* > *Manage Drives* > *Layout* > *_drive_*.
++
+O painel de detalhes da unidade é exibido.
+
+. Selecione *ligar a luz do localizador*.
++
+** É apresentado um ícone de lâmpada image:../media/icon_drive-light-bulb.png["lâmpada da luz de condução"]para a unidade.
+** Um LED âmbar pisca na unidade física.
+
+
+. Quando pretender desligar a luz de localização, selecione *Desligar a luz de localização*.
+
+
+
+
+== [[logicamente-replace-drive]]logicamente substitua a unidade
+
+Se uma unidade no dispositivo de armazenamento precisar ser reconstruída ou reinicializada:
+
+. No Gerenciador de Grade, selecione *NÓS* > *_data center_*.
+. Selecione *_Appliance storage node_* > *Manage Drives* > *Layout* > *_drive_*.
++
+O painel de detalhes da unidade é exibido.
+
+. Selecione *logicamente replace*.
++
+No painel de detalhes da unidade, o status da unidade indica _reconstruindo_. A reconstrução de uma unidade pode levar até 5 minutos.
+
+
+
+
+
+== Falha na unidade
+
+Para a solução de problemas, você pode "falhar" manualmente uma unidade que você suspeita estar com defeito. O sistema funcionará sem essa unidade.
+
+. No Gerenciador de Grade, selecione *NÓS* > *_data center_*.
+. Selecione *_Appliance storage node_* > *Manage Drives* > *Layout* > *_drive_*.
++
+O painel de detalhes da unidade é exibido.
+
+. Selecione *Fail drive*.
+
+
+Depois de falhar uma unidade, você deve substituir fisicamente a unidade ou <<logically-replace-drive,substitua logicamente a unidade>>.

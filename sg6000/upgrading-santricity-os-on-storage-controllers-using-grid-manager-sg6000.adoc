@@ -1,0 +1,199 @@
+---
+permalink: sg6000/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity 
+summary: 'Para os controladores de armazenamento que utilizam atualmente o SANtricity os 08.42.20.00 (11,42) ou mais recente, tem de utilizar o Gestor de grelha para aplicar uma atualização.' 
+---
+= Atualize o SANtricity os em controladores de storage SG6000 usando o Gerenciador de Grade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para controladores de storage que atualmente usam o SANtricity os 08.42.20.00 (11,42) ou mais recente, você deve usar o Gerenciador de Grade para aplicar uma atualização.
+
+.Antes de começar
+* Se você não obteve a versão do SANtricity os para a qual deseja atualizar https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^] , você consultou https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^] o https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para confirmar se a versão do SANtricity os que você está usando para a atualização é compatível com o seu dispositivo.
+* Você tem o https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Permissão de manutenção ou acesso root"^].
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você tem a senha de provisionamento.
+
+
+.Sobre esta tarefa
+Não é possível executar outras atualizações de software (atualização de software StorageGRID ou hotfix) enquanto uma atualização do SANtricity os estiver em andamento. Se você tentar iniciar um hotfix ou uma atualização de software StorageGRID antes do processo de atualização do SANtricity os terminar, você será redirecionado para a página de atualização do SANtricity os.
+
+O procedimento não será concluído até que a atualização do SANtricity os tenha sido aplicada com êxito a todos os nós aplicáveis que tenham sido selecionados para a atualização. Pode levar mais de 30 minutos para carregar o sistema operacional SANtricity em cada nó (sequencialmente) e até 90 minutos para reinicializar cada dispositivo de storage StorageGRID. Todos os nós da sua grade que não usam o SANtricity os não serão afetados por este procedimento.
+
+
+CAUTION: As etapas a seguir são aplicáveis somente quando você estiver usando o Gerenciador de Grade para executar a atualização. Os controladores de armazenamento no dispositivo não podem ser atualizados usando o Gerenciador de Grade quando os controladores estão usando o SANtricity os mais antigos que 08.42.20.00 (11,42).
+
+
+NOTE: Este procedimento atualizará automaticamente a NVSRAM para a versão mais recente associada à atualização do sistema operacional SANtricity. Não é necessário aplicar um ficheiro de atualização NVSRAM separado.
+
+
+NOTE: Certifique-se de aplicar o hotfix do StorageGRID mais recente antes de iniciar este procedimento.  https://docs.netapp.com/us-en/storagegrid-118/maintain/storagegrid-hotfix-procedure.html["Procedimento de correção do StorageGRID"^]Consulte para obter detalhes.
+
+.Passos
+. [[download-SANtricity-os]] Baixe o novo arquivo de software doSANtricity os em https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^].
++
+Certifique-se de escolher a versão do SANtricity os para os controladores de storage.
+
+. Selecione *MAINTENANCE* > *System* > *Software update*.
++
+image::../media/software_update_landing.png[Página inicial de atualização de software]
+
+. Na seção Atualização do SANtricity os, selecione *Atualização*.
++
+A página de atualização do SANtricity os é exibida e lista os detalhes de cada nó do dispositivo, incluindo:
+
++
+** Nome do nó
+** Local
+** Modelo do aparelho
+** Versão do SANtricity os
+** Estado
+** Estado da última atualização
+
+
+. Reveja as informações na tabela para todos os seus dispositivos atualizáveis. Confirme se todos os controladores de storage têm status *nominal*. Se o status de qualquer controlador for *desconhecido*, vá para *nós* > *_Appliance node_* > *hardware* para investigar e resolver o problema.
+. Selecione o arquivo de atualização do SANtricity os que você baixou no site de suporte da NetApp.
++
+.. Selecione *Procurar*.
+.. Localize e selecione o ficheiro.
+.. Selecione *Open*.
+
+
++
+O arquivo é carregado e validado. Quando o processo de validação é concluído, o nome do arquivo é mostrado com uma marca de seleção verde ao lado do botão *Browse*. Não altere o nome do arquivo porque ele faz parte do processo de verificação.
+
+. Introduza a frase-passe de aprovisionamento e selecione *continuar*.
++
+Uma caixa de aviso aparece informando que a conexão do seu navegador pode ser perdida temporariamente à medida que os serviços nos nós atualizados são reiniciados.
+
+. Selecione *Sim* para colocar o arquivo de atualização do SANtricity os no nó de administração principal.
++
+Quando a atualização do SANtricity os é iniciada:
+
++
+.. A verificação de integridade é executada. Esse processo verifica se nenhum nó tem o status de precisa de atenção.
++
+
+NOTE: Se algum erro for relatado, resolva-os e selecione *Start* novamente.
+
+.. A tabela de progresso da atualização do SANtricity os é exibida. Esta tabela mostra todos os nós de storage na grade e a etapa atual da atualização para cada nó.
++
+
+NOTE: A tabela mostra todos os nós de storage do dispositivo. Os nós de storage baseados em software não são exibidos. Selecione *Approve* para todos os nós que requerem a atualização.
+
++
+image::../media/santricity_upgrade_progress_table.png[Captura de tela mostrando a parte de progresso da atualização do SANtricity os da página de atualização do SANtricity os]
+
+
+
+. Opcionalmente, classifique a lista de nós em ordem crescente ou decrescente por:
++
+** Nome do nó
+** Versão atual
+** Progresso
+** Fase
+** Estado
+
+
++
+Você também pode inserir um termo na caixa pesquisar para pesquisar nós específicos.
+
+. Aprove os nós de grade que você está pronto para adicionar à fila de atualização. Os nós aprovados são atualizados um de cada vez.
++
+
+CAUTION: Não aprove a atualização do SANtricity os para um nó de armazenamento de dispositivos, a menos que você tenha certeza de que o nó está pronto para ser parado e reinicializado. Quando a atualização do SANtricity os é aprovada em um nó, os serviços nesse nó são interrompidos e o processo de atualização começa. Mais tarde, quando o nó terminar de atualizar, o nó appliance é reinicializado. Essas operações podem causar interrupções de serviço para clientes que estão se comunicando com o nó.
+
++
+** Selecione o botão *Approve All* (aprovar tudo) para adicionar todos os nós de armazenamento à fila de atualização do SANtricity os.
++
+
+NOTE: Se a ordem em que os nós são atualizados for importante, aprove nós ou grupos de nós um de cada vez e aguarde até que a atualização seja concluída em cada nó antes de aprovar o próximo nó.
+
+** Selecione um ou mais botões *Approve* para adicionar um ou mais nós à fila de atualização do SANtricity os. O botão *Approve* é desativado se o Status não for nominal.
++
+Depois de selecionar *Approve*, o processo de atualização determina se o nó pode ser atualizado. Se um nó puder ser atualizado, ele será adicionado à fila de atualização.
+
++
+Para alguns nós, o arquivo de atualização selecionado não é aplicado intencionalmente e você pode concluir o processo de atualização sem atualizar esses nós específicos. Os nós intencionalmente não atualizados mostram um estágio de conclusão (tentativa de atualização) e listam o motivo pelo qual o nó não foi atualizado na coluna Detalhes.
+
+
+
+. Se precisar remover um nó ou todos os nós da fila de atualização do SANtricity os, selecione *Remover* ou *Remover tudo*.
++
+Quando o estágio avança além da fila, o botão *Remover* fica oculto e você não pode mais remover o nó do processo de atualização do SANtricity os.
+
+. Aguarde enquanto a atualização do SANtricity os é aplicada a cada nó de grade aprovado.
++
+** Se qualquer nó mostrar um estágio de erro enquanto a atualização do SANtricity os é aplicada, a atualização falhou para o nó. Com a assistência do suporte técnico, pode ser necessário colocar o aparelho no modo de manutenção para recuperá-lo.
+** Se o firmware no nó for muito antigo para ser atualizado com o Gerenciador de Grade, o nó mostra um estágio de erro com os detalhes que você deve usar o modo de manutenção para atualizar o SANtricity os no nó. Para resolver o erro, faça o seguinte:
++
+... Use o modo de manutenção para atualizar o SANtricity os no nó que mostra um estágio de erro.
+... Use o Gerenciador de Grade para reiniciar e concluir a atualização do SANtricity os.
+
+
+
+
++
+Quando a atualização do SANtricity os estiver concluída em todos os nós aprovados, a tabela de progresso da atualização do SANtricity os fecha e um banner verde mostra o número de nós atualizados e a data e hora em que a atualização foi concluída.
+
+. Se um nó não puder ser atualizado, observe o motivo mostrado na coluna Detalhes e tome a ação apropriada.
++
+
+NOTE: O processo de atualização do SANtricity os não será concluído até que você aprove a atualização do SANtricity os em todos os nós de storage listados.
+
++
+[cols="1a,2a"]
+|===
+| Motivo | Ação recomendada 
+
+
+ a| 
+O nó de storage já foi atualizado.
+ a| 
+Não é necessária qualquer outra ação.
+
+
+
+ a| 
+A atualização do SANtricity os não é aplicável a este nó.
+ a| 
+O nó não tem um controlador de storage que pode ser gerenciado pelo sistema StorageGRID. Conclua o processo de atualização sem atualizar o nó exibindo esta mensagem.
+
+
+
+ a| 
+O ficheiro SANtricity os não é compatível com este nó.
+ a| 
+O nó requer um arquivo SANtricity os diferente do que você selecionou. Depois de concluir a atualização atual, baixe o arquivo SANtricity os correto para o nó e repita o processo de atualização.
+
+|===
+. Se você quiser terminar a aprovação de nós e retornar à página do SANtricity os para permitir o upload de um novo arquivo do SANtricity os, faça o seguinte:
++
+.. Selecione *Skip Nodes e Finish*.
++
+Um aviso é exibido perguntando se você tem certeza de que deseja concluir o processo de atualização sem atualizar todos os nós aplicáveis.
+
+.. Selecione *OK* para retornar à página *SANtricity os*.
+.. Quando estiver pronto para continuar aprovando nós, <<download-santricity-os,Baixe o SANtricity os>>reinicie o processo de atualização.
++
+
+NOTE: Os nós já aprovados e atualizados sem erros permanecem atualizados.
+
+
+
+. Repita este procedimento de atualização para todos os nós com um estágio de conclusão que exigem um arquivo de atualização diferente do SANtricity os.
++
+
+NOTE: Para todos os nós com um status de precisa de atenção, use o modo de manutenção para executar a atualização.
+
+
+
+.Informações relacionadas
+https://mysupport.netapp.com/matrix["Ferramenta de Matriz de interoperabilidade do NetApp"^]
+
+link:upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html["Atualizar o SANtricity os em controladores de storage usando o modo de manutenção"]

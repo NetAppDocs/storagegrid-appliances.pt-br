@@ -1,0 +1,40 @@
+---
+section: sg110-1100
+title: Mantenha o hardware SG110 e SG1100
+url: "/landing-maintain-sg1100-110/index.html"
+entries:
+- title: Visão geral
+  pdf-filename: Manutenção de hardware SG110 e SG1100
+  url: "/sg110-1100/index.html"
+- title: Procedimentos de configuração de manutenção
+  pdf-filename: Procedimentos de configuração de manutenção - SG110 e SG1100
+  entries:
+  - title: Ligue e desligue o LED de identificação
+    url: "/sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html"
+  - title: Localize o dispositivo no data center
+    url: "/sg110-1100/locating-sg110-and-sg1100-in-data-center.html"
+  - title: Desligue e ligue o aparelho
+    url: "/sg110-1100/power-sg110-and-sg1100-off-on.html"
+  - title: Alterar a configuração do link
+    url: "/sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html"
+- title: Procedimentos de manutenção de hardware
+  pdf-filename: Procedimentos de manutenção de hardware - SG110 e SG1100
+  entries:
+  - title: Verifique o componente a substituir
+    url: "/sg110-1100/verify-component-to-replace.html"
+  - title: Substitua uma ou mais fontes de alimentação
+    url: "/sg110-1100/replacing-one-or-more-power-supplies-in-sg110-and-sg1100-appliance.html"
+  - title: Substitua a ventoinha
+    url: "/sg110-1100/replacing-fan-in-sg110-and-sg1100.html"
+  - title: Substitua a transmissão
+    url: "/sg110-1100/replacing-drive-in-sg110-and-sg1100.html"
+  - title: Substitua a NIC
+    url: "/sg110-1100/replace-nic-in-sg110-and-sg1100.html"
+  - title: Substitua a bateria CMOS
+    url: "/sg110-1100/replace-cmos-in-sg110-and-sg1100.html"
+  - title: Volte a colocar a tampa
+    url: "/sg110-1100/reinstalling-sg110-and-sg1100-cover.html"
+  - title: Substitua o aparelho
+    url: "/sg110-1100/replacing-sg110-and-sg1100-appliance.html"
+  - title: Reposicione o aparelho no rack
+    url: "/sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html"

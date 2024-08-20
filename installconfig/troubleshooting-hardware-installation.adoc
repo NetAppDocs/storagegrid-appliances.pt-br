@@ -1,0 +1,748 @@
+---
+permalink: installconfig/troubleshooting-hardware-installation.html 
+sidebar: sidebar 
+keywords: 'storage node, storage appliance, troubleshoot, troubleshooting, hardware, install, installation, sg6000, storage node, storage appliance, boot codes, boot-up codes, start codes, codes, boot, start, sg6000-cn, error codes, errors, error, codes, setup, hang, hangs, fails, failure, stop, terminate, terminates, stuck, connection, unable to connect, no connection, Expansion, shelves, don"t appear, Appliance Installer, missing, not shown, synchronize, synchronizing, synchronization, SANtricity OS Software, santricity' 
+summary: Se você encontrar problemas durante a instalação, talvez seja útil revisar informações de solução de problemas relacionadas a problemas de configuração de hardware e conetividade. 
+---
+= Solucionar problemas de instalação de hardware (SG5700 ou SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você encontrar problemas durante a instalação, talvez seja útil revisar informações de solução de problemas relacionadas a problemas de configuração de hardware e conetividade.
+
+
+
+== Ver códigos de arranque (controlador SG6000-CN)
+
+Quando você aplica energia ao aparelho, o BMC Registra uma série de códigos de inicialização para o controlador SG6000-CN. Você pode visualizar esses códigos de várias maneiras.
+
+.Antes de começar
+* Você sabe como link:accessing-bmc-interface.html["Acesse o painel do BMC"].
+* Se você quiser usar serial-over-laN (sol), você tem experiência usando aplicativos de console IPMI sol.
+
+
+.Passos
+. Selecione um dos seguintes métodos para visualizar os códigos de arranque do controlador do aparelho e recolha o equipamento necessário.
++
+[cols="1a,2a"]
+|===
+| Método | Equipamento necessário 
+
+
+ a| 
+Consola VGA
+ a| 
+** Monitor compatível com VGA
+** Cabo VGA
+
+
+
+
+ a| 
+KVM
+ a| 
+** Cabo RJ-45
+
+
+
+
+ a| 
+Porta serial
+ a| 
+** Cabo serial DB-9
+** Terminal serial virtual
+
+
+
+
+ a| 
+SOL
+ a| 
+** Terminal serial virtual
+
+
+|===
+. Se você estiver usando um console VGA, execute estas etapas:
++
+.. Ligue um monitor compatível com VGA à porta VGA na parte posterior do aparelho.
+.. Veja os códigos exibidos no monitor.
+
+
+. Se você estiver usando o BMC KVM, execute estas etapas:
++
+.. Conete-se à porta de gerenciamento do BMC e faça login na interface da Web do BMC.
+.. Selecione *Controle remoto*.
+.. Inicie o KVM.
+.. Veja os códigos no monitor virtual.
+
+
+. Se você estiver usando uma porta serial e um terminal, execute estas etapas:
++
+.. Conete-se à porta serial DB-9 na parte traseira do aparelho.
+.. Utilize as definições `115200 8-N-1`.
+.. Veja os códigos impressos no terminal serial.
+
+
+. Se você estiver usando sol, execute estas etapas:
++
+.. Conete-se ao sol IPMI usando o endereço IP BMC e as credenciais de login.
++
+`ipmitool -I lanplus -H _BMC_Port_IP_ -U admin -P _Password_ sol activate`
+
++
+
+NOTE: Em alguns casos, o nome de usuário padrão para um dispositivo SG6000 pode ser `root` em vez `admin` do .
+
+.. Veja os códigos no terminal serial virtual.
+
+
+. Utilize a tabela para procurar os códigos do seu aparelho.
++
+[cols="1a,3a"]
+|===
+| Código | Indica 
+
+
+ a| 
+OLÁ
+ a| 
+O script de inicialização mestre foi iniciado.
+
+
+
+ a| 
+HP
+ a| 
+O sistema está verificando se o firmware da placa de interface de rede (NIC) precisa ser atualizado.
+
+
+
+ a| 
+RB
+ a| 
+O sistema está reiniciando após a aplicação de atualizações de firmware.
+
+
+
+ a| 
+FP
+ a| 
+As verificações de atualização do firmware do subsistema de hardware foram concluídas. Os serviços de comunicação entre controladores estão a iniciar.
+
+
+
+ a| 
+ELE
+ a| 
+Somente para um nó de storage de dispositivo:
+
+O sistema está aguardando conetividade com os controladores de armazenamento e sincronização com o sistema operacional SANtricity.
+
+*Nota:* se o procedimento de inicialização não avançar além desta etapa, execute estas etapas:
+
+.. Confirme se os quatro cabos de interconexão entre o controlador SG6000-CN e os dois controladores de armazenamento estão bem conetados.
+.. Se necessário, substitua um ou mais cabos e tente novamente.
+.. Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+
+
+
+ a| 
+HC
+ a| 
+O sistema está a verificar se existem dados de instalação do StorageGRID.
+
+
+
+ a| 
+HO
+ a| 
+O Instalador de dispositivos StorageGRID está em execução.
+
+
+
+ a| 
+HA
+ a| 
+O StorageGRID está em execução.
+
+|===
+
+
+
+
+== Ver códigos de erro (controlador SG6000-CN)
+
+Se ocorrer um erro de hardware quando o controlador SG6000-CN está a arrancar, o BMC regista um código de erro. Conforme necessário, você pode visualizar esses códigos de erro usando a interface do BMC e trabalhar com suporte técnico para resolver o problema.
+
+.Antes de começar
+* Você sabe como link:accessing-bmc-interface.html["Acesse o painel do BMC"].
+
+
+.Passos
+. No painel do BMC, selecione *Código POST do BIOS*.
+. Reveja as informações apresentadas para o Código atual e o Código anterior.
++
+Se algum dos códigos de erro a seguir for exibido, trabalhe com suporte técnico para resolver o problema.
+
++
+[cols="1a,3a"]
+|===
+| Código | Indica 
+
+
+ a| 
+0x0E
+ a| 
+Microcódigo não encontrado
+
+
+
+ a| 
+0x0F
+ a| 
+Microcódigo não carregado
+
+
+
+ a| 
+0x50
+ a| 
+Erro de inicialização da memória. Tipo de memória inválido ou velocidade de memória incompatível.
+
+
+
+ a| 
+0x51
+ a| 
+Erro de inicialização da memória. A leitura SPD falhou.
+
+
+
+ a| 
+0x52
+ a| 
+Erro de inicialização da memória. O tamanho de memória ou os módulos de memória inválidos não correspondem.
+
+
+
+ a| 
+0x53
+ a| 
+Erro de inicialização da memória. Nenhuma memória utilizável detetada.
+
+
+
+ a| 
+0x54
+ a| 
+Erro de inicialização de memória não especificado
+
+
+
+ a| 
+0x55
+ a| 
+Memória não instalada
+
+
+
+ a| 
+0x56
+ a| 
+Tipo ou velocidade de CPU inválida
+
+
+
+ a| 
+0x57
+ a| 
+Incompatibilidade de CPU
+
+
+
+ a| 
+0x58
+ a| 
+Falha no autoteste da CPU ou possível erro de cache da CPU
+
+
+
+ a| 
+0x59
+ a| 
+O micro-código da CPU não foi encontrado ou a atualização do micro-código falhou
+
+
+
+ a| 
+0x5A
+ a| 
+Erro interno da CPU
+
+
+
+ a| 
+0x5B
+ a| 
+Repor PPI não está disponível
+
+
+
+ a| 
+0x5C
+ a| 
+Falha do autoteste do PEI fase BMC
+
+
+
+ a| 
+0xD0
+ a| 
+Erro de inicialização da CPU
+
+
+
+ a| 
+0xD1
+ a| 
+Erro de inicialização da ponte Norte
+
+
+
+ a| 
+0xD2
+ a| 
+Erro de inicialização da ponte sul
+
+
+
+ a| 
+0xD3
+ a| 
+Alguns protocolos arquitetônicos não estão disponíveis
+
+
+
+ a| 
+0xD4
+ a| 
+Erro de alocação de recursos PCI. Sem recursos.
+
+
+
+ a| 
+0xD5
+ a| 
+Sem espaço para a ROM de opção herdada
+
+
+
+ a| 
+0xD6
+ a| 
+Não foram encontrados dispositivos de saída da consola
+
+
+
+ a| 
+0xD7
+ a| 
+Não foram encontrados dispositivos de entrada da consola
+
+
+
+ a| 
+0xD8
+ a| 
+Palavra-passe inválida
+
+
+
+ a| 
+0xD9
+ a| 
+Erro ao carregar a opção de inicialização (erro loadImage retornado)
+
+
+
+ a| 
+0xDA
+ a| 
+Falha na opção de inicialização (erro retornado pela StartImage)
+
+
+
+ a| 
+0xDB
+ a| 
+Falha na atualização do flash
+
+
+
+ a| 
+0xDC
+ a| 
+O protocolo de reposição não está disponível
+
+
+
+ a| 
+0xDD
+ a| 
+Avaria no autoteste do BMC de fase DXE
+
+
+
+ a| 
+0xE8
+ a| 
+MRC: ERR_NO_MEMORY
+
+
+
+ a| 
+0xE9
+ a| 
+MRC: ERR_LT_LOCK
+
+
+
+ a| 
+0xEA
+ a| 
+MRC: ERR_DDR_INIT
+
+
+
+ a| 
+0xEB
+ a| 
+MRC: ERR_MEM_TEST
+
+
+
+ a| 
+0xEC
+ a| 
+MRC: ERR_VENDOR_SPECIFIC
+
+
+
+ a| 
+0xED
+ a| 
+MRC: ERR_DIMM_COMPAT
+
+
+
+ a| 
+0xEE
+ a| 
+MRC: ERR_MRC_COMPATIBILITY
+
+
+
+ a| 
+0xEF
+ a| 
+RMC: ERR_MRC_STRUCT
+
+
+
+ a| 
+0xF0
+ a| 
+MRC: ERR_SET_VDD
+
+
+
+ a| 
+0xF1
+ a| 
+MRC: ERR_IOT_MEM_BUFFER
+
+
+
+ a| 
+0xF2
+ a| 
+MRC: ERR_RC_INTERNAL
+
+
+
+ a| 
+0xF3
+ a| 
+MRC: ERR_INVALID_REG_ACCESS
+
+
+
+ a| 
+0xF4
+ a| 
+MRC: ERR_SET_MC_FREQ
+
+
+
+ a| 
+0xF5
+ a| 
+MRC: ERR_READ_MC_FREQ
+
+
+
+ a| 
+0x70
+ a| 
+MRC: ERR_DIMM_CHANNEL
+
+
+
+ a| 
+0x74
+ a| 
+MRC: ERR_BIST_CHECK
+
+
+
+ a| 
+0xF6
+ a| 
+MRC: ERR_SMBUS
+
+
+
+ a| 
+0xF7
+ a| 
+MRC: ERR_PCU
+
+
+
+ a| 
+0xF8
+ a| 
+MRC: ERR_NGN
+
+
+
+ a| 
+0xF9
+ a| 
+MRC: ERR_INTERLEAVE_FAILURE
+
+|===
+
+
+
+
+== A configuração do hardware parece travar (SG6000 ou SG5700)
+
+O Instalador de dispositivos StorageGRID pode não estar disponível se falhas de hardware ou erros de cabeamento impedirem que os controladores de armazenamento ou o controlador do dispositivo concluam seu processamento de inicialização.
+
+.Passos
+[role="tabbed-block"]
+====
+.SG5700
+--
+. link:viewing-status-indicators.html["Observe os códigos nos SG5700 visores de sete segmentos."]
++
+Enquanto o hardware está sendo inicializado durante a inicialização, os dois visores de sete segmentos mostram uma sequência de códigos. Quando o hardware é inicializado com êxito, as telas de sete segmentos mostram códigos diferentes para cada controlador.
+
+. Reveja os códigos no visor de sete segmentos para o controlador E5700SG.
++
+
+NOTE: A instalação e o provisionamento demoram. Algumas fases de instalação não relatam atualizações para o instalador do StorageGRID Appliance por vários minutos.
+
++
+Se ocorrer um erro, o visor de sete segmentos pisca uma sequência, COMO HE.
+
+. Para entender o que esses códigos significam, consulte os seguintes recursos:
++
+[cols="1a,2a"]
+|===
+| Controlador | Referência 
+
+
+ a| 
+Controlador E5700SG
+ a| 
+** "Indicadores de status no controlador E5700SG"
+** "HE error: Erro ao sincronizar com o software SANtricity os"
+
+
+
+
+ a| 
+Controlador E2800
+ a| 
+https://library.netapp.com/ecmdocs/ECMLP2588751/html/frameset.html["_Guia de monitorização do sistema E5700 e E2800_"^]
+
+*Nota:* os códigos descritos para o controlador e-Series E5700 não se aplicam ao controlador E5700SG no aparelho.
+
+|===
+. Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+
+--
+.SG6000
+--
+. Para os controladores de storage, observe os códigos nos monitores de sete segmentos.
++
+Enquanto o hardware está sendo inicializado durante a inicialização, os dois visores de sete segmentos mostram uma sequência de códigos. Quando o hardware é inicializado com êxito, as duas telas de sete segmentos mostram `99`.
+
+. Revise os LEDs no controlador SG6000-CN e os códigos de inicialização e erro exibidos no BMC.
+. Se você precisar de ajuda para resolver um problema, entre em Contato com o suporte técnico.
+
+
+--
+====
+
+
+== Problemas de conexão (SG5700 ou SG6000)
+
+Se você encontrar problemas de conexão durante a instalação do StorageGRID Appliance, execute as etapas de ação corretiva listadas.
+
+
+
+=== Não foi possível ligar ao aparelho SG6000
+
+Se você não conseguir se conetar ao dispositivo, pode haver um problema de rede ou a instalação do hardware pode não ter sido concluída com êxito.
+
+.Passos
+. Se você não conseguir se conetar ao Gerenciador do sistema do SANtricity:
++
+.. Tente fazer ping no dispositivo usando o endereço IP para qualquer controlador de armazenamento na rede de gerenciamento para o Gerenciador de sistema SANtricity
+`*ping _Storage_Controller_IP_*`
+.. Se não receber resposta do ping, confirme que está a utilizar o endereço IP correto.
++
+Use o endereço IP para a porta de gerenciamento 1 em qualquer controlador de armazenamento.
+
+.. Se o endereço IP estiver correto, verifique o cabeamento do dispositivo e a configuração da rede.
++
+Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+.. Se o ping foi bem-sucedido, abra um navegador da Web.
+.. Digite o URL para o Gerenciador de sistema do SANtricity
+`*https://_Storage_Controller_IP_*`
++
+É apresentada a página de início de sessão do Gestor do sistema SANtricity.
+
+
+
+. Se não conseguir ligar ao controlador SG6000-CN:
++
+.. Tente fazer ping no aparelho usando o endereço IP do controlador SG6000-CN
+`*ping _SG6000-CN_Controller_IP_*`
+.. Se não receber resposta do ping, confirme que está a utilizar o endereço IP correto.
++
+Pode utilizar o endereço IP do dispositivo na rede de grelha, na rede de administração ou na rede de cliente.
+
+.. Se o endereço IP estiver correto, verifique o cabeamento do dispositivo, os transcetores SFP e a configuração da rede.
+.. Se o acesso físico ao SG6000-CN estiver disponível, você pode usar uma conexão direta com o IP local de link permanente `169.254.0.1` para verificar a configuração de rede do controlador e atualizar, se necessário. Para obter instruções detalhadas, consulte o passo 2 em link:accessing-storagegrid-appliance-installer.html["Acessando o Instalador de dispositivos StorageGRID"].
++
+Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+.. Se o ping foi bem-sucedido, abra um navegador da Web.
+.. Digite o URL do instalador do StorageGRID Appliance
+`*https://_SG6000-CN_Controller_IP_:8443*`
++
+A página inicial é exibida.
+
+
+
+
+
+
+
+=== As prateleiras de expansão SG6060 não aparecem no Instalador de dispositivos
+
+Se você tiver instalado prateleiras de expansão para o SG6060 e elas não aparecerem no Instalador de dispositivos StorageGRID, verifique se as prateleiras foram completamente instaladas e ligadas.
+
+.Sobre esta tarefa
+Você pode verificar se os compartimentos de expansão estão conetados ao dispositivo visualizando as seguintes informações no Instalador de dispositivos StorageGRID:
+
+* A página *Home* contém uma mensagem sobre prateleiras de expansão.
++
+image::../media/expansion_shelf_home_page_msg.png[Mensagem de compartimentos de expansão]
+
+* A página *Avançado* > *modo RAID* indica pelo número de unidades se o dispositivo inclui ou não compartimentos de expansão. Por exemplo, na captura de tela a seguir, dois SSDs e 178 HDDs são exibidos. Um SG6060 com dois compartimentos de expansão contém um total de 180 unidades.
+
+
+image::../media/expansion_shelves_shown_by_num_of_drives.png[Número de unidades]
+
+Se as páginas do Instalador do StorageGRID Appliance não indicarem que as prateleiras de expansão estão presentes, siga este procedimento.
+
+.Passos
+. Verifique se todos os cabos necessários foram firmemente conetados. link:cabling-appliance.html["Aparelho de cabo"]Consulte .
+. Verifique se você ativou as gavetas de expansão. link:connecting-power-cords-and-applying-power.html["Conete os cabos de alimentação e ligue a alimentação (SG6000)"]Consulte .
+. Se você precisar de ajuda para resolver um problema, entre em Contato com o suporte técnico.
+
+
+
+
+=== Não foi possível ligar ao aparelho SG5700
+
+Se você não conseguir se conetar ao dispositivo, pode haver um problema de rede ou a instalação do hardware pode não ter sido concluída com êxito.
+
+.Passos
+. Se você não conseguir se conetar ao Gerenciador do sistema do SANtricity:
++
+.. Tente fazer ping no dispositivo usando o endereço IP do controlador E2800 na rede de gerenciamento para o Gerenciador de sistema SANtricity
+`*ping _E2800_Controller_IP_*`
+.. Se não receber resposta do ping, confirme que está a utilizar o endereço IP correto.
++
+Use o endereço IP para a porta de gerenciamento 1 no controlador E2800.
+
+.. Se o endereço IP estiver correto, verifique o cabeamento do dispositivo e a configuração da rede.
++
+Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+.. Se o ping foi bem-sucedido, abra um navegador da Web.
+.. Digite o URL para o Gerenciador de sistema do SANtricity
+`*https://_E2800_Controller_IP_*`
++
+É apresentada a página de início de sessão do Gestor do sistema SANtricity.
+
+
+
+. Se não conseguir ligar ao controlador E5700SG:
++
+.. Tente fazer ping no aparelho usando o endereço IP do controlador E5700SG
+`*ping _E5700SG_Controller_IP_*`
+.. Se não receber resposta do ping, confirme que está a utilizar o endereço IP correto.
++
+Pode utilizar o endereço IP do dispositivo na rede de grelha, na rede de administração ou na rede de cliente.
+
+.. Se o endereço IP estiver correto, verifique o cabeamento do dispositivo, os transcetores SFP e a configuração da rede.
++
+Se isso não resolver o problema, entre em Contato com o suporte técnico.
+
+.. Se o ping foi bem-sucedido, abra um navegador da Web.
+.. Digite o URL do instalador do StorageGRID Appliance
+`*https://_E5700SG_Controller_IP_:8443*`
++
+A página inicial é exibida.
+
+
+
+
+
+
+
+== Erro HE: Erro ao sincronizar com o software SANtricity os (SG5700)
+
+A exibição de sete segmentos no controlador de computação mostra um código de erro HE se o Instalador de dispositivos StorageGRID não puder sincronizar com o software SANtricity os.
+
+.Sobre esta tarefa
+Se for apresentado um código de erro HE, efetue esta ação corretiva.
+
+.Passos
+. Verifique a integridade dos dois cabos de interconexão SAS e confirme se estão bem conetados.
+. Se necessário, substitua um ou ambos os cabos e tente novamente.
+. Se isso não resolver o problema, entre em Contato com o suporte técnico.
+

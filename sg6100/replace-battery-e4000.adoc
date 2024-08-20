@@ -1,0 +1,272 @@
+---
+permalink: sg6100/replace-battery-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Substitua a bateria na prateleira do controlador de armazenamento (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tem de substituir a bateria afetada no controlador E4000 se o Guru de recuperação no Gestor do sistema SANtricity indicar o estado "Falha na bateria" ou "Substituição da bateria necessária". Para proteger os seus dados, a bateria tem de ser substituída o mais rapidamente possível.
+
+A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+
+.Antes de começar
+Se você pretende substituir uma bateria com falha, você deve ter:
+
+* Uma bateria de substituição.
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+* Acesso ao Gerenciador do sistema SANtricity:
++
+** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
+
+
+* Verifique se nenhum volume está em uso ou se você tem um driver multipath instalado em todos os hosts que usam esses volumes.
+
+
+
+
+== Passo 1: Prepare-se para substituir a bateria
+
+Tem de colocar o controlador afetado offline para poder remover com segurança a bateria avariada. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
+
+.Passos
+. A partir do Gestor do sistema SANtricity, reveja os detalhes no Guru de recuperação para confirmar que existe um problema com uma bateria e para garantir que não é necessário resolver primeiro outros itens.
+. Na área Detalhes do Recovery Guru, determine qual bateria deve ser substituída.
+. Faça backup do banco de dados de configuração do storage array usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione *suporte
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
+. Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
++
+.. Selecione *suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O ficheiro é guardado na pasta Transferências do seu browser com o nome support-data.7z.
+
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+... Selecione o controlador que pretende colocar offline.
+... No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione *conetar-se a uma conexão de rede alternativa* para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+** Como alternativa, você pode colocar os controladores offline usando os seguintes comandos CLI:
++
+*Para o controlador A*: `set controller [a] availability=offline`
+
++
+*Para o controlador B*: `set controller [b] availability=offline`
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
+. Selecione *Reverificar* no Recovery Guru e confirme se o campo *OK para remover* na área *Detalhes* exibe *Sim*. Isto indica que é seguro proceder à remoção do recipiente do controlador.
+
+
+
+
+== Etapa 2: Remova o recipiente do controlador E4000
+
+Você precisa remover o recipiente do controlador da prateleira do controlador, para que você possa remover a bateria.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+* Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+
+
+.Passos
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Se as portas do host no canister do controlador usarem transcetores SFP, deixe-as instaladas.
+. Confirme se o LED Cache ative na parte de trás do controlador está desligado.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador até meio do chassis.
+
+
+
+
+== Passo 3: Instale a nova bateria
+
+Você deve remover a bateria com falha e substituí-la.
+
+.Passos
+. Desembale a nova bateria e coloque-a numa superfície plana e sem estática.
++
+
+NOTE: Para cumprir com os regulamentos IATA com segurança, as baterias de substituição são enviadas com um estado de carga (SoC) de 30% ou menos. Quando voltar a aplicar energia, tenha em mente que o armazenamento em cache de gravação não será retomado até que a bateria de substituição esteja totalmente carregada e tenha concluído o ciclo de aprendizagem inicial.
+
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Retire o recipiente do controlador do chassis.
+. Vire o recipiente do controlador e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tampa do módulo do controlador.]
+
+. Localize a bateria no recipiente do controlador.
+. Remova a bateria com falha do recipiente do controlador:
++
+.. Prima o botão azul na parte lateral do recipiente do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do recipiente do controlador.
+.. Desligue a bateria do recipiente do controlador.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Remova a bateria do NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilha de libertação da bateria 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| Conetor de alimentação da bateria 
+|===
+
+
+. Retire a bateria de substituição da respetiva embalagem. Instale a bateria de substituição:
++
+.. Volte a ligar a ficha da bateria à tomada no recipiente do controlador.
++
+Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
+
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+
+
+. Volte a instalar a tampa do recipiente do controlador e bloqueie-a no lugar.
+
+
+
+
+== Etapa 4: Reinstale o recipiente do controlador
+
+Depois de substituir os componentes no recipiente do controlador, volte a instalá-lo no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
+. Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.
+
+. Recable o sistema, conforme necessário.
+. Conclua a reinstalação do recipiente do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+
+
+
+
+== Passo 5: Substituição completa da bateria
+
+Coloque o controlador online.
+
+.Passos
+. Coloque o controlador on-line usando o Gerenciador de sistema do SANtricity.
++
+** A partir do SANtricity System Manager:
++
+... Selecione *hardware*.
+... Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+... Selecione o controlador que pretende colocar online.
+... Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
++
+O sistema coloca o controlador online.
+
+
+
+** Como alternativa, você pode colocar o controlador novamente online usando os seguintes comandos CLI:
++
+*Para o controlador A*: `set controller [a] availability=online`;
+
++
+*Para o controlador B*: `set controller [b] availability=online`;
+
+
+
+. Quando o controlador estiver novamente online, verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e verifique se a bateria e o recipiente do controlador estão instalados corretamente. Se necessário, retire e volte a instalar o recipiente do controlador e a bateria.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 4.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se apenas alguns dos volumes forem devolvidos aos seus proprietários preferidos após a distribuição automática ou manual, você deve verificar o Recovery Guru para problemas de conetividade do host.
+.. Se não houver Guru de recuperação presente ou se depois de seguir as etapas do guru de recuperação os volumes ainda não forem devolvidos aos seus proprietários preferidos, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione coletar dados de suporte.
+.. Clique em coletar.
++
+O ficheiro é guardado na pasta Transferências do seu browser com o nome support-data.7z.
+
+
+
+
+
+.O que se segue?
+A substituição da bateria está concluída. Pode retomar as operações normais.

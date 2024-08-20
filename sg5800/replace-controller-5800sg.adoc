@@ -1,0 +1,96 @@
+---
+permalink: sg5800/replace-controller-sg5800.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Substitua o controlador SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir o controlador SG5800 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.
+
+.Antes de começar
+* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo.
+* Você tem etiquetas para identificar cada cabo conetado ao controlador.
+
+
+.Sobre esta tarefa
+O nó de storage do dispositivo não estará acessível quando você substituir o controlador. Se o controlador SG5800 estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.
+
+
+NOTE: Se você estiver substituindo o controlador antes de instalar o software StorageGRID, talvez você não consiga acessar o instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do controlador original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.
+
+.Passos
+. Desligue o controlador SG5800.
++
+.. Faça login no nó da grade:
++
+... Introduza o seguinte comando: `ssh admin@grid_node_IP`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Desligue o controlador SG5800:
++
+*`shutdown -h now`*
+
+.. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás do controlador E4000 fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+
+
+. Desligue a alimentação.
++
+.. Na página inicial do Gerenciador do sistema do SANtricity, selecione Exibir operações em andamento.
+.. Confirme se todas as operações foram concluídas.
+.. Desligue ambos os interrutores de alimentação do aparelho.
+.. Aguarde que todos os LEDs se desliguem.
+
+
+. Se as redes StorageGRID conetadas ao controlador usarem servidores DHCP:
++
+.. Observe os endereços MAC das portas no controlador de substituição (localizados em etiquetas no controlador).
+.. Peça ao administrador da rede que atualize as definições de endereço IP do controlador original para refletir os endereços MAC do controlador de substituição.
++
+
+NOTE: Você deve garantir que os endereços IP do controlador original foram atualizados antes de aplicar energia ao controlador de substituição. Caso contrário, o controlador obterá novos endereços IP DHCP quando iniciar e poderá não conseguir reconetar-se ao StorageGRID. Esta etapa se aplica a todas as redes StorageGRID conetadas ao controlador.
+
+
+
+. Retire o controlador do aparelho:
++
+.. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+.. Identifique os cabos e, em seguida, desligue os cabos e SFPs.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise os cabos. Solte o controlador do aparelho apertando o trinco na pega do came até soltar e, em seguida, abra a pega do came para a direita.
+
+.. Utilizando as duas mãos e a pega do came, deslize o controlador para fora do aparelho.
++
+
+NOTE: Utilize sempre duas mãos para suportar o peso do controlador.
+
+
+
+. Instale o controlador de substituição no aparelho.
++
+.. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
+.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
+.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Volte a colocar os cabos.
+
+
+. Ligue o aparelho e monitorize os LEDs do controlador.
+. Confirme se o nó de armazenamento do dispositivo é exibido no Gerenciador de Grade e se nenhum alarme é exibido.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"] página para obter mais informações.

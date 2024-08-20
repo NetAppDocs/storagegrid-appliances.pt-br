@@ -1,0 +1,56 @@
+---
+section: sg5800
+title: Mantenha o hardware SG5800
+url: "/landing-maintain-sg5800/index.html"
+entries:
+- title: Visão geral
+  pdf-filename: Manutenção de hardware do SG5800
+  url: "/sg5800/index.html"
+- title: Procedimentos de configuração de manutenção
+  pdf-filename: Procedimentos de configuração de manutenção - SG5800
+  entries:
+  - title: Atualizar o SANtricity os no controlador de storage
+    url: "/sg5800/upgrading-santricity-os-on-storage-controller.html"
+    entries:
+    - title: Atualize o SANtricity os em controladores de storage usando o Gerenciador
+        de Grade
+      url: "/sg5800/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html"
+    - title: Atualize o SANtricity os no controlador E4000 usando o modo de manutenção
+      url: "/sg5800/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html"
+  - title: Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity
+    entries:
+    - title: Atualize o firmware da unidade SG5800 usando o método on-line do Gerenciador
+        de sistema do SANtricity
+      url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Atualize o firmware da unidade SG5800 usando o método offline do Gerenciador
+        de sistema SANtricity
+      url: "/sg5800/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
+    - title: Solucionar erros de atualização do firmware da unidade
+      url: "/sg5800/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Altere a configuração do link do controlador SG5800
+    url: "/sg5800/changing-link-configuration-of-sg5800-controller.html"
+- title: Procedimentos de hardware
+  pdf-filename: Procedimentos de hardware - SG5800
+  entries:
+  - title: Substitua o controlador SG5800
+    url: "/sg5800/replace-controller-sg5800.html"
+  - title: Substitua o controlador E4000
+    url: "/sg5800/replace-controller-e4000-simplex.html"
+  - title: Substitua o ventilador (SG5860)
+    url: "/sg5800/replace-fan-canister.html"
+  - title: Substituição da fonte de alimentação (SG5812)
+    url: "/sg5800/replace-power-supply.html"
+  - title: Substitua o recipiente de alimentação (SG5860)
+    url: "/sg5800/replace-power-canister.html"
+  - title: Substitua as pilhas
+    url: "/sg5800/replace-battery-e4000.html"
+  - title: Substitua os DIMMs
+    url: "/sg5800/replace-dimms-e4000.html"
+  - title: Substitua as unidades
+    entries:
+    - title: Visão geral e requisitos
+      url: "/sg5800/replace-drive-e4000.html"
+    - title: SG5812
+      url: "/sg5800/replace-drives-12-24.html"
+    - title: SG5860
+      url: "/sg5800/replace-drives-60.html"

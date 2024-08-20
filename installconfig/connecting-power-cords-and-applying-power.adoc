@@ -1,0 +1,181 @@
+---
+permalink: installconfig/connecting-power-cords-and-applying-power.html 
+sidebar: sidebar 
+keywords: storagegrid, wire, wiring, cabling, cable, Connecting, connect, power cords, power, applying power, apply power, turn on, power up, ac, ac power 
+summary: Depois de ligar os cabos de rede, está pronto para ligar a alimentação ao aparelho. 
+---
+= Conete os cabos de energia e ligue a energia
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de conetar os cabos de rede, você estará pronto para ligar energia a um dispositivo, controlador ou compartimento de expansão.
+
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+.Passos
+. Ligue um cabo de alimentação a cada uma das duas fontes de alimentação do aparelho.
+. Conete esses dois cabos de alimentação a duas unidades de distribuição de energia (PDUs) diferentes no gabinete ou no rack.
+. Se o botão liga/desliga na parte frontal do aparelho não estiver aceso a azul, prima o botão para ligar o aparelho.
++
+Não prima novamente o botão de alimentação durante o processo de ativação.
+
+. Se ocorrerem erros, corrija quaisquer problemas.
+. Coloque a moldura frontal no aparelho, se tiver sido removida.
+
+
+--
+.SG110 e SG1100
+--
+.Passos
+. Ligue um cabo de alimentação a cada uma das duas fontes de alimentação do aparelho.
+. Conete esses dois cabos de alimentação a duas unidades de distribuição de energia (PDUs) diferentes no gabinete ou no rack.
+. Se o botão liga/desliga na parte frontal do aparelho não estiver aceso a azul, prima o botão para ligar o aparelho.
++
+Não prima novamente o botão de alimentação durante o processo de ativação.
+
++
+O LED na fonte de alimentação deve estar aceso a verde sem piscar.
+
+. Se ocorrerem erros, corrija quaisquer problemas.
+. Coloque a moldura frontal no aparelho, se tiver sido removida.
+
+
+--
+.SG5700
+--
+.Antes de começar
+Ambos os interrutores de alimentação do aparelho devem estar desligados antes de ligar a alimentação.
+
+
+CAUTION: *Risco de choque elétrico* -- antes de ligar os cabos de alimentação, certifique-se de que os dois interrutores de alimentação do aparelho estão desligados.
+
+.Passos
+. Confirme se os dois interrutores de alimentação do aparelho estão desligados.
+. Ligue os dois cabos de alimentação ao aparelho.
+. Conete os dois cabos de alimentação a diferentes unidades de distribuição de energia (PDUs) no gabinete ou no rack.
+. Ligue os dois interrutores de alimentação do aparelho.
++
+** Não desligue os interrutores de alimentação durante o processo de ativação.
+** Os fãs são muito barulhentos quando eles começam a trabalhar. O ruído alto durante o arranque é normal.
+
+
+. Depois que os controladores iniciarem, verifique suas telas de sete segmentos.
+
+
+--
+.SG5800
+--
+.Antes de começar
+Ambos os interrutores de alimentação do aparelho devem estar desligados antes de ligar a alimentação.
+
+
+CAUTION: *Risco de choque elétrico* -- antes de ligar os cabos de alimentação, certifique-se de que os dois interrutores de alimentação do aparelho estão desligados.
+
+.Passos
+. Confirme se os dois interrutores de alimentação do aparelho estão desligados.
+. Ligue os dois cabos de alimentação ao aparelho.
+. Conete os dois cabos de alimentação a diferentes unidades de distribuição de energia (PDUs) no gabinete ou no rack.
+. Ligue os dois interrutores de alimentação do aparelho.
++
+** Não desligue os interrutores de alimentação durante o processo de ativação.
+** Os fãs são muito barulhentos quando eles começam a trabalhar. O ruído alto durante o arranque é normal.
+
+
+
+
+--
+.SG6000
+--
+.Passos
+. Confirme se as duas controladoras no compartimento de controladora de storage estão desligadas.
++
+
+CAUTION: *Risco de choque elétrico* -- antes de ligar os cabos de alimentação, certifique-se de que os interrutores de alimentação de cada um dos dois controladores de armazenamento estão desligados.
+
+. Se você tiver gavetas de expansão, confirme se ambos os interruptores de energia da IOM estão desligados.
++
+
+CAUTION: *Risco de choque elétrico* -- antes de conetar os cabos de alimentação, certifique-se de que os dois interrutores de alimentação de cada uma das prateleiras de expansão estão desligados.
+
+. Ligue um cabo de alimentação a cada uma das duas unidades de alimentação do controlador SG6000-CN.
+. Conete esses dois cabos de alimentação a duas unidades de distribuição de energia (PDUs) diferentes no gabinete ou no rack.
+. Conete um cabo de alimentação a cada uma das duas unidades de fonte de alimentação no compartimento do controlador de armazenamento.
+. Se você tiver compartimentos de expansão, conete um cabo de alimentação a cada uma das duas unidades de fonte de alimentação em cada compartimento de expansão.
+. Conete os dois cabos de energia em cada compartimento de armazenamento (incluindo as gavetas de expansão opcionais) a duas PDUs diferentes no gabinete ou no rack.
+. Se o botão liga/desliga na parte frontal do controlador SG6000-CN não estiver aceso a azul, prima o botão para ligar o controlador.
++
+Não prima novamente o botão de alimentação durante o processo de ativação.
+
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador de armazenamento. Se você tiver compartimentos de expansão, ligue os dois interruptores de energia para cada compartimento.
++
+** Não desligue os interrutores de alimentação durante o processo de ativação.
+** Os ventiladores na gaveta do controlador de storage e nas gavetas de expansão opcionais podem ser muito altos quando são iniciados pela primeira vez. O ruído alto durante o arranque é normal.
+
+
+. Depois que os componentes iniciarem, verifique seu status.
++
+** Verifique o visor de sete segmentos na parte de trás de cada controlador de armazenamento. Consulte o artigo sobre como visualizar códigos de status de inicialização para obter mais informações.
+** Verifique se o botão de alimentação na parte frontal do controlador SG6000-CN está aceso.
+
+
+. Se ocorrerem erros, corrija quaisquer problemas.
+. Fixe a moldura frontal ao controlador SG6000-CN se tiver sido removida.
+
+
+--
+.SG6100
+--
+*SGF6112*:
+
+.Passos
+. Ligue um cabo de alimentação a cada uma das duas fontes de alimentação do aparelho.
+. Conete esses dois cabos de alimentação a duas unidades de distribuição de energia (PDUs) diferentes no gabinete ou no rack.
+. Se o botão liga/desliga na parte frontal do aparelho não estiver aceso a azul, prima o botão para ligar o aparelho.
+. Não prima novamente o botão de alimentação durante o processo de ativação.
+. O LED na fonte de alimentação deve estar aceso a verde sem piscar.
+. Se ocorrerem erros, corrija quaisquer problemas.
+. Coloque a moldura frontal no aparelho, se tiver sido removida.
+
+
+*SG6160*:
+
+.Passos
+. Confirme se as duas controladoras no compartimento de controladora de storage estão desligadas.
++
+
+CAUTION: *Risco de choque elétrico* -- antes de ligar os cabos de alimentação, certifique-se de que os interrutores de alimentação de cada um dos dois controladores de armazenamento estão desligados.
+
+. Se você tiver gavetas de expansão, confirme se ambos os interruptores de energia da IOM estão desligados.
++
+
+CAUTION: *Risco de choque elétrico* -- antes de conetar os cabos de alimentação, certifique-se de que os dois interrutores de alimentação de cada uma das prateleiras de expansão estão desligados.
+
+. Ligue um cabo de alimentação a cada uma das duas unidades de alimentação do controlador SG6100-CN.
+. Conete esses dois cabos de alimentação a duas unidades de distribuição de energia (PDUs) diferentes no gabinete ou no rack.
+. Conete um cabo de alimentação a cada uma das duas unidades de fonte de alimentação no compartimento do controlador de armazenamento.
+. Se você tiver compartimentos de expansão, conete um cabo de alimentação a cada uma das duas unidades de fonte de alimentação em cada compartimento de expansão.
+. Conete os dois cabos de energia em cada compartimento de armazenamento (incluindo as gavetas de expansão opcionais) a duas PDUs diferentes no gabinete ou no rack.
+. Se o botão liga/desliga na parte frontal do controlador SG6100-CN não estiver aceso a azul, prima o botão para ligar o controlador.
++
+Não prima novamente o botão de alimentação durante o processo de ativação.
+
+. Ligue os dois interruptores de energia na parte de trás do compartimento do controlador de armazenamento. Se você tiver compartimentos de expansão, ligue os dois interruptores de energia para cada compartimento.
++
+** Não desligue os interrutores de alimentação durante o processo de ativação.
+** Os ventiladores na gaveta do controlador de storage e nas gavetas de expansão opcionais podem ser muito altos quando são iniciados pela primeira vez. O ruído alto durante o arranque é normal.
+
+
+. Depois que os componentes iniciarem, verifique se o botão liga/desliga na parte frontal do controlador SG6100-CN está aceso.
+. Se ocorrerem erros, corrija quaisquer problemas.
+. Fixe a moldura frontal ao controlador SG6100-CN se tiver sido removida.
+
+
+--
+====
+.Informações relacionadas
+link:viewing-status-indicators.html["Ver indicadores de estado"]

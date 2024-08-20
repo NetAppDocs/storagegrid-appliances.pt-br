@@ -1,0 +1,449 @@
+---
+permalink: installconfig/preparing-site.html 
+sidebar: sidebar 
+keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
+summary: Antes de instalar o aparelho, certifique-se de que o local e o gabinete ou rack que pretende utilizar cumprem as especificações de um dispositivo StorageGRID. 
+---
+= Prepare o local
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar o aparelho, certifique-se de que o local e o gabinete ou rack que pretende utilizar cumprem as especificações de um dispositivo StorageGRID.
+
+.Passos
+. Confirme se o local atende aos requisitos de temperatura, umidade, faixa de altitude, fluxo de ar, dissipação de calor, fiação, energia e aterramento. Consulte https://hwu.netapp.com["NetApp Hardware Universe"^] para obter mais informações.
+. Confirme se a sua localização fornece a tensão correta da alimentação CA:
++
+[cols="1a,1a"]
+|===
+| Modelo | Requisito 
+
+
+ a| 
+SG100 e SG1000
+ a| 
+120 a 240 volts CA
+
+
+
+ a| 
+SG110 e SG1100
+ a| 
+100 a 240 volts AC
+
+
+
+ a| 
+SG5712
+ a| 
+120 a 240 volts AC
+
+
+
+ a| 
+SG5760
+ a| 
+240 volts CA
+
+
+
+ a| 
+SG5812
+ a| 
+120 a 240 volts CA
+
+
+
+ a| 
+SG5860
+ a| 
+240 volts CA
+
+
+
+ a| 
+SGF6024
+ a| 
+120 volts CA
+
+
+
+ a| 
+SG6060
+ a| 
+240 volts CA
+
+
+
+ a| 
+SGF6112
+ a| 
+100 a 240 volts CA
+
+
+
+ a| 
+SG6160
+ a| 
+240 volts CA
+
+|===
+. Obtenha um gabinete ou rack de 19 polegadas (48,3 cm) para encaixar prateleiras do seguinte tamanho (sem cabos).
++
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+1,70 pol.
+
+(4,32 cm)
+ a| 
+17,32 pol.
+
+(44,0 cm)
+ a| 
+32,0 pol.
+
+(81,3 cm)
+ a| 
+13 39 lb.
+
+(17,7 kg)
+
+|===
+--
+.SG110 e SG1100
+--
+[cols="1a,1a,1a,1a"]
+|===
+| Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+1,70 pol.
+
+(4,31 cm)
+ a| 
+18,98 pol.
+
+(48,2 cm)
+ a| 
+33,11 pol.
+
+(84,1 cm)
+ a| 
+13 43,83 lb.
+
+(19,88 kg)
+
+|===
+--
+.SG5700
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo do aparelho | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+SG5712
+
+(12 unidades)
+ a| 
+3,41 pol.
+
+(8,68 cm)
+ a| 
+17,6 pol.
+
+(44,7 cm)
+ a| 
+21,1 pol.
+
+(53,6 cm)
+ a| 
+13 63,9 lb
+
+(29,0 kg)
+
+
+
+ a| 
+SG5760
+
+(60 unidades)
+ a| 
+6,87 pol.
+
+(17,46 cm)
+ a| 
+17,66 pol.
+
+(44,86 cm)
+ a| 
+38,25 pol.
+
+(97,16 cm)
+ a| 
+13 250 lb.
+
+(113 kg)
+
+|===
+--
+.SG5800
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo do aparelho | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+SG5812
+
+(12 unidades)
+ a| 
+3,4 pol.
+
+(8,6 cm)
+ a| 
+17,6 pol.
+
+(44,8 cm)
+ a| 
+21,1 pol.
+
+(53,6 cm)
+ a| 
+13 64,92 lb
+
+(29,45 kg)
+
+
+
+ a| 
+SG5860
+
+(60 unidades)
+ a| 
+7,0 pol.
+
+(17,8 cm)
+ a| 
+17,6 pol.
+
+(44,8 cm)
+ a| 
+37,8 pol.
+
+(92,2 cm)
+ a| 
+13 253,0 lb.
+
+(114,76 kg)
+
+|===
+--
+.SG6000
+--
+[cols="2a,1a,1a,1a,1a"]
+|===
+| Tipo de prateleira | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+Compartimento do controlador de E2860 TB (SG6060 TB)
+ a| 
+6,87 pol.
+
+(17,46 cm)
+ a| 
+17,66 pol.
+
+(44,86 cm)
+ a| 
+38,25 pol.
+
+(97,16 cm)
+ a| 
+13 250 lb.
+
+(113 kg)
+
+
+
+ a| 
+Compartimento de expansão (SG6060) - Opcional
+ a| 
+6,87 pol.
+
+(17,46 cm)
+ a| 
+17,66 pol.
+
+(44,86 cm)
+ a| 
+38,25 pol.
+
+(97,16 cm)
+ a| 
+13 250 lb.
+
+(113 kg)
+
+
+
+ a| 
+Compartimento do controlador de EF570 TB (SGF6024 TB)
+ a| 
+3,35 pol.
+
+(8,50 cm)
+ a| 
+17,66 pol.
+
+(44,86 cm)
+ a| 
+19,00 pol.
+
+(48,26 cm)
+ a| 
+13 51,74 lb.
+
+(23,47 kg)
+
+
+
+ a| 
+Controlador de computação SG6000-CN
+ a| 
+1,70 pol.
+
+(4,32 cm)
+ a| 
+17,32 pol.
+
+(44,0 cm)
+ a| 
+32,0 pol.
+
+(81,3 cm)
+ a| 
+13 39 lb.
+
+(17,7 kg)
+
+|===
+--
+.SG6100
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo do aparelho/tipo de prateleira | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+SGF6112 aparelho
+ a| 
+1,70 pol.
+
+(4,31 cm)
+ a| 
+17,32 pol.
+
+(44,0 cm)
+ a| 
+33,11 pol.
+
+(84,1 cm)
+ a| 
+13 43,83 lb.
+
+(19,88 kg)
+
+
+
+ a| 
+Controlador de computação SG6100-CN (SG6160)
+ a| 
+1,70 pol.
+
+(4,32 cm)
+ a| 
+17,32 pol.
+
+(44,0 cm)
+ a| 
+33,11 pol.
+
+(84,1 cm)
+ a| 
+13 40,98 lb.
+
+(18,59 kg)
+
+
+
+ a| 
+Compartimento do controlador de E4060 TB (SG6160 TB)
+ a| 
+6,87 pol.
+
+(17,45 cm)
+ a| 
+17,64 pol.
+
+(44,8 cm)
+ a| 
+36,3 pol.
+
+(97,16 cm)
+ a| 
+13 223,58 lb.
+
+(101,42 kg)
+
+
+
+ a| 
+Compartimento de expansão (SG6160) - Opcional
+ a| 
+6,87 pol.
+
+(17,45 cm)
+ a| 
+17,64 pol.
+
+(44,8 cm)
+ a| 
+36,3 pol.
+
+(97,16 cm)
+ a| 
+13 223,58 lb.
+
+(101,42 kg)
+
+|===
+--
+====
+. Decida onde vai instalar o aparelho.
++
+
+CAUTION: Ao instalar o compartimento do controlador E2860 ou E4000 ou as prateleiras de expansão opcionais, instale o hardware da parte inferior para a parte superior do rack ou gabinete para evitar que o equipamento tombe. Para garantir que o equipamento mais pesado esteja na parte inferior do gabinete ou rack, instale o controlador SG6000-CN ou SG6100-CN acima da prateleira de controladores E2860 ou E4000 e prateleiras de expansão.
+
++
+
+NOTE: Antes de se comprometer com a instalação, verifique se os cabos fornecidos com um aparelho SG6000 ou SG6100, ou os cabos que você fornecer, são longos o suficiente para o layout planejado.
+
+. Instale todos os switches de rede necessários. Consulte link:https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade do NetApp"^]para obter informações sobre compatibilidade.
+

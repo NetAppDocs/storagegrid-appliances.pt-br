@@ -1,0 +1,43 @@
+---
+permalink: sg6100/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100 storage appliance, SGF6112 storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Poderá ser necessário efetuar procedimentos de manutenção no seu aparelho. Os procedimentos específicos para a manutenção do seu aparelho SG6100 estão nesta secção. 
+---
+= Mantenha o aparelho SG6100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poderá ser necessário efetuar procedimentos de manutenção no seu aparelho. Os procedimentos específicos para a manutenção do seu aparelho SG6100 estão nesta secção.
+
+Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como nó de storage em um sistema StorageGRID.
+
+*Os procedimentos de configuração de manutenção* são executados usando o Instalador de dispositivos, o Gerenciador de Grade ou a interface BMC. Estes procedimentos incluem:
+
+* link:turning-sgf6112-identify-led-on-and-off.html["Ligue e desligue o LED de identificação do aparelho"]
+* link:locating-sgf6112-in-data-center.html["Localize o dispositivo no data center"]
+* link:power-sgf6112-off-on.html["Desligue o aparelho"]
+* link:changing-link-configuration-of-sgf6112-appliance.html["Altere a configuração do link do dispositivo"]
+
+
+*Procedimentos de manutenção de hardware* requerem a manipulação física de componentes específicos SGF6112 ou SG6160.
+
+
+
+== Upgrade do formware da unidade
+
+O firmware nas unidades do SGF6112 é verificado automaticamente sempre que o dispositivo é reinicializado. Quando necessário, o firmware é atualizado automaticamente para a versão esperada pela versão atual do StorageGRID. Normalmente, as atualizações de firmware ocorrem durante as atualizações de software StorageGRID. Quaisquer atualizações de firmware de unidade necessárias para versões existentes do StorageGRID serão incluídas em hotfixes. Siga as instruções fornecidas com cada hotfix para garantir que a atualização seja aplicada a todas as unidades que possam se beneficiar dela.
+
+
+NOTE: O Gerenciador de sistema do SANtricity não é necessário para manter o dispositivo SGF6112.
+
+
+
+== Procedimentos gerais de manutenção
+
+Consulte link:../commonhardware/index.html["Procedimentos de manutenção comuns"] para obter os procedimentos que são os mesmos para todos os dispositivos, como aplicar um hotfix, recuperar um nó ou site e executar a manutenção da rede.
+
+Consulte link:../installconfig/configuring-hardware.html["Configure o hardware do aparelho"] para obter informações sobre os procedimentos de manutenção do aparelho que também são realizados durante a instalação e configuração iniciais do aparelho.

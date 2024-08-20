@@ -1,0 +1,47 @@
+= 
+:allow-uri-read: 
+
+
+Estas figuras mostram o controlador E2800A e o controlador E2800B. O procedimento para substituir os controladores da série E2800 e o controlador EF570 é idêntico.
+
+Controlador de armazenamento E2800A:
+
+image::../media/e2800_labels_on_controller.gif[Etiquetas MAC e FRU no controlador E2800A]
+
+Controlador de armazenamento E2800B:
+
+image::../media/e2800B_labels_on_controller.gif[Etiquetas MAC e FRU no controlador E2800A]
+
+[cols="1a,2a,4a"]
+|===
+| Etiqueta | componente | Descrição 
+
+
+ a| 
+1
+ a| 
+Endereço MAC
+ a| 
+O endereço MAC da porta de gerenciamento 1 (""P1 no E2800A e 0a no E2800B"). Se você usou DHCP para obter o endereço IP do controlador original, precisará desse endereço para se conetar ao novo controlador.
+
+
+
+ a| 
+2
+ a| 
+Número de peça FRU
+ a| 
+O número de peça da FRU. Este número deve corresponder ao número de peça de substituição para o controlador atualmente instalado.
+
+
+
+ a| 
+3
+ a| 
+HIC de 4 portas
+ a| 
+A placa de interface de host (HIC) de 4 portas. Esta placa tem de ser movida para o novo controlador quando efetuar a substituição.
+
+*Nota*: O controlador E2800A não tem um HIC.
+
+|===

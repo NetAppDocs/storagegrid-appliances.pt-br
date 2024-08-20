@@ -1,0 +1,53 @@
+---
+permalink: installconfig/verifying-and-upgrading-storagegrid-appliance-installer-version.html 
+sidebar: sidebar 
+keywords: verifying, verify, upgrading, upgrade, update, updating, Appliance Installer, version, release 
+summary: A versão do Instalador de dispositivos StorageGRID no dispositivo deve corresponder à versão de software instalada no sistema StorageGRID para garantir que todos os recursos do StorageGRID sejam suportados. 
+---
+= Verifique e atualize a versão do instalador do StorageGRID Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A versão do Instalador de dispositivos StorageGRID no dispositivo deve corresponder à versão de software instalada no sistema StorageGRID para garantir que todos os recursos do StorageGRID sejam suportados.
+
+.Antes de começar
+Você acessou o Instalador de dispositivos StorageGRID.
+
+.Sobre esta tarefa
+Os dispositivos StorageGRID vêm da fábrica pré-instalados com o Instalador de dispositivos StorageGRID. Se você estiver adicionando um dispositivo a um sistema StorageGRID atualizado recentemente, talvez seja necessário atualizar manualmente o Instalador de dispositivos StorageGRID antes de instalar o dispositivo como um novo nó.
+
+O Instalador de dispositivos StorageGRID é atualizado automaticamente quando você atualiza para uma nova versão do StorageGRID. Não é necessário atualizar o Instalador de dispositivos StorageGRID nos nós de dispositivos instalados. Este procedimento só é necessário quando estiver a instalar um dispositivo que contenha uma versão anterior do Instalador de dispositivos StorageGRID.
+
+.Passos
+. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Atualizar firmware*.
+. Compare a versão atual do firmware com a versão de software instalada no sistema StorageGRID. (Na parte superior do Gerenciador de Grade, selecione o ícone de ajuda e selecione *sobre*.)
++
+O segundo dígito nas duas versões deve corresponder. Por exemplo, se o seu sistema StorageGRID estiver executando a versão 11.*6*._x_._y_, a versão do Instalador de dispositivos StorageGRID deve ser 3.*6*._z_.
+
+. Se o dispositivo tiver uma versão de nível inferior do instalador do dispositivo StorageGRID, vá para https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^].
++
+Inicie sessão com o nome de utilizador e a palavra-passe da sua conta NetApp.
+
+. Baixe a versão apropriada do arquivo *suporte para dispositivos StorageGRID* e o arquivo de checksum correspondente.
++
+O arquivo de suporte para dispositivos StorageGRID é um `.zip` arquivo que contém as versões de firmware atuais e anteriores para todos os modelos de dispositivos StorageGRID.
+
++
+Depois de fazer o download do arquivo de suporte para dispositivos StorageGRID, extraia o `.zip` arquivo e consulte o arquivo README para obter informações importantes sobre a instalação do Instalador de dispositivos StorageGRID.
+
+. Siga as instruções na página Atualizar firmware do instalador do seu dispositivo StorageGRID para executar estas etapas:
++
+.. Carregue o ficheiro de suporte apropriado (imagem de firmware) para o seu tipo de controlador. Algumas versões de firmware também exigem o upload de um arquivo de checksum. Se você for solicitado a fornecer um arquivo de checksum, ele também pode ser encontrado no arquivo de suporte para dispositivos StorageGRID.
+.. Atualize a partição inativa.
+.. Reinicie e troque partições.
+.. Carregue novamente o ficheiro de suporte apropriado (imagem de firmware) para o tipo de controlador. Algumas versões de firmware também exigem o upload de um arquivo de checksum. Se você for solicitado a fornecer um arquivo de checksum, ele também pode ser encontrado no arquivo de suporte para dispositivos StorageGRID.
+.. Atualize a segunda partição (inativa).
+
+
+
+
+.Informações relacionadas
+link:../installconfig/accessing-storagegrid-appliance-installer.html["Acessando o Instalador de dispositivos StorageGRID"]

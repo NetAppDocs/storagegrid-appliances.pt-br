@@ -1,0 +1,79 @@
+---
+permalink: installconfig/index.html 
+sidebar: sidebar 
+keywords: Installation, deployment, Install, deploy, Installing, deploying 
+summary: Siga estas etapas de alto nível para instalar e configurar um dispositivo StorageGRID e implantá-lo como um nó no seu sistema StorageGRID. 
+---
+= Início rápido para a instalação do aparelho
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Siga estas etapas de alto nível para instalar e configurar um dispositivo StorageGRID e implantá-lo como um nó no seu sistema StorageGRID.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Um"] Prepare-se para a instalação
+[role="quick-margin-list"]
+. Trabalhe com seu consultor de serviços profissionais da NetApp para automatizar a instalação e a configuração. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
++
+Este passo é opcional. No entanto, otimizar e automatizar as etapas de configuração pode economizar tempo e fornecer consistência na configuração de vários dispositivos.
+
+. link:preparing-site.html["Prepare o local"]
+. link:unpacking-boxes.html["Desembale caixas"]
+. link:obtaining-additional-equipment-and-tools.html["Obtenha equipamentos e ferramentas adicionais"]
+. https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Reveja os requisitos do navegador da Web"^]
+. link:reviewing-appliance-network-connections.html["Reunir informações de rede"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dois"] Instale o hardware
+[role="quick-margin-list"]
+. link:registering-hardware.html["Registre o hardware"]
+. Instale no gabinete ou rack
++
+** link:installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html["SG100 e SG1000"]
+** link:installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html["SG110 e SG1100"]
+** link:installing-appliance-in-cabinet-or-rack-sg5700.html["SG5700"]
+** link:installing-appliance-in-cabinet-or-rack-sg5800.html["SG5800"]
+** link:installing-hardware-sg6000.html["SG6000"]
+** link:installing-hardware-sg6100.html["SG6100"]
+
+
+. link:cabling-appliance.html["Aparelho de cabo"]
+. link:connecting-power-cords-and-applying-power.html["Conete os cabos de energia e ligue a energia"]
+. link:viewing-status-indicators.html["Ver indicadores e códigos de estado"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Três"] Configure o hardware
+[role="quick-margin-para"]
+Se você estiver configurando e implantando mais de um dispositivo, use a ferramenta NetApp ConfigBuilder para automatizar as seguintes etapas de configuração e implantação. Para obter orientação, entre em Contato com seu consultor de Serviços profissionais da NetApp. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
+
+[role="quick-margin-list"]
+. Configurar conexões StorageGRID
++
+** link:accessing-storagegrid-appliance-installer.html["Acesse o Instalador de dispositivos StorageGRID"] e verifique se você está executando a versão mais recente
+** link:configuring-network-links.html["Configurar ligações de rede"]
+** link:setting-ip-configuration.html["Configurar endereços IP do StorageGRID"]
+** link:verifying-network-connections.html["Verifique as conexões de rede"]
+** link:verifying-port-level-network-connections.html["Verifique as conexões de rede no nível da porta"]
+
+
+. link:accessing-and-configuring-santricity-system-manager.html["Acesse e configure o Gerenciador do sistema do SANtricity"] (SG6160, SG5700, SG5800 E SG6000)
+. link:configuring-bmc-interface.html["Configure a interface BMC"] (Aparelhos SG6100, SG6000 e serviços)
+. Execute as etapas de configuração opcionais
++
+** link:optional-enabling-node-encryption.html["Habilite a criptografia de nó ou unidade"]
+** link:optional-changing-raid-mode.html["Alterar o modo RAID (SG6160, SG6000, SG5860 e SG5760)"]
+** link:optional-remapping-network-ports-for-appliance.html["Remapear portas de rede"]
+
+
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatro"] Implantar o nó do dispositivo
+[role="quick-margin-para"]
+Implante o dispositivo como um novo nó no sistema StorageGRID.
+
+[role="quick-margin-list"]
+* link:deploying-appliance-storage-node.html["Implante o nó de storage do dispositivo"]
+* link:deploying-services-appliance-node.html["Nó do dispositivo de serviços de implantação"]
+

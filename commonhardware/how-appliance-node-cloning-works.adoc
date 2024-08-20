@@ -1,0 +1,103 @@
+---
+permalink: commonhardware/how-appliance-node-cloning-works.html 
+sidebar: sidebar 
+keywords: storagegrid, appliance node cloning, appliance node clone 
+summary: Você pode clonar um nó de dispositivo no StorageGRID para usar um dispositivo de design mais recente ou recursos aprimorados. A clonagem transfere todas as informações sobre o nó existente para o novo dispositivo, fornece um processo de atualização de hardware fácil de executar e fornece uma alternativa à desativação e expansão para a substituição de dispositivos. 
+---
+= Clonagem de nó do dispositivo: Visão geral
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode clonar um nó de dispositivo no StorageGRID para usar um dispositivo de design mais recente ou recursos aprimorados. A clonagem transfere todas as informações sobre o nó existente para o novo dispositivo, fornece um processo de atualização de hardware fácil de executar e fornece uma alternativa à desativação e expansão para a substituição de dispositivos.
+
+A clonagem do nó do dispositivo permite substituir facilmente um nó do dispositivo (origem) existente na grade por um dispositivo compatível (destino) que faz parte do mesmo local lógico da StorageGRID. O processo transfere todos os dados para o novo dispositivo, colocando-os em serviço para substituir o nó antigo do dispositivo e deixando o dispositivo antigo em um estado de pré-instalação.
+
+
+
+== Por que clonar um nó de dispositivo?
+
+Você pode clonar um nó de dispositivo se precisar:
+
+* Substitua os aparelhos que estão chegando ao fim da vida útil.
+* Atualize os nós existentes para aproveitar a tecnologia aprimorada do dispositivo.
+* Aumente a capacidade de storage em grade sem alterar o número de nós de storage no sistema StorageGRID.
+* Aumentar a eficiência de storage, como alterar o modo RAID de DDP-8 para DDP-16 ou RAID-6.
+* Implemente com eficiência a criptografia de nó para permitir o uso de servidores de gerenciamento de chaves externas (KMS).
+
+
+
+
+== Que rede StorageGRID é utilizada?
+
+A clonagem transfere dados do nó de origem diretamente para o dispositivo de destino em qualquer uma das três redes StorageGRID. Normalmente, a rede de Grade é utilizada, mas também pode utilizar a rede Admin ou a rede Cliente se o utilitário de origem estiver ligado a estas redes. Escolha a rede a ser usada para clonagem de tráfego que forneça a melhor performance de transferência de dados sem prejudicar a performance da rede StorageGRID ou a disponibilidade de dados.
+
+Ao instalar o dispositivo de substituição, você deve especificar endereços IP temporários para conexão StorageGRID e transferência de dados. Como o dispositivo de substituição fará parte das mesmas redes que o nó do dispositivo que ele substitui, você deve especificar endereços IP temporários para cada uma dessas redes no dispositivo de substituição.
+
+
+
+== Compatibilidade do dispositivo alvo
+
+Os dispositivos de substituição devem ser do mesmo tipo que o nó de origem que estão substituindo e ambos devem fazer parte do mesmo local lógico do StorageGRID.
+
+* Um dispositivo de serviços de substituição pode ser diferente do nó de administração ou do nó de gateway que está substituindo.
++
+** Você pode clonar um dispositivo de nó de origem SG100 para um dispositivo de destino de serviços SG110, SG1000 ou SG1100. Clonar o SG100 para um dispositivo de destino de serviços SG1000 ou SG1100 oferece ao nó de administrador ou nó de gateway maior capacidade.
+** Você pode clonar um dispositivo de nó de origem SG110 para um destino de dispositivo de serviços SG1100 para oferecer maior capacidade ao nó de administrador ou nó de gateway.
+** Você pode clonar um dispositivo de nó de origem SG1000 para um dispositivo de destino de serviços SG100, SG110 ou SG1100. Clonar o SG1000 para um dispositivo de destino de serviços SG100 ou SG110 permite que você reimplante o SG1000 para uma aplicação mais exigente.
+** Você pode clonar um dispositivo de nós de origem SG1100 para um dispositivo de destino de serviços SG110 para reimplantar o SG1100 para uma aplicação mais exigente.
++
+Por exemplo, se um dispositivo de nó de origem SG1100 ou SG1000 estiver sendo usado como nó de administrador e você quiser usá-lo como um nó de balanceamento de carga dedicado.
+
+** A substituição de um dispositivo de nó de origem SG1100 por um dispositivo de destino de serviços SG110 reduz a velocidade máxima das portas de rede de 100 GbE para 25 GbE.
+** A substituição de um dispositivo de nó de origem SG1000 por um dispositivo de destino de serviços SG100 reduz a velocidade máxima das portas de rede de 100 GbE para 25 GbE.
+** Os aparelhos de serviços têm conetores de rede diferentes. Mudar o tipo de aparelho pode exigir a substituição dos cabos ou módulos SFP.
+
+
+* Um dispositivo de storage de substituição deve ter maior capacidade do que o nó de storage que está substituindo.
++
+** Se o dispositivo de armazenamento de destino tiver o mesmo número de unidades que o nó de origem, as unidades no dispositivo de destino devem ter maior capacidade (em TB).
+** Se você planeja usar o mesmo modo RAID no nó de destino que foi usado no nó de origem ou um modo RAID com menos eficiência de armazenamento (por exemplo, alternar de RAID 6 para DDP), as unidades no dispositivo de destino devem ser maiores (em TB) do que as unidades no dispositivo de origem.
+** Se o número de unidades padrão instaladas em um dispositivo de armazenamento de destino for menor que o número de unidades no nó de origem, devido à instalação de unidades de estado sólido (SSDs), a capacidade geral de armazenamento das unidades padrão no dispositivo de destino (em TB) deve exceder a capacidade total da unidade funcional de todas as unidades no nó de armazenamento de origem.
++
+Por exemplo, ao clonar um dispositivo de nó de storage de SG5760 fontes com 60 unidades para um dispositivo de destino de SG6060 U com 58 unidades padrão, unidades maiores devem ser instaladas no dispositivo de destino SG6060 antes da clonagem para manter a capacidade de storage. (Os dois slots de unidade que contêm SSDs no dispositivo de destino não estão incluídos na capacidade total de armazenamento do dispositivo.)
+
++
+No entanto, se um dispositivo de nó de origem de SG5760 unidades de 60 unidades estiver configurado com DDP-8 SANtricity Dynamic Disk Pools, configurar um dispositivo de destino de SG6060 unidades com mesmo tamanho de 58 unidades com DDP-16 pode tornar o dispositivo SG6060 um destino de clone válido devido à sua eficiência de storage aprimorada.
+
++
+Você pode exibir informações sobre o modo RAID atual do nó do dispositivo de origem na página *NÓS* no Gerenciador de Grade. Selecione o separador *Storage* (armazenamento) para o aparelho.
+
+
+
+* O número de volumes em um dispositivo de storage de destino deve ser maior ou igual ao número de volumes no nó de origem. Você não pode clonar um nó de origem com 16 volumes de armazenamento de objetos (rangedb) para um dispositivo de storage de destino com 12 volumes de armazenamento de objetos, mesmo que o dispositivo de destino tenha maior capacidade do que o nó de origem. A maioria dos dispositivos de storage tem volumes de armazenamento de objetos de 16 TB, exceto o dispositivo de storage SGF6112 que tem apenas volumes de armazenamento de objetos de 12 TB.
+
+
+
+
+== Que informação não é clonada?
+
+As configurações do dispositivo a seguir não são transferidas para o dispositivo de substituição durante a clonagem. Deve configurá-los durante a configuração inicial do aparelho de substituição.
+
+* Interface BMC
+* Ligações de rede
+* Status da criptografia do nó
+* Gerenciador de sistema do SANtricity (para nós de storage)
+* Modo RAID (para nós de storage)
+
+
+
+
+== Que problemas impedem a clonagem?
+
+Se algum dos seguintes problemas for encontrado durante a clonagem, o processo de clonagem será interrompido e uma mensagem de erro será gerada:
+
+* Configuração de rede incorreta
+* Falta de conetividade entre os dispositivos de origem e destino
+* Incompatibilidade de dispositivos de origem e destino
+* Para nós de storage, um dispositivo de substituição de capacidade insuficiente
+
+
+Para continuar, é necessário resolver cada problema de clonagem.

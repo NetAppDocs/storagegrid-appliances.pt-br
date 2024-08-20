@@ -1,0 +1,114 @@
+---
+permalink: installconfig/deploying-appliance-storage-node.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
+summary: Depois de instalar e configurar o dispositivo de storage, você pode implantá-lo como um nó de storage em um sistema StorageGRID. Ao implantar um dispositivo como nó de storage, você usa o Instalador de dispositivos StorageGRID incluído no dispositivo. 
+---
+= Implante o nó de storage do dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar e configurar o dispositivo de storage, você pode implantá-lo como um nó de storage em um sistema StorageGRID. Ao implantar um dispositivo como nó de storage, você usa o Instalador de dispositivos StorageGRID incluído no dispositivo.
+
+.Antes de começar
+* Se você estiver clonando um nó de dispositivo, continue seguindo o link:../commonhardware/appliance-node-cloning-procedure.html["clonagem do nó do dispositivo"] processo.
+* O dispositivo foi instalado em um rack ou gabinete, conetado às redes e ligado.
+* Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
+* Você conhece um dos endereços IP atribuídos ao controlador de computação do dispositivo. Você pode usar o endereço IP de qualquer rede StorageGRID conetada.
+* O nó de administração principal do sistema StorageGRID foi implantado.
+* Todas as sub-redes de rede listadas na página Configuração IP do Instalador de dispositivos StorageGRID foram definidas na Lista de sub-redes de rede de Grade no nó de administração principal.
+* Você tem um laptop de serviço com um navegador da Web suportado.
+
+
+.Sobre esta tarefa
+Cada dispositivo de storage funciona como um nó de storage único. Qualquer dispositivo pode se conetar à rede de Grade, à rede Admin e à rede Cliente
+
+Para implantar um nó de armazenamento de dispositivos em um sistema StorageGRID, você acessa o Instalador de dispositivos StorageGRID e executa as seguintes etapas:
+
+* Especifique ou confirme o endereço IP do nó de administração principal e o nome do nó de armazenamento.
+* Você inicia a implantação e espera à medida que os volumes são configurados e o software é instalado.
+* Quando a instalação é interrompida parcialmente nas tarefas de instalação do dispositivo, você retoma a instalação iniciando sessão no Gerenciador de Grade, aprovando todos os nós de grade e concluindo os processos de instalação e implantação do StorageGRID.
+
+
+
+NOTE: Se você precisar implantar vários nós de appliance de uma só vez, você pode automatizar o processo de instalação usando o link:../installconfig/automoting-appliance-installation-and-Configuration.script de instalação do appliance script[`configure-sga.py`].
+
+* Se você estiver executando uma operação de expansão ou recuperação, siga as instruções apropriadas:
++
+** Para adicionar um nó de storage do dispositivo a um sistema StorageGRID existente, consulte as instruções para https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adicionando nós de grade"^].
+** Para implantar um nó de storage de dispositivos como parte de uma operação de recuperação, consulte as https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperando um nó de storage de dispositivo"^]instruções .
+
+
+
+
+.Passos
+. Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo. E
+`*https://_Controller_IP_:8443*`
++
+A página inicial do instalador do dispositivo StorageGRID é exibida.
+
++
+image::../media/appliance_installer_home_start_installation_enabled.gif[Página inicial do Instalador de dispositivos para outros tipos de nós (além de nós de administração)]
+
+. Na seção *conexão do nó de administração principal*, determine se você precisa especificar o endereço IP do nó de administração principal.
++
+Se você já instalou outros nós nesse data center, o Instalador do StorageGRID Appliance poderá descobrir esse endereço IP automaticamente, assumindo que o nó de administrador principal ou pelo menos um outro nó de grade com ADMIN_IP configurado, está presente na mesma sub-rede.
+
+. Se este endereço IP não for exibido ou você precisar alterá-lo, especifique o endereço:
++
+[cols="1a,2a"]
+|===
+| Opção | Descrição 
+
+
+ a| 
+Entrada de IP manual
+ a| 
+.. Desmarque a caixa de seleção *Ativar descoberta de nó de administrador*.
+.. Introduza o endereço IP manualmente.
+.. Clique em *Salvar*.
+.. Aguarde até que o estado da ligação para que o novo endereço IP fique pronto.
+
+
+
+
+ a| 
+Detecção automática de todos os nós de administração principal conetados
+ a| 
+.. Marque a caixa de seleção *Enable Admin Node Discovery* (Ativar descoberta de nó de administrador).
+.. Aguarde até que a lista de endereços IP descobertos seja exibida.
+.. Selecione o nó de administração principal para a grade onde este nó de storage do dispositivo será implantado.
+.. Clique em *Salvar*.
+.. Aguarde até que o estado da ligação para que o novo endereço IP fique pronto.
+
+
+|===
+. No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.
++
+O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.
+
+. Na seção *Instalação*, confirme se o estado atual é "Pronto para iniciar a instalação `_node name_` na grade com nó Admin principal `_admin_ip_`" e se o botão *Iniciar instalação* está ativado.
++
+Se o botão *Start Installation* (Iniciar instalação) não estiver ativado, poderá ser necessário alterar a configuração da rede ou as definições da porta. Para obter instruções, consulte as instruções de manutenção do seu aparelho.
+
++
+
+NOTE: Se você estiver implantando o dispositivo Storage Node como um destino de clonagem de nós, pare o processo de implantação aqui e continue o link:../commonhardware/appliance-node-cloning-procedure.html["procedimento de clonagem de nós"].
+
+. Na página inicial do Instalador de dispositivos StorageGRID, clique em *Iniciar instalação*.
++
+O estado atual muda para ""Instalação está em andamento", e o link:../installconfig/monitoring-appliance-installation.html["Página de instalação do monitor"] é exibido.
+
++
+
+NOTE: Se você precisar acessar a página Instalação do Monitor manualmente, clique em *Instalação do Monitor*.
+
+. Se a grade incluir vários nós de storage do dispositivo, repita estas etapas para cada dispositivo.
++
+
+NOTE: Se você precisar implantar vários nós de armazenamento de dispositivos de uma só vez, você pode automatizar o processo de instalação usando o link:../installconfig/automatismos-appliance-installation-and-Configuration.script de instalação do dispositivo automate-with-configure-sga-py-script[`configure-sga.py`].
+
+

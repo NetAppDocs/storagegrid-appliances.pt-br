@@ -1,0 +1,16 @@
+---
+permalink: sg5600/index.html 
+sidebar: sidebar 
+keywords: 'storagegrid, sg5600, storage node, storage appliance"' 
+summary: O aparelho SG5600 chegou ao fim do suporte. Contacte o seu representante de vendas da NetApp para obter opções de atualização de hardware. 
+---
+= Mantenha o aparelho SG5600
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O aparelho SG5600 chegou ao fim do suporte. Contacte o seu representante de vendas da NetApp para obter opções de atualização de hardware.
+
+Se precisar executar procedimentos de manutenção no hardware SG5600, use o https://docs.netapp.com/us-en/storagegrid-116/sg5600/maintaining-sg5600-appliance.html["Instruções do StorageGRID 11,6"^].

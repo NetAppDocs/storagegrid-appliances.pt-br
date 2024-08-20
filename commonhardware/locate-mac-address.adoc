@@ -1,0 +1,37 @@
+---
+permalink: commonhardware/locate-mac-address.html 
+sidebar: sidebar 
+keywords: storagegrid, mac, mac address 
+summary: Em alguns casos, talvez seja necessário atualizar as referências de endereços MAC após a substituição de um dispositivo. 
+---
+= Atualizar referências de endereço MAC (SG100, SG1000, SGF6024 e SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Em alguns casos, talvez seja necessário atualizar as referências de endereços MAC após a substituição de um dispositivo.
+
+.Sobre esta tarefa
+Se qualquer uma das interfaces de rede em um dispositivo que você está substituindo estiver configurada para DHCP, talvez seja necessário atualizar as atribuições de concessão DHCP permanentes nos servidores DHCP para fazer referência aos endereços MAC do utilitário de substituição. A atualização garante que o dispositivo de substituição receba os endereços IP esperados.
+
+.Passos
+. Localize a etiqueta na parte frontal do aparelho. O rótulo lista o endereço MAC da porta de gerenciamento BMC do dispositivo.
+. Para determinar o endereço MAC da porta Admin Network, você deve adicionar *2* ao número hexadecimal na etiqueta.
++
+Por exemplo, se o endereço MAC na etiqueta terminar em *09*, o endereço MAC da porta Admin terminaria em *0B*. Se o endereço MAC na etiqueta terminar em *(_y_)FF*, o endereço MAC da porta Admin terminaria em *(_y_(1)01*.
+
++
+Você pode facilmente fazer esse cálculo abrindo o Calculator no Windows, definindo-o para o modo Programador, selecionando Hex, digitando o endereço MAC e, em seguida, digitando * 2 *.
+
+. Peça ao administrador da rede para associar o DNS/rede e o endereço IP do dispositivo removido com o endereço MAC do dispositivo de substituição.
++
+
+CAUTION: Deve certificar-se de que todos os endereços IP do aparelho original foram atualizados antes de ligar a alimentação ao aparelho de substituição. Caso contrário, o dispositivo obterá novos endereços IP DHCP quando inicializa e poderá não conseguir reconetar-se ao StorageGRID. Esta etapa se aplica a todas as redes StorageGRID conetadas ao dispositivo.
+
++
+
+NOTE: Se o dispositivo original tiver utilizado um endereço IP estático, o novo dispositivo irá adotar automaticamente os endereços IP do aparelho que removeu.
+
+

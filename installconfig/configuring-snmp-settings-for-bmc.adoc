@@ -1,0 +1,40 @@
+---
+permalink: installconfig/configuring-snmp-settings-for-bmc.html 
+sidebar: sidebar 
+keywords: SNMP, configure, setup, set up 
+summary: Se estiver familiarizado com a configuração do SNMP para hardware, pode utilizar a interface BMC para configurar as definições SNMP para os dispositivos SG6100, SG6000 e serviços. Você pode fornecer strings de comunidade seguras, ativar Trap SNMP e especificar até cinco destinos SNMP. 
+---
+= Configure as definições SNMP para BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se estiver familiarizado com a configuração do SNMP para hardware, pode utilizar a interface BMC para configurar as definições SNMP para os dispositivos SG6100, SG6000 e serviços. Você pode fornecer strings de comunidade seguras, ativar Trap SNMP e especificar até cinco destinos SNMP.
+
+.Antes de começar
+* Você sabe como acessar o painel do BMC.
+* Tem experiência em configurar definições SNMP para equipamento SNMPv1-v2c.
+
+
+
+NOTE: As definições do BMC efetuadas por este procedimento poderão não ser preservadas se o aparelho falhar e tiver de ser substituído. Certifique-se de que tem um registo de todas as definições aplicadas, para que possam ser facilmente reaplicadas após uma substituição de hardware, se necessário.
+
+.Passos
+. No painel BMC, selecione *Configurações* > *Configurações SNMP*.
+. Na página Configurações SNMP, selecione *Ativar SNMP V1/V2* e, em seguida, forneça uma String comunitária somente leitura e uma String Comunidade de leitura-escrita.
++
+A String da Comunidade somente leitura é como uma ID de usuário ou senha. Você deve alterar esse valor para evitar que intrusos obtenham informações sobre a configuração da rede. A cadeia de Comunidade de leitura-escrita protege o dispositivo contra alterações não autorizadas.
+
+. Opcionalmente, selecione *Ativar Trap* e insira as informações necessárias.
++
+
+NOTE: Introduza o IP de destino para cada trap SNMP utilizando um endereço IP. Nomes DNS não são suportados.
+
++
+Ative traps se quiser que o aparelho envie notificações imediatas para um console SNMP quando ele estiver em um estado incomum. Dependendo do dispositivo, os traps podem indicar falhas de hardware de vários componentes, condições de ligação para cima/para baixo, limites de temperatura excedidos ou tráfego elevado.
+
+. Opcionalmente, clique em *Send Test Trap* para testar suas configurações.
+. Se as configurações estiverem corretas, clique em *Salvar*.
+

@@ -1,0 +1,38 @@
+---
+section: sg100-1000
+title: Mantenha o hardware SG100 e SG1000
+url: "/landing-maintain-sg1000-100/index.html"
+entries:
+- title: Visão geral
+  pdf-filename: Manutenção de hardware SG100 e SG1000
+  url: "/sg100-1000/index.html"
+- title: Procedimentos de configuração de manutenção
+  pdf-filename: Procedimentos de configuração de manutenção - SG100 e SG1000
+  entries:
+  - title: Ligue e desligue o LED de identificação
+    url: "/sg100-1000/turning-controller-identify-led-on-and-off.html"
+  - title: Localize o controlador no data center
+    url: "/sg100-1000/locating-controller-in-data-center.html"
+  - title: Desligue o aparelho
+    url: "/sg100-1000/shut-down-sg100-and-sg1000.html"
+  - title: Alterar a configuração do link
+    url: "/sg100-1000/changing-link-configuration-of-services-appliance.html"
+- title: Procedimentos de hardware
+  pdf-filename: Procedimentos de hardware - SG100 e SG1000
+  entries:
+  - title: Verifique o componente a substituir
+    url: "/sg100-1000/verify-component-to-replace-sg100-and-sg1000.html"
+  - title: Volte a colocar a tampa
+    url: "/sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html"
+  - title: Substitua uma ou ambas as fontes de alimentação
+    url: "/sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+  - title: Substitua a ventoinha
+    url: "/sg100-1000/replacing-fan-in-services-appliance.html"
+  - title: Substitua a transmissão
+    url: "/sg100-1000/replacing-drive-in-services-appliance.html"
+  - title: Substitua a bateria CMOS
+    url: "/sg100-1000/replace-cmos-in-sg100-and-sg1000.html"
+  - title: Substitua o aparelho
+    url: "/sg100-1000/replacing-services-appliance.html"
+  - title: Reposicione o aparelho no rack
+    url: "/sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html"

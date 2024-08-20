@@ -1,0 +1,117 @@
+---
+permalink: sg100-1000/replacing-services-appliance.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, remove, removing, removal, install, installing, installation 
+summary: Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado. 
+---
+= Substitua um SG100 ou SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado.
+
+.Antes de começar
+* Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir.
+* Tem etiquetas para identificar cada cabo ligado ao aparelho.
+* Você link:locating-controller-in-data-center.html["localizado fisicamente o aparelho"]tem .
+
+
+.Sobre esta tarefa
+O nó StorageGRID não estará acessível enquanto você substituir o dispositivo. Se o aparelho estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.
+
+
+NOTE: Se estiver a substituir o dispositivo antes de instalar o software StorageGRID, poderá não conseguir aceder ao instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do dispositivo original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.
+
+.Passos
+. Apresente as configurações atuais do aparelho e registe-as.
++
+.. Inicie sessão no aparelho a substituir:
++
+... Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Enter: `*run-host-command ipmitool lan print*` Para exibir as configurações atuais do BMC para o dispositivo.
+
+
+. Desligue o aparelho: `shutdown -h now`
+. Se qualquer uma das interfaces de rede neste dispositivo StorageGRID estiver configurada para DHCP, talvez seja necessário atualizar as atribuições permanentes de concessão DHCP nos servidores DHCP para fazer referência aos endereços MAC do dispositivo de substituição. A atualização garante que o dispositivo recebe os endereços IP esperados. link:../commonhardware/locate-mac-address.html["Atualizar referências de endereço MAC"]Consulte .
+. Retire e substitua o aparelho:
++
+.. Identifique os cabos e, em seguida, desligue os cabos e quaisquer transcetores de rede.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+.. Remova o aparelho com falha do gabinete ou rack.
+.. Transfira as duas fontes de alimentação, oito ventoinhas de arrefecimento e dois SSDs do aparelho com falha para o aparelho de substituição.
++
+Os dois SSDs são colocados nos slots como mostrado no diagrama a seguir:
+
++
+image::../media/drive_locations_sg1000_front_with_ssds.png[Locais de condução]
+
++
+HDD02 ou HDD2 consulte a unidade na ranhura superior e HDD03 ou HDD3 consulte a unidade na ranhura inferior.
+
++
+Siga as instruções fornecidas para a substituição destes componentes.
+
+.. Instale o aparelho de substituição no gabinete ou rack.
+.. Substitua os cabos e quaisquer transcetores óticos.
+.. Ligue o aparelho e aguarde que ele volte a ligar a rede.
+.. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+
+
+. Inicie sessão no aparelho substituído:
++
+.. Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+.. Digite o seguinte comando para mudar para root: `su -`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+
+
+. Restaure a conetividade de rede BMC para o dispositivo substituído. Existem duas opções:
++
+** Use IP estático, máscara de rede e gateway
+** Use DHCP para obter um IP, máscara de rede e gateway
++
+... Para restaurar a configuração do BMC para usar um IP estático, máscara de rede e gateway, digite os seguintes comandos:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Para restaurar a configuração do BMC para usar DHCP para obter um IP, máscara de rede e gateway, digite o seguinte comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Depois de restaurar a conetividade de rede BMC, conete-se à interface BMC para auditar e restaurar qualquer configuração personalizada adicional do BMC que você possa ter aplicado. Por exemplo, você deve confirmar as configurações para destinos de intercetação SNMP e notificações por e-mail. link:../installconfig/configuring-bmc-interface.html["Configurar a interface BMC"]Consulte .
+. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+.Informações relacionadas
+link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+
+link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Veja os códigos de inicialização do aparelho"]

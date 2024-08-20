@@ -1,0 +1,86 @@
+---
+permalink: sg110-1100/reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg110, sg1100, admin node, admin appliance, install, installing, installation, cabinet, rack 
+summary: Retire o SG110 ou o SG1100 de um gabinete ou rack para acessar a tampa superior ou mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída. 
+---
+= Relocar SG110 e SG1100 no gabinete ou rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire o SG110 ou o SG1100 de um gabinete ou rack para acessar a tampa superior ou mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída.
+
+
+
+== Remova SG110 ou SG1100 do gabinete ou rack
+
+.Antes de começar
+* Você tem etiquetas para identificar cada cabo conetado ao SG110 ou ao SG1100.
+* Você tem link:locating-sg110-and-sg1100-in-data-center.html["Fisicamente localizado o SG110 ou SG1100"] onde está realizando manutenção no data center.
+* Você link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Encerre o SG110 ou o SG1100"]tem .
++
+
+CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
+
+
+
+.Passos
+. Identifique e, em seguida, desligue os cabos de alimentação do aparelho.
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Identifique e desconete os cabos de dados do dispositivo e quaisquer transcetores SFP ou SFP28.
++
+
+IMPORTANT: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Desaperte os dois parafusos integrados no painel frontal do aparelho.
++
+image::../media/sg6060_rack_retaining_screws.png[Parafusos de fixação do rack SG110 ou SG1100]
+
+. Deslize o SG110 ou SG1100 para a frente para fora do rack até que os trilhos de montagem estejam totalmente estendidos e você ouça os trincos em ambos os lados estalarem.
++
+A tampa superior do aparelho está acessível.
+
+. Opcional: Se estiver a remover totalmente o aparelho do armário ou do rack, siga as instruções para o kit de calhas para remover o aparelho dos trilhos.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+
+
+== Reinstale SG110 ou SG1100 no gabinete ou rack
+
+.Antes de começar
+Reinstalou a tampa do aparelho.
+
+link:reinstalling-sg110-and-sg1100-cover.html["Reinstale a tampa SG110 ou SG1100"]
+
+.Passos
+. Pressione o trilho azul libera ambos os trilhos do rack ao mesmo tempo e deslize o SG110 ou SG1100 para dentro do rack até que ele esteja totalmente assentado.
++
+Quando não conseguir mover o controlador mais, puxe as travas azuis em ambos os lados do chassi para deslizar o controlador até o fim.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG110 ou SG1100 deslizando sobre trilhos]
+
++
+
+NOTE: Não conete a moldura frontal até que você ligue o controlador.
+
+. Aperte os parafusos integrados no painel frontal do controlador para fixar o controlador no rack.
++
+image::../media/sg6060_rack_retaining_screws.png[Parafusos de fixação do rack SG110 ou SG1100]
+
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Reconecte os cabos de dados do controlador e quaisquer transcetores SFP ou SFP28"].
++
+
+IMPORTANT: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Reconecte os cabos de alimentação do controlador"].
+
+
+.Depois de terminar
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Reinicie o aparelho"].

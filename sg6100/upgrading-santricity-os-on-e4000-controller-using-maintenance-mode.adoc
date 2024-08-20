@@ -1,0 +1,65 @@
+---
+permalink: sg6100/upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, controller, e4000, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador E4000. 
+---
+= Atualizar o SANtricity os no controlador E4000 usando o modo de manutenção (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador E4000.
+
+
+NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
+
+.Antes de começar
+* Consultou o https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para confirmar que a versão do SANtricity os que está a utilizar para a atualização é compatível com o seu dispositivo.
+* Você deve colocar o controlador SG5800 no link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de manutenção"], o que interrompe a conexão com o controlador E4000.
++
+
+NOTE: Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.
+
+
+
+.Sobre esta tarefa
+Não atualize o SANtricity os ou a NVSRAM na controladora e-Series em mais de um dispositivo StorageGRID de cada vez.
+
+
+CAUTION: A atualização de mais de um dispositivo StorageGRID por vez pode causar indisponibilidade de dados, dependendo do modelo de implantação e das políticas de ILM.
+
+.Passos
+. Confirme se o aparelho está link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de manutenção"]em .
+. A partir de um portátil de serviço, aceda ao Gestor de sistema SANtricity e inicie sessão.
+. Transfira o novo ficheiro de software SANtricity os e o ficheiro NVSRAM para o cliente de gestão.
++
+
+CAUTION: A NVSRAM é específica do dispositivo StorageGRID. Não utilize a transferência NVSRAM padrão.
+
+. Siga as instruções no Guia de atualização de software e firmware do SANtricity _E4000 e E5800_ ou na ajuda on-line do Gerenciador de sistema do SANtricity para atualizar o firmware e a NVSRAM da controladora E4000.
++
+
+NOTE: Ative os arquivos de atualização imediatamente. Não adiar a ativação.
+
+. Se este procedimento for concluído com êxito e tiver procedimentos adicionais a serem executados enquanto o nó estiver no modo de manutenção, execute-os agora. Quando terminar, ou se tiver alguma falha e quiser recomeçar, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID*
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. Selecione esta opção se tiver alguma avaria durante o procedimento e pretender recomeçar. Depois que o nó terminar de reiniciar para o modo de manutenção, reinicie a partir da etapa apropriada no procedimento que falhou.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+
+
+.Informações relacionadas
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]

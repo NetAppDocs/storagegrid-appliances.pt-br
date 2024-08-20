@@ -1,0 +1,398 @@
+---
+permalink: sg6000/replacing-storage-controller-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, storage controller, e2800, ef570, controller, remove, removing, removal, install, installing, installation 
+summary: Pode ser necessário substituir um controlador E2800 ou um controlador EF570 se não estiver a funcionar de forma ideal ou se tiver falhado. 
+---
+= Substitua o controlador de armazenamento no SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode ser necessário substituir um controlador da série E2800 ou um controlador EF570 se não estiver a funcionar de forma ideal ou se tiver falhado.
+
+.Antes de começar
+* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo.
+* Você tem etiquetas para identificar cada cabo conetado ao controlador.
+* Você tem uma pulseira antiestática ou tomou outras precauções antiestáticas.
+* Você tem uma chave de fenda Phillips nº 1.
+* Você localizou fisicamente o dispositivo de armazenamento onde está substituindo o controlador no data center.
++
+link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+
+
+
+
+NOTE: Não confie nas instruções da série e para substituir um controlador no dispositivo StorageGRID, porque os procedimentos não são os mesmos.
+
+.Sobre esta tarefa
+Você pode determinar se você tem um controlador com falha de duas maneiras:
+
+* O Guru de recuperação no Gerenciador de sistema do SANtricity direciona você para substituir o controlador.
+* O LED âmbar de atenção no controlador está aceso, indicando que o controlador tem uma avaria.
++
+
+NOTE: Se ambos os controladores na gaveta tiverem seus LEDs de atenção ligados, entre em Contato com o suporte técnico para obter assistência.
+
+
+
+Se o dispositivo contiver dois controladores de storage, você poderá substituir um deles enquanto o dispositivo estiver ligado e executar operações de leitura/gravação, contanto que as seguintes condições sejam verdadeiras:
+
+* O segundo controlador na gaveta tem o status ideal.
+* O campo *OK para remover* na área Detalhes do Guru de recuperação no Gerenciador de sistema do SANtricity exibe *Sim*, indicando que é seguro remover esse componente.
+
+
+
+NOTE: Sempre que possível, coloque o aparelho no modo de manutenção para este procedimento de substituição, de forma a minimizar o impactos potencial de erros ou falhas imprevistas.
+
+
+NOTE: Se a segunda controladora na gaveta não tiver o status ideal ou se o Recovery Guru indicar que não é bom remover a controladora, entre em Contato com o suporte técnico.
+
+Quando substituir um controlador, tem de remover a bateria do controlador original e instalá-la no controlador de substituição. Em alguns casos, você também pode precisar remover a placa de interface do host do controlador original e instalá-la no controlador de substituição.
+
+
+NOTE: Os controladores de storage na maioria dos modelos de dispositivos não incluem placas de interface de host (HIC).
+
+
+
+== Passo 1: Prepare o controlador de substituição
+
+Prepare o controlador E2800A ou E2800B de substituição.
+
+.Passos
+. Desembale o novo controlador e coloque-o numa superfície plana e livre de estática.
++
+Guarde os materiais de embalagem a utilizar ao enviar o controlador avariado.
+
+. Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do controlador de substituição.
+
+
+Estas figuras mostram o controlador E2800A e o controlador E2800B. O procedimento para substituir os controladores da série E2800 e o controlador EF570 é idêntico.
+
+Controlador de armazenamento E2800A:
+
+image::../media/e2800_labels_on_controller.gif[Etiquetas MAC e FRU no controlador E2800A]
+
+Controlador de armazenamento E2800B:
+
+image::../media/e2800B_labels_on_controller.gif[Etiquetas MAC e FRU no controlador E2800A]
+
+[cols="1a,2a,4a"]
+|===
+| Etiqueta | componente | Descrição 
+
+
+ a| 
+1
+ a| 
+Endereço MAC
+ a| 
+O endereço MAC da porta de gerenciamento 1 (""P1 no E2800A e 0a no E2800B"). Se você usou DHCP para obter o endereço IP do controlador original, precisará desse endereço para se conetar ao novo controlador.
+
+
+
+ a| 
+2
+ a| 
+Número de peça FRU
+ a| 
+O número de peça da FRU. Este número deve corresponder ao número de peça de substituição para o controlador atualmente instalado.
+
+
+
+ a| 
+3
+ a| 
+HIC de 4 portas
+ a| 
+A placa de interface de host (HIC) de 4 portas. Esta placa tem de ser movida para o novo controlador quando efetuar a substituição.
+
+*Nota*: O controlador E2800A não tem um HIC.
+
+|===
+
+
+== Passo 2: Coloque o controlador offline
+
+Prepare-se para remover o controlador com falha e colocá-lo offline.
+
+.Passos
+. Prepare-se para remover o controlador. Use o Gerenciador de sistema do SANtricity para executar estas etapas.
++
+.. Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.
++
+Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, você pode procurar o controlador na guia *base*.
+
++
+
+CAUTION: *Possível perda de acesso aos dados e n.o 8212;* se os dois números de peça não forem os mesmos, não tente este procedimento.
+
+.. Faça uma cópia de segurança da base de dados de configuração.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração.
+
+.. Colete dados de suporte para o dispositivo.
++
+
+NOTE: A coleta de dados de suporte antes e depois da substituição de um componente garante que você possa enviar um conjunto completo de logs para o suporte técnico se a substituição não resolver o problema.
+
+.. Leve o controlador que pretende substituir offline.
+
+
+. Desligue o compartimento do controlador.
+
+
+
+
+== Passo 3: Remova o controlador
+
+Retire o controlador com falha do aparelho.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique os cabos e, em seguida, desligue os cabos e SFPs.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Solte o controlador do aparelho apertando o trinco na pega do came até soltar e, em seguida, abra a pega do came para a direita.
+. Utilizando as duas mãos e a pega do came, deslize o controlador para fora do aparelho.
++
+
+CAUTION: Utilize sempre duas mãos para suportar o peso do controlador.
+
+. Coloque o controlador numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Remova a tampa pressionando o botão e deslizando a tampa para fora.
+
+
+
+
+== Passo 4: Mova a bateria para o novo controlador
+
+Remova a bateria do controlador com falha e instale-a no controlador de substituição.
+
+.Passos
+. Confirme se o LED verde dentro do controlador (entre a bateria e os DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/e2800_internal_cache_active_led.gif[LED verde no E2800]
+
++
+[cols="1a,2a"]
+|===
+| Item | Descrição 
+
+
+ a| 
+1
+ a| 
+LED Ativo Cache Interno
+
+
+
+ a| 
+2
+ a| 
+Bateria
+
+|===
+. Localize a trava de liberação azul da bateria.
+. Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do controlador.
++
+image::../media/e2800_remove_battery.gif[Trinco da bateria]
+
++
+[cols="1a,2a"]
+|===
+| Item | Descrição 
+
+
+ a| 
+1
+ a| 
+Trinco de desbloqueio da bateria
+
+
+
+ a| 
+2
+ a| 
+Bateria
+
+|===
+. Levante a bateria e deslize-a para fora do controlador.
+. Retire a tampa do controlador de substituição.
+. Oriente o controlador de substituição para que a ranhura da bateria fique voltada para si.
+. Introduza a bateria no controlador a um ligeiro ângulo descendente.
++
+Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte inferior do controlador e deslizar a parte superior da bateria por baixo do pequeno pino de alinhamento no lado esquerdo do controlador.
+
+. Desloque o trinco da bateria para cima para fixar a bateria.
++
+Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
+
+. Vire o controlador para confirmar que a bateria está instalada corretamente.
++
+
+CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos.
+
++
+** *Correto -- a flange de metal da bateria é completamente inserida na ranhura do controlador:*
++
+image::../media/e2800_battery_flange_ok.gif[Flange da bateria conforme]
+
+** *Incorreto -- a flange metálica da bateria não está inserida na ranhura do controlador:*
++
+image::../media/e2800_battery_flange_not_ok.gif[Flange da bateria incorreta]
+
+
+
+. Volte a colocar a tampa do controlador.
+
+
+
+
+== Passo 5: Mova o HIC para o novo controlador, se necessário
+
+Se o controlador com falha incluir uma placa de interface do host (HIC), mova o HIC do controlador com falha para o controlador de substituição.
+
+Um HIC separado é usado apenas para o controlador E2800B. O HIC é montado na placa do controlador principal e inclui dois conetores SPF.
+
+
+NOTE: As ilustrações neste procedimento mostram um HIC de 2 portas. O HIC no controlador pode ter um número diferente de portas.
+
+[role="tabbed-block"]
+====
+.E2800A
+--
+Um controlador E2800A não tem um HIC.
+
+Volte a colocar a tampa do controlador E2800A e avance para <<step6_replace_controller,Passo 6: Substitua o controlador>>
+
+--
+.E2800B
+--
+Mova o HIC do controlador E2800B com falha para o controlador de substituição.
+
+.Passos
+. Remova quaisquer SFPs do HIC.
+. Usando uma chave de fenda Phillips nº 1, remova os parafusos que prendem a placa frontal HIC ao controlador.
++
+Há quatro parafusos: Um na parte superior, um na parte lateral e dois na parte frontal.
+
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800 parafusos da placa frontal]
+
+. Retire a placa frontal do HIC.
+. Utilizando os dedos ou uma chave de fendas Phillips, desaperte os três parafusos de aperto manual que fixam o HIC à placa do controlador.
+. Retire cuidadosamente o HIC da placa controladora levantando a placa para cima e deslizando-a para trás.
++
+
+CAUTION: Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.png[Parafusos de aperto manual HIC E2800A]
+
++
+[cols="1a,2a"]
+|===
+| Etiqueta | Descrição 
+
+
+ a| 
+1
+ a| 
+Placas de interface do host
+
+
+
+ a| 
+2
+ a| 
+Parafusos de aperto manual
+
+|===
+. Coloque o HIC sobre uma superfície livre de estática.
+. Usando uma chave de fenda Phillips nº 1, remova os quatro parafusos que prendem a placa frontal vazia ao controlador de substituição e remova a placa frontal.
+. Alinhe os três parafusos de aperto manual no HIC com os orifícios correspondentes no controlador de substituição e alinhe o conetor na parte inferior do HIC com o conetor de interface HIC na placa do controlador.
++
+Tenha cuidado para não arranhar ou bater os componentes na parte inferior do HIC ou na parte superior da placa controladora.
+
+. Baixe cuidadosamente o HIC para o devido lugar e assente o conetor HIC pressionando suavemente o HIC.
++
+
+CAUTION: *Possíveis danos ao equipamento* - tenha cuidado para não apertar o conetor de fita dourada para os LEDs do controlador entre o HIC e os parafusos de aperto manual.
+
++
+image::../media/28_dwg_e2800_hic_thumbscrews_maint-e2800.gif[E2800A parafusos de pressão HIC]
+
++
+[cols="1a,2a"]
+|===
+| Etiqueta | Descrição 
+
+
+ a| 
+1
+ a| 
+Placas de interface do host
+
+
+
+ a| 
+2
+ a| 
+Parafusos de aperto manual
+
+|===
+. Aperte manualmente os parafusos de aperto manual do HIC.
++
+Não use uma chave de fenda, ou você pode apertar demais os parafusos.
+
+. Usando uma chave de fenda Phillips nº 1, prenda a placa frontal HIC removida do controlador original ao novo controlador com quatro parafusos.
++
+image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A parafusos da placa frontal]
+
+. Volte a instalar quaisquer SFPs removidos no HIC.
+
+
+--
+====
+
+
+== Passo 6: Substitua o controlador
+
+Instale o controlador de substituição e verifique se ele voltou a se unir à grade.
+
+.Passos
+. Instale o controlador de substituição no aparelho.
++
+.. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
+.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
+.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Substitua os cabos e SFPs.
+.. Ligue o compartimento do controlador.
+.. Se o controlador original usou DHCP para o endereço IP, localize o endereço MAC na etiqueta na parte de trás do controlador de substituição. Peça ao administrador da rede para associar o DNS/rede e o endereço IP do controlador removido com o endereço MAC do controlador de substituição.
++
+
+NOTE: Se o controlador original não tiver utilizado DHCP para o endereço IP, o novo controlador adotará o endereço IP do controlador removido.
+
+
+
+. Coloque o controlador on-line usando o Gerenciador de sistemas da SANtricity:
++
+.. Selecione *hardware*.
+.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira*.
+.. Selecione o controlador que pretende colocar online.
+.. Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
+.. Verifique se o visor de sete segmentos mostra um estado `99` de .
+
+
+. Confirme se o novo controlador é ideal e recolha dados de suporte.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.

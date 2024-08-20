@@ -1,0 +1,31 @@
+---
+indexpage:
+  tiles:
+  - title: Procedimentos realizados frequentemente
+    links:
+    - title: Ligue ou desligue o LED de localização
+      url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
+    - title: Localize o dispositivo no data center
+      url: "../sg100-1000/locating-controller-in-data-center.html"
+    - title: Desligue o aparelho
+      url: "../sg100-1000/shut-down-sg100-and-sg1000.html"
+    - title: Alterar a configuração do link
+      url: "../sg100-1000/changing-link-configuration-of-services-appliance.html"
+  - title: Procedimentos de rack
+    links:
+    - title: Substitua o aparelho
+      url: "../sg100-1000/replacing-services-appliance.html"
+    - title: Relocate SG100 ou SG1000 em um rack
+      url: "../sg100-1000/reinstalling-sg100-and-sg1000-into-cabinet-or-rack.html"
+  - title: Procedimentos de hardware
+    links:
+    - title: Volte a colocar a tampa
+      url: "../sg100-1000/reinstalling-sg100-and-sg1000-controller-cover.html"
+    - title: Substitua a fonte de alimentação
+      url: "../sg100-1000/replacing-one-or-more-power-supplies-in-services-appliance.html"
+    - title: Substitua a ventoinha
+      url: "../sg100-1000/replacing-fan-in-services-appliance.html"
+    - title: Substitua a transmissão
+      url: "../sg100-1000/replacing-drive-in-services-appliance.html"
+    - title: Substitua a bateria CMOS
+      url: "../sg100-1000/replace-cmos-in-sg100-and-sg1000.html"

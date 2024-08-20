@@ -1,0 +1,54 @@
+---
+permalink: sg100-1000/shut-down-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
+summary: Desligue o dispositivo de serviços para executar a manutenção de hardware. 
+---
+= Encerre o SG100 ou o SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Desligue o dispositivo de serviços para executar a manutenção de hardware.
+
+.Antes de começar
+* Você precisa fisicamente link:locating-controller-in-data-center.html["localizado o aparelho de serviços"]de manutenção no data center.
+
+
+.Sobre esta tarefa
+Para evitar interrupções de serviço, desligue o equipamento de serviços durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis.
+
+.Passos
+. Desligue o aparelho:
++
+
+CAUTION: Tem de efetuar um corte de funcionamento controlado do aparelho introduzindo os comandos especificados abaixo. É uma prática recomendada executar um desligamento controlado quando possível para evitar alertas desnecessários, garantir que Registros completos estejam disponíveis e evitar interrupções de serviço.
+
++
+.. Se você ainda não fez login no nó de grade, faça login usando PuTTY ou outro cliente ssh:
++
+... Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Desligue o aparelho de serviços
+`*shutdown -h now*`
++
+Esse comando pode levar até 10 minutos para ser concluído.
+
+
+
+. Utilize um dos seguintes métodos para verificar se o aparelho está desligado:
++
+** Olhe para o LED de alimentação na parte frontal do aparelho e confirme que está desligado.
+** Verifique a página Power Control (controlo de alimentação) da interface do BMC para confirmar que o aparelho está desligado.
+
+
+

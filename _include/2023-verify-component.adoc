@@ -1,0 +1,57 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de começar
+* Você tem o número de série do dispositivo de armazenamento onde o componente precisa ser substituído.
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+
+
+.Sobre esta tarefa
+Use este procedimento para identificar o aparelho com hardware com falha e quais dos componentes de hardware substituíveis não estão funcionando corretamente. Os componentes que podem ser identificados para substituição podem incluir:
+
+* Fontes de alimentação
+* Fãs
+* Unidades de estado sólido (SSDs)
+* Placas de interface de rede (NICs)
+* Bateria CMOS
+
+
+.Passos
+. Identifique o componente com falha e o nome do dispositivo no qual ele está instalado.
++
+.. No Gerenciador de Grade, selecione *ALERTAS* > *current*.
++
+A página Alertas é exibida.
+
+.. Selecione o alerta para ver os detalhes do alerta.
++
+
+NOTE: Selecione o alerta e não o cabeçalho de um grupo de alertas.
+
+.. Registre o nome do nó e o rótulo de identificação exclusivo do componente que falhou.
++
+image::../media/nic-alert-sgf6112.jpg[Alerta com ID de componente]
+
+
+
+. Identifique o chassis com o componente que precisa ser substituído.
++
+.. No Gerenciador de Grade, selecione *NÓS*.
+.. Na tabela na página nós, selecione o nome do nó de storage do dispositivo com o componente com falha.
+.. Selecione a guia *hardware*.
++
+Verifique o *número de série do controlador de computação* na seção StorageGRID Appliance. Verifique se o número de série corresponde ao número de série do dispositivo de armazenamento onde está a substituir o componente. Se o número de série corresponder, encontrou o aparelho correto.
+
++
+*** Se a seção StorageGRID Appliance no Gerenciador de Grade não for exibida, o nó selecionado não será um dispositivo StorageGRID. Selecione um nó diferente na exibição em árvore.
+*** Se os números de série não corresponderem, selecione um nó diferente na exibição em árvore.
+
+
+
+
+. Depois de localizar o nó em que o componente precisa ser substituído, anote o endereço IP BMC do dispositivo listado na seção StorageGRID Appliance.
++
+Para o ajudar a localizar o dispositivo no data center, você pode usar o endereço IP BMC para ligar o LED de identificação do aparelho.
+
+

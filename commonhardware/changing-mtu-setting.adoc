@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/changing-mtu-setting.html 
+sidebar: sidebar 
+keywords: mtu, change, changing 
+summary: Você pode alterar a configuração MTU atribuída quando configurou endereços IP para o nó do dispositivo. 
+---
+= Altere a definição MTU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar a configuração MTU atribuída quando configurou endereços IP para o nó do dispositivo.
+
+.Sobre esta tarefa
+
+CAUTION: O valor MTU da rede deve corresponder ao valor configurado na porta do switch à qual o nó está conetado. Caso contrário, problemas de desempenho da rede ou perda de pacotes podem ocorrer.
+
+
+NOTE: Para obter o melhor desempenho de rede, todos os nós devem ser configurados com valores MTU semelhantes em suas interfaces de rede de Grade. O alerta *incompatibilidade de MTU da rede de Grade* é acionado se houver uma diferença significativa nas configurações de MTU para a rede de Grade em nós individuais. Os valores de MTU não precisam ser os mesmos para todos os tipos de rede.
+
+Para alterar a configuração MTU sem reinicializar o nó do appliance, <<Altere a configuração MTU usando a ferramenta alterar IP,Use a ferramenta alterar IP>>.
+
+Se a rede cliente ou administrador não tiver sido configurada no Instalador de dispositivos StorageGRID durante a instalação inicial, <<Altere a definição MTU utilizando o modo de manutenção,Altere a definição MTU utilizando o modo de manutenção>>.
+
+
+
+== Altere a configuração MTU usando a ferramenta alterar IP
+
+.Antes de começar
+Você tem o `Passwords.txt` arquivo para usar a ferramenta alterar IP.
+
+.Passos
+Acesse a ferramenta alterar IP e atualize as configurações de MTU conforme descrito em https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Alterar a configuração da rede do nó"^].
+
+
+
+== Altere a definição MTU utilizando o modo de manutenção
+
+Altere a configuração MTU usando o modo de manutenção se você não conseguir acessar essas configurações usando a ferramenta alterar IP.
+
+.Antes de começar
+O aparelho foi link:../commonhardware/placing-appliance-into-maintenance-mode.html["colocado modo de manutenção"].
+
+.Passos
+. No Instalador de dispositivos StorageGRID, selecione *Configurar rede* > *Configuração IP*.
+. Faça as alterações desejadas nas configurações de MTU para rede de Grade, rede de Admin e rede de cliente.
+. Quando estiver satisfeito com as definições, selecione *Guardar*.
+. Se este procedimento for concluído com êxito e tiver procedimentos adicionais a serem executados enquanto o nó estiver no modo de manutenção, execute-os agora. Quando terminar, ou se tiver alguma falha e quiser recomeçar, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID*
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. Selecione esta opção se tiver alguma avaria durante o procedimento e pretender recomeçar. Depois que o nó terminar de reiniciar para o modo de manutenção, reinicie a partir da etapa apropriada no procedimento que falhou.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+

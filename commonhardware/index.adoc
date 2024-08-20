@@ -1,0 +1,47 @@
+---
+permalink: commonhardware/index.html 
+sidebar: sidebar 
+keywords: maintain overview, maintenance overview, about maintain, about maintenance 
+summary: Use estas instruções para manter o seu sistema StorageGRID. 
+---
+= Procedimentos comuns para manutenção de nós: Visão geral
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Use estas instruções para manter o seu sistema StorageGRID.
+
+
+
+== Sobre estas instruções
+
+Essas instruções descrevem procedimentos comuns a todos os nós, como aplicar um hotfix de software, recuperar nós de grade, recuperar um site com falha, desativar nós de grade ou um site inteiro, executar manutenção de rede, executar procedimentos de manutenção de nível de host e middleware e executar procedimentos de nó de grade.
+
+
+NOTE: Nestas instruções, "'Linux'" refere-se a uma implementação Red Hat Enterprise Linux, Ubuntu ou Debian. Utilize o https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para obter uma lista de versões suportadas.
+
+
+
+== Antes de começar
+
+* Você tem uma ampla compreensão do sistema StorageGRID.
+* Você revisou a topologia do seu sistema StorageGRID e entende a configuração da grade.
+* Você entende que deve seguir todas as instruções exatamente e atender a todos os avisos.
+* Você entende que os procedimentos de manutenção não descritos não são suportados ou exigem um envolvimento dos serviços.
+
+
+
+
+== Procedimentos de manutenção para aparelhos
+
+Os procedimentos de manutenção específicos para cada tipo de dispositivo StorageGRID estão nas secções de manutenção do aparelho:
+
+* link:../sg6100/index.html["Mantenha o aparelho SG6100"]
+* link:../sg6000/index.html["Mantenha o aparelho SG6000"]
+* link:../sg5800/index.html["Mantenha o aparelho SG5800"]
+* link:../sg5700/index.html["Mantenha o aparelho SG5700"]
+* link:../sg110-1100/index.html["Mantenha os aparelhos SG110 e SG1100"]
+* link:../sg100-1000/index.html["Mantenha os aparelhos SG100 e SG1000"]
+

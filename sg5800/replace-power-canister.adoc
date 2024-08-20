@@ -1,0 +1,146 @@
+---
+permalink: sg5800/replace-power-canister.html 
+sidebar: sidebar 
+keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
+summary: Substitua uma gaveta de controladora de 60 unidades ou uma gaveta de unidade, que inclui dois coletores de energia para redundância de energia. 
+---
+= Substitua o recipiente de alimentação no SG5860
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um recipiente de energia em um SG5860.
+
+.Sobre esta tarefa
+Cada dispositivo inclui dois coletores de energia para redundância de energia. Se um recipiente de alimentação falhar, você deve substituí-lo o mais rápido possível para garantir que o compartimento tenha uma fonte de alimentação redundante.
+
+Você pode substituir um recipiente de energia enquanto o aparelho estiver ligado e executando operações de e/S do host, desde que o segundo recipiente de energia na prateleira tenha um status ideal e o campo *OK para remover* na área Detalhes do Guru de recuperação no Gerenciador de sistema do SANtricity exiba *Sim*.
+
+Enquanto executa esta tarefa, o outro recipiente de alimentação fornece alimentação a ambas as ventoinhas para garantir que o equipamento não sobreaquece.
+
+.Antes de começar
+* Reveja os detalhes no Recovery Guru para confirmar que existe um problema com o recipiente de alimentação e selecione *Reverifique* a partir do Recovery Guru para garantir que nenhum outro item deve ser resolvido primeiro.
+* Verifique se o LED âmbar de atenção no recipiente de alimentação está aceso, indicando que o recipiente tem uma avaria. Contacte o suporte técnico para obter assistência se ambos os coletores de alimentação na prateleira tiverem os respetivos LEDs de atenção âmbar ligados.
+* Certifique-se de que tem o seguinte:
++
+** Um recipiente de alimentação de substituição que é suportado para o seu aparelho.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+
+
+
+
+
+
+== Passo 1: Prepare-se para substituir o recipiente de alimentação
+
+Prepare-se para substituir um recipiente de alimentação.
+
+.Passos
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. A partir do Gestor do sistema SANtricity, determine qual o recipiente de alimentação com falha.
++
+.. Selecione *hardware*.
+.. Olhe para o ícone de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""]à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.
++
+Se um componente tiver falhado, este ícone fica vermelho.
+
+.. Quando encontrar a prateleira com um ícone vermelho, selecione *Mostrar parte posterior da prateleira*.
+.. Selecione o recipiente de alimentação ou o ícone de alimentação vermelho.
+.. No separador *fontes de alimentação*, observe os Estados dos coletores de alimentação para determinar qual o recipiente de alimentação deve ser substituído.
++
+Um componente com um estado *Failed* deve ser substituído.
+
++
+
+CAUTION: Se o segundo recipiente de alimentação na prateleira não tiver o estado *Optimal*, não tente trocar a caixa de alimentação com falha. Em vez disso, entre em Contato com o suporte técnico para obter assistência.
+
++
+
+NOTE: Você também pode encontrar informações sobre o recipiente de energia com falha na área Detalhes do Recovery Guru, ou você pode revisar as informações exibidas para o compartimento, ou você pode revisar o Registro de eventos em suporte e filtro por tipo de componente.
+
+
+
+. Na parte de trás da matriz de armazenamento, olhe para os LEDs de atenção para localizar o recipiente de energia que você precisa remover.
++
+Tem de substituir o recipiente de alimentação que tem o respetivo LED de atenção ligado.
+
+
+
+
+
+== Passo 2: Remova o recipiente de alimentação com falha
+
+Remova um recipiente de alimentação com falha para que você possa substituí-lo por um novo.
+
+.Passos
+. Coloque proteção antiestática.
+. Desembale o novo recipiente de alimentação e coloque-o numa superfície nivelada perto da prateleira.
++
+Guarde todos os materiais de embalagem para utilização quando devolver o recipiente de alimentação com falha.
+
+. Desligue o interrutor de alimentação no recipiente de alimentação que você precisa remover.
+. Abra o retentor do cabo de alimentação do recipiente de alimentação que precisa de remover e, em seguida, desligue o cabo de alimentação do recipiente de alimentação.
+. Prima o trinco laranja na pega do excêntrico do recipiente de alimentação e, em seguida, abra a pega do excêntrico para libertar totalmente o recipiente de alimentação do plano intermédio.
+. Utilize a pega do excêntrico para fazer deslizar o recipiente de alimentação para fora da prateleira.
++
+
+CAUTION: Ao remover um recipiente de alimentação, utilize sempre duas mãos para suportar o seu peso.
+
+
+
+
+
+== Passo 3: Instale o novo recipiente de alimentação
+
+Instale um novo depósito de alimentação para substituir o que falhou.
+
+.Passos
+. Certifique-se de que o interrutor ligar/desligar do novo depósito de alimentação está na posição desligada.
+. Utilizando ambas as mãos, apoie e alinhe as extremidades do recipiente de alimentação com a abertura no chassis do sistema e, em seguida, empurre suavemente o recipiente de alimentação para o chassis utilizando a pega do excêntrico até encaixar no devido lugar.
++
+
+CAUTION: Não utilize força excessiva ao deslizar o recipiente de alimentação para o sistema; pode danificar o conetor.
+
+. Feche a pega do excêntrico de forma a que o trinco encaixe na posição de bloqueio e o depósito de alimentação fique totalmente assente.
+. Volte a ligar o cabo de alimentação à caixa de alimentação e fixe o cabo de alimentação à caixa de alimentação utilizando o fixador do cabo de alimentação.
+. Ligue a alimentação do novo depósito de alimentação.
+
+
+
+
+== Passo 4: Substituição completa do recipiente de alimentação
+
+Confirme se o novo depósito de alimentação está a funcionar corretamente, recolha dados de suporte e retome as operações normais.
+
+.Passos
+. No novo depósito de alimentação, verifique se o LED verde de alimentação está aceso e o LED âmbar de atenção está desligado.
+. No Recovery Guru (Guru de recuperação) no Gerenciador do sistema do SANtricity, selecione *Reverificar* para garantir que o problema foi resolvido.
+. Se um recipiente de alimentação com falha ainda estiver sendo relatado, repita os passos em <<Passo 2: Remova o recipiente de alimentação com falha>> e em <<Passo 3: Instale o novo recipiente de alimentação>>. Se o problema continuar a persistir, contacte o suporte técnico.
+. Retire a proteçãoão antiestática.
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione menu:suporte[Centro de suporte > Diagnóstico].
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Devolva a peça com falha ao NetApp, conforme descrito nas instruções de RMA fornecidas com o kit.
+
+
+.O que se segue?
+A substituição do seu recipiente de alimentação está concluída. Pode retomar as operações normais.

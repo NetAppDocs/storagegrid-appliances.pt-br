@@ -1,0 +1,52 @@
+---
+permalink: sg6000/replacing-hardware-components-in-optional-60-drive-expansion-shelf.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, i/o module, input/output module, power supply, fan, 60-drive expansion shelf, expansion shelf 
+summary: Talvez seja necessário substituir um módulo de entrada/saída, uma fonte de alimentação ou um ventilador no compartimento de expansão. 
+---
+= Substitua os componentes de hardware no compartimento de expansão de SG6000 60 unidades opcional
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir um módulo de entrada/saída, uma fonte de alimentação ou um ventilador no compartimento de expansão.
+
+.Antes de começar
+* Você tem o procedimento de substituição de hardware do e-Series.
+* Você localizou fisicamente o dispositivo de armazenamento onde está substituindo os componentes de hardware do compartimento de expansão no data center.
++
+link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+
+
+
+.Sobre esta tarefa
+Para substituir um módulo de entrada/saída (IOM) em um compartimento de expansão de 60 unidades, consulte as etapas nas instruções para link:replacing-storage-controller-sg6000.html["substituição de um controlador de armazenamento"].
+
+Para substituir uma fonte de alimentação ou um ventilador em um compartimento de expansão de 60 unidades, acesse os procedimentos do e-Series para manter o hardware de 60 unidades.
+
+|===
+| FRU | Consulte as instruções do e-Series para 
+
+
+ a| 
+Módulo de entrada/saída (IOM)
+ a| 
+Substituindo uma OIM
+
+
+
+ a| 
+Depósito de alimentação
+ a| 
+Substitua o recipiente de alimentação (60 unidades)
+
+
+
+ a| 
+Recipiente da ventoinha
+ a| 
+Substitua o recipiente da ventoinha (60 unidades)
+
+|===

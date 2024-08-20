@@ -1,0 +1,84 @@
+---
+permalink: installconfig/setting-up-email-notifications-for-alerts.html 
+sidebar: sidebar 
+keywords: email, notifications, alerts, set up, setup, configure, configuration, bmc 
+summary: Se quiser que as notificações por e-mail sejam enviadas quando ocorrerem alertas, use a interface BMC para configurar as configurações SMTP, usuários, destinos de LAN, políticas de alerta e filtros de eventos. 
+---
+= Configurar notificações por e-mail para alertas do BMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se quiser que as notificações por e-mail sejam enviadas quando ocorrerem alertas, use a interface BMC para configurar as configurações SMTP, usuários, destinos de LAN, políticas de alerta e filtros de eventos.
+
+
+NOTE: As definições do BMC efetuadas por este procedimento poderão não ser preservadas se o controlador ou o dispositivo de serviços SG6000-CN falhar e tiver de ser substituído. Certifique-se de que tem um registo de todas as definições aplicadas, para que possam ser facilmente reaplicadas após uma substituição de hardware, se necessário.
+
+.Antes de começar
+Você sabe como acessar o painel do BMC.
+
+.Sobre esta tarefa
+Na interface do BMC, você usa as opções *Configurações SMTP*, *Gerenciamento de usuários* e *filtros de evento da plataforma* na página Configurações para configurar notificações por e-mail.
+
+image::../media/bmc_settings_menu.png[Menu Definições do BMC]
+
+.Passos
+. link:configuring-snmp-settings-for-bmc.html["Configure as definições SNMP para BMC"].
++
+.. Selecione *Definições* > *Definições SMTP*.
+.. Para a ID de e-mail do remetente, introduza um endereço de e-mail válido.
++
+Este endereço de e-mail é fornecido como o endereço de quando o BMC envia e-mail.
+
+
+
+. Configure os usuários para receber alertas.
++
+.. No painel do BMC, selecione *Configurações* > *Gerenciamento de usuários*.
+.. Adicione pelo menos um usuário para receber notificações de alerta.
++
+O endereço de e-mail que você configura para um usuário é o endereço para o qual o BMC envia notificações de alerta. Por exemplo, você pode adicionar um usuário genérico, como "usuário de notificação", e usar o endereço de e-mail de uma lista de distribuição de e-mail da equipe de suporte técnico.
+
+
+
+. Configure o destino da LAN para alertas.
++
+.. Selecione *Settings* > *Platform Event Filters* > *LAN Destinations*.
+.. Configure pelo menos um destino de LAN.
++
+*** Selecione *Email* como tipo de destino.
+*** Para Nome de usuário do BMC, selecione um nome de usuário que você adicionou anteriormente.
+*** Se você adicionou vários usuários e deseja que todos eles recebam e-mails de notificação, adicione um destino de LAN para cada usuário.
+
+
+.. Envie um alerta de teste.
+
+
+. Configure políticas de alerta para que você possa definir quando e onde o BMC envia alertas.
++
+.. Selecione *Settings* > *Platform Event Filters* > *Alert Policies*.
+.. Configure pelo menos uma política de alerta para cada destino de LAN.
++
+*** Para número do Grupo de políticas, selecione *1*.
+*** Para Ação de Política, selecione *sempre enviar alerta para este destino*.
+*** Para Canal LAN, selecione *1*.
+*** No Seletor de destinos, selecione o destino da LAN para a política.
+
+
+
+
+. Configure filtros de eventos para direcionar alertas para diferentes tipos de eventos para os usuários apropriados.
++
+.. Selecione *Settings* > *Platform Event Filters* > *Event Filters*.
+.. Para o número do grupo de políticas de alerta, digite *1*.
+.. Crie filtros para cada evento sobre o qual você deseja que o Grupo de políticas de Alerta seja notificado.
++
+*** Você pode criar filtros de eventos para ações de energia, eventos de sensor específicos ou todos os eventos.
+*** Se você não tiver certeza sobre quais eventos monitorar, selecione *todos os sensores* para tipo de sensor e *todos os eventos* para Opções de evento. Se receber notificações indesejadas, pode alterar as suas seleções mais tarde.
+
+
+
+
+

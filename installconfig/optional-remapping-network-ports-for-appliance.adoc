@@ -1,0 +1,38 @@
+---
+permalink: installconfig/optional-remapping-network-ports-for-appliance.html 
+sidebar: sidebar 
+keywords: remap appliance ports, network, internal to external port mapping 
+summary: Opcionalmente, é possível remapear as portas internas em um nó de dispositivo para diferentes portas externas. Por exemplo, talvez seja necessário remapear as portas devido a um problema de firewall. 
+---
+= Opcional: Remapear as portas de rede para o dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Opcionalmente, é possível remapear as portas internas em um nó de dispositivo para diferentes portas externas. Por exemplo, talvez seja necessário remapear as portas devido a um problema de firewall.
+
+.Antes de começar
+* Você acessou anteriormente o Instalador de dispositivos StorageGRID.
+
+
+.Sobre esta tarefa
+Não é possível usar portas remapeadas para pontos de extremidade do balanceador de carga. Se for necessário remover uma porta remapeada, siga as etapas em https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Remova os remapas de portas"^].
+
+.Passos
+. No Instalador de dispositivos StorageGRID, selecione *Configurar rede* > *Remapear portas*.
++
+É apresentada a página Remapear porta.
+
+. Na caixa suspensa *rede*, selecione a rede para a porta que deseja remapear: Grade, Admin ou Cliente.
+. Na caixa suspensa *Protocol* (Protocolo), selecione o protocolo IP: TCP ou UDP.
+. Na caixa suspensa *Remap Direction*, selecione qual direção de tráfego você deseja remapear para esta porta: Inbound, Outbound ou Bi-direcional.
+. Para *original Port*, insira o número da porta que deseja remapear.
+. Para *Mapped-to Port*, insira o número da porta que deseja usar.
+. Selecione *Adicionar regra*.
++
+O novo mapeamento de portas é adicionado à tabela e o remapeamento entra em vigor imediatamente.
+
+. Para remover um mapeamento de portas, selecione o botão de opção da regra que deseja remover e selecione *Remover regra selecionada*.
+

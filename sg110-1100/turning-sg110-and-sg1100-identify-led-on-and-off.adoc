@@ -1,0 +1,43 @@
+---
+permalink: sg110-1100/turning-sg110-and-sg1100-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: sg110, sg1100, locate, find, locating, finding, identify, blue led, blue light 
+summary: O LED de identificação azul na parte frontal do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados. 
+---
+= Ligue e desligue o LED de identificação SG110 ou SG1100
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O LED de identificação azul na parte frontal e traseira do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados.
+
+.Antes de começar
+Você tem o endereço IP BMC do dispositivo que deseja identificar.
+
+.Passos
+. link:../installconfig/accessing-bmc-interface.html["Acesse a interface do Appliance BMC"].
+. Selecione *identificação do servidor*.
++
+É selecionado o estado atual do LED Identify.
+
+. Selecione *ON* ou *OFF* e, em seguida, selecione *Perform Action*.
++
+Quando seleciona *ON*, os LEDs de identificação azuis acendem-se na parte frontal (típico apresentado) e traseira do aparelho.
+
++
+image::../media/sgf6112_front_panel_service_led_on.png[LED de identificação dianteira - ligado]
+
++
+
+NOTE: Se um painel frontal estiver instalado no controlador, pode ser difícil ver o LED de identificação frontal.
+
++
+O LED de identificação traseiro encontra-se no centro do aparelho, por baixo da ranhura Micro-SD.
+
+. Ligue e desligue os LEDs de identificação, conforme necessário.
+
+
+.Informações relacionadas
+link:locating-sg110-and-sg1100-in-data-center.html["Localize o dispositivo no data center"]

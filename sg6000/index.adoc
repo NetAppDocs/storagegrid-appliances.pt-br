@@ -1,0 +1,25 @@
+---
+permalink: sg6000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Poderá ser necessário efetuar procedimentos de manutenção no aparelho SG6000. Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como nó de storage em um sistema StorageGRID. 
+---
+= Mantenha o aparelho SG6000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poderá ser necessário efetuar procedimentos de manutenção no aparelho SG6000.
+
+Os procedimentos específicos para a manutenção do seu dispositivo SG6000 estão nesta seção e assumem que o dispositivo já foi implantado como nó de storage em um sistema StorageGRID.
+
+link:../commonhardware/index.html["Procedimentos comuns"]Consulte para obter os procedimentos de manutenção utilizados por todos os aparelhos.
+
+Consulte link:../installconfig/configuring-hardware.html["Configure o hardware"] para obter informações sobre os procedimentos de manutenção que também são realizados durante a instalação e configuração iniciais do aparelho.
+
+Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à rede antes de desligar o dispositivo ou desligue o dispositivo durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
+
+
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve desligar o aparelho durante uma janela de manutenção programada. Caso contrário, você pode perder temporariamente o acesso a esses objetos durante qualquer procedimento de manutenção que tire um nó de armazenamento fora de serviço. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/ilm/index.html["gerenciamento de objetos com gerenciamento do ciclo de vida das informações"^]o .

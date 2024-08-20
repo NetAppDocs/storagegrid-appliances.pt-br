@@ -1,0 +1,111 @@
+---
+permalink: installconfig/monitoring-appliance-installation.html 
+sidebar: sidebar 
+keywords: appliance, installation, install, progress, monitor, status 
+summary: O Instalador de dispositivos StorageGRID fornece o status até que a instalação esteja concluída. Quando a instalação do software estiver concluída, o dispositivo é reinicializado. 
+---
+= Monitore a instalação do dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Instalador de dispositivos StorageGRID fornece o status até que a instalação esteja concluída. Quando a instalação do software estiver concluída, o dispositivo é reinicializado.
+
+.Passos
+[role="tabbed-block"]
+====
+.Dispositivo de storage
+--
+. Para monitorar o progresso da instalação, clique em *Monitor Installation*.
++
+A página Instalação do monitor mostra o progresso da instalação.
+
++
+image::../media/monitor_installation_configure_storage.gif[Esta imagem é explicada pelo texto circundante.]
+
++
+A barra de status azul indica qual tarefa está atualmente em andamento. As barras de estado verdes indicam tarefas concluídas com êxito.
+
++
+
+NOTE: O instalador garante que as tarefas concluídas em uma instalação anterior não sejam executadas novamente. Se você estiver executando uma instalação novamente, todas as tarefas que não precisam ser executadas novamente serão mostradas com uma barra de status verde e um status de ""pulado"".
+
+. Reveja o progresso das duas primeiras fases de instalação.
++
+*1. Configurar armazenamento*
+
++
+Durante essa etapa, o instalador se coneta ao controlador de armazenamento, limpa qualquer configuração existente, cria RAIDs de acordo com o modo RAID configurado, aloca volumes para o armazenamento de dados de objetos e software StorageGRID e configura as configurações do host.
+
++
+*2. Instale o os*
+
++
+Durante esta fase, o instalador copia a imagem base do sistema operativo para o StorageGRID para o dispositivo.
+
+. Continue monitorando o progresso da instalação até que o estágio *Install StorageGRID* pare e uma mensagem seja exibida no console incorporado, solicitando que você aprove esse nó no nó Admin usando o Gerenciador de Grade. Vá para a próxima etapa.
++
+image::../media/monitor_installation_install_sgws.gif[Esta imagem é explicada pelo texto circundante.]
+
+. Vá para o Gerenciador de Grade do nó Admin principal, aprove o nó de armazenamento pendente e conclua o processo de instalação do StorageGRID.
++
+Quando você clica em *Install* no Gerenciador de Grade, o estágio 3 é concluído e o estágio 4, *Finalize a instalação*, começa. Quando a fase 4 é concluída, o controlador é reinicializado.
+
+
+
+Feche a janela depois que todas as etapas de instalação estiverem concluídas.
+
+--
+.Dispositivo de serviços
+--
+. Para monitorar o progresso da instalação, clique em *Monitor Installation* na barra de menus.
++
+A página Instalação do monitor mostra o progresso da instalação.
+
++
+image::../media/monitor_installation_services_appl.png[Instalação do monitor - aplicação de serviços]
+
++
+A barra de status azul indica qual tarefa está atualmente em andamento. As barras de estado verdes indicam tarefas concluídas com êxito.
+
++
+
+NOTE: O instalador garante que as tarefas concluídas em uma instalação anterior não sejam executadas novamente. Se você estiver executando uma instalação novamente, todas as tarefas que não precisam ser executadas novamente serão mostradas com uma barra de status verde e um status de ""pulado"".
+
+. Reveja o progresso das duas primeiras fases de instalação.
++
+** *1. Configurar armazenamento*
++
+Durante esta etapa, o instalador limpa qualquer configuração existente das unidades no dispositivo e configura as configurações do host.
+
+** *2. Instale o os*
++
+Durante esta fase, o instalador copia a imagem base do sistema operativo para o StorageGRID para o dispositivo.
+
+
+
+. Continue monitorando o progresso da instalação até que um dos seguintes processos ocorra:
++
+** Para todos os nós de dispositivo, exceto o nó de administrador principal, a etapa Instalar StorageGRID é interrompida e uma mensagem é exibida no console incorporado, solicitando que você aprove esse nó no nó de administrador usando o https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Gerenciador de grade"^]. Vá para a próxima etapa.
+** Para a instalação do nó de administração principal do dispositivo, não é necessário aprovar o nó. O aparelho é reinicializado. Você pode pular a próxima etapa.
++
+
+NOTE: Durante a instalação de um nó de administração principal do appliance, aparece uma quinta fase para carregar o instalador do StorageGRID (o exemplo de captura de tela mostra apenas as primeiras quatro fases). Se o carregamento do instalador do StorageGRID (quinta fase) estiver em andamento por mais de 10 minutos, atualize a página da Web manualmente.
+
++
+image::../media/monitor_installation_install_sgws.gif[Esta imagem é explicada pelo texto circundante.]
+
+
+
+. https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Vá para o Gerenciador de Grade"^] Do nó Admin principal, aprove o nó de grade pendente e conclua o processo de instalação do StorageGRID.
++
+Quando você clica em *Install* no Gerenciador de Grade, o estágio 3 é concluído e o estágio 4, *Finalize a instalação*, começa. Quando a fase 4 estiver concluída, o aparelho é reinicializado.
+
+
+
+Feche a janela depois que todas as etapas de instalação estiverem concluídas.
+
+--
+====

@@ -1,0 +1,39 @@
+---
+permalink: installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, install, installing, installation, cabinet, rack, rail, rails 
+summary: Você instala um conjunto de trilhos para o aparelho em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos. 
+---
+= Instalar no gabinete ou rack (SG100 e SG1000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você instala um conjunto de trilhos para o aparelho em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos.
+
+.Antes de começar
+* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você tem as instruções fornecidas com o kit de trilho.
+
+
+.Passos
+. Siga cuidadosamente as instruções para o kit de trilho para instalar os trilhos em seu gabinete ou rack.
+. Nos dois trilhos instalados no gabinete ou rack, estenda as partes móveis dos trilhos até ouvir um clique.
++
+image::../media/rails_extended_out.gif[Trilhos SG100 e SG 1000]
+
+. Introduza o aparelho nas calhas.
+. Deslize o aparelho para dentro do gabinete ou rack.
++
+Quando não conseguir mover o aparelho mais, puxe os trincos azuis de ambos os lados do chassis para fazer deslizar o aparelho completamente para dentro.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG 100 e SG1000 deslizando sobre trilhos]
+
++
+
+NOTE: Não fixe a moldura frontal até que o aparelho seja ligado.
+
+

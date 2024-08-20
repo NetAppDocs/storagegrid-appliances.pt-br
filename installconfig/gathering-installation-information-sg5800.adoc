@@ -1,0 +1,428 @@
+---
+permalink: installconfig/gathering-installation-information-sg5800.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, fixed, Aggregate, 10/25-gbe, 10/25 gbe, SG5800, independent, active-backup, active backup, 1-gbe, 1 gbe 
+summary: Utilizando as tabelas, registe as informações necessárias para cada rede que ligar ao aparelho. Esses valores são necessários para instalar e configurar o hardware. 
+---
+= Reunir informações de rede (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizando as tabelas, registe as informações necessárias para cada rede que ligar ao aparelho. Esses valores são necessários para instalar e configurar o hardware.
+
+
+TIP: Em vez de usar as tabelas, use a pasta de trabalho fornecida com o ConfigBuilder. O uso da pasta de trabalho do ConfigBuilder permite que você carregue as informações do sistema e gere um arquivo JSON para concluir automaticamente algumas etapas de configuração no Instalador do StorageGRID Appliance. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
+
+
+
+== Informações necessárias para se conetar ao Gerenciador de sistemas SANtricity no controlador E4000
+
+Você usará o Gerenciador do sistema SANtricity para conetar o controlador da série E4000 à rede de gerenciamento.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Porta do switch Ethernet, você se conetará à porta de gerenciamento 1
+ a| 
+
+
+
+ a| 
+Endereço MAC da porta de gerenciamento 1 (impresso em uma etiqueta próxima à porta P1)
+ a| 
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a porta de gerenciamento 1, se disponível após a ativação
+
+*Observação:* se a rede que você se conetará ao controlador E4000 incluir um servidor DHCP, o administrador da rede poderá usar o endereço MAC para determinar o endereço IP atribuído pelo servidor DHCP.
+ a| 
+
+
+
+ a| 
+Velocidade e modo duplex
+
+*Observação:* você deve certificar-se de que o switch Ethernet da rede de gerenciamento do Gerenciador de sistema do SANtricity esteja definido como negociação automática.
+ a| 
+Deve ser:
+
+* Negociação automática (padrão)
+
+
+
+
+ a| 
+Formato do endereço IP
+ a| 
+Escolha uma:
+
+* IPv4
+* IPv6
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o dispositivo na rede de gestão
+ a| 
+Para IPv4:
+
+* Endereço IPv4:
+* Máscara de sub-rede:
+* Gateway:
+
+
+Para IPv6:
+
+* Endereço IPv6:
+* Endereço IP roteável:
+* Endereço IP do router do controlador E4000:
+
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG5800 à rede de administração
+
+A rede de administração para StorageGRID é uma rede opcional, usada para administração e manutenção do sistema. O dispositivo se coneta à rede Admin usando a porta de gerenciamento de 1 GbE no controlador SG5800.
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Rede de administração ativada
+ a| 
+Escolha uma:
+
+* Não
+* Sim (predefinição)
+
+
+
+
+ a| 
+Porta do switch para a porta 1
+ a| 
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a porta de gerenciamento 1, se disponível após a ativação
+
+*Observação:* se a rede Admin incluir um servidor DHCP, você poderá determinar o endereço IP atribuído pelo DHCP usando o endereço MAC para procurar o IP atribuído.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede de administração
+
+*Nota:* se a rede não tiver um gateway, especifique o mesmo endereço IPv4 estático para o gateway.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Sub-redes de rede Admin (CIDR)
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar e configurar portas 10/25-GbE no controlador SG5800
+
+As quatro portas 10/25-GbE no controlador SG5800 conetam-se à rede de Grade StorageGRID e à rede do cliente.
+
+
+NOTE: link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (controlador SG5800)"]Consulte .
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Velocidade da ligação
+ a| 
+Escolha uma:
+
+* Auto (predefinição)
+* 10 GbE
+* 25 GbE
+
+
+
+
+ a| 
+Modo de ligação da porta
+ a| 
+Escolha uma:
+
+* Fixo (padrão)
+* Agregado
+
+
+
+
+ a| 
+Porta do switch para a porta 1 (rede do cliente)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 2 (rede de grade)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 3 (rede do cliente)
+ a| 
+
+
+
+ a| 
+Porta do switch para a porta 4 (rede de grade)
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG5800 à rede de Grade
+
+A rede de Grade para StorageGRID é uma rede necessária, usada para todo o tráfego interno de StorageGRID. O dispositivo se coneta à rede de Grade usando as portas 10/25-GbE no controlador SG5800.
+
+
+NOTE: link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (controlador SG5800)"]Consulte .
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Modo de ligação de rede
+ a| 
+Escolha uma:
+
+* Ative-Backup (padrão)
+* Bola de Futsal (802,3ad)
+
+
+
+
+ a| 
+Marcação de VLAN ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Etiqueta VLAN (se a marcação VLAN estiver ativada)
+ a| 
+Introduza um valor entre 0 e 4095:
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a rede de Grade, se disponível após a ativação
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede de grelha
+
+*Nota:* se a rede não tiver um gateway, especifique o mesmo endereço IPv4 estático para o gateway.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Sub-redes de rede de rede (CIDR)
+
+*Nota:* se a rede do cliente não estiver ativada, a rota padrão no controlador usará o gateway especificado aqui.
+ a| 
+
+|===
+
+
+== Informações necessárias para conetar o controlador SG5800 à rede do cliente
+
+A rede de cliente para StorageGRID é uma rede opcional, normalmente usada para fornecer acesso de protocolo de cliente à grade. O dispositivo se coneta à rede do cliente usando as portas 10/25-GbE no controlador SG5800.
+
+
+NOTE: link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (controlador SG5800)"]Consulte .
+
+[cols="2a,1a"]
+|===
+| Informações necessárias | O seu valor 
+
+
+ a| 
+Rede cliente ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Modo de ligação de rede
+ a| 
+Escolha uma:
+
+* Ative-Backup (padrão)
+* Bola de Futsal (802,3ad)
+
+
+
+
+ a| 
+Marcação de VLAN ativada
+ a| 
+Escolha uma:
+
+* Não (predefinição)
+* Sim
+
+
+
+
+ a| 
+Etiqueta VLAN
+
+(Se a marcação VLAN estiver ativada)
+ a| 
+Introduza um valor entre 0 e 4095:
+
+
+
+ a| 
+Endereço IP atribuído pelo DHCP para a rede do cliente, se disponível após a ligação
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+
+
+ a| 
+Endereço IP estático que pretende utilizar para o nó de armazenamento do dispositivo na rede do cliente
+
+*Nota:* se a rede do cliente estiver ativada, a rota padrão no controlador usará o gateway especificado aqui.
+ a| 
+* Endereço IPv4 (CIDR):
+* Gateway:
+
+
+|===
+
+
+== Modos de ligação de porta
+
+Quando link:configuring-network-links.html["configurando links de rede"] para o controlador SG5800, você pode usar a ligação de porta para as portas 10/25-GbE que se conetam à rede de Grade e à rede de cliente opcional. A ligação de portas ajuda a proteger os seus dados fornecendo caminhos redundantes entre as redes StorageGRID e o dispositivo. As portas de rede 10/25-GbE no controlador SG5800 suportam o modo de ligação de porta fixa ou o modo de ligação de porta agregada para as conexões de rede de Grade e rede de Cliente.
+
+
+
+=== Modo de ligação de porta fixa
+
+O modo fixo é a configuração padrão para as portas de rede 10/25-GbE.
+
+image::../media/sg5800_fixed_port.png[Portas usadas para o modo de ligação de porta fixa]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+C
+ a| 
+As portas 1 e 3 são Unidas para a rede do cliente, se esta rede for utilizada.
+
+
+
+ a| 
+G
+ a| 
+As portas 2 e 4 são Unidas para a rede de Grade.
+
+|===
+Ao usar o modo de ligação de porta fixa, você pode usar um dos dois modos de ligação de rede: Ative-Backup ou Link Aggregation Control Protocol (LACP).
+
+* No modo ative-Backup (predefinição), apenas uma porta está ativa de cada vez. Se a porta ativa falhar, sua porta de backup fornecerá automaticamente uma conexão de failover. A porta 4 fornece um caminho de backup para a porta 2 (rede de Grade) e a porta 3 fornece um caminho de backup para a porta 1 (rede de cliente).
+* No modo LACP, cada par de portas forma um canal lógico entre o controlador e a rede, permitindo maior produtividade. Se uma porta falhar, a outra continua a fornecer o canal. A taxa de transferência é reduzida, mas a conetividade não é afetada.
+
+
+
+NOTE: Se você não precisar de conexões redundantes, você pode usar apenas uma porta para cada rede. No entanto, esteja ciente de que um alarme será gerado no Gerenciador de Grade após a instalação do StorageGRID, indicando que um cabo está desconetado. Pode reconhecer este alarme em segurança para o limpar.
+
+
+
+=== Modo de ligação de porta agregada
+
+O modo de ligação de porta agregada aumenta significativamente o em toda a rede StorageGRID e fornece caminhos de failover adicionais.
+
+image::../media/sg5800_aggregate_port.png[Portas usadas para o modo de ligação de porta agregada]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+1
+ a| 
+Todas as portas conetadas são agrupadas em uma única ligação LACP, permitindo que todas as portas sejam usadas para o tráfego de rede de Grade e rede de Cliente.
+
+|===
+Se você planeja usar o modo de ligação de porta agregada:
+
+* Você deve usar o modo de ligação de rede LACP.
+* Você deve especificar uma tag VLAN exclusiva para cada rede. Essa tag VLAN será adicionada a cada pacote de rede para garantir que o tráfego de rede seja roteado para a rede correta.
+* As portas devem ser conetadas a switches que possam suportar VLAN e LACP. Se vários switches estiverem participando da ligação LACP, os switches devem suportar grupos de agregação de links de vários gabinetes (MLAG) ou equivalente.
+* Você entende como configurar os switches para usar VLAN, LACP e MLAG, ou equivalente.
+
+
+Se você não quiser usar todas as quatro portas 10/25 GbE, pode usar uma, duas ou três portas. O uso de mais de uma porta maximiza a chance de que alguma conetividade de rede permaneça disponível se uma das portas 10/25-GbE falhar.
+
+
+NOTE: Se você optar por usar menos de quatro portas, esteja ciente de que um ou mais alarmes serão levantados no Gerenciador de Grade após a instalação do StorageGRID, indicando que os cabos estão desconetados. Você pode reconhecer os alarmes com segurança para limpá-los.
+
+.Informações relacionadas
+* link:cabling-appliance.html["Aparelho de cabo (SG5800)"]
+* link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (controlador SG5800)"]
+* link:configuring-hardware.html["Configurar hardware (SG5800)"]
+

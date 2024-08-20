@@ -1,0 +1,15 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+permalink: index.html 
+summary: O NetApp StorageGRID é um pacote de storage de objetos definido por software compatível com uma grande variedade de casos de uso em ambientes multicloud híbrida, privada e pública. A StorageGRID oferece suporte nativo à API Amazon S3 e oferece inovações líderes do setor, como gerenciamento automatizado do ciclo de vida, para armazenar, proteger e preservar dados não estruturados de maneira econômica por longos períodos. 
+---
+= Documentação do StorageGRID Appliance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

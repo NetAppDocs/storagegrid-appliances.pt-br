@@ -1,0 +1,20 @@
+---
+permalink: sg100-1000/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, maintain, maintaining, hardware, procedures, tasks 
+summary: Poderá ser necessário efetuar procedimentos de manutenção no aparelho. Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como um nó de gateway ou um nó de administrador em um sistema StorageGRID. 
+---
+= Mantenha os aparelhos SG100 e SG1000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Poderá ser necessário efetuar procedimentos de manutenção no aparelho. Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como um nó de gateway ou um nó de administrador em um sistema StorageGRID.
+
+Os procedimentos específicos para a manutenção do seu aparelho SG100 ou SG1000 estão nesta secção.
+
+link:../commonhardware/index.html["Procedimentos comuns"]Consulte para obter os procedimentos de manutenção utilizados por todos os aparelhos.
+
+Consulte link:../installconfig/configuring-hardware.html["Configure o hardware"] para obter informações sobre os procedimentos de manutenção que também são realizados durante a instalação e configuração iniciais do aparelho.

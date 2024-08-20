@@ -1,0 +1,27 @@
+---
+indexpage:
+  tiles:
+  - title: Instale o dispositivo de armazenamento no gabinete ou rack
+    links:
+    - title: SG5700
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg5700.html"
+    - title: SG5800
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg5800.html"
+    - title: SG6000
+      url: "../installconfig/installing-hardware-sg6000.html"
+    - title: SG6100
+      url: "../installconfig/installing-hardware-sg6100.html"
+  - title: Instale o dispositivo de serviços no gabinete ou rack
+    links:
+    - title: SG100 e SG1000
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg100-and-sg1000.html"
+    - title: SG110 e SG1100
+      url: "../installconfig/installing-appliance-in-cabinet-or-rack-sg110-and-sg1100.html"
+  - title: Ligue o cabo e ligue a alimentação
+    links:
+    - title: Ligue os cabos
+      url: "../installconfig/cabling-appliance.html"
+    - title: Ligue e ligue a alimentação
+      url: "../installconfig/connecting-power-cords-and-applying-power.html"
+    - title: Ver indicadores e códigos de estado
+      url: "../installconfig/viewing-status-indicators.html"

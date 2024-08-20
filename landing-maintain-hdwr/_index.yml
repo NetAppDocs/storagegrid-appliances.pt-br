@@ -1,0 +1,37 @@
+---
+indexpage:
+  tiles:
+  - title: Procedimentos realizados frequentemente
+    links:
+    - title: Coloque o aparelho no modo de manutenção
+      url: "../commonhardware/placing-appliance-into-maintenance-mode.html"
+    - title: Altere a definição MTU
+      url: "../commonhardware/changing-mtu-setting.html"
+    - title: Verifique a configuração do DNS
+      url: "../commonhardware/checking-dns-server-configuration.html"
+    - title: Atualize o endereço MAC
+      url: "../commonhardware/locate-mac-address.html"
+    - title: Monitorar a criptografia de nó
+      url: "../commonhardware/monitoring-node-encryption-in-maintenance-mode.html"
+  - title: Clonagem de nó
+    links:
+    - title: Requisitos de clonagem de nós
+      url: "../commonhardware/considerations-and-requirements-for-appliance-node-cloning.html"
+    - title: Nó do dispositivo clone
+      url: "../commonhardware/appliance-node-cloning-procedure.html"
+  - title: Manutenção específica do dispositivo
+    links:
+    - title: SG100 e SG1000
+      url: "../landing-maintain-sg1000-100/index.html"
+    - title: SG110 e SG1100
+      url: "../landing-maintain-sg1100-110/index.html"
+    - title: SG5600
+      url: "../sg5600/index.html"
+    - title: SG5700
+      url: "../landing-maintain-sg5700/index.html"
+    - title: SG5800
+      url: "../landing-maintain-sg5800/index.html"
+    - title: SG6000
+      url: "../landing-maintain-sg6000/index.html"
+    - title: SG6100
+      url: "../landing-maintain-sgf6112/index.html"

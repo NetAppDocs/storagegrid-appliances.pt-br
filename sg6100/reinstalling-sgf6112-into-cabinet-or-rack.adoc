@@ -1,0 +1,84 @@
+---
+permalink: sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6112, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: Retire o SGF6112 de um gabinete ou rack para acessar a tampa superior ou mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída. 
+---
+= Relocate SGF6112 ou SG6100-CN em gabinete ou rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Retire o SGF6112 ou SG6100-CN de um gabinete ou rack para acessar a tampa superior ou mover o aparelho para um local diferente e, em seguida, reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída.
+
+
+
+== Remova SGF6112 ou SG6100-CN do gabinete ou rack
+
+.Antes de começar
+* Você tem etiquetas para identificar cada cabo que está conetado ao SGF6112 ou SG6100-CN.
+* Você tem link:locating-sgf6112-in-data-center.html["Fisicamente localizado o SGF6112 ou SG6100-CN"] onde está realizando manutenção no data center.
+* Você link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Encerrar o SGF6112 ou o SG6100-CN"]tem .
++
+
+CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
+
+
+
+.Passos
+. Identifique e, em seguida, desligue os cabos de alimentação do aparelho.
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Identifique e desconete os cabos de dados do dispositivo e quaisquer transcetores SFP ou SFP28.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Desaperte os dois parafusos integrados no painel frontal do aparelho.
++
+image::../media/sg6060_rack_retaining_screws.png[Parafusos de fixação do rack SGF6112 ou SG6100-CN]
+
+. Deslize o SGF6112 ou SG6100-CN para a frente para fora do rack até que os trilhos de montagem estejam totalmente estendidos e você ouvir os trincos em ambos os lados estalarem.
++
+A tampa superior do aparelho está acessível.
+
+. Opcional: Se estiver a remover totalmente o aparelho do armário ou do rack, siga as instruções para o kit de calhas para remover o aparelho dos trilhos.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+
+
+== Reinstale SGF6112 ou SG6100-CN no gabinete ou rack
+
+.Antes de começar
+Você link:reinstalling-sgf6112-cover.html["volte a instalar a tampa do aparelho"]tem .
+
+.Passos
+. Pressione o trilho azul libera ambos os trilhos do rack ao mesmo tempo e deslize o SGF6112 para dentro do rack até que ele esteja totalmente assentado.
++
+Quando não conseguir mover o controlador mais, puxe as travas azuis em ambos os lados do chassi para deslizar o controlador até o fim.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 deslizando sobre trilhos]
+
++
+
+NOTE: Não conete a moldura frontal até que você ligue o controlador.
+
+. Aperte os parafusos integrados no painel frontal do controlador para fixar o controlador no rack.
++
+image::../media/sg6060_rack_retaining_screws.png[SG6060 parafusos de fixação da cremalheira]
+
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Reconecte os cabos de dados do controlador e quaisquer transcetores SFP ou SFP28"].
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Reconecte os cabos de alimentação do controlador"].
+
+
+.Depois de terminar
+link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Reinicie o aparelho"].

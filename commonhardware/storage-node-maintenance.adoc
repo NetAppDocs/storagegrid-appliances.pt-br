@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: commonhardware/storage-node-maintenance.html 
+keywords: stub, layered 
+summary: Manutenção do nó de storage. 
+---
+= Manutenção do nó de storage
+:allow-uri-read: 
+
+
+[role="lead"]
+Manutenção do nó de storage. Isso faz sentido consolidar?
+
+(Novo tópico de introdução)
+
+
+
+== Atualização do SANtricity os nas controladoras de storage (nós de storage)
+
+(Recolha do tópico do aparelho existente - necessidade de combinar)
+
+
+
+=== Atualizando o SANtricity os nos controladores de storage usando o Gerenciador de Grade
+
+(Recolha do tópico do aparelho existente - necessidade de combinar)
+
+
+
+=== Atualizando o SANtricity os nos controladores de storage usando o modo de manutenção
+
+(Recolha do tópico do aparelho existente - necessidade de combinar)
+
+
+
+== Atualizando o firmware da unidade usando o Gerenciador de sistema do SANtricity
+
+(Recolha do tópico do dispositivo existente - já combinado)

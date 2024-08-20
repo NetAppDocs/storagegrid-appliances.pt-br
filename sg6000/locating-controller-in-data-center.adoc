@@ -1,0 +1,50 @@
+---
+permalink: sg6000/locating-controller-in-data-center.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, locate, find, locating, finding, identify, blue led, blue light 
+summary: Localize o controlador para que você possa executar a manutenção ou atualizações de hardware. 
+---
+= Localize o controlador SG6000-CN no data center
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Localize o controlador para que você possa executar a manutenção ou atualizações de hardware.
+
+.Antes de começar
+* Você determinou qual controlador requer manutenção.
++
+(Opcional) para ajudar a localizar o controlador no seu data centerlink:turning-controller-identify-led-on-and-off.html["Ligue o LED de identificação azul"], .
+
+
+
+.Passos
+. Encontre o controlador que precisa de manutenção no data center.
++
+** Procure um LED de identificação azul aceso na parte frontal ou traseira do controlador.
++
+O LED de identificação frontal está atrás do painel frontal do controlador e pode ser difícil ver se o painel frontal está instalado.
+
++
+image::../media/sg6060_front_panel_service_led_on.jpg[LED de identificação dianteira - ligado]
+
+** Verifique se há um número de peça correspondente nas etiquetas anexadas à frente de cada controlador.
+
+
+. Remova o painel frontal do controlador, se estiver instalado, para acessar os controles e indicadores do painel frontal.
+. Opcional: link:turning-controller-identify-led-on-and-off.html["Desligue o LED de identificação azul"] Se você o usou para localizar o controlador.
++
+** Pressione o interrutor Identify LED no painel frontal do controlador.
+** Use a interface BMC do controlador.
+
+
+
+
+.Informações relacionadas
+link:reinstalling-fibre-channel-hba.html#remove-fibre-channel-hba["Remova o HBA Fibre Channel"]
+
+link:reinstalling-sg6000-cn-controller-into-cabinet-or-rack.html#remove-sg6000-cn-controller-from-cabinet-or-rack["Remova o controlador SG6000-CN do gabinete ou rack"]
+
+link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Desligue o controlador SG6000-CN"]

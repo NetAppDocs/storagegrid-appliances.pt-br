@@ -1,0 +1,82 @@
+---
+permalink: sg5800/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, troubleshoot, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
+summary: Solucionar erros que podem ocorrer ao usar o Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do dispositivo. 
+---
+= Solucionar erros de atualização do firmware da unidade SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solucionar erros que podem ocorrer ao usar o Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do dispositivo.
+
+* *Unidades atribuídas com falha*
++
+** Um motivo para a falha pode ser que a unidade não tenha a assinatura apropriada. Certifique-se de que a unidade afetada é uma unidade autorizada. Entre em Contato com o suporte técnico para obter mais informações.
+** Ao substituir uma unidade, certifique-se de que a unidade de substituição tem uma capacidade igual ou superior à unidade com falha que está a substituir.
+** Você pode substituir a unidade com falha enquanto a matriz de armazenamento está recebendo e/S
+
+
+* *Verifique a matriz de armazenamento*
++
+** Certifique-se de que foi atribuído um endereço IP a cada controlador.
+** Certifique-se de que todos os cabos ligados ao controlador não estão danificados.
+** Certifique-se de que todos os cabos estão bem ligados.
+
+
+* *Unidades hot spare integradas*
++
+Esta condição de erro tem de ser corrigida antes de poder atualizar o firmware.
+
+* *Grupos de volumes incompletos*
++
+Se um ou mais grupos de volumes ou pools de discos estiverem incompletos, você deverá corrigir essa condição de erro antes de atualizar o firmware.
+
+* * Operações exclusivas (exceto Mídia em segundo plano/varredura de paridade) atualmente em execução em qualquer grupo de volume*
++
+Se uma ou mais operações exclusivas estiverem em andamento, as operações devem ser concluídas antes que o firmware possa ser atualizado. Use o System Manager para monitorar o andamento das operações.
+
+* *Volumes em falta*
++
+Você deve corrigir a condição de volume ausente antes que o firmware possa ser atualizado.
+
+* * Qualquer controlador em um estado diferente do ideal*
++
+Um dos controladores de storage array precisa de atenção. Esta condição deve ser corrigida antes que o firmware possa ser atualizado.
+
+* *Informações de partição de armazenamento incompatíveis entre gráficos de objetos do controlador*
++
+Ocorreu um erro ao validar os dados nos controladores. Contacte o suporte técnico para resolver este problema.
+
+* *SPM verificar falha na verificação do controlador de banco de dados*
++
+Ocorreu um erro de banco de dados de mapeamento de partições de armazenamento em um controlador. Contacte o suporte técnico para resolver este problema.
+
+* *Validação da base de dados de configuração (se suportada pela versão do controlador da matriz de armazenamento)*
++
+Ocorreu um erro de banco de dados de configuração em um controlador. Contacte o suporte técnico para resolver este problema.
+
+* *Verificações relacionadas ao mel*
++
+Contacte o suporte técnico para resolver este problema.
+
+* *Mais de 10 eventos informativos ou críticos de mel foram relatados nos últimos 7 dias*
++
+Contacte o suporte técnico para resolver este problema.
+
+* *Mais de 2 Página 2C Eventos críticos de mel foram relatados nos últimos 7 dias*
++
+Contacte o suporte técnico para resolver este problema.
+
+* *Mais de 2 eventos de mel críticos de canal de unidade degradada foram relatados nos últimos 7 dias*
++
+Contacte o suporte técnico para resolver este problema.
+
+* *Mais de 4 entradas críticas de mel nos últimos 7 dias*
++
+Contacte o suporte técnico para resolver este problema.
+
+

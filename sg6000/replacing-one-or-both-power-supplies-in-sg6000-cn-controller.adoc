@@ -1,0 +1,70 @@
+---
+permalink: sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, power supply, remove, removing, removal, install, installing 
+summary: O controlador SG6000-CN tem duas fontes de alimentação para redundância. Se uma das fontes de alimentação falhar, você deve substituí-la o mais rápido possível para garantir que o controlador de computação tenha energia redundante. Ambas as fontes de alimentação que operam no controlador devem ser do mesmo modelo e potência. 
+---
+= Substitua uma ou ambas as fontes de alimentação no controlador SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O controlador SG6000-CN tem duas fontes de alimentação para redundância. Se uma das fontes de alimentação falhar, você deve substituí-la o mais rápido possível para garantir que o controlador de computação tenha energia redundante. Ambas as fontes de alimentação que operam no controlador devem ser do mesmo modelo e potência.
+
+.Antes de começar
+* Você determinou a localização física no data center do controlador com a fonte de alimentação a ser substituída.
++
+link:locating-controller-in-data-center.html["Localizar o controlador em um data center"]
+
+* Se estiver a substituir apenas uma fonte de alimentação:
++
+** Desembalou a unidade de fonte de alimentação de substituição e garantiu que é o mesmo modelo e potência que a unidade de fonte de alimentação que está a substituir.
+** Confirmou que a outra fonte de alimentação está instalada e em funcionamento.
+
+
+* Se você estiver substituindo ambas as fontes de alimentação ao mesmo tempo:
++
+** Você desembalou as unidades de fonte de alimentação de substituição e garantiu que elas sejam o mesmo modelo e potência.
+
+
+
+
+.Sobre esta tarefa
+A figura mostra as duas unidades de fonte de alimentação para o controlador SG6000-CN, que são acessíveis a partir da parte de trás do controlador. Use este procedimento para substituir uma ou ambas as fontes de alimentação. Se estiver a substituir ambas as fontes de alimentação, deve primeiro efetuar um corte de funcionamento controlado do aparelho.
+
+image::../media/sg6000_cn_power_supplies.gif[Parte traseira do SG6000-CN com duas fontes de alimentação]
+
+.Passos
+. Se estiver a substituir apenas uma fonte de alimentação, não necessita de desligar o aparelho. Vá para <<Unplug_the_power_cord,Desconete o cabo de alimentação>>a etapa. Se você estiver substituindo ambas as fontes de alimentação ao mesmo tempo, faça o seguinte antes de desconetar os cabos de alimentação:
++
+.. link:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Desligue o aparelho"].
+
+
+. [[Desconete_o_cabo_de_alimentação, start-2]]Desconete o cabo de alimentação de cada fonte de alimentação a ser substituída.
+. Levante o manípulo do excêntrico na primeira alimentação a ser substituída.
++
+image::../media/sg6000_cn_lift_cam_handle_psu.gif[Levantar a pega do came para remover a PSU SG6000-CN]
+
+. Pressione o trinco azul e puxe a fonte de alimentação para fora.
++
+image::../media/sg6000_cn_remove_power_supply.gif[Remoção de uma fonte de alimentação SG6000-CN]
+
+. Com o trinco azul à direita, deslize a fonte de alimentação de substituição para o chassis.
++
+
+NOTE: Ambas as fontes de alimentação devem ser do mesmo modelo e potência.
+
++
+Certifique-se de que o trinco azul se encontra no lado direito ao deslizar a unidade de substituição para dentro.
+
++
+image::../media/sg6000_cn_insert_power_supply.gif[Fonte de alimentação deslizante em SG6000-CN]
+
+. Empurre o manípulo do came para baixo para fixar a fonte de alimentação de substituição.
+. Se você estiver substituindo ambas as fontes de alimentação, repita as etapas 2 a 6 para substituir a segunda fonte de alimentação.
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Conete os cabos de energia às unidades substituídas e ligue a energia"].
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.

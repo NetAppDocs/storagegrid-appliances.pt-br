@@ -1,0 +1,224 @@
+---
+permalink: installconfig/obtaining-additional-equipment-and-tools.html 
+sidebar: sidebar 
+keywords: equipment to install appliance, tools for installation 
+summary: Antes de instalar um dispositivo StorageGRID, confirme se tem todos os equipamentos e ferramentas adicionais de que necessita. 
+---
+= Obtenha equipamentos e ferramentas adicionais
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar um dispositivo StorageGRID, confirme se tem todos os equipamentos e ferramentas adicionais de que necessita.
+
+
+
+== Todos os aparelhos
+
+Você precisa do seguinte equipamento para instalar e configurar todos os aparelhos.
+
+Chaves de parafusos::
++
+--
+* Chave de fendas Phillips n.o 2
+* Chave de parafusos plana média
+
+
+--
+Pulseira antiestática::
++
+--
+* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Navegador da Web suportado"^]
+* Cliente SSH, como PuTTY
+* Porta de 1 GbE (RJ-45)
+
+
+--
+
+
+
+NOTE: Algumas portas podem não suportar velocidades Ethernet de 10/100Mbps.
+
+Ferramentas opcionais::
++
+--
+* Broca elétrica com ponta Phillips
+* Lanterna
+
+
+--
+
+
+
+
+== Equipamentos e ferramentas específicos para o aparelho
+
+[role="tabbed-block"]
+====
+.SG100 e SG1000
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG100 e SG1000.
+
+Cabos óticos e transcetores::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 4 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SG100:
++
+*** SFP de 10 GbE
+*** 25-GbE SFP28
+
+
+** SG1000:
++
+*** Adaptador QSFP para SFP de 10 GbE (QSA) e SFP
+*** Adaptador QSFP-to-SFP de 25 GbE (QSA) e SFP28
+*** QSFP de 40 GbE
+*** 100-GbE QFSP28
+
+
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
+.SG110 e SG1100
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG110 e SG1100.
+
+Cabos óticos e transcetores::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 4 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SG110:
++
+*** SFP de 10 GbE
+*** 25-GbE SFP28
+
+
+** SG1100:
++
+*** Adaptador QSFP para SFP de 10 GbE (QSA) e SFP
+*** Adaptador QSFP-to-SFP de 25 GbE (QSA) e SFP28
+*** QSFP de 40 GbE
+*** 100-GbE QFSP28
+
+
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
+.SG5700
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG5700.
+
+Cabos óticos e transcetores SFP::
++
+--
+* Cabos óticos para as portas de 10/25 GbE que você planeja usar
+* Opcional: SFP28 transcetores se você quiser usar a velocidade de link de 25 GbE
+
+
+--
+Cabos Ethernet:: Elevador mecanizado para SG5760
+
+
+--
+.SG5800
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG5800.
+
+Cabos e transcetores SFP::
++
+--
+* Cabos para as portas de 10/25 GbE que você planeja usar
+* Opcional: Transcetores SFP28G se você quiser usar a velocidade de link de 25 GbE e ter cabos óticos
+* Opcional: Transcetores SFP se você quiser usar a velocidade de link de 10 GbE e ter cabos óticos
+
+
+--
+Cabos Ethernet:: Elevador mecanizado para SG5860
+
+
+--
+.SG6000
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG6000.
+
+Cabos óticos e transcetores SFP::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 4 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SFP de 10 GbE
+** 25-GbE SFP28
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6)
+Ferramentas opcionais:: Elevador mecanizado para prateleiras de 60 unidades
+
+
+--
+.SG6100
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG6100.
+
+Cabos e transcetores::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 8 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SFP de 10 GbE
+** 25-GbE SFP28
+** 100-GbE QSFP28
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+Ferramentas opcionais:: Elevador mecanizado para prateleiras de 60 unidades
+
+
+--
+====

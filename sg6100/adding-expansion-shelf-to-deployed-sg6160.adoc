@@ -1,0 +1,204 @@
+---
+permalink: sg6100/adding-expansion-shelf-to-deployed-sg6160.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, sg6160, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
+summary: Para aumentar a capacidade de storage, é possível adicionar uma ou duas gavetas de expansão a um SG6160 implantado em sistema StorageGRID. 
+---
+= Adicione o compartimento de expansão ao SG6160 implantado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para aumentar a capacidade de storage, é possível adicionar um ou dois compartimentos de expansão a um SG6160 que já esteja implantado em sistema StorageGRID.
+
+.Antes de começar
+* Você deve ter a senha de provisionamento.
+* Você deve estar executando o StorageGRID 11,8 ou posterior.
+* Você tem o compartimento de expansão e dois cabos SAS para cada compartimento de expansão.
+* Você localizou fisicamente o dispositivo de armazenamento onde está adicionando o compartimento de expansão no data center.
++
+link:locating-sgf6112-in-data-center.html["Localize o controlador no data center"]
+
+
+
+.Sobre esta tarefa
+Para adicionar um compartimento de expansão, execute estas etapas de alto nível:
+
+* Instale o hardware no gabinete ou rack.
+* Coloque o SG6160 no modo de manutenção.
+* Conete o compartimento de expansão ao compartimento de controladora E4000 ou a outro compartimento de expansão.
+* Inicie a expansão usando o Instalador de dispositivos StorageGRID.
+* Aguarde até que os novos volumes estejam configurados.
+
+
+A conclusão do procedimento para um ou dois compartimentos de expansão deve levar uma hora ou menos por nó do dispositivo. Para minimizar o tempo de inatividade, as etapas a seguir instruem você a instalar os novos compartimentos de expansão e unidades antes de colocar o SG6160 no modo de manutenção. As etapas restantes devem levar aproximadamente 20 a 30 minutos por nó do dispositivo.
+
+.Passos
+. Siga as instruções para link:../installconfig/sg6160-installing-60-drive-shelves-into-cabinet-or-rack.html["instalar gavetas de 60 unidades em um gabinete ou rack"].
+. No Gerenciador de Grade, link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o controlador SG6100-CN no modo de manutenção"].
+. Conete cada compartimento de expansão ao compartimento de controladora E4000, conforme mostrado no diagrama.
++
+Este desenho mostra duas prateleiras de expansão. Se tiver apenas uma, ligue a IOM A ao controlador A e ligue a IOM B ao controlador B.
+
++
+image::../media/expansion_shelves_connections_sg6160.png[SG6160 conexões do compartimento de expansão]
+
++
+[cols="1a,2a"]
+|===
+| Legenda | Descrição 
+
+
+ a| 
+1
+ a| 
+SG6100-CN
+
+
+
+ a| 
+2
+ a| 
+Compartimento do controlador de E4000 TB
+
+
+
+ a| 
+3
+ a| 
+Controlador A
+
+
+
+ a| 
+4
+ a| 
+Controlador B
+
+
+
+ a| 
+5
+ a| 
+Compartimento de expansão 1
+
+
+
+ a| 
+6
+ a| 
+IOM A para compartimento de expansão 1
+
+
+
+ a| 
+7
+ a| 
+IOM B para compartimento de expansão 1
+
+
+
+ a| 
+8
+ a| 
+Compartimento de expansão 2
+
+
+
+ a| 
+9
+ a| 
+IOM A para compartimento de expansão 2
+
+
+
+ a| 
+10
+ a| 
+IOM B para compartimento de expansão 2
+
+|===
+. Conecte os cabos de energia e aplique energia às gavetas de expansão.
++
+.. Conete um cabo de alimentação a cada uma das duas unidades de fonte de alimentação em cada compartimento de expansão.
+.. Conete os dois cabos de alimentação em cada compartimento de expansão a duas PDUs diferentes no gabinete ou no rack.
+.. Ligue os dois interruptores de energia para cada compartimento de expansão.
++
+*** Não desligue os interrutores de alimentação durante o processo de ativação.
+*** Os ventiladores nas prateleiras de expansão podem ser muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.
+
+
+
+
+. Monitore a página inicial do instalador do dispositivo StorageGRID.
++
+Em aproximadamente cinco minutos, as prateleiras de expansão terminam de ligar e são detetadas pelo sistema. A página inicial mostra o número de novas prateleiras de expansão detetadas e o botão Iniciar expansão está ativado.
+
++
+A captura de tela mostra exemplos das mensagens que podem aparecer na página inicial, dependendo do número de prateleiras de expansão existentes ou novas, como segue:
+
++
+** O banner circulado na parte superior da página indica o número total de prateleiras de expansão detetadas.
++
+*** O banner indica o número total de compartimentos de expansão, quer as prateleiras estejam configuradas e implantadas ou novas e não configuradas.
+*** Se não forem detetadas prateleiras de expansão, o banner não aparecerá.
+
+
+** A mensagem circulada na parte inferior da página indica que uma expansão está pronta para ser iniciada.
++
+*** A mensagem indica o número de novos compartimentos de expansão detetados pelo StorageGRID. "Anexo" indica que a prateleira foi detetada. "'unconfigured'" indica que o shelf é novo e ainda não está configurado usando o Instalador de dispositivos StorageGRID.
++
+
+NOTE: Os compartimentos de expansão que já estão implantados não estão incluídos nesta mensagem. Eles estão incluídos na contagem no banner no topo da página.
+
+*** A mensagem não aparecerá se novas prateleiras de expansão não forem detetadas.
++
+image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Instalação do compartimento de expansão]
+
+
+
+
+
+. Conforme necessário, resolva quaisquer problemas descritos nas mensagens da página inicial.
++
+Por exemplo, use o Gerenciador de sistema do SANtricity para resolver quaisquer problemas de hardware de armazenamento.
+
+. Verifique se o número de prateleiras de expansão exibidas na página inicial corresponde ao número de prateleiras de expansão que você está adicionando.
++
+
+NOTE: Se os novos compartimentos de expansão não tiverem sido detetados, verifique se eles estão cabeados e ligados corretamente.
+
+. [[start_expansion]]clique em *Start Expansion* para configurar as prateleiras de expansão e disponibilizá-las para armazenamento de objetos.
+. Monitorar o andamento da configuração do compartimento de expansão.
++
+As barras de progresso aparecem na página da Web, tal como fazem durante a instalação inicial.
+
++
+image::../media/monitor_expansion_for_new_appliance_shelf.png[Monitorar a configuração do compartimento de expansão]
+
++
+Quando a configuração estiver concluída, o aparelho reinicializa automaticamente para sair do modo de manutenção e voltar a ligar a grelha. Este processo pode demorar até 20 minutos.
+
++
+
+NOTE: Para tentar novamente a configuração do compartimento de expansão se falhar, vá para o Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no modo de manutenção*. Depois que o nó for reiniciado, tente novamente o <<start_expansion,configuração do compartimento de expansão>>.
+
++
+Quando a reinicialização estiver concluída, a guia *Tasks* parece com a seguinte captura de tela:
+
++
+image::../media/appliance_installer_reboot_complete.png[Reinicialização concluída]
+
+. Verifique o status do nó de storage do dispositivo e dos novos compartimentos de expansão.
++
+.. No Gerenciador de Grade, selecione *NÓS* e verifique se o nó de armazenamento do dispositivo tem um ícone de marca de seleção verde.
++
+O ícone de marca de seleção verde significa que não há alertas ativos e o nó está conetado à grade. Para obter uma descrição dos ícones de nó, https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorar os estados de conexão do nó"^]consulte .
+
+.. Selecione a guia *armazenamento* e confirme se 16 novos armazenamentos de objetos são exibidos na tabela armazenamento de objetos para cada compartimento de expansão adicionado.
+.. Verifique se cada novo compartimento de expansão tem um status de compartimento nominal e um status de configuração de configurado.
+
+
+

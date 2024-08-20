@@ -1,0 +1,274 @@
+---
+permalink: sg6100/replace-dimms-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Substitua DIMMs no compartimento do controlador de armazenamento (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode substituir um DIMM no E4000 se houver uma incompatibilidade de memória ou se você tiver um DIMM com falha.
+
+.Sobre esta tarefa
+Para substituir um DIMM, você deve verificar o tamanho do cache do controlador, colocar o controlador off-line, remover o controlador, remover os DIMMs e instalar os novos DIMMs no controlador. Em seguida, você pode colocar seu controlador novamente on-line e verificar se o storage array está funcionando corretamente.
+
+.Antes de começar
+* Certifique-se de que tem o seguinte:
++
+** Um DIMM de substituição.
+** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
+** Uma área de trabalho plana e estática livre.
+** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
+** Acesso ao Gerenciador do sistema SANtricity:
++
+*** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+*** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
+
+
+
+
+
+
+
+
+== Etapa 1: Determine se você precisa substituir um DIMM
+
+Verifique o tamanho do cache do controlador antes de substituir os DIMMS.
+
+.Passos
+. Acesse o perfil Storage Array para o controlador. No Gerenciador de sistema do SANtricity, vá para *suporte* *Centro de suporte*. Na página recursos de suporte, selecione *Perfil da matriz de armazenamento*.
+. Role para baixo ou use o campo pesquisar para localizar as informações *Data Cache Module*.
+. Se um dos itens a seguir estiver presente, observe a localização do DIMM e continue com os procedimentos restantes nesta seção para substituir os DIMMs no controlador:
++
+.. Um DIMM com falha ou um DIMM informando *módulo de cache de dados* como não ótimo.
+.. Um DIMM com uma capacidade de *Data Cache Module* incompatível.
+
+
+
+
+
+
+== Passo 2: Coloque o controlador offline
+
+Coloque o controlador offline para que possa remover e substituir os DIMMs com segurança.
+
+.Passos
+. No Gerenciador de sistema do SANtricity, revise os detalhes no Guru de recuperação para confirmar que há um problema com uma memória incorreta e garantir que nenhum outro item deve ser resolvido primeiro.
+. Na área Detalhes do Recovery Guru, determine qual DIMM substituir.
+. Faça backup do banco de dados de configuração do storage array usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... Selecione *suporte
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData- <arrayName>-<dateTime>.7z*.
+
+
+
+
+
+. Se o controlador ainda não estiver offline, coloque-o offline agora usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *hardware*.
+.. Se o gráfico mostrar as unidades, selecione *Mostrar parte traseira da prateleira* para mostrar os controladores.
+.. Selecione o controlador que pretende colocar offline.
+.. No menu de contexto, selecione *colocar offline* e confirme que deseja executar a operação.
++
+
+NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o controlador que você está tentando ficar offline, uma mensagem Gerenciador de sistema do SANtricity indisponível será exibida. Selecione *conetar-se a uma conexão de rede alternativa* para acessar automaticamente o Gerenciador de sistema do SANtricity usando o outro controlador.
+
+
+
+. Aguarde até que o Gerenciador de sistema do SANtricity atualize o status do controlador para offline.
++
+
+NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atualizado.
+
+. Selecione *Reverifique* no Recovery Guru e confirme que o campo OK para remover na área Detalhes exibe Sim, indicando que é seguro remover este componente.
+
+
+
+
+== Etapa 3: Remova o recipiente do controlador
+
+Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Solte o gancho e a alça de loop que prendem os cabos ao dispositivo de gerenciamento de cabos e, em seguida, desconete os cabos do sistema e os SFPs (se necessário) do recipiente do controlador, mantendo o controle de onde os cabos estavam conetados.
++
+Deixe os cabos no dispositivo de gerenciamento de cabos para que, ao reinstalar o dispositivo de gerenciamento de cabos, os cabos sejam organizados.
+
+. Remova e reserve os dispositivos de gerenciamento de cabos dos lados esquerdo e direito do recipiente do controlador.
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Vire o recipiente do controlador e coloque-o numa superfície plana e estável.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
++
+image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tampa do recipiente do controlador.]
+
+
+
+
+
+== Etapa 4: Substitua os DIMMs
+
+Localize o DIMM dentro do controlador, remova-o e substitua-o.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Você deve executar um desligamento normal do sistema antes de substituir os componentes do sistema para evitar a perda de dados não gravados na memória não volátil (NVMEM). O LED está localizado na parte de trás do recipiente do controlador.
+. Se o LED NVMEM não estiver piscando, não há conteúdo no NVMEM; você pode pular as etapas a seguir e prosseguir para a próxima tarefa neste procedimento.
+. Se o LED NVMEM estiver intermitente, existem dados no NVMEM e tem de desligar a bateria para limpar a memória:
++
+.. Remova a bateria do recipiente do controlador pressionando o botão azul na lateral do recipiente do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do recipiente do controlador.
+.. Localize o cabo da bateria, prima o grampo na ficha da bateria para soltar o grampo de bloqueio da tomada e, em seguida, desligue o cabo da bateria da tomada.
+.. Confirme se o LED NVMEM já não está aceso.
+.. Volte a ligar o conetor da bateria e volte a verificar o LED na parte posterior do controlador.
+.. Desligue o cabo da bateria.
+
+
+. Localize os DIMMs no recipiente do controlador.
+. Observe a orientação e a localização do DIMM no soquete para que você possa inserir o DIMM de substituição na orientação adequada.
+. Ejete o DIMM de seu slot, empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM e, em seguida, deslize o DIMM para fora do slot.
++
+O DIMM girará um pouco para cima.
+
+. Gire o DIMM o máximo possível e deslize o DIMM para fora do soquete.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Remova DIMMS.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilhas do ejetor DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| DIMMS 
+|===
+. Remova o DIMM de substituição do saco de transporte antiestático, segure o DIMM pelos cantos e alinhe-o com o slot.
++
+O entalhe entre os pinos no DIMM deve estar alinhado com a guia no soquete.
+
+. Insira o DIMM diretamente no slot.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
+. Volte a ligar a bateria:
++
+.. Ligue a bateria.
+.. Certifique-se de que a ficha se fixa à tomada de alimentação da bateria na placa-mãe.
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
+.. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+
+
+. Volte a instalar a tampa do recipiente do controlador.
+
+
+
+
+== Etapa 5: Reinstale o recipiente do controlador
+
+Volte a instalar o recipiente do controlador no chassis.
+
+.Passos
+. Se você ainda não está aterrado, aterre-se adequadamente.
+. Se ainda não o tiver feito, substitua a tampa no recipiente do controlador.
+. Vire o recipiente do controlador ao contrário e alinhe a extremidade com a abertura no chassis.
+. Empurre cuidadosamente o recipiente do controlador até meio para o sistema. Alinhe a extremidade do recipiente do controlador com a abertura no chassis e, em seguida, empurre cuidadosamente o recipiente do controlador até meio do sistema.
++
+
+NOTE: Não introduza completamente o recipiente do controlador no chassis até receber instruções para o fazer.
+
+. Recable o sistema, conforme necessário.
+. Conclua a reinstalação do recipiente do controlador:
++
+.. Com a alavanca do came na posição aberta, empurre firmemente o recipiente do controlador até que ele atenda ao plano médio e esteja totalmente assentado e feche a alça do came para a posição travada.
++
+
+NOTE: Não utilize força excessiva ao deslizar o recipiente do controlador para o chassis para evitar danificar os conetores.
+
++
+O controlador começa a arrancar assim que estiver sentado no chassis.
+
+.. Se ainda não o tiver feito, reinstale o dispositivo de gerenciamento de cabos.
+.. Prenda os cabos ao dispositivo de gerenciamento de cabos com o gancho e a alça de loop.
+
+
+. Reinicie o recipiente do controlador.
+
+
+
+
+== Etapa 6: Substituição completa de DIMMs
+
+Coloque o controlador on-line, colete dados de suporte e retome as operações.
+
+.Passos
+. Coloque o controlador online.
++
+.. No System Manager, navegue até a página hardware.
+.. Selecione *Controladores e componentes*.
+.. Selecione o controlador com os DIMMs substituídos.
+.. Selecione *Place on-line* na lista suspensa.
+
+
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+Quando a comunicação com o outro controlador é restabelecida:
+
++
+** O LED âmbar de atenção permanece aceso.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador estiver novamente on-line, confirme se seu status é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador. NOTA: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Clique em *hardware* para garantir que a versão mais recente do SANtricity os esteja instalada.
++
+Conforme necessário, instale a versão mais recente.
+
+. Verifique se todos os volumes foram devolvidos ao proprietário preferido.
++
+.. Selecione *armazenamento de volumes*. Na página *todos os volumes*, verifique se os volumes são distribuídos aos seus proprietários preferidos. Selecione *mais
+.. Se todos os volumes forem propriedade do proprietário preferido, avance para o passo 6.
+.. Se nenhum dos volumes for retornado, você deverá retornar manualmente os volumes. Vá para *mais
+.. Se não houver Recovery Guru presente ou se seguir as etapas Recovery Guru, os volumes ainda não serão retornados aos proprietários preferenciais, entre em Contato com o suporte.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+

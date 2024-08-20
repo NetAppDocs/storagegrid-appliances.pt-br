@@ -1,0 +1,133 @@
+---
+permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
+sidebar: sidebar 
+keywords: kms, key management server, monitor, monitoring, status, encryption 
+summary: 'Se você ativou a criptografia de nó para o dispositivo durante a instalação, você pode monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).' 
+---
+= Monitore a criptografia do nó no modo de manutenção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você ativou a criptografia de nó para o dispositivo durante a instalação, poderá monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).
+
+ https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurar servidores de gerenciamento de chaves"^]Consulte para obter informações sobre a implementação do KMS para dispositivos StorageGRID.
+
+.Antes de começar
+* Você ativou a criptografia de nó para o dispositivo durante a instalação. Não é possível ativar a criptografia de nó após a instalação do dispositivo.
+* Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
+
+
+.Passos
+. No Instalador de dispositivos StorageGRID, selecione *Configurar hardware* > *criptografia de nó*.
++
+image::../media/fde_monitor_in_maint_mode.png[KMS limpar configuração]
+
++
+A página criptografia do nó inclui três seções:
+
++
+** O estado de encriptação mostra se a encriptação do nó está ativada ou desativada para o dispositivo.
+** Detalhes do servidor de gerenciamento de chaves mostra informações sobre o KMS sendo usado para criptografar o dispositivo. Você pode expandir as seções de certificado de servidor e cliente para exibir detalhes e status do certificado.
++
+*** Para resolver problemas com os próprios certificados, como a renovação de certificados expirados, consulte o https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Instruções para configurar o KMS"^].
+*** Se houver problemas inesperados ao se conetar aos hosts do KMS, verifique se o link:../commonhardware/checking-dns-server-configuration.html["Os servidores DNS estão corretos"] e o link:../installconfig/configuring-network-links.html["a rede do dispositivo está configurada corretamente"].
+*** Se você não conseguir resolver os problemas do certificado, entre em Contato com o suporte técnico.
+
+
+** Limpar chave KMS desativa a criptografia de nó para o dispositivo, remove a associação entre o dispositivo e o servidor de gerenciamento de chaves que foi configurado para o site StorageGRID e exclui todos os dados do dispositivo. <<Limpar a configuração do servidor de gerenciamento de chaves,Limpe a tecla KMS>>Deve antes de poder instalar o aparelho noutro sistema StorageGRID.
++
+
+CAUTION: Limpar a configuração do KMS exclui os dados do dispositivo, tornando-os permanentemente inacessíveis. Estes dados não são recuperáveis.
+
+
+
+. Quando terminar de verificar o estado da encriptação do nó, reinicie o nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *controlador de reinicialização* e, em seguida, selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID* para reiniciar o controlador com o nó rejuntando a grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes de voltar a unir a grade.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+
+
+
+
+== Limpar a configuração do servidor de gerenciamento de chaves
+
+Limpar a configuração do servidor de gerenciamento de chaves (KMS) desativa a criptografia de nó no seu dispositivo. Depois de limpar a configuração do KMS, os dados do seu aparelho são excluídos permanentemente e não são mais acessíveis. Estes dados não são recuperáveis.
+
+.Antes de começar
+Se precisar preservar dados no dispositivo, execute um procedimento de desativação de nós ou clone o nó antes de limpar a configuração do KMS.
+
+
+CAUTION: Quando o KMS é eliminado, os dados no aparelho serão eliminados permanentemente e deixarão de estar acessíveis. Estes dados não são recuperáveis.
+
+https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Desativar o nó"^] Para mover quaisquer dados que ele contenha para outros nós no StorageGRID.
+
+.Sobre esta tarefa
+A limpeza da configuração do KMS do appliance desativa a criptografia do nó, removendo a associação entre o nó do appliance e a configuração do KMS para o site do StorageGRID. Os dados no dispositivo são então excluídos e o dispositivo é deixado em um estado de pré-instalação. Este processo não pode ser revertido.
+
+Você deve limpar a configuração do KMS:
+
+* Antes de instalar o aparelho em outro sistema StorageGRID, isso não usa um KMS ou que usa um KMS diferente.
++
+
+CAUTION: Não limpe a configuração do KMS se você planeja reinstalar um nó de appliance em um sistema StorageGRID que usa a mesma chave KMS.
+
+* Antes de poder recuperar e reinstalar um nó onde a configuração do KMS foi perdida e a chave KMS não é recuperável.
+* Antes de devolver qualquer aparelho que estava anteriormente em uso em seu site.
+* Após a desativação de um dispositivo que tinha a criptografia de nó ativada.
+
+
+
+CAUTION: Desative o dispositivo antes de limpar o KMS para mover seus dados para outros nós em seu sistema StorageGRID. Limpar o KMS antes de desativar o aparelho resultará em perda de dados e pode tornar o aparelho inoperável.
+
+.Passos
+. Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
+
++
+A página inicial do instalador do dispositivo StorageGRID é exibida.
+
+. Selecione *Configure hardware* > *Node Encryption*.
++
+
+CAUTION: Se a configuração do KMS for limpa, os dados no dispositivo serão excluídos permanentemente. Estes dados não são recuperáveis.
+
+. Na parte inferior da janela, selecione *Limpar chave KMS e Excluir dados*.
+. Se tiver certeza de que deseja limpar a configuração do KMS, digite `*clear*` a caixa de diálogo de aviso e selecione *Limpar chave KMS e Excluir dados*.
++
+A chave de criptografia KMS e todos os dados são excluídos do nó e o dispositivo é reinicializado. Isso pode levar até 20 minutos.
+
+. Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo. E
+`*https://_Controller_IP_:8443*`
++
+`_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
+
++
+A página inicial do instalador do dispositivo StorageGRID é exibida.
+
+. Selecione *Configure hardware* > *Node Encryption*.
+. Verifique se a criptografia do nó está desativada e se as informações de chave e certificado em *Key Management Server Details* e *Clear KMS Key e Delete Data* control são removidas da janela.
++
+A criptografia de nó não pode ser reativada no dispositivo até que seja reinstalada em uma grade.
+
+
+
+.Depois de terminar
+Depois de o aparelho reiniciar e verificar se o KMS foi limpo e se o aparelho está num estado de pré-instalação, pode remover fisicamente o aparelho do sistema StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instruções para preparar o aparelho para reinstalação"^] .

@@ -1,0 +1,29 @@
+---
+indexpage:
+  tiles:
+  - title: Procedimentos realizados frequentemente
+    links:
+    - title: Alterar a configuração do link
+      url: "../sg5800/changing-link-configuration-of-sg5800-controller.html"
+    - title: Atualize o SANtricity
+      url: "../sg5800/upgrading-santricity-os-on-storage-controller.html"
+    - title: Atualize o firmware da unidade
+      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager.html"
+  - title: Procedimentos de hardware
+    links:
+    - title: Substitua o controlador de computação SG5800
+      url: "../sg5800/replace-controller-sg5800.html"
+    - title: Substitua o controlador de storage E4000
+      url: "../sg5800/replace-controller-e4000-simplex.html"
+    - title: Substitua o recipiente da ventoinha
+      url: "../sg5800/replace-fan-canister.html"
+    - title: Substitua o recipiente de alimentação
+      url: "../sg5800/replace-power-canister.html"
+    - title: Substitua as pilhas
+      url: "../sg5800/replace-battery-e4000.html"
+    - title: Substitua os DIMMs
+      url: "../sg5800/replace-dimms-e4000.html"
+    - title: Substitua as unidades
+      url: "../sg5800/replace-drive-e4000.html"
+    - title: Fonte de alimentação
+      url: "../sg5800/replace-power-supply.html"

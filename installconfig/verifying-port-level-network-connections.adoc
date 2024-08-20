@@ -1,0 +1,73 @@
+---
+permalink: installconfig/verifying-port-level-network-connections.html 
+sidebar: sidebar 
+keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, ports, port, port-level, port level, test, testing, udp, Client Network, Admin Network 
+summary: Para garantir que o acesso entre o Instalador de dispositivos StorageGRID e outros nós não esteja obstruído por firewalls, confirme se o Instalador de dispositivos StorageGRID pode se conetar a uma porta TCP específica ou conjunto de portas no endereço IP ou intervalo de endereços especificado. 
+---
+= Verifique as conexões de rede no nível da porta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantir que o acesso entre o Instalador de dispositivos StorageGRID e outros nós não esteja obstruído por firewalls, confirme se o Instalador de dispositivos StorageGRID pode se conetar a uma porta TCP específica ou conjunto de portas no endereço IP ou intervalo de endereços especificado.
+
+.Sobre esta tarefa
+Usando a lista de portas fornecida no Instalador de dispositivos StorageGRID, você pode testar a conetividade entre o dispositivo e os outros nós da rede de Grade.
+
+Além disso, você pode testar a conetividade nas redes Admin e Client e nas portas UDP, como as usadas para servidores NFS ou DNS externos. Para obter uma lista dessas portas, consulte o https://docs.netapp.com/us-en/storagegrid-118/network/network-port-reference.html["referência da porta de rede"^].
+
+
+NOTE: As portas de rede de grade listadas na tabela de conetividade de portas são válidas apenas para o StorageGRID versão 11,7 ou posterior. Para verificar quais portas estão corretas para cada tipo de nó, você deve sempre consultar as diretrizes de rede para sua versão do StorageGRID.
+
+.Passos
+. No Instalador de dispositivos StorageGRID, clique em *Configurar rede* > *Teste de conetividade de porta (nmap)*.
++
+A página Teste de conetividade de porta é exibida.
+
++
+A tabela de conetividade de porta lista os tipos de nós que exigem conetividade TCP na rede de Grade. Para cada tipo de nó, a tabela lista as portas de rede de Grade que devem ser acessíveis ao seu dispositivo.
+
++
+Você pode testar a conetividade entre as portas do dispositivo listadas na tabela e os outros nós da rede de Grade.
+
+. Na lista suspensa *Network*, selecione a rede que deseja testar: *Grid*, *Admin* ou *Client*.
+. Especifique um intervalo de endereços IPv4 para os hosts nessa rede.
++
+Por exemplo, você pode querer pesquisar o gateway na rede ou no nó de administração principal.
+
++
+Especifique um intervalo usando um hífen, como mostrado no exemplo.
+
+. Insira um número de porta TCP, uma lista de portas separadas por vírgulas ou um intervalo de portas.
++
+image::../media/port_connectivity_test_start.png[Teste de conetividade da porta]
+
+. Clique em *testar conetividade*.
++
+** Se as conexões de rede no nível da porta selecionadas forem válidas, a mensagem ""Teste de conetividade de porta aprovado"" aparecerá em um banner verde. A saída do comando nmap está listada abaixo do banner.
++
+image::../media/port_connectivity_test_passed.png[Teste de conetividade da porta aprovado]
+
+** Se uma conexão de rede no nível da porta for feita ao host remoto, mas o host não estiver ouvindo em uma ou mais das portas selecionadas, a mensagem ""Falha no teste de conetividade da porta"" aparecerá em um banner amarelo. A saída do comando nmap está listada abaixo do banner.
++
+Qualquer porta remota que o host não esteja ouvindo tem um estado de "fechado". Por exemplo, você pode ver esse banner amarelo quando o nó ao qual você está tentando se conetar estiver em um estado pré-instalado e o serviço StorageGRID NMS ainda não estiver sendo executado nesse nó.
+
++
+image::../media/nmap_test_yellow_banner.png[Banner amarelo de teste NMAP]
+
+** Se uma conexão de rede no nível de porta não puder ser feita para uma ou mais portas selecionadas, a mensagem "Falha no teste de conetividade de porta" aparecerá em um banner vermelho. A saída do comando nmap está listada abaixo do banner.
++
+O banner vermelho indica que uma tentativa de conexão TCP para uma porta no host remoto foi feita, mas nada foi retornado ao remetente. Quando nenhuma resposta é retornada, a porta tem um estado de "filtrada" e é provavelmente bloqueada por um firewall.
+
++
+
+NOTE: Os portos com "fechado" também são listados.
+
++
+image::../media/nmap_test_red_banner.png[Banner vermelho do teste do NMAP]
+
+
+
+

@@ -1,0 +1,63 @@
+---
+permalink: installconfig/sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
+summary: Você instala um conjunto de trilhos para o compartimento do controlador E2860 em seu gabinete ou rack e, em seguida, desliza a prateleira do controlador sobre os trilhos. Se você estiver instalando compartimentos de expansão de 60 unidades, o mesmo procedimento será aplicado. 
+---
+= Instalar gavetas de 60 unidades (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você instala um conjunto de trilhos para o compartimento do controlador E2860 em seu gabinete ou rack e, em seguida, desliza a prateleira do controlador sobre os trilhos. Se você estiver instalando compartimentos de expansão de 60 unidades, o mesmo procedimento será aplicado.
+
+.Antes de começar
+* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você tem as instruções fornecidas com o kit de trilho.
+
+
+
+CAUTION: Cada compartimento de 60 unidades pesa aproximadamente 132 lb (60 kg) sem unidades instaladas. Quatro pessoas ou um elevador mecanizado são necessários para mover a prateleira com segurança.
+
+
+CAUTION: Para evitar danificar o hardware, nunca mova a gaveta se as unidades estiverem instaladas. É necessário remover todas as unidades antes de mover a gaveta.
+
+
+CAUTION: Ao instalar o compartimento do controlador E2860 ou as prateleiras de expansão opcionais, instale o hardware da parte inferior para a parte superior do rack ou gabinete para evitar que o equipamento tombe. Para garantir que o equipamento mais pesado esteja na parte inferior do gabinete ou rack, instale o controlador SG6000-CN acima da prateleira do controlador E2860 e das prateleiras de expansão.
+
+
+NOTE: Antes de se comprometer com a instalação, verifique se os 0,5m cabos óticos fornecidos com o aparelho, ou os cabos que você fornecer, são longos o suficiente para o layout planejado.
+
+.Passos
+. Siga cuidadosamente as instruções para o kit de trilho para instalar os trilhos em seu gabinete ou rack.
++
+Para armários de orifícios quadrados, instale primeiro as porcas de gaiola fornecidas para fixar a parte dianteira e traseira da prateleira com parafusos.
+
+. Retire a caixa de embalagem exterior do aparelho. Em seguida, dobre as abas na caixa interna.
+. Se estiver a levantar o aparelho à mão, fixe as quatro pegas nas laterais do chassis.
++
+Empurre cada alça para cima até que ela se encaixe no lugar.
+
++
+image::../media/lift_handles.gif[Pegas de elevação]
+
+. Coloque a parte de trás da prateleira (a extremidade com os conetores) nos trilhos.
+. Apoiando a prateleira de baixo, deslize-a para dentro do gabinete. Se você estiver usando as alças, use as travas para soltar uma alça de cada vez enquanto você desliza a prateleira para dentro.
++
+Para remover as pegas, puxe para trás o trinco de desbloqueio, empurre-o para baixo e, em seguida, puxe-o para fora da prateleira.
+
+. Fixe a prateleira na parte frontal do gabinete.
++
+Insira os parafusos no primeiro e terceiro orifícios a partir da parte superior da prateleira em ambos os lados.
+
+. Fixe a prateleira na parte de trás do armário.
++
+Coloque dois suportes traseiros em cada lado da secção traseira superior da prateleira. Insira os parafusos no primeiro e terceiro orifícios de cada suporte.
+
++
+image::../media/mount_hardware.gif[Montar o hardware]
+
+. Repita essas etapas para qualquer gaveta de expansão.
+

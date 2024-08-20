@@ -1,0 +1,129 @@
+---
+permalink: sg6000/replacing-sg6000-cn-controller.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, sg6000-cn, controller, remove, removing, removal, install, installing, installation 
+summary: Talvez seja necessário substituir o controlador SG6000-CN se ele não estiver funcionando de forma ideal ou se ele tiver falhado. 
+---
+= Substitua o controlador SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir o controlador SG6000-CN se ele não estiver funcionando de forma ideal ou se ele tiver falhado.
+
+.Antes de começar
+* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo.
+* Você tem etiquetas para identificar cada cabo conetado ao controlador.
+* Você localizou fisicamente o controlador para substituir no data center.
++
+link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+
+
+
+.Sobre esta tarefa
+O nó de armazenamento do aparelho não estará acessível quando substituir o controlador SG6000-CN. Se o controlador SG6000-CN estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.
+
+
+NOTE: Se você estiver substituindo o controlador antes de instalar o software StorageGRID, talvez você não consiga acessar o instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do controlador original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.
+
+.Passos
+. Apresente as configurações atuais do aparelho e registe-as.
++
+.. Inicie sessão no aparelho a substituir:
++
+... Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Enter: `*run-host-command ipmitool lan print*` Para exibir as configurações atuais do BMC para o dispositivo.
+
+
+. Se o controlador SG6000-CN estiver funcionando o suficiente para permitir um desligamento controladolink:power-sg6000-cn-controller-off-on.html#shut-down-sg6000-cn-controller["Desligue o controlador SG6000-CN"], .
+. Se qualquer uma das interfaces de rede neste dispositivo StorageGRID estiver configurada para DHCP, talvez seja necessário atualizar as atribuições permanentes de concessão DHCP nos servidores DHCP para fazer referência aos endereços MAC do dispositivo de substituição. A atualização garante que o dispositivo recebe os endereços IP esperados. link:../commonhardware/locate-mac-address.html["Atualizar referências de endereço MAC"]Consulte .
+. Retirar e substituir o controlador SG6000-CN:
++
+.. Identifique os cabos e, em seguida, desconete os cabos e quaisquer transcetores SFP ou SFP28.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+.. Remova o controlador com falha do gabinete ou rack.
+.. Instale o controlador de substituição no gabinete ou rack.
+.. Substitua os cabos e quaisquer transcetores SFP ou SFP28.
+.. Ligue o controlador e link:../installconfig/viewing-status-indicators.html["Monitorize os LEDs do controlador"] e link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["códigos de arranque"].
++
+Quando o controlador é iniciado, ele instala automaticamente atualizações pendentes para os componentes do controlador e do dispositivo. A instalação dessas atualizações pode levar uma hora ou mais para ser concluída, e o controlador pode reiniciar várias vezes.
+
++
+
+CAUTION: Não reinicie manualmente o aparelho, a menos que você tenha certeza de que ele está _not_ no meio de uma atualização de firmware.
+
++
+Pode ligar a link:../installconfig/troubleshooting-hardware-installation.html["monitorar"] ou link:../installconfig/accessing-storagegrid-appliance-installer.html["serviço de laptop"]ao controlador SG6000-CN para monitorizar o progresso da instalação da atualização.
+
++
+
+NOTE: Uma conexão de serviço-laptop pode não estar disponível em algumas etapas do processo de instalação.
+
+
+
+. Se o dispositivo em que você substituiu o controlador usou um servidor de gerenciamento de chaves (KMS) para criptografar dados, poderá ser necessária uma configuração adicional antes que o nó possa ingressar na grade. Se o nó não ingressar automaticamente na grade, verifique se essas configurações foram transferidas para o novo controlador e configure manualmente quaisquer configurações que não tenham a configuração esperada:
++
+** link:../installconfig/configuring-network-links.html["Configurar ligações de rede"]
+** link:../installconfig/setting-ip-configuration.html["Configurar endereços IP do StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
+
+
+. Inicie sessão no aparelho com o controlador substituído:
++
+.. Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+.. Digite o seguinte comando para mudar para root: `su -`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+
+
+. Restaure a conetividade de rede BMC para o dispositivo. Existem duas opções:
++
+** Use IP estático, máscara de rede e gateway
+** Use DHCP para obter um IP, máscara de rede e gateway
++
+... Para restaurar a configuração do BMC para usar um IP estático, máscara de rede e gateway, digite os seguintes comandos:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Para restaurar a configuração do BMC para usar DHCP para obter um IP, máscara de rede e gateway, digite o seguinte comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Depois de restaurar a conetividade de rede BMC, conete-se à interface BMC para auditar e restaurar qualquer configuração personalizada adicional do BMC que você possa ter aplicado. Por exemplo, você deve confirmar as configurações para destinos de intercetação SNMP e notificações por e-mail. link:../installconfig/configuring-bmc-interface.html["Configurar a interface BMC"]Consulte .
+. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+
+.Informações relacionadas
+link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Instale o SG6000-CN no gabinete ou rack"]
+
+link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+
+link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["Veja os códigos de inicialização para o controlador SG6000-CN"]

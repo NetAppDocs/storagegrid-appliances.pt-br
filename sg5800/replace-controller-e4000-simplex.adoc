@@ -1,0 +1,390 @@
+---
+permalink: sg5800/replace-controller-e4000-simplex.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5800, storage node, storage appliance, Replacing, replace, e4000, controller, remove, removing, removal, install, installing, installation 
+summary: Talvez seja necessário substituir o controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado. 
+---
+= Substitua o controlador E4000 (SG5800)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir o controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.
+
+.Antes de começar
+Certifique-se de que tem o seguinte:
+
+* Um controlador de substituição com o mesmo número de peça do controlador que está a substituir.
++
+
+NOTE: Não confie nas instruções da série e para substituir um controlador no dispositivo StorageGRID, porque os procedimentos não são os mesmos.
+
+* Uma pulseira antiestática, ou você tomou precauções antiestáticas.
+* Etiquetas para identificar cada cabo conetado ao controlador.
+* Permissões de acesso específicas.
+* Você deve estar conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Acesso ao Gerenciador do sistema SANtricity:
++
+** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
+
+
+
+
+.Sobre esta tarefa
+Você pode determinar se você tem um recipiente de controlador com falha de duas maneiras:
+
+* Um alerta do Gerenciador de Grade indica uma falha no controlador de armazenamento e o Gerenciador de Grade ou o Guru de recuperação no Gerenciador de sistema do SANtricity direciona você para substituir o controlador.
+* O LED âmbar de atenção no controlador está aceso, indicando que o controlador tem uma avaria.
+
+
+O nó de storage do dispositivo não estará acessível quando você substituir o controlador. Se o controlador da série E4000 estiver a funcionar o suficiente, pode link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho SG5800 no modo de manutenção"].
+
+
+
+== Passo 1: Prepare-se para substituir o controlador
+
+Prepare-se para substituir um recipiente de controlador salvando a chave de segurança da unidade, fazendo backup da configuração e coletando dados de suporte. Em seguida, você pode parar as operações de e/S do host e desligar o compartimento de controladora.
+
+.Passos
+. Se possível, anote qual versão do software SANtricity os está atualmente instalada no controlador. Abra o Gerenciador de sistema do SANtricity e selecione *suporte
+. Anote qual versão do NVSRAM está instalada atualmente.
+. Se o recurso Segurança da unidade estiver ativado, verifique se existe uma chave salva e se você sabe a frase-passe necessária para instalá-la.
++
+
+CAUTION: *Possível perda de acesso a dados* – se todas as unidades do storage estiverem habilitadas para segurança, o novo controlador não poderá acessar o storage até que você desbloqueie as unidades protegidas usando a CLI. Para obter mais informações sobre a CLI, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Documentação da série E."].
+
++
+Para salvar a chave (pode não ser possível, dependendo do estado do controlador):
+
++
+.. No Gerenciador do sistema SANtricity, selecione *Configurações do sistema*.
+.. Em *Gerenciamento de chaves de segurança da unidade*, selecione *Backup Key*.
+.. Nos campos *Definir uma frase-passe/voltar a introduzir frase-passe*, introduza e confirme uma frase-passe para esta cópia de segurança.
+.. Clique em *Backup*.
+.. Grave suas informações chave em um local seguro e clique em *Fechar*.
+
+
+. Faça backup do banco de dados de configuração do storage usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+** Do System Manager:
++
+... *Selecione suporte
+... Selecione *Collect Configuration Data*.
+... Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+** Como alternativa, você pode fazer backup do banco de dados de configuração usando o seguinte comando CLI:
++
+`save storageArray dbmDatabase sourceLocation=onboard contentType=all file="filename";`
+
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. *Selecione suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+
+
+== Passo 2: Coloque o controlador offline
+
+Coloque o controlador offline e confirme que todas as operações estão concluídas.
+
+.Passos
+. Se o dispositivo StorageGRID estiver em execução em um sistema StorageGRIDlink:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"], .
+. Se o controlador E4000 estiver a funcionar o suficiente para permitir um encerramento controlado, confirme que todas as operações foram concluídas.
++
+.. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
++
+O LED verde Cache ative na parte de trás do controlador fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
+
+.. Na página inicial do Gerenciador do sistema do SANtricity, selecione *Exibir operações em andamento*.
+.. Confirme se todas as operações foram concluídas antes de continuar com a próxima etapa.
+
+
+. Desligue ambos os interruptores de energia no compartimento do controlador.
+. Aguarde que todos os LEDs na prateleira do controlador se desliguem.
+
+
+
+
+== Etapa 3: Remova o recipiente do controlador E4000
+
+Retire um recipiente do controlador E4000.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Coloque o controlador numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
+
+
+
+
+== Passo 4: Determine as peças a transferir para o controlador de substituição
+
+O controlador de substituição pode vir com peças pré-instaladas. Determine quais peças devem ser transferidas para o recipiente do controlador de substituição.
+
+. Coloque o controlador de substituição numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
+. Determine se o controlador de substituição contém uma bateria e/ou DIMMs. Se isso acontecer, reinstale a tampa do controlador e vá para <<step8_replace_controller,Passo 8: Substitua o controlador>>. Caso contrário:
++
+** Se o controlador de substituição não incluir uma bateria ou DIMM, vá para <<step5_remove_battery,Passo 5: Retire a bateria>>.
+** Se o controlador de substituição incluir uma bateria, mas não um DIMM, vá para <<step6_remove_dimm,Passo 6: Mova os DIMMs>>.
+
+
+
+
+
+
+== Passo 5: Retire a bateria
+
+Removida a bateria do controlador desativado e instale-a no controlador de substituição.
+
+.Passos
+. Retire a bateria do recipiente do controlador:
++
+.. Prima o botão azul na parte lateral do recipiente do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do recipiente do controlador.
+.. Desligue a ficha da bateria apertando o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Remova a bateria do NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilha de libertação da bateria 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| Conetor de alimentação da bateria 
+|===
+
+
+. Mova a bateria para o recipiente do controlador de substituição:
++
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica, mas não a ligue. Você o conetará assim que o restante dos componentes for movido para o recipiente do controlador de substituição.
+
+
+. Se o controlador de substituição tiver DIMMs pré-instalados, vá para <<step7_install_battery,Passo 7: Instale a bateria>>. Caso contrário, avance para o passo seguinte.
+
+
+
+
+== Passo 6: Mova os DIMMs
+
+Remova os DIMMs do recipiente do controlador danificado e instale-os no recipiente do controlador de substituição.
+
+.Passos
+. Localize os DIMMs no recipiente do controlador.
++
+
+NOTE: Observe a localização do DIMM nos soquetes para que você possa inserir o DIMM no mesmo local no recipiente do controlador de substituição e na orientação adequada. Remova os DIMMs do recipiente do controlador danificado:
+
++
+.. Ejete o DIMM do slot empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM.
++
+O DIMM girará um pouco para cima.
+
+.. Gire o DIMM o máximo possível e deslize o DIMM para fora do soquete.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Remova DIMMS.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilhas do ejetor DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| DIMMS 
+|===
+
+
+. Verifique se a bateria não está conetada ao recipiente do controlador de substituição.
+. Instale os DIMMs no controlador de substituição no mesmo local em que estavam no controlador prejudicado:
++
+.. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+
+
+. Repita estas etapas para o outro DIMM.
+. Se o controlador de substituição tiver uma bateria pré-instalada, vá para <<step8_replace_controller,Passo 8: Substitua o controlador>>. Caso contrário, avance para o passo seguinte.
+
+
+
+
+== Passo 7: Instale a bateria
+
+Instale a bateria no recipiente do controlador de substituição.
+
+.Passos
+. Volte a ligar a ficha da bateria à tomada no recipiente do controlador.
++
+Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
+
+. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica.
+. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+. Volte a instalar a tampa do recipiente do controlador e bloqueie-a no lugar.
+
+
+
+
+== Passo 8: Substitua o controlador
+
+Instale o controlador de substituição e verifique se o nó voltou a unir a grade.
+
+.Passos
+. Instale o controlador de substituição no aparelho.
++
+.. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
+.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
+.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Volte a colocar os cabos.
+.. Ligue o compartimento do controlador.
+.. Aguarde até que o controlador E4000 seja reiniciado.
+.. Determine como você atribuirá um endereço IP ao controlador de substituição.
++
+
+NOTE: As etapas para atribuir um endereço IP ao controlador de substituição dependem se você conetou a porta de gerenciamento a uma rede com um servidor DHCP e se todas as unidades estão protegidas.
+
++
+Se a porta de gerenciamento 1 estiver conetada a uma rede com um servidor DHCP, o novo controlador obterá seu endereço IP do servidor DHCP. Este valor pode ser diferente do endereço IP do controlador original.
+
+
+
+. Se a matriz de armazenamento tiver unidades seguras, importe a chave de segurança da unidade; caso contrário, vá para a próxima etapa. Siga o procedimento apropriado abaixo para um storage de armazenamento com todas as unidades seguras ou uma combinação de unidades seguras e não seguras.
++
+
+NOTE: _Unidades não seguras_ são unidades não atribuídas, unidades hot spare globais ou unidades que fazem parte de um grupo de volumes ou de um pool que não é protegido pelo recurso de segurança da unidade. As unidades seguras são unidades atribuídas que fazem parte de um grupo de volumes ou de um pool de discos seguro usando o Drive Security.
+
++
+** * Apenas unidades seguras (sem unidades não seguras)*:
++
+... Acesse a interface de linha de comando (CLI) do storage array. Para obter mais informações sobre a CLI, consulte https://docs.netapp.com/us-en/e-series-cli/index.html["Documentação da série E."].
+... Carregue a NVSRAM simplex apropriada no controlador.
++
+Por exemplo: `download storageArray NVSRAM file=\"N4000-881834-SG4.dlp\" forceDownload=TRUE;`
+
+... Confirme se a controladora é *ideal* após carregar NVSRAM simplex.
+... Se estiver usando o gerenciamento de chaves de segurança externas https://docs.netapp.com/us-en/e-series/upgrade-controllers/upgrade-unlock-drives-task.html#external-key-management["configure o gerenciamento de chaves externas no controlador"], .
+... Se estiver usando o gerenciamento de chaves de segurança internas, digite o seguinte comando para importar a chave de segurança:
++
+[listing]
+----
+import storageArray securityKey file="C:/file.slk"
+passPhrase="passPhrase";
+----
++
+local:
+
++
+**** `C:/file.slk` representa a localização do diretório e o nome da chave de segurança da unidade
+**** `passPhrase` É a frase-passe necessária para desbloquear o arquivo depois que a chave de segurança foi importada, o controlador reinicializa e o novo controlador adota as configurações salvas para a matriz de armazenamento.
+
+
+... Vá para o próximo passo para confirmar que o novo controlador é o ideal.
+
+
+** * Combinação de unidades seguras e inseguras*:
++
+... Colete o pacote de suporte e abra o perfil da matriz de armazenamento.
+... Encontre e grave todas as localizações das unidades não seguras, que são encontradas no pacote de suporte.
+... Desligue o sistema.
+... Remova as unidades não seguras.
+... Substitua o controlador.
+... Ligue o sistema e aguarde que o visor de sete segmentos mostre o número da bandeja.
+... No Gerenciador do sistema SANtricity, selecione *Configurações do sistema*.
+... Na seção Gerenciamento de chaves de segurança, selecione *criar/alterar chave* para criar uma nova chave de segurança.
+... Selecione *Unlock Secure Drives* para importar a chave de segurança que você salvou.
+... Execute o `set allDrives nativeState` comando CLI.
+... O controlador reiniciará automaticamente.
+... Aguarde que o controlador inicialize e que o visor de sete segmentos mostre o número da bandeja ou um L5 piscando.
+... Desligue o sistema.
+... Reinstale as unidades não seguras.
+... Reponha o controlador utilizando o Gestor do sistema SANtricity.
+... Ligue o sistema e aguarde que o visor de sete segmentos mostre o número da bandeja.
+... Vá para o próximo passo para confirmar que o novo controlador é o ideal.
+
+
+
+
+. Se colocar o aparelho no modo de manutenção durante este procedimento, volte a colocar o aparelho no modo de funcionamento normal. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
+. Durante a reinicialização, monitore o status do nó para determinar quando ele voltou a ingressar na grade.
++
+O aparelho reinicia e regozija-se com a grelha. Este processo pode demorar até 20 minutos.
+
+. Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+. No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é o ideal.
++
+.. Selecione *hardware*.
+.. Para o compartimento do controlador, selecione *Mostrar parte posterior da prateleira*.
+.. Selecione o recipiente do controlador que você substituiu.
+.. Selecione *Ver definições*.
+.. Confirme se o *Status* do controlador é o ideal.
+.. Se o status não for ideal, realce o controlador e selecione *Place Online*.
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+
+
+.O que se segue?
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.

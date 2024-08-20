@@ -1,0 +1,51 @@
+= 
+:allow-uri-read: 
+
+
+.Antes de começar
+* Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
+
+
+
+NOTE: Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.
+
+.Passos
+. No Instalador de dispositivos StorageGRID, selecione *Configurar rede* > *Configuração de ligação*.
+. Faça as alterações desejadas na configuração do link.
++
+Para obter mais informações sobre as opções, link:../installconfig/configuring-network-links.html["Configurar ligações de rede"]consulte .
+
++
+
+NOTE: As alterações de configuração IP efetuadas enquanto o dispositivo está no modo de manutenção não são aplicadas ao ambiente StorageGRID instalado. Execute o [`change-ip` comando] depois de reiniciar o aparelho no StorageGRID.
+
+. Quando estiver satisfeito com suas seleções, clique em *Salvar*.
++
+
+NOTE: Poderá perder a ligação se tiver efetuado alterações à rede ou à ligação através da qual está ligado. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do Instalador de dispositivos StorageGRID usando um dos outros endereços IP atribuídos ao dispositivo: `*https://_appliance_IP_:8443*`
+
+. Faça as alterações necessárias nos endereços IP do aparelho.
++
+Se você fez alterações nas configurações de VLAN, a sub-rede do dispositivo pode ter sido alterada. Se for necessário alterar os endereços IP do dispositivo, link:../installconfig/setting-ip-configuration.html["Configurar endereços IP do StorageGRID"]consulte .
+
+. Selecione *Configurar rede* > *Teste de ping* no menu.
+. Use a ferramenta Teste de ping para verificar a conetividade com endereços IP em qualquer rede que possa ter sido afetada pelas alterações de configuração de link feitas ao configurar o dispositivo.
++
+Além de quaisquer outros testes que você escolher executar, confirme que você pode fazer ping no endereço IP da rede de Grade do nó Admin principal e no endereço IP da rede de Grade de pelo menos um outro nó. Se necessário, regresse às instruções para configurar ligações de rede e corrija quaisquer problemas.
+
+. Depois de ter certeza de que as alterações na configuração do link estão funcionando, reinicie o nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *controlador de reinicialização* e, em seguida, selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID* para reinicializar o controlador de computação com o nó que se junta à grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador de computação com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes que ele rejoin a grade.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+

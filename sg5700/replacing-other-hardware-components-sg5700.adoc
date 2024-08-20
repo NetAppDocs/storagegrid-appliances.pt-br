@@ -1,0 +1,83 @@
+---
+permalink: sg5700/replacing-other-hardware-components-sg5700.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, controller battery, battery, drive, fan, power supply 
+summary: Talvez seja necessário substituir uma bateria, unidade, ventilador ou fonte de alimentação do controlador no aparelho StorageGRID. 
+---
+= Substitua outros componentes de hardware no SG5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir uma bateria, unidade, ventilador ou fonte de alimentação do controlador no aparelho StorageGRID.
+
+.Antes de começar
+* Você tem o procedimento de substituição de hardware do e-Series.
+* O aparelho foi link:../commonhardware/placing-appliance-into-maintenance-mode.html["colocado no modo de manutenção"] feito se o procedimento de substituição de componentes exigir que desligue o aparelho.
+
+
+.Sobre esta tarefa
+Para substituir a bateria no controlador E2800, consulte as instruções nestas instruções para link:replacing-e2800-controller.html["Substituição do controlador E2800"]. Essas instruções descrevem como remover o controlador do aparelho, remover a bateria do controlador, instalar a bateria e substituir o controlador.
+
+Para substituir uma unidade, um recipiente da ventoinha de alimentação, um recipiente da ventoinha, um recipiente de alimentação ou uma gaveta de unidades no aparelho, aceda ao http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedimentos do e-Series para manutenção do hardware E2800"^].
+
+
+
+== SG5712 instruções de substituição de componentes
+
+[cols="1a,3a"]
+|===
+| FRU | Consulte as instruções do e-Series para 
+
+
+ a| 
+Condução
+ a| 
+Substituição de uma unidade nas gavetas de E2800 12 ou 24 unidades
+
+
+
+ a| 
+Depósito da ventoinha de alimentação
+ a| 
+Substituição de um recipiente do ventilador elétrico em E2800 prateleiras
+
+|===
+
+
+== SG5760 instruções de substituição de componentes
+
+[cols="1a,3a"]
+|===
+| FRU | Consulte as instruções do e-Series para 
+
+
+ a| 
+Condução
+ a| 
+Substituição de uma unidade em E2860 gavetas
+
+
+
+ a| 
+Depósito de alimentação
+ a| 
+Substituição de um recipiente de alimentação em E2860 prateleiras
+
+
+
+ a| 
+Recipiente da ventoinha
+ a| 
+Substituição de um recipiente do ventilador em E2860 prateleiras
+
+
+
+ a| 
+Gaveta da unidade
+ a| 
+Substituição de uma gaveta de unidades em E2860 gavetas
+
+|===

@@ -1,0 +1,49 @@
+---
+indexpage:
+  tiles:
+  - title: Início rápido
+    links:
+    - title: Início rápido para a instalação do aparelho
+      url: "../installconfig/index.html"
+    - title: Automatize a instalação e a configuração do dispositivo
+      url: "../installconfig/automating-appliance-installation-and-configuration.html"
+    - title: Automatizar a configuração do StorageGRID
+      url: "../installconfig/automating-configuration-of-storagegrid.html"
+    - title: APIs REST de instalação (usuários avançados)
+      url: "../installconfig/overview-of-installation-rest-apis.html"
+  - title: Prepare-se para a instalação
+    links:
+    - title: Prepare o local
+      url: "../installconfig/preparing-site.html"
+    - title: Desembale caixas
+      url: "../installconfig/unpacking-boxes.html"
+    - title: Obtenha equipamentos e ferramentas adicionais
+      url: "../installconfig/obtaining-additional-equipment-and-tools.html"
+  - title: Reunir informações de rede
+    links:
+    - title: Tipos de rede StorageGRID
+      url: "../installconfig/reviewing-appliance-network-connections.html"
+    - title: SG100 e SG1000
+      url: "../installconfig/gathering-installation-information-sg100-and-sg1000.html"
+    - title: SG110 e SG1100
+      url: "../installconfig/gathering-installation-information-sg110-and-sg1100.html"
+    - title: SG5700
+      url: "../installconfig/gathering-installation-information-sg5700.html"
+    - title: SG5800
+      url: "../installconfig/gathering-installation-information-sg5800.html"
+    - title: SG6000
+      url: "../installconfig/gathering-installation-information-sg6000.html"
+    - title: SG6100
+      url: "../installconfig/gathering-installation-information-sg6100.html"
+  - title: Instale o hardware
+    links:
+    - title: Registre o hardware
+      url: "../installconfig/registering-hardware.html"
+    - title: Instale o aparelho
+      url: "../landing-install-hdwr/index.html"
+    - title: Configure o hardware
+      url: "../installconfig/configuring-hardware.html"
+    - title: Implante o nó de storage do dispositivo
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Nó do dispositivo de serviços de implantação
+      url: "../installconfig/deploying-services-appliance-node.html"

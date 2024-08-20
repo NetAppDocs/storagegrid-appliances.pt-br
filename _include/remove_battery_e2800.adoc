@@ -1,0 +1,90 @@
+= Passo 4: Mova a bateria para o novo controlador
+:allow-uri-read: 
+
+
+
+
+== Passo 4: Mova a bateria para o novo controlador
+
+Remova a bateria do controlador com falha e instale-a no controlador de substituição.
+
+.Passos
+. Confirme se o LED verde dentro do controlador (entre a bateria e os DIMMs) está desligado.
++
+Se este LED verde estiver ligado, o controlador ainda está a utilizar a bateria. Deve aguardar que este LED se apague antes de remover quaisquer componentes.
+
++
+image::../media/e2800_internal_cache_active_led.gif[LED verde no E2800]
+
++
+[cols="1a,2a"]
+|===
+| Item | Descrição 
+
+
+ a| 
+1
+ a| 
+LED Ativo Cache Interno
+
+
+
+ a| 
+2
+ a| 
+Bateria
+
+|===
+. Localize a trava de liberação azul da bateria.
+. Desengate a bateria empurrando a trava de liberação para baixo e afastando-a do controlador.
++
+image::../media/e2800_remove_battery.gif[Trinco da bateria]
+
++
+[cols="1a,2a"]
+|===
+| Item | Descrição 
+
+
+ a| 
+1
+ a| 
+Trinco de desbloqueio da bateria
+
+
+
+ a| 
+2
+ a| 
+Bateria
+
+|===
+. Levante a bateria e deslize-a para fora do controlador.
+. Retire a tampa do controlador de substituição.
+. Oriente o controlador de substituição para que a ranhura da bateria fique voltada para si.
+. Introduza a bateria no controlador a um ligeiro ângulo descendente.
++
+Deve inserir a flange metálica na parte frontal da bateria na ranhura na parte inferior do controlador e deslizar a parte superior da bateria por baixo do pequeno pino de alinhamento no lado esquerdo do controlador.
+
+. Desloque o trinco da bateria para cima para fixar a bateria.
++
+Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma ranhura metálica no chassi.
+
+. Vire o controlador para confirmar que a bateria está instalada corretamente.
++
+
+CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos.
+
++
+** *Correto -- a flange de metal da bateria é completamente inserida na ranhura do controlador:*
++
+image::../media/e2800_battery_flange_ok.gif[Flange da bateria conforme]
+
+** *Incorreto -- a flange metálica da bateria não está inserida na ranhura do controlador:*
++
+image::../media/e2800_battery_flange_not_ok.gif[Flange da bateria incorreta]
+
+
+
+. Volte a colocar a tampa do controlador.
+

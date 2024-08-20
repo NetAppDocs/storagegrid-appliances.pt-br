@@ -1,0 +1,56 @@
+---
+permalink: sg5800/replace-drive-e4000.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de substituir uma unidade E4000, reveja os requisitos e considerações. 
+---
+= Substitua a visão geral da unidade SG5800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de substituir uma unidade em um SG5812 ou SG5860, revise os requisitos e considerações.
+
+
+
+== Condução
+
+As unidades do seu aparelho são frágeis. O manuseio inadequado da unidade é uma das principais causas de falha da unidade.
+
+Siga estas regras para evitar danificar as unidades do seu storage de armazenamento:
+
+* Evitar descargas eletrostáticas (ESD):
++
+** Mantenha a unidade no saco ESD até que esteja pronto para instalá-la.
+** Não insira uma ferramenta de metal ou faca no saco ESD.
++
+Abra o saco ESD à mão ou corte a parte superior com uma tesoura.
+
+** Guarde o saco ESD e quaisquer materiais de embalagem caso tenha de devolver uma unidade mais tarde.
+** Utilize sempre uma pulseira antiestática ligada à terra a uma superfície não pintada no chassis do compartimento de armazenamento.
++
+Se uma correia de pulso não estiver disponível, toque numa superfície não pintada no chassis do compartimento de armazenamento antes de manusear a unidade.
+
+
+
+* Manuseie cuidadosamente as transmissões:
++
+** Utilize sempre as duas mãos ao remover, instalar ou transportar uma unidade.
+** Nunca force uma unidade para dentro de uma prateleira e utilize uma pressão suave e firme para engatar completamente o trinco da unidade.
+** Coloque as unidades em superfícies almofadadas e nunca empilhe as unidades umas sobre as outras.
+** Não bata as transmissões contra outras superfícies.
+** Antes de remover uma unidade de uma gaveta, solte a alça e aguarde 30 segundos para que a unidade gire para baixo.
+** Utilize sempre embalagens aprovadas ao enviar unidades.
+
+
+* Evite campos magnéticos:
++
+** Mantenha as unidades afastadas de dispositivos magnéticos.
++
+Os campos magnéticos podem destruir todos os dados na unidade e causar danos irreparáveis aos circuitos da unidade.
+
+
+
+

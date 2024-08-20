@@ -1,0 +1,20 @@
+---
+permalink: sg5700/index.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, maintain, maintaining, hardware, procedures, tasks 
+summary: Talvez seja necessário atualizar o software SANtricity os na controladora E2800, alterar a configuração do link Ethernet da controladora E5700SG, substituir a controladora E2800 ou a controladora E5700SG ou substituir componentes específicos. Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como nó de storage em um sistema StorageGRID. 
+---
+= Mantenha o aparelho SG5700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário atualizar o software SANtricity os na controladora E2800, alterar a configuração do link Ethernet da controladora E5700SG, substituir a controladora E2800 ou a controladora E5700SG ou substituir componentes específicos. Os procedimentos nesta seção pressupõem que o dispositivo já foi implantado como nó de storage em um sistema StorageGRID.
+
+Os procedimentos específicos para a manutenção do seu aparelho SG5700 estão nesta secção.
+
+link:../commonhardware/index.html["Procedimentos comuns"]Consulte para obter os procedimentos de manutenção utilizados por todos os aparelhos.
+
+Consulte link:../installconfig/configuring-hardware.html["Configure o hardware"] para obter informações sobre os procedimentos de manutenção que também são realizados durante a instalação e configuração iniciais do aparelho.

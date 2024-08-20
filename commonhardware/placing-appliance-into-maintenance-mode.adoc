@@ -1,0 +1,65 @@
+---
+permalink: commonhardware/placing-appliance-into-maintenance-mode.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, maintenance mode 
+summary: Deve colocar o aparelho no modo de manutenção antes de efetuar procedimentos de manutenção específicos. 
+---
+= Coloque o aparelho no modo de manutenção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Deve colocar o aparelho no modo de manutenção antes de efetuar procedimentos de manutenção específicos.
+
+.Antes de começar
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você tem a permissão Manutenção ou Acesso root. Para obter detalhes, consulte as instruções para administrar o StorageGRID.
+
+
+.Sobre esta tarefa
+Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.
+
+
+NOTE: A senha da conta de administrador e as chaves de host SSH para um dispositivo StorageGRID no modo de manutenção permanecem as mesmas que eram quando o dispositivo estava em serviço.
+
+.Passos
+. No Gerenciador de Grade, selecione *NÓS*.
+. Na exibição em árvore da página nós, selecione o nó de storage do dispositivo.
+. Selecione *tarefas*.
+. Selecione *modo de manutenção*. É apresentada uma caixa de diálogo de confirmação.
+. Introduza a frase-passe de aprovisionamento e selecione *OK*.
++
+Uma barra de progresso e uma série de mensagens, incluindo "Request Sent" (pedido enviado), "Stop" (Paragem de StorageGRID) e "Reboot" (reinício), indicam que o aparelho está a concluir os passos para entrar no modo de manutenção.
+
++
+Quando o dispositivo está no modo de manutenção, uma mensagem de confirmação lista os URLs que você pode usar para acessar o Instalador do StorageGRID Appliance.
+
++
+image::../media/maintenance_mode_urls.png[URLs do modo de manutenção]
+
+. Para acessar o Instalador do StorageGRID Appliance, navegue até qualquer um dos URLs exibidos.
++
+Se possível, use o URL que contém o endereço IP da porta Admin Network do dispositivo.
+
++
+
+NOTE: Se você tiver uma conexão direta com a porta de gerenciamento do dispositivo, use `+https://169.254.0.1:8443+` para acessar a página Instalador do dispositivo StorageGRID.
+
+. A partir do instalador do dispositivo StorageGRID, confirme se o aparelho está no modo de manutenção.
++
+image::../media/maintenance_mode_notification_bar.png[mensagem do modo de manutenção]
+
+. Execute todas as tarefas de manutenção necessárias.
+. Depois de concluir as tarefas de manutenção, saia do modo de manutenção e retome a operação normal do nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Status normal da página dos nós]
+
+

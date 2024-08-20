@@ -1,0 +1,23 @@
+---
+indexpage:
+  tiles:
+  - title: Implantar o dispositivo
+    links:
+    - title: Implante o nó de storage do dispositivo
+      url: "../installconfig/deploying-appliance-storage-node.html"
+    - title: Nó do dispositivo de serviços de implantação
+      url: "../installconfig/deploying-services-appliance-node.html"
+    - title: Monitore a instalação do dispositivo
+      url: "../installconfig/monitoring-appliance-installation.html"
+    - title: Reinicie o dispositivo enquanto o instalador está em execução
+      url: "../installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html"
+  - title: Solucionar problemas na instalação do dispositivo
+    links:
+    - title: SG100 e SG1000
+      url: "../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html"
+    - title: SG110 e SG1100
+      url: "../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html"
+    - title: SG5700 e SG6000
+      url: "../installconfig/troubleshooting-hardware-installation.html"
+    - title: SG5800 e SG6100
+      url: "../installconfig/troubleshooting-hardware-installation-sg6100.html"

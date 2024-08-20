@@ -1,0 +1,51 @@
+---
+permalink: installconfig/sg6060-installing-drives.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
+summary: Depois de instalar o compartimento de 60 unidades em um gabinete ou rack, instale todas as unidades 60 na gaveta. O envio para o compartimento de controladora E2860 inclui duas unidades SSD, que devem ser instaladas na gaveta superior do compartimento de controladora. Cada compartimento de expansão opcional inclui 60 unidades HDD e nenhuma unidade SSD. 
+---
+= Instalar unidades (SG6060)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de instalar o compartimento de 60 unidades em um gabinete ou rack, instale todas as unidades 60 na gaveta. O envio para o compartimento de controladora E2860 inclui duas unidades SSD, que devem ser instaladas na gaveta superior do compartimento de controladora. Cada compartimento de expansão opcional inclui 60 unidades HDD e nenhuma unidade SSD.
+
+.Antes de começar
+Você instalou o compartimento de controladora E2860 ou as gavetas de expansão opcionais (uma ou duas) no gabinete ou no rack.
+
+
+CAUTION: Para evitar danificar o hardware, nunca mova a gaveta se as unidades estiverem instaladas. É necessário remover todas as unidades antes de mover a gaveta.
+
+.Passos
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Remova as unidades da embalagem.
+. Solte as alavancas na gaveta superior da unidade e deslize a gaveta para fora usando as alavancas.
+. Localize as duas unidades SSD.
++
+
+NOTE: Os compartimentos de expansão não usam unidades SSD.
+
+. Levante cada manípulo de acionamento para uma posição vertical.
+. Instale as duas unidades SSD nos slots 0 e 1 (os dois primeiros slots ao longo do lado esquerdo da gaveta).
+. Posicione cuidadosamente cada unidade na respetiva ranhura e baixe a pega da unidade levantada até encaixar.
++
+image::../media/install_drives_in_e2860.gif[Instalar unidades]
+
+. Instale 10 unidades HDD na gaveta superior.
+. Deslize a gaveta para dentro novamente empurrando o centro e fechando ambas as alavancas com cuidado.
++
+
+CAUTION: Pare de empurrar a gaveta se sentir preso. Use as alavancas de liberação na parte frontal da gaveta para deslizar a gaveta para fora. Em seguida, reinsira cuidadosamente a gaveta na ranhura.
+
+. Repita estes passos para instalar unidades HDD nas outras quatro gavetas.
++
+
+NOTE: Você deve instalar todas as unidades 60 para garantir o funcionamento correto.
+
+. Fixe a moldura frontal à prateleira.
+. Se você tiver compartimentos de expansão, repita estas etapas para instalar 12 unidades HDD em cada gaveta de cada gaveta de expansão.
+. Avance para as instruções de instalação do SG6000-CN em um gabinete ou rack.
+

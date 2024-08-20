@@ -1,0 +1,64 @@
+---
+permalink: sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
+summary: 'Para controladores de armazenamento que utilizam atualmente o SANtricity os com mais de 08.42.20.00 GB(11,42), tem de utilizar o procedimento de modo de manutenção para aplicar uma atualização.' 
+---
+= Atualize o SANtricity os em controladores de storage SG6000 usando o modo de manutenção
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para controladores de storage que atualmente usam o SANtricity os com mais de 08.42.20.00 GB (11,42 GB), você deve usar o procedimento de modo de manutenção para aplicar uma atualização.
+
+.Antes de começar
+* Consultou o https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para confirmar que a versão do SANtricity os que está a utilizar para a atualização é compatível com o seu dispositivo.
+* Se o dispositivo StorageGRID estiver em execução em um sistema StorageGRID, você colocou o controlador SG6000-CN em link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de manutenção"].
++
+
+NOTE: O modo de manutenção interrompe a conexão com o controlador de storage.
+
+
+
+.Sobre esta tarefa
+Não atualize o SANtricity os ou a NVSRAM na controladora e-Series em mais de um dispositivo StorageGRID de cada vez.
+
+
+CAUTION: A atualização de mais de um dispositivo StorageGRID por vez pode causar indisponibilidade de dados, dependendo do modelo de implantação e das políticas de ILM.
+
+.Passos
+. Confirme se o aparelho está na link:../commonhardware/placing-appliance-into-maintenance-mode.html["modo de manutenção"].
+. A partir de um portátil de serviço, aceda ao Gestor de sistema SANtricity e inicie sessão.
+. Transfira o novo ficheiro de software SANtricity os e o ficheiro NVSRAM para o cliente de gestão.
++
+
+CAUTION: A NVSRAM é específica do dispositivo StorageGRID. Não utilize a transferência NVSRAM padrão.
+
+. Siga as instruções no guia _Atualizando o SANtricity os_ ou na ajuda on-line do Gerenciador de sistema do SANtricity para atualizar o firmware e a NVSRAM.
++
+
+NOTE: Ative os arquivos de atualização imediatamente. Não adiar a ativação.
+
+. Se este procedimento for concluído com êxito e tiver procedimentos adicionais a serem executados enquanto o nó estiver no modo de manutenção, execute-os agora. Quando terminar, ou se tiver alguma falha e quiser recomeçar, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID*
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. Selecione esta opção se tiver alguma avaria durante o procedimento e pretender recomeçar. Depois que o nó terminar de reiniciar para o modo de manutenção, reinicie a partir da etapa apropriada no procedimento que falhou.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+
+
+.Informações relacionadas
+https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade do NetApp"^]
+
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6000.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]

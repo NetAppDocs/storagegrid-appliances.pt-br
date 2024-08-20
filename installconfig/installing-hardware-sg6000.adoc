@@ -1,0 +1,55 @@
+---
+permalink: installconfig/installing-hardware-sg6000.html 
+sidebar: sidebar 
+keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
+summary: Para o SG6060 e o SGF6024, você instala os trilhos em seu gabinete ou rack e desliza o compartimento do controlador, todas as gavetas de expansão e o controlador de computação nos trilhos. Para o SG6060, não instale as unidades em cada gaveta até que as gavetas sejam instaladas. 
+---
+= Instalar no gabinete ou rack (SG6000)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para o SG6060 e o SGF6024, você instala os trilhos em seu gabinete ou rack e desliza o compartimento do controlador, todas as gavetas de expansão e o controlador de computação nos trilhos. Para o SG6060, não instale as unidades em cada gaveta até que as gavetas sejam instaladas.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obter informações 
+
+
+ a| 
+SG6060
+ a| 
+compartimento do controlador de 60 unidades e todas as gavetas de expansão de 60 unidades
+ a| 
+link:sg6060-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale as gavetas de 60 unidades"]
+
+
+
+ a| 
+SG6060
+ a| 
+60 unidades em cada gaveta
+ a| 
+link:sg6060-installing-drives.html["Instalar unidades"]
+
+
+
+ a| 
+SGF6024
+ a| 
+compartimento do controlador de 24 unidades
+ a| 
+link:sgf6024-installing-24-drive-shelves-into-cabinet-or-rack.html["Instale as gavetas de 24 unidades"]
+
+
+
+ a| 
+SG6060 e SGF6024
+ a| 
+Controlador de computação SG6000-CN
+ a| 
+link:sg6000-cn-installing-into-cabinet-or-rack.html["Instale o controlador SG6000-CN"]
+
+|===

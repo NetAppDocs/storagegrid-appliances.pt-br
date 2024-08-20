@@ -1,0 +1,44 @@
+---
+permalink: installconfig/sg6100-cn-installing-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6100, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6100-cn, rail, rails, sg6160 
+summary: Você instala um conjunto de trilhos para o controlador SG6100-CN em seu gabinete ou rack e, em seguida, deslize o controlador para os trilhos. 
+---
+= Instalar o controlador SG6100-CN (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você instala um conjunto de trilhos para o controlador SG6100-CN em seu gabinete ou rack e, em seguida, deslize o controlador para os trilhos.
+
+.Antes de começar
+* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você tem as instruções fornecidas com o kit de trilho.
+* Você instalou o compartimento de controladora e as unidades E4000.
+
+
+.Passos
+. Siga cuidadosamente as instruções para o kit de trilho para instalar os trilhos em seu gabinete ou rack.
+. Nos dois trilhos instalados no gabinete ou rack, estenda as partes móveis dos trilhos até ouvir um clique.
++
+image::../media/rails_extended_out.gif[SG6100 trilhos]
+
+. Insira o controlador SG6100-CN nos trilhos.
+. Deslize o controlador para dentro do gabinete ou rack.
++
+Quando não conseguir mover o controlador mais, puxe as travas azuis em ambos os lados do chassi para deslizar o controlador até o fim.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6100 deslizando sobre trilhos]
+
++
+
+NOTE: Não conete a moldura frontal até que você ligue o controlador.
+
+. Aperte os parafusos integrados no painel frontal do controlador para fixar o controlador no rack.
++
+image::../media/sg6060_rack_retaining_screws.png[SG6160 parafusos de fixação da cremalheira]
+
+

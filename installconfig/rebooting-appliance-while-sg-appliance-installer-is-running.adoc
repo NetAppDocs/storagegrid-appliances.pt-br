@@ -1,0 +1,32 @@
+---
+permalink: installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html 
+sidebar: sidebar 
+keywords: storage node, storage appliance, service appliance, services appliance, gateway Node, admin node, reboot, restart 
+summary: Talvez seja necessário reiniciar o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução. Por exemplo, pode ser necessário reiniciar o aparelho se a instalação falhar. 
+---
+= Reinicie o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário reiniciar o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução. Por exemplo, pode ser necessário reiniciar o aparelho se a instalação falhar.
+
+.Sobre esta tarefa
+Este procedimento aplica-se apenas quando o aparelho está a executar o Instalador de dispositivos StorageGRID. Depois que a instalação estiver concluída, esta etapa não funcionará mais porque o Instalador de dispositivos StorageGRID não está mais disponível.
+
+.Passos
+. No Instalador de dispositivos StorageGRID, clique em *Avançado* > *controlador de reinicialização* e selecione uma destas opções:
++
+** Selecione *Reboot into StorageGRID* para reiniciar o controlador com o nó rejuntando a grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.
+** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes de voltar a unir a grade.
++
+image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+
++
+O aparelho é reinicializado.
+
+
+
+

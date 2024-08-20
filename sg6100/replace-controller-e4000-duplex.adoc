@@ -1,0 +1,322 @@
+---
+permalink: sg6100/replace-controller-e4000-duplex.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Substitua o controlador de storage E4000 (SG6160)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Talvez seja necessário substituir um controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.
+
+.Antes de começar
+* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo.
+* Você tem etiquetas para identificar cada cabo conetado ao controlador.
+* Você tem uma pulseira antiestática ou tomou outras precauções antiestáticas.
+* Você tem uma chave de fenda Phillips nº 1.
+* Você localizou fisicamente o dispositivo de armazenamento onde está substituindo o controlador no data center.
+
+
+
+NOTE: Não confie nas instruções da série e para substituir um controlador no dispositivo StorageGRID, porque os procedimentos não são os mesmos.
+
+.Sobre esta tarefa
+Você pode determinar se você tem um controlador com falha de duas maneiras:
+
+* Um alerta do Gerenciador de Grade indica uma condição de falha do controlador de armazenamento e o Gerenciador de Grade ou o Guru de recuperação no Gerenciador de sistema do SANtricity direcionam você para substituir o controlador.
+* O LED âmbar de atenção no controlador está aceso, indicando que o controlador tem uma avaria.
++
+
+NOTE: Se ambos os controladores na gaveta tiverem seus LEDs de atenção ligados, entre em Contato com o suporte técnico para obter assistência.
+
+
+
+Se o dispositivo contiver dois controladores de storage, você poderá substituir um deles enquanto o dispositivo estiver ligado e executar operações de leitura/gravação, contanto que as seguintes condições sejam verdadeiras:
+
+* O segundo controlador na gaveta tem o status ideal.
+* O campo *OK para remover* na área Detalhes do Guru de recuperação no Gerenciador de sistema do SANtricity exibe *Sim*, indicando que é seguro remover esse componente.
+
+
+
+NOTE: Sempre que possível, coloque o aparelho no modo de manutenção para este procedimento de substituição, de forma a minimizar o impactos potencial de erros ou falhas imprevistas.
+
+
+NOTE: Se a segunda controladora na gaveta não tiver o status ideal ou se o Recovery Guru indicar que não é bom remover a controladora, entre em Contato com o suporte técnico.
+
+
+
+== Passo 1: Prepare o controlador de substituição
+
+Prepare o controlador E4000 de substituição.
+
+.Passos
+. Desembale o novo controlador e coloque-o numa superfície plana e livre de estática.
++
+Guarde os materiais de embalagem a utilizar ao enviar o controlador avariado.
+
+. Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do controlador de substituição.
+
+
+
+
+== Passo 2: Coloque o controlador offline
+
+Prepare-se para remover o controlador com falha e colocá-lo offline. Você pode usar o Gerenciador de sistema do SANtricity para executar estas etapas.
+
+.Passos
+. Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.
++
+Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, você pode procurar o controlador na guia *base*.
+
++
+
+CAUTION: *Possível perda de acesso aos dados e n.o 8212;* se os dois números de peça não forem os mesmos, não tente este procedimento.
+
+. Faça uma cópia de segurança da base de dados de configuração.
++
+Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração. O sistema salvará o estado atual do banco de dados de configuração RAID, que inclui todos os dados para grupos de volume e pools de discos na controladora.
+
++
+.. Selecione *suporte
+.. Selecione *Collect Configuration Data*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *configurationData-<arrayName>-<dateTime>.7z*.
+
+
+
+. Colete dados de suporte para o dispositivo.
++
+
+NOTE: A coleta de dados de suporte antes e depois da substituição de um componente garante que você possa enviar um conjunto completo de logs para o suporte técnico se a substituição não resolver o problema.
+
++
+Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salvo para solucionar o problema. O sistema salvará os dados de inventário, status e desempenho sobre seu storage array em um único arquivo.
+
++
+.. *Selecione suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
+
+
+. Leve o controlador que pretende substituir offline.
+
+
+
+
+== Etapa 3: Remova o recipiente do controlador
+
+Remova um recipiente do controlador.
+
+.Passos
+. Coloque uma pulseira antiestática ou tome outras precauções antiestáticas.
+. Identifique cada cabo que esteja conetado ao recipiente do controlador.
+. Desligue todos os cabos do recipiente do controlador.
++
+
+CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Aperte o trinco na pega do excêntrico até que este se solte, abra totalmente a pega do excêntrico para libertar o recipiente do controlador do plano médio e, em seguida, utilizando duas mãos, puxe o recipiente do controlador para fora do chassis.
+. Coloque o controlador numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
+
+
+
+
+== Passo 4: Determine as peças a transferir para o controlador de substituição
+
+O controlador de substituição pode vir com peças pré-instaladas. Determine quais peças devem ser transferidas para o recipiente do controlador de substituição.
+
+. Coloque o controlador de substituição numa superfície plana e sem estática com a tampa amovível virada para cima.
+. Abra a tampa pressionando os botões azuis nas laterais do recipiente do controlador para soltar a tampa e, em seguida, gire a tampa para cima e para fora do recipiente do controlador.
+. Determine se o controlador de substituição contém uma bateria e/ou DIMMs. Se isso acontecer, reinstale a tampa do controlador e vá para <<step8_replace_controller,Passo 8: Substitua o controlador>>. Caso contrário:
++
+** Se o controlador de substituição não incluir uma bateria ou DIMM, vá para <<step5_remove_battery,Passo 5: Retire a bateria>>.
+** Se o controlador de substituição incluir uma bateria, mas não um DIMM, vá para <<step6_remove_dimm,Passo 6: Mova os DIMMs>>.
+
+
+
+
+
+
+== Passo 5: Retire a bateria
+
+Retire a bateria do controlador desativado e instale-a no controlador de substituição, se necessário.
+
+.Passos
+. Retire a bateria do recipiente do controlador:
++
+.. Prima o botão azul na parte lateral do recipiente do controlador.
+.. Deslize a bateria para cima até que ela solte os suportes de fixação e, em seguida, levante a bateria para fora do recipiente do controlador.
+.. Desligue a ficha da bateria apertando o clipe na face da ficha da bateria para soltar a ficha da tomada e, em seguida, desligue o cabo da bateria da tomada.
++
+image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Remova a bateria do NVMEM.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilha de libertação da bateria 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| Conetor de alimentação da bateria 
+|===
+
+
+. Mova a bateria para o recipiente do controlador de substituição e instale-a:
++
+.. Alinhe a bateria com os suportes de fixação na parede lateral de chapa metálica, mas não a ligue. Você o conetará assim que o restante dos componentes for movido para o recipiente do controlador de substituição.
+
+
+. Se o controlador de substituição tiver DIMMs pré-instalados, vá para <<step7_install_battery,Passo 7: Instale a bateria>>. Caso contrário, avance para o passo seguinte.
+
+
+
+
+== Passo 6: Mova os DIMMs
+
+Remova os DIMMs do recipiente do controlador danificado e instale-os no recipiente do controlador de substituição.
+
+.Passos
+. Localize os DIMMs no recipiente do controlador.
++
+
+NOTE: Observe a localização do DIMM nos soquetes para que você possa inserir o DIMM no mesmo local no recipiente do controlador de substituição e na orientação adequada. Remova os DIMMs do recipiente do controlador danificado:
+
++
+.. Ejete o DIMM do slot empurrando lentamente as duas abas do ejetor do DIMM em ambos os lados do DIMM.
++
+O DIMM girará um pouco para cima.
+
+.. Gire o DIMM o máximo possível e deslize o DIMM para fora do soquete.
++
+
+NOTE: Segure cuidadosamente o DIMM pelas bordas para evitar a pressão nos componentes da placa de circuito DIMM.
+
++
+image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Remova DIMMS.]
+
++
+|===
+
+
+ a| 
+image::../media/legend_icon_01.png[ícone de legenda 01]
+| Patilhas do ejetor DIMM 
+
+
+ a| 
+image::../media/legend_icon_02.png[ícone de legenda 02]
+| DIMMS 
+|===
+
+
+. Verifique se a bateria não está conetada ao recipiente do controlador de substituição.
+. Instale os DIMMs no controlador de substituição no mesmo local em que estavam no controlador prejudicado:
++
+.. Empurre com cuidado, mas firmemente, na borda superior do DIMM até que as abas do ejetor se encaixem no lugar sobre os entalhes nas extremidades do DIMM.
++
+O DIMM encaixa firmemente no slot, mas deve entrar facilmente. Caso contrário, realinhar o DIMM com o slot e reinseri-lo.
+
++
+
+NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniformemente e totalmente inserido no slot.
+
+
+
+. Repita estas etapas para o outro DIMM.
+. Se o controlador de substituição tiver uma bateria pré-instalada, vá para <<step8_replace_controller,Passo 8: Substitua o controlador>>. Caso contrário, avance para o passo seguinte.
+
+
+
+
+== Passo 7: Instale a bateria
+
+Instale a bateria no recipiente do controlador de substituição.
+
+.Passos
+. Volte a ligar a ficha da bateria à tomada no recipiente do controlador.
++
+Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
+
+. Alinhar a bateria com os suportes de fixação na parede lateral de chapa metálica.
+. Deslize a bateria para baixo até que o trinco da bateria encaixe e encaixe na abertura na parede lateral.
+. Volte a instalar a tampa do recipiente do controlador e bloqueie-a no lugar.
+
+
+
+
+== Passo 8: Substitua o controlador
+
+Instale o controlador de substituição e verifique se o nó voltou a unir a grade.
+
+.Passos
+. Instale o controlador de substituição no aparelho.
++
+.. Vire o controlador ao contrário, de modo a que a tampa amovível fique virada para baixo.
+.. Com a pega do came na posição aberta, deslize o controlador até ao aparelho.
+.. Mova a alavanca do came para a esquerda para bloquear o controlador no lugar.
+.. Volte a colocar os cabos.
+.. Se o controlador original usou DHCP para o endereço IP, localize o endereço MAC na etiqueta na parte de trás do controlador de substituição. Peça ao administrador da rede para associar o DNS/rede e o endereço IP do controlador removido com o endereço MAC do controlador de substituição.
++
+
+NOTE: Se o controlador original não tiver utilizado DHCP para o endereço IP, o novo controlador adotará o endereço IP do controlador removido.
+
+
+
+. Coloque o controlador on-line usando o Gerenciador de sistemas da SANtricity:
++
+.. Selecione *hardware*.
+.. Se o gráfico mostrar as unidades, selecione *Controllers & Components*.
+.. Selecione o controlador que pretende colocar online.
+.. Selecione *Place Online* no menu de contexto e confirme que deseja executar a operação.
+
+
+. À medida que o controlador arranca, verifique os LEDs do controlador.
++
+** O LED âmbar de atenção no controlador liga-se e desliga-se, a menos que haja um erro.
+** Os LEDs do Host Link podem estar ligados, piscando ou desligados, dependendo da interface do host.
+
+
+. Quando o controlador estiver novamente online, confirme se o seu estado é ideal e verifique os LEDs de atenção do compartimento do controlador.
++
+Se o estado não for o ideal ou se algum dos LEDs de atenção estiver aceso, confirme se todos os cabos estão corretamente encaixados e o recipiente do controlador está instalado corretamente. Se necessário, remova e reinstale o recipiente do controlador.
+
++
+
+NOTE: Se não conseguir resolver o problema, contacte o suporte técnico.
+
+. Se necessário, redistribua todos os volumes de volta ao proprietário preferido usando o Gerenciador de sistemas do SANtricity.
++
+.. Selecione *armazenamento de volumes*.
+.. Selecione *mais
+
+
+. Colete dados de suporte para sua matriz de armazenamento usando o Gerenciador de sistema do SANtricity.
++
+.. Selecione *suporte
+.. Selecione *coletar dados de suporte*.
+.. Clique em *Collect*.
++
+O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.7z*.
+
+
+
+. Se colocar o aparelho no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde que o nó reinicie e volte a ligar a grelha. Este processo pode demorar até 20 minutos. Em seguida, no Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
++
+image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+
+
+
+.O que se segue?
+A substituição do controlador está concluída. Pode retomar as operações normais.
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
