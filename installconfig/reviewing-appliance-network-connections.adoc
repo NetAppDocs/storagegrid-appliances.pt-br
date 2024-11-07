@@ -11,7 +11,7 @@ summary: Antes de instalar o dispositivo StorageGRID, você deve entender quais 
 
 
 [role="lead"]
-Antes de instalar o dispositivo StorageGRID, você deve entender quais redes podem ser conetadas ao dispositivo e como as portas em cada controlador são usadas. Os requisitos da rede StorageGRID são explicados na íntegra no https://docs.netapp.com/us-en/storagegrid-118/network/index.html["Diretrizes de rede"^].
+Antes de instalar o dispositivo StorageGRID, você deve entender quais redes podem ser conetadas ao dispositivo e como as portas em cada controlador são usadas. Os requisitos da rede StorageGRID são explicados na íntegra no https://docs.netapp.com/us-en/storagegrid/network/index.html["Diretrizes de rede"^].
 
 Consulte as instruções do seu aparelho para determinar as informações de que necessita:
 
@@ -30,7 +30,7 @@ Ao implantar um dispositivo StorageGRID como nó em um sistema StorageGRID, voc�
 * *Rede de grade para StorageGRID*: A rede de grade é usada para todo o tráfego interno de StorageGRID. Ele fornece conetividade entre todos os nós na grade, em todos os sites e sub-redes. A rede de Grade é necessária.
 * *Rede de administração para StorageGRID*: A rede de administração é uma rede fechada usada para administração e manutenção do sistema. A rede Admin é normalmente uma rede privada e não precisa ser roteável entre sites. A rede de administração é opcional.
 * *Rede de clientes para StorageGRID:* a rede de clientes é uma rede aberta usada para fornecer acesso a aplicativos clientes, incluindo S3 e Swift. A rede do cliente fornece acesso ao protocolo do cliente à grade, de modo que a rede da grade possa ser isolada e protegida. Você pode configurar a rede do cliente para que o dispositivo possa ser acessado por essa rede usando apenas as portas que você escolher abrir. A rede do cliente é opcional.
-* *Rede de gerenciamento para SANtricity* (opcional para dispositivos de armazenamento, não necessária para o SG6100): Essa rede fornece acesso ao Gerenciador de sistemas SANtricity, permitindo que você monitore e gerencie os componentes de hardware no compartimento do controlador de dispositivo e armazenamento. Essa rede de gerenciamento pode ser a mesma rede de administração para StorageGRID ou pode ser uma rede de gerenciamento independente.
+* *Rede de gerenciamento para SANtricity* (opcional para dispositivos de armazenamento, não necessária para o SGF6112): Essa rede fornece acesso ao Gerenciador de sistemas SANtricity, permitindo que você monitore e gerencie os componentes de hardware no compartimento do controlador de dispositivo e armazenamento. Essa rede de gerenciamento pode ser a mesma rede de administração para StorageGRID ou pode ser uma rede de gerenciamento independente.
 * *Rede de gerenciamento BMC* (opcional para SG100, SG110, SG1000, SG1100, SG6000 e SG6100): Essa rede fornece acesso ao controlador de gerenciamento de placa base nos dispositivos SG100, SG1000, SG6000 e SG6100, permitindo que você monitore e gerencie os componentes de hardware no dispositivo. Essa rede de gerenciamento pode ser a mesma rede de administração para StorageGRID ou pode ser uma rede de gerenciamento independente.
 +
 Se a rede de gerenciamento BMC opcional não estiver conetada, alguns procedimentos de suporte e manutenção serão mais difíceis de executar. Você pode deixar a rede de gerenciamento do BMC desconetada, exceto quando necessário para fins de suporte.
@@ -38,4 +38,4 @@ Se a rede de gerenciamento BMC opcional não estiver conetada, alguns procedimen
 
 
 
-NOTE: Para obter informações detalhadas sobre redes StorageGRID, consulte https://docs.netapp.com/us-en/storagegrid-118/network/storagegrid-network-types.html["Tipos de rede StorageGRID"^].
+NOTE: Para obter informações detalhadas sobre redes StorageGRID, consulte https://docs.netapp.com/us-en/storagegrid/network/storagegrid-network-types.html["Tipos de rede StorageGRID"^].

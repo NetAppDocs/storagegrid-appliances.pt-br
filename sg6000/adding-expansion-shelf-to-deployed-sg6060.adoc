@@ -196,7 +196,7 @@ image::../media/appliance_installer_reboot_complete.png[Reinicialização conclu
 +
 .. No Gerenciador de Grade, selecione *NÓS* e verifique se o nó de armazenamento do dispositivo tem um ícone de marca de seleção verde.
 +
-O ícone de marca de seleção verde significa que não há alertas ativos e o nó está conetado à grade. Para obter uma descrição dos ícones de nó, https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorar os estados de conexão do nó"^]consulte .
+O ícone de marca de seleção verde significa que não há alertas ativos e o nó está conetado à grade. Para obter uma descrição dos ícones de nó, https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorar os estados de conexão do nó"^]consulte .
 
 .. Selecione a guia *armazenamento* e confirme se 16 novos armazenamentos de objetos são exibidos na tabela armazenamento de objetos para cada compartimento de expansão adicionado.
 .. Verifique se cada novo compartimento de expansão tem um status de compartimento nominal e um status de configuração de configurado.

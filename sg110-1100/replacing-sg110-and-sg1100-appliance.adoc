@@ -14,7 +14,7 @@ summary: Pode ser necessário substituir o aparelho se não estiver a funcionar 
 Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado.
 
 .Antes de começar
-* Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir.
+* Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir. Verifique as etiquetas anexadas à parte frontal dos aparelhos para confirmar que os números de peça correspondem.
 * Tem etiquetas para identificar cada cabo ligado ao aparelho.
 * Você link:locating-sg110-and-sg1100-in-data-center.html["localizado fisicamente o aparelho"]tem .
 
@@ -42,7 +42,7 @@ Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
 .. Enter: `*run-host-command ipmitool lan print*` Para exibir as configurações atuais do BMC para o dispositivo.
 
 
-. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sgf6112-appliance["Desligue o aparelho"].
+. link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Desligue o aparelho"].
 . Se qualquer uma das interfaces de rede neste dispositivo StorageGRID estiver configurada para DHCP, será necessário atualizar as atribuições permanentes de concessão DHCP nos servidores DHCP para fazer referência aos endereços MAC do dispositivo de substituição. Isso garante que o dispositivo receba os endereços IP esperados.
 +
 Contacte o administrador da rede ou do servidor DHCP para atualizar as atribuições de concessão DHCP permanentes. O administrador pode determinar os endereços MAC do dispositivo de substituição a partir dos logs do servidor DHCP ou inspecionando as tabelas de endereços MAC nos switches aos quais as portas Ethernet do dispositivo estão conetadas.
@@ -93,7 +93,7 @@ CAUTION: Se você deseja manter os dados nas unidades, certifique-se de inserir 
 
 
 . Ligue o aparelho.
-. Se o dispositivo substituído tiver a encriptação da unidade de hardware ativada para as unidades SED, tem de link:optional-enabling-node-encryption.html#access-an-encrypted-drive["introduza a frase-passe de encriptação da unidade"]aceder às unidades encriptadas quando o dispositivo de substituição for iniciado pela primeira vez.
+. Se o dispositivo substituído tiver a encriptação da unidade de hardware ativada para as unidades SED, tem de link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["introduza a frase-passe de encriptação da unidade"]aceder às unidades encriptadas quando o dispositivo de substituição for iniciado pela primeira vez.
 . Aguarde que o aparelho volte a ligar a grelha. Se o aparelho não voltar a juntar-se à grelha, siga as orientações na página inicial do Instalador de dispositivos StorageGRID para resolver quaisquer problemas.
 +
 
@@ -102,7 +102,7 @@ WARNING: Para evitar a perda de dados se o Instalador do dispositivo indicar que
 . Se o dispositivo que você substituiu usou um servidor de gerenciamento de chaves (KMS) para gerenciar chaves de criptografia para criptografia de nó, configuração adicional pode ser necessária antes que o nó possa ingressar na grade. Se o nó não se juntar automaticamente à grade, certifique-se de que essas configurações foram transferidas para o novo dispositivo e configure manualmente quaisquer configurações que não tenham a configuração esperada:
 +
 ** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurar conexões StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
 
 
 . Inicie sessão no aparelho substituído:
@@ -141,8 +141,8 @@ WARNING: Para evitar a perda de dados se o Instalador do dispositivo indicar que
 
 
 .Informações relacionadas
-link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html#view-error-codes["Veja os códigos de inicialização do aparelho"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html#view-error-codes["Veja os códigos de inicialização do aparelho"]
 
 Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.

@@ -37,8 +37,7 @@ NOTE: Se um painel frontal estiver instalado no controlador, pode ser difícil v
 
 
 .Informações relacionadas
-link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verifique o HBA Fibre Channel para substituir"]
+* link:reinstalling-fibre-channel-hba.html#verify-fibre-channel-hba-to-replace["Verifique o HBA Fibre Channel para substituir"]
+* link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+* link:../installconfig/accessing-bmc-interface.html["Acesse a interface BMC"]
 
-link:locating-controller-in-data-center.html["Localize o controlador no data center"]
-
-link:../installconfig/accessing-bmc-interface.html["Acesse a interface BMC"]

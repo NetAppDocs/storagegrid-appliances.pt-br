@@ -3,8 +3,7 @@
 
 
 .Antes de começar
-* Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
-
+Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
 
 
 NOTE: Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.

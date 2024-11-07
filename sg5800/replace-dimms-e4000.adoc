@@ -29,7 +29,7 @@ O nó de armazenamento do dispositivo pode não estar acessível quando você su
 
 * Acesso ao Gerenciador do sistema SANtricity:
 +
-** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
 +
 
 NOTE: Você pode não conseguir acessar o Gerenciador de sistema do SANtricity usando o Gerenciador de Grade durante determinadas etapas deste procedimento. Se o controlador SG5800 estiver desligado, terá de aceder ao Gestor do sistema SANtricity utilizando o seu browser.
@@ -166,12 +166,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Remova DIMMS.]
 
 
  a| 
-image::../media/legend_icon_01.png[ícone de legenda 01]
+image::../media/legend_icon_01.png[Referência de legenda 1]
 | Patilhas do ejetor DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[ícone de legenda 02]
+image::../media/legend_icon_02.png[Referência de legenda 2]
 | DIMMS 
 |===
 . Remova o DIMM de substituição do saco de transporte antiestático, segure o DIMM pelos cantos e alinhe-o com o slot.

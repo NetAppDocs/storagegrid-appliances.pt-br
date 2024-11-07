@@ -161,12 +161,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Remova a bateria do NV
 
 
  a| 
-image::../media/legend_icon_01.png[ícone de legenda 01]
+image::../media/legend_icon_01.png[Referência de legenda 1]
 | Patilha de libertação da bateria 
 
 
  a| 
-image::../media/legend_icon_02.png[ícone de legenda 02]
+image::../media/legend_icon_02.png[Referência de legenda 2]
 | Conetor de alimentação da bateria 
 |===
 
@@ -209,12 +209,12 @@ image::../media/drw_E4000_replace_dimms_IEOPS-865.png[Remova DIMMS.]
 
 
  a| 
-image::../media/legend_icon_01.png[ícone de legenda 01]
+image::../media/legend_icon_01.png[Referência de legenda 1]
 | Patilhas do ejetor DIMM 
 
 
  a| 
-image::../media/legend_icon_02.png[ícone de legenda 02]
+image::../media/legend_icon_02.png[Referência de legenda 2]
 | DIMMS 
 |===
 

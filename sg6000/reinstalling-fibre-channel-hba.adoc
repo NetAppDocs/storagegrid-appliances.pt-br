@@ -25,7 +25,7 @@ Se não tiver a certeza de qual adaptador de barramento de host (HBA) Fibre Chan
 
 NOTE: Se o número de série do dispositivo de armazenamento que contém o HBA Fibre Channel que você está substituindo começar pela letra Q, ele não será listado no Gerenciador de Grade. Você deve verificar as tags anexadas à frente de cada controlador SG6000-CN no data center até encontrar uma correspondência.
 
-* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 
 
 .Passos
@@ -70,10 +70,10 @@ CAUTION: É necessário um desligamento controlado antes de remover o controlado
 
 
 .Sobre esta tarefa
-Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição do HBA Fibre Channel ou substitua o adaptador durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
+Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição do HBA Fibre Channel ou substitua o adaptador durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
 
 
-CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir o HBA Fibre Channel durante uma janela de manutenção agendada. Caso contrário, você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^].
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir o HBA Fibre Channel durante uma janela de manutenção agendada. Caso contrário, você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^].
 
 .Passos
 . Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.

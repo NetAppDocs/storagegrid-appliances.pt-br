@@ -18,15 +18,21 @@ Saiba o que há de novo para os dispositivos StorageGRID.
 
 
 
+== Informações sobre o BMC
+
+Informações detalhadas sobre como usar a interface BMC do StorageGRID Appliance já estão disponíveis. link:./commonhardware/use-bmc.html["Use o controlador de gerenciamento de placa base (BMC) do StorageGRID Appliance"]Consulte .
+
+
+
 == Aparelhos SG5812 e SG5860
 
-Os novos dispositivos StorageGRID SG5812 e SG5860 são plataformas integradas de storage e computação que operam como nós de storage em uma grade StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-appliances/installconfig/hardware-description-sg5800.html["Aparelhos SG5800: Visão geral"] para saber mais.
+Os novos dispositivos StorageGRID SG5812 e SG5860 são plataformas integradas de storage e computação que operam como nós de storage em uma grade StorageGRID. Consulte link:./installconfig/hardware-description-sg5800.html["Aparelhos SG5800: Visão geral"]para saber mais.
 
 
 
 == SG6160 aparelho
 
-O novo dispositivo StorageGRID SG6160 inclui uma controladora de computação e um compartimento de controladora de storage que contém duas controladoras de storage e 60 unidades, bem como duas unidades SSD NVMe para armazenamento em cache. Opcionalmente, é possível adicionar gavetas de expansão de 60 unidades ao SG6160. link:installconfig/hardware-description-sg6100.html["Aparelhos SGF6100: Visão geral"]Consulte para saber mais.
+O novo dispositivo StorageGRID SG6160 inclui uma controladora de computação e um compartimento de controladora de storage que contém duas controladoras de storage e 60 unidades, bem como duas unidades SSD NVMe para armazenamento em cache. Opcionalmente, é possível adicionar gavetas de expansão de 60 unidades ao SG6160. link:./installconfig/hardware-description-sg6100.html["Aparelhos SGF6100: Visão geral"]Consulte para saber mais.
 
 
 

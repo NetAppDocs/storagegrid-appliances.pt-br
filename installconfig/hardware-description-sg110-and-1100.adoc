@@ -43,6 +43,39 @@ As duas unidades de estado sólido (SSDs), indicadas pelo contorno laranja, são
 
 Os restantes slots de unidade estão em branco.
 
+Esta figura mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SG110 e do SG1100. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.
+
+image::../media/q2024_rear_leds.png[LEDs traseiros SG110 e SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===
 
 
 == Conetores SG110
@@ -215,13 +248,13 @@ Os exemplos a seguir descrevem como você pode maximizar os recursos do disposit
 * Use dois dispositivos SG110 ou dois SG1100 para fornecer serviços de gateway configurando-os como nós de gateway.
 +
 
-IMPORTANT: Não implante os dispositivos de serviço SG110 e SG1100 no mesmo site. Pode resultar em performance imprevisível.
+IMPORTANT: Misturar dispositivos de serviços com diferentes níveis de performance no mesmo local, como um SG100 ou SG110 com um SG1000 ou SG1100, pode causar resultados imprevisíveis e inconsistentes ao usar vários nós em um grupo de alta disponibilidade ou ao equilibrar a carga do cliente em vários dispositivos de serviços
 
 * Use dois dispositivos SG110 ou dois SG1100 para fornecer redundância de alguns serviços de administração de rede. Faça isso configurando cada dispositivo como nós de administração.
 * Use dois dispositivos SG110 ou dois SG1100 para fornecer serviços de balanceamento de carga e modelagem de tráfego altamente disponíveis acessados por meio de um ou mais endereços IP virtuais. Faça isso configurando os dispositivos como qualquer combinação de nós de administrador ou nós de gateway e adicionando ambos os nós ao mesmo grupo de HA.
 +
 
-IMPORTANT: Se você usar nós de administrador e nós de gateway no mesmo grupo de HA, a porta somente nó de administrador não fará failover. Consulte as instruções para https://docs.netapp.com/us-en/storagegrid-118/admin/configure-high-availability-group.html["Configuração de grupos de HA"^].
+IMPORTANT: Se você usar nós de administrador e nós de gateway no mesmo grupo de HA, a porta somente nó de administrador não fará failover. Consulte as instruções para https://docs.netapp.com/us-en/storagegrid/admin/configure-high-availability-group.html["Configuração de grupos de HA"^].
 
 
 

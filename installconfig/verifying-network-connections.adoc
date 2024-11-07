@@ -35,7 +35,7 @@ Por exemplo, você pode testar o caminho entre o nó do dispositivo e um nó em 
 Se a conexão de rede for válida, a mensagem "Teste de ping aprovado" será exibida, com a saída do comando ping listada.
 
 +
-image::../media/ping_test_passed.png[Captura de tela de resultados de teste de ping no instalador de dispositivos StorageGRID Webscale]
+image::../media/ping_test_passed.png[Captura de tela dos resultados do teste de ping no instalador do dispositivo StorageGRID]
 
 
 

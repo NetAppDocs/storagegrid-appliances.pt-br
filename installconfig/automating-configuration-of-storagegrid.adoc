@@ -42,7 +42,7 @@ Arquivo de configuração em branco para uso com o script
 Você pode usar o `configure-storagegrid.py` script Python e o `configure-storagegrid.json` arquivo de configuração para automatizar a configuração do seu sistema StorageGRID.
 
 
-NOTE: Também pode configurar o sistema utilizando a https://docs.netapp.com/us-en/storagegrid-118/primer/exploring-grid-manager.html["Gerenciador de grade"^] ou a link:overview-of-installation-rest-apis.html["API de instalação"].
+NOTE: Também pode configurar o sistema utilizando a https://docs.netapp.com/us-en/storagegrid/primer/exploring-grid-manager.html["Gerenciador de grade"^] ou a link:overview-of-installation-rest-apis.html["API de instalação"].
 
 .Passos
 . Faça login na máquina Linux que você está usando para executar o script Python.

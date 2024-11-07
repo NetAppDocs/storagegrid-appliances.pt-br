@@ -1,5 +1,13 @@
 ---
 indexpage:
+  title: Instale o hardware do dispositivo StorageGRID
+  summary: Para adicionar um dispositivo de storage ou serviços ao seu sistema StorageGRID,
+    instale e configure o hardware do dispositivo. Em seguida, você instala o software
+    StorageGRID em cada dispositivo e coneta o nó do dispositivo à grade.
+  keywords: storagegrid appliance install, storagegrid hardware install
+  lead: Para adicionar um dispositivo de storage ou serviços ao seu sistema StorageGRID,
+    instale e configure o hardware do dispositivo. Em seguida, você instala o software
+    StorageGRID em cada dispositivo e coneta o nó do dispositivo à grade.
   tiles:
   - title: Início rápido
     links:

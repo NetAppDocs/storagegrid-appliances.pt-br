@@ -57,7 +57,7 @@ CAUTION: Não utilize força excessiva ao fechar a pega.
 Quando a unidade estiver totalmente inserida, você ouvirá um clique.
 
 +
-Quando ambas as unidades SSD estão funcionando normalmente, o sistema restaurará automaticamente a funcionalidade de cache de leitura. Você pode https://docs.netapp.com/us-en/storagegrid-118/monitor/running-diagnostics.html["execute o diagnóstico"^] monitorar a taxa de acerto do cache de leitura. Como o cache foi reconstruído, a taxa de acertos pode ser baixa inicialmente, mas deve aumentar com o tempo, pois o cache é repreenchido pelos clientes que acessam dados de objeto.
+Quando ambas as unidades SSD estão funcionando normalmente, o sistema restaurará automaticamente a funcionalidade de cache de leitura. Você pode https://docs.netapp.com/us-en/storagegrid/monitor/running-diagnostics.html["execute o diagnóstico"^] monitorar a taxa de acerto do cache de leitura. Como o cache foi reconstruído, a taxa de acertos pode ser baixa inicialmente, mas deve aumentar com o tempo, pois o cache é repreenchido pelos clientes que acessam dados de objeto.
 
 
 

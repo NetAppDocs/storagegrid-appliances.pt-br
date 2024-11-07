@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Implante um nó de dispositivo
+  summary: Implante um nó do dispositivo StorageGRID e verifique sua operação.
+  keywords: storagegrid deployment, deploy storagegrid
+  lead: Implante um nó do dispositivo StorageGRID e verifique sua operação.
   tiles:
   - title: Implantar o dispositivo
     links:

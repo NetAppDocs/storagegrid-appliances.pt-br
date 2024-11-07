@@ -14,8 +14,7 @@ summary: Pode alterar a configuração da ligação Ethernet do dispositivo, inc
 Pode alterar a configuração da ligação Ethernet do dispositivo, incluindo o modo de ligação à porta, o modo de ligação à rede e a velocidade da ligação.
 
 .Antes de começar
-* Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
-
+Você link:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"]tem .
 
 
 NOTE: Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode tornar o dispositivo indisponível para acesso remoto.

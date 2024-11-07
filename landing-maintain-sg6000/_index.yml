@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Mantenha o hardware do dispositivo de storage SG6000
+  summary: Mantenha o hardware do seu dispositivo de storage SG6000.
+  keywords: maintain storagegrid sg6000
+  lead: Mantenha o hardware do seu dispositivo de storage SG6000.
   tiles:
   - title: Procedimentos realizados frequentemente
     links:
-    - title: Ligue ou desligue o LED de localização
+    - title: Ligue ou desligue o LED de identificação
       url: "../sg6000/turning-controller-identify-led-on-and-off.html"
     - title: Localize o dispositivo no data center
       url: "../sg6000/locating-controller-in-data-center.html"
@@ -13,8 +17,10 @@ indexpage:
       url: "../sg6000/changing-link-configuration-of-sg6000-cn-controller.html"
     - title: Atualize o SANtricity
       url: "../sg6000/upgrading-santricity-os-on-storage-controllers.html"
-    - title: Atualize o firmware da unidade
-      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager.html"
+    - title: Atualizar o firmware da unidade (método online)
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Atualizar firmware da unidade (método offline)
+      url: "../sg6000/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
   - title: Procedimentos de rack
     links:
     - title: Substitua o controlador no rack

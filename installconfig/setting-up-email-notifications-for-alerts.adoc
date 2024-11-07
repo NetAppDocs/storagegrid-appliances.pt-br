@@ -14,10 +14,51 @@ summary: Se quiser que as notificações por e-mail sejam enviadas quando ocorre
 Se quiser que as notificações por e-mail sejam enviadas quando ocorrerem alertas, use a interface BMC para configurar as configurações SMTP, usuários, destinos de LAN, políticas de alerta e filtros de eventos.
 
 
-NOTE: As definições do BMC efetuadas por este procedimento poderão não ser preservadas se o controlador ou o dispositivo de serviços SG6000-CN falhar e tiver de ser substituído. Certifique-se de que tem um registo de todas as definições aplicadas, para que possam ser facilmente reaplicadas após uma substituição de hardware, se necessário.
+NOTE: As configurações do BMC feitas por este procedimento podem não ser preservadas se um controlador ou dispositivo falhar e tiver que ser substituído. Certifique-se de que tem um registo de todas as definições aplicadas, para que possam ser facilmente reaplicadas após uma substituição de hardware, se necessário.
 
+[role="tabbed-block"]
+====
+.StorageGRID 11,9 e posterior
+--
 .Antes de começar
-Você sabe como acessar o painel do BMC.
+Você sabe como link:../installconfig/accessing-bmc-interface.html["Acesse o painel do BMC"].
+
+.Sobre esta tarefa
+Na interface do BMC, use as opções *Gerenciamento do Usuário* e *filtros de evento da Plataforma* na página Configurações para configurar notificações por e-mail.
+
+Estas instruções mostram a versão mais recente do firmware BMC disponível para alguns dispositivos StorageGRID. O seu dispositivo StorageGRID pode ter uma versão de firmware BMC ligeiramente diferente.
+
+* O firmware do BMC é atualizado durante as atualizações de software do StorageGRID. Se não estiver a executar a versão mais recente do software StorageGRID, pode atualizar o dispositivo para a versão mais recente do StorageGRID para instalar o https://docs.netapp.com/us-en/storagegrid/upgrade/how-your-system-is-affected-during-upgrade.html#appliance-firmware-is-upgraded["Versão de firmware BMC mais recente disponível para o seu aparelho"].
+* Se o BMC for diferente antes ou depois de uma atualização do StorageGRID:
++
+** Consulte as instruções no separador StorageGRID 11,8.
+** link:../commonhardware/use-bmc.html["Use o StorageGRID BMC"] Também pode ter informações para ajudá-lo a adaptar estas instruções para a sua versão do BMC.
+
+
+
+
+.Passos
+. Configure as notificações por e-mail como um ou mais destinos de LAN.
++
+.. No painel do BMC, selecione *Configurações* > *filtros de evento da plataforma* > *Destinos da LAN*.
+.. Para tipo de destino, selecione *e-mail*.
+.. Selecione um Nome de Usuário do BMC para receber o alerta de e-mail da lista de usuários do BMC. O e-mail de alerta será enviado para o endereço de e-mail configurado para este usuário. NOTA: Para configurar utilizadores do BMC, selecione *Definições* > *Gestão de utilizadores*. Consulte a secção Gestão de utilizadores da https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Manual do utilizador do BMC"^] para obter mais informações.
+.. Insira um assunto de e-mail e uma mensagem de e-mail para o alerta de e-mail.
++
+
+NOTE: Um assunto de e-mail e uma mensagem de e-mail não são usados para usuários de e-mail do formato AMI.
+
+.. Selecione *Guardar*.
+
+
+. Consulte a seção filtros de evento da Plataforma do https://kb.netapp.com/hybrid/StorageGRID/Platforms/How_to_use_StorageGRID_Appliance_BMC_with_vendor_supplied_user_guide["Manual do utilizador do BMC"^] para obter informações sobre como usar o BMC para configurar políticas de alerta e filtros de evento.
+
+
+--
+.StorageGRID 11,8
+--
+.Antes de começar
+Você sabe como link:../installconfig/accessing-bmc-interface.html["Acesse o painel do BMC"].
 
 .Sobre esta tarefa
 Na interface do BMC, você usa as opções *Configurações SMTP*, *Gerenciamento de usuários* e *filtros de evento da plataforma* na página Configurações para configurar notificações por e-mail.
@@ -25,7 +66,7 @@ Na interface do BMC, você usa as opções *Configurações SMTP*, *Gerenciament
 image::../media/bmc_settings_menu.png[Menu Definições do BMC]
 
 .Passos
-. link:configuring-snmp-settings-for-bmc.html["Configure as definições SNMP para BMC"].
+. Configure as configurações SMTP para BMC.
 +
 .. Selecione *Definições* > *Definições SMTP*.
 .. Para a ID de e-mail do remetente, introduza um endereço de e-mail válido.
@@ -82,3 +123,6 @@ O endereço de e-mail que você configura para um usuário é o endereço para o
 
 
 
+
+--
+====

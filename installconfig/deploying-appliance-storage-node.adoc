@@ -38,8 +38,8 @@ NOTE: Se você precisar implantar vários nós de appliance de uma só vez, voc�
 
 * Se você estiver executando uma operação de expansão ou recuperação, siga as instruções apropriadas:
 +
-** Para adicionar um nó de storage do dispositivo a um sistema StorageGRID existente, consulte as instruções para https://docs.netapp.com/us-en/storagegrid-118/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adicionando nós de grade"^].
-** Para implantar um nó de storage de dispositivos como parte de uma operação de recuperação, consulte as https://docs.netapp.com/us-en/storagegrid-118/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperando um nó de storage de dispositivo"^]instruções .
+** Para adicionar um nó de storage do dispositivo a um sistema StorageGRID existente, consulte as instruções para https://docs.netapp.com/us-en/storagegrid/expand/adding-grid-nodes-to-existing-site-or-adding-new-site.html["adicionando nós de grade"^].
+** Para implantar um nó de storage de dispositivos como parte de uma operação de recuperação, consulte as https://docs.netapp.com/us-en/storagegrid/maintain/recovering-storagegrid-appliance-storage-node.html["Recuperando um nó de storage de dispositivo"^]instruções .
 
 
 
@@ -50,8 +50,14 @@ NOTE: Se você precisar implantar vários nós de appliance de uma só vez, voc�
 +
 A página inicial do instalador do dispositivo StorageGRID é exibida.
 
+. Selecione o *tipo de nó*. Para obter mais informações, https://docs.netapp.com/us-en/storagegrid/primer/what-storage-node-is.html#types-of-storage-nodes["Tipos de nós de storage"]consulte .
 +
-image::../media/appliance_installer_home_start_installation_enabled.gif[Página inicial do Instalador de dispositivos para outros tipos de nós (além de nós de administração)]
+
+NOTE: Somente metadados podem ser selecionados somente durante a implantação do dispositivo. Se apenas metadados estiver selecionado como o tipo nó de armazenamento, ele não poderá ser alterado depois que o dispositivo for implantado.
+
+. No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.
++
+O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.
 
 . Na seção *conexão do nó de administração principal*, determine se você precisa especificar o endereço IP do nó de administração principal.
 +
@@ -86,10 +92,6 @@ Detecção automática de todos os nós de administração principal conetados
 
 
 |===
-. No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.
-+
-O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.
-
 . Na seção *Instalação*, confirme se o estado atual é "Pronto para iniciar a instalação `_node name_` na grade com nó Admin principal `_admin_ip_`" e se o botão *Iniciar instalação* está ativado.
 +
 Se o botão *Start Installation* (Iniciar instalação) não estiver ativado, poderá ser necessário alterar a configuração da rede ou as definições da porta. Para obter instruções, consulte as instruções de manutenção do seu aparelho.

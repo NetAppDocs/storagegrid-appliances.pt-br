@@ -17,7 +17,7 @@ O LED de identificação azul na parte frontal e traseira do controlador pode se
 Você tem o endereço IP BMC do controlador que deseja identificar.
 
 .Passos
-. Acesse a interface do Appliance BMC.
+. link:../installconfig/accessing-bmc-interface.html["Acesse a interface do Appliance BMC"].
 . Selecione *identificação do servidor*.
 +
 É selecionado o estado atual do LED Identify.
@@ -37,6 +37,6 @@ NOTE: Se um painel frontal estiver instalado no controlador, pode ser difícil v
 
 
 .Informações relacionadas
-link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+* link:locating-controller-in-data-center.html["Localize o controlador no data center"]
+* link:../installconfig/accessing-bmc-interface.html["Acesse a interface BMC"]
 
-link:../installconfig/accessing-bmc-interface.html["Acesse a interface BMC"]

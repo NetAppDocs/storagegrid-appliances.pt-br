@@ -15,7 +15,7 @@ Você deve acessar o Instalador do StorageGRID Appliance para verificar a versã
 
 .Antes de começar
 * Você está usando qualquer cliente de gerenciamento que possa se conetar à rede de administração do StorageGRID ou tem um laptop de serviço.
-* O cliente ou laptop de serviço tem um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* O cliente ou laptop de serviço tem um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * O dispositivo de serviços ou o controlador do dispositivo de armazenamento está ligado a todas as redes StorageGRID que pretende utilizar.
 * Você conhece o endereço IP, o gateway e a sub-rede do dispositivo de serviços ou do controlador do dispositivo de armazenamento nessas redes.
 * Configurou os comutadores de rede que pretende utilizar.
@@ -110,7 +110,7 @@ O alerta não aparecerá na próxima vez que você acessar este URL.
 A página inicial do instalador do dispositivo StorageGRID é exibida. As informações e as mensagens mostradas quando você acessa esta página pela primeira vez dependem de como o dispositivo está conetado atualmente às redes StorageGRID. Podem aparecer mensagens de erro que serão resolvidas em etapas posteriores.
 
 +
-image::../media/appliance_installer_home_5700_5600.png[Captura de ecrã da parte superior da página inicial do instalador de dispositivos StorageGRID Webscale]
+image::../media/appliance_installer_home_5700_5600.png[Captura de tela da parte superior da página inicial do Instalador de dispositivos StorageGRID]
 
 
 

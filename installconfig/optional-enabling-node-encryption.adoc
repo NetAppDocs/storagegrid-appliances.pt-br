@@ -19,7 +19,7 @@ Você pode habilitar a criptografia nos níveis de nó e disco para proteger os 
 
 Você pode executar ambos os níveis de criptografia em unidades compatíveis para obter segurança adicional.
 
-Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de criptografia StorageGRID"^] para obter informações sobre todos os métodos de criptografia disponíveis para dispositivos StorageGRID.
+Consulte https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de criptografia StorageGRID"^] para obter informações sobre todos os métodos de criptografia disponíveis para dispositivos StorageGRID.
 
 
 
@@ -30,7 +30,7 @@ Se você ativar a criptografia de nó, os discos do seu dispositivo podem ser pr
 Se você estiver usando o ConfigBuilder para gerar um arquivo JSON, você poderá habilitar a criptografia de nó automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
 
 .Antes de começar
-Reveja as informações https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurando o KMS"^] sobre o .
+Reveja as informações https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando o KMS"^] sobre o .
 
 .Sobre esta tarefa
 Um dispositivo com criptografia de nó ativada se coneta ao servidor de gerenciamento de chaves externas (KMS) configurado para o site StorageGRID. Cada cluster KMS (ou KMS) gerencia as chaves de criptografia para todos os nós de dispositivo no local. Essas chaves criptografam e descriptografam os dados em cada disco em um dispositivo que tem criptografia de nó ativada.
@@ -42,7 +42,7 @@ Um KMS pode ser configurado no Gerenciador de Grade antes ou depois que o dispos
 
 
 
-CAUTION: Quando um dispositivo é instalado com criptografia de nó ativada, uma chave temporária é atribuída. Os dados no dispositivo não são protegidos até que o dispositivo esteja conetado ao sistema de gerenciamento de chaves (KMS) e uma chave de segurança KMS esteja definida. Consulte https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html["Descrição geral da configuração do dispositivo KMS"^] para obter informações adicionais.
+CAUTION: Quando um dispositivo é instalado com criptografia de nó ativada, uma chave temporária é atribuída. Os dados no dispositivo não são protegidos até que o dispositivo esteja conetado ao sistema de gerenciamento de chaves (KMS) e uma chave de segurança KMS esteja definida. Consulte https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descrição geral da configuração do dispositivo KMS"^] para obter informações adicionais.
 
 Sem a chave KMS necessária para descriptografar o disco, os dados no dispositivo não podem ser recuperados e são efetivamente perdidos. Este é o caso sempre que a chave de descriptografia não pode ser recuperada do KMS. A chave fica inacessível se um cliente limpar a configuração do KMS, uma chave KMS expira, a conexão com o KMS é perdida ou o dispositivo é removido do sistema StorageGRID onde suas chaves KMS são instaladas.
 
@@ -107,7 +107,7 @@ A criptografia de unidade não se aplica a unidades gerenciadas pelo SANtricity.
 Você pode ativar a criptografia de unidade durante a instalação inicial do dispositivo antes de carregar o Grid Manager. Você também pode ativar a criptografia de nó ou alterar sua senha colocando o dispositivo no modo de manutenção.
 
 .Antes de começar
-Reveja as informações https://docs.netapp.com/us-en/storagegrid-118/admin/reviewing-storagegrid-encryption-methods.html["Métodos de criptografia StorageGRID"^] sobre o .
+Reveja as informações https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de criptografia StorageGRID"^] sobre o .
 
 .Sobre esta tarefa
 Uma frase-passe é definida quando a encriptação da unidade está ativada inicialmente. Se um nó de computação for substituído ou se um SED criptografado for movido para um novo nó de computação, você deverá digitar novamente a senha manualmente.

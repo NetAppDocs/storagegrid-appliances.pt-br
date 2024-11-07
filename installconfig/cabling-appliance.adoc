@@ -987,8 +987,11 @@ Liga-se à rede onde acede à interface BMC.
  a| 
 2
  a| 
-Quatro portas de rede 10/25-GbE no dispositivo
+Quatro portas de rede no controlador SG6100-CN
  a| 
+* Quatro portas de rede 10/25-GbE no dispositivo
+* Quatro portas de rede 10/25/40/100-GbE com SKU de NIC 100g opcional (somente SG6160)
+
  a| 
 Conete-se à rede de grade e à rede de cliente para StorageGRID. Consulte link:gathering-installation-information-sg6100.html#port-bond-modes["Modos de ligação de porta (SG6100)"]
 

@@ -13,7 +13,7 @@ summary: Para garantir o funcionamento ideal do controlador de storage, é neces
 [role="lead"]
 Para garantir o funcionamento ideal do controlador de storage, é necessário atualizar para a versão de manutenção mais recente do SANtricity os qualificado para o seu dispositivo StorageGRID.
 
-Determine a versão mais recente do sistema operacional SANtricity que foi qualificada para uso no seu dispositivo StorageGRID consultando https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"] e baixando-a, se necessário.
+Determine a versão mais recente do sistema operacional SANtricity que foi qualificada para uso no seu dispositivo StorageGRID consultando https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^] e baixando-a, se necessário.
 
 Transfira o novo ficheiro de software do sistema operativo SANtricity a partir https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^]do .
 
@@ -21,7 +21,7 @@ Use um dos seguintes procedimentos com base na versão do SANtricity os atualmen
 
 * Você pode usar o Gerenciador de Grade para executar a atualização.
 +
-link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]
 
 * Pode utilizar o modo de manutenção para efetuar a atualização.
 +
@@ -29,6 +29,6 @@ link:upgrading-santricity-os-on-e4000-controller-using-maintenance-mode.html["At
 
 +
 
-NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
+NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
 
 

@@ -16,7 +16,7 @@ Para garantir que o acesso entre o Instalador de dispositivos StorageGRID e outr
 .Sobre esta tarefa
 Usando a lista de portas fornecida no Instalador de dispositivos StorageGRID, você pode testar a conetividade entre o dispositivo e os outros nós da rede de Grade.
 
-Além disso, você pode testar a conetividade nas redes Admin e Client e nas portas UDP, como as usadas para servidores NFS ou DNS externos. Para obter uma lista dessas portas, consulte o https://docs.netapp.com/us-en/storagegrid-118/network/network-port-reference.html["referência da porta de rede"^].
+Além disso, você pode testar a conetividade nas redes Admin e Client e nas portas UDP, como as usadas para servidores NFS ou DNS externos. Para obter uma lista dessas portas, consulte o https://docs.netapp.com/us-en/storagegrid/network/network-port-reference.html["referência da porta de rede"^].
 
 
 NOTE: As portas de rede de grade listadas na tabela de conetividade de portas são válidas apenas para o StorageGRID versão 11,7 ou posterior. Para verificar quais portas estão corretas para cada tipo de nó, você deve sempre consultar as diretrizes de rede para sua versão do StorageGRID.

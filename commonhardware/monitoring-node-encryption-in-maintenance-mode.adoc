@@ -13,7 +13,7 @@ summary: 'Se você ativou a criptografia de nó para o dispositivo durante a ins
 [role="lead"]
 Se você ativou a criptografia de nó para o dispositivo durante a instalação, poderá monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).
 
- https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Configurar servidores de gerenciamento de chaves"^]Consulte para obter informações sobre a implementação do KMS para dispositivos StorageGRID.
+ https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurar servidores de gerenciamento de chaves"^]Consulte para obter informações sobre a implementação do KMS para dispositivos StorageGRID.
 
 .Antes de começar
 * Você ativou a criptografia de nó para o dispositivo durante a instalação. Não é possível ativar a criptografia de nó após a instalação do dispositivo.
@@ -32,7 +32,7 @@ A página criptografia do nó inclui três seções:
 ** O estado de encriptação mostra se a encriptação do nó está ativada ou desativada para o dispositivo.
 ** Detalhes do servidor de gerenciamento de chaves mostra informações sobre o KMS sendo usado para criptografar o dispositivo. Você pode expandir as seções de certificado de servidor e cliente para exibir detalhes e status do certificado.
 +
-*** Para resolver problemas com os próprios certificados, como a renovação de certificados expirados, consulte o https://docs.netapp.com/us-en/storagegrid-118/admin/kms-configuring.html["Instruções para configurar o KMS"^].
+*** Para resolver problemas com os próprios certificados, como a renovação de certificados expirados, consulte o https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Instruções para configurar o KMS"^].
 *** Se houver problemas inesperados ao se conetar aos hosts do KMS, verifique se o link:../commonhardware/checking-dns-server-configuration.html["Os servidores DNS estão corretos"] e o link:../installconfig/configuring-network-links.html["a rede do dispositivo está configurada corretamente"].
 *** Se você não conseguir resolver os problemas do certificado, entre em Contato com o suporte técnico.
 
@@ -73,7 +73,7 @@ Se precisar preservar dados no dispositivo, execute um procedimento de desativa�
 
 CAUTION: Quando o KMS é eliminado, os dados no aparelho serão eliminados permanentemente e deixarão de estar acessíveis. Estes dados não são recuperáveis.
 
-https://docs.netapp.com/us-en/storagegrid-118/maintain/grid-node-decommissioning.html["Desativar o nó"^] Para mover quaisquer dados que ele contenha para outros nós no StorageGRID.
+https://docs.netapp.com/us-en/storagegrid/maintain/grid-node-decommissioning.html["Desativar o nó"^] Para mover quaisquer dados que ele contenha para outros nós no StorageGRID.
 
 .Sobre esta tarefa
 A limpeza da configuração do KMS do appliance desativa a criptografia do nó, removendo a associação entre o nó do appliance e a configuração do KMS para o site do StorageGRID. Os dados no dispositivo são então excluídos e o dispositivo é deixado em um estado de pré-instalação. Este processo não pode ser revertido.
@@ -130,4 +130,4 @@ A criptografia de nó não pode ser reativada no dispositivo até que seja reins
 
 
 .Depois de terminar
-Depois de o aparelho reiniciar e verificar se o KMS foi limpo e se o aparelho está num estado de pré-instalação, pode remover fisicamente o aparelho do sistema StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instruções para preparar o aparelho para reinstalação"^] .
+Depois de o aparelho reiniciar e verificar se o KMS foi limpo e se o aparelho está num estado de pré-instalação, pode remover fisicamente o aparelho do sistema StorageGRID. Consulte https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["instruções para preparar o aparelho para reinstalação"^] .

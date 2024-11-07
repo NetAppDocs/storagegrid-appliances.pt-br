@@ -14,7 +14,7 @@ summary: Deve colocar o aparelho no modo de manutenção antes de efetuar proced
 Deve colocar o aparelho no modo de manutenção antes de efetuar procedimentos de manutenção específicos.
 
 .Antes de começar
-* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Você tem a permissão Manutenção ou Acesso root. Para obter detalhes, consulte as instruções para administrar o StorageGRID.
 
 

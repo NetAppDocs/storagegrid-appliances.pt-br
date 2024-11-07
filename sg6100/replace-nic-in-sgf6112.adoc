@@ -29,16 +29,16 @@ Use estes procedimentos para:
 * Você tem link:locating-sgf6112-in-data-center.html["Fisicamente localizado o aparelho SGF6112 ou o controlador SG6100-CN"] onde você está substituindo a NIC no data center.
 +
 
-NOTE: É necessário um link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["corte de funcionamento controlado do aparelho"]antes de retirar o aparelho do rack.
+NOTE: É necessário um link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["corte de funcionamento controlado do aparelho"]antes de retirar o aparelho do rack.
 
 * Desligou todos os cabos e link:reinstalling-sgf6112-cover.html["a tampa do aparelho foi removida"].
 
 
 .Sobre esta tarefa
-Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
+Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
 
 
-CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
 
 .Passos
 . Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
@@ -47,7 +47,7 @@ CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto
 As três placas de rede no aparelho estão em dois conjuntos de riser nas posições no chassi mostrado na fotografia (parte traseira do aparelho com a tampa superior removida mostrada):
 
 +
-image::../media/sgf6112-nic-positions.jpg[Localizações da NIC]
+image::../media/sgf6112-nic-positions.png[Localizações da NIC]
 
 +
 [cols="1a,2a,4a"]

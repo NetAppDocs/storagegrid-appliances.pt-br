@@ -20,7 +20,7 @@ Retire o SGF6112 ou SG6100-CN de um gabinete ou rack para acessar a tampa superi
 .Antes de começar
 * Você tem etiquetas para identificar cada cabo que está conetado ao SGF6112 ou SG6100-CN.
 * Você tem link:locating-sgf6112-in-data-center.html["Fisicamente localizado o SGF6112 ou SG6100-CN"] onde está realizando manutenção no data center.
-* Você link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Encerrar o SGF6112 ou o SG6100-CN"]tem .
+* Você link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Encerrar o SGF6112 ou o SG6100-CN"]tem .
 +
 
 CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
@@ -81,4 +81,4 @@ NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise no
 
 
 .Depois de terminar
-link:power-sgf6112-off-on.html#power-on-sgf6112-and-verify-operation["Reinicie o aparelho"].
+link:power-sgf6112-off-on.html#power-on-sgf6112-or-sg6100-cn-and-verify-operation["Reinicie o aparelho"].

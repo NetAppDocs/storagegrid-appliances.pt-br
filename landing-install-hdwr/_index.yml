@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: Instale o hardware do dispositivo
+  summary: Instale o hardware do aparelho em seu local.
+  keywords: storagegrid install hardware, storagegrid install appliance
+  lead: Instale o hardware do aparelho em seu local.
   tiles:
   - title: Instale o dispositivo de armazenamento no gabinete ou rack
     links:

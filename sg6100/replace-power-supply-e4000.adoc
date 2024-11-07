@@ -1,5 +1,5 @@
 ---
-permalink: sg6100/replace-power-supply.html 
+permalink: sg6100/replace-power-supply-e4000.html 
 sidebar: sidebar 
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace power supply, replacing E4000 power supply, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rever os tipos e requisitos do recipiente E4000. 
@@ -33,7 +33,7 @@ NOTE: Não misture PSUs dos diferentes tipos de tensão. Sempre substitua como p
 ** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
 ** Acesso ao Gerenciador do sistema SANtricity:
 +
-*** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+*** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
 *** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 
@@ -64,7 +64,7 @@ Você pode encontrar essas informações na área Detalhes do Recovery Guru, ou 
 
 +
 .. Selecione *hardware*.
-.. Observe os ícones de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""] e ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""]à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.
+.. Observe os ícones de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ícone de alimentação"] e ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Ícone da ventoinha"]à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.
 +
 Se um componente tiver falhado, um ou ambos os ícones ficam vermelhos.
 

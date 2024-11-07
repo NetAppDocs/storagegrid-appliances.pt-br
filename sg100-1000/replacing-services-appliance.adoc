@@ -14,7 +14,7 @@ summary: Pode ser necessário substituir o aparelho se não estiver a funcionar 
 Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado.
 
 .Antes de começar
-* Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir.
+* Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir. Verifique as etiquetas anexadas à parte frontal dos aparelhos para confirmar que os números de peça correspondem.
 * Tem etiquetas para identificar cada cabo ligado ao aparelho.
 * Você link:locating-controller-in-data-center.html["localizado fisicamente o aparelho"]tem .
 
@@ -112,6 +112,6 @@ Siga as instruções fornecidas para a substituição destes componentes.
 Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
 
 .Informações relacionadas
-link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Veja os códigos de inicialização do aparelho"]
 
-link:../installconfig/troubleshooting-hardware-installation-sg100-and-sg1000.html#view-boot-codes["Veja os códigos de inicialização do aparelho"]

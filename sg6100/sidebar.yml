@@ -27,8 +27,6 @@ entries:
       url: "/sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
     - title: Solucionar erros de atualização do firmware da unidade
       url: "/sg6100/troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html"
-  - title: Use a guia Gerenciar unidades
-    url: "/sg6100/manage-drives-tab.html"
   - title: Ligue e desligue o LED de identificação
     url: "/sg6100/turning-sgf6112-identify-led-on-and-off.html"
   - title: Localize o dispositivo no data center
@@ -70,7 +68,7 @@ entries:
     - title: NIC interno (SGF6112 e SG6160)
       url: "/sg6100/replace-nic-in-sgf6112.html"
     - title: Placa de rede externa (SG6160)
-      url: "/sg6100/replace-ocp-nic-in-sg6100-cn.html"
+      url: "/sg6100/replace-ocp-nic-sg6100-cn.html"
   - title: Substitua a bateria CMOS
     url: "/sg6100/replace-cmos-in-sgf6112.html"
   - title: Substitua os DIMMs

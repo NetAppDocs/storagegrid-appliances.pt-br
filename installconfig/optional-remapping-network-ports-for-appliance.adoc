@@ -14,11 +14,10 @@ summary: Opcionalmente, é possível remapear as portas internas em um nó de di
 Opcionalmente, é possível remapear as portas internas em um nó de dispositivo para diferentes portas externas. Por exemplo, talvez seja necessário remapear as portas devido a um problema de firewall.
 
 .Antes de começar
-* Você acessou anteriormente o Instalador de dispositivos StorageGRID.
-
+Você acessou anteriormente o Instalador de dispositivos StorageGRID.
 
 .Sobre esta tarefa
-Não é possível usar portas remapeadas para pontos de extremidade do balanceador de carga. Se for necessário remover uma porta remapeada, siga as etapas em https://docs.netapp.com/us-en/storagegrid-118/maintain/removing-port-remaps.html["Remova os remapas de portas"^].
+Não é possível usar portas remapeadas para pontos de extremidade do balanceador de carga. Se for necessário remover uma porta remapeada, siga as etapas em https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Remova os remapas de portas"^].
 
 .Passos
 . No Instalador de dispositivos StorageGRID, selecione *Configurar rede* > *Remapear portas*.

@@ -30,7 +30,7 @@ Chaves de parafusos::
 Pulseira antiestática::
 +
 --
-* https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Navegador da Web suportado"^]
+* https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Navegador da Web suportado"^]
 * Cliente SSH, como PuTTY
 * Porta de 1 GbE (RJ-45)
 

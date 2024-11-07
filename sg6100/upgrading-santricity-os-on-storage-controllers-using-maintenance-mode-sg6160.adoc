@@ -41,7 +41,7 @@ CAUTION: A atualização de mais de um dispositivo StorageGRID por vez pode caus
 
 CAUTION: A NVSRAM é específica do dispositivo StorageGRID. Não utilize a transferência NVSRAM padrão.
 
-. Siga as instruções no guia _Atualizando o SANtricity os_ ou na ajuda on-line do Gerenciador de sistema do SANtricity para atualizar o firmware e a NVSRAM.
+. Siga as instruções na https://docs.netapp.com/us-en/e-series-santricity/sm-support/upgrade-controller-software-and-firmware.html["_Atualizando o SANtricity os_ guia"^] ajuda on-line do ou do Gerenciador de sistemas da SANtricity para atualizar o firmware e a NVSRAM.
 +
 
 NOTE: Ative os arquivos de atualização imediatamente. Não adiar a ativação.

@@ -52,7 +52,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 . A partir do Gestor do sistema SANtricity, determine qual o recipiente de alimentação com falha.
 +
 .. Selecione *hardware*.
-.. Olhe para o ícone de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif[""]à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.
+.. Olhe para o ícone de energia image:../media/sam1130_ss_hardware_power_icon_maint-e2800.gif["Ícone de alimentação"]à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.
 +
 Se um componente tiver falhado, este ícone fica vermelho.
 

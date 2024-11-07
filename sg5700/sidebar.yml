@@ -10,8 +10,9 @@ entries:
   pdf-filename: Procedimentos de configuração de manutenção - SG5700
   entries:
   - title: Atualizar o SANtricity os no controlador de storage
-    url: "/sg5700/upgrading-santricity-os-on-storage-controller.html"
     entries:
+    - title: Sobre a atualização do SANtricity os em uma controladora de storage SG5700
+      url: "/sg5700/upgrading-santricity-os-on-storage-controller.html"
     - title: Atualize o SANtricity os em controladores de storage usando o Gerenciador
         de Grade
       url: "/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html"

@@ -1,5 +1,5 @@
 ---
-permalink: sg6100/replace-ocp-nic-in-sg6100-cn.html 
+permalink: sg6100/replace-ocp-nic-sg6100-cn.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Pode ser necessário substituir uma placa de interface de rede (NIC) no SG6100-CN se não estiver funcionando de forma otimizada ou se tiver falhado.' 
@@ -28,17 +28,17 @@ image::../media/sg6100_cn_ocp_nic_location.png[Placa frontal NIC.]
 * Você tem link:locating-sgf6112-in-data-center.html["Fisicamente localizado o controlador SG6100-CN"] onde você está substituindo a NIC no data center.
 +
 
-NOTE: A troca a quente é *não* suportada para este procedimento. É necessário um link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["corte de funcionamento controlado do aparelho"]antes de desconetar os cabos e remover a NIC.
+NOTE: A troca a quente é *não* suportada para este procedimento. É necessário um link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["corte de funcionamento controlado do aparelho"]antes de desconetar os cabos e remover a NIC.
 
 * Você desligou todos os cabos, incluindo os dois cabos de alimentação no SG6100-CN.
 * *Opcional*: Você removeu o controlador do rack, se exigido pelos regulamentos locais. A remoção não é necessária, uma vez que a NIC está acessível externamente.
 
 
 .Sobre esta tarefa
-Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte informações sobre link:https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["estados de conexão do nó de montioring"]o .
+Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte informações sobre link:https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["estados de conexão do nó de montioring"]o .
 
 
-CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre link:https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"]o .
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre link:https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"]o .
 
 
 

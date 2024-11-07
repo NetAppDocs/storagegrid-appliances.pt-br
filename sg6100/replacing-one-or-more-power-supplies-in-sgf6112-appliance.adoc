@@ -37,10 +37,10 @@ image::../media/sgf6112_power_supplies.png[Parte traseira de SGF6112 ou SG6100-C
 .Passos
 . Se estiver a substituir apenas uma fonte de alimentação, não necessita de desligar o aparelho. Vá para <<Unplug_the_power_cord,Desconete o cabo de alimentação>>a etapa. Se você estiver substituindo ambas as fontes de alimentação ao mesmo tempo, faça o seguinte antes de desconetar os cabos de alimentação:
 +
-.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance["Desligue o aparelho"].
+.. link:power-sgf6112-off-on.html#shut-down-the-sgf6112-appliance-or-sg6100-cn-controller["Desligue o aparelho"].
 +
 
-CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto e está substituindo ambas as fontes de alimentação ao mesmo tempo, você deve substituir as fontes de alimentação durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto e está substituindo ambas as fontes de alimentação ao mesmo tempo, você deve substituir as fontes de alimentação durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
 
 
 

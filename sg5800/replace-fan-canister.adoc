@@ -50,7 +50,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 . A partir do Gerenciador do sistema do SANtricity, determine qual o recipiente do ventilador falhou.
 +
 .. Selecione *hardware*.
-.. Olhe para o ícone do ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif[""]à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.
+.. Olhe para o ícone do ventilador image:../media/sam1130_ss_hardware_fan_icon_maint-e2800.gif["Ícone da ventoinha"]à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.
 +
 Se um componente tiver falhado, este ícone fica vermelho.
 

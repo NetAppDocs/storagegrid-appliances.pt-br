@@ -14,7 +14,7 @@ summary: Você pode usar o modo de manutenção para atualizar o SANtricity os n
 Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador E4000.
 
 
-NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
+NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
 
 .Antes de começar
 * Consultou o https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade NetApp (IMT)"^] para confirmar que a versão do SANtricity os que está a utilizar para a atualização é compatível com o seu dispositivo.
@@ -62,4 +62,4 @@ image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
 
 
 .Informações relacionadas
-link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5800.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]
+link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Atualize o SANtricity os em controladores de storage usando o Gerenciador de Grade"]

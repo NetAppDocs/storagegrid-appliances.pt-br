@@ -97,7 +97,7 @@ Quando a clonagem for concluída com sucesso:
 
 
 * O nó de destino sai do modo de manutenção e une o StorageGRID, substituindo o nó de origem.
-* O dispositivo de origem está em um estado pré-instalado, como se você tivesse https://docs.netapp.com/us-en/storagegrid-118/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["preparou-o para a reinstalação"^]o .
+* O dispositivo de origem está em um estado pré-instalado, como se você tivesse https://docs.netapp.com/us-en/storagegrid/maintain/preparing-appliance-for-reinstallation-platform-replacement-only.html["preparou-o para a reinstalação"^]o .
 
 
 

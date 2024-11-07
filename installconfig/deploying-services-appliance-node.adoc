@@ -22,7 +22,7 @@ Ao implantar um dispositivo de serviços como nó de administração principal, 
 .Antes de começar
 * O dispositivo foi instalado em um rack ou gabinete, conetado às redes e ligado.
 * Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
-* Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Você conhece um dos endereços IP atribuídos ao dispositivo. Você pode usar o endereço IP de qualquer rede StorageGRID conetada.
 
 
@@ -90,7 +90,7 @@ Ao implantar um dispositivo de serviços como nó de gateway ou nó de administr
 * Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
 * O nó de administração principal do sistema StorageGRID foi implantado.
 * Todas as sub-redes de rede listadas na página Configuração IP do Instalador de dispositivos StorageGRID foram definidas na Lista de sub-redes de rede de Grade no nó de administração principal.
-* Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Você sabe o endereço IP atribuído ao aparelho. Você pode usar o endereço IP de qualquer rede StorageGRID conetada.
 
 

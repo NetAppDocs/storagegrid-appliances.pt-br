@@ -58,12 +58,12 @@ Os seguintes dispositivos têm uma interface BMC que deve ser configurada:
 +
 ** Configure o Gerenciador de sistema do SANtricity (SG5700, SG5800, SG6000 e SG6100) o software que você usará para monitorar o hardware
 ** Altere o modo RAID
-** Aceder à interface BMC para o controlador SG6000-CN ou SG6100-CN
+** link:../installconfig/accessing-bmc-interface.html["Acesse a interface do BMC"] Para o controlador SG6000-CN ou SG6100-CN
 
 
 * Aparelhos de serviços
 +
-** Acesse a interface BMC para o SG100, SG110, SG1000 e SG1100
+** link:../installconfig/accessing-bmc-interface.html["Acesse a interface do BMC"] Para o SG100, SG110, SG1000 e SG1100
 
 
 

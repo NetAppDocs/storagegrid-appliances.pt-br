@@ -88,7 +88,7 @@ Durante esta fase, o instalador copia a imagem base do sistema operativo para o 
 
 . Continue monitorando o progresso da instalação até que um dos seguintes processos ocorra:
 +
-** Para todos os nós de dispositivo, exceto o nó de administrador principal, a etapa Instalar StorageGRID é interrompida e uma mensagem é exibida no console incorporado, solicitando que você aprove esse nó no nó de administrador usando o https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Gerenciador de grade"^]. Vá para a próxima etapa.
+** Para todos os nós de dispositivo, exceto o nó de administrador principal, a etapa Instalar StorageGRID é interrompida e uma mensagem é exibida no console incorporado, solicitando que você aprove esse nó no nó de administrador usando o https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Gerenciador de grade"^]. Vá para a próxima etapa.
 ** Para a instalação do nó de administração principal do dispositivo, não é necessário aprovar o nó. O aparelho é reinicializado. Você pode pular a próxima etapa.
 +
 
@@ -99,7 +99,7 @@ image::../media/monitor_installation_install_sgws.gif[Esta imagem é explicada p
 
 
 
-. https://docs.netapp.com/us-en/storagegrid-118/admin/signing-in-to-grid-manager.html["Vá para o Gerenciador de Grade"^] Do nó Admin principal, aprove o nó de grade pendente e conclua o processo de instalação do StorageGRID.
+. https://docs.netapp.com/us-en/storagegrid/admin/signing-in-to-grid-manager.html["Vá para o Gerenciador de Grade"^] Do nó Admin principal, aprove o nó de grade pendente e conclua o processo de instalação do StorageGRID.
 +
 Quando você clica em *Install* no Gerenciador de Grade, o estágio 3 é concluído e o estágio 4, *Finalize a instalação*, começa. Quando a fase 4 estiver concluída, o aparelho é reinicializado.
 

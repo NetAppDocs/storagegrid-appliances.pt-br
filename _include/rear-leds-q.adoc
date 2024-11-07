@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===

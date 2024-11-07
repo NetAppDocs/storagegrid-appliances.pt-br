@@ -32,7 +32,7 @@ Se a rede cliente ou administrador não tiver sido configurada no Instalador de 
 Você tem o `Passwords.txt` arquivo para usar a ferramenta alterar IP.
 
 .Passos
-Acesse a ferramenta alterar IP e atualize as configurações de MTU conforme descrito em https://docs.netapp.com/us-en/storagegrid-118/maintain/changing-nodes-network-configuration.html["Alterar a configuração da rede do nó"^].
+Acesse a ferramenta alterar IP e atualize as configurações de MTU conforme descrito em https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html["Alterar a configuração da rede do nó"^].
 
 
 

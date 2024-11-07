@@ -20,7 +20,7 @@ Retire o SG110 ou o SG1100 de um gabinete ou rack para acessar a tampa superior 
 .Antes de começar
 * Você tem etiquetas para identificar cada cabo conetado ao SG110 ou ao SG1100.
 * Você tem link:locating-sg110-and-sg1100-in-data-center.html["Fisicamente localizado o SG110 ou SG1100"] onde está realizando manutenção no data center.
-* Você link:power-sg110-and-sg1100-off-on.html#shut-down-the-appliance["Encerre o SG110 ou o SG1100"]tem .
+* Você link:power-sg110-and-sg1100-off-on.html#shut-down-the-sg110-or-sg1100-appliance["Encerre o SG110 ou o SG1100"]tem .
 +
 
 CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
@@ -83,4 +83,4 @@ IMPORTANT: Para evitar um desempenho degradado, não torça, dobre, aperte ou pi
 
 
 .Depois de terminar
-link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation.html["Reinicie o aparelho"].
+link:power-sg110-and-sg1100-off-on.html#power-on-sg110-or-sg1100-and-verify-operation["Reinicie o aparelho"].

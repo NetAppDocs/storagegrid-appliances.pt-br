@@ -14,7 +14,7 @@ summary: Você instala um conjunto de trilhos em seu gabinete ou rack e, em segu
 Você instala um conjunto de trilhos em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos. Se tiver um SG5760, instale as unidades depois de instalar o aparelho.
 
 .Antes de começar
-* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você revisou o https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de segurança"^] documento incluído na caixa e entendeu as precauções para mover e instalar o hardware.
 * Você tem as instruções fornecidas com o kit de trilho.
 
 

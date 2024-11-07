@@ -114,4 +114,4 @@ O estado final é `HA`.
 Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
 
 .Informações relacionadas
-http://mysupport.netapp.com/info/web/ECMP1658252.html["Site de Documentação de sistemas NetApp e-Series"^]
+https://docs.netapp.com/us-en/e-series-family/index.html["Documentação do NetApp e-Series"^]

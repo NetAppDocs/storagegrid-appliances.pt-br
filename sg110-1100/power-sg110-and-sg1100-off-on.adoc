@@ -20,8 +20,7 @@ Pode desligar o aparelho SG110 ou SG1100 e ligá-lo novamente para efetuar a man
 Desligue o aparelho para efetuar a manutenção do hardware.
 
 .Antes de começar
-* Você link:locating-sg110-and-sg1100-in-data-center.html["localizado fisicamente o aparelho"]tem .
-
+Você link:locating-sg110-and-sg1100-in-data-center.html["localizado fisicamente o aparelho"]tem .
 
 .Sobre esta tarefa
 Para evitar interrupções de serviço, desligue o aparelho durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis.

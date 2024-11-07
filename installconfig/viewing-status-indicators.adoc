@@ -30,7 +30,7 @@ Use essas informações para ajudar link:troubleshooting-hardware-installation-s
 Indicadores e botões do aparelho::
 +
 --
-A figura a seguir mostra os indicadores de status e os botões nos SG100 e SG1000.
+A figura a seguir mostra os indicadores de status e os botões na frente dos SG100 e SG1000.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicadores dianteiros - SG1000]
 
@@ -89,6 +89,39 @@ LED de alarme
 --
 
 
+A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SG100 e do SG1000. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.
+
+image::../media/q2023_rear_leds.png[LEDs traseiros SG100 e SG1000]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===
 [[general_boot_codes_SG100_1000]]
 Códigos gerais de arranque::
 +
@@ -159,7 +192,7 @@ Use essas informações para ajudar link:troubleshooting-hardware-installation-s
 Indicadores e botões do aparelho::
 +
 --
-A figura a seguir mostra indicadores e botões nos aparelhos SG110 e SG1100.
+A figura a seguir mostra indicadores e botões na parte frontal dos aparelhos SG110 e SG1100.
 
 image::../media/sgf6112_front_indicators.png[Indicadores dianteiros - SG110 e SG1100]
 
@@ -227,6 +260,39 @@ Esta luz não é utilizada pelos aparelhos SG110 e SG1100 e permanece apagada.
 --
 
 
+A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SG110 e do SG1100. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.
+
+image::../media/q2024_rear_leds.png[LEDs traseiros SG110 e SG1100]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===
 [[general_boot_codes]]
 Códigos gerais de arranque::
 +
@@ -475,6 +541,13 @@ Durante uma inicialização normal do aparelho, o visor de sete segmentos no con
 [cols="1a,3a"]
 |===
 | Código | Indica 
+
+
+ a| 
+HT
+ a| 
+O script de inicialização mestre está esperando que a inicialização do sistema operacional seja concluída.
+
 
 
  a| 
@@ -744,8 +817,7 @@ Verde intermitente: Existe atividade Ethernet.
 
 
 .Informações relacionadas
-* https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
-
+link:https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
 
 --
 .SG6000
@@ -765,7 +837,7 @@ Indicadores de estado e botões no controlador SG6000-CN::
 --
 O controlador SG6000-CN inclui indicadores que o ajudam a determinar o estado do controlador, incluindo os seguintes indicadores e botões.
 
-A figura a seguir mostra os indicadores de status e os botões no controlador SG6000-CN.
+A figura a seguir mostra os indicadores de status e os botões na parte frontal do controlador SG6000-CN.
 
 image::../media/sg6000_cn_front_indicators.gif[Indicadores dianteiros - SG6000-CN]
 
@@ -825,6 +897,39 @@ LED de alarme
 --
 
 
+A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do controlador SG6000-CN. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.
+
+image::../media/q2023_rear_leds.png[LEDs traseiros SG6000-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===
 [[general_boot_codes_sg6000]]
 Códigos gerais de arranque::
 +
@@ -889,7 +994,7 @@ Use essas informações para ajudar link:troubleshooting-hardware-installation-s
 Indicadores e botões do aparelho::
 +
 --
-A figura a seguir mostra indicadores e botões nos aparelhos SG6100.
+A figura a seguir mostra indicadores e botões na parte frontal dos aparelhos SG6100.
 
 image::../media/sgf6112_front_indicators.png[Indicadores dianteiros - SGF6112]
 
@@ -957,6 +1062,39 @@ Esta luz não é usada por aparelhos SG6100 e permanece apagada.
 --
 
 
+A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SGF6112 e SG6100-CN. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.
+
+image::../media/q2024_rear_leds.png[LEDs traseiros SGF6112 e SG6100-CN]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+
+
+|===
 [[general_boot_codes_SG6100]]
 Códigos gerais de arranque::
 +
@@ -1013,8 +1151,7 @@ Azul (intermitente): A unidade está a ser acedida
 
 
 .Informações relacionadas
-* https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
-
+https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
 
 --
 ====

@@ -1,9 +1,13 @@
 ---
 indexpage:
+  title: Mantenha o hardware do dispositivo de serviços SG1000 e SG100
+  summary: Mantenha o hardware do seu dispositivo de serviços SG1000 e SG100.
+  keywords: maintain storagegrid sg100, maintain storagegrid sg1000
+  lead: Mantenha o hardware do seu dispositivo de serviços SG1000 e SG100.
   tiles:
   - title: Procedimentos realizados frequentemente
     links:
-    - title: Ligue ou desligue o LED de localização
+    - title: Ligue ou desligue o LED de identificação
       url: "../sg100-1000/turning-controller-identify-led-on-and-off.html"
     - title: Localize o dispositivo no data center
       url: "../sg100-1000/locating-controller-in-data-center.html"

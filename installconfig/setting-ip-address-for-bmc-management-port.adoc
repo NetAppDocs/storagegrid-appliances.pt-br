@@ -16,7 +16,7 @@ Antes de poder aceder à interface BMC, configure o endereço IP para a porta de
 Se estiver usando o ConfigBuilder para gerar um arquivo JSON, você poderá configurar endereços IP automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
 
 .Antes de começar
-* O cliente de gerenciamento está usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* O cliente de gerenciamento está usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Você está usando qualquer cliente de gerenciamento que possa se conetar a uma rede StorageGRID.
 * A porta de gerenciamento do BMC está conetada à rede de gerenciamento que você planeja usar.
 +

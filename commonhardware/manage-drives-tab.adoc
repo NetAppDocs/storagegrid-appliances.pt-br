@@ -1,24 +1,26 @@
 ---
-permalink: sg6100/manage-drives-tab.html 
+permalink: commonhardware/manage-drives-tab.html 
 sidebar: sidebar 
-keywords: sgf6112, manage drives tab, locate drive, fail drive, logically replace drive 
-summary: Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades no dispositivo SGF6112. 
+keywords: sgf6112, sg110, sg1100, sg6160, manage drives tab, locate drive, fail drive, logically replace drive 
+summary: Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades para dispositivos que suportam esse recurso. 
 ---
-= Usar a guia Gerenciar unidades (SGF6112)
+= Use a guia Gerenciar unidades (SG110, SG1100, SGF6112 e SG6160)
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades no dispositivo SGF6112.
+Você pode usar a guia Gerenciar unidades no Gerenciador de Grade para executar tarefas de solução de problemas e manutenção nas unidades para dispositivos que suportam esse recurso.
 
 .Antes de começar
-* Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
-
+Você está conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 
 .Sobre esta tarefa
-Se você tiver um dispositivo SGF6112 e o https://docs.netapp.com/us-en/storagegrid-118/admin/admin-group-permissions.html["Administrador do dispositivo de storage ou permissão de acesso à raiz"^], uma guia Gerenciar unidades será exibida na página de detalhes do dispositivo.
+Se você tiver um dispositivo que suporte esse recurso e o https://docs.netapp.com/us-en/storagegrid/admin/admin-group-permissions.html["Administrador do dispositivo de storage ou permissão de acesso à raiz"^], uma guia Gerenciar unidades será exibida na página de detalhes do dispositivo.
+
+
+NOTE: Para o StorageGRID 11,8, a guia Gerenciar unidades é suportada apenas para o dispositivo SGF6112.
 
 A guia Gerenciar unidades contém as seguintes exibições:
 

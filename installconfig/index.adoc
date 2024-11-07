@@ -22,7 +22,7 @@ Este passo é opcional. No entanto, otimizar e automatizar as etapas de configur
 . link:preparing-site.html["Prepare o local"]
 . link:unpacking-boxes.html["Desembale caixas"]
 . link:obtaining-additional-equipment-and-tools.html["Obtenha equipamentos e ferramentas adicionais"]
-. https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["Reveja os requisitos do navegador da Web"^]
+. https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["Reveja os requisitos do navegador da Web"^]
 . link:reviewing-appliance-network-connections.html["Reunir informações de rede"]
 
 

@@ -2,21 +2,6 @@
 :allow-uri-read: 
 
 
-.Sobre esta tarefa
-Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição do ventilador ou substitua o ventilador durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid-118/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
-
-
-CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir o ventilador durante uma janela de manutenção programada, porque você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid-118/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
-
-O nó do aparelho não estará acessível enquanto substituir a ventoinha.
-
-A fotografia mostra um ventilador para o aparelho. O conetor elétrico é realçado. As ventoinhas de arrefecimento estão acessíveis depois de retirar a tampa superior do aparelho.
-
-
-NOTE: Cada uma das duas unidades de fonte de alimentação também contém um ventilador. As ventoinhas da fonte de alimentação não estão incluídas neste procedimento.
-
-image::../media/sgf6112_fan_fru.png[Ventoinha FRU]
-
 .Passos
 . Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
 . Localize o ventilador que você precisa substituir.
@@ -26,11 +11,8 @@ As oito ventoinhas estão nas seguintes posições no chassis (metade dianteira 
 +
 image::../media/SGF6112-fan-locations.png[Localizações das ventoinhas]
 
-
-
++
 |===
-
-
 |  | Grupo motoventilador 
 
 

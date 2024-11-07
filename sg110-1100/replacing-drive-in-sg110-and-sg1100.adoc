@@ -29,9 +29,10 @@ IMPORTANT: Consulte as informações sobre como visualizar indicadores de status
 +
 As unidades estão nas seguintes posições no chassi (frente do chassi com a moldura removida mostrada):
 
-
-
++
 image::../media/sg1100_front_with_ssds.png[Localizações de unidades SG110 e SG1100]
+
+
 
 . Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
 . Desembale a unidade de substituição e coloque-a numa superfície plana e livre de estática perto do aparelho.

@@ -23,7 +23,7 @@ Se você pretende substituir uma bateria com falha, você deve ter:
 * Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
 * Acesso ao Gerenciador do sistema SANtricity:
 +
-** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid-118/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
 ** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 
@@ -155,12 +155,12 @@ image::../media/drw_E4000_replace_nvbattery_IEOPS-862.png[Remova a bateria do NV
 
 
  a| 
-image::../media/legend_icon_01.png[ícone de legenda 01]
+image::../media/legend_icon_01.png[Referência de legenda 1]
 | Patilha de libertação da bateria 
 
 
  a| 
-image::../media/legend_icon_02.png[ícone de legenda 02]
+image::../media/legend_icon_02.png[Referência de legenda 2]
 | Conetor de alimentação da bateria 
 |===
 

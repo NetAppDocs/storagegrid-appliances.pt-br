@@ -14,7 +14,7 @@ summary: Talvez seja necessário substituir o controlador SG6000-CN se ele não 
 Talvez seja necessário substituir o controlador SG6000-CN se ele não estiver funcionando de forma ideal ou se ele tiver falhado.
 
 .Antes de começar
-* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo.
+* Você tem um controlador de substituição com o mesmo número de peça do controlador que está substituindo. Verifique as etiquetas anexadas à frente dos controladores para confirmar se os números de peça correspondem.
 * Você tem etiquetas para identificar cada cabo conetado ao controlador.
 * Você localizou fisicamente o controlador para substituir no data center.
 +
@@ -78,7 +78,7 @@ NOTE: Uma conexão de serviço-laptop pode não estar disponível em algumas eta
 +
 ** link:../installconfig/configuring-network-links.html["Configurar ligações de rede"]
 ** link:../installconfig/setting-ip-configuration.html["Configurar endereços IP do StorageGRID"]
-** https://docs.netapp.com/us-en/storagegrid-118/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
 
 
 . Inicie sessão no aparelho com o controlador substituído:
@@ -122,8 +122,7 @@ NOTE: Uma conexão de serviço-laptop pode não estar disponível em algumas eta
 Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
 
 .Informações relacionadas
-link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Instale o SG6000-CN no gabinete ou rack"]
+* link:../installconfig/sg6000-cn-installing-into-cabinet-or-rack.html["Instale o SG6000-CN no gabinete ou rack"]
+* link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
+* link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["Veja os códigos de inicialização para o controlador SG6000-CN"]
 
-link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]
-
-link:../installconfig/troubleshooting-hardware-installation.html#view-boot-codes["Veja os códigos de inicialização para o controlador SG6000-CN"]

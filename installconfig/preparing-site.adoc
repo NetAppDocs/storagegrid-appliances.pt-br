@@ -81,7 +81,7 @@ SG6060
  a| 
 SGF6112
  a| 
-100 a 240 volts CA
+240 volts CA
 
 
 
@@ -89,6 +89,124 @@ SGF6112
 SG6160
  a| 
 240 volts CA
+
+|===
+. Confirme se a sua localização cumpre os requisitos de energia do seu aparelho:
++
+
+NOTE: As fontes de alimentação nos aparelhos StorageGRID são classificadas para potências significativamente maiores do que as usadas pelo hardware do aparelho StorageGRID, mesmo durante períodos de consumo máximo de energia. A NetApp recomenda o uso dos números da tabela a seguir para determinar se um layout de rack proposto que inclui dispositivos StorageGRID é compatível com o orçamento de energia de rack.
+
++
+[cols="1a,1a,1a"]
+|===
+| Modelo | Potência média necessária (W) | Potência máxima necessária (W) 
+
+
+ a| 
+SG100
+ a| 
+273
+ a| 
+400
+
+
+
+ a| 
+SG1000
+ a| 
+337
+ a| 
+600
+
+
+
+ a| 
+SG110
+ a| 
+352
+ a| 
+500
+
+
+
+ a| 
+SG1100
+ a| 
+422
+ a| 
+700
+
+
+
+ a| 
+SG5712
+ a| 
+578
+ a| 
+700
+
+
+
+ a| 
+SG5760
+ a| 
+1394
+ a| 
+1800
+
+
+
+ a| 
+SG5812
+ a| 
+449
+ a| 
+600
+
+
+
+ a| 
+SG5860
+ a| 
+1048
+ a| 
+1300
+
+
+
+ a| 
+SGF6024
+ a| 
+1027
+ a| 
+1900
+
+
+
+ a| 
+SG6060
+ a| 
+1484
+ a| 
+2300
+
+
+
+ a| 
+SGF6112
+ a| 
+446
+ a| 
+700
+
+
+
+ a| 
+SG6160
+ a| 
+1312
+ a| 
+1800
 
 |===
 . Obtenha um gabinete ou rack de 19 polegadas (48,3 cm) para encaixar prateleiras do seguinte tamanho (sem cabos).

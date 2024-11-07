@@ -15,7 +15,7 @@ Se você encontrar problemas durante a instalação, talvez seja útil revisar i
 
 
 
-== Visualizar os códigos de arranque (apenas SGF6112 e SG6160)
+== [[view-boot-codes]]Ver códigos de arranque (apenas SGF6112 e SG6160)
 
 Quando você aplica energia ao aparelho, o BMC Registra uma série de códigos de inicialização. Você pode exibir esses códigos em um console gráfico conetado à porta de gerenciamento do BMC.
 
@@ -107,9 +107,23 @@ NOTE: Em alguns casos, o nome de usuário padrão pode ser 'root' em vez de 'adm
 
 
  a| 
+HT
+ a| 
+O script de inicialização mestre está esperando que a inicialização do sistema operacional seja concluída.
+
+
+
+ a| 
 OLÁ
  a| 
 O script de inicialização mestre foi iniciado.
+
+
+
+ a| 
+DE PP
+ a| 
+O sistema está verificando se o FPGA precisa ser atualizado.
 
 
 
@@ -174,17 +188,23 @@ O StorageGRID está em execução.
 
 
 
-== Ver códigos de erro (apenas SGF6112 e SG6160)
+== [[view-error-codes]]Ver códigos de erro (apenas SGF6112 e SG6160)
 
-Se ocorrer um erro de hardware quando o aparelho está inicializando, o BMC Registra um código de erro. Conforme necessário, você pode visualizar esses códigos de erro usando a interface do BMC e trabalhar com suporte técnico para resolver o problema.
+Se ocorrer um erro de hardware quando o aparelho está inicializando, o BMC Registra um código de erro. Conforme necessário, você pode visualizar esses códigos de erro usando a porta serial do dispositivo e, em seguida, trabalhar com suporte técnico para resolver o problema.
 
 .Antes de começar
-* Você sabe como link:accessing-bmc-interface.html["Acesse o painel do BMC"].
+* Reúna o equipamento necessário:
++
+** Cabo USB
+** Terminal serial virtual
+
+
 
 
 .Passos
-. No painel do BMC, selecione *Código POST do BIOS*.
-. Reveja as informações apresentadas para o Código atual e o Código anterior.
+. Ligue à porta USB serial na parte posterior do aparelho.
+. Utilize as definições `115200 8-N-1`.
+. Reveja as informações impressas sobre o terminal serial para o Código atual e o Código anterior.
 +
 Se algum dos códigos de erro a seguir for exibido, trabalhe com suporte técnico para resolver o problema.
 

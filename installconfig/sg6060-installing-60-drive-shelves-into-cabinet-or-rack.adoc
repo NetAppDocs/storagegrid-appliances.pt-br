@@ -14,7 +14,7 @@ summary: Você instala um conjunto de trilhos para o compartimento do controlado
 Você instala um conjunto de trilhos para o compartimento do controlador E2860 em seu gabinete ou rack e, em seguida, desliza a prateleira do controlador sobre os trilhos. Se você estiver instalando compartimentos de expansão de 60 unidades, o mesmo procedimento será aplicado.
 
 .Antes de começar
-* Você revisou o documento de Avisos de segurança incluído na caixa e entendeu as precauções para mover e instalar hardware.
+* Você revisou o https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["Avisos de segurança"^] documento incluído na caixa e entendeu as precauções para mover e instalar o hardware.
 * Você tem as instruções fornecidas com o kit de trilho.
 
 

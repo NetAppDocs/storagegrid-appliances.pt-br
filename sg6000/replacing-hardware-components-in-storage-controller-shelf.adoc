@@ -24,7 +24,7 @@ link:locating-controller-in-data-center.html["Localize o controlador no data cen
 .Sobre esta tarefa
 Para voltar a colocar a bateria no controlador de armazenamento, consulte as etapas nas instruções para link:replacing-storage-controller-sg6000.html["substituição de um controlador de armazenamento"]. Essas instruções descrevem como remover um controlador do aparelho, remover a bateria do controlador, instalar a bateria e substituir o controlador.
 
-Para obter instruções sobre as outras unidades substituíveis em campo (FRUs) nas gavetas de controladores, acesse o http://mysupport.netapp.com/info/web/ECMP1658252.html["Procedimentos e-Series para manutenção do sistema"^].
+Para obter instruções sobre as outras unidades substituíveis em campo (FRUs) nas gavetas de controladores, acesse o https://docs.netapp.com/us-en/e-series-family/index.html["Procedimentos e-Series para manutenção do sistema"^].
 
 [cols="1a,3a"]
 |===

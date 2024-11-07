@@ -26,7 +26,7 @@ NOTE: Não confie nas instruções da série e para substituir um controlador no
 CAUTION: Não poderá utilizar o aparelho até desbloquear as unidades com a chave guardada.
 
 * Você deve ter permissões de acesso específicas.
-* Você deve estar conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid-118/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Você deve estar conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 
 
 .Sobre esta tarefa

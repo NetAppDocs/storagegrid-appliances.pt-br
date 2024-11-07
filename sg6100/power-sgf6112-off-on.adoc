@@ -20,8 +20,7 @@ Pode desligar o aparelho SGF6112 ou o controlador SG6100-CN e ligá-lo novamente
 Desligue o aparelho para efetuar a manutenção do hardware.
 
 .Antes de começar
-* Você link:locating-sgf6112-in-data-center.html["localizado fisicamente o aparelho"]tem .
-
+Você link:locating-sgf6112-in-data-center.html["localizado fisicamente o aparelho"]tem .
 
 .Sobre esta tarefa
 Para evitar interrupções de serviço, desligue o aparelho durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis.

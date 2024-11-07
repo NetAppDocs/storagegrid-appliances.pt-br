@@ -14,8 +14,7 @@ summary: Desligue o dispositivo de serviços para executar a manutenção de har
 Desligue o dispositivo de serviços para executar a manutenção de hardware.
 
 .Antes de começar
-* Você precisa fisicamente link:locating-controller-in-data-center.html["localizado o aparelho de serviços"]de manutenção no data center.
-
+Você precisa fisicamente link:locating-controller-in-data-center.html["localizado o aparelho de serviços"]de manutenção no data center.
 
 .Sobre esta tarefa
 Para evitar interrupções de serviço, desligue o equipamento de serviços durante uma janela de manutenção programada quando os períodos de interrupção de serviço forem aceitáveis.

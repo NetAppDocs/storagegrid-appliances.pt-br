@@ -2,7 +2,7 @@
 permalink: sg6100/turning-sgf6112-identify-led-on-and-off.html 
 sidebar: sidebar 
 keywords: sgf6112, locate, find, locating, finding, identify, blue led, blue light 
-summary: O LED de identificação azul na parte frontal do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados. 
+summary: O LED de identificação azul na parte frontal e traseira do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados. 
 ---
 = Ligue e desligue o LED de identificação do aparelho SGF6112 ou do controlador SG6100-CN
 :allow-uri-read: 
