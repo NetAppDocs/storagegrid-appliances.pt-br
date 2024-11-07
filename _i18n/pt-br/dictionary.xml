@@ -5675,7 +5675,6 @@
   <block id="6caee75b38d61d4801420e3aec0b9ea6" category="paragraph">A figura a seguir mostra indicadores e botões na parte frontal dos aparelhos SG6100.</block>
   <block id="fe624da545a0997cc5d2c3d30f369af3" category="paragraph">A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SGF6112 e SG6100-CN. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.</block>
   <block id="f95ca0912808abe2270cd1f418b6e89a" category="image-alt">LEDs traseiros SGF6112 e SG6100-CN</block>
-  <block id="0f47986745ce840c10499664283d7b6b" category="paragraph"><block ref="0f47986745ce840c10499664283d7b6b" category="inline-link-rx"></block></block>
   <block id="810b48be331213357ad3b610c2ba8a84" category="paragraph">Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à rede antes de iniciar a substituição da bateria do CMOS ou substitua a bateria durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre<block ref="b3f58d00ee93c32201d0681addeea5ad" category="inline-link-rx"></block>o .</block>
   <block id="ae08639bb3ed33f2b9c5b58d9cddd031" category="list-text">Tem um aparelho de substituição com o mesmo número de peça do aparelho que está a substituir. Verifique as etiquetas anexadas à parte frontal dos aparelhos para confirmar que os números de peça correspondem.</block>
   <block id="4a9949b1653a4c2d26a04be273526cc5" category="list-text">Você <block ref="1f3a73fe731b4a5896a19ff9b9d6fda4" category="inline-link-macro-rx"></block>tem .</block>
@@ -5745,4 +5744,5 @@
   <block id="51130a506eed4d61508de06399ef34da" category="sidebar">Relocate SGF6112 ou SG6100-CN em um rack</block>
   <block id="4f45c0c0b55884bea7e7649654813e35" category="sidebar">Gerenciar unidades (SG110, SG1100, SGF6112 e SG6160)</block>
   <block id="3f7fe61f120f9ba5cf2d622ad7597a37" category="sidebar">Use a interface BMC</block>
+  <block id="6aa2cc2f099a383774f35aa72c7c8c6d" category="paragraph"><block ref="6aa2cc2f099a383774f35aa72c7c8c6d" category="inline-link-rx"></block></block>
 </blocks>
