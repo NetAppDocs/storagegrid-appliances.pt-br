@@ -1124,6 +1124,7 @@ Rede de rede
 
 
 . Se pretender utilizar a rede de administração para StorageGRID, ligue a porta de rede de administração do dispositivo à rede de administração, utilizando um cabo Ethernet.
+. Se o dispositivo incluir um compartimento de expansão, consulte o link:../sg6100/adding-expansion-shelf-to-deployed-sg6160.html["Instruções para adicionar um compartimento de expansão a um SG6160 implantado"] para obter informações sobre o cabeamento.
 
 
 --
