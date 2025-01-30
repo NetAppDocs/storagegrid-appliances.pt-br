@@ -5747,4 +5747,6 @@
   <block id="06670f0887e1e6231759b0c18c236453" category="list-text"><block ref="06670f0887e1e6231759b0c18c236453" category="inline-link-macro-rx"></block></block>
   <block id="125c3dfed61415188958ef328818fc0b" category="inline-link-macro">Instruções para adicionar um compartimento de expansão a um SG6160 implantado</block>
   <block id="813eb6e57b4706c7df0e13ae0defacd8" category="list-text">Se o dispositivo incluir um compartimento de expansão, consulte o <block ref="ba1bb7195a934f0a465563dc7e705dd7" category="inline-link-macro-rx"></block> para obter informações sobre o cabeamento.</block>
+  <block id="c6ce792d1a06c8b72936713f0001140a" category="list-text">Você gravou a configuração atual do BMC do dispositivo, se ele permanecer disponível.</block>
+  <block id="df5c8b40026819d555dd6dbdc002fb3e" category="list-text">Enter:<block ref="73a1c7bb6f54767f7e51d6973cad4923" prefix=" " category="inline-code"></block> Para apresentar a configuração atual do BMC para o dispositivo.</block>
 </blocks>
