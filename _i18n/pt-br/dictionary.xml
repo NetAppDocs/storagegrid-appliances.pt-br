@@ -23,7 +23,6 @@
   <block id="08c9cceee0a6966bea233700fc31e63c" category="list-text">Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador de computação com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes que ele rejoin a grade.</block>
   <block id="abae4054ff73709d783731ccc01cb620" category="image-alt">Reinicie o controlador no modo de manutenção</block>
   <block id="3626aefc9cb2effa31b269c155b93cb3" category="inline-image-macro">marca de verificação verde</block>
-  <block id="c7c19b3cb79ee9f5fdbc22cfac916b00" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="4a7717f111c2730f0f856e7f7bce4120" category="image-alt">Nó do dispositivo voltou a unir a grade</block>
   <block id="11647aec414507136a081808dc1a184c" category="list-text">Você tem as instruções fornecidas com o kit de trilho.</block>
   <block id="e0226b31d854fbd4e1cac6c67058ab4c" category="list-text">Siga cuidadosamente as instruções para o kit de trilho para instalar os trilhos em seu gabinete ou rack.</block>
@@ -484,7 +483,6 @@
   <block id="0406f5c687409501fa4e50536e17b7a9" category="list-text">Se este procedimento for concluído com êxito e tiver procedimentos adicionais a serem executados enquanto o nó estiver no modo de manutenção, execute-os agora. Quando terminar, ou se tiver alguma falha e quiser recomeçar, selecione *Avançado* &gt; *Reiniciar controlador* e, em seguida, selecione uma destas opções:</block>
   <block id="f76e5ff7f783155137650b19cbdc07e1" category="list-text">Selecione *Reboot into StorageGRID*</block>
   <block id="212a9058e19eef56d871b5d16d9d9789" category="list-text">Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. Selecione esta opção se tiver alguma avaria durante o procedimento e pretender recomeçar. Depois que o nó terminar de reiniciar para o modo de manutenção, reinicie a partir da etapa apropriada no procedimento que falhou.</block>
-  <block id="4a7896c4df016b109cb969cdc361c49f" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="b7678c88c64311d3c42620d660cadb32" category="summary">Você pode verificar e alterar temporariamente os servidores DNS que estão atualmente em uso por este nó de appliance.</block>
   <block id="4e58046ced9ebc6552387c2267a5e683" category="doc">Verifique a configuração do servidor DNS</block>
   <block id="df974843b1fcfb41c1cc6036c7de085b" category="paragraph">Talvez seja necessário alterar as configurações do servidor DNS se um dispositivo criptografado não puder se conetar ao servidor de gerenciamento de chaves (KMS) ou ao cluster KMS porque o nome do host do KMS foi especificado como um nome de domínio em vez de um endereço IP. Quaisquer alterações efetuadas nas definições de DNS do dispositivo são temporárias e perdem-se quando sai do modo de manutenção. Para tornar essas alterações permanentes, especifique os servidores DNS no Gerenciador de Grade (*MAINTENANCE* &gt; *Network* &gt; *DNS Servers*).</block>
@@ -1271,7 +1269,6 @@
   <block id="54677e4039d0ef7ec9f667d1a0b1e5b5" category="paragraph">SG110:</block>
   <block id="e68ddbf32fa99f85ac9b7a4a58b4fa76" category="image-alt">SG110 modo de ligação de porta fixa</block>
   <block id="80373303baca203e4e14cdd9e3730d3a" category="image-alt">Modo de ligação de porta agregada SG1100</block>
-  <block id="d724879fa330fae85100664fb33bd284" category="image-alt">SG110 modo de ligação de porta agregada</block>
   <block id="6af86e0bc7cb1b0e736312348b09fbc2" category="paragraph">A tabela resume as opções de configuração das portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.</block>
   <block id="c185e2af57eb486402a7055cd7b9584b" category="image-alt">Portas de rede Admin ligadas SG1100</block>
   <block id="168fbbc8217ae40bd5086de4e4935611" category="image-alt">Portas de rede Admin ligadas SG110</block>
@@ -1296,8 +1293,6 @@
   <block id="21beafac072af3624f5cf77d3c470a43" category="paragraph">*SG6100*:</block>
   <block id="56b6d58c8da0b8e5a97016fd8926e751" category="image-alt">SG6100-CN modo de ligação de porta fixa</block>
   <block id="38c9a563fec2225ed2a9f5d6933738cf" category="paragraph">A figura mostra como as quatro portas de rede são ligadas no modo de ligação de porta agregada.</block>
-  <block id="7a94e0e125ccb659b8287a71266ad626" category="image-alt">SGF6112 modo de ligação de porta agregada</block>
-  <block id="0fdec1cb4e0f4aebdbf64754e3c5c26a" category="image-alt">Modo de ligação de porta agregada SG6100-CN</block>
   <block id="cc5f703bb883e7b54c8db00321eecaae" category="paragraph">Esta figura mostra como as duas portas de gerenciamento de 1 GbE são ligadas no modo de ligação de rede do ative-Backup para a rede Admin.</block>
   <block id="911e75012e8614cfd0f98a9d0a4a1ded" category="image-alt">Portas de rede Admin ligadas SGF6112</block>
   <block id="6cb92c0d4f550369b07be209fb280050" category="image-alt">Portas de rede Admin ligadas SG6100-CN</block>
@@ -1904,7 +1899,6 @@
   <block id="0e152e55698c28ee0f75725b3f0f1f3a" category="image-alt">Parte frontal e traseira do aparelho SG5760</block>
   <block id="0e9c6b4af603c29f7da7a818c51d0535" category="section-title">SG5760 componentes</block>
   <block id="cee3e5c26f498528ac4a0236cc79321a" category="paragraph">O SG5760 inclui dois controladores, dois coletores de ventilador e dois coletores de energia.</block>
-  <block id="cbfb14f470701bf93424d757c624369a" category="image-alt">Controladores</block>
   <block id="e14810f3f4c905323dafce88216fa5cc" category="paragraph">Recipiente da ventoinha (1 de 2)</block>
   <block id="a063d58fb5fae2bdfac1676614f7ee07" category="paragraph">Recipiente de alimentação (1 de 2)</block>
   <block id="6b2b65ea7978b5b9a25b2cb94431e653" category="section-title">SG5760X vistas dianteira e traseira</block>
@@ -2190,7 +2184,6 @@
   <block id="f961c0bd93f3e244eccfb936f758a1b9" category="summary">Siga estas etapas de alto nível para instalar e configurar um dispositivo StorageGRID e implantá-lo como um nó no seu sistema StorageGRID.</block>
   <block id="93524d04199bd4798a3fe31a7af76e9b" category="doc">Início rápido para a instalação do aparelho</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Um</block>
-  <block id="61d7360b301a1cb885e62542da3bb7d4" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Prepare-se para a instalação</block>
   <block id="729465e8ee73495ad13bac2190f3bf21" category="list-text">Trabalhe com seu consultor de serviços profissionais da NetApp para automatizar a instalação e a configuração. <block ref="da9e5f931ee7f07fa7e39b6838d21cb5" category="inline-link-macro-rx"></block>Consulte .</block>
   <block id="61a31f57e1f0397cc5e4b75b9e9a8235" category="paragraph">Este passo é opcional. No entanto, otimizar e automatizar as etapas de configuração pode economizar tempo e fornecer consistência na configuração de vários dispositivos.</block>
   <block id="908d6500c8720fda63973247d6cf6dd8" category="inline-link-macro">Prepare o local</block>
@@ -2203,7 +2196,6 @@
   <block id="5b3bc2041b779a6eb06cd20122f89cea" category="inline-link-macro">Reunir informações de rede</block>
   <block id="adb08abc85034bf5521a8cf194dd40f7" category="list-text"><block ref="adb08abc85034bf5521a8cf194dd40f7" category="inline-link-macro-rx"></block></block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dois</block>
-  <block id="8277df7af5b96bf4a80b559c3ba178a8" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Instale o hardware</block>
   <block id="5a4d04406745c2904f6018d2e497f94e" category="inline-link-macro">Registre o hardware</block>
   <block id="4f29770bc91ba4e0ac93deb8a75d6ab4" category="list-text"><block ref="4f29770bc91ba4e0ac93deb8a75d6ab4" category="inline-link-macro-rx"></block></block>
   <block id="925131ecbd4fcd6869a82902a137f0f5" category="list-text">Instale no gabinete ou rack</block>
@@ -2217,7 +2209,6 @@
   <block id="d2ac588ca1c2e36ed5fe68add0ef2b5b" category="inline-link-macro">Ver indicadores e códigos de estado</block>
   <block id="a858da9bda9e3877715430e0088bb5dc" category="list-text"><block ref="a858da9bda9e3877715430e0088bb5dc" category="inline-link-macro-rx"></block></block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Três</block>
-  <block id="c0d04cbe5d2a655bbb5f1f3f1e6451d9" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Configure o hardware</block>
   <block id="2accf2cbaee75c29a846d3926d71c01a" category="paragraph">Se você estiver configurando e implantando mais de um dispositivo, use a ferramenta NetApp ConfigBuilder para automatizar as seguintes etapas de configuração e implantação. Para obter orientação, entre em Contato com seu consultor de Serviços profissionais da NetApp. <block ref="da9e5f931ee7f07fa7e39b6838d21cb5" category="inline-link-macro-rx"></block>Consulte .</block>
   <block id="7d96b927cf251ec29cb794b34748cc6f" category="list-text"><block ref="91a798f25e7b04bd5397635b1ec1a030" category="inline-link-macro-rx"></block> e verifique se você está executando a versão mais recente</block>
   <block id="38e98d02875963692f88c8bf6f2c088a" category="list-text"><block ref="38e98d02875963692f88c8bf6f2c088a" category="inline-link-macro-rx"></block></block>
@@ -2236,7 +2227,6 @@
   <block id="2171ee6f1f3ccc6f315dabf2a4d9915c" category="inline-link-macro">Remapear portas de rede</block>
   <block id="c34a1892850e29f57586c61eaab0d8f1" category="list-text"><block ref="c34a1892850e29f57586c61eaab0d8f1" category="inline-link-macro-rx"></block></block>
   <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">Quatro</block>
-  <block id="75be3472a8a2dba2c67b3d12a39d8714" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> Implantar o nó do dispositivo</block>
   <block id="007b9954a5c681c7ea309c9471bd96d1" category="paragraph">Implante o dispositivo como um novo nó no sistema StorageGRID.</block>
   <block id="c1d39a1019e538dbace4710b28fbd450" category="list-text"><block ref="c1d39a1019e538dbace4710b28fbd450" category="inline-link-macro-rx"></block></block>
   <block id="1f9351567c2f8233f56447909d961f4b" category="list-text"><block ref="1f9351567c2f8233f56447909d961f4b" category="inline-link-macro-rx"></block></block>
@@ -2329,7 +2319,6 @@
   <block id="f4f8856aa71072c7ffcae15cdd730581" category="open-title">Dispositivo de storage</block>
   <block id="2294b3e981e790cc87d4da57bd1cbbfb" category="list-text">Para monitorar o progresso da instalação, clique em *Monitor Installation*.</block>
   <block id="5180436222e4cab27793145585243c85" category="paragraph">A página Instalação do monitor mostra o progresso da instalação.</block>
-  <block id="137110384a36d8791ecfd822e2cec069" category="image-alt">Esta imagem é explicada pelo texto circundante.</block>
   <block id="de54811cbfae5b1dad2e97b4d2bc5d37" category="paragraph">A barra de status azul indica qual tarefa está atualmente em andamento. As barras de estado verdes indicam tarefas concluídas com êxito.</block>
   <block id="242b3abd41f6ed6b0544bfba71c75862" category="admonition">O instalador garante que as tarefas concluídas em uma instalação anterior não sejam executadas novamente. Se você estiver executando uma instalação novamente, todas as tarefas que não precisam ser executadas novamente serão mostradas com uma barra de status verde e um status de ""pulado"".</block>
   <block id="500b135abdc51d28fdb66659c88a91cb" category="list-text">Reveja o progresso das duas primeiras fases de instalação.</block>
@@ -2699,9 +2688,7 @@
   <block id="1e5525a7408a5f05eab0a28d87fbf2b2" category="paragraph">Se você tiver sub-redes de grade, o gateway de rede de grade é necessário. Todas as sub-redes de grade especificadas devem ser acessíveis através deste gateway. Essas sub-redes de rede de grade também devem ser definidas na lista de sub-redes de rede de grade no nó de administração principal quando você iniciar a instalação do StorageGRID.</block>
   <block id="95c601a1b60eb13cd59109591804d00a" category="admonition">A rota padrão não está listada. Se a rede do cliente não estiver ativada, a rota padrão usará o gateway de rede de grade.</block>
   <block id="408ea845582fc67ccb1d6fd994905d7e" category="inline-image-macro">insira o ícone</block>
-  <block id="625b1517f7fc50c8790976add6a30b85" category="list-text">Para adicionar uma sub-rede, clique no ícone de inserção <block ref="0e4a78bb3476d4c9221dc56813d32390" category="inline-image-macro-rx" type="image"></block>à direita da última entrada.</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">eliminar ícone</block>
-  <block id="20d1f9afba77fd8b189e95eebc04fa3c" category="list-text">Para remover uma sub-rede não utilizada, clique no ícone de eliminação <block ref="ae4b0d0edca14814d378e9b1121d1fb3" category="inline-image-macro-rx" type="image"></block>.</block>
   <block id="a46bbb4dd037b68158879e9e446ba4ab" category="list-text">Se você selecionou *DHCP*, siga estas etapas para configurar a rede de Grade:</block>
   <block id="140b4bda6d38a9f86842d22758d11a13" category="list-text">Depois de selecionar o botão de opção *DHCP*, clique em *Save* (Guardar).</block>
   <block id="a1563c17c233f64f135160e3aaf751c8" category="paragraph">Os campos *IPv4 Address*, *Gateway* e *sub-redes* são preenchidos automaticamente. Se o servidor DHCP estiver configurado para atribuir um valor MTU, o campo *MTU* será preenchido com esse valor e o campo se tornará somente leitura.</block>
@@ -3875,7 +3862,6 @@
   <block id="d795e8cd8371a6b73f2b41ac93cd4af7" category="list-text">Volte a colocar o aparelho no modo de funcionamento normal. No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.</block>
   <block id="3e66fa5bf36f76d2fc581f1ef343369d" category="list-text">Durante a reinicialização, monitore o status do nó para determinar quando ele voltou a ingressar na grade.</block>
   <block id="8086a95cfc7eadf19603caa0b59c297b" category="paragraph">O aparelho reinicia e regozija-se com a grelha. Este processo pode demorar até 20 minutos.</block>
-  <block id="92509bf687a8af21fffd7107378de538" category="list-text">Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="f2c451e5cfa0cef9d6f648da8cc4b64d" category="list-text">No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é ideal e colete dados de suporte.</block>
   <block id="f838b84263c45aeb4f1be3728754e3ad" category="summary">Talvez seja necessário substituir o controlador E5700SG se ele não estiver funcionando de forma ideal ou se ele tiver falhado.</block>
   <block id="add9671f6034ac41fcd287a17504e8bd" category="doc">Substitua o controlador de computação E5700SG</block>
@@ -4524,9 +4510,6 @@
   <block id="29c80a5eecad431fd9f823a496f5eb82" category="paragraph">Use o método off-line do Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do seu dispositivo para garantir que você tenha todos os recursos e correções de bugs mais recentes.</block>
   <block id="233671ff585fa202c9fea38b278ed22d" category="doc">Atualize o firmware da unidade SG5800 usando o método on-line do Gerenciador de sistema do SANtricity</block>
   <block id="4918ef1e8a9f60c807f69545e97d3b6f" category="paragraph">As unidades pertencentes a volumes que não têm redundância devem ser atualizadas usando o <block ref="179e42b86c56e7fde01fd62621c30190" category="inline-link-macro-rx"></block>.</block>
-  <block id="c43f428e44c60919263219fc69f78b27" category="doc">Atualize o firmware da unidade SG5800 usando o Gerenciador de sistema do SANtricity</block>
-  <block id="f92e54d30593fb7cc6d4478240b8477c" category="paragraph">Atualize o firmware nas unidades do seu dispositivo para se certificar de que tem todas as funcionalidades e correções de erros mais recentes.</block>
-  <block id="cc65b159b524b20be43aac2014954759" category="paragraph">Diretiva não resolvida no &lt;stdin&gt; - inclui:../_include/upgrade-drive-firmware-using-SANtricity-system-manager.adoc[]</block>
   <block id="14f85712f73f076c405698b9eda9b27f" category="doc">Atualize o SANtricity os no controlador E4000 usando o modo de manutenção</block>
   <block id="54ca0b6c4a7ea258e02f5a0270bc708c" category="paragraph">Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador E4000.</block>
   <block id="bfd3121140b51e5225c742b6c1a8855d" category="inline-link-macro">Use o Gerenciador de Grade para aplicar uma atualização</block>
@@ -4908,15 +4891,12 @@
   <block id="ebd9bec4d70abc789d439c1f136b0538" category="list-text">Layout</block>
   <block id="a92cd291617f14a6abada995fa7b9a3f" category="list-text">Layout das unidades de armazenamento de dados no dispositivo. Selecione uma unidade para ver os detalhes da unidade.</block>
   <block id="802e7305dd85cea6e2113cfcd28efcc4" category="inline-image-macro">Exibição de layout da guia Gerenciar unidades</block>
-  <block id="d27c8e7332b9c04db30add2b10a3b985" category="paragraph"><block ref="d27c8e7332b9c04db30add2b10a3b985" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51c45b795d5d18a3e4e0c37e8b20a141" category="list-text">Tabela</block>
   <block id="bb9b3538a9d87d44908bc9e32d8d569f" category="list-text">Lista informações para cada unidade. Selecione uma unidade para ver os detalhes da unidade.</block>
   <block id="a3dca7d34e55df93c7cde51419b56b4d" category="inline-image-macro">Exibição de tabela da guia Gerenciar unidades</block>
-  <block id="c6a460c7204d47ea03281d6c34b4082c" category="paragraph"><block ref="c6a460c7204d47ea03281d6c34b4082c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7839b3083725aa9cf29f17e556f51b13" category="list-text">Detalhes da unidade</block>
   <block id="f1fcb7890d507bd18507b76b7fac911e" category="list-text">Resumo para cada unidade. Selecione o botão de tarefa apropriado, conforme descrito nas etapas abaixo.</block>
   <block id="41bba69dcc44894611fbb8408556ecf0" category="inline-image-macro">Guia gerir unidades Detalhes da unidade</block>
-  <block id="b20d6e66b629a10a6645afcf7cdaea19" category="paragraph"><block ref="b20d6e66b629a10a6645afcf7cdaea19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="75388568d69331a73edddf1bb8200063" category="section-title">Ligue ou desligue a luz do localizador</block>
   <block id="eee8e9d047abcc6f2a1bd835ce94940f" category="paragraph">Para localizar fisicamente uma unidade no aparelho:</block>
   <block id="c32ef8b996f19c9a382163fff2884c3e" category="list-text">No Gerenciador de Grade, selecione *NÓS* &gt; *_data center_*.</block>
@@ -4924,7 +4904,6 @@
   <block id="2ec674c0e23e478f263eb7f0dd38dcfa" category="paragraph">O painel de detalhes da unidade é exibido.</block>
   <block id="91a78dae50662df15b3511db31bb992d" category="list-text">Selecione *ligar a luz do localizador*.</block>
   <block id="4b2ae8cd6761e598cde2ed97ebfc2c52" category="inline-image-macro">lâmpada da luz de condução</block>
-  <block id="7702526375f4228115e6c43395e88831" category="list-text">É apresentado um ícone de lâmpada <block ref="94ab247b1d8795573f258b884cbb3205" category="inline-image-macro-rx" type="image"></block>para a unidade.</block>
   <block id="388c626a588c91ea293598aef2749584" category="list-text">Um LED âmbar pisca na unidade física.</block>
   <block id="1abcc8c99c25daaf0201a5a5f9f76f0c" category="list-text">Quando pretender desligar a luz de localização, selecione *Desligar a luz de localização*.</block>
   <block id="936feabbf1d089b08420a3d98b966130" category="section-title">[[logicamente-replace-drive]]logicamente substitua a unidade</block>
@@ -5025,7 +5004,6 @@
   <block id="73b8548764adcb2d821a3a30eee387e8" category="list-text">Se necessário, redistribua todos os volumes de volta ao proprietário preferido usando o Gerenciador de sistemas do SANtricity.</block>
   <block id="829a1819c04fe8b6abc000f5eaa2f3da" category="list-text">Selecione *armazenamento de volumes*.</block>
   <block id="8a63702912777d73eaad4a55fa4ab3fc" category="list-text">Selecione *mais</block>
-  <block id="a1ed4021c752a35d3fbd57d904dce03b" category="list-text">Se colocar o aparelho no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde que o nó reinicie e volte a ligar a grelha. Este processo pode demorar até 20 minutos. Em seguida, no Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0c066af00a4ff17f603acf55958d068" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="f64ac56cef1f5e4f7896043e6750dc53" category="paragraph">A substituição do controlador está concluída. Pode retomar as operações normais.</block>
   <block id="af8eaf0890f6f3a0074f43cec79c1e06" category="doc">Substitua DIMMs no compartimento do controlador de armazenamento (SG6160)</block>
   <block id="7a49dba6d57fb82bb002544c4cff4173" category="paragraph">Você pode substituir um DIMM no E4000 se houver uma incompatibilidade de memória ou se você tiver um DIMM com falha.</block>
@@ -5142,7 +5120,6 @@
   <block id="eb10eb07d3a38a1d82d1975eb3a3c409" category="list-text">Se o dispositivo substituído tiver a encriptação da unidade de hardware ativada para as unidades SED, tem de <block ref="f97e47907b7e5dda63e0ea22475313d7" category="inline-link-macro-rx"></block>aceder às unidades encriptadas quando o dispositivo de substituição for iniciado pela primeira vez.</block>
   <block id="73b23fbde72d259e8090846b8b5a920b" category="doc">Solucionar erros de atualização do firmware da unidade (SG6160)</block>
   <block id="787d8857ce0db09ecbf6fe82bbf45a25" category="doc">Ligue e desligue o LED de identificação do aparelho SGF6112 ou do controlador SG6100-CN</block>
-  <block id="1cdc03d12ae7d748296aee00f5109883" category="doc">Atualize o firmware da unidade SG6160 usando o Gerenciador de sistema do SANtricity</block>
   <block id="d5debb5db4342f7c3ee4095bbb7c701d" category="doc">Atualizar o firmware da unidade SG6100 usando o Gerenciador de sistema SANtricity usando o método offline (SG6160)</block>
   <block id="80242bb57b9c3d7c3c5a86572c018227" category="admonition">Este procedimento *não* se aplica aos SSDs NVMe no SG6100-CN, que são atualizados durante as atualizações de software do StorageGRID. Somente as unidades no E4000 podem ser atualizadas usando este procedimento.</block>
   <block id="c3767fd24594af27204c85f38e6485de" category="admonition">Enquanto o aparelho está no modo de manutenção, a atividade de e/S (entrada/saída) para os controladores de armazenamento é interrompida para tornar as operações de armazenamento disruptivas seguras.</block>
@@ -5276,7 +5253,6 @@
   <block id="b2f29fa8f4a845926f04c6b42a76608e" category="sidebar">Relocate SG110 ou SG1100 em um rack</block>
   <block id="971438000d844fd09c9fda4f2d937011" category="sidebar">Substitua a NIC</block>
   <block id="a676111fb737fcb72e7e7c965f76150f" category="sidebar">Atualize o SANtricity</block>
-  <block id="c55b834e11341e1ae1654b547833e156" category="sidebar">Atualize o firmware da unidade</block>
   <block id="ae8cb7f5f8b1efdc9458aa7fea7da202" category="sidebar">Substitua o controlador de armazenamento da série E2800</block>
   <block id="6075bc4c409cef5de2e19d8ffc49b559" category="sidebar">Substitua os outros componentes do SG5700</block>
   <block id="4601c8b581a95566a7b7ed4f3289d962" category="sidebar">Substitua o controlador de computação SG5800</block>
@@ -5295,7 +5271,6 @@
   <block id="7b252b2eb409a09faf1631fe6d7141c5" category="sidebar">Substitua os componentes do compartimento de expansão de 60 unidades</block>
   <block id="e6fc5cb918ff2592b30766c26e4aa552" category="sidebar">Substitua o HBA Fibre Channel</block>
   <block id="f8d63b4eb5f7dd79754fe681c6077d13" category="sidebar">Atualização SANtricity (SG6160)</block>
-  <block id="bb16bf046b2fd7560a2b14a7f9ad9e54" category="sidebar">Atualização do firmware da unidade (SG6160)</block>
   <block id="aefc997600f67bde12a1da00bc26814a" category="sidebar">Verifique o componente a substituir</block>
   <block id="1dc91b81c3c8c4d17ed44a4e5d4339f6" category="sidebar">Substituir o controlador SG6100-CN (SG6160)</block>
   <block id="e96b749f34b2756fc2a0b8eac5a9e783" category="sidebar">Substitua o controlador do controlador de storage (SG6160)</block>
@@ -5692,10 +5667,7 @@
   <block id="0757f3b26ab245447cc41936cd3afefe" category="image-alt">Referência de legenda 2</block>
   <block id="3cbfcbda43179f1df024e2d6051f5271" category="list-text">No Gerenciador de Grade, selecione *NÓS* &gt; *_Appliance node_* &gt; *Gerenciador do sistema SANtricity*. As informações do controlador estão<block ref="5f7e3517d1392ee1637563255b3cc9f7" category="inline-link-rx"></block> no .</block>
   <block id="dd3e050849166c9b784e0ff7ea3bc78b" category="inline-image-macro">Ícone da ventoinha</block>
-  <block id="54e682c1e932dd0c4bfed689b5838167" category="list-text">Olhe para o ícone do ventilador <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.</block>
   <block id="192a91d56dc6ef980c24ab2e0ae1423b" category="inline-image-macro">Ícone de alimentação</block>
-  <block id="0b1e2ac5c16b80c880fa2636f10e31c2" category="list-text">Olhe para o ícone de energia <block ref="2acf1b34d22964e8dbaecf0651bd6755" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.</block>
-  <block id="d5dc60c63c442be4b800edee5dfd7825" category="list-text">Observe os ícones de energia <block ref="2acf1b34d22964e8dbaecf0651bd6755" category="inline-image-macro-rx" type="image"></block> e ventilador <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.</block>
   <block id="385670e63395d954db81d385b46f8236" category="doc">Sobre a atualização do SANtricity os em uma controladora de storage SG5800</block>
   <block id="461fe7b94ee4ef21c8144bcd702f1c6b" category="paragraph">Determine a versão mais recente do sistema operacional SANtricity que foi qualificada para uso no seu dispositivo StorageGRID consultando<block ref="17b838622e0459e6c950b0d070de6b4f" category="inline-link-rx"></block> e baixando-a, se necessário.</block>
   <block id="b87441e57987f2ad30acc24d0989a299" category="paragraph">O ícone de marca de seleção verde significa que não há alertas ativos e o nó está conetado à grade. Para obter uma descrição dos ícones de nó,<block ref="9d01e9b7dd507e2d1821030b4fd4830d" category="inline-link-rx"></block>consulte .</block>
@@ -5715,7 +5687,6 @@
   <block id="c844d01687ddbc9954f7c427da1d4706" category="paragraph"><block ref="865edf77b3eba053e29e61ca4d9fc799" category="inline-link-macro-rx"></block>.</block>
   <block id="9a221fc8827a4991817e2b249cd1cf3d" category="admonition">É necessário um <block ref="441002811e4fb104a452cffe39690fc5" category="inline-link-macro-rx"></block>antes de retirar o aparelho do rack.</block>
   <block id="638734fcdf0d50595d78d81bb639fd1b" category="paragraph">Quando ambas as unidades SSD estão funcionando normalmente, o sistema restaurará automaticamente a funcionalidade de cache de leitura. Você pode<block ref="735aff2661f88efa8f6e8cceeb96bac0" category="inline-link-rx"></block> monitorar a taxa de acerto do cache de leitura. Como o cache foi reconstruído, a taxa de acertos pode ser baixa inicialmente, mas deve aumentar com o tempo, pois o cache é repreenchido pelos clientes que acessam dados de objeto.</block>
-  <block id="ae4fa539a7c5cac501cec6d0e59f538b" category="list-text">Olhe para o ícone do ventilador <block ref="d8ed16a4ae23dc8d3334a7f3c4e05005" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual aparelho tem o recipiente do ventilador com falha.</block>
   <block id="b8e55daf0cd7d7e3973b1e259f86f0cd" category="admonition">Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre<block ref="7b41c2a82ff7a44a340b8559b6012e92" category="inline-link-rx"></block>o .</block>
   <block id="7da93c6e68a43a9bce834b5ab317044f" category="admonition">A troca a quente é *não* suportada para este procedimento. É necessário um <block ref="441002811e4fb104a452cffe39690fc5" category="inline-link-macro-rx"></block>antes de desconetar os cabos e remover a NIC.</block>
   <block id="f23564587172dfdbfe2370e00a02a9e5" category="paragraph">Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte informações sobre <block ref="5059dc4531f4f3adf649d818b95a89ff" category="inline-link-macro-rx"></block>o .</block>
@@ -5749,4 +5720,30 @@
   <block id="813eb6e57b4706c7df0e13ae0defacd8" category="list-text">Se o dispositivo incluir um compartimento de expansão, consulte o <block ref="ba1bb7195a934f0a465563dc7e705dd7" category="inline-link-macro-rx"></block> para obter informações sobre o cabeamento.</block>
   <block id="c6ce792d1a06c8b72936713f0001140a" category="list-text">Você gravou a configuração atual do BMC do dispositivo, se ele permanecer disponível.</block>
   <block id="df5c8b40026819d555dd6dbdc002fb3e" category="list-text">Enter:<block ref="73a1c7bb6f54767f7e51d6973cad4923" prefix=" " category="inline-code"></block> Para apresentar a configuração atual do BMC para o dispositivo.</block>
+  <block id="b79224966bc8b470ef537d5ffb51ff44" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
+  <block id="df14b12403607f270bd6e168ec91f2c5" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
+  <block id="e1a4e21f94e19d24dcb24587293cd8bc" category="paragraph"><block ref="e1a4e21f94e19d24dcb24587293cd8bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a071a7c175c6fede0936ac6e354e5055" category="paragraph"><block ref="a071a7c175c6fede0936ac6e354e5055" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97d53609a22bc5ffa749725baf5ee763" category="paragraph"><block ref="97d53609a22bc5ffa749725baf5ee763" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="37a27ac52f6f7bdf04dde9ad07bfbadf" category="list-text">É apresentado um ícone de lâmpada <block ref="7c1d5f8a3cb7dab00bcff0bcc128dacf" category="inline-image-macro-rx" type="image"></block>para a unidade.</block>
+  <block id="498ddb51986797c3286426de2dd0f64e" category="image-alt">SG110 modo de ligação de porta agregada</block>
+  <block id="51a72060d29230ddba01b8db16fadc81" category="image-alt">Modo de ligação de porta agregada SGF6112</block>
+  <block id="1728dd14177dbcdd0a6fa80cf61b4898" category="image-alt">Modo de ligação de porta agregada SG6100-CN</block>
+  <block id="80e3a4394232e9dc2d44663fd4b2fc7f" category="image-alt">Controladores, coletores de ventilador e coletores de energia no dispositivo SG5760</block>
+  <block id="f8f749c27179878518aca7ac5b2d8019" category="image-alt">Controladores, coletores de ventilador e coletores de energia no dispositivo SG5760X</block>
+  <block id="4b0ead52797d3c32e845ecdb0b2845a2" category="image-alt">Controladores, coletores de ventilador e coletores de energia no dispositivo SG5860</block>
+  <block id="f6885ee1bb99909b74bae4b3f3d7d0ca" category="list-title"><block ref="db1e9f09207f66d8c28f6f11a8cd6159" category="inline-image-macro-rx" type="image"></block> Prepare-se para a instalação</block>
+  <block id="575c830a8a4bb78c31fc0a83c2e1be15" category="list-title"><block ref="5b54f0079909bf49360d9930352446ad" category="inline-image-macro-rx" type="image"></block> Instale o hardware</block>
+  <block id="5d66e252151466a967a4fe44fa8bd12f" category="paragraph-title"><block ref="f665cdd22f26f5f1a45b361806d94264" category="inline-image-macro-rx" type="image"></block> Configure o hardware</block>
+  <block id="c97913a5c47ca1aaefcb605790ba744c" category="paragraph-title"><block ref="dc7abc674acbb1b3c1270fc1cf1b983a" category="inline-image-macro-rx" type="image"></block> Implantar o nó do dispositivo</block>
+  <block id="95714c5faee0a7ee22897ffb9bb27d46" category="list-text">Para adicionar uma sub-rede, clique no ícone de inserção <block ref="04a444892ecdd89bfdaa29bcbf799187" category="inline-image-macro-rx" type="image"></block>à direita da última entrada.</block>
+  <block id="9a70a6ae35e21c6544b20ca5f08a7c77" category="list-text">Para remover uma sub-rede não utilizada, clique no ícone de eliminação <block ref="382e1d9aa4a1ad456c931180513d817a" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="a260587fbb1d0830942f420048880c97" category="list-text">Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
+  <block id="997a5fbd7bf48a6f361ad63bb5c3ea8b" category="list-text">Olhe para o ícone do ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.</block>
+  <block id="4679124015a3fb5a2b9a8d50c4bec768" category="list-text">Olhe para o ícone de energia <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.</block>
+  <block id="73a5f23e1326c160cea1d64fb296d381" category="list-text">Observe os ícones de energia <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block> e ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.</block>
+  <block id="5be5b200ea87bda5139c19d04ce77e9d" category="list-text">Se colocar o aparelho no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde que o nó reinicie e volte a ligar a grelha. Este processo pode demorar até 20 minutos. Em seguida, no Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
+  <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Olhe para o ícone do ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual aparelho tem o recipiente do ventilador com falha.</block>
+  <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Atualizar o firmware da unidade (método online SG6160)</block>
+  <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Atualizar firmware da unidade (método offline SG6160)</block>
 </blocks>

@@ -718,7 +718,7 @@ A figura mostra como as quatro portas de rede são ligadas no modo de ligação 
 
 *SGF6112*:
 
-image::../media/sgf6112_aggregate_ports.png[SGF6112 modo de ligação de porta agregada]
+image::../media/sgf6112_aggregate_ports.png[Modo de ligação de porta agregada SGF6112]
 
 *SG6100*:
 

@@ -9,8 +9,10 @@ indexpage:
     links:
     - title: Atualize o SANtricity
       url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
-    - title: Atualização do firmware da unidade (SG6160)
-      url: "../sg6100/upgrade-drive-firmware-using-santricity-system-manager.html"
+    - title: Atualizar o firmware da unidade (método online SG6160)
+      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Atualizar firmware da unidade (método offline SG6160)
+      url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
     - title: Ligue ou desligue o LED de identificação
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
     - title: Localize o dispositivo no data center

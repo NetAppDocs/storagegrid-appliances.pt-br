@@ -11,8 +11,10 @@ indexpage:
       url: "../sg5800/changing-link-configuration-of-e5800sg-controller.html"
     - title: Atualize o SANtricity
       url: "../sg5800/upgrading-santricity-os-on-storage-controller.html"
-    - title: Atualize o firmware da unidade
-      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager.html"
+    - title: Atualizar o firmware da unidade (método online)
+      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager-online.html"
+    - title: Atualizar firmware da unidade (método offline)
+      url: "../sg5800/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
   - title: Procedimentos de hardware
     links:
     - title: Substitua o controlador de computação SG5800

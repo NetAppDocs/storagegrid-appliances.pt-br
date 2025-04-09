@@ -114,7 +114,7 @@ image::../media/sg5860_front_and_back_views.png[Parte frontal e traseira do apar
 
 O SG5860 inclui dois controladores, dois coletores de ventilador e dois coletores de energia.
 
-image::../media/sg5860_with_callouts.png[Controladores,fan canisters,and power canisters in SG5860 appliance]
+image::../media/sg5860_with_callouts.png[Controladores, coletores de ventilador e coletores de energia no dispositivo SG5860]
 
 [cols="1a,2a"]
 |===
