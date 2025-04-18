@@ -668,7 +668,6 @@
   <block id="38f1d0318b55a509ae2295dc98a1e2a4" category="list-text">Depois de concluir as tarefas de manutenção, saia do modo de manutenção e retome a operação normal do nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.</block>
   <block id="995987ebbc472d22e2d7254b73719763" category="image-alt">Status normal da página dos nós</block>
   <block id="8727881150b0ace8b598a648cdfcd4e1" category="summary">O NetApp StorageGRID é um pacote de storage de objetos definido por software compatível com uma grande variedade de casos de uso em ambientes multicloud híbrida, privada e pública. A StorageGRID oferece suporte nativo à API Amazon S3 e oferece inovações líderes do setor, como gerenciamento automatizado do ciclo de vida, para armazenar, proteger e preservar dados não estruturados de maneira econômica por longos períodos.</block>
-  <block id="4fab2171e21f4258294a2a074494fa18" category="doc">Documentação do StorageGRID Appliance</block>
   <block id="aa91301685926dd0c6c99a07550217f5" category="summary">Você pode usar o Gerenciador de sistemas do SANtricity para monitorar o status das controladoras de storage, discos de storage e outros componentes de hardware no compartimento de controladora de storage. Você também pode configurar um proxy para o e-Series AutoSupport que permite enviar mensagens AutoSupport do dispositivo sem o uso da porta de gerenciamento.</block>
   <block id="784b225f130f7d41e24cfeb95e8faec4" category="doc">Configurar o Gerenciador de sistemas SANtricity (SG6160, SG6000, SG5700 e SG5800)</block>
   <block id="cbc817df49c13d2739e53c6f3ab21240" category="section-title">Configure e acesse o Gerenciador de sistema do SANtricity</block>
@@ -5282,7 +5281,6 @@
   <block id="6160bc78506e7a4a802a5a71f5b0c192" category="sidebar">Substituir NIC externo (SG6160)</block>
   <block id="63cba1504c48a2c26d4d599e250b651c" category="sidebar">Substituir DIMMs (SG6160)</block>
   <block id="de4454f572601b9993fa9bb1fdd12775" category="sidebar">Substituir baterias (SG6160)</block>
-  <block id="69d1c297210c956cee51bf4ccf9dc0d1" category="sidebar">Documentos do StorageGRID Appliance</block>
   <block id="42201415720ad552ae0536ddda18b94e" category="sidebar">Saiba mais sobre os dispositivos StorageGRID</block>
   <block id="b7cd29c1531745149a88d6056a6c42c4" category="sidebar">Clonagem do nó do dispositivo</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Visão geral</block>
@@ -5746,4 +5744,5 @@
   <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Olhe para o ícone do ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual aparelho tem o recipiente do ventilador com falha.</block>
   <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Atualizar o firmware da unidade (método online SG6160)</block>
   <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Atualizar firmware da unidade (método offline SG6160)</block>
+  <block id="d07792f91c33735c12a1ce89b21df7a3" category="sidebar">Documentação do dispositivo StorageGRID</block>
 </blocks>
