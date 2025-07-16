@@ -252,6 +252,27 @@ Connecting to +https://10.224.2.30:8443+ (Checking version and connectivity.)
 +
 `./configure-sga.py configure --admin-ip 172.16.2.99 _SGA-INSTALL-IP_`
 
++
+[NOTE]
+====
+Não use sub-redes que contenham os seguintes endereços IPv4 para a Rede de Grade, Rede de Administração ou Rede de Cliente de qualquer nó:
+
+** 192.168.130.101
+** 192.168.131.101
+** 192.168.130.102
+** 192.168.131.102
+** 198.51.100.2
+** 198.51.100.4
+
+
+Por exemplo, não use os seguintes intervalos de sub-rede para a Rede de grade, Rede de administração ou Rede de cliente de nenhum nó:
+
+** 192.168.130.0/24 porque este intervalo de sub-rede contém os endereços IP 192.168.130.101 e 192.168.130.102
+** 192.168.131.0/24 porque este intervalo de sub-rede contém os endereços IP 192.168.131.101 e 192.168.131.102
+** 198.51.100.0/24 porque este intervalo de sub-rede contém os endereços IP 198.51.100.2 e 198.51.100.4
+
+
+====
 . [[back-up-appliance-config]] se você quiser fazer backup da configuração do appliance em um arquivo JSON, use os subcomandos avançados e `backup-file` subcomandos. Por exemplo, se você quiser fazer backup da configuração de um dispositivo com endereço IP `_SGA-INSTALL-IP_` para um arquivo chamado `appliance-SG1000.json`, digite o seguinte
 `./configure-sga.py advanced --backup-file appliance-SG1000.json _SGA-INSTALL-IP_`
 +
