@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua o controlador SG5800
+= Substituir controlador StorageGRID SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ Talvez seja necessário substituir o controlador SG5800 se ele não estiver func
 
 
 .Sobre esta tarefa
-O nó de storage do dispositivo não estará acessível quando você substituir o controlador. Se o controlador SG5800 estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.
+Você não poderá acessar o nó de armazenamento do dispositivo quando substituir o controlador.  Se o controlador SG5800 estiver funcionando suficientemente, você poderá executar um desligamento controlado no início deste procedimento.
 
 
 NOTE: Se você estiver substituindo o controlador antes de instalar o software StorageGRID, talvez você não consiga acessar o instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do controlador original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.
@@ -38,23 +38,11 @@ Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
 
 
 
-.. Desligue o controlador SG5800:
+
+
+. Desligue o controlador SG5800:
 +
 *`shutdown -h now`*
-
-.. Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.
-+
-O LED verde Cache ative na parte de trás do controlador E4000 fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.
-
-
-
-. Desligue a alimentação.
-+
-.. Na página inicial do Gerenciador do sistema do SANtricity, selecione Exibir operações em andamento.
-.. Confirme se todas as operações foram concluídas.
-.. Desligue ambos os interrutores de alimentação do aparelho.
-.. Aguarde que todos os LEDs se desliguem.
-
 
 . Se as redes StorageGRID conetadas ao controlador usarem servidores DHCP:
 +
@@ -62,7 +50,7 @@ O LED verde Cache ative na parte de trás do controlador E4000 fica aceso quando
 .. Peça ao administrador da rede que atualize as definições de endereço IP do controlador original para refletir os endereços MAC do controlador de substituição.
 +
 
-NOTE: Você deve garantir que os endereços IP do controlador original foram atualizados antes de aplicar energia ao controlador de substituição. Caso contrário, o controlador obterá novos endereços IP DHCP quando iniciar e poderá não conseguir reconetar-se ao StorageGRID. Esta etapa se aplica a todas as redes StorageGRID conetadas ao controlador.
+NOTE: Você deve garantir que os endereços IP do controlador original tenham sido atualizados antes de inserir o controlador de substituição no dispositivo.  Caso contrário, o controlador obterá novos endereços IP DHCP ao inicializar e poderá não conseguir se reconectar ao StorageGRID.  Esta etapa se aplica a todas as redes StorageGRID que estão conectadas ao controlador.
 
 
 
@@ -89,8 +77,7 @@ NOTE: Utilize sempre duas mãos para suportar o peso do controlador.
 .. Volte a colocar os cabos.
 
 
-. Ligue o aparelho e monitorize os LEDs do controlador.
-. Confirme se o nó de armazenamento do dispositivo é exibido no Gerenciador de Grade e se nenhum alarme é exibido.
+. Após a reinicialização do controlador e o dispositivo se conectar novamente à rede, confirme se o nó de armazenamento do dispositivo aparece no Grid Manager e se nenhum alarme aparece.
 
 
 Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"] página para obter mais informações.

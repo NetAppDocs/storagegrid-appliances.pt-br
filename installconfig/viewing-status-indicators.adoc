@@ -817,7 +817,7 @@ Verde intermitente: Existe atividade Ethernet.
 
 
 .Informações relacionadas
-link:https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
+https://mysupport.netapp.com/site/global/dashboard["Suporte à NetApp"^]
 
 --
 .SG6000

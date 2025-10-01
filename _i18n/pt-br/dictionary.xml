@@ -21,9 +21,7 @@
   <block id="f127bf70eac06d5cd43bc646d9b61a11" category="list-text">Depois de ter certeza de que as alterações na configuração do link estão funcionando, reinicie o nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *controlador de reinicialização* e, em seguida, selecione uma destas opções:</block>
   <block id="9bab1ecdd4bd4e687b0585e9cdb2dce3" category="list-text">Selecione *Reboot into StorageGRID* para reinicializar o controlador de computação com o nó que se junta à grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.</block>
   <block id="08c9cceee0a6966bea233700fc31e63c" category="list-text">Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador de computação com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes que ele rejoin a grade.</block>
-  <block id="abae4054ff73709d783731ccc01cb620" category="image-alt">Reinicie o controlador no modo de manutenção</block>
   <block id="3626aefc9cb2effa31b269c155b93cb3" category="inline-image-macro">marca de verificação verde</block>
-  <block id="4a7717f111c2730f0f856e7f7bce4120" category="image-alt">Nó do dispositivo voltou a unir a grade</block>
   <block id="11647aec414507136a081808dc1a184c" category="list-text">Você tem as instruções fornecidas com o kit de trilho.</block>
   <block id="e0226b31d854fbd4e1cac6c67058ab4c" category="list-text">Siga cuidadosamente as instruções para o kit de trilho para instalar os trilhos em seu gabinete ou rack.</block>
   <block id="68a9da8ccd6fd1e485fe708d994a9f57" category="list-text">Nos dois trilhos instalados no gabinete ou rack, estenda as partes móveis dos trilhos até ouvir um clique.</block>
@@ -128,7 +126,6 @@
   <block id="a1aef99d924ad1b6af551298b930355c" category="list-text">Usando as abas azuis na ventoinha, levante a ventoinha com falha para fora do chassis.</block>
   <block id="855df8e2d9df3c3a5a6da1a41bb932ea" category="image-alt">Remoção da ventoinha</block>
   <block id="3852fd6ceb72ed3018be170f504e1ec9" category="list-text">Faça deslizar a ventoinha de substituição para a ranhura aberta no chassis.</block>
-  <block id="a06a89697080d39b76934f673e0f7142" category="paragraph">Certifique-se de que alinha o conetor da ventoinha com a tomada na placa de circuito impresso.</block>
   <block id="25d33805c4fc3fc9ef5848f3d1c76650" category="list-text">Pressione firmemente o conetor da ventoinha na placa de circuito (tomada destacada).</block>
   <block id="970c6f45434aa006e0f9aea03b602d3e" category="image-alt">Verificação do conetor do ventilador</block>
   <block id="b60e3f350dfafff923b7172d86b066de" category="doc">Reinstale a NIC interna</block>
@@ -334,12 +331,10 @@
   <block id="82828b75bd7c1299c73c3da5ba0b0b2d" category="inline-link">Permissão de manutenção ou acesso root</block>
   <block id="9a4832beec51f38ad760c485e07c9b9c" category="list-text">Você tem a senha de provisionamento.</block>
   <block id="b5070a9ebd69d67446f8ba887ce01d81" category="paragraph">Não é possível executar outras atualizações de software (atualização de software StorageGRID ou hotfix) enquanto uma atualização do SANtricity os estiver em andamento. Se você tentar iniciar um hotfix ou uma atualização de software StorageGRID antes do processo de atualização do SANtricity os terminar, você será redirecionado para a página de atualização do SANtricity os.</block>
-  <block id="5973629dedc46aea0b358220d599bfbd" category="paragraph">O procedimento não será concluído até que a atualização do SANtricity os tenha sido aplicada com êxito a todos os nós aplicáveis que tenham sido selecionados para a atualização. Pode levar mais de 30 minutos para carregar o sistema operacional SANtricity em cada nó (sequencialmente) e até 90 minutos para reinicializar cada dispositivo de storage StorageGRID. Todos os nós da sua grade que não usam o SANtricity os não serão afetados por este procedimento.</block>
   <block id="78b2a3316e8d5167c09213c366ccdf88" category="admonition">As etapas a seguir são aplicáveis somente quando você estiver usando o Gerenciador de Grade para executar a atualização. Os controladores de armazenamento no dispositivo não podem ser atualizados usando o Gerenciador de Grade quando os controladores estão usando o SANtricity os mais antigos que 08.42.20.00 (11,42).</block>
   <block id="61d38d1cdbd76386b6ca992b9d0137ee" category="admonition">Este procedimento atualizará automaticamente a NVSRAM para a versão mais recente associada à atualização do sistema operacional SANtricity. Não é necessário aplicar um ficheiro de atualização NVSRAM separado.</block>
   <block id="19ad05ce216828cf31d75db3b5189076" category="inline-link">Procedimento de correção do StorageGRID</block>
   <block id="64b1188ca4b7a6d7d7865cd0446674b5" category="list-text">[[download-SANtricity-os]] Baixe o novo arquivo de software doSANtricity os em<block ref="17b838622e0459e6c950b0d070de6b4f" category="inline-link-rx"></block>.</block>
-  <block id="a2e0fe599ce2640e2f1503063be0609a" category="paragraph">Certifique-se de escolher a versão do SANtricity os para os controladores de storage.</block>
   <block id="7daa4593875eaec3bb3ad0aa81b013a8" category="list-text">Selecione *MAINTENANCE* &gt; *System* &gt; *Software update*.</block>
   <block id="87104bef25a5392dec6522792de0b376" category="image-alt">Página inicial de atualização de software</block>
   <block id="0307a7db9f4d72baff253e1322580ca2" category="list-text">Na seção Atualização do SANtricity os, selecione *Atualização*.</block>
@@ -402,8 +397,6 @@
   <block id="fd9d7864d85ad77481d8d273f86b177a" category="inline-xref">Baixe o SANtricity os</block>
   <block id="c7119a01ad3a0246d6e502fcf1542526" category="list-text">Quando estiver pronto para continuar aprovando nós, <block ref="221485128cc3179c422734dcada4a2d7" category="inline-xref-macro-rx"></block>reinicie o processo de atualização.</block>
   <block id="b55351ef221e1f7c56efb85a5e93ea93" category="admonition">Os nós já aprovados e atualizados sem erros permanecem atualizados.</block>
-  <block id="47554527e3caf2ef5673dd817216a7b4" category="list-text">Repita este procedimento de atualização para todos os nós com um estágio de conclusão que exigem um arquivo de atualização diferente do SANtricity os.</block>
-  <block id="40e6ec0ba08691f8bf73f78bc177c657" category="admonition">Para todos os nós com um status de precisa de atenção, use o modo de manutenção para executar a atualização.</block>
   <block id="5848604b5fe59288c4b2e70e183c15f3" category="summary">O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem e o dispositivo de destino.</block>
   <block id="2dfb9b9fe663376184bfd65a4deb94fd" category="doc">Nó do dispositivo clone</block>
   <block id="0235e20f203c294d37deda19de63884d" category="paragraph">O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem (o dispositivo está sendo substituído) e o dispositivo de destino (novo).</block>
@@ -422,7 +415,6 @@
   <block id="8255c7da2ba184f989c75875e666eabd" category="list-text"><block ref="4cd2207367a623927b4e22931306634a" category="inline-link-macro-rx"></block>.</block>
   <block id="df0e7b14891538a4e2643f5009af6867" category="list-text">No Instalador de dispositivos StorageGRID no nó de origem, na seção Instalação da página inicial, selecione *Ativar clonagem*.</block>
   <block id="f94eea5ecd11112f1cd02cdb4a1dea3d" category="paragraph">A seção de conexão do nó de administração principal é substituída pela seção de conexão do nó de destino Clone.</block>
-  <block id="1ae4449cbd62c8bf3d2266984d08b176" category="image-alt">Clone a seção de conexão do nó de destino</block>
   <block id="a6ff51af402ffc042cc6f424c5a38665" category="list-text">Para *Clone IP do nó de destino*, insira o endereço IP temporário atribuído ao nó de destino para que a rede use para clonar tráfego de transferência de dados e selecione *Salvar*.</block>
   <block id="49392cb3f12f0f4faf19a8d47933589c" category="paragraph">Normalmente, você insere o endereço IP da rede de Grade, mas se precisar usar uma rede diferente para clonar tráfego de transferência de dados, insira o endereço IP do nó de destino nessa rede.</block>
   <block id="5ffb9c2b7661912b40cc22d51807d486" category="admonition">O uso da rede de administração de 1 GbE para clonar a transferência de dados resulta em clonagem mais lenta.</block>
@@ -433,7 +425,6 @@
   <block id="d081af9c1bc1822369d68ca6df434792" category="list-text">Selecione *Iniciar clonagem* no nó de origem.</block>
   <block id="41f39a54349270e6f7a3ec7e34353a95" category="list-text">Monitore o progresso da clonagem usando o instalador do StorageGRID Appliance no nó de origem ou de destino.</block>
   <block id="f90f2ceee9e0e6f2c8dc65452c0e826d" category="paragraph">O Instalador do StorageGRID Appliance nos nós de origem e destino indica status semelhante.</block>
-  <block id="f19c0dcdf0806f3540561c4ac08be4b4" category="image-alt">Progresso da clonagem</block>
   <block id="98c6d1132a15d72d0dc9e50596f25fb1" category="paragraph">A página monitorar clonagem fornece progresso detalhado para cada etapa do processo de clonagem:</block>
   <block id="b2fdb0b814b9eb6027f8fdbc3554f684" category="list-text">*Estabelecer relação de peering de clone* mostra o progresso da configuração e configuração da clonagem.</block>
   <block id="7cd71f893105d0c4aa42d18c693390d9" category="list-text">*Clone outro nó deste nó* mostra o progresso da transferência de dados. (Esta parte do processo de clonagem pode levar vários dias para ser concluída.)</block>
@@ -493,7 +484,6 @@
   <block id="8c5d254e51e9f1e5d958d3fa04801116" category="paragraph">Por exemplo, se o servidor DNS para a grade mudar enquanto um nó criptografado estava off-line, o nó não será capaz de alcançar o KMS quando ele voltar on-line, porque ele ainda está usando os valores DNS anteriores. A introdução do novo endereço IP do servidor DNS no Instalador de aplicações StorageGRID permite que uma ligação KMS temporária desencripte os dados do nó.</block>
   <block id="77e44278c570e6245333c2ea64457cf4" category="list-text">No Instalador do StorageGRID Appliance, selecione *Configurar rede* &gt; *Configuração de DNS*.</block>
   <block id="6ac429bf1799aaad72126c9d0ac16655" category="list-text">Verifique se os servidores DNS especificados estão corretos.</block>
-  <block id="489f99357e51540f388c06988f7d5a29" category="image-alt">Configuração DNS</block>
   <block id="ae2b8854f0c06f1c19bdd3547a7bb3a6" category="list-text">Se necessário, altere os servidores DNS.</block>
   <block id="0899cb9af703e4172b04d218a2b5090d" category="admonition">As alterações efetuadas nas definições de DNS são temporárias e perdem-se quando sai do modo de manutenção.</block>
   <block id="f0060746134f73b65262cb9c42d134f3" category="list-text">Quando estiver satisfeito com as definições de DNS temporárias, selecione *Guardar*.</block>
@@ -506,15 +496,12 @@
   <block id="b959fd8ab2a0acd7b6945c942f03d2a7" category="section-title">Requisitos de hardware para o dispositivo de substituição</block>
   <block id="8b817ddf1c4850340f6d234f071fae76" category="paragraph">Certifique-se de que o aparelho de substituição cumpre os seguintes critérios:</block>
   <block id="af11eea53677ab5b08aa19cdcafd56ee" category="list-text">O nó de origem (dispositivo sendo substituído) e o dispositivo de destino (novo) devem ser do mesmo tipo de dispositivo:</block>
-  <block id="2dfbae24004209154659df1bc8fa2a85" category="list-text">Você só pode clonar um dispositivo Admin Node ou um dispositivo Gateway Node para um novo dispositivo de serviços.</block>
   <block id="3ed00b5839a316ad99941cddc347868b" category="list-text">Você só pode clonar um dispositivo nó de storage para um novo dispositivo de storage.</block>
-  <block id="cc721c163db74d07c83f165fac1cbd51" category="list-text">Para dispositivos Admin Node ou Gateway Node, o dispositivo de nó de origem e o dispositivo de destino não precisam ser o mesmo modelo de dispositivo; no entanto, a alteração do modelo de dispositivo pode exigir a substituição dos cabos ou módulos SFP.</block>
   <block id="481d4b10597e9f9335c607d5115fd3db" category="paragraph">Por exemplo, você pode substituir um dispositivo de SG1000 nós por um SG100 ou substituir um dispositivo SG100 por um dispositivo SG1000.</block>
   <block id="186e64d4b1a267ec9b06d82dfc3ea37a" category="list-text">Para dispositivos Storage Node, o dispositivo de nó de origem e o dispositivo de destino não precisam ser do mesmo tipo de dispositivo; no entanto:</block>
   <block id="28cb9e1a7b17557df2dab7da635677b4" category="list-text">O dispositivo de destino deve ter uma capacidade de armazenamento maior do que o dispositivo de origem.</block>
   <block id="ad3b23cccdc3e368ff647e8b569cfd36" category="paragraph">Por exemplo, você pode substituir um dispositivo de SG5700 nós por um dispositivo SG6000.</block>
   <block id="765e8dcfe93408233d1db737b46e3c4b" category="list-text">O dispositivo de destino deve ter um número igual ou maior de volumes de storage de objetos do que o dispositivo de origem.</block>
-  <block id="a407ca9605b77abba5ba2f3dd9568e9b" category="paragraph">Por exemplo, você não pode substituir um dispositivo de SG6000 nós (16 volumes de armazenamento de objetos) por um dispositivo SGF6112 (12 volumes de armazenamento de objetos).</block>
   <block id="aabbed64734c33f6c7a61d74e334625a" category="paragraph">Entre em Contato com seu representante de vendas da StorageGRID para obter ajuda na escolha de dispositivos de substituição compatíveis para clonar nós de dispositivos específicos em sua instalação do StorageGRID.</block>
   <block id="832fb35230dc87b9117894fb35395cc7" category="section-title">Prepare-se para clonar um nó de dispositivo</block>
   <block id="b5294afa6bdf999592717fba8fbe1b02" category="paragraph">Você precisa ter as seguintes informações antes de clonar um nó de dispositivo:</block>
@@ -522,8 +509,6 @@
   <block id="92c2cadeeb1bb5e0bff4e708f04ce25b" category="paragraph">Os endereços IP temporários estão normalmente na mesma sub-rede que o dispositivo de nó de origem que está sendo clonado e não são necessários após a conclusão da clonagem. Os dispositivos de origem e destino devem se conectar ao nó de administrador principal do StorageGRID para estabelecer uma conexão de clonagem.</block>
   <block id="6961f30385cb1f1c5f237a44d1c01e61" category="list-text">Determinar qual rede usar para clonar o tráfego de transferência de dados que forneça a melhor performance de transferência de dados sem prejudicar a performance da rede StorageGRID ou a disponibilidade de dados.</block>
   <block id="abfec6d1f524b72ccd15f918c923008f" category="inline-link-macro">habilitando a criptografia do nó</block>
-  <block id="8d4954f7887339a90dbe76578b481ffe" category="list-text">Determine se a criptografia de nó usando um servidor de gerenciamento de chaves (KMS) será usada no dispositivo de destino, de modo que você possa habilitar a criptografia de nó durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode verificar se a criptografia de nó está ativada no nó do dispositivo de origem, conforme descrito no <block ref="6bd92e423fc3e97f612a11738e3a3c13" category="inline-link-macro-rx"></block>.</block>
-  <block id="f3547558aa9eeb591224d3b73c6fe1f6" category="paragraph">O nó de origem e o dispositivo de destino podem ter configurações diferentes de criptografia de nó. A descriptografia e a criptografia de dados são executadas automaticamente durante a transferência de dados e quando o nó de destino é reiniciado e se junta à grade.</block>
   <block id="544c640a61781fbf87772d3bf0e70c8b" category="list-text">Determine se o modo RAID no dispositivo de destino deve ser alterado de sua configuração padrão, para que você possa especificar essas informações durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode exibir informações sobre o modo RAID atual do nó do dispositivo de origem na página *NÓS* no Gerenciador de Grade. Selecione a guia *hardware* para o aparelho.</block>
   <block id="760f793060ea29dfdd18f4fc69ab4f9d" category="paragraph">O nó de origem e o dispositivo de destino podem ter configurações RAID diferentes.</block>
   <block id="665b2ee84b3ce1addec753e47812a753" category="list-text">Planeje por tempo suficiente para concluir o processo de clonagem de nós. Vários dias podem ser necessários para transferir dados de um nó de armazenamento operacional para um dispositivo de destino. Agende a clonagem em um momento que minimize o impacto nos negócios.</block>
@@ -609,7 +594,6 @@
   <block id="91fba6642e220c9d6b627c272ca1f4b0" category="inline-link">Configurar servidores de gerenciamento de chaves</block>
   <block id="629dd4a72c9a27968c541923d0344da9" category="list-text">Você ativou a criptografia de nó para o dispositivo durante a instalação. Não é possível ativar a criptografia de nó após a instalação do dispositivo.</block>
   <block id="b25287ab8cd241c0615caa9ee3977f49" category="list-text">No Instalador de dispositivos StorageGRID, selecione *Configurar hardware* &gt; *criptografia de nó*.</block>
-  <block id="60c896bdd4a0f80aba9556a7b4ddc643" category="image-alt">KMS limpar configuração</block>
   <block id="c9f56ea3956bda9c0db17221dd58d433" category="paragraph">A página criptografia do nó inclui três seções:</block>
   <block id="02f3eed45638835e6c2a74a9381b7d99" category="list-text">O estado de encriptação mostra se a encriptação do nó está ativada ou desativada para o dispositivo.</block>
   <block id="58af1337eff937c1778b18fc1d2d04ea" category="list-text">Detalhes do servidor de gerenciamento de chaves mostra informações sobre o KMS sendo usado para criptografar o dispositivo. Você pode expandir as seções de certificado de servidor e cliente para exibir detalhes e status do certificado.</block>
@@ -633,7 +617,6 @@
   <block id="fd8a717127a0d6719a26012959bc93a7" category="admonition">Não limpe a configuração do KMS se você planeja reinstalar um nó de appliance em um sistema StorageGRID que usa a mesma chave KMS.</block>
   <block id="d9250059f2e6a3a0886a966474c0dbd3" category="list-text">Antes de poder recuperar e reinstalar um nó onde a configuração do KMS foi perdida e a chave KMS não é recuperável.</block>
   <block id="13d59202c4fe4b227b0ffea4ffc47fde" category="list-text">Antes de devolver qualquer aparelho que estava anteriormente em uso em seu site.</block>
-  <block id="78e2d755d0c3ee81563f0a9e1d1d1118" category="list-text">Após a desativação de um dispositivo que tinha a criptografia de nó ativada.</block>
   <block id="a4acd8f362ef69e75aa7c275c2284a9e" category="admonition">Desative o dispositivo antes de limpar o KMS para mover seus dados para outros nós em seu sistema StorageGRID. Limpar o KMS antes de desativar o aparelho resultará em perda de dados e pode tornar o aparelho inoperável.</block>
   <block id="bf1e3f625a7e8b038f170de3cb7d3145" category="list-text">Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.</block>
   <block id="0106110ce7dd68ba13c9f24e6ff48c0d" category="paragraph"><block ref="535c0115ab5cd897dcfefd414bb52887" prefix="" category="inline-code"></block></block>
@@ -643,7 +626,6 @@
   <block id="cd80975d288452eb565f7e329099c92f" category="admonition">Se a configuração do KMS for limpa, os dados no dispositivo serão excluídos permanentemente. Estes dados não são recuperáveis.</block>
   <block id="643d4b2a6dadfc29d1e4dbda9839b995" category="list-text">Na parte inferior da janela, selecione *Limpar chave KMS e Excluir dados*.</block>
   <block id="9b0de832981b0e8f7f03ea88cc86d706" category="list-text">Se tiver certeza de que deseja limpar a configuração do KMS, digite<block ref="0df8b254b1c32f697f55857ce88fda56" prefix=" " category="inline-code"></block> a caixa de diálogo de aviso e selecione *Limpar chave KMS e Excluir dados*.</block>
-  <block id="05ef98a9646843a8a3468143a3db462d" category="paragraph">A chave de criptografia KMS e todos os dados são excluídos do nó e o dispositivo é reinicializado. Isso pode levar até 20 minutos.</block>
   <block id="bce65269f41e11f840ba14739e9745a3" category="list-text">Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo. E<block ref="535c0115ab5cd897dcfefd414bb52887" prefix=" " category="inline-code"></block></block>
   <block id="d02998317920f8f7ad0339e0f94f8513" category="list-text">Verifique se a criptografia do nó está desativada e se as informações de chave e certificado em *Key Management Server Details* e *Clear KMS Key e Delete Data* control são removidas da janela.</block>
   <block id="30bf3ba32c51e5f7438ddf7451d5b0b7" category="paragraph">A criptografia de nó não pode ser reativada no dispositivo até que seja reinstalada em uma grade.</block>
@@ -663,10 +645,8 @@
   <block id="ff8c6259f98e7b3f90427e2a9c6125ca" category="paragraph">Se possível, use o URL que contém o endereço IP da porta Admin Network do dispositivo.</block>
   <block id="ca465ef8ceac31201abde2daa0806e70" category="admonition">Se você tiver uma conexão direta com a porta de gerenciamento do dispositivo, use<block ref="ef2bb6ab32a29df99d3cf76b861533ec" prefix=" " category="inline-code"></block> para acessar a página Instalador do dispositivo StorageGRID.</block>
   <block id="32a9ef313cf9ae0754ab603da718fff0" category="list-text">A partir do instalador do dispositivo StorageGRID, confirme se o aparelho está no modo de manutenção.</block>
-  <block id="b23b30ba9f90923e06f3b9134c82773f" category="image-alt">mensagem do modo de manutenção</block>
   <block id="996d9c44c18058f46f19f8b08f2b7ef1" category="list-text">Execute todas as tarefas de manutenção necessárias.</block>
   <block id="38f1d0318b55a509ae2295dc98a1e2a4" category="list-text">Depois de concluir as tarefas de manutenção, saia do modo de manutenção e retome a operação normal do nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.</block>
-  <block id="995987ebbc472d22e2d7254b73719763" category="image-alt">Status normal da página dos nós</block>
   <block id="8727881150b0ace8b598a648cdfcd4e1" category="summary">O NetApp StorageGRID é um pacote de storage de objetos definido por software compatível com uma grande variedade de casos de uso em ambientes multicloud híbrida, privada e pública. A StorageGRID oferece suporte nativo à API Amazon S3 e oferece inovações líderes do setor, como gerenciamento automatizado do ciclo de vida, para armazenar, proteger e preservar dados não estruturados de maneira econômica por longos períodos.</block>
   <block id="aa91301685926dd0c6c99a07550217f5" category="summary">Você pode usar o Gerenciador de sistemas do SANtricity para monitorar o status das controladoras de storage, discos de storage e outros componentes de hardware no compartimento de controladora de storage. Você também pode configurar um proxy para o e-Series AutoSupport que permite enviar mensagens AutoSupport do dispositivo sem o uso da porta de gerenciamento.</block>
   <block id="784b225f130f7d41e24cfeb95e8faec4" category="doc">Configurar o Gerenciador de sistemas SANtricity (SG6160, SG6000, SG5700 e SG5800)</block>
@@ -746,13 +726,11 @@
   <block id="6ab1dd1f72b54c2d536817b45836991c" category="list-text">Anote o endereço IPv4 que é exibido automaticamente.</block>
   <block id="eab33d5476faed22151b1e5a3cc5aeec" category="paragraph">DHCP é o método padrão para atribuir um endereço IP à porta de gerenciamento do controlador de armazenamento.</block>
   <block id="329881d8ef653446f40f711e4fc8fd15" category="admonition">Pode demorar alguns minutos para que os valores DHCP apareçam.</block>
-  <block id="2478b72df9b3df0d12bdb93bc30b1581" category="image-alt">Configuração de rede do controlador de armazenamento IPv4</block>
   <block id="f604fb9581a7125a29e81a338cdf6ab7" category="list-text">Opcionalmente, defina um endereço IP estático para a porta de gerenciamento do controlador de armazenamento.</block>
   <block id="13b980687862811535e502373a89cc85" category="admonition">Você deve atribuir um IP estático para a porta de gerenciamento ou atribuir uma concessão permanente para o endereço no servidor DHCP.</block>
   <block id="ef629ab48bf286b5597c22d0257a9354" category="list-text">Selecione *estático*.</block>
   <block id="e7531855a45d79108e15469d6937761e" category="list-text">Introduza o endereço IPv4, utilizando a notação CIDR.</block>
   <block id="79658e10ca015f24acdccf34e6840296" category="list-text">Introduza o gateway predefinido.</block>
-  <block id="ffed8e091cbdcd40a6509d0b896ebf40" category="image-alt">Configuração de rede do controlador de armazenamento IPv4 e Gateway predefinido</block>
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">Clique em *Salvar*.</block>
   <block id="3c7ae12db7024ffd08d2bca474f5ed35" category="paragraph">Pode levar alguns minutos para que suas alterações sejam aplicadas.</block>
   <block id="fa819e302c806f17c39d49ed55f0265d" category="paragraph">Quando você se conetar ao Gerenciador de sistema do SANtricity, você usará o novo endereço IP estático como URL<block ref="29c66d4541758aec7932976994c3319a" prefix=" " category="inline-code"></block></block>
@@ -842,7 +820,6 @@
   <block id="b836395e2ae90393d394fc272be4bac5" category="inline-link-macro">Verifique e atualize a versão do instalador do StorageGRID Appliance</block>
   <block id="489e5a313a6ad7b7d942c07ac6863707" category="paragraph"><block ref="489e5a313a6ad7b7d942c07ac6863707" category="inline-link-macro-rx"></block></block>
   <block id="e38bdd7be63ededd8fb5046f8d1a1341" category="list-text">Revise todas as mensagens exibidas na página inicial do Instalador do StorageGRID Appliance e configure a configuração do link e a configuração do IP, conforme necessário.</block>
-  <block id="c702366d656d74d0f594a11d94aac38b" category="image-alt">Home do instalador do dispositivo</block>
   <block id="fbe89fae81058dd018eeb4ee3943e064" category="summary">A automação da instalação e configuração pode ser útil para implantar várias instâncias do StorageGRID ou uma instância grande e complexa do StorageGRID.</block>
   <block id="7ce1391a56490e2996e89e8be0e35f46" category="doc">Automatize a instalação e a configuração do dispositivo</block>
   <block id="5728c41ee5433fcb25b6ee05c73caba4" category="inline-link-macro">Automatize a configuração de todo o sistema StorageGRID</block>
@@ -879,10 +856,8 @@
   <block id="6ff6544aaa51426d71952e2ebef91b73" category="list-text">Você tem <block ref="ed5233e808c737b997a7ac8b5adf83e3" category="inline-xref-macro-rx"></block>o guia de seu consultor de Serviços profissionais da NetApp.</block>
   <block id="392bd3f83fb497794f409fa5908887f0" category="list-text">O seu aparelho contém o firmware mais recente compatível com o StorageGRID 11,5 ou superior.</block>
   <block id="6989c71b2a87387280764a414d928c27" category="list-text">No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Atualizar configuração do dispositivo*. É apresentada a página Update Appliance Configuration (Atualizar configuração do dispositivo).</block>
-  <block id="cbe31f798cc3e7c32cac515491c124dd" category="list-text">Procure e selecione o arquivo JSON com a configuração que deseja carregar.</block>
   <block id="d46a96ea002a2622b5221351849dc6b1" category="paragraph">O arquivo é carregado e validado. Quando o processo de validação estiver concluído, o nome do ficheiro é apresentado junto a uma marca de verificação verde.</block>
   <block id="290a1393a687387a0aab8539cbb4052d" category="admonition">Você pode perder a conexão com o dispositivo se a configuração do arquivo JSON incluir seções para<block ref="88866c7f25f440b85f72e94f3ff0f6c7" prefix=" " category="inline-code"></block>,<block ref="3e11ca2215bada5ab235ee73e4ff7cd0" prefix=" " category="inline-code"></block> ou ambos. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do dispositivo usando um dos outros endereços IP atribuídos ao dispositivo.</block>
-  <block id="96916133d9ba89b1f760d8b0b4fcb081" category="image-alt">Atualizar configuração do dispositivo JSON carregado</block>
   <block id="8e0735294c657cc50de7b9a561384c96" category="paragraph">A lista suspensa *Nome do nó* é preenchida com os nomes de nós de nível superior definidos no arquivo JSON.</block>
   <block id="79bd604c7b5c55401f644a52f8f8abfe" category="admonition">Se o arquivo não for válido, o nome do arquivo será exibido em vermelho e uma mensagem de erro será exibida em um banner amarelo. O ficheiro inválido não é aplicado ao dispositivo. O ConfigBuilder verifica se você tem um arquivo JSON válido.</block>
   <block id="849df754ceb7398c2f1dcb1f6669d5e6" category="list-text">Selecione um nó na lista suspensa *Nome do nó*.</block>
@@ -1162,7 +1137,6 @@
   <block id="21d0a42aa427e078d6f2796054b85816" category="paragraph"><block ref="6917f9bedddc8cdc51ddf02112a053de" prefix="" category="inline-code"></block></block>
   <block id="2cd9e50279694c1cdb4d853c37e792cc" category="paragraph">Para<block ref="02aec1529605bb382b74fa6f761efe49" prefix=" " category="inline-code"></block>, use o endereço IP do dispositivo em qualquer rede StorageGRID.</block>
   <block id="17c2ba6f5d294a5e23ff98a2ff52d694" category="list-text">Selecione *Configurar hardware* &gt; *Configuração do BMC*.</block>
-  <block id="aef23cdc48ae3ad9e0fa5ebf7ce30990" category="image-alt">Captura de tela mostrando Avançado &gt; opção Configuração BMC</block>
   <block id="449368099d0de5a7077c42f1aca8c1f6" category="paragraph">É apresentada a página Baseboard Management Controller Configuration (Configuração do controlador de gestão de base).</block>
   <block id="c6191d53580a62b3f358a0b14d004777" category="list-text">Insira uma nova senha para a conta de administrador ou raiz nos dois campos fornecidos.</block>
   <block id="10492389e94efdebbb66f7b0cd8a1324" category="list-text">Selecione *Guardar*.</block>
@@ -1210,9 +1184,6 @@
   <block id="0bd1ebb8adfbf1e090886b61a44fa183" category="list-text">Se vários switches estiverem participando da ligação LACP, os switches suportam grupos de agregação de links de vários gabinetes (MLAG) ou equivalente.</block>
   <block id="7a16b458f081a864eaec46c995f71a14" category="list-text">Você entende como configurar os switches para usar VLAN, LACP e MLAG ou equivalente.</block>
   <block id="cbf86ac3f1d65bf121f658300bdf8d03" category="list-text">Você conhece a tag VLAN exclusiva a ser usada para cada rede. Essa tag VLAN será adicionada a cada pacote de rede para garantir que o tráfego de rede seja roteado para a rede correta.</block>
-  <block id="5edfb40dcb0feee76db0e3a873f86be2" category="paragraph">Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.</block>
-  <block id="963ef2881ceb08a6b1068cebfe95022d" category="admonition">A política de hash de transmissão LACP é layer2-3.</block>
-  <block id="22499a5ffbf9b728615e764619cd6641" category="paragraph">As figuras e tabelas resumem as opções para o modo de ligação de porta e modo de ligação de rede para cada dispositivo. Consulte o seguinte para obter mais informações:</block>
   <block id="c38542129740143e2a0bf6c1f3541335" category="inline-link-macro">Modos de ligação de porta (SG1000 e SG100)</block>
   <block id="c8601bd42029e342379783c8c5069d36" category="list-text"><block ref="c8601bd42029e342379783c8c5069d36" category="inline-link-macro-rx"></block></block>
   <block id="d71dc8061014a17250a68fccf3957c0c" category="inline-link-macro">Modos de ligação de porta (SG1100 e SG110)</block>
@@ -1237,7 +1208,6 @@
   <block id="dfcf28d0734569a6a693bc8194de62bf" category="paragraph">G</block>
   <block id="9a0b20aa83e4ff54db1dc65d7fffc81a" category="paragraph">As portas 2 e 4 são Unidas para a rede de Grade.</block>
   <block id="3b77bfb40cca1aeaac40987763d5db69" category="paragraph">A tabela resume as opções de configuração das quatro portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.</block>
-  <block id="0bb5bc8c343d548791adf82612aa51eb" category="cell">Rede cliente desativada (predefinição)</block>
   <block id="9aa23effe1b468678525d6ee79604d14" category="cell">Rede cliente ativada</block>
   <block id="6c3b66c95bb75951ca92ec6bfbafdae9" category="paragraph">Ative-Backup (padrão)</block>
   <block id="cbebcb15dfcbdd917c675bf0c49bc313" category="list-text">As portas 2 e 4 usam uma ligação de backup ativo para a rede de Grade.</block>
@@ -1298,12 +1268,10 @@
   <block id="0739ae8aa2b43e4e7e5a0617281bed7e" category="list-text">Na barra de menus do Instalador de dispositivos StorageGRID, clique em *Configurar rede* &gt; *Configuração de ligação*.</block>
   <block id="243a7c2280790d37c7a538bdc19d52a0" category="paragraph">A página Network Link Configuration (Configuração da ligação de rede) apresenta um diagrama do seu dispositivo com as portas de rede e de gestão numeradas.</block>
   <block id="a7376391c049942740ccb462df6110ad" category="paragraph">A tabela Status do link lista o estado do link, a velocidade do link e outras estatísticas das portas numeradas.</block>
-  <block id="0a8523a5bf4cee11579c89bb72ef61bd" category="paragraph">A primeira vez que aceder a esta página:</block>
   <block id="13ec900250dfbf5deff43edd1fa81325" category="list-text">*Link Speed* está definido para *Auto*.</block>
   <block id="ee3ab223aa68cc0a434098c1bf72ce26" category="list-text">*Port bond mode* está definido como *Fixed*.</block>
   <block id="cff1222d1c020eb5ac8acd4415ae9068" category="list-text">*O modo de ligação de rede* está definido como *ative-Backup* para a rede de Grade.</block>
   <block id="4484337f5eb57c24be5343405ae5d3ac" category="list-text">A *Admin Network* está ativada e o modo de ligação de rede está definido como *Independent*.</block>
-  <block id="db11999d9ac559043dba87eeefc4ba89" category="list-text">A *rede do cliente* está desativada.</block>
   <block id="678a14800d0067fb610b6fe26abe74fa" category="list-text">Selecione a velocidade da ligação para as portas de rede na lista pendente *Link speed* (velocidade da ligação).</block>
   <block id="fd97c4115309fef0e4ee36ad4e9340d6" category="paragraph">Os switches de rede que você está usando para a rede de Grade e a rede do cliente também devem suportar e ser configurados para essa velocidade. Você deve usar os adaptadores ou transcetores apropriados para a velocidade de link configurada. Utilize a velocidade de ligação automática quando possível, porque esta opção negocia tanto a velocidade de ligação como o modo de correção de erro de avanço (FEC) com o parceiro de ligação.</block>
   <block id="dc5df6ed37801dd73543ef70db9fc07c" category="paragraph">Se você planeja usar a velocidade de link de 25 GbE para as portas de rede SG6100, SG6000, SG5800 ou SG5700:</block>
@@ -1315,11 +1283,6 @@
   <block id="19a606bbcfd9d697186c901ac498b423" category="list-text">Se o dispositivo não estiver conetado à rede Admin, desmarque a caixa de seleção *Ativar rede* para a rede Admin.</block>
   <block id="6b2749b4a21ea3ca29b065b3ceb01f57" category="list-text">Se o dispositivo estiver conetado à rede do cliente, marque a caixa de seleção *Ativar rede* para a rede do cliente.</block>
   <block id="251a4c3325d24cce3beeb2fa25236ac7" category="paragraph">As configurações de rede do cliente para as portas NIC de dados são agora mostradas.</block>
-  <block id="25c899868c0ab58b54991ab4e420ba6d" category="list-text">Consulte a tabela e configure o modo de ligação de porta e o modo de ligação de rede.</block>
-  <block id="68a18867002d487cc62c6a9ecebf9378" category="paragraph">Este exemplo mostra:</block>
-  <block id="cd83853a650afd5076a9331407337acb" category="list-text">*Agregar* e *LACP* selecionados para a rede e as redes de clientes. Você deve especificar uma tag VLAN exclusiva para cada rede. Pode selecionar valores entre 0 e 4095.</block>
-  <block id="628b5c26ad127e5f7b4637ec9133ff2d" category="list-text">*Ative-Backup* selecionado para a rede Admin.</block>
-  <block id="30151ebcc272344d1d0c87b4647751b2" category="image-alt">Agregação de configuração de ligação de rede</block>
   <block id="f8cda4fa97747963f0bdbaa3f6353c91" category="admonition">Poderá perder a ligação se tiver efetuado alterações à rede ou à ligação através da qual está ligado. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do Instalador de appliance StorageGRID usando um dos outros endereços IP atribuídos ao appliance<block ref="7cb9429482151be5ab9338810b072fc0" prefix=" " category="inline-code"></block></block>
   <block id="b46ef0ff5e66f01713d8c2c640444573" category="summary">Se estiver familiarizado com a configuração do SNMP para hardware, pode utilizar a interface BMC para configurar as definições SNMP para os dispositivos SG6100, SG6000 e serviços. Você pode fornecer strings de comunidade seguras, ativar Trap SNMP e especificar até cinco destinos SNMP.</block>
   <block id="8c40c4c139d612d7304b70e6f0cb8c7c" category="doc">Configure as definições SNMP para BMC</block>
@@ -1407,7 +1370,6 @@
   <block id="58f5281bfc13f45500c73e000e05f9ca" category="list-text">Aguarde até que a lista de endereços IP descobertos seja exibida.</block>
   <block id="1922214d107424462c42cf882e7de7fc" category="list-text">Selecione o nó de administração principal para a grade onde este nó de storage do dispositivo será implantado.</block>
   <block id="a9961a735e989eb42049492c3004496f" category="list-text">No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.</block>
-  <block id="859aba5803f535249e29a8ffe2c32c6d" category="paragraph">O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.</block>
   <block id="73231881e6fea0c98729cd77e6d2cc87" category="list-text">Na seção *Instalação*, confirme se o estado atual é "Pronto para iniciar a instalação<block ref="b63eb060814c4999e77b01e66538f258" prefix=" " category="inline-code"></block> na grade com nó Admin principal<block ref="2f9ba536b02b69b5417cd803edfcffc0" prefix=" " category="inline-code"></block>" e se o botão *Iniciar instalação* está ativado.</block>
   <block id="94ec460361fb2b4faa500cbfe2736123" category="paragraph">Se o botão *Start Installation* (Iniciar instalação) não estiver ativado, poderá ser necessário alterar a configuração da rede ou as definições da porta. Para obter instruções, consulte as instruções de manutenção do seu aparelho.</block>
   <block id="34aaa9f52a702ada229db511977b71dd" category="inline-link-macro">procedimento de clonagem de nós</block>
@@ -1439,12 +1401,10 @@
   <block id="3befe165a449c2011ecba00696c3f4ab" category="list-text">Extraia o arquivo.</block>
   <block id="1d24290d8f4a79eeaafbecffc1f4a350" category="list-text">No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *carregar software StorageGRID*.</block>
   <block id="6fd2b0d88a0ea6f057348837593e1cf4" category="list-text">Clique em *Remover* para remover o pacote de software atual.</block>
-  <block id="1f288c0ba3f88bf0912012d36eb9d7dd" category="image-alt">Instalador do dispositivo - Remover o software atual</block>
   <block id="df0509510227d21cac530cb79de147a1" category="list-text">Clique em *Procurar* para obter o pacote de software que você baixou e extraiu. Selecione o<block ref="058f15d63233f30a1fbded9223deceff" prefix=" " category="inline-code"></block> pacote.</block>
   <block id="59773e84f2479ffeb34ba9422edf9f9c" category="list-text">Selecione *Home* para voltar à página inicial.</block>
   <block id="2d636e90bd2e05a13f9a7e54cc9ff4de" category="list-text">Confirme se o estado atual é "'Pronto para iniciar a instalação do nome do nó de administração principal com a versão do software x.y'" e que o botão *Iniciar instalação* está ativado.</block>
   <block id="a1f1be355f492a1c3b5a6745d2cd5b1a" category="admonition">Se você estiver implantando o dispositivo Admin Node como um destino de clonagem de nós, pare o processo de implantação aqui e continue o <block ref="87d967605804492a459cd5cfc0edb4e9" category="inline-link-macro-rx"></block>.</block>
-  <block id="3c90ca8c817ea8ed7231082584be44e9" category="image-alt">Instalação do nó de administração principal do dispositivo</block>
   <block id="21880bccf04609cb32fd02b3492c1c70" category="paragraph">O estado atual muda para ""Instalação está em andamento"" e a página Instalação do Monitor é exibida.</block>
   <block id="cc09b8c42e6afc4bc4bf30d9d74e8e98" category="admonition">Se você precisar acessar a página Instalação do Monitor manualmente, clique em *Instalação do Monitor* na barra de menus.</block>
   <block id="13645cb57f6c05cc6d551be93d19472a" category="section-title">Implante o dispositivo de serviços como Gateway ou nó de administração não primário</block>
@@ -1667,7 +1627,6 @@
   <block id="a2db8f53d50d94626b7ef7c693f3e83f" category="image-alt">E5700SG porta de gerenciamento conetada</block>
   <block id="f04a293a1824c897570164410da2fb8b" category="inline-link-macro">Aparelho de cabo (SG5700)</block>
   <block id="768f3270c0a984cee2351aa0bddca77a" category="list-text"><block ref="768f3270c0a984cee2351aa0bddca77a" category="inline-link-macro-rx"></block></block>
-  <block id="80192f911347d0ddc6fb476460fe8817" category="list-text"><block ref="80192f911347d0ddc6fb476460fe8817" category="inline-link-macro-rx"></block></block>
   <block id="43b16b9086cb39b7acc1e48b70ce437d" category="inline-link-macro">Configurar hardware (SG5700)</block>
   <block id="5f79a3d4ea624e38196669fb74539b33" category="list-text"><block ref="5f79a3d4ea624e38196669fb74539b33" category="inline-link-macro-rx"></block></block>
   <block id="775f6b0048fbceb18d7f41b02acdea77" category="doc">Reunir informações de rede (SG5800)</block>
@@ -1688,7 +1647,6 @@
   <block id="c909fc818077c5d3842f165f06969656" category="paragraph">Quando <block ref="a60a1925451f4c518cadfb0c9a8cb902" category="inline-link-macro-rx"></block> para o controlador SG5800, você pode usar a ligação de porta para as portas 10/25-GbE que se conetam à rede de Grade e à rede de cliente opcional. A ligação de portas ajuda a proteger os seus dados fornecendo caminhos redundantes entre as redes StorageGRID e o dispositivo. As portas de rede 10/25-GbE no controlador SG5800 suportam o modo de ligação de porta fixa ou o modo de ligação de porta agregada para as conexões de rede de Grade e rede de Cliente.</block>
   <block id="a3e8083d0442011586bcf6da733d19fc" category="inline-link-macro">Aparelho de cabo (SG5800)</block>
   <block id="c36daddf4bddb94512e35b104e308feb" category="list-text"><block ref="c36daddf4bddb94512e35b104e308feb" category="inline-link-macro-rx"></block></block>
-  <block id="b37aca179ce5c7c105c2b7a7315da3f4" category="list-text"><block ref="b37aca179ce5c7c105c2b7a7315da3f4" category="inline-link-macro-rx"></block></block>
   <block id="931fd544263f9ff67d7e42906ed24ceb" category="inline-link-macro">Configurar hardware (SG5800)</block>
   <block id="8f33dac7a1c98315502062c85cca89a8" category="list-text"><block ref="8f33dac7a1c98315502062c85cca89a8" category="inline-link-macro-rx"></block></block>
   <block id="429c6f1d7d32c9cdd921b0f9bcdb3079" category="doc">Reunir informações de rede (SG6000)</block>
@@ -1731,7 +1689,6 @@
   <block id="5454e77417b41ace95c07753ac64bce4" category="list-text"><block ref="5454e77417b41ace95c07753ac64bce4" category="inline-link-macro-rx"></block></block>
   <block id="d7e44acf8ea1e878605fc24ac366dbbf" category="inline-link-macro">Determine as conexões de rede do dispositivo</block>
   <block id="5cd9d4596c6b019d51f8bb5bc0229ec3" category="list-text"><block ref="5cd9d4596c6b019d51f8bb5bc0229ec3" category="inline-link-macro-rx"></block></block>
-  <block id="b912f8b379f85ef884da66f283c94601" category="list-text"><block ref="b912f8b379f85ef884da66f283c94601" category="inline-link-macro-rx"></block></block>
   <block id="93391729b9b14c1d32f6950fa8cd5022" category="list-text"><block ref="93391729b9b14c1d32f6950fa8cd5022" category="inline-link-macro-rx"></block></block>
   <block id="0bc5d7b235f18adbeae3f3104ad5dda4" category="summary">Usando as tabelas a seguir, Registre as informações necessárias para cada rede conetada ao aparelho. Esses valores são necessários para instalar e configurar o hardware.</block>
   <block id="cb4ef4231649cb4b0718cd4e27e3fa6a" category="doc">Reunir informações de rede (SG6100)</block>
@@ -2325,14 +2282,9 @@
   <block id="11736bd160e7611675a9da6c8aef68fb" category="paragraph">Durante essa etapa, o instalador se coneta ao controlador de armazenamento, limpa qualquer configuração existente, cria RAIDs de acordo com o modo RAID configurado, aloca volumes para o armazenamento de dados de objetos e software StorageGRID e configura as configurações do host.</block>
   <block id="7b2b31935da0a65fbd06d5fbbae7f12b" category="paragraph">*2. Instale o os*</block>
   <block id="a8a61bc10862f2fc629995eddcfede77" category="paragraph">Durante esta fase, o instalador copia a imagem base do sistema operativo para o StorageGRID para o dispositivo.</block>
-  <block id="1f487bf7f1e15720d6787034da97a50c" category="list-text">Continue monitorando o progresso da instalação até que o estágio *Install StorageGRID* pare e uma mensagem seja exibida no console incorporado, solicitando que você aprove esse nó no nó Admin usando o Gerenciador de Grade. Vá para a próxima etapa.</block>
-  <block id="1e866556514b57a6ca20673afcdd0c95" category="list-text">Vá para o Gerenciador de Grade do nó Admin principal, aprove o nó de armazenamento pendente e conclua o processo de instalação do StorageGRID.</block>
   <block id="ed66fdbdee04e5bd00ff3d6705a14d8f" category="paragraph">Quando você clica em *Install* no Gerenciador de Grade, o estágio 3 é concluído e o estágio 4, *Finalize a instalação*, começa. Quando a fase 4 é concluída, o controlador é reinicializado.</block>
   <block id="21f8809422673987244d000d11281874" category="paragraph">Feche a janela depois que todas as etapas de instalação estiverem concluídas.</block>
   <block id="b7645a5dea01ea0ae993086869bb054c" category="open-title">Dispositivo de serviços</block>
-  <block id="993f9ac47c95cc23abd19e92c3a3e3ca" category="list-text">Para monitorar o progresso da instalação, clique em *Monitor Installation* na barra de menus.</block>
-  <block id="064408320caa8d239f07d5926a25b069" category="image-alt">Instalação do monitor - aplicação de serviços</block>
-  <block id="c9336d7080bc57d338b2bad2efe38313" category="list-text">Reveja o progresso das duas primeiras fases de instalação.</block>
   <block id="ca24497a603bbc47076b2ca3cbe5a2ac" category="paragraph">Durante esta etapa, o instalador limpa qualquer configuração existente das unidades no dispositivo e configura as configurações do host.</block>
   <block id="90f6370ccbecc973aa1553afa395b729" category="list-text">Continue monitorando o progresso da instalação até que um dos seguintes processos ocorra:</block>
   <block id="8a8aaccc64167e205ae2e772ed0fe5b4" category="list-text">Para a instalação do nó de administração principal do dispositivo, não é necessário aprovar o nó. O aparelho é reinicializado. Você pode pular a próxima etapa.</block>
@@ -2422,7 +2374,6 @@
   <block id="9bba200c01aca3c41165938e4986c1f9" category="inline-link">Descrição geral da configuração do dispositivo KMS</block>
   <block id="9a470dfb9a8484bf439126aff614b62e" category="paragraph">Sem a chave KMS necessária para descriptografar o disco, os dados no dispositivo não podem ser recuperados e são efetivamente perdidos. Este é o caso sempre que a chave de descriptografia não pode ser recuperada do KMS. A chave fica inacessível se um cliente limpar a configuração do KMS, uma chave KMS expira, a conexão com o KMS é perdida ou o dispositivo é removido do sistema StorageGRID onde suas chaves KMS são instaladas.</block>
   <block id="590cbf74b84dfc73c6dc4c168b611ff4" category="admonition">Depois que o dispositivo tiver sido criptografado com uma chave KMS, os discos do appliance não podem ser descriptografados sem usar a mesma chave KMS.</block>
-  <block id="acacb8cd31572a3bc3d65a66ee2c76d9" category="image-alt">KMS FDE ativado</block>
   <block id="6052e60019e6274827bcda1319890602" category="list-text">Selecione *Ativar criptografia de nó*.</block>
   <block id="6f4875bc91f233a866a4367604a7e1f5" category="paragraph">Antes da instalação do dispositivo, você pode limpar *Ativar criptografia de nó* sem risco de perda de dados. Quando a instalação começa, o nó appliance acessa as chaves de criptografia KMS no sistema StorageGRID e inicia a criptografia de disco. Não é possível desativar a criptografia de nó depois que o dispositivo é instalado.</block>
   <block id="969a77a042cf3eedb9bd76af9822fc8b" category="admonition">Depois de adicionar um dispositivo que tenha a criptografia de nó ativada a um site do StorageGRID que tenha um KMS, você não pode parar de usar a criptografia KMS para o nó.</block>
@@ -2437,14 +2388,11 @@
   <block id="15f8560aa882ae205566163f54b28e99" category="list-text">Em um SGF6112, os SSDs são os discos raiz de nó e são usados para o armazenamento primário de dados de objeto.</block>
   <block id="f4b6f694a5501888787381e6a815ab2e" category="paragraph">Os SEDs criptografados são bloqueados automaticamente quando o aparelho está desligado ou quando a unidade é removida do aparelho. Um SED criptografado permanece bloqueado após a energia ser restaurada até que a senha correta seja inserida. Para permitir que as unidades sejam acessadas sem reinserir manualmente a senha, a senha é armazenada no dispositivo StorageGRID para desbloquear unidades criptografadas que permanecem no dispositivo quando o dispositivo for reiniciado. Unidades criptografadas com uma senha SED podem ser acessadas por qualquer pessoa que conheça a senha.</block>
   <block id="0ffb3b992e7b67a3cf4b6e86c5e6d58e" category="paragraph">A criptografia de unidade não se aplica a unidades gerenciadas pelo SANtricity. Se você tiver um dispositivo StorageGRID com controladores SEDs e SANtricity, poderá ativar a segurança da unidade no <block ref="26de6fd427efcc81f7ad7cd6aad9003d" category="inline-link-macro-rx"></block>.</block>
-  <block id="0fb0c001659e1b8d7876247f8c4b3eac" category="paragraph">Você pode ativar a criptografia de unidade durante a instalação inicial do dispositivo antes de carregar o Grid Manager. Você também pode ativar a criptografia de nó ou alterar sua senha colocando o dispositivo no modo de manutenção.</block>
   <block id="d112382db4537727ec6a38fd83f7931d" category="paragraph">Uma frase-passe é definida quando a encriptação da unidade está ativada inicialmente. Se um nó de computação for substituído ou se um SED criptografado for movido para um novo nó de computação, você deverá digitar novamente a senha manualmente.</block>
   <block id="68054e05b3829648df9f1eed60b84a85" category="admonition">Certifique-se de que armazena a frase-passe de encriptação da unidade num local seguro. Os SEDs criptografados não podem ser acessados sem inserir manualmente a mesma senha se o SED estiver instalado em outro dispositivo StorageGRID.</block>
   <block id="a7168e3fce65db38199c759024bcc6ad" category="section-title">Ativar a encriptação da unidade</block>
   <block id="d7dbcf1eda63c64b0752519f1f051644" category="list-text">Acesse o Instalador de dispositivos StorageGRID.</block>
-  <block id="75239ce64897ffd4ab0711612f9ba764" category="list-text">Durante a instalação inicial do dispositivo, abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.</block>
   <block id="6ffdcdf36dc3466c29bb60285b33c054" category="inline-link-macro">coloque o aparelho no modo de manutenção</block>
-  <block id="5e6a9293d89a56cb3dd27ead57b7074c" category="list-text">Para um dispositivo StorageGRID existente<block ref="7e1e4060774e5ff9cb2b883f10bf74c0" category="inline-link-macro-rx"></block>, .</block>
   <block id="86b7ddc9043ca70607d67321e3afc2a6" category="list-text">Na página inicial do Instalador de dispositivos StorageGRID, selecione *Configurar hardware* &gt; *encriptação da unidade*.</block>
   <block id="dd242980060f10318c4c8a7f62b97bcc" category="list-text">Selecione *Ativar encriptação da unidade*.</block>
   <block id="78043297ab3ce4f159d05eead172416f" category="admonition">Depois de ativar a encriptação da unidade e definir a frase-passe, as unidades SED são encriptadas por hardware. O conteúdo da unidade não pode ser acessado sem usar a mesma senha.</block>
@@ -2605,7 +2553,6 @@
   <block id="cd094988cef611c4cd783e3f599066bd" category="doc">Reinicie o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução</block>
   <block id="c2e7ee7722f424871993af836e5103f1" category="paragraph">Este procedimento aplica-se apenas quando o aparelho está a executar o Instalador de dispositivos StorageGRID. Depois que a instalação estiver concluída, esta etapa não funcionará mais porque o Instalador de dispositivos StorageGRID não está mais disponível.</block>
   <block id="02216cbac729ad477642e5a027c8218f" category="list-text">No Instalador de dispositivos StorageGRID, clique em *Avançado* &gt; *controlador de reinicialização* e selecione uma destas opções:</block>
-  <block id="7d5d5d0e4568c8557b0e5e4487448bdb" category="paragraph">O aparelho é reinicializado.</block>
   <block id="e058799232ae8d33466721568ac7007a" category="summary">Registrar o hardware do aparelho fornece benefícios de suporte.</block>
   <block id="758f3da0b10110a842638ecd34f116de" category="list-text">Localize o número de série do chassis do aparelho. Para dispositivos SG6000, o número de série do chassi está no compartimento do controlador de storage.</block>
   <block id="ad378d13a25060b034dd7edf024bc628" category="paragraph">Pode encontrar o número no folheto de embalagem, no seu e-mail de confirmação ou no aparelho depois de o desembalar.</block>
@@ -2655,14 +2602,9 @@
   <block id="51b43c5cf6988abb280d004ec1666a67" category="list-text">No cliente, insira o URL para o instalador do StorageGRID Appliance<block ref="6917f9bedddc8cdc51ddf02112a053de" prefix=" " category="inline-code"></block></block>
   <block id="12198d252bf3b642e069b294c7b66c4e" category="paragraph">Para<block ref="084b04ddf10548423f917e57f376273a" prefix=" " category="inline-code"></block>, use o endereço IP do dispositivo em qualquer rede StorageGRID.</block>
   <block id="b387480c32602d7d4ac7bb3512eed8ea" category="paragraph">DHCP é o método padrão para atribuir um endereço IP a esta porta.</block>
-  <block id="64f89d60272ac6e6ad720c4d2d1e534e" category="image-alt">Página de Configuração do controlador de Gestão do porão que mostra o endereço DHCP</block>
   <block id="39a657274976bbb1e10fb080cd063c3f" category="list-text">Opcionalmente, defina um endereço IP estático para a porta de gerenciamento BMC.</block>
   <block id="4ccf540eaa2191c8430174f93410db5a" category="admonition">Você deve atribuir um IP estático para a porta de gerenciamento do BMC ou atribuir uma concessão permanente para o endereço no servidor DHCP.</block>
-  <block id="7eb88061c9c3e57cb63e8f9fc96e4c5b" category="image-alt">Opção estática de configuração do controlador de gerenciamento de Baseboard</block>
   <block id="540cfee1ee6cf69741ea7882dee9046b" category="summary">Você usa o Instalador do dispositivo StorageGRID para configurar os endereços IP e as informações de roteamento usadas para o utilitário de serviços ou nó de armazenamento do dispositivo nas redes de rede, administrador e cliente do StorageGRID.</block>
-  <block id="ace24bc975660f0938328697c5a3a29e" category="paragraph">Você usa o Instalador de dispositivos StorageGRID para configurar os endereços IP e as informações de roteamento usadas para o utilitário de serviços ou nó de armazenamento de dispositivos nas redes de rede, administrador e cliente do StorageGRID.</block>
-  <block id="20194938d092aada3894d91f974635b1" category="paragraph">Você deve atribuir um IP estático para o dispositivo em cada rede conetada ou atribuir uma concessão permanente para o endereço no servidor DHCP.</block>
-  <block id="5b08fd074d07e130b7030658ef41253f" category="paragraph">Para alterar a configuração do link, consulte as seguintes instruções:</block>
   <block id="2b5484ac1beb20f49e7510af44ecb06a" category="inline-link-macro">Altere a configuração do link do dispositivo de serviços SG100 ou SG1000</block>
   <block id="8db5a2ab114ff083348a78bccc01e9d0" category="list-text"><block ref="8db5a2ab114ff083348a78bccc01e9d0" category="inline-link-macro-rx"></block></block>
   <block id="db9ca1297cfefe282f7bf704613373d2" category="inline-link-macro">Altere a configuração do link do dispositivo de serviços SG110 ou SG1100</block>
@@ -2675,7 +2617,6 @@
   <block id="82f7d371d2d7c13ff9845d035836740a" category="list-text"><block ref="82f7d371d2d7c13ff9845d035836740a" category="inline-link-macro-rx"></block></block>
   <block id="c7bda52b89759b00cb8ad65f67df014c" category="list-text">No Instalador de dispositivos StorageGRID, selecione *Configurar rede* &gt; *Configuração IP*.</block>
   <block id="3e1955c43a21db08b53694f46adc7b87" category="paragraph">É apresentada a página Configuração IP.</block>
-  <block id="393c626884d6951f668d66e9fb0e53b2" category="list-text">Para configurar a rede de Grade, selecione *Static* ou *DHCP* na seção *Grid Network* da página.</block>
   <block id="2cb7413cf8ab9a1ebb5ebf4c70da43cb" category="list-text">Se você selecionou *Static*, siga estas etapas para configurar a rede de Grade:</block>
   <block id="f6b5a4b458f38afdd04b463403cd5dd2" category="list-text">Insira o endereço IPv4 estático, usando a notação CIDR.</block>
   <block id="b99c484862b0a5adea755d7f7256436c" category="list-text">Entre no gateway.</block>
@@ -2685,27 +2626,20 @@
   <block id="fb6fa3155d58cfbb940022791050df66" category="paragraph">Se você perder a conexão com o Instalador do StorageGRID Appliance, insira novamente o URL usando o novo endereço IP estático que você acabou de atribuir. Por exemplo<block ref="7cb9429482151be5ab9338810b072fc0" prefix=" " category="inline-code"></block></block>
   <block id="a2b64f6433d021f997a563b2aea815e4" category="list-text">Confirme se a lista de sub-redes da rede de Grade está correta.</block>
   <block id="1e5525a7408a5f05eab0a28d87fbf2b2" category="paragraph">Se você tiver sub-redes de grade, o gateway de rede de grade é necessário. Todas as sub-redes de grade especificadas devem ser acessíveis através deste gateway. Essas sub-redes de rede de grade também devem ser definidas na lista de sub-redes de rede de grade no nó de administração principal quando você iniciar a instalação do StorageGRID.</block>
-  <block id="95c601a1b60eb13cd59109591804d00a" category="admonition">A rota padrão não está listada. Se a rede do cliente não estiver ativada, a rota padrão usará o gateway de rede de grade.</block>
   <block id="408ea845582fc67ccb1d6fd994905d7e" category="inline-image-macro">insira o ícone</block>
   <block id="5f11c7889df3330ff1f653f5e5702931" category="inline-image-macro">eliminar ícone</block>
   <block id="a46bbb4dd037b68158879e9e446ba4ab" category="list-text">Se você selecionou *DHCP*, siga estas etapas para configurar a rede de Grade:</block>
   <block id="140b4bda6d38a9f86842d22758d11a13" category="list-text">Depois de selecionar o botão de opção *DHCP*, clique em *Save* (Guardar).</block>
   <block id="a1563c17c233f64f135160e3aaf751c8" category="paragraph">Os campos *IPv4 Address*, *Gateway* e *sub-redes* são preenchidos automaticamente. Se o servidor DHCP estiver configurado para atribuir um valor MTU, o campo *MTU* será preenchido com esse valor e o campo se tornará somente leitura.</block>
   <block id="d80e86a8c3f205ac96b864dcc1056511" category="paragraph">O navegador da Web é automaticamente redirecionado para o novo endereço IP do Instalador de dispositivos StorageGRID.</block>
-  <block id="0f22d3c4dad1ddecef2e3527a53c0ad5" category="list-text">Para configurar a rede Admin, selecione *Static* (estático) ou *DHCP* (DHCP) na secção *Admin Network* (rede Admin) da página.</block>
   <block id="c24284d6781e2040bde43e938c31b31d" category="admonition">Para configurar a rede de administração, ative a rede de administração na página Configuração de ligação.</block>
-  <block id="ad0a07da1eeff182337b6cc902cd13bb" category="image-alt">IP de rede Admin</block>
   <block id="b4f7e2ebad529279712b23b3df07afab" category="list-text">Se você selecionou *Static*, siga estas etapas para configurar a rede Admin:</block>
   <block id="5e2079034a2848cbc791631cddb60f79" category="list-text">Introduza o endereço IPv4 estático, utilizando a notação CIDR, para a porta de gestão 1 no dispositivo.</block>
-  <block id="ac050aef24047fa3166dfc10edfa2633" category="paragraph">A porta de gerenciamento 1 fica à esquerda das duas portas RJ45 de 1 GbE na extremidade direita do dispositivo.</block>
   <block id="004ac3a4acb44a1e55fb990c532d2ad3" category="paragraph">Se você perder a conexão com o Instalador do StorageGRID Appliance, insira novamente o URL usando o novo endereço IP estático que você acabou de atribuir. Por exemplo<block ref="55e85fa3cf66eb01568c8d8c9b767542" prefix=" " category="inline-code"></block></block>
   <block id="4a1d3b11657f7d9a2d739b6acca26d15" category="list-text">Confirme se a lista de sub-redes Admin Network está correta.</block>
   <block id="4bacb0355ac4f24ed8c6141dd090b579" category="paragraph">Você deve verificar se todas as sub-redes podem ser alcançadas usando o gateway fornecido.</block>
   <block id="730b5cf7f8c5232ea4d3e44a57411b0a" category="admonition">A rota padrão não pode ser feita para usar o gateway Admin Network.</block>
   <block id="87bc58fa5e6cd0ff86a6bc8e4178b739" category="list-text">Se você selecionou *DHCP*, siga estas etapas para configurar a rede Admin:</block>
-  <block id="0c82965c220124f54856d4d5f199a9b8" category="list-text">Para configurar a rede do cliente, selecione *estático* ou *DHCP* na seção *rede do cliente* da página.</block>
-  <block id="9b974fa6d50efe3907ff2cfbb9242bc0" category="admonition">Para configurar a rede do cliente, ative a rede do cliente na página Configuração da ligação.</block>
-  <block id="6a3ad34c43a331480ed0cf6934a31adb" category="image-alt">IP da rede do cliente</block>
   <block id="7ddda42e329a10ce8363fbec77be26b2" category="list-text">Se você selecionou *Static*, siga estas etapas para configurar a rede do cliente:</block>
   <block id="7b2db1150f4e5ccf99360a2c6d7d4eb4" category="list-text">Confirme se o endereço IP do gateway de rede do cliente está correto.</block>
   <block id="429da124c272f0e27d3d68a3ac2d4334" category="admonition">Se a rede do cliente estiver ativada, é apresentada a rota predefinida. A rota padrão usa o gateway de rede do cliente e não pode ser movida para outra interface enquanto a rede do cliente está ativada.</block>
@@ -3161,8 +3095,6 @@
   <block id="3a80b8476efec1a81aee27516564f0d0" category="paragraph">Os dispositivos StorageGRID vêm da fábrica pré-instalados com o Instalador de dispositivos StorageGRID. Se você estiver adicionando um dispositivo a um sistema StorageGRID atualizado recentemente, talvez seja necessário atualizar manualmente o Instalador de dispositivos StorageGRID antes de instalar o dispositivo como um novo nó.</block>
   <block id="572b04ed5c08044cab5519d8dcd2fa96" category="paragraph">O Instalador de dispositivos StorageGRID é atualizado automaticamente quando você atualiza para uma nova versão do StorageGRID. Não é necessário atualizar o Instalador de dispositivos StorageGRID nos nós de dispositivos instalados. Este procedimento só é necessário quando estiver a instalar um dispositivo que contenha uma versão anterior do Instalador de dispositivos StorageGRID.</block>
   <block id="d7f2a0465ab2ab35fa9ebaae47487be8" category="list-text">No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Atualizar firmware*.</block>
-  <block id="903e1527e19be4df9c4bd666ece1cb13" category="list-text">Compare a versão atual do firmware com a versão de software instalada no sistema StorageGRID. (Na parte superior do Gerenciador de Grade, selecione o ícone de ajuda e selecione *sobre*.)</block>
-  <block id="4b0e2759588b4734dc2913ad0077702f" category="paragraph">O segundo dígito nas duas versões deve corresponder. Por exemplo, se o seu sistema StorageGRID estiver executando a versão 11.*6*._x_._y_, a versão do Instalador de dispositivos StorageGRID deve ser 3.*6*._z_.</block>
   <block id="8b809a0e37267e8d0cb9ee41d3a54fa1" category="list-text">Se o dispositivo tiver uma versão de nível inferior do instalador do dispositivo StorageGRID, vá para<block ref="17b838622e0459e6c950b0d070de6b4f" category="inline-link-rx"></block>.</block>
   <block id="d6aa373ef73e5efc5061936104d29d95" category="paragraph">Inicie sessão com o nome de utilizador e a palavra-passe da sua conta NetApp.</block>
   <block id="a662a1f621c8bd2ce1cbba14407fa0f5" category="list-text">Baixe a versão apropriada do arquivo *suporte para dispositivos StorageGRID* e o arquivo de checksum correspondente.</block>
@@ -3178,7 +3110,6 @@
   <block id="066e55e7e1c84f08925cd52856fb53b5" category="summary">Confirme que pode aceder às redes StorageGRID que está a utilizar a partir do dispositivo. Para validar o roteamento por meio de gateways de rede, você deve testar a conetividade entre o Instalador de dispositivos StorageGRID e endereços IP em diferentes sub-redes. Você também pode verificar a configuração MTU.</block>
   <block id="26402c5857d6789e24bbd4321a204213" category="list-text">Na barra de menus do Instalador de dispositivos StorageGRID, clique em *Configurar rede* &gt; *Teste de Ping e MTU*.</block>
   <block id="3c0a4cd6fff077ca9dfc20c1f1608752" category="paragraph">A página Ping e MTU Test (Teste de Ping e MTU) é exibida.</block>
-  <block id="6d7f2752312c0c72f0b4a8ec9320c075" category="image-alt">Captura de tela da opção Ping e Teste MTU no Instalador de dispositivos StorageGRID</block>
   <block id="989961d88e80002ba54e15ceeb5a8848" category="list-text">Na caixa suspensa *rede*, selecione a rede que deseja testar: Grade, Admin ou Cliente.</block>
   <block id="a463579ad768fa90aa8e48b3112897f0" category="list-text">Insira o endereço IPv4 ou o nome de domínio totalmente qualificado (FQDN) para um host nessa rede.</block>
   <block id="69274deb0d907f50897a3d7cadce87c4" category="paragraph">Por exemplo, você pode querer fazer ping no gateway na rede ou no nó de administração principal.</block>
@@ -3196,20 +3127,10 @@
   <block id="7b940fdd0fc044a70abf19e87a459209" category="paragraph">A tabela de conetividade de porta lista os tipos de nós que exigem conetividade TCP na rede de Grade. Para cada tipo de nó, a tabela lista as portas de rede de Grade que devem ser acessíveis ao seu dispositivo.</block>
   <block id="38357ded564177fb36b2b799380256cf" category="paragraph">Você pode testar a conetividade entre as portas do dispositivo listadas na tabela e os outros nós da rede de Grade.</block>
   <block id="2520b2e6b1e66cf4dcc5e7768ed2138d" category="list-text">Na lista suspensa *Network*, selecione a rede que deseja testar: *Grid*, *Admin* ou *Client*.</block>
-  <block id="dd201c3f227a0121f5e2907ddbf37c73" category="list-text">Especifique um intervalo de endereços IPv4 para os hosts nessa rede.</block>
-  <block id="5359019b8c8e32b86dd7464c746c1a3d" category="paragraph">Por exemplo, você pode querer pesquisar o gateway na rede ou no nó de administração principal.</block>
-  <block id="65d201a132f8c3e8fb910e37dca0c0a6" category="paragraph">Especifique um intervalo usando um hífen, como mostrado no exemplo.</block>
   <block id="6315d4dcaeb6a486d2c53cfe457a5e80" category="list-text">Insira um número de porta TCP, uma lista de portas separadas por vírgulas ou um intervalo de portas.</block>
-  <block id="5cca6d6df455588f713f290c0cc69689" category="image-alt">Teste de conetividade da porta</block>
-  <block id="06aea9a6ad1453aa35cb81733b621111" category="list-text">Se as conexões de rede no nível da porta selecionadas forem válidas, a mensagem ""Teste de conetividade de porta aprovado"" aparecerá em um banner verde. A saída do comando nmap está listada abaixo do banner.</block>
-  <block id="818a0bcc63d36b242c6fcea3b66987d2" category="image-alt">Teste de conetividade da porta aprovado</block>
-  <block id="4fafb503a1c0ce677c0070efc8d2b387" category="list-text">Se uma conexão de rede no nível da porta for feita ao host remoto, mas o host não estiver ouvindo em uma ou mais das portas selecionadas, a mensagem ""Falha no teste de conetividade da porta"" aparecerá em um banner amarelo. A saída do comando nmap está listada abaixo do banner.</block>
   <block id="4c78df6ef51ca57ddfc4d17dcf9591ac" category="paragraph">Qualquer porta remota que o host não esteja ouvindo tem um estado de "fechado". Por exemplo, você pode ver esse banner amarelo quando o nó ao qual você está tentando se conetar estiver em um estado pré-instalado e o serviço StorageGRID NMS ainda não estiver sendo executado nesse nó.</block>
-  <block id="643ce849ab48920fd2983239cbe5d7ea" category="image-alt">Banner amarelo de teste NMAP</block>
-  <block id="cb2fe8130d4e1cf523e386b3cf10d26a" category="list-text">Se uma conexão de rede no nível de porta não puder ser feita para uma ou mais portas selecionadas, a mensagem "Falha no teste de conetividade de porta" aparecerá em um banner vermelho. A saída do comando nmap está listada abaixo do banner.</block>
   <block id="f282870d442edda2838250457b055810" category="paragraph">O banner vermelho indica que uma tentativa de conexão TCP para uma porta no host remoto foi feita, mas nada foi retornado ao remetente. Quando nenhuma resposta é retornada, a porta tem um estado de "filtrada" e é provavelmente bloqueada por um firewall.</block>
   <block id="0f99e277940b266478422badbb16b8d6" category="admonition">Os portos com "fechado" também são listados.</block>
-  <block id="d9e8f46e28922211f8d74a14b7249d3a" category="image-alt">Banner vermelho do teste do NMAP</block>
   <block id="1366a9144b0eb756899d4ccb7f295ab6" category="summary">Os dispositivos e controladores incluem indicadores que o ajudam a determinar o estado dos componentes do dispositivo.</block>
   <block id="0e655d2e5d1d7c0e78ca19de2419837d" category="paragraph">O dispositivo inclui indicadores que o ajudam a determinar o status do controlador do dispositivo e dos dois SSDs:</block>
   <block id="0425c776f02886fc2ad3d02d6a30aea0" category="inline-xref">Indicadores e botões do aparelho</block>
@@ -3444,7 +3365,6 @@
   <block id="f9482b14635721bf57c8eaa18e61e86c" category="list-text">Alteração do *modo de ligação de rede* de ative-Backup para LACP ou de LACP para ative-Backup</block>
   <block id="2e4857def79dce4eaa2a904bc762cc06" category="list-text">Ativar ou desativar a marcação de VLAN ou alterar o valor de uma tag VLAN</block>
   <block id="9375de3fffbb63f94a7ca68331299b22" category="list-text">Alterar a velocidade da ligação</block>
-  <block id="884c9ef72af2e78c7b74cf8d6e2b4c99" category="image-alt">Configuração da ligação</block>
   <block id="d4c9b08865765159cf23c2db654d16bc" category="admonition">Poderá perder a ligação se tiver efetuado alterações à rede ou à ligação através da qual está ligado. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do Instalador de appliance StorageGRID usando um dos outros endereços IP atribuídos ao appliance<block ref="251ae727bbf196bd20b639ae0e9a345a" prefix=" " category="inline-code"></block></block>
   <block id="dd285b2094fbb590db2df270c687a35d" category="paragraph">Além de quaisquer outros testes que você escolher executar, confirme que você pode fazer ping no endereço IP da rede de Grade do nó Admin principal e no endereço IP da rede de Grade de pelo menos um outro nó. Se necessário, retorne às instruções para configurar links de rede e corrija quaisquer problemas.</block>
   <block id="f692cc6109248f1a2005c9e0d4276b6a" category="list-text">Uma vez que você estiver satisfeito que as alterações de configuração do link estão funcionando, reinicie o nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *controlador de reinicialização* e, em seguida, selecione uma destas opções:</block>
@@ -3780,7 +3700,6 @@
   <block id="b649d240d7070d0b2bcc3ae8219f0385" category="paragraph">HDD01</block>
   <block id="1c4680a7c4d48df9c1f32e46a4e30214" category="list-text">Transfira os componentes substituíveis para o aparelho de substituição.</block>
   <block id="294718a9bfa4787785e6c0bc7e668f54" category="paragraph">Siga as instruções de manutenção fornecidas para reinstalar os componentes substituíveis.</block>
-  <block id="2e2efda69088b78188474424c347e346" category="admonition">Se você deseja manter os dados nas unidades, certifique-se de inserir as unidades SSD nos mesmos slots de unidade que ocuparam no dispositivo com falha. Se não o fizer, o Instalador do aparelho apresentará uma mensagem de aviso e terá de colocar as unidades nas ranhuras corretas e reiniciar o aparelho antes de o aparelho poder voltar a ligar a grelha.</block>
   <block id="fadc88cd0b2f17c2130cb8814db82929" category="inline-link-macro">Instale o aparelho de substituição no gabinete ou rack</block>
   <block id="c2b15088afc135982ed6160ae5eac813" category="list-text"><block ref="f6c9cca69a348acd8905bc371eb6fc7a" category="inline-link-macro-rx"></block>.</block>
   <block id="4245635d62a9242eb35a7e4ec5a56abd" category="list-text">Aguarde que o aparelho volte a ligar a grelha. Se o aparelho não voltar a juntar-se à grelha, siga as orientações na página inicial do Instalador de dispositivos StorageGRID para resolver quaisquer problemas.</block>
@@ -3865,28 +3784,18 @@
   <block id="f838b84263c45aeb4f1be3728754e3ad" category="summary">Talvez seja necessário substituir o controlador E5700SG se ele não estiver funcionando de forma ideal ou se ele tiver falhado.</block>
   <block id="add9671f6034ac41fcd287a17504e8bd" category="doc">Substitua o controlador de computação E5700SG</block>
   <block id="3113d1c6db21b6292b515b6f9d7ab0b1" category="list-text">Você baixou as instruções do e-Series para substituir um controlador E5700 com falha.</block>
-  <block id="1222bf122e651e13e7f8c4547aa07c01" category="admonition">Use as instruções do e-Series para referência somente se você precisar de mais detalhes para executar uma etapa específica. Não confie nas instruções da série e para substituir um controlador no dispositivo StorageGRID, porque os procedimentos não são os mesmos. Por exemplo, as instruções do e-Series para o controlador E5700 descrevem como remover a bateria e a placa de interface do host (HIC) de um controlador com falha e instalá-los em um controlador de substituição. Estas etapas não se aplicam ao controlador E5700SG.</block>
-  <block id="e9bd290e03f625f6bed79c79fb12c3af" category="paragraph">O nó de storage do dispositivo não estará acessível quando você substituir o controlador. Se o controlador E5700SG estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.</block>
   <block id="9970256edb163e41e7c836e590be3d3b" category="admonition">Se você estiver substituindo o controlador antes de instalar o software StorageGRID, talvez você não consiga acessar o instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do controlador original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.</block>
   <block id="5f4633dab4809d0ef564716830b660d0" category="list-text">Desligue o controlador E5700SG.</block>
-  <block id="9f714fb482b7d712fa442c1dab434e88" category="list-text">Desligue o controlador E5700SG<block ref="fc4ea1f1e2486ddf4a90174ec40b0013" prefix=" " category="inline-code"></block></block>
   <block id="259104854fc640bc8bfcb5a5cd5dcd2e" category="list-text">Aguarde até que quaisquer dados na memória cache sejam gravados nas unidades.</block>
-  <block id="44e448e3a5af541365e863371be367f4" category="paragraph">O LED verde Cache ative na parte de trás do controlador E2800 fica aceso quando os dados em cache precisam ser gravados nas unidades. Tem de esperar que este LED se desligue.</block>
-  <block id="a98148bc0629a67d04a5611ffa983a30" category="list-text">Desligue a alimentação.</block>
-  <block id="6a6bfe27b15a61b35332bb4233f19126" category="list-text">Desligue ambos os interrutores de alimentação do aparelho.</block>
-  <block id="e470e0b7859ee1ee16564cc7e8e48968" category="list-text">Aguarde que todos os LEDs se desliguem.</block>
   <block id="fa0330fb59f572dc8b0652440bf2f86a" category="list-text">Se as redes StorageGRID conetadas ao controlador usarem servidores DHCP:</block>
   <block id="7e795510f2694b9daa8917105ed0bcd0" category="list-text">Observe os endereços MAC das portas no controlador de substituição (localizados em etiquetas no controlador).</block>
   <block id="629e8c407c41e21d4d31deb818491b1c" category="list-text">Peça ao administrador da rede que atualize as definições de endereço IP do controlador original para refletir os endereços MAC do controlador de substituição.</block>
-  <block id="57a094478e00a6f3f3c0f7a2235135da" category="admonition">Você deve garantir que os endereços IP do controlador original foram atualizados antes de aplicar energia ao controlador de substituição. Caso contrário, o controlador obterá novos endereços IP DHCP quando iniciar e poderá não conseguir reconetar-se ao StorageGRID. Esta etapa se aplica a todas as redes StorageGRID conetadas ao controlador.</block>
   <block id="b45afbec52f534783a03eff995ab7c60" category="list-text">Retire o controlador do aparelho:</block>
-  <block id="8f3cbfc24bf8320bd71da8013c93640b" category="list-text">Ligue o aparelho e monitorize os LEDs do controlador e os ecrãs de sete segmentos.</block>
   <block id="c55c2810ba6c5c4a4fc9c1538acd29bc" category="paragraph">Depois que os controladores iniciarem com êxito, os visores de sete segmentos devem mostrar o seguinte:</block>
   <block id="d25d4484df6622f99b69e1a9d5de68b5" category="list-text">Controlador da série E2800:</block>
   <block id="bdfd83c6f7ad247022830d70be061223" category="paragraph">O estado final é<block ref="ac627ab1ccbdb62ec96e702f07f6425b" prefix=" " category="inline-code"></block>.</block>
   <block id="5e3d5a8322a4cbda882ebea3fafa9c14" category="list-text">Controlador E5700SG:</block>
   <block id="24b2276b0b6b2a1cee60625fbdf5cb8d" category="paragraph">O estado final é<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block>.</block>
-  <block id="f506cf75a2431e6747fee271be2cabd2" category="list-text">Confirme se o nó de armazenamento do dispositivo é exibido no Gerenciador de Grade e se nenhum alarme é exibido.</block>
   <block id="8f480a3bbae8ee5c31f1bfd95ddfa725" category="summary">Talvez seja necessário substituir uma bateria, unidade, ventilador ou fonte de alimentação do controlador no aparelho StorageGRID.</block>
   <block id="c7ed26e039a6e3f26e6686ed98dac8ed" category="doc">Substitua outros componentes de hardware no SG5700</block>
   <block id="e4e19baff9c13982046ee79bb64ebc39" category="list-text">Você tem o procedimento de substituição de hardware do e-Series.</block>
@@ -4105,18 +4014,12 @@
   <block id="469b4f63a056981e4c2fcbf91477d76d" category="admonition">Se não conseguir resolver o problema, contacte o suporte técnico. Se necessário, colete dados de suporte para seu storage array usando o Gerenciador de sistema do SANtricity.</block>
   <block id="0a0e11a593a1ae795c58a7ea1751517a" category="list-text">Selecione coletar dados de suporte.</block>
   <block id="b54c595bb71cefacd0ee6e5a4d68dc02" category="list-text">Clique em coletar.</block>
-  <block id="6a1a2ebdb9dbf1f40191fb7d4e47648e" category="list-text">Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página *nós* exibe um status normal (marca de seleção verde à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
-  <block id="3f1422be48953516b5581d5164f4380a" category="admonition">Pode levar 20 minutos a partir de quando você liga os interrutores de energia para quando o nó se alegra com a grade e exibe um status normal no Gerenciador de Grade."</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">O que se segue?</block>
   <block id="efd279df83f7980b63864ad37d922c7b" category="paragraph">A substituição da bateria está concluída. Pode retomar as operações normais.</block>
-  <block id="67e61ec95be7440ca50351a3be0bc2a7" category="doc">Substitua o controlador SG5800</block>
   <block id="364650f21807adee20cde64ae4a5d3e9" category="paragraph">Talvez seja necessário substituir o controlador SG5800 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.</block>
-  <block id="d5ceae45ad71c42a4ef35fb1c37197d2" category="paragraph">O nó de storage do dispositivo não estará acessível quando você substituir o controlador. Se o controlador SG5800 estiver a funcionar o suficiente, pode efetuar um encerramento controlado no início deste procedimento.</block>
   <block id="caa1c5d5fd1e7ba64de8d71286bb8318" category="admonition">Se você estiver substituindo o controlador antes de instalar o software StorageGRID, talvez você não consiga acessar o instalador do StorageGRID Appliance imediatamente após concluir este procedimento. Embora você possa acessar o Instalador de dispositivos StorageGRID de outros hosts na mesma sub-rede que o appliance, você não pode acessá-lo de hosts em outras sub-redes. Esta condição deve resolver-se dentro de 15 minutos (quando qualquer entrada de cache ARP para o tempo limite do controlador original), ou você pode limpar a condição imediatamente, limpando quaisquer entradas de cache ARP antigas manualmente do roteador ou gateway local.</block>
-  <block id="ff4a4cfe4d47b7b6bc9984272252afd0" category="list-text">Na página inicial do Gerenciador do sistema do SANtricity, selecione Exibir operações em andamento.</block>
   <block id="aafe5c594f12727470503cdf24758823" category="admonition">Para evitar um desempenho degradado, não torça, dobre, aperte ou pise os cabos. Solte o controlador do aparelho apertando o trinco na pega do came até soltar e, em seguida, abra a pega do came para a direita.</block>
   <block id="85caa39a88f7091fb2db841ad6b83ffd" category="list-text">Volte a colocar os cabos.</block>
-  <block id="116708dbf8cbcdd4ed3a0eaa59b210d5" category="list-text">Ligue o aparelho e monitorize os LEDs do controlador.</block>
   <block id="dc6b37d166611f437c69e6665f804874" category="paragraph">Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a<block ref="4fc2cab5a4eb2f6a408378b0d596ae42" category="inline-link-rx"></block> página para obter mais informações.</block>
   <block id="1464eb966468f8e80ec78f5cd52b8139" category="summary">Talvez seja necessário substituir o controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.</block>
   <block id="c595b95dcefcc7a1bb5de535ba5fd773" category="doc">Substitua o controlador E4000 (SG5800)</block>
@@ -4560,15 +4463,11 @@
   <block id="35a79182a56cf7b6a5c7f17b651e577a" category="list-text">Os ventiladores nas prateleiras de expansão podem ser muito altos quando eles começam a funcionar. O ruído alto durante o arranque é normal.</block>
   <block id="74ebcbaf6455d0bcd9e4bb9ee4a1e5f2" category="list-text">Monitore a página inicial do instalador do dispositivo StorageGRID.</block>
   <block id="af67f8a003327c9eebf3ca126d6cb15e" category="paragraph">Em aproximadamente cinco minutos, as prateleiras de expansão terminam de ligar e são detetadas pelo sistema. A página inicial mostra o número de novas prateleiras de expansão detetadas e o botão Iniciar expansão está ativado.</block>
-  <block id="957964cae6043f2330c8f38caea3a302" category="paragraph">A captura de tela mostra exemplos das mensagens que podem aparecer na página inicial, dependendo do número de prateleiras de expansão existentes ou novas, como segue:</block>
-  <block id="76cc5756e68583a87585e18328dacff2" category="list-text">O banner circulado na parte superior da página indica o número total de prateleiras de expansão detetadas.</block>
   <block id="07f9fb3c25d4ea7d4a0c16903911a5c3" category="list-text">O banner indica o número total de compartimentos de expansão, quer as prateleiras estejam configuradas e implantadas ou novas e não configuradas.</block>
   <block id="ab80f29a225d89c0651a4e8cb849f351" category="list-text">Se não forem detetadas prateleiras de expansão, o banner não aparecerá.</block>
-  <block id="19e11cd215ec0245efaf88df78d9438c" category="list-text">A mensagem circulada na parte inferior da página indica que uma expansão está pronta para ser iniciada.</block>
   <block id="1d130ab24341487fcdc1f035fbdedcd9" category="list-text">A mensagem indica o número de novos compartimentos de expansão detetados pelo StorageGRID. "Anexo" indica que a prateleira foi detetada. "'unconfigured'" indica que o shelf é novo e ainda não está configurado usando o Instalador de dispositivos StorageGRID.</block>
   <block id="e7f701eb3f4d3bc2a8e21b88702b3bd9" category="admonition">Os compartimentos de expansão que já estão implantados não estão incluídos nesta mensagem. Eles estão incluídos na contagem no banner no topo da página.</block>
   <block id="8d426a4b83be884612d4705a8868e88e" category="list-text">A mensagem não aparecerá se novas prateleiras de expansão não forem detetadas.</block>
-  <block id="d7d78702f25ae6e640f0e9ead01e70e3" category="image-alt">Instalação do compartimento de expansão</block>
   <block id="6142d5c437d47108ffff21767d02e7c7" category="list-text">Conforme necessário, resolva quaisquer problemas descritos nas mensagens da página inicial.</block>
   <block id="5dbe6dd58ce8816fc5c10017f5b548e0" category="paragraph">Por exemplo, use o Gerenciador de sistema do SANtricity para resolver quaisquer problemas de hardware de armazenamento.</block>
   <block id="d3eecd11ceabfc66a157208681c6212a" category="list-text">Verifique se o número de prateleiras de expansão exibidas na página inicial corresponde ao número de prateleiras de expansão que você está adicionando.</block>
@@ -4576,12 +4475,9 @@
   <block id="25d87e8b2a6c2915dc06f4e9b9b88f03" category="list-text">[[start_expansion]]clique em *Start Expansion* para configurar as prateleiras de expansão e disponibilizá-las para armazenamento de objetos.</block>
   <block id="6b2dcdd7d0c3d8607ad63fa1ffa831c6" category="list-text">Monitorar o andamento da configuração do compartimento de expansão.</block>
   <block id="0b1a45d06edabb3a0d30f19e32313f3b" category="paragraph">As barras de progresso aparecem na página da Web, tal como fazem durante a instalação inicial.</block>
-  <block id="423e88fbd5a2dc0f512f8a2aab010253" category="image-alt">Monitorar a configuração do compartimento de expansão</block>
   <block id="8e3fc62e7ff2327410f5fd196fe8eb39" category="paragraph">Quando a configuração estiver concluída, o aparelho reinicializa automaticamente para sair do modo de manutenção e voltar a ligar a grelha. Este processo pode demorar até 20 minutos.</block>
   <block id="22c78d9f214674f57243dd456395e62d" category="inline-xref">configuração do compartimento de expansão</block>
   <block id="8a0be3414d4074a33b893709085c355f" category="admonition">Para tentar novamente a configuração do compartimento de expansão se falhar, vá para o Instalador de dispositivos StorageGRID, selecione *Avançado* &gt; *Reiniciar controlador* e, em seguida, selecione *Reiniciar no modo de manutenção*. Depois que o nó for reiniciado, tente novamente o <block ref="4cfad85fe4ed7cd2abe5a1a25adfc10c" category="inline-xref-macro-rx"></block>.</block>
-  <block id="6337530d62799abe1e3e579f1a39fba6" category="paragraph">Quando a reinicialização estiver concluída, a guia *Tasks* parece com a seguinte captura de tela:</block>
-  <block id="81e9272bb451de8aaf7b16d82b9f0208" category="image-alt">Reinicialização concluída</block>
   <block id="a6b3ba0004b2a9a8396f15a73114a062" category="list-text">Verifique o status do nó de storage do dispositivo e dos novos compartimentos de expansão.</block>
   <block id="6b5138f4d805b8079a4f07b226e6885a" category="list-text">No Gerenciador de Grade, selecione *NÓS* e verifique se o nó de armazenamento do dispositivo tem um ícone de marca de seleção verde.</block>
   <block id="3323a22b50b501b0a1012ae5490e2561" category="inline-link">Monitorar os estados de conexão do nó</block>
@@ -5162,22 +5058,16 @@
   <block id="9ccd79e77976b22b2105fd27f98d48e7" category="inline-link">Documentação do StorageGRID 11,4</block>
   <block id="a4236c1e626cbb1d83748576ab2ec1fc" category="list-text"><block ref="a4236c1e626cbb1d83748576ab2ec1fc" category="inline-link-rx"></block></block>
   <block id="4f358682bbd405c1f8afe04ebda90829" category="summary">Saiba como testar e habilitar aplicativos em seu ambiente StorageGRID.</block>
-  <block id="696ea9ebe2a9f57bb062aba5c1d58b10" category="doc">Como ativar o StorageGRID no seu ambiente</block>
-  <block id="fa7f52ddda62fe1d2363b41a26e0b3d7" category="paragraph"><block ref="0e0fa9204b8188a393de62aba466cfd2" category="inline-link-rx"></block>Acesse para saber como testar e ativar aplicativos em seu ambiente StorageGRID.</block>
-  <block id="73d37b18fd6bead589b7f5fbc79b27fe" category="paragraph">O site de documentação *StorageGRID-enable* fornece exemplos e livros de receitas que se expandem sobre a documentação do produto neste site, e descreve algumas próximas etapas na avaliação e integração com o StorageGRID.</block>
   <block id="184be814f5401398fdf0f1ce3a702551" category="paragraph">Algumas das informações incluem:</block>
   <block id="524a8f1f430dca0d85bebbcd3c376862" category="list-text">Listas de soluções de terceiros validadas para versões anteriores e atuais do StorageGRID.</block>
   <block id="8dfc12a5cc6be10182743183e843c496" category="list-text">Guias de recursos do produto. Por exemplo, esses guias fornecem todas as informações necessárias para criar pools de armazenamento em nuvem.</block>
   <block id="1d633b4a689ee09de3a2f149c37d8cbe" category="list-text">Guias de ferramentas e aplicações.</block>
   <block id="e2ac36e2f684920c9531933bf719a29d" category="list-text">Exemplos de API para usar recursos do StorageGRID, como criptografia S3 e bloqueio de objetos S3.</block>
   <block id="daad4dadeda8cd86f01c8ad7f2a30465" category="summary">Saiba o que há de novo neste site de documentação.</block>
-  <block id="896ec268e957d3c662f84637cbe5cff2" category="doc">O que há de novo para eletrodomésticos</block>
-  <block id="72537bf3eb1f84421991e3c2fd3c6510" category="paragraph">Saiba o que há de novo para os dispositivos StorageGRID.</block>
   <block id="f7e2b8e3d85d290dcca43cce02c80067" category="section-title">Aparelhos SG5812 e SG5860</block>
   <block id="f9b87deff325082cc0a1f50f4e181511" category="inline-link-macro">Aparelhos SGF6100: Visão geral</block>
   <block id="768c56127fcc2636d57e4635785f71f3" category="section-title">Aparelhos de serviços SG110 e SG1100</block>
   <block id="cb8480a76ca9faf13ba8cdaa026a4115" category="inline-link-macro">Dispositivo de serviços SG110 e SG1100: Visão geral</block>
-  <block id="e12ebc016927211d63794de19e7cf124" category="paragraph">Os novos dispositivos de serviços StorageGRID SG110 e SG1100 são uma atualização de hardware evolutiva que fornece desempenho administrativo e de balanceamento de carga aprimorado. <block ref="3c058555c619096548fbed1bbe78e3c7" category="inline-link-macro-rx"></block>Consulte .</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Comece agora</block>
   <block id="4a4dbf02e8eff8088b2776662f9d29f0" category="sidebar">Saiba mais sobre o StorageGRID</block>
   <block id="640a3dfe21013fb2c8b8eb33081782c7" category="sidebar">Início rápido do StorageGRID</block>
@@ -5190,7 +5080,6 @@
   <block id="b82ff6cc8b54f013ccfe94afdb37a599" category="sidebar">SG5600</block>
   <block id="2d4f4568ad652ff08727bc044f1373cc" category="sidebar">Software StorageGRID</block>
   <block id="7bb5d1e21ca0bacc168d63d7155d3755" category="sidebar">Documentação do StorageGRID 11,8</block>
-  <block id="09f63f5e49731771c9b8f2aea5094d6c" category="sidebar">Ative o StorageGRID</block>
   <block id="f79d19698773a72634d43a876efcc14e" category="sidebar">Integre outras aplicações</block>
   <block id="81a123ccab93cd947289b672b0e50348" category="sidebar">Demos e tutoriais</block>
   <block id="37a22f48989cdc6e7e3429f09be3fc5c" category="sidebar">Videoteca StorageGRID</block>
@@ -5277,10 +5166,6 @@
   <block id="982ae3aea4734aa7e1eded70b7f60794" category="sidebar">Substituir o ventilador em SGF6112 ou SG6100-CN (SG6160)</block>
   <block id="febcfd461af3265bdb47b88615490ba4" category="sidebar">Substitua o ventilador no compartimento do controlador de storage ou no compartimento de expansão (SG6160)</block>
   <block id="cfdea9725f37741c5c465e1f99806049" category="sidebar">Substitua a unidade no SGF6112</block>
-  <block id="b5a370808976d26b5863b321417b9447" category="sidebar">Substitua a NIC interna (SGF6112 e SG6160)</block>
-  <block id="6160bc78506e7a4a802a5a71f5b0c192" category="sidebar">Substituir NIC externo (SG6160)</block>
-  <block id="63cba1504c48a2c26d4d599e250b651c" category="sidebar">Substituir DIMMs (SG6160)</block>
-  <block id="de4454f572601b9993fa9bb1fdd12775" category="sidebar">Substituir baterias (SG6160)</block>
   <block id="42201415720ad552ae0536ddda18b94e" category="sidebar">Saiba mais sobre os dispositivos StorageGRID</block>
   <block id="b7cd29c1531745149a88d6056a6c42c4" category="sidebar">Clonagem do nó do dispositivo</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">Visão geral</block>
@@ -5321,7 +5206,6 @@
   <block id="9f18ec4b5bc626a36f20fd0e9e308fd5" category="sidebar">Manutenção de hardware do SG5700</block>
   <block id="d28b16956366aefb66b4d3c0ad6adff9" category="sidebar">Procedimentos de configuração de manutenção - SG5700</block>
   <block id="caff72d0e2c3e37ad045f03285930c9e" category="sidebar">Atualizar o SANtricity os no controlador de storage</block>
-  <block id="873b100e9a6f8ed042c76735435554a9" category="sidebar">Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity</block>
   <block id="3631dcd2ec8f8e84f2dc4ff1264bb5ba" category="sidebar">Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity usando o método on-line</block>
   <block id="0007bed3a39900ca535cccaada9a4349" category="sidebar">Atualize o firmware da unidade usando o Gerenciador de sistema SANtricity usando o método off-line</block>
   <block id="788697afde4234909fea250e5a71febf" category="sidebar">Procedimentos de hardware - SG5700</block>
@@ -5353,15 +5237,10 @@
   <block id="48889e269a4d7fca4c265f4a2f877e26" category="sidebar">Mantenha o hardware SG6100</block>
   <block id="14975bfde92215c95436649cec8f726d" category="sidebar">Manutenção de hardware do SG6100</block>
   <block id="824ffb105357c984745978d4f897102d" category="sidebar">Procedimentos de configuração de manutenção - SG6100</block>
-  <block id="31cb4cd18f0b157246f637e618b45dc6" category="sidebar">Atualizar o firmware da unidade usando o Gerenciador de sistema do SANtricity (SG6160)</block>
-  <block id="0f6f36dc2bf579a4fe0bcd94f0aae0d4" category="sidebar">Atualize o firmware da unidade SG6100 usando o método on-line do Gerenciador de sistema do SANtricity</block>
-  <block id="516eaa38d25580e59ed23d9eccdba702" category="sidebar">Atualize o firmware da unidade SG6100 usando o método offline do Gerenciador de sistema SANtricity</block>
   <block id="04151f4bdc7338545b601e95ffdb3628" category="sidebar">Procedimentos de manutenção de hardware - SG6100</block>
   <block id="b0672f12d96d0f38d95e03cbf80aa7bd" category="sidebar">SGF6112 OU SG6100-CN (SG6160)</block>
   <block id="2db9b7ed7075356c49f0fe44fb9558dd" category="sidebar">Compartimento do controlador de storage ou compartimento de expansão (SG6160)</block>
   <block id="c0c97c5cc95065f4fb2ce8f089b8b227" category="sidebar">SG6100-CN (SG6160)</block>
-  <block id="febf161387f73ddb0423c5da500716cf" category="sidebar">NIC interno (SGF6112 e SG6160)</block>
-  <block id="bfb27aa707c73a44d7c9a84b4f5892dc" category="sidebar">Placa de rede externa (SG6160)</block>
   <block id="0c5b49805cedde0be71bd8e1248caea5" category="sidebar">CONTROLADOR SG6100-CN (SG6160)</block>
   <block id="109cfb866393048721520c64b6a72dcd" category="sidebar">Controlador E4000 (SG6160)</block>
   <block id="1b137b50e38b53f7a19b8ae2f6114d7d" category="sidebar">Transferir para o rack</block>
@@ -5376,7 +5255,6 @@
   <block id="0d62b6adecaf87bf7af8afc6946e6857" category="list-text">Âmbar: Falha na alimentação de energia.</block>
   <block id="9eda08f277c75d2cbd6cbe89a3a578b1" category="paragraph">Identifique o LED</block>
   <block id="b673288e438383d0a8a5fd24fa185140" category="list-text">Você tem o<block ref="4b9b8ad1fd2d0c7e2de41ab41c589ff5" category="inline-link-rx"></block>.</block>
-  <block id="609295eb0c681d6c1424fff83e27f505" category="admonition">Certifique-se de aplicar o hotfix do StorageGRID mais recente antes de iniciar este procedimento. <block ref="4c6c5bde6eefe6b83cf8fcf6cfafcbf0" category="inline-link-rx"></block>Consulte para obter detalhes.</block>
   <block id="53a1c12160c727fefa8453478aa1dd20" category="list-text">O dispositivo de origem está em um estado pré-instalado, como se você tivesse<block ref="d8179f874ceb9655a4c19cb17f6c7478" category="inline-link-rx"></block>o .</block>
   <block id="66cc02950de74fa96e9f918a807f3106" category="paragraph">Acesse a ferramenta alterar IP e atualize as configurações de MTU conforme descrito em<block ref="8adfe8e8a2d3ccaaf3f07fd9e52d3fc4" category="inline-link-rx"></block>.</block>
   <block id="4e1662db936106068fd744ad81e3f5f1" category="paragraph">As configurações do dispositivo a seguir não são transferidas para o dispositivo de substituição durante a clonagem. Deve configurá-los durante a configuração inicial do aparelho de substituição.</block>
@@ -5476,12 +5354,10 @@
   <block id="637caad455a57e19afcd30b9c02674b0" category="open-title">SG5700 e SG5800</block>
   <block id="eb1a4beef110ceda19ffa08d7d3c5511" category="inline-link">implementar a segurança da unidade</block>
   <block id="edc7c6a0a6b43c141f2158dab7e2fe46" category="paragraph">Para os dispositivos de storage SG5700 e SG5800, siga as etapas de alto nível para<block ref="30ac7c9d072f9a088ff3ecff057331d7" category="inline-link-rx"></block> no Gerenciador de sistemas do SANtricity.</block>
-  <block id="7c069ddd5dad8ecd4ee00173477e13a1" category="paragraph">Para o dispositivo de armazenamento SG6060, a segurança da unidade pode ser ativada automaticamente nas unidades SSD somente se o gerenciamento de chaves tiver sido configurado antes de instalar o dispositivo de armazenamento.</block>
   <block id="b321866a74d5de79233bf6878dbd4501" category="list-text">Equipe seu storage array com unidades com capacidade segura (unidades FDE ou unidades FIPS).</block>
   <block id="12696fff85009a1ef2901d8929335983" category="list-text">Para volumes que exigem suporte FIPS, use apenas unidades FIPS.</block>
   <block id="a8f349d358cf5164a86a3b184efab1c3" category="list-text">A combinação de unidades FIPS e FDE em um grupo de volumes ou pool faz com que todas as unidades sejam tratadas como unidades FDE.</block>
   <block id="5a9a863055dc29aed89d8c77f4e168a4" category="list-text">Uma unidade FDE não pode ser adicionada ou usada como sobressalente em um grupo de volumes ou pool totalmente FIPS.</block>
-  <block id="0579aa3685f75e3b2f4e2835bd1277f2" category="list-text">Para o compartimento do controlador E4000, crie uma chave de segurança (uma cadeia de carateres compartilhada pelo controlador e pelas unidades para acesso de leitura e gravação).</block>
   <block id="febebabfe962a13cf87eb0ff7729dcb2" category="inline-link">crie uma chave interna</block>
   <block id="2c6c5c9b7b46bbd4da92a18c67ee7c48" category="list-text">Você pode<block ref="6ec3cd897a97c3edb24a1fe750b56c9b" category="inline-link-rx"></block> usar a partir da memória persistente do controlador ou uma chave externa fornecida por um servidor de gerenciamento de chaves.</block>
   <block id="3b38026201c87a4c8932e38d5e80aa11" category="inline-link">estabeleça a autenticação com um servidor de gerenciamento de chaves</block>
@@ -5498,7 +5374,6 @@
   <block id="00eb0afe39b7bb07ee33907e04143322" category="list-text">Após a conclusão da instalação<block ref="7c1ab5b17d759a83d6a4eac233344f46" category="inline-link-rx"></block>, no Gerenciador de sistemas do SANtricity para todos os pools de discos ou grupos de volumes.</block>
   <block id="e7d1344a53b797c760231d6d67e01bd9" category="list-text">O cliente de gerenciamento está usando um<block ref="b84b4e728cab50bf316de2913d9bfde1" category="inline-link-rx"></block>.</block>
   <block id="b54a31b113abaae54f0e1d652d40bd79" category="list-text">O cliente ou laptop de serviço tem um<block ref="b84b4e728cab50bf316de2913d9bfde1" category="inline-link-rx"></block>.</block>
-  <block id="92cc52a4541f1cee178e5e7bb1312d38" category="image-alt">Captura de tela da parte superior da página inicial do Instalador de dispositivos StorageGRID</block>
   <block id="15c2366d765d58299bad2b1257f33e5c" category="admonition">Você pode usar os scripts Python de automação do StorageGRID diretamente ou usá-los como exemplos de como usar a API REST de instalação do StorageGRID nas ferramentas de implantação e configuração de grade que você mesmo desenvolve. Consulte as instruções para<block ref="8f6f997668adf715032c29362b329763" category="inline-link-rx"></block>.</block>
   <block id="b070f93443d48805f685978787f43388" category="list-text">Você está conetado ao Instalador de dispositivos StorageGRID no dispositivo que você está configurando usando um<block ref="b84b4e728cab50bf316de2913d9bfde1" category="inline-link-rx"></block>.</block>
   <block id="39ed22a75288844801e288ae98729e0c" category="admonition">Também pode configurar o sistema utilizando a<block ref="211fd8fdc92725b38616205e7f1e7a76" category="inline-link-rx"></block> ou a <block ref="2b9b559fdbf6b83dc49f82aaedacac2d" category="inline-link-macro-rx"></block>.</block>
@@ -5549,7 +5424,6 @@
   <block id="3874b74af884b67f89c6c2adc59d6564" category="paragraph">Esta figura mostra a localização da fonte de alimentação e identifica LEDs na parte traseira do controlador de computação SG6100-CN. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.</block>
   <block id="2e6dfafd88c45e0ec399efb6c48564d4" category="image-alt">LEDs traseiros SG6100-CN</block>
   <block id="65243f9b11da4aff53ef2492bd2914b0" category="list-text"><block ref="65243f9b11da4aff53ef2492bd2914b0" category="inline-link-rx"></block></block>
-  <block id="21e4cc108031bba39206d7b6b9caf5eb" category="list-text">Para todos os nós de dispositivo, exceto o nó de administrador principal, a etapa Instalar StorageGRID é interrompida e uma mensagem é exibida no console incorporado, solicitando que você aprove esse nó no nó de administrador usando o<block ref="e9b839af5117614531eec6994f76d987" category="inline-link-rx"></block>. Vá para a próxima etapa.</block>
   <block id="c4343f2a5127528d5f6935b01fef86a5" category="list-text"><block ref="6f88de86b8743bbe23202c83b893e250" category="inline-link-rx"></block> Do nó Admin principal, aprove o nó de grade pendente e conclua o processo de instalação do StorageGRID.</block>
   <block id="d08e16a033b319c3d200b9268a3bdf72" category="list-text"><block ref="d08e16a033b319c3d200b9268a3bdf72" category="inline-link-rx"></block></block>
   <block id="2ba45c55f69f733db3f04d7fc73830ff" category="admonition">Os tamanhos de volume não são consistentes em todos os tipos DDP e RAID. As variações na forma como o DDP e o RAID6 funcionam causam diferentes tamanhos de volume.</block>
@@ -5570,7 +5444,6 @@
   <block id="4e566fed33a5fbe94f583058b0167bb7" category="list-text">O cliente tem um <block ref="b84b4e728cab50bf316de2913d9bfde1" category="inline-link-rx"></block>.</block>
   <block id="0f7cdc2213ae0614b6880519b807dd83" category="paragraph">Consulte<block ref="9240b1c7fca3b4c00aaf60d976e6caee" category="inline-link-rx"></block> para obter informações sobre todos os métodos de criptografia disponíveis para dispositivos StorageGRID.</block>
   <block id="a18c863efe264b8a820a3aa5f15dce6e" category="paragraph">Reveja as informações<block ref="1ab6cf7b725cd1db8724fbcf79291fd1" category="inline-link-rx"></block> sobre o .</block>
-  <block id="6c36a8ed89f3113c9a4d345d07c525a3" category="admonition">Quando um dispositivo é instalado com criptografia de nó ativada, uma chave temporária é atribuída. Os dados no dispositivo não são protegidos até que o dispositivo esteja conetado ao sistema de gerenciamento de chaves (KMS) e uma chave de segurança KMS esteja definida. Consulte<block ref="1b141fe85ee275193be0bd326245089d" category="inline-link-rx"></block> para obter informações adicionais.</block>
   <block id="d453e448de3170f088f49a44683b6aaf" category="paragraph">Reveja as informações<block ref="9240b1c7fca3b4c00aaf60d976e6caee" category="inline-link-rx"></block> sobre o .</block>
   <block id="a834eba1793fd24a3b0df9777ed08ac4" category="paragraph">Não é possível usar portas remapeadas para pontos de extremidade do balanceador de carga. Se for necessário remover uma porta remapeada, siga as etapas em<block ref="ddc2fed20f0a5902c2e31af029d5bc0b" category="inline-link-rx"></block>.</block>
   <block id="37718a7243f3d42aa9519f9d8931c1b7" category="list-text">*Criptografia de unidade* (StorageGRID 11,8 e posterior): Operações para gerenciar a criptografia da unidade e exibir o status da criptografia da unidade.</block>
@@ -5635,13 +5508,11 @@
   <block id="e6523bc6b0aa210bcea1be5b2e6318ec" category="section-title">[[view-boot-codes]]Ver códigos de arranque (apenas SGF6112 e SG6160)</block>
   <block id="badc9a052fb8dc6b6ee7a3020215193b" category="section-title">[[view-error-codes]]Ver códigos de erro (apenas SGF6112 e SG6160)</block>
   <block id="a318b0e440c8e88d015bff11ce8a6e4c" category="paragraph">Se ocorrer um erro de hardware quando o controlador SG6000-CN está a arrancar, o BMC regista um código de erro. Conforme necessário, você pode visualizar esses códigos de erro usando a interface BMC ou a porta serial do dispositivo e, em seguida, trabalhar com suporte técnico para resolver o problema.</block>
-  <block id="99095f0bedc8e3d1410fe6eff42af5fc" category="image-alt">Captura de tela dos resultados do teste de ping no instalador do dispositivo StorageGRID</block>
   <block id="e7ea23a54c0ddebee1c1492e0cc1ea3d" category="paragraph">Além disso, você pode testar a conetividade nas redes Admin e Client e nas portas UDP, como as usadas para servidores NFS ou DNS externos. Para obter uma lista dessas portas, consulte o<block ref="1e586dd4a6252c59d7456ca897ae854e" category="inline-link-rx"></block>.</block>
   <block id="bdf32cd6e5bfe0d5860a2d5151fe3289" category="paragraph">A figura a seguir mostra os indicadores de status e os botões na frente dos SG100 e SG1000.</block>
   <block id="1a2ed7d39e0db03d9b5d4d6a46779876" category="paragraph">A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SG100 e do SG1000. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.</block>
   <block id="d74a4b83ad81c51e5fafde7ae7461979" category="paragraph">A figura a seguir mostra indicadores e botões na parte frontal dos aparelhos SG110 e SG1100.</block>
   <block id="20e957672cdc3dd43e0123cfc44ed26b" category="paragraph">A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do SG110 e do SG1100. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.</block>
-  <block id="64f2a2a9a6275d1679af729cb7fec6ac" category="paragraph"><block ref="64f2a2a9a6275d1679af729cb7fec6ac" category="inline-link-macro-rx"></block></block>
   <block id="64dc56b6855e747e49efa5dfe185c62b" category="paragraph">A figura a seguir mostra os indicadores de status e os botões na parte frontal do controlador SG6000-CN.</block>
   <block id="89a12c9cfe23a1dee6be66e2fb554131" category="paragraph">A figura a seguir mostra a localização da fonte de alimentação e identifica os LEDs na parte traseira do controlador SG6000-CN. Os LEDs de status e atividade adicionais estão nas portas do aparelho. Estes LEDs podem variar de acordo com o modelo do aparelho.</block>
   <block id="6caee75b38d61d4801420e3aec0b9ea6" category="paragraph">A figura a seguir mostra indicadores e botões na parte frontal dos aparelhos SG6100.</block>
@@ -5658,7 +5529,6 @@
   <block id="729e9f8a1afa4afe767302dd73394d10" category="list-text">Você deve estar conetado ao Gerenciador de Grade usando um<block ref="b84b4e728cab50bf316de2913d9bfde1" category="inline-link-rx"></block>.</block>
   <block id="ba435d2f285faf2c9d0a780aaf4916ed" category="paragraph">Para substituir uma unidade, um recipiente da ventoinha de alimentação, um recipiente da ventoinha, um recipiente de alimentação ou uma gaveta de unidades no aparelho, aceda ao<block ref="305b653a8d7ae8e7e9656f618c2cf6b6" category="inline-link-rx"></block>.</block>
   <block id="3d73a67961e1a613e0b4583610182b70" category="doc">Sobre a atualização do SANtricity os em uma controladora de storage SG5700</block>
-  <block id="a3fb3bbf2cf1bd106246d3e5db977eee" category="list-text"><block ref="a3fb3bbf2cf1bd106246d3e5db977eee" category="inline-link-macro-rx"></block></block>
   <block id="d440998a1c8beb2d7f6513462969f958" category="list-text">Use a ferramenta Teste de ping para verificar a conetividade com endereços IP em qualquer rede que possa ter sido afetada pelas alterações de configuração de link feitas na <block ref="2b33924fedc837b12bedd9a200e4d03f" category="inline-xref-macro-rx"></block> etapa.</block>
   <block id="89da1e2c5db02ccb941cd0e6d0b78782" category="list-text">No Gerenciador de Grade, selecione *NÓS* &gt; *_Appliance node_* &gt; *Gerenciador do sistema SANtricity*. As informações do controlador estão<block ref="a1aaf7bb5ac3c80e5c2b1588aa506a0d" category="inline-link-rx"></block> no .</block>
   <block id="a5ee4cd59c510c6a402f181d8d799c9b" category="image-alt">Referência de legenda 1</block>
@@ -5687,8 +5557,6 @@
   <block id="638734fcdf0d50595d78d81bb639fd1b" category="paragraph">Quando ambas as unidades SSD estão funcionando normalmente, o sistema restaurará automaticamente a funcionalidade de cache de leitura. Você pode<block ref="735aff2661f88efa8f6e8cceeb96bac0" category="inline-link-rx"></block> monitorar a taxa de acerto do cache de leitura. Como o cache foi reconstruído, a taxa de acertos pode ser baixa inicialmente, mas deve aumentar com o tempo, pois o cache é repreenchido pelos clientes que acessam dados de objeto.</block>
   <block id="b8e55daf0cd7d7e3973b1e259f86f0cd" category="admonition">Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre<block ref="7b41c2a82ff7a44a340b8559b6012e92" category="inline-link-rx"></block>o .</block>
   <block id="7da93c6e68a43a9bce834b5ab317044f" category="admonition">A troca a quente é *não* suportada para este procedimento. É necessário um <block ref="441002811e4fb104a452cffe39690fc5" category="inline-link-macro-rx"></block>antes de desconetar os cabos e remover a NIC.</block>
-  <block id="f23564587172dfdbfe2370e00a02a9e5" category="paragraph">Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a placa de rede durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte informações sobre <block ref="5059dc4531f4f3adf649d818b95a89ff" category="inline-link-macro-rx"></block>o .</block>
-  <block id="84504c6b7f2491dc5bc7090a8c2b9821" category="admonition">Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir a NIC durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre <block ref="f62f9b0fd270f830287bb631ff88ea28" category="inline-link-macro-rx"></block>o .</block>
   <block id="04690c654e14c31aaff7dcdf3ee29f7f" category="admonition">Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir o ventilador durante uma janela de manutenção programada, porque você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre<block ref="7b41c2a82ff7a44a340b8559b6012e92" category="inline-link-rx"></block>o .</block>
   <block id="57f986120565d62fe336f74024a0a5dc" category="list-text"><block ref="b8ccfb419e995cdda7f100cd08c73614" category="inline-link-macro-rx"></block>.</block>
   <block id="cdc6c3e5556c763f3a315ba4edf24802" category="admonition">Se você já usou uma regra ILM que cria apenas uma cópia de um objeto e está substituindo ambas as fontes de alimentação ao mesmo tempo, você deve substituir as fontes de alimentação durante uma janela de manutenção programada, pois você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre<block ref="7b41c2a82ff7a44a340b8559b6012e92" category="inline-link-rx"></block>o .</block>
@@ -5697,13 +5565,8 @@
   <block id="6df3b6aa83b520cdd88f98e9d7ae2f92" category="doc">Atualize o SANtricity os em controladores de storage SG6100 usando o Gerenciador de Grade</block>
   <block id="73ceb72d67ba34612609e1f83759b680" category="inline-link-macro">Atualize o SANtricity os em controladores SG6100 usando o modo de manutenção</block>
   <block id="35be643dd560ae241670f92b1cd69cf6" category="list-text"><block ref="35be643dd560ae241670f92b1cd69cf6" category="inline-link-macro-rx"></block></block>
-  <block id="2f0574719ffbf08aeb528b5265507fb2" category="inline-link">Documentação do StorageGRID 11,9</block>
-  <block id="fb9bf062d669886ba82eb2cef6e06bb0" category="paragraph">Aceda a<block ref="8a6d41e812d44c3c4b339dfb6a2bafbd" category="inline-link-rx"></block> para saber como configurar e utilizar um sistema StorageGRID 11,9.</block>
   <block id="d9419a01ee4fdcd160bf1446e5a481f5" category="list-text"><block ref="d9419a01ee4fdcd160bf1446e5a481f5" category="inline-link-rx"></block></block>
   <block id="0ceab7293af6c07bc39db5e5d82dd9d5" category="section-title">Informações sobre o BMC</block>
-  <block id="383618c189ef21ef243ef8ab02426094" category="paragraph">Informações detalhadas sobre como usar a interface BMC do StorageGRID Appliance já estão disponíveis. <block ref="df528c7928eba5c1226970c2705dfb3a" category="inline-link-macro-rx"></block>Consulte .</block>
-  <block id="4c3023a359ba4319887ce079f8ee7f9b" category="paragraph">Os novos dispositivos StorageGRID SG5812 e SG5860 são plataformas integradas de storage e computação que operam como nós de storage em uma grade StorageGRID. Consulte <block ref="2a413e9ad740d8bf3ae3102a4c99aa8a" category="inline-link-macro-rx"></block>para saber mais.</block>
-  <block id="32b906eb47adfda8201e47113c29db5b" category="paragraph">O novo dispositivo StorageGRID SG6160 inclui uma controladora de computação e um compartimento de controladora de storage que contém duas controladoras de storage e 60 unidades, bem como duas unidades SSD NVMe para armazenamento em cache. Opcionalmente, é possível adicionar gavetas de expansão de 60 unidades ao SG6160. <block ref="476efecdba735494e72d7970bc2f3e26" category="inline-link-macro-rx"></block>Consulte para saber mais.</block>
   <block id="a875f4e3e98d1c995967b1dfb394ca2e" category="sidebar">Documentação do StorageGRID 11,9</block>
   <block id="8bd00e89826dbd3fcf80ca108d7a008d" category="sidebar">Gerenciar unidades</block>
   <block id="d9435157d60631f5b40942f8da9f9d4f" category="sidebar">Ligue ou desligue o LED de identificação</block>
@@ -5718,8 +5581,6 @@
   <block id="813eb6e57b4706c7df0e13ae0defacd8" category="list-text">Se o dispositivo incluir um compartimento de expansão, consulte o <block ref="ba1bb7195a934f0a465563dc7e705dd7" category="inline-link-macro-rx"></block> para obter informações sobre o cabeamento.</block>
   <block id="c6ce792d1a06c8b72936713f0001140a" category="list-text">Você gravou a configuração atual do BMC do dispositivo, se ele permanecer disponível.</block>
   <block id="df5c8b40026819d555dd6dbdc002fb3e" category="list-text">Enter:<block ref="73a1c7bb6f54767f7e51d6973cad4923" prefix=" " category="inline-code"></block> Para apresentar a configuração atual do BMC para o dispositivo.</block>
-  <block id="b79224966bc8b470ef537d5ffb51ff44" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
-  <block id="df14b12403607f270bd6e168ec91f2c5" category="paragraph">Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="e1a4e21f94e19d24dcb24587293cd8bc" category="paragraph"><block ref="e1a4e21f94e19d24dcb24587293cd8bc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a071a7c175c6fede0936ac6e354e5055" category="paragraph"><block ref="a071a7c175c6fede0936ac6e354e5055" category="inline-image-macro-rx" type="image"></block></block>
   <block id="97d53609a22bc5ffa749725baf5ee763" category="paragraph"><block ref="97d53609a22bc5ffa749725baf5ee763" category="inline-image-macro-rx" type="image"></block></block>
@@ -5736,14 +5597,10 @@
   <block id="c97913a5c47ca1aaefcb605790ba744c" category="paragraph-title"><block ref="dc7abc674acbb1b3c1270fc1cf1b983a" category="inline-image-macro-rx" type="image"></block> Implantar o nó do dispositivo</block>
   <block id="95714c5faee0a7ee22897ffb9bb27d46" category="list-text">Para adicionar uma sub-rede, clique no ícone de inserção <block ref="04a444892ecdd89bfdaa29bcbf799187" category="inline-image-macro-rx" type="image"></block>à direita da última entrada.</block>
   <block id="9a70a6ae35e21c6544b20ca5f08a7c77" category="list-text">Para remover uma sub-rede não utilizada, clique no ícone de eliminação <block ref="382e1d9aa4a1ad456c931180513d817a" category="inline-image-macro-rx" type="image"></block>.</block>
-  <block id="a260587fbb1d0830942f420048880c97" category="list-text">Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="997a5fbd7bf48a6f361ad63bb5c3ea8b" category="list-text">Olhe para o ícone do ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem o recipiente do ventilador com falha.</block>
   <block id="4679124015a3fb5a2b9a8d50c4bec768" category="list-text">Olhe para o ícone de energia <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual prateleira tem o recipiente de energia com falha.</block>
   <block id="73a5f23e1326c160cea1d64fb296d381" category="list-text">Observe os ícones de energia <block ref="34a51d44013a1ce73b6f6d4343cad0e8" category="inline-image-macro-rx" type="image"></block> e ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita das listas suspensas *Shelf* para determinar qual prateleira tem a fonte de alimentação com falha.</block>
-  <block id="5be5b200ea87bda5139c19d04ce77e9d" category="list-text">Se colocar o aparelho no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde que o nó reinicie e volte a ligar a grelha. Este processo pode demorar até 20 minutos. Em seguida, no Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde <block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block>à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.</block>
   <block id="0160256cfe219f6b22fa00049dc8b08b" category="list-text">Olhe para o ícone do ventilador <block ref="92142d8792a6161b2c79960b384e088a" category="inline-image-macro-rx" type="image"></block>à direita da lista suspensa *Shelf* para determinar qual aparelho tem o recipiente do ventilador com falha.</block>
-  <block id="1a41776500a52e28aa05db3c32dfc47a" category="sidebar">Atualizar o firmware da unidade (método online SG6160)</block>
-  <block id="2c8a2ef75a9a05ce84a4b89f17f20322" category="sidebar">Atualizar firmware da unidade (método offline SG6160)</block>
   <block id="d07792f91c33735c12a1ce89b21df7a3" category="sidebar">Documentação do dispositivo StorageGRID</block>
   <block id="4ce226a87bcf5c8b5206d3dcf26776e4" category="paragraph">Não use sub-redes que contenham os seguintes endereços IPv4 para a Rede de Grade, Rede de Administração ou Rede de Cliente de qualquer nó:</block>
   <block id="7fe4e99a363b04311cab23831409078b" category="list-text">192.168.130.101</block>
@@ -5756,4 +5613,183 @@
   <block id="7dc5983e9de89ec2bcacf21aec6d8399" category="list-text">192.168.130.0/24 porque este intervalo de sub-rede contém os endereços IP 192.168.130.101 e 192.168.130.102</block>
   <block id="f3289a31e39c1161c9f3351ba19a4562" category="list-text">192.168.131.0/24 porque este intervalo de sub-rede contém os endereços IP 192.168.131.101 e 192.168.131.102</block>
   <block id="1deaf9237f4171a62975b6710d5432b8" category="list-text">198.51.100.0/24 porque este intervalo de sub-rede contém os endereços IP 198.51.100.2 e 198.51.100.4</block>
+  <block id="e24a803fd4a0c35ddf14fffbc08b6cfb" category="paragraph">Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:</block>
+  <block id="b670710bc1dc45eda7828cc693319469" category="list-text">No Grid Manager, selecione *NODES*.</block>
+  <block id="154abdbeed3470514ea68789e229a738" category="list-text">Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verde<block ref="b0b297f2207075ba577efa61b059ed87" category="inline-image-macro-rx" type="image"></block> à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.</block>
+  <block id="93a67d90a849449d960cede215097fff" category="paragraph">Alinhe o conector do ventilador com o soquete na placa de circuito.</block>
+  <block id="52f6fbcebe879dd8881fcbb3f2b67145" category="paragraph">O procedimento não estará concluído até que a atualização do SANtricity OS tenha sido aplicada com sucesso a todos os nós aplicáveis ​​que foram selecionados para a atualização.  Pode levar mais de 30 minutos para carregar o SANtricity OS em cada nó (sequencialmente) e até 90 minutos para reinicializar cada dispositivo de armazenamento StorageGRID .  Os nós na sua grade que não usam o SANtricity OS não serão afetados por este procedimento.</block>
+  <block id="c5bd3bd9f3e04a8cfc23ae70bb77a0e5" category="admonition">Aplique o hotfix mais recente do StorageGRID antes de iniciar este procedimento. Ver<block ref="4c6c5bde6eefe6b83cf8fcf6cfafcbf0" category="inline-link-rx"></block> para mais detalhes.</block>
+  <block id="6ef06a4ceadc3ce8568ae7ad816c7a06" category="paragraph">Escolha a versão do SANtricity OS para seus controladores de armazenamento.</block>
+  <block id="749a5be7306d7e9fcefe858d0d961e23" category="list-text">Repita este procedimento de atualização para nós com estágio Completo que exigem um arquivo de atualização do SANtricity OS diferente.</block>
+  <block id="79ca39202d9620e5539aba6bcb9cf8c6" category="admonition">Para nós com status de Necessita de Atenção, use o modo de manutenção para executar a atualização.</block>
+  <block id="d5802324d0c6f77a6c1460a09ab86b0c" category="admonition">O clone do nó está desabilitado para nós de gateway.  Para substituir um nó de gateway, desative-o e execute uma expansão para adicionar um novo nó de gateway do dispositivo.  O procedimento de descomissionamento e expansão é muito mais rápido para um nó de gateway do que para um nó de armazenamento.</block>
+  <block id="1348b650bb9bc1f6059a09940c052534" category="list-text">Você só pode clonar um dispositivo de nó de administração para um novo dispositivo de serviços.</block>
+  <block id="5f6ae42d1aafbe687a1a3aaf2513e987" category="list-text">Para um dispositivo de nó de administração, o dispositivo de nó de origem e o dispositivo de destino não precisam ser do mesmo modelo; no entanto, alterar o modelo do dispositivo pode exigir a substituição dos cabos ou módulos SFP.</block>
+  <block id="80225d08be164cdfe5823b870c3a4e5e" category="paragraph">Por exemplo, você não pode substituir um dispositivo de nó SG6000 (16 volumes de armazenamento de objetos) por um dispositivo SGF6112 (12 volumes de armazenamento de objetos).</block>
+  <block id="3e802a8b9687c78b540ad5fac5b63bc5" category="list-text">Determine se você usará criptografia de nó usando um servidor de gerenciamento de chaves (KMS) no dispositivo de destino, para que você possa habilitar a criptografia de nó durante a instalação inicial do dispositivo de destino antes da clonagem.  Você pode verificar se a criptografia do nó está habilitada no nó do dispositivo de origem, conforme descrito em<block ref="6bd92e423fc3e97f612a11738e3a3c13" category="inline-link-macro-rx"></block> .</block>
+  <block id="b919638621c4eafee27ce1f8b1e741bf" category="paragraph">O nó de origem e o dispositivo de destino podem ter configurações de criptografia de nó diferentes, com as seguintes exceções.  A clonagem de nós não é suportada de origens de nós não criptografados para destinos criptografados por nós para os seguintes dispositivos:</block>
+  <block id="4b060d44006837b60e71d1c6a082a054" category="list-text">Um dispositivo de nó SGF6112 sem criptografia de nó para um dispositivo SGF6112 com criptografia de nó</block>
+  <block id="77a2dd48d49a7b10de0abd9bf1120c33" category="list-text">Um dispositivo de nó SG1100 sem criptografia de nó para um dispositivo SG1100 com criptografia de nó</block>
+  <block id="ea0b3822aa7556ab1d57375d559f3f51" category="list-text">Um dispositivo de nó SG110 sem criptografia de nó para um dispositivo SG110 com criptografia de nó</block>
+  <block id="2a0a8055925e06f3f23d0483b2409160" category="paragraph">A descriptografia e a criptografia de dados são realizadas automaticamente durante a transferência de dados e quando o nó de destino é reiniciado e se junta à grade.</block>
+  <block id="e185affb0d1d90404c2a75a4a306e57a" category="paragraph">A clonagem de nós não é suportada de um dispositivo de nó de origem SG110 sem criptografia de nó para um dispositivo de destino SG110 com criptografia de nó.</block>
+  <block id="79cc74aa062b649aa9442b8837708eea" category="paragraph">A clonagem de nós não é suportada de um dispositivo de nó de origem SG1100 sem criptografia de nó para um dispositivo de destino SG1100 com criptografia de nó.</block>
+  <block id="7841a1dadd1b2280e147c4ceb88ed7c1" category="section-title">Informações e restrições sobre clonagem de dispositivos SGF6112</block>
+  <block id="763c4fea3d57dcd7c19546b7f79a38f6" category="paragraph">A clonagem de nós não é suportada de um dispositivo de nó de origem SGF6112 sem criptografia de nó para um dispositivo de destino SGF6112 com criptografia de nó.</block>
+  <block id="7676440baaa16ec567a09dcde7fb8d84" category="list-text">Após descomissionar um dispositivo que tinha criptografia de nó habilitada.</block>
+  <block id="8b094ce4a3dea15f5c7b26fefba185e5" category="paragraph">A chave de criptografia do KMS e todos os dados são excluídos do nó e o dispositivo é reinicializado.  Uma caixa de diálogo é exibida enquanto a reinicialização do dispositivo está em andamento, o que pode levar até 20 minutos.</block>
+  <block id="081e273399720a2bcb9ab842465796c1" category="paragraph">Para o dispositivo de armazenamento SG6060, a segurança da unidade pode ser ativada automaticamente nas unidades SSD somente se o gerenciamento de chaves tiver sido configurado antes da instalação do dispositivo de armazenamento.</block>
+  <block id="996cf0fe6dfcaefd990ade55f4dd743f" category="list-text">Para a prateleira do controlador E2800, crie uma chave de segurança (uma sequência de caracteres compartilhada pelo controlador e pelas unidades para acesso de leitura e gravação).</block>
+  <block id="cc47c5ee89eecc752dd4066d97c0c05f" category="list-text">Política de hash de transmissão LACP e taxa de PDU</block>
+  <block id="1b580d85d7cd504270d50ff1898e690b" category="list-text">Na seção Carregar JSON, procure e selecione o arquivo de configuração JSON que você deseja carregar.</block>
+  <block id="7449247ffcf965bdf264f6020225b2a1" category="admonition">Armazene a senha de gerenciamento e a senha de provisionamento da seção de senhas do modificado<block ref="3b39322b4d4c4cc0e164289cecbf36f4" prefix=" " category="inline-code"></block> arquivo de configuração em um local seguro.  Essas senhas são necessárias para procedimentos de instalação, expansão e manutenção.  Você também deve fazer backup do arquivo modificado<block ref="3b39322b4d4c4cc0e164289cecbf36f4" prefix=" " category="inline-code"></block> arquivo de configuração e armazene-o em um local seguro.</block>
+  <block id="c0571984ffde12f3ed9c04640729cf39" category="admonition">O estado do link físico para a porta 1 não está disponível no software e deve ser verificado neste momento usando o LED de status no controlador SG5800.</block>
+  <block id="42e2b8eb5b96fba7c6a9d8b8408d17fe" category="inline-xref">configurações padrão</block>
+  <block id="a0f77c680bb4e4c50a253edde079e6f7" category="paragraph">Você só precisa configurar as definições na página Configuração de Link se quiser usar valores diferentes de<block ref="0353e5f57a74c3ee00fb2db77f747cfd" category="inline-xref-macro-rx"></block> .</block>
+  <block id="492e2112f98c1c5c9ae7dd839617ba0c" category="inline-link">Alteração temporária da taxa de PDU do LACP</block>
+  <block id="cedb1cff6c5a590a2d00e7885cbdbf2b" category="admonition">As alterações na taxa de PDU do LACP feitas seguindo essas instruções permanecem persistentes no ambiente StorageGRID .  Para fazer alterações temporárias na taxa de PDU LACP ao executar operações de manutenção em componentes de rede instalados em seu dispositivo, consulte<block ref="53557ca6c3df0379d4315795031bbac1" category="inline-link-rx"></block> .</block>
+  <block id="2993081253b9e8a4d688263b6a58640f" category="paragraph">[[port_config_tables]]As figuras e tabelas resumem as opções para o modo de vínculo de porta e o modo de vínculo de rede para cada dispositivo.  Veja o seguinte para mais informações:</block>
+  <block id="1a6db3feac69a625044ba0be8a80f3a6" category="cell">Rede do cliente desabilitada</block>
+  <block id="927ec9c2ef5774c5ce667b068b7b40e6" category="cell">Rede do cliente habilitada (padrão)</block>
+  <block id="79e5f98b372b0736e8ae7481d64d9a9d" category="list-text">A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.</block>
+  <block id="86eb1647b042cc99523712324f832cf6" category="list-text">Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.</block>
+  <block id="0bcaa0b52e3be83ae46118c54bb1ebef" category="list-text">Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.</block>
+  <block id="d07aa64e988c99c857428deebf8d17cc" category="admonition">Para o SG5800, o estado do link para a porta 1 não está disponível no software e deve ser verificado fisicamente usando o LED de status no controlador SG5800.</block>
+  <block id="05682b3d503979cba2c2b03775fee41a" category="paragraph">[[default_values]]Na primeira vez que você acessar esta página, os valores padrão serão:</block>
+  <block id="84b475180317c239ad9321972c61a8fc" category="list-text">*A política de hash de transmissão do LACP* está definida como *Camada 2+3*.</block>
+  <block id="24df05eda467306f610fde4c74b8308e" category="list-text">*A taxa de PDU LACP* está definida como *Rápida*.</block>
+  <block id="fa9c45ab73dc90e79f9f8e841d30d187" category="list-text">A *Rede do Cliente* está habilitada.</block>
+  <block id="3bf455f0fbfa441ca98213b50daca3e0" category="inline-xref">tabela de configuração de modo de ligação de porta fixa e agregada</block>
+  <block id="61bb2ace2bcc184cf04ea06f4cbd2a04" category="list-text">Consulte o<block ref="8bd637545e92e369abbbb906aaace025" category="inline-xref-macro-rx"></block> para cada tipo de dispositivo e configure o modo de vinculação de porta e o modo de vinculação de rede para corresponder à sua configuração de rede.</block>
+  <block id="d8b41d0e632fbfd4373de7854b0398f2" category="paragraph">Você deve especificar tags VLAN exclusivas para a Grid e as Redes Cliente.  Você pode selecionar valores entre 0 e 4095.</block>
+  <block id="850157bc95c4ffca1cdcbc55c013127e" category="inline-link">Remover remapeamentos de porta em dispositivos StorageGRID</block>
+  <block id="9bec22f7a42fe8d0910acd43281c1ec3" category="admonition">O suporte para remapeamento de portas está obsoleto e será removido em uma versão futura.  Para remover portas remapeadas, consulte<block ref="e143f77b13dc745aead5dba632a71792" category="inline-link-rx"></block> .</block>
+  <block id="eb306140d9d83491857370360109d098" category="inline-link">Como renomear grade, sites ou nós</block>
+  <block id="6d0791dba87ee7ef0fb1ac7837270779" category="paragraph">O nome que aparece aqui será o nome do sistema do nó do dispositivo.  Os nomes do sistema são necessários para operações internas do StorageGRID e não podem ser alterados.  Para alterar o nome de exibição de um nó do dispositivo, consulte<block ref="1b088768cc0953b1c1a38e35175f5ef5" category="inline-link-rx"></block> .</block>
+  <block id="4e79269529185d09c026a9a29b4203fc" category="list-text">Selecione o nó de administração primário para a grade onde este gateway de dispositivo ou nó de administração não primário será implantado.</block>
+  <block id="346292b5d42f68777473a4f6ec554687" category="inline-link">Nó de gateway com cache</block>
+  <block id="11d32edf990f4c784cee89725f7ab17d" category="list-text">Capacidade de operar como um<block ref="e8c45bebf543a99e87d6e0fda23c5762" category="inline-link-rx"></block> .</block>
+  <block id="cfc5ee852e071866dba8d42736b10c04" category="list-text">Continue monitorando o progresso da instalação até que o estágio *Instalar StorageGRID* seja pausado e uma mensagem apareça no console incorporado, solicitando que você aprove este nó no Nó de administração usando o Grid Manager; então, vá para a próxima etapa.</block>
+  <block id="05d13b5d561ee02e05de7ea4f7169cee" category="list-text"><block ref="6f88de86b8743bbe23202c83b893e250" category="inline-link-rx"></block>do nó de administração principal, aprovar o nó de armazenamento pendente e concluir o processo de instalação do StorageGRID .</block>
+  <block id="376bb4454cc4f54c591b8f4ae07ae743" category="list-text">Para todos os nós do dispositivo, exceto o nó de administração primário, o estágio Instalar StorageGRID é pausado e uma mensagem aparece no console incorporado, solicitando que você aprove este nó no nó de administração usando o<block ref="e9b839af5117614531eec6994f76d987" category="inline-link-rx"></block> ; então, vá para o próximo passo.</block>
+  <block id="3ac50f2a980e2a0dd9d6fa781710632a" category="inline-link">Selecione uma política de segurança</block>
+  <block id="2111243c6011996eba7d5df0a47ac508" category="paragraph">Além disso, quando você habilita o modo FIPS após habilitar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografar dados em repouso. Consulte<block ref="0e91844ad7f820ecc514bcaae0035f92" category="inline-link-rx"></block> para maiores informações.</block>
+  <block id="7c64a0ffe12c24b27b1dd68957dd18aa" category="admonition">Quando um dispositivo é instalado com a criptografia de nó habilitada, uma chave temporária é atribuída.  Os dados no dispositivo não serão protegidos até que o dispositivo seja conectado ao Sistema de Gerenciamento de Chaves (KMS) e uma chave de segurança KMS seja definida.  Consulte o<block ref="1b141fe85ee275193be0bd326245089d" category="inline-link-rx"></block> para obter informações adicionais.</block>
+  <block id="51ec0745d9ba491bcc4f5f242c8c0d31" category="paragraph">Quando você habilita o Drive Encryption para um dispositivo StorageGRID com unidades FIPS, a criptografia FIPS fornecida pelas unidades FIPS é usada para criptografar dados em repouso.</block>
+  <block id="ff6fefc7a96e8115d9c98e950380cb1b" category="paragraph">Você pode habilitar a criptografia da unidade durante a instalação inicial do dispositivo antes de carregar o Grid Manager.  Você também pode habilitar a criptografia da unidade ou alterar sua senha colocando o dispositivo no modo de manutenção.</block>
+  <block id="116223f137ea3845e7fe9e00cf3db9f7" category="list-text">Nas Configurações de IP da LAN, anote o endereço IPv4 que é exibido automaticamente.</block>
+  <block id="c4f9ab6ec4683b52f60fbb0c35c9b7a4" category="paragraph">Use o instalador do dispositivo StorageGRID para configurar endereços IP e roteamento para o dispositivo de serviços ou nó de armazenamento nas redes de grade, administração e cliente.</block>
+  <block id="dba7d8cb51428f3af7952906a5441cb2" category="paragraph">Você deve atribuir um endereço IP estático para o dispositivo em cada rede de rede ou de administração conectada ou atribuir um contrato de locação permanente para o endereço no servidor DHCP.  O endereço IP estático ou a configuração DHCP são opcionais para uma rede cliente conectada.</block>
+  <block id="46f8f9f2504faca1c8273c28591fd77d" category="paragraph">Para habilitar ou desabilitar um link ou alterar a configuração do link, consulte as seguintes instruções:</block>
+  <block id="4ccba481cc1a24370110d7f5f54a75a9" category="list-text">Para configurar a Rede de Grade, selecione *Estático* ou *DHCP* na seção *Rede de Grade* da página e insira suas configurações de rede.</block>
+  <block id="84a8921b25f505d0d2077aeb5db4bc16" category="open-title">Estático</block>
+  <block id="711fa32db7d8fa61bb55ab99fce525cc" category="admonition">Se a Rede do Cliente não estiver habilitada, a rota padrão usará o gateway da Rede Grid.</block>
+  <block id="54201c55d2bdc7a9e19d9e032d8c0ede" category="open-title">DHCP</block>
+  <block id="07e361ec46281065d0b85ab2b1c73dcd" category="list-text">Para configurar a Rede de Administração, selecione *Estática* ou *DHCP* na seção *Rede de Administração* da página e insira suas configurações de rede.</block>
+  <block id="5fc3b5e9a0ffa500c7ecfe39a1bd93d6" category="paragraph">Ver<block ref="a611aca18a9129c1d8e32ddb3978bf58" category="inline-link-macro-rx"></block> para o local da Porta de Gerenciamento 1 no seu dispositivo.</block>
+  <block id="5b28462b9d764259a24b4f66f2ea7b44" category="list-text">Para configurar a Rede do Cliente, selecione *Estático*, *DHCP* ou *Nenhum* na seção *Rede do Cliente* da página e insira suas configurações de rede.</block>
+  <block id="c9469a2a7efc428091d21815f570608c" category="admonition">Para configurar a Rede do Cliente, certifique-se de que ela esteja habilitada na página Configuração de Link.</block>
+  <block id="1a3ac1dfe5949a399544e688a22d6550" category="paragraph">Selecione *Nenhum* para habilitar a Rede do Cliente sem especificar um endereço IP.  A Rede do Cliente precisa apenas de um endereço IP para acesso direto.  Habilitar a rede do cliente sem um endereço IP permite que você configure as interfaces de VLAN da rede do cliente no StorageGRID.</block>
+  <block id="b2beef90d56fec1347de6cb05b617a9a" category="list-text">Certifique-se de que a versão atual do firmware corresponde à versão do software instalada no seu sistema StorageGRID .  (Na parte superior do Grid Manager, selecione o ícone de ajuda e selecione *Sobre*.)</block>
+  <block id="a7d8cbd46926f6c579c484bd8f0a4964" category="list-text">Especifique uma lista separada por espaços ou um intervalo de endereços IPv4 para os hosts nessa rede.</block>
+  <block id="519fd188a6d26ab1f5748480aeb6777e" category="list-text">Se as conexões de rede em nível de porta selecionadas forem válidas, a mensagem "`Teste de conectividade de porta aprovado`" aparecerá em um banner verde.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.</block>
+  <block id="97af24ee4e7bcdcd9bde87b1c20b08b7" category="list-text">Se uma conexão de rede em nível de porta for feita com o host remoto, mas o host não estiver escutando em uma ou mais portas selecionadas, a mensagem "`Falha no teste de conectividade de porta`" aparecerá em um banner amarelo.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.</block>
+  <block id="75b6952e1b78e30da0f9732825f6bc55" category="list-text">Se uma conexão de rede em nível de porta não puder ser feita para uma ou mais portas selecionadas, a mensagem "`Falha no teste de conectividade de porta`" aparecerá em um banner vermelho.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.</block>
+  <block id="83505730592b01e4b45f87ba87a47e33" category="paragraph"><block ref="83505730592b01e4b45f87ba87a47e33" category="inline-link-rx"></block></block>
+  <block id="7ddf79f59d8500f228016871545e472a" category="list-text">Alterando os valores da *política de hash de transmissão do LACP* e da *taxa de PDU do LACP*</block>
+  <block id="81771753b4828b855413fa8b278a463a" category="admonition">Se você quiser manter os dados nas unidades, insira as unidades SSD nos mesmos slots de unidade que elas ocupavam no dispositivo com falha.  Caso contrário, o instalador do aparelho exibirá um aviso e você terá que colocar as unidades nos slots corretos e reinicializar o aparelho antes que ele possa se conectar novamente à rede.</block>
+  <block id="9b1463c2fbb55d9aff5c2628744f0374" category="list-text">Confirme se a reinicialização foi concluída e se o nó retornou à rede:</block>
+  <block id="d1f65a57ea588af4d00d2b30842fb1e6" category="doc">Substituir controlador de computação StorageGRID E5700SG</block>
+  <block id="cb259545c2cc29e07151188fa7d7d773" category="admonition">Consulte somente as instruções da Série E para obter detalhes adicionais sobre etapas específicas.  Não os use para substituir um controlador no dispositivo StorageGRID , pois os procedimentos são diferentes.  Por exemplo, as instruções da Série E para o controlador E5700 descrevem como remover a bateria e a placa de interface do host (HIC) de um controlador com falha e instalá-las em um controlador de substituição.  Essas etapas não se aplicam ao controlador StorageGRID E5700SG.</block>
+  <block id="b07aa18ca9b17d8191a731883bbbdc2d" category="paragraph">Você não poderá acessar o nó de armazenamento do dispositivo quando substituir o controlador.  Se o controlador E5700SG estiver funcionando suficientemente, você poderá executar um desligamento controlado no início deste procedimento.</block>
+  <block id="8c6fc42de5ee4d7523ea532ec3a7892f" category="list-text">Desligue o controlador E5700SG:<block ref="9960d9237c92d9efd1ab4f4c0c346db6" prefix="*" category="inline-code"></block> *</block>
+  <block id="da11ca32f13c883ee6321bb4b9566faa" category="admonition">Você deve garantir que os endereços IP do controlador original tenham sido atualizados antes de inserir o controlador de substituição no dispositivo.  Caso contrário, o controlador obterá novos endereços IP DHCP ao inicializar e poderá não conseguir se reconectar ao StorageGRID.  Esta etapa se aplica a todas as redes StorageGRID que estão conectadas ao controlador.</block>
+  <block id="f43add39ca41d919e14f8440c8486a32" category="list-text">Depois que o dispositivo se conectar novamente à rede, confirme se o nó de armazenamento do dispositivo aparece no Grid Manager e se nenhum alarme aparece.</block>
+  <block id="d402bddb0ef14f70e05cc38b28e58c54" category="summary">O StorageGRID Appliance Installer instala automaticamente os arquivos de firmware mais recentes da unidade E-Series durante a reinicialização do dispositivo.</block>
+  <block id="8fbf20b68a29423a934b008cfd8f63bf" category="doc">Atualizar o firmware da unidade SG5700 automaticamente durante a reinicialização do dispositivo</block>
+  <block id="7a8cd094e0132808e26a53b9d5cfac4e" category="paragraph">Os arquivos de firmware da unidade E-Series estão incluídos no software StorageGRID .  Essas atualizações são instaladas automaticamente sempre que um dispositivo StorageGRID é reinicializado:</block>
+  <block id="fb7012bf68598fe46e332e9984d48fe9" category="list-text">Em<block ref="b5490e0279a2f5a6483200b39302195e" category="inline-link-macro-rx"></block></block>
+  <block id="0a24ee67619a105d9b63f98ee8357cb5" category="inline-link">reinicialização contínua</block>
+  <block id="6d63e957188ebc1d75a0098de3933ebb" category="list-text">Como parte de um<block ref="2fce402806412dafe2b75772872b209b" category="inline-link-rx"></block></block>
+  <block id="61a65e5e75034bc0622f65caf5244895" category="inline-link">Atualização da versão do StorageGRID</block>
+  <block id="5cede0e7965441c495faf1468fa4c02f" category="inline-link">instalação de hotfix</block>
+  <block id="bacd5e6adb4a14d69d15f940d5628fce" category="list-text">Durante um<block ref="aca70949664c8940430757a2a9d2c661" category="inline-link-rx"></block> ou<block ref="83386095b84f55716db277438e50860d" category="inline-link-rx"></block></block>
+  <block id="4780e356a8e04a8a6aadec3ed327d181" category="inline-link-macro">Atualização do sistema operacional SANtricity</block>
+  <block id="5bcfe2b9ddcceca42aa9be3f2e6c41d6" category="list-text">Durante um<block ref="761c7e27b88cb40b7c9a1aa261c2d024" category="inline-link-macro-rx"></block> usando o modo de manutenção</block>
+  <block id="b6e81f26a22253953774577f971cbb30" category="admonition">A atualização do firmware da unidade não é tentada para nós com status de Requer Atenção.</block>
+  <block id="c083bb27482eb9f03672f6c6ff536952" category="admonition">Enquanto um dispositivo é reinicializado, a atividade de E/S (entrada/saída) para o controlador de armazenamento é interrompida.</block>
+  <block id="7f46165474d11ee5836777d85df2cdab" category="inline-link-macro">on-line</block>
+  <block id="27a21354321dfbc28f0cb17b995bb9ca" category="inline-link-macro">desconectado</block>
+  <block id="09a4c1386f483e4dedbcd5d1da2477b6" category="paragraph">Você também pode instalar atualizações de firmware da unidade manualmente usando o SANtricity System Manager<block ref="1f7c4490af2a3f5aff5aec9ed89afbbd" category="inline-link-macro-rx"></block> ou<block ref="d125fe9f650c04b0bdfdb63077a4fb86" category="inline-link-macro-rx"></block> método:</block>
+  <block id="d67774ef4260e4fef8756c907981a64a" category="list-text">Para aplicar uma nova atualização de firmware da unidade antes que ela seja empacotada no software StorageGRID</block>
+  <block id="cc80d14e2ef2979c28576a3cc3932236" category="list-text">Se uma atualização automática do firmware da unidade falhar</block>
+  <block id="951638cfdbc1f60d4acdb6651c37d758" category="inline-link-macro">atualização de firmware de unidade online</block>
+  <block id="924ea1116b808beea2b8a3ef2da9da7e" category="list-text">Para usar o SANtricity System Manager<block ref="73dc5a93cf3772ff7419a034755f9071" category="inline-link-macro-rx"></block> do Grid Manager em vez de reinicializar o nó</block>
+  <block id="8ee0511d6122ca7e64d85d85fd90b3c2" category="admonition">Pode levar 20 minutos desde o momento em que você liga os interruptores até o nó se reconectar à rede e exibir um status normal no Grid Manager.</block>
+  <block id="0fda3e81adce27f0a43d4add01121d69" category="doc">Substituir controlador StorageGRID SG5800</block>
+  <block id="d9c9b706426a967c92d90dc2cb2f5c0f" category="paragraph">Você não poderá acessar o nó de armazenamento do dispositivo quando substituir o controlador.  Se o controlador SG5800 estiver funcionando suficientemente, você poderá executar um desligamento controlado no início deste procedimento.</block>
+  <block id="eba67f2de5d7f9260ae88a2080dd2f03" category="list-text">Após a reinicialização do controlador e o dispositivo se conectar novamente à rede, confirme se o nó de armazenamento do dispositivo aparece no Grid Manager e se nenhum alarme aparece.</block>
+  <block id="f59b5e6d42c24861a136cad2f92946fb" category="admonition">pode levar 20 minutos desde o momento em que você liga os interruptores de energia até o nó se conectar novamente à rede e exibir um status normal no Grid Manager.</block>
+  <block id="8891c24cf6217ee9912bde2fc031e0f1" category="doc">Atualizar o firmware da unidade SG5800 automaticamente durante a reinicialização do dispositivo</block>
+  <block id="69f8aafede16fee08cd47f8dc0c0d4f6" category="list-text">Durante um<block ref="f60eea5df0b2ef9e0f32c874180d50d5" category="inline-link-macro-rx"></block> usando o modo de manutenção</block>
+  <block id="fc88043c6bcea979f4c345ea569ecba8" category="paragraph">Exemplos de mensagens que podem aparecer na página inicial, dependendo do número de prateleiras de expansão existentes ou novas:</block>
+  <block id="9e71171ece37d79d6a9ea0b46f4f2e83" category="list-text">Um banner exibido no topo da página indica o número total de prateleiras de expansão detectadas.</block>
+  <block id="287d3c085da3b5779cf076e1815c7217" category="list-text">Uma mensagem na parte inferior da página indica que uma expansão está pronta para ser iniciada.</block>
+  <block id="d927c8996626c51de70a8dfc5704162b" category="paragraph">Quando a reinicialização estiver concluída, a guia *Tarefas* será exibida com opções para reinicializar o nó ou colocar o dispositivo no modo de manutenção.</block>
+  <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Ligue o controlador SG6000-CN e verifique a operação</block>
+  <block id="eb147bbc308036fe81fabc831fb029ad" category="summary">O controlador de computação SG6000-CN tem oito ventiladores de resfriamento.  Se um dos ventiladores falhar, você deverá substituí-lo o mais rápido possível para garantir que o controlador tenha resfriamento adequado.</block>
+  <block id="c27db0c89dbd2f09176329a7fcf1645b" category="doc">Substituir ventilador no controlador de computação SG6000-CN</block>
+  <block id="58e9871c73652215d8793286f86ac1fb" category="paragraph">O nó de armazenamento não estará acessível enquanto você substituir o ventilador.</block>
+  <block id="e7a2bf1d05b1975e8efb0afe9d894d7c" category="paragraph">A fotografia mostra um ventilador para o controlador de computação SG6000-CN.  Os ventiladores de resfriamento ficam acessíveis depois que você remove a tampa superior do controlador.</block>
+  <block id="e3adab8693ad6718b75f011019d81021" category="inline-link-macro">Desligue o controlador SG6000-CN</block>
+  <block id="f18ad71e7bc41bfd9820a24769c81f45" category="list-text"><block ref="de621e9e43a5cbee2ab858b1b01c1dd5" category="inline-link-macro-rx"></block> .</block>
+  <block id="4f2a14752c431d2be7bed888d2348499" category="inline-link-macro">Ligue o controlador SG6000-CN</block>
+  <block id="9a6dfa814e1fbd601165e5cabcc590e6" category="list-text"><block ref="1a4c391eba2f8df3a361e5ddcc9c0f45" category="inline-link-macro-rx"></block> .</block>
+  <block id="138c06581aceef985ba7ca7ca2bd2b34" category="doc">Atualizar o firmware da unidade SG6000 automaticamente durante a reinicialização do dispositivo</block>
+  <block id="f8d58678ae6fba4539d4eadcf0f8e742" category="list-text">Durante um<block ref="304d1b4330ceea4e3f283a17b032b6aa" category="inline-link-macro-rx"></block> usando o modo de manutenção</block>
+  <block id="9cf8090236a8cb34d7589adfe37ffa49" category="list-text">Se você colocou o dispositivo no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde até que o nó seja reinicializado e reconecte-se à rede.  Esse processo pode levar até 20 minutos.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:</block>
+  <block id="0bc848cf28aa5774c4025f8f6506c9ab" category="paragraph">Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conectados à rede antes de iniciar a substituição da placa de interface de rede (NIC) ou substitua a NIC durante uma janela de manutenção programada, quando períodos de interrupção de serviço são aceitáveis.  Veja informações sobre<block ref="9d975a939bfa99d9fb2558b4051f724b" category="inline-link-rx"></block> .</block>
+  <block id="d4dff92c01453825dc12c1a566e1b252" category="inline-link-macro">Remova o controlador com falha do gabinete ou rack</block>
+  <block id="66375ea801d8da7c3deebb6cf791a047" category="list-text"><block ref="40702ecd126ba9bd33757ca9b517f379" category="inline-link-macro-rx"></block> .</block>
+  <block id="15fcb03cb9cb3bbbe8be0b20b19b8c06" category="list-text">Observe a posição dos componentes substituíveis (duas fontes de alimentação, três NICs e dois SSDs) no controlador com falha.</block>
+  <block id="46dded0d12f997e003755d98d2f75370" category="list-text">Transfira os componentes substituíveis para o controlador de substituição.</block>
+  <block id="f125c6ac1a78aa0ff5a24318371dd330" category="admonition">Se você quiser manter os dados nas unidades, insira as unidades SSD nos mesmos slots de unidade que elas ocupavam no dispositivo com falha.  Caso contrário, o Appliance Installer exibirá um aviso e você terá que colocar as unidades nos slots corretos e reinicializar o controlador antes que ele possa se conectar novamente à rede.</block>
+  <block id="c69b34106fdf1b72fec034e3baa1c99d" category="inline-link-macro">Instale o controlador de substituição no gabinete ou rack</block>
+  <block id="8fce7c0144a940f37356de4b05f9ac03" category="list-text"><block ref="20c889cb497b19c6d78c457067272345" category="inline-link-macro-rx"></block> .</block>
+  <block id="8ac73f13e2902ea7b6ebc3206cf4e576" category="doc">Atualizar o firmware da unidade SG6160 automaticamente durante a reinicialização do dispositivo</block>
+  <block id="a53555787eb9101bec73830602e0bb62" category="list-text">Durante um<block ref="b3a7463520c62d140f81699021ea94dc" category="inline-link-macro-rx"></block> usando o modo de manutenção</block>
+  <block id="b7daca44acbdce2ad9adb9ec5b318f4b" category="inline-link">Documentação do StorageGRID 12.0</block>
+  <block id="9dfc67a67b34935b9d51d04e94d0bd2f" category="paragraph">Vá para<block ref="b9e47dcffd0e3534b2aa2e23c80b77c4" category="inline-link-rx"></block> para aprender como configurar e usar um sistema StorageGRID 12.0.</block>
+  <block id="63e3b64d9d602e40bbccab8712d1918a" category="list-text"><block ref="63e3b64d9d602e40bbccab8712d1918a" category="inline-link-rx"></block></block>
+  <block id="4acae57d3119f0b81d2bfd14c9585f13" category="doc">Soluções e recursos do StorageGRID</block>
+  <block id="7a4f669ff4b9f9df5860c2049386e61b" category="paragraph">Vá para<block ref="f382e11c205630073ea43ce3c4862094" category="inline-link-rx"></block> para aprender como testar e habilitar aplicativos em seu ambiente StorageGRID .</block>
+  <block id="ab1a62ba7061547a3e40c2c2e68d2227" category="paragraph">* Soluções e recursos do StorageGRID * fornecem exemplos e livros de receitas que expandem a documentação do produto neste site e descrevem algumas próximas etapas na avaliação e integração com o StorageGRID.</block>
+  <block id="c88bd810bd23be56afce3a210193ca53" category="doc">Novidades nos dispositivos StorageGRID</block>
+  <block id="9e7ff586eaf3e125b3e99adb4feab378" category="paragraph">Saiba o que há de novo nos dispositivos StorageGRID .</block>
+  <block id="9cb2effa5447f497640162f9043211b9" category="section-title">A rede do cliente pode ser configurada sem um endereço IP</block>
+  <block id="9b21fb91c113bca08c0dafc981fbde3c" category="paragraph">Agora você pode habilitar a Rede do Cliente sem especificar um endereço IP.  Isso permite que a rede do cliente tenha interfaces VLAN configuradas no StorageGRID sem exigir um endereço IP extra para a própria interface. Consulte <block ref="eed0824756b778339518fbc737f79ca8" category="inline-link-macro-rx"></block> .</block>
+  <block id="35fbd63802091eabd711a8d6c290ea7e" category="section-title">Números de versão do software StorageGRID e do Appliance Installer alinhados</block>
+  <block id="07df4015289344b98ba5f422f4375357" category="paragraph">Com o StorgeGRID versão 12.0, o número da versão do StorageGRID Appliance Installer corresponde à versão do software StorageGRID .  Os usuários não precisam mais descobrir quais versões funcionam juntas. Consulte <block ref="d2475d6316f915c8f13cbc6042a2740a" category="inline-link-macro-rx"></block> .</block>
+  <block id="cc40ed7be5c299ae5a8b275911b0f977" category="paragraph">Informações detalhadas sobre o uso da interface BMC do dispositivo StorageGRID agora estão disponíveis. Consulte <block ref="df528c7928eba5c1226970c2705dfb3a" category="inline-link-macro-rx"></block> .</block>
+  <block id="9ec0b5d75f31e1b17949c51f840f6c80" category="paragraph">Os dispositivos StorageGRID SG5812 e SG5860 são plataformas integradas de armazenamento e computação que operam como nós de armazenamento em uma grade StorageGRID .  Consulte o<block ref="2a413e9ad740d8bf3ae3102a4c99aa8a" category="inline-link-macro-rx"></block> para saber mais.</block>
+  <block id="3429de8e072434c40c803b51121fb59b" category="paragraph">O novo dispositivo StorageGRID SG6160 inclui um controlador de computação e uma prateleira de controlador de armazenamento que contém dois controladores de armazenamento e 60 unidades, bem como duas unidades SSD NVMe para armazenamento em cache.  Opcionalmente, prateleiras de expansão de 60 unidades podem ser adicionadas ao SG6160.  Consulte<block ref="476efecdba735494e72d7970bc2f3e26" category="inline-link-macro-rx"></block> para saber mais.</block>
+  <block id="bd93fd0e5db12dc754488c18420fcc3c" category="paragraph">Os novos dispositivos de serviços StorageGRID SG110 e SG1100 são uma atualização de hardware evolutiva que oferece melhor desempenho administrativo e de balanceamento de carga. Consulte <block ref="3c058555c619096548fbed1bbe78e3c7" category="inline-link-macro-rx"></block> .</block>
+  <block id="7fb4dbe99c9c5f63516376b6bf611317" category="sidebar">Documentação do StorageGRID 12.0</block>
+  <block id="ca92eb1bedb20765e52302f985f5f837" category="sidebar">Atualizar firmware da unidade (método de reinicialização automática)</block>
+  <block id="1bd7abdd556a1cf4b4d3341a4ea95b3e" category="sidebar">Substituir ventilador do controlador</block>
+  <block id="52b906a48c564a22264dc19facc06b5d" category="sidebar">Atualizar firmware da unidade (SG6160 - método de reinicialização automática)</block>
+  <block id="04c4beb65cd6013f9bac11bc3ee2bca7" category="sidebar">Atualizar firmware da unidade (SG6160 - método online)</block>
+  <block id="70fba296ba62ee4d473786bd6883acb4" category="sidebar">Atualizar firmware da unidade (SG6160 - método offline)</block>
+  <block id="300f58a1bb7a05b81cd9e59e9ae0357f" category="sidebar">Substituir tampa (SGF6112 ou SG6100-CN)</block>
+  <block id="47e8540e588799fbf73ee95e5009399d" category="sidebar">Substituir fonte de alimentação (SGF6112 ou SG6100-CN)</block>
+  <block id="08449fbad70560f6925381eb5824dd6f" category="sidebar">Substituir NIC interna (SGF6112 ou SG6100-CN)</block>
+  <block id="d30a6df627941d8e46bc54dda8cb0adf" category="sidebar">Substituir NIC externa (SG6100-CN)</block>
+  <block id="92af570f070d33d5248fe4a8b9cf66b5" category="sidebar">Substituir as pilhas na prateleira do controlador de armazenamento (SG6160)</block>
+  <block id="13f699c390fa92482fbb1b15d0e705b4" category="sidebar">Substituir bateria CMOS (SGF6112 ou SG6100-CN)</block>
+  <block id="c55b834e11341e1ae1654b547833e156" category="sidebar">Atualizar firmware da unidade</block>
+  <block id="bb16bf046b2fd7560a2b14a7f9ad9e54" category="sidebar">Atualizar firmware da unidade (SG6160)</block>
+  <block id="9ed61dec5a7f3f16d6a5d3a265f76321" category="sidebar">Atualizar o firmware da unidade SG6160 usando o método online do SANtricity System Manager</block>
+  <block id="883368f2f68b2c26ebcfb31f09f529d5" category="sidebar">Atualizar o firmware da unidade SG6160 usando o método offline do SANtricity System Manager</block>
+  <block id="58abe205d3265bf2555ee7c37bee89cb" category="sidebar">NIC interna (SGF6112 ou SG6100-CN)</block>
+  <block id="b883da35aa37ea53f8afe4d94c8d01ee" category="sidebar">Placa de rede externa (SG6100-CN)</block>
 </blocks>

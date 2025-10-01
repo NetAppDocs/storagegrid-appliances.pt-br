@@ -115,7 +115,7 @@ image::../media/fan_removal.png[Remoção da ventoinha]
 
 . Faça deslizar a ventoinha de substituição para a ranhura aberta no chassis.
 +
-Certifique-se de que alinha o conetor da ventoinha com a tomada na placa de circuito impresso.
+Alinhe o conector do ventilador com o soquete na placa de circuito.
 
 . Pressione firmemente o conetor da ventoinha na placa de circuito (tomada destacada).
 +

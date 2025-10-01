@@ -86,7 +86,7 @@ Siga as instruções de manutenção fornecidas para reinstalar os componentes s
 
 +
 
-CAUTION: Se você deseja manter os dados nas unidades, certifique-se de inserir as unidades SSD nos mesmos slots de unidade que ocuparam no dispositivo com falha. Se não o fizer, o Instalador do aparelho apresentará uma mensagem de aviso e terá de colocar as unidades nas ranhuras corretas e reiniciar o aparelho antes de o aparelho poder voltar a ligar a grelha.
+CAUTION: Se você quiser manter os dados nas unidades, insira as unidades SSD nos mesmos slots de unidade que elas ocupavam no dispositivo com falha.  Caso contrário, o instalador do aparelho exibirá um aviso e você terá que colocar as unidades nos slots corretos e reinicializar o aparelho antes que ele possa se conectar novamente à rede.
 
 .. link:reinstalling-sg110-and-sg1100-into-cabinet-or-rack.html["Instale o aparelho de substituição no gabinete ou rack"].
 .. Substitua os cabos e quaisquer transcetores óticos.

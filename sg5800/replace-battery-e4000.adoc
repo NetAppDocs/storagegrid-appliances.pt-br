@@ -242,10 +242,15 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
-. Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página *nós* exibe um status normal (marca de seleção verde à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+. Confirme se a reinicialização foi concluída e se o nó retornou à rede:
++
+.. No Grid Manager, selecione *NODES*.
+.. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 +
 
-NOTE: Pode levar 20 minutos a partir de quando você liga os interrutores de energia para quando o nó se alegra com a grade e exibe um status normal no Gerenciador de Grade."
+NOTE: Pode levar 20 minutos desde o momento em que você liga os interruptores até o nó se reconectar à rede e exibir um status normal no Grid Manager.
+
+
 
 
 

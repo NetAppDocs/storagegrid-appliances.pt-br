@@ -18,9 +18,6 @@ Confirme que pode aceder às redes StorageGRID que está a utilizar a partir do 
 +
 A página Ping e MTU Test (Teste de Ping e MTU) é exibida.
 
-+
-image::../media/ping_test_start.png[Captura de tela da opção Ping e Teste MTU no Instalador de dispositivos StorageGRID]
-
 . Na caixa suspensa *rede*, selecione a rede que deseja testar: Grade, Admin ou Cliente.
 . Insira o endereço IPv4 ou o nome de domínio totalmente qualificado (FQDN) para um host nessa rede.
 +
@@ -33,9 +30,6 @@ Por exemplo, você pode testar o caminho entre o nó do dispositivo e um nó em 
 . Clique em *testar conetividade*.
 +
 Se a conexão de rede for válida, a mensagem "Teste de ping aprovado" será exibida, com a saída do comando ping listada.
-
-+
-image::../media/ping_test_passed.png[Captura de tela dos resultados do teste de ping no instalador do dispositivo StorageGRID]
 
 
 

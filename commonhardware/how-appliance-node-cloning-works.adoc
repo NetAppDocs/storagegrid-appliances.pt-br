@@ -118,6 +118,8 @@ Você pode clonar um dispositivo de nó de origem SG100 para um dispositivo de d
 
 Você pode clonar um dispositivo de nó de origem SG110 para um destino de dispositivo de serviços SG1100 para oferecer maior capacidade ao nó de administrador ou nó de gateway.
 
+A clonagem de nós não é suportada de um dispositivo de nó de origem SG110 sem criptografia de nó para um dispositivo de destino SG110 com criptografia de nó.
+
 
 
 === SG1000 informações e restrições sobre clonagem de dispositivos
@@ -137,6 +139,8 @@ Você pode clonar um dispositivo de nó de origem SG1100 para um dispositivo de 
 * Clonar o SG1100 para um dispositivo de destino de serviços SG110 permite que você reimplante o SG1100 para uma aplicação mais exigente. Por exemplo, se um dispositivo de nó de origem SG1100 estiver sendo usado como nó Admin e você quiser usá-lo como um nó de balanceamento de carga dedicado.
 * A substituição de um dispositivo de nó de origem SG1100 por um dispositivo de destino de serviços SG110 reduz a velocidade máxima das portas de rede de 100 GbE para 25 GbE.
 
+
+A clonagem de nós não é suportada de um dispositivo de nó de origem SG1100 sem criptografia de nó para um dispositivo de destino SG1100 com criptografia de nó.
 
 
 
@@ -173,6 +177,12 @@ Você pode clonar com sucesso um dispositivo SG5860 como a origem ou o destino c
 * Você pode clonar um dispositivo de nós de origem SG6060 sem gavetas de expansão para um dispositivo de destino de storage SG6160 sem gavetas de expansão, se o tamanho da unidade e os modos RAID forem os mesmos.
 * Um dispositivo de nó de origem SG6060 com qualquer número de compartimentos de expansão _não_ pode ser clonado para um dispositivo de destino de armazenamento SG6160, mesmo que o número de compartimentos de expansão, tamanhos de unidades e modos RAID sejam iguais.
 
+
+
+
+=== Informações e restrições sobre clonagem de dispositivos SGF6112
+
+A clonagem de nós não é suportada de um dispositivo de nó de origem SGF6112 sem criptografia de nó para um dispositivo de destino SGF6112 com criptografia de nó.
 
 
 

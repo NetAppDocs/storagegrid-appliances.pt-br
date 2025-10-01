@@ -137,16 +137,16 @@ IOM B para compartimento de expansão 2
 Em aproximadamente cinco minutos, as prateleiras de expansão terminam de ligar e são detetadas pelo sistema. A página inicial mostra o número de novas prateleiras de expansão detetadas e o botão Iniciar expansão está ativado.
 
 +
-A captura de tela mostra exemplos das mensagens que podem aparecer na página inicial, dependendo do número de prateleiras de expansão existentes ou novas, como segue:
+Exemplos de mensagens que podem aparecer na página inicial, dependendo do número de prateleiras de expansão existentes ou novas:
 
 +
-** O banner circulado na parte superior da página indica o número total de prateleiras de expansão detetadas.
+** Um banner exibido no topo da página indica o número total de prateleiras de expansão detectadas.
 +
 *** O banner indica o número total de compartimentos de expansão, quer as prateleiras estejam configuradas e implantadas ou novas e não configuradas.
 *** Se não forem detetadas prateleiras de expansão, o banner não aparecerá.
 
 
-** A mensagem circulada na parte inferior da página indica que uma expansão está pronta para ser iniciada.
+** Uma mensagem na parte inferior da página indica que uma expansão está pronta para ser iniciada.
 +
 *** A mensagem indica o número de novos compartimentos de expansão detetados pelo StorageGRID. "Anexo" indica que a prateleira foi detetada. "'unconfigured'" indica que o shelf é novo e ainda não está configurado usando o Instalador de dispositivos StorageGRID.
 +
@@ -154,9 +154,6 @@ A captura de tela mostra exemplos das mensagens que podem aparecer na página in
 NOTE: Os compartimentos de expansão que já estão implantados não estão incluídos nesta mensagem. Eles estão incluídos na contagem no banner no topo da página.
 
 *** A mensagem não aparecerá se novas prateleiras de expansão não forem detetadas.
-+
-image::../media/appl_installer_home_expansion_shelf_ready_to_install.png[Instalação do compartimento de expansão]
-
 
 
 
@@ -176,9 +173,6 @@ NOTE: Se os novos compartimentos de expansão não tiverem sido detetados, verif
 As barras de progresso aparecem na página da Web, tal como fazem durante a instalação inicial.
 
 +
-image::../media/monitor_expansion_for_new_appliance_shelf.png[Monitorar a configuração do compartimento de expansão]
-
-+
 Quando a configuração estiver concluída, o aparelho reinicializa automaticamente para sair do modo de manutenção e voltar a ligar a grelha. Este processo pode demorar até 20 minutos.
 
 +
@@ -186,10 +180,7 @@ Quando a configuração estiver concluída, o aparelho reinicializa automaticame
 NOTE: Para tentar novamente a configuração do compartimento de expansão se falhar, vá para o Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no modo de manutenção*. Depois que o nó for reiniciado, tente novamente o <<start_expansion,configuração do compartimento de expansão>>.
 
 +
-Quando a reinicialização estiver concluída, a guia *Tasks* parece com a seguinte captura de tela:
-
-+
-image::../media/appliance_installer_reboot_complete.png[Reinicialização concluída]
+Quando a reinicialização estiver concluída, a guia *Tarefas* será exibida com opções para reinicializar o nó ou colocar o dispositivo no modo de manutenção.
 
 . Verifique o status do nó de storage do dispositivo e dos novos compartimentos de expansão.
 +

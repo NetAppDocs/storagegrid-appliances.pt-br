@@ -9,9 +9,11 @@ indexpage:
     links:
     - title: Atualize o SANtricity
       url: "../sg6100/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html"
-    - title: Atualizar o firmware da unidade (método online SG6160)
+    - title: Atualizar firmware da unidade (SG6160 - método de reinicialização automática)
+      url: "../sg6100/upgrading-drive-firmware-using-auto-reboot.html"
+    - title: Atualizar firmware da unidade (SG6160 - método online)
       url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-online.html"
-    - title: Atualizar firmware da unidade (método offline SG6160)
+    - title: Atualizar firmware da unidade (SG6160 - método offline)
       url: "../sg6100/upgrading-drive-firmware-using-santricity-system-manager-offline.html"
     - title: Ligue ou desligue o LED de identificação
       url: "../sg6100/turning-sgf6112-identify-led-on-and-off.html"
@@ -35,9 +37,9 @@ indexpage:
       url: "../sg6100/reinstalling-sgf6112-into-cabinet-or-rack.html"
   - title: Procedimentos de hardware
     links:
-    - title: Volte a colocar a tampa
+    - title: Substituir tampa (SGF6112 ou SG6100-CN)
       url: "../sg6100/reinstalling-sgf6112-cover.html"
-    - title: Substitua a fonte de alimentação
+    - title: Substituir fonte de alimentação (SGF6112 ou SG6100-CN)
       url: "../sg6100/replacing-one-or-more-power-supplies-in-sgf6112-appliance.html"
     - title: Substitua a fonte de alimentação no compartimento do controlador de storage
         ou no compartimento de expansão (SG6160)
@@ -54,17 +56,15 @@ indexpage:
     - title: Substitua a unidade na gaveta do controlador de storage ou na gaveta
         de expansão (SG6160)
       url: "../sg6100/replace-6160-drives-60.html"
-    - title: Substitua a NIC interna (SGF6112 e SG6160)
+    - title: Substituir NIC interna (SGF6112 ou SG6100-CN)
       url: "../sg6100/replace-nic-in-sgf6112.html"
-    - title: Substituir NIC externo (SG6160)
+    - title: Substituir NIC externa (SG6100-CN)
       url: "../sg6100/replace-ocp-nic-sg6100-cn.html"
-    - title: Substituir DIMMs (SG6160)
+    - title: Substitua DIMMs no compartimento do controlador de armazenamento (SG6160)
       url: "../sg6100/replace-dimms-e4000.html"
-    - title: Substituir baterias (SG6160)
+    - title: Substituir as pilhas na prateleira do controlador de armazenamento (SG6160)
       url: "../sg6100/replace-battery-e4000.html"
-    - title: Volte a colocar a tampa
-      url: "../sg6100/reinstalling-sgf6112-cover.html"
-    - title: Substitua a bateria CMOS
+    - title: Substituir bateria CMOS (SGF6112 ou SG6100-CN)
       url: "../sg6100/replace-cmos-in-sgf6112.html"
     - title: Adicione o compartimento de expansão ao SG6160 implantado
       url: "../sg6100/adding-expansion-shelf-to-deployed-sg6160.html"

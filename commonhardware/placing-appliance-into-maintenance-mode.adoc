@@ -48,18 +48,14 @@ Se possível, use o URL que contém o endereço IP da porta Admin Network do dis
 NOTE: Se você tiver uma conexão direta com a porta de gerenciamento do dispositivo, use `+https://169.254.0.1:8443+` para acessar a página Instalador do dispositivo StorageGRID.
 
 . A partir do instalador do dispositivo StorageGRID, confirme se o aparelho está no modo de manutenção.
-+
-image::../media/maintenance_mode_notification_bar.png[mensagem do modo de manutenção]
-
 . Execute todas as tarefas de manutenção necessárias.
 . Depois de concluir as tarefas de manutenção, saia do modo de manutenção e retome a operação normal do nó. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+.. No Grid Manager, selecione *NODES*.
+.. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
-+
-image::../media/nodes_menu.png[Status normal da página dos nós]
 
 

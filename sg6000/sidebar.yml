@@ -19,8 +19,11 @@ entries:
     - title: Atualizar o SANtricity os em controladores de storage usando o modo de
         manutenção
       url: "/sg6000/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6000.html"
-  - title: Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity
+  - title: Atualizar firmware da unidade
     entries:
+    - title: Atualizar o firmware da unidade SG6000 automaticamente durante a reinicialização
+        do dispositivo
+      url: "/sg6000/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Atualize o firmware da unidade SG6000 usando o Gerenciador de sistema
         SANtricity usando o método on-line
       url: "/sg6000/upgrading-drive-firmware-using-santricity-system-manager-online.html"
@@ -56,6 +59,8 @@ entries:
     url: "/sg6000/replacing-sg6000-cn-controller.html"
   - title: Substitua uma ou ambas as fontes de alimentação no controlador SG6000-CN
     url: "/sg6000/replacing-one-or-both-power-supplies-in-sg6000-cn-controller.html"
+  - title: Substitua a ventoinha
+    url: "/sg6000/replacing-fan-in-sg6000cn.html"
   - title: Substitua a bateria CMOS no controlador SG6000-CN
     url: "/sg6000/replace-cmos-in-sg6000cn.html"
   - title: Substitua o controlador no rack

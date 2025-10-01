@@ -1,0 +1,59 @@
+---
+permalink: sg6000/replacing-fan-in-sg6000cn.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6000-cn, storage node, storage appliance, replacing, replace, fan, remove, removing, removal, install, installing, installation 
+summary: O controlador de computação SG6000-CN tem oito ventiladores de resfriamento.  Se um dos ventiladores falhar, você deverá substituí-lo o mais rápido possível para garantir que o controlador tenha resfriamento adequado. 
+---
+= Substituir ventilador no controlador de computação SG6000-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O controlador de computação SG6000-CN tem oito ventiladores de resfriamento.  Se um dos ventiladores falhar, você deverá substituí-lo o mais rápido possível para garantir que o controlador tenha resfriamento adequado.
+
+.Antes de começar
+* Desembalou a ventoinha de substituição.
+* Você link:locating-controller-in-data-center.html["localizado fisicamente o aparelho"]tem .
+* Você confirmou que os outros ventiladores estão instalados e funcionando.
+
+
+.Sobre esta tarefa
+O nó de armazenamento não estará acessível enquanto você substituir o ventilador.
+
+A fotografia mostra um ventilador para o controlador de computação SG6000-CN.  Os ventiladores de resfriamento ficam acessíveis depois que você remove a tampa superior do controlador.
+
+
+NOTE: Cada uma das duas unidades de fonte de alimentação também contém um ventilador. Esses fãs não estão incluídos neste procedimento.
+
+image::../media/fan_fru.png[Ventoinha FRU]
+
+.Passos
+. link:power-sg6000-cn-controller-off-on.html["Desligue o controlador SG6000-CN"] .
+. Levante o trinco da tampa superior e retire a tampa do aparelho.
+. Localize o ventilador que falhou.
++
+image::../media/fan_location.png[Localização dos fãs]
+
+. Levante a ventoinha avariada para fora do chassis.
++
+image::../media/fan_removal.png[Remoção da ventoinha]
+
+. Faça deslizar a ventoinha de substituição para a ranhura aberta no chassis.
++
+Alinhe a extremidade da ventoinha com o pino-guia. O pino é circulado na fotografia.
+
++
+image::../media/fan_guide_pin.png[Pino de guia do ventilador]
+
+. Pressione firmemente o conetor da ventoinha na placa de circuito impresso.
++
+image::../media/fan_connector_check.png[Verificação do conetor do ventilador]
+
+. Volte a colocar a tampa superior no aparelho e pressione o trinco para baixo para fixar a tampa no lugar.
+. link:power-sg6000-cn-controller-off-on.html#poweron["Ligue o controlador SG6000-CN"] .
+. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+
+
+Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.

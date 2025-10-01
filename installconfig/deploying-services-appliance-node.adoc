@@ -22,6 +22,10 @@ Ao implantar um dispositivo de serviços como nó de administração principal, 
 .Antes de começar
 * O dispositivo foi instalado em um rack ou gabinete, conetado às redes e ligado.
 * Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
++
+
+NOTE: O suporte para remapeamento de portas está obsoleto e será removido em uma versão futura.  Para remover portas remapeadas, consulte https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Remover remapeamentos de porta em dispositivos StorageGRID"^] .
+
 * Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Você conhece um dos endereços IP atribuídos ao dispositivo. Você pode usar o endereço IP de qualquer rede StorageGRID conetada.
 
@@ -54,9 +58,6 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab
 .. Extraia o arquivo.
 .. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *carregar software StorageGRID*.
 .. Clique em *Remover* para remover o pacote de software atual.
-+
-image::../media/appliance_installer_rmv_current_software.png[Instalador do dispositivo - Remover o software atual]
-
 .. Clique em *Procurar* para obter o pacote de software que você baixou e extraiu. Selecione o `storagegrid-webscale-images-_version_.deb` pacote.
 .. Selecione *Home* para voltar à página inicial.
 
@@ -67,9 +68,6 @@ image::../media/appliance_installer_rmv_current_software.png[Instalador do dispo
 NOTE: Se você estiver implantando o dispositivo Admin Node como um destino de clonagem de nós, pare o processo de implantação aqui e continue o link:../commonhardware/appliance-node-cloning-procedure.html["procedimento de clonagem de nós"].
 
 . Na página inicial do Instalador de dispositivos StorageGRID, clique em *Iniciar instalação*.
-+
-image::../media/appliance_installer_home_start_installation_enabled_primary_an.png[Instalação do nó de administração principal do dispositivo]
-
 +
 O estado atual muda para ""Instalação está em andamento"" e a página Instalação do Monitor é exibida.
 
@@ -88,6 +86,10 @@ Ao implantar um dispositivo de serviços como nó de gateway ou nó de administr
 .Antes de começar
 * O dispositivo foi instalado em um rack ou gabinete, conetado às redes e ligado.
 * Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
++
+
+NOTE: O suporte para remapeamento de portas está obsoleto e será removido em uma versão futura.  Para remover portas remapeadas, consulte https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Remover remapeamentos de porta em dispositivos StorageGRID"^] .
+
 * O nó de administração principal do sistema StorageGRID foi implantado.
 * Todas as sub-redes de rede listadas na página Configuração IP do Instalador de dispositivos StorageGRID foram definidas na Lista de sub-redes de rede de Grade no nó de administração principal.
 * Você tem um laptop de serviço com um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
@@ -145,7 +147,7 @@ Detecção automática de todos os nós de administração principal conetados
  a| 
 .. Marque a caixa de seleção *Enable Admin Node Discovery* (Ativar descoberta de nó de administrador).
 .. Aguarde até que a lista de endereços IP descobertos seja exibida.
-.. Selecione o nó de administração principal para a grade onde este nó de storage do dispositivo será implantado.
+.. Selecione o nó de administração primário para a grade onde este gateway de dispositivo ou nó de administração não primário será implantado.
 .. Clique em *Salvar*.
 .. Aguarde até que o estado da ligação para que o novo endereço IP fique pronto.
 
@@ -153,7 +155,7 @@ Detecção automática de todos os nós de administração principal conetados
 |===
 . No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.
 +
-O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.
+O nome que aparece aqui será o nome do sistema do nó do dispositivo.  Os nomes do sistema são necessários para operações internas do StorageGRID e não podem ser alterados.  Para alterar o nome de exibição de um nó do dispositivo, consulte https://docs.netapp.com/us-en/storagegrid/maintain/rename-grid-site-node.html#how-to-rename-grid-sites-or-nodes["Como renomear grade, sites ou nós"^] .
 
 . Opcionalmente, para instalar uma versão diferente do software StorageGRID, siga estas etapas:
 +
@@ -164,9 +166,6 @@ https://mysupport.netapp.com/site/products/all/details/storagegrid/downloads-tab
 .. Extraia o arquivo.
 .. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *carregar software StorageGRID*.
 .. Clique em *Remover* para remover o pacote de software atual.
-+
-image::../media/appliance_installer_rmv_current_software.png[Instalador do dispositivo - Remover o software atual]
-
 .. Clique em *Procurar* para obter o pacote de software que você baixou e extraiu. Selecione o `storagegrid-webscale-images-_version_.deb` pacote.
 .. Selecione *Home* para voltar à página inicial.
 

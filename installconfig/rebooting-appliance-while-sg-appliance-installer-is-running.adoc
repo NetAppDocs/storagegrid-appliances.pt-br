@@ -21,12 +21,6 @@ Este procedimento aplica-se apenas quando o aparelho está a executar o Instalad
 +
 ** Selecione *Reboot into StorageGRID* para reiniciar o controlador com o nó rejuntando a grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.
 ** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes de voltar a unir a grade.
-+
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
-
-+
-O aparelho é reinicializado.
-
 
 
 

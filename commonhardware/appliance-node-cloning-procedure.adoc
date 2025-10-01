@@ -40,9 +40,6 @@ Você deve clonar apenas um nó do dispositivo de cada vez para manter o desempe
 +
 A seção de conexão do nó de administração principal é substituída pela seção de conexão do nó de destino Clone.
 
-+
-image::../media/clone_peer_node_connection_section.png[Clone a seção de conexão do nó de destino]
-
 . Para *Clone IP do nó de destino*, insira o endereço IP temporário atribuído ao nó de destino para que a rede use para clonar tráfego de transferência de dados e selecione *Salvar*.
 +
 Normalmente, você insere o endereço IP da rede de Grade, mas se precisar usar uma rede diferente para clonar tráfego de transferência de dados, insira o endereço IP do nó de destino nessa rede.
@@ -64,9 +61,6 @@ Quando *Iniciar clonagem* está ativada, o *estado atual* indica a rede StorageG
 . Monitore o progresso da clonagem usando o instalador do StorageGRID Appliance no nó de origem ou de destino.
 +
 O Instalador do StorageGRID Appliance nos nós de origem e destino indica status semelhante.
-
-+
-image::../media/cloning_progress.png[Progresso da clonagem]
 
 +
 A página monitorar clonagem fornece progresso detalhado para cada etapa do processo de clonagem:

@@ -29,6 +29,8 @@ Se você ativar a criptografia de nó, os discos do seu dispositivo podem ser pr
 
 Se você estiver usando o ConfigBuilder para gerar um arquivo JSON, você poderá habilitar a criptografia de nó automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
 
+Além disso, quando você habilita o modo FIPS após habilitar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografar dados em repouso. Consulte https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Selecione uma política de segurança"^] para maiores informações.
+
 .Antes de começar
 Reveja as informações https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando o KMS"^] sobre o .
 
@@ -42,7 +44,7 @@ Um KMS pode ser configurado no Gerenciador de Grade antes ou depois que o dispos
 
 
 
-CAUTION: Quando um dispositivo é instalado com criptografia de nó ativada, uma chave temporária é atribuída. Os dados no dispositivo não são protegidos até que o dispositivo esteja conetado ao sistema de gerenciamento de chaves (KMS) e uma chave de segurança KMS esteja definida. Consulte https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descrição geral da configuração do dispositivo KMS"^] para obter informações adicionais.
+CAUTION: Quando um dispositivo é instalado com a criptografia de nó habilitada, uma chave temporária é atribuída.  Os dados no dispositivo não serão protegidos até que o dispositivo seja conectado ao Sistema de Gerenciamento de Chaves (KMS) e uma chave de segurança KMS seja definida.  Consulte o https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html["Descrição geral da configuração do dispositivo KMS"^] para obter informações adicionais.
 
 Sem a chave KMS necessária para descriptografar o disco, os dados no dispositivo não podem ser recuperados e são efetivamente perdidos. Este é o caso sempre que a chave de descriptografia não pode ser recuperada do KMS. A chave fica inacessível se um cliente limpar a configuração do KMS, uma chave KMS expira, a conexão com o KMS é perdida ou o dispositivo é removido do sistema StorageGRID onde suas chaves KMS são instaladas.
 
@@ -62,9 +64,6 @@ A página inicial do instalador do dispositivo StorageGRID é exibida.
 CAUTION: Depois que o dispositivo tiver sido criptografado com uma chave KMS, os discos do appliance não podem ser descriptografados sem usar a mesma chave KMS.
 
 . Selecione *Configure hardware* > *Node Encryption*.
-+
-image::../media/kms_fde_enabled.png[KMS FDE ativado]
-
 . Selecione *Ativar criptografia de nó*.
 +
 Antes da instalação do dispositivo, você pode limpar *Ativar criptografia de nó* sem risco de perda de dados. Quando a instalação começa, o nó appliance acessa as chaves de criptografia KMS no sistema StorageGRID e inicia a criptografia de disco. Não é possível desativar a criptografia de nó depois que o dispositivo é instalado.
@@ -104,7 +103,9 @@ Os SEDs criptografados são bloqueados automaticamente quando o aparelho está d
 
 A criptografia de unidade não se aplica a unidades gerenciadas pelo SANtricity. Se você tiver um dispositivo StorageGRID com controladores SEDs e SANtricity, poderá ativar a segurança da unidade no link:../installconfig/accessing-and-configuring-santricity-system-manager.html["Gerente do sistema da SANtricity"].
 
-Você pode ativar a criptografia de unidade durante a instalação inicial do dispositivo antes de carregar o Grid Manager. Você também pode ativar a criptografia de nó ou alterar sua senha colocando o dispositivo no modo de manutenção.
+Quando você habilita o Drive Encryption para um dispositivo StorageGRID com unidades FIPS, a criptografia FIPS fornecida pelas unidades FIPS é usada para criptografar dados em repouso.
+
+Você pode habilitar a criptografia da unidade durante a instalação inicial do dispositivo antes de carregar o Grid Manager.  Você também pode habilitar a criptografia da unidade ou alterar sua senha colocando o dispositivo no modo de manutenção.
 
 .Antes de começar
 Reveja as informações https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-encryption-methods.html["Métodos de criptografia StorageGRID"^] sobre o .
@@ -121,14 +122,14 @@ CAUTION: Certifique-se de que armazena a frase-passe de encriptação da unidade
 
 . Acesse o Instalador de dispositivos StorageGRID.
 +
-** Durante a instalação inicial do dispositivo, abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
+** Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
 +
 `*https://_Controller_IP_:8443*`
 
 +
 `_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
 
-** Para um dispositivo StorageGRID existentelink:../commonhardware/placing-appliance-into-maintenance-mode.html["coloque o aparelho no modo de manutenção"], .
 
 
 . Na página inicial do Instalador de dispositivos StorageGRID, selecione *Configurar hardware* > *encriptação da unidade*.
@@ -169,6 +170,7 @@ Você deve inserir a senha para acessar uma unidade criptografada após a substi
 
 . Acesse o Instalador de dispositivos StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 ** Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -176,7 +178,6 @@ Você deve inserir a senha para acessar uma unidade criptografada após a substi
 +
 `_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 
 
 . No Instalador de dispositivos StorageGRID, selecione o link *criptografia de unidade* no banner de aviso.
@@ -199,6 +200,7 @@ Os banners de aviso deixarão de ser apresentados quando as unidades forem desbl
 
 . Acesse o Instalador de dispositivos StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 ** Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -206,7 +208,6 @@ Os banners de aviso deixarão de ser apresentados quando as unidades forem desbl
 +
 `_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 
 
 . No Instalador de dispositivos StorageGRID, selecione *Configurar hardware* > *encriptação da unidade*.
@@ -230,6 +231,7 @@ CAUTION: Depois de definir uma nova senha, as unidades criptografadas não podem
 
 . Acesse o Instalador de dispositivos StorageGRID.
 +
+** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 ** Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
 +
 `*https://_Controller_IP_:8443*`
@@ -237,7 +239,6 @@ CAUTION: Depois de definir uma nova senha, as unidades criptografadas não podem
 +
 `_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
 
-** link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
 
 
 . No Instalador de dispositivos StorageGRID, selecione *Configurar hardware* > *encriptação da unidade*.

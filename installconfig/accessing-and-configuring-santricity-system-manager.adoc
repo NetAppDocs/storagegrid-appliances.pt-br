@@ -121,7 +121,7 @@ Para os dispositivos de storage SG5700 e SG5800, siga as etapas de alto nível p
 --
 .SG6060
 --
-Para o dispositivo de armazenamento SG6060, a segurança da unidade pode ser ativada automaticamente nas unidades SSD somente se o gerenciamento de chaves tiver sido configurado antes de instalar o dispositivo de armazenamento.
+Para o dispositivo de armazenamento SG6060, a segurança da unidade pode ser ativada automaticamente nas unidades SSD somente se o gerenciamento de chaves tiver sido configurado antes da instalação do dispositivo de armazenamento.
 
 .. Equipe seu storage array com unidades com capacidade segura (unidades FDE ou unidades FIPS).
 +
@@ -130,7 +130,7 @@ Para o dispositivo de armazenamento SG6060, a segurança da unidade pode ser ati
 *** Uma unidade FDE não pode ser adicionada ou usada como sobressalente em um grupo de volumes ou pool totalmente FIPS.
 
 
-.. Para o compartimento do controlador E4000, crie uma chave de segurança (uma cadeia de carateres compartilhada pelo controlador e pelas unidades para acesso de leitura e gravação).
+.. Para a prateleira do controlador E2800, crie uma chave de segurança (uma sequência de caracteres compartilhada pelo controlador e pelas unidades para acesso de leitura e gravação).
 +
 *** Você pode https://docs.netapp.com/us-en/e-series-santricity/sm-settings/create-internal-security-key.html["crie uma chave interna"^] usar a partir da memória persistente do controlador ou uma chave externa fornecida por um servidor de gerenciamento de chaves.
 *** Para usar uma chave externa fornecida por um servidor de gerenciamento de chaves, você deve primeiro https://docs.netapp.com/us-en/e-series-santricity/sm-settings/overview-drive-security.html["estabeleça a autenticação com um servidor de gerenciamento de chaves"^] no Gerenciador de sistemas do SANtricity.
@@ -250,9 +250,6 @@ DHCP é o método padrão para atribuir um endereço IP à porta de gerenciament
 
 NOTE: Pode demorar alguns minutos para que os valores DHCP apareçam.
 
-+
-image::../media/storage_controller_network_config_ipv4.gif[Configuração de rede do controlador de armazenamento IPv4]
-
 . Opcionalmente, defina um endereço IP estático para a porta de gerenciamento do controlador de armazenamento.
 +
 
@@ -262,9 +259,6 @@ NOTE: Você deve atribuir um IP estático para a porta de gerenciamento ou atrib
 .. Selecione *estático*.
 .. Introduza o endereço IPv4, utilizando a notação CIDR.
 .. Introduza o gateway predefinido.
-+
-image::../media/storage_controller_ipv4_and_def_gateway.gif[Configuração de rede do controlador de armazenamento IPv4 e Gateway predefinido]
-
 .. Clique em *Salvar*.
 +
 Pode levar alguns minutos para que suas alterações sejam aplicadas.

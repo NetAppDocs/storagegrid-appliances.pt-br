@@ -33,40 +33,22 @@ A tabela de conetividade de porta lista os tipos de nós que exigem conetividade
 Você pode testar a conetividade entre as portas do dispositivo listadas na tabela e os outros nós da rede de Grade.
 
 . Na lista suspensa *Network*, selecione a rede que deseja testar: *Grid*, *Admin* ou *Client*.
-. Especifique um intervalo de endereços IPv4 para os hosts nessa rede.
-+
-Por exemplo, você pode querer pesquisar o gateway na rede ou no nó de administração principal.
-
-+
-Especifique um intervalo usando um hífen, como mostrado no exemplo.
-
+. Especifique uma lista separada por espaços ou um intervalo de endereços IPv4 para os hosts nessa rede.
 . Insira um número de porta TCP, uma lista de portas separadas por vírgulas ou um intervalo de portas.
-+
-image::../media/port_connectivity_test_start.png[Teste de conetividade da porta]
-
 . Clique em *testar conetividade*.
 +
-** Se as conexões de rede no nível da porta selecionadas forem válidas, a mensagem ""Teste de conetividade de porta aprovado"" aparecerá em um banner verde. A saída do comando nmap está listada abaixo do banner.
-+
-image::../media/port_connectivity_test_passed.png[Teste de conetividade da porta aprovado]
-
-** Se uma conexão de rede no nível da porta for feita ao host remoto, mas o host não estiver ouvindo em uma ou mais das portas selecionadas, a mensagem ""Falha no teste de conetividade da porta"" aparecerá em um banner amarelo. A saída do comando nmap está listada abaixo do banner.
+** Se as conexões de rede em nível de porta selecionadas forem válidas, a mensagem "`Teste de conectividade de porta aprovado`" aparecerá em um banner verde.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.
+** Se uma conexão de rede em nível de porta for feita com o host remoto, mas o host não estiver escutando em uma ou mais portas selecionadas, a mensagem "`Falha no teste de conectividade de porta`" aparecerá em um banner amarelo.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.
 +
 Qualquer porta remota que o host não esteja ouvindo tem um estado de "fechado". Por exemplo, você pode ver esse banner amarelo quando o nó ao qual você está tentando se conetar estiver em um estado pré-instalado e o serviço StorageGRID NMS ainda não estiver sendo executado nesse nó.
 
-+
-image::../media/nmap_test_yellow_banner.png[Banner amarelo de teste NMAP]
-
-** Se uma conexão de rede no nível de porta não puder ser feita para uma ou mais portas selecionadas, a mensagem "Falha no teste de conetividade de porta" aparecerá em um banner vermelho. A saída do comando nmap está listada abaixo do banner.
+** Se uma conexão de rede em nível de porta não puder ser feita para uma ou mais portas selecionadas, a mensagem "`Falha no teste de conectividade de porta`" aparecerá em um banner vermelho.  A saída do comando nmap está listada abaixo do banner.  Hosts inacessíveis não aparecerão na saída do comando nmap.
 +
 O banner vermelho indica que uma tentativa de conexão TCP para uma porta no host remoto foi feita, mas nada foi retornado ao remetente. Quando nenhuma resposta é retornada, a porta tem um estado de "filtrada" e é provavelmente bloqueada por um firewall.
 
 +
 
 NOTE: Os portos com "fechado" também são listados.
-
-+
-image::../media/nmap_test_red_banner.png[Banner vermelho do teste do NMAP]
 
 
 

@@ -464,6 +464,5 @@ image::../media/e5700sg_bonded_management_ports.gif[E5700SG porta de gerenciamen
 
 .Informações relacionadas
 * link:cabling-appliance-sg5700.html["Aparelho de cabo (SG5700)"]
-* link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de ligação de porta (controlador E5700SG)"]
 * link:configuring-hardware.html["Configurar hardware (SG5700)"]
 

@@ -17,6 +17,10 @@ Depois de instalar e configurar o dispositivo de storage, você pode implantá-l
 * Se você estiver clonando um nó de dispositivo, continue seguindo o link:../commonhardware/appliance-node-cloning-procedure.html["clonagem do nó do dispositivo"] processo.
 * O dispositivo foi instalado em um rack ou gabinete, conetado às redes e ligado.
 * Links de rede, endereços IP e remapeamento de portas (se necessário) foram configurados para o dispositivo usando o Instalador de dispositivos StorageGRID.
++
+
+NOTE: O suporte para remapeamento de portas está obsoleto e será removido em uma versão futura.  Para remover portas remapeadas, consulte https://docs.netapp.com/us-en/storagegrid/maintain/removing-port-remaps.html["Remover remapeamentos de porta em dispositivos StorageGRID"^] .
+
 * Você conhece um dos endereços IP atribuídos ao controlador de computação do dispositivo. Você pode usar o endereço IP de qualquer rede StorageGRID conetada.
 * O nó de administração principal do sistema StorageGRID foi implantado.
 * Todas as sub-redes de rede listadas na página Configuração IP do Instalador de dispositivos StorageGRID foram definidas na Lista de sub-redes de rede de Grade no nó de administração principal.
@@ -57,7 +61,7 @@ NOTE: Somente metadados podem ser selecionados somente durante a implantação d
 
 . No campo *Nome do nó*, forneça o nome do sistema que deseja usar para este nó de dispositivo e clique em *Salvar*.
 +
-O nome que aparece aqui será o nome do sistema do nó do dispositivo. Os nomes de sistema são necessários para operações internas do StorageGRID e não podem ser alterados.
+O nome que aparece aqui será o nome do sistema do nó do dispositivo.  Os nomes do sistema são necessários para operações internas do StorageGRID e não podem ser alterados.  Para alterar o nome de exibição de um nó do dispositivo, consulte https://docs.netapp.com/us-en/storagegrid/maintain/rename-grid-site-node.html#how-to-rename-grid-sites-or-nodes["Como renomear grade, sites ou nós"^] .
 
 . Na seção *conexão do nó de administração principal*, determine se você precisa especificar o endereço IP do nó de administração principal.
 +

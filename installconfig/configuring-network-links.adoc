@@ -31,12 +31,12 @@ Se você planeja usar o modo de ligação de porta agregada, o modo de ligação
 
 
 .Sobre esta tarefa
-Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.
+Você só precisa configurar as definições na página Configuração de Link se quiser usar valores diferentes de<<default_values,configurações padrão>> .
 
 
-NOTE: A política de hash de transmissão LACP é layer2-3.
+NOTE: As alterações na taxa de PDU do LACP feitas seguindo essas instruções permanecem persistentes no ambiente StorageGRID .  Para fazer alterações temporárias na taxa de PDU LACP ao executar operações de manutenção em componentes de rede instalados em seu dispositivo, consulte https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#temporarily-changing-the-lacp-pdu-rate["Alteração temporária da taxa de PDU do LACP"^] .
 
-As figuras e tabelas resumem as opções para o modo de ligação de porta e modo de ligação de rede para cada dispositivo. Consulte o seguinte para obter mais informações:
+[[port_config_tables]]As figuras e tabelas resumem as opções para o modo de vínculo de porta e o modo de vínculo de rede para cada dispositivo.  Veja o seguinte para mais informações:
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modos de ligação de porta (SG1000 e SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de ligação de porta (SG1100 e SG110)"]
@@ -85,7 +85,7 @@ A tabela resume as opções de configuração das quatro portas de rede. Só é 
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -109,11 +109,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -146,7 +148,7 @@ A tabela resume as opções de configuração das quatro portas de rede. Só é 
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -154,10 +156,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -216,7 +220,7 @@ A tabela resume as opções de configuração das quatro portas de rede. Só é 
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -240,11 +244,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -277,7 +283,7 @@ A tabela resume as opções de configuração das portas de rede. Só é necess�
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -285,10 +291,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -341,7 +349,7 @@ A tabela resume as opções de configuração das quatro portas 10/25 GbE. Só �
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -365,11 +373,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -396,7 +406,7 @@ A tabela resume as opções de configuração das quatro portas 10/25 GbE. Só �
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -404,10 +414,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -454,7 +466,7 @@ A tabela resume as opções de configuração das quatro portas 10/25 GbE. Só �
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -478,11 +490,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -509,7 +523,7 @@ A tabela resume as opções de configuração das quatro portas 10/25 GbE. Só �
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -517,10 +531,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -559,7 +575,7 @@ A tabela resume as opções de configuração das portas de rede. Só é necess�
 
 [cols="1a,3a,3a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -583,11 +599,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -614,7 +632,7 @@ A tabela resume as opções de configuração das portas de rede. Só é necess�
 
 [cols="1a,3a,3a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -622,10 +640,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -678,7 +698,7 @@ A tabela resume as opções de configuração das portas de rede. Só é necess�
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -702,11 +722,13 @@ Bola de Futsal (802,3ad)
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 não são usadas.
 * Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
 
  a| 
 * As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
 * As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
 * Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
 
 
 |===
@@ -739,7 +761,7 @@ A tabela resume as opções de configuração das portas de rede. Só é necess�
 
 [cols="1a,2a,2a"]
 |===
-| Modo de ligação de rede | Rede cliente desativada (predefinição) | Rede cliente ativada 
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
 
 
  a| 
@@ -747,10 +769,12 @@ Apenas LACP (802,3ad)
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade.
 * Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
  a| 
 * As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
 * Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
 
 
 |===
@@ -782,14 +806,20 @@ A página Network Link Configuration (Configuração da ligação de rede) apres
 A tabela Status do link lista o estado do link, a velocidade do link e outras estatísticas das portas numeradas.
 
 +
-A primeira vez que aceder a esta página:
+
+NOTE: Para o SG5800, o estado do link para a porta 1 não está disponível no software e deve ser verificado fisicamente usando o LED de status no controlador SG5800.
+
++
+[[default_values]]Na primeira vez que você acessar esta página, os valores padrão serão:
 
 +
 ** *Link Speed* está definido para *Auto*.
 ** *Port bond mode* está definido como *Fixed*.
+** *A política de hash de transmissão do LACP* está definida como *Camada 2+3*.
+** *A taxa de PDU LACP* está definida como *Rápida*.
 ** *O modo de ligação de rede* está definido como *ative-Backup* para a rede de Grade.
 ** A *Admin Network* está ativada e o modo de ligação de rede está definido como *Independent*.
-** A *rede do cliente* está desativada.
+** A *Rede do Cliente* está habilitada.
 
 
 . Selecione a velocidade da ligação para as portas de rede na lista pendente *Link speed* (velocidade da ligação).
@@ -817,17 +847,9 @@ As configurações de rede do cliente para as portas NIC de dados são agora mos
 
 
 
-. Consulte a tabela e configure o modo de ligação de porta e o modo de ligação de rede.
+. Consulte o<<port_config_tables,tabela de configuração de modo de ligação de porta fixa e agregada>> para cada tipo de dispositivo e configure o modo de vinculação de porta e o modo de vinculação de rede para corresponder à sua configuração de rede.
 +
-Este exemplo mostra:
-
-+
-** *Agregar* e *LACP* selecionados para a rede e as redes de clientes. Você deve especificar uma tag VLAN exclusiva para cada rede. Pode selecionar valores entre 0 e 4095.
-** *Ative-Backup* selecionado para a rede Admin.
-+
-image::../media/sg1000_network_link_configuration_aggregate.png[Agregação de configuração de ligação de rede]
-
-
+Você deve especificar tags VLAN exclusivas para a Grid e as Redes Cliente.  Você pode selecionar valores entre 0 e 4095.
 
 . Quando estiver satisfeito com suas seleções, clique em *Salvar*.
 +

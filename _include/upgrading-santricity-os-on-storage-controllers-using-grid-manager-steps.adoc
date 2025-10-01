@@ -12,7 +12,7 @@
 .Sobre esta tarefa
 Não é possível executar outras atualizações de software (atualização de software StorageGRID ou hotfix) enquanto uma atualização do SANtricity os estiver em andamento. Se você tentar iniciar um hotfix ou uma atualização de software StorageGRID antes do processo de atualização do SANtricity os terminar, você será redirecionado para a página de atualização do SANtricity os.
 
-O procedimento não será concluído até que a atualização do SANtricity os tenha sido aplicada com êxito a todos os nós aplicáveis que tenham sido selecionados para a atualização. Pode levar mais de 30 minutos para carregar o sistema operacional SANtricity em cada nó (sequencialmente) e até 90 minutos para reinicializar cada dispositivo de storage StorageGRID. Todos os nós da sua grade que não usam o SANtricity os não serão afetados por este procedimento.
+O procedimento não estará concluído até que a atualização do SANtricity OS tenha sido aplicada com sucesso a todos os nós aplicáveis ​​que foram selecionados para a atualização.  Pode levar mais de 30 minutos para carregar o SANtricity OS em cada nó (sequencialmente) e até 90 minutos para reinicializar cada dispositivo de armazenamento StorageGRID .  Os nós na sua grade que não usam o SANtricity OS não serão afetados por este procedimento.
 
 
 CAUTION: As etapas a seguir são aplicáveis somente quando você estiver usando o Gerenciador de Grade para executar a atualização. Os controladores de armazenamento no dispositivo não podem ser atualizados usando o Gerenciador de Grade quando os controladores estão usando o SANtricity os mais antigos que 08.42.20.00 (11,42).
@@ -21,12 +21,12 @@ CAUTION: As etapas a seguir são aplicáveis somente quando você estiver usando
 NOTE: Este procedimento atualizará automaticamente a NVSRAM para a versão mais recente associada à atualização do sistema operacional SANtricity. Não é necessário aplicar um ficheiro de atualização NVSRAM separado.
 
 
-NOTE: Certifique-se de aplicar o hotfix do StorageGRID mais recente antes de iniciar este procedimento.  https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedimento de correção do StorageGRID"^]Consulte para obter detalhes.
+NOTE: Aplique o hotfix mais recente do StorageGRID antes de iniciar este procedimento. Ver https://docs.netapp.com/us-en/storagegrid/maintain/storagegrid-hotfix-procedure.html["Procedimento de correção do StorageGRID"^] para mais detalhes.
 
 .Passos
 . [[download-SANtricity-os]] Baixe o novo arquivo de software doSANtricity os em https://mysupport.netapp.com/site/products/all/details/storagegrid-appliance/downloads-tab["Downloads do NetApp: StorageGRID Appliance"^].
 +
-Certifique-se de escolher a versão do SANtricity os para os controladores de storage.
+Escolha a versão do SANtricity OS para seus controladores de armazenamento.
 
 . Selecione *MAINTENANCE* > *System* > *Software update*.
 +
@@ -175,9 +175,9 @@ NOTE: Os nós já aprovados e atualizados sem erros permanecem atualizados.
 
 
 
-. Repita este procedimento de atualização para todos os nós com um estágio de conclusão que exigem um arquivo de atualização diferente do SANtricity os.
+. Repita este procedimento de atualização para nós com estágio Completo que exigem um arquivo de atualização do SANtricity OS diferente.
 +
 
-NOTE: Para todos os nós com um status de precisa de atenção, use o modo de manutenção para executar a atualização.
+NOTE: Para nós com status de Necessita de Atenção, use o modo de manutenção para executar a atualização.
 
 

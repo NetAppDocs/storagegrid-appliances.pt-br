@@ -69,8 +69,10 @@ indexpage:
       url: "/landing-maintain-sgf6112/index.html"
   - title: Software StorageGRID
     links:
-    - title: Documentação do StorageGRID 11,9
+    - title: Documentação do StorageGRID 12.0
       url: https://docs.netapp.com/us-en/storagegrid/index.html
+    - title: Documentação do StorageGRID 11,9
+      url: https://docs.netapp.com/us-en/storagegrid-119/index.html
     - title: Documentação do StorageGRID 11,8
       url: https://docs.netapp.com/us-en/storagegrid-118/index.html
     - title: Documentação do StorageGRID 11,7
@@ -79,7 +81,7 @@ indexpage:
       url: https://docs.netapp.com/us-en/storagegrid-116/index.html
     - title: Documentação do StorageGRID 11,5
       url: https://docs.netapp.com/us-en/storagegrid-115/index.html
-  - title: Ative o StorageGRID
+  - title: Soluções e recursos do StorageGRID
     links:
     - title: Integre outras aplicações
       url: https://docs.netapp.com/us-en/storagegrid-enable/index.html

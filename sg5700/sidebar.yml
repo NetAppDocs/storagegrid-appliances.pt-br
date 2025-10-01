@@ -18,8 +18,11 @@ entries:
       url: "/sg5700/upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg5700.html"
     - title: Atualize o SANtricity os no controlador E2800 usando o modo de manutenção
       url: "/sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html"
-  - title: Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity
+  - title: Atualizar firmware da unidade
     entries:
+    - title: Atualizar o firmware da unidade SG5700 automaticamente durante a reinicialização
+        do dispositivo
+      url: "/sg5700/upgrading-drive-firmware-using-auto-reboot.html"
     - title: Atualize o firmware da unidade usando o Gerenciador de sistema do SANtricity
         usando o método on-line
       url: "/sg5700/upgrading-drive-firmware-using-santricity-system-manager-online.html"

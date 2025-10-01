@@ -20,8 +20,7 @@ Pode desligar o controlador SG6000-CN e ligá-lo novamente para efetuar a manute
 Desligue o controlador SG6000-CN para efetuar a manutenção do hardware.
 
 .Antes de começar
-* Você localizou fisicamente o controlador SG6000-CN que exige manutenção no data center. link:locating-controller-in-data-center.html["Localize o controlador no data center"]Consulte .
-
+Você localizou fisicamente o controlador SG6000-CN que exige manutenção no data center. link:locating-controller-in-data-center.html["Localize o controlador no data center"]Consulte .
 
 .Sobre esta tarefa
 Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de desligar o controlador ou desligue o controlador durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
@@ -83,7 +82,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de controlo de
 
 
 
-== Ligue o controlador SG6000-CN e verifique a operação
+== [[poweron]]Ligue o controlador SG6000-CN e verifique a operação
 
 Ligue o controlador após concluir a manutenção.
 

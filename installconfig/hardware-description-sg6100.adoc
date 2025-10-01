@@ -32,6 +32,7 @@ NOTE: Dependendo da política de ILM configurada, as solicitações de objetos l
 
 * Totalmente recuperável, durante o serviço, de falhas de SSD que não resultam em danos extremos ao RAID que hospeda o volume raiz do nó (o sistema operacional StorageGRID).
 * Os dados de objetos podem ser restaurados automaticamente a partir de cópias ou blocos codificados de apagamento em outros nós se várias falhas de SSD resultarem na perda de dados locais.
+* Capacidade de operar como um https://docs.netapp.com/us-en/storagegrid/admin/managing-load-balancing.html["Nó de gateway com cache"^] .
 
 
 O SG6160 fornece os seguintes recursos de proteção de dados:

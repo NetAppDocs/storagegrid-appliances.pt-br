@@ -1,0 +1,35 @@
+---
+permalink: sg5700/upgrading-drive-firmware-using-auto-reboot.html 
+sidebar: sidebar 
+keywords: storagegrid, sg5700, storage node, storage appliance, upgrade, firmware, drive, disk, automatic 
+summary: O StorageGRID Appliance Installer instala automaticamente os arquivos de firmware mais recentes da unidade E-Series durante a reinicialização do dispositivo. 
+---
+= Atualizar o firmware da unidade SG5700 automaticamente durante a reinicialização do dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O StorageGRID Appliance Installer instala automaticamente os arquivos de firmware mais recentes da unidade E-Series durante a reinicialização do dispositivo.
+
+Os arquivos de firmware da unidade E-Series estão incluídos no software StorageGRID .  Essas atualizações são instaladas automaticamente sempre que um dispositivo StorageGRID é reinicializado:
+
+* Emlink:../installconfig/rebooting-appliance-while-sg-appliance-installer-is-running.html["modo de manutenção"]
+* Como parte de um https://docs.netapp.com/us-en/storagegrid/maintain/rolling-reboot-procedure.html["reinicialização contínua"]
+* Durante um https://docs.netapp.com/us-en/storagegrid/upgrade/performing-upgrade.html["Atualização da versão do StorageGRID"] ou https://docs.netapp.com/us-en/storagegrid/maintain/applying-hotfix.html["instalação de hotfix"]
+* Durante umlink:../sg5700/upgrading-santricity-os-on-e2800-controller-using-maintenance-mode.html["Atualização do sistema operacional SANtricity"] usando o modo de manutenção
+
+
+
+CAUTION: A atualização do firmware da unidade não é tentada para nós com status de Requer Atenção.
+
+
+NOTE: Enquanto um dispositivo é reinicializado, a atividade de E/S (entrada/saída) para o controlador de armazenamento é interrompida.
+
+Você também pode instalar atualizações de firmware da unidade manualmente usando o SANtricity System Managerlink:upgrading-drive-firmware-using-santricity-system-manager-online.html["on-line"] oulink:upgrading-drive-firmware-using-santricity-system-manager-offline.html["desconectado"] método:
+
+* Para aplicar uma nova atualização de firmware da unidade antes que ela seja empacotada no software StorageGRID
+* Se uma atualização automática do firmware da unidade falhar
+* Para usar o SANtricity System Managerlink:upgrading-drive-firmware-using-santricity-system-manager-online.html["atualização de firmware de unidade online"] do Grid Manager em vez de reinicializar o nó
+

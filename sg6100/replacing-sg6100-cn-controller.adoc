@@ -54,9 +54,42 @@ Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
 
 CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
 
-.. Remova o controlador com falha do gabinete ou rack.
-.. Instale o controlador de substituição no gabinete ou rack.
-.. Volte a colocar os cabos.
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Remova o controlador com falha do gabinete ou rack"] .
+.. Observe a posição dos componentes substituíveis (duas fontes de alimentação, três NICs e dois SSDs) no controlador com falha.
++
+As duas unidades estão nas seguintes posições no chassi (frente do chassi com a moldura removida mostrada):
+
++
+image::../media/sg6100cn_ssds_locations.png[Locais de condução]
+
++
+|===
+|  | Condução 
+
+
+ a| 
+1
+ a| 
+HDD00
+
+
+
+ a| 
+2
+ a| 
+HDD01
+
+|===
+.. Transfira os componentes substituíveis para o controlador de substituição.
++
+Siga as instruções de manutenção fornecidas para reinstalar os componentes substituíveis.
+
++
+
+CAUTION: Se você quiser manter os dados nas unidades, insira as unidades SSD nos mesmos slots de unidade que elas ocupavam no dispositivo com falha.  Caso contrário, o Appliance Installer exibirá um aviso e você terá que colocar as unidades nos slots corretos e reinicializar o controlador antes que ele possa se conectar novamente à rede.
+
+.. link:reinstalling-sgf6112-into-cabinet-or-rack.html["Instale o controlador de substituição no gabinete ou rack"] .
+.. Substitua os cabos e quaisquer transcetores óticos.
 .. Ligue o controlador e monitorize os LEDs do controlador.
 
 

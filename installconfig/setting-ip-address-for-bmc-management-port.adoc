@@ -78,21 +78,15 @@ A página inicial do instalador do dispositivo StorageGRID é exibida.
 
 . Selecione *Configurar hardware* > *Configuração do BMC*.
 +
-image::../media/bmc_configuration_page.gif[Captura de tela mostrando Avançado > opção Configuração BMC]
-
-+
 É apresentada a página Baseboard Management Controller Configuration (Configuração do controlador de gestão de base).
 
-. Anote o endereço IPv4 que é exibido automaticamente.
+. Nas Configurações de IP da LAN, anote o endereço IPv4 que é exibido automaticamente.
 +
 DHCP é o método padrão para atribuir um endereço IP a esta porta.
 
 +
 
 NOTE: Pode demorar alguns minutos para que os valores DHCP apareçam.
-
-+
-image::../media/bmc_configuration_dhcp_address.gif[Página de Configuração do controlador de Gestão do porão que mostra o endereço DHCP]
 
 . Opcionalmente, defina um endereço IP estático para a porta de gerenciamento BMC.
 +
@@ -103,9 +97,6 @@ NOTE: Você deve atribuir um IP estático para a porta de gerenciamento do BMC o
 .. Selecione *estático*.
 .. Introduza o endereço IPv4, utilizando a notação CIDR.
 .. Introduza o gateway predefinido.
-+
-image::../media/bmc_configuration_static_ip.gif[Opção estática de configuração do controlador de gerenciamento de Baseboard]
-
 .. Clique em *Salvar*.
 +
 Pode levar alguns minutos para que suas alterações sejam aplicadas.

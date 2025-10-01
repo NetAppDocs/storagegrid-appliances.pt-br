@@ -375,16 +375,15 @@ Se a porta de gerenciamento 1 estiver conetada a uma rede com um servidor DHCP, 
 
 . Se o aparelho usar unidades seguras, siga as instruções no procedimento de substituição do controlador E2800 para importar a chave de segurança da unidade.
 . Volte a colocar o aparelho no modo de funcionamento normal. No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Reiniciar controlador* e, em seguida, selecione *Reiniciar no StorageGRID*.
-+
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
-
 . Durante a reinicialização, monitore o status do nó para determinar quando ele voltou a ingressar na grade.
 +
 O aparelho reinicia e regozija-se com a grelha. Este processo pode demorar até 20 minutos.
 
-. Confirme se a reinicialização está concluída e se o nó voltou a ingressar na grade. No Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+. Confirme se a reinicialização foi concluída e se o nó retornou à rede:
 +
-image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+.. No Grid Manager, selecione *NODES*.
+.. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
+
 
 . No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é ideal e colete dados de suporte.
 

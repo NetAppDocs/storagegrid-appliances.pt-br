@@ -11,14 +11,14 @@ summary: Você usa o Instalador do dispositivo StorageGRID para configurar os en
 
 
 [role="lead"]
-Você usa o Instalador de dispositivos StorageGRID para configurar os endereços IP e as informações de roteamento usadas para o utilitário de serviços ou nó de armazenamento de dispositivos nas redes de rede, administrador e cliente do StorageGRID.
+Use o instalador do dispositivo StorageGRID para configurar endereços IP e roteamento para o dispositivo de serviços ou nó de armazenamento nas redes de grade, administração e cliente.
 
 Se estiver usando o ConfigBuilder para gerar um arquivo JSON, você poderá configurar endereços IP automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
 
 .Sobre esta tarefa
-Você deve atribuir um IP estático para o dispositivo em cada rede conetada ou atribuir uma concessão permanente para o endereço no servidor DHCP.
+Você deve atribuir um endereço IP estático para o dispositivo em cada rede de rede ou de administração conectada ou atribuir um contrato de locação permanente para o endereço no servidor DHCP.  O endereço IP estático ou a configuração DHCP são opcionais para uma rede cliente conectada.
 
-Para alterar a configuração do link, consulte as seguintes instruções:
+Para habilitar ou desabilitar um link ou alterar a configuração do link, consulte as seguintes instruções:
 
 * link:../sg100-1000/changing-link-configuration-of-services-appliance.html["Altere a configuração do link do dispositivo de serviços SG100 ou SG1000"]
 * link:../sg110-1100/changing-link-configuration-of-sg110-and-sg1100-appliance.html["Altere a configuração do link do dispositivo de serviços SG110 ou SG1100"]
@@ -53,9 +53,14 @@ Por exemplo, não use os seguintes intervalos de sub-rede para a Rede de grade, 
 +
 É apresentada a página Configuração IP.
 
-. Para configurar a rede de Grade, selecione *Static* ou *DHCP* na seção *Grid Network* da página.
-. Se você selecionou *Static*, siga estas etapas para configurar a rede de Grade:
+. Para configurar a Rede de Grade, selecione *Estático* ou *DHCP* na seção *Rede de Grade* da página e insira suas configurações de rede.
 +
+[role="tabbed-block"]
+====
+.Estático
+--
+Se você selecionou *Static*, siga estas etapas para configurar a rede de Grade:
+
 .. Insira o endereço IPv4 estático, usando a notação CIDR.
 .. Entre no gateway.
 +
@@ -84,18 +89,20 @@ Se você tiver sub-redes de grade, o gateway de rede de grade é necessário. To
 
 +
 
-NOTE: A rota padrão não está listada. Se a rede do cliente não estiver ativada, a rota padrão usará o gateway de rede de grade.
+NOTE: Se a Rede do Cliente não estiver habilitada, a rota padrão usará o gateway da Rede Grid.
 
 +
 *** Para adicionar uma sub-rede, clique no ícone de inserção image:../media/icon_plus_sign_black_on_white.gif["insira o ícone"]à direita da última entrada.
 *** Para remover uma sub-rede não utilizada, clique no ícone de eliminação image:../media/icon_nms_delete_new.gif["eliminar ícone"].
 
 
-.. Clique em *Salvar*.
 
 
-. Se você selecionou *DHCP*, siga estas etapas para configurar a rede de Grade:
-+
+--
+.DHCP
+--
+Se você selecionou *DHCP*, siga estas etapas para configurar a rede de Grade:
+
 .. Depois de selecionar o botão de opção *DHCP*, clique em *Save* (Guardar).
 +
 Os campos *IPv4 Address*, *Gateway* e *sub-redes* são preenchidos automaticamente. Se o servidor DHCP estiver configurado para atribuir um valor MTU, o campo *MTU* será preenchido com esse valor e o campo se tornará somente leitura.
@@ -109,7 +116,7 @@ Se você tiver sub-redes de grade, o gateway de rede de grade é necessário. To
 
 +
 
-NOTE: A rota padrão não está listada. Se a rede do cliente não estiver ativada, a rota padrão usará o gateway de rede de grade.
+NOTE: Se a Rede do Cliente não estiver habilitada, a rota padrão usará o gateway da Rede Grid.
 
 +
 *** Para adicionar uma sub-rede, clique no ícone de inserção image:../media/icon_plus_sign_black_on_white.gif["insira o ícone"]à direita da última entrada.
@@ -128,19 +135,23 @@ NOTE: Para obter o melhor desempenho de rede, todos os nós devem ser configurad
 .. Clique em *Salvar*.
 
 
-. Para configurar a rede Admin, selecione *Static* (estático) ou *DHCP* (DHCP) na secção *Admin Network* (rede Admin) da página.
+--
+====
+. Para configurar a Rede de Administração, selecione *Estática* ou *DHCP* na seção *Rede de Administração* da página e insira suas configurações de rede.
 +
 
 NOTE: Para configurar a rede de administração, ative a rede de administração na página Configuração de ligação.
 
 +
-image::../media/admin_network_static.png[IP de rede Admin]
+[role="tabbed-block"]
+====
+.Estático
+--
+Se você selecionou *Static*, siga estas etapas para configurar a rede Admin:
 
-. Se você selecionou *Static*, siga estas etapas para configurar a rede Admin:
-+
 .. Introduza o endereço IPv4 estático, utilizando a notação CIDR, para a porta de gestão 1 no dispositivo.
 +
-A porta de gerenciamento 1 fica à esquerda das duas portas RJ45 de 1 GbE na extremidade direita do dispositivo.
+Verlink:../installconfig/cabling-appliance.html["Aparelho de cabo"] para o local da Porta de Gerenciamento 1 no seu dispositivo.
 
 .. Entre no gateway.
 +
@@ -172,11 +183,13 @@ NOTE: A rota padrão não pode ser feita para usar o gateway Admin Network.
 *** Para remover uma sub-rede não utilizada, clique no ícone de eliminação image:../media/icon_nms_delete_new.gif["eliminar ícone"].
 
 
-.. Clique em *Salvar*.
 
 
-. Se você selecionou *DHCP*, siga estas etapas para configurar a rede Admin:
-+
+--
+.DHCP
+--
+Se você selecionou *DHCP*, siga estas etapas para configurar a rede Admin:
+
 .. Depois de selecionar o botão de opção *DHCP*, clique em *Save* (Guardar).
 +
 Os campos *IPv4 Address*, *Gateway* e *sub-redes* são preenchidos automaticamente. Se o servidor DHCP estiver configurado para atribuir um valor MTU, o campo *MTU* será preenchido com esse valor e o campo se tornará somente leitura.
@@ -205,16 +218,20 @@ CAUTION: O valor MTU da rede deve corresponder ao valor configurado na porta do 
 .. Clique em *Salvar*.
 
 
-. Para configurar a rede do cliente, selecione *estático* ou *DHCP* na seção *rede do cliente* da página.
+--
+====
+. Para configurar a Rede do Cliente, selecione *Estático*, *DHCP* ou *Nenhum* na seção *Rede do Cliente* da página e insira suas configurações de rede.
 +
 
-NOTE: Para configurar a rede do cliente, ative a rede do cliente na página Configuração da ligação.
+NOTE: Para configurar a Rede do Cliente, certifique-se de que ela esteja habilitada na página Configuração de Link.
 
 +
-image::../media/client_network_static.png[IP da rede do cliente]
+[role="tabbed-block"]
+====
+.Estático
+--
+Se você selecionou *Static*, siga estas etapas para configurar a rede do cliente:
 
-. Se você selecionou *Static*, siga estas etapas para configurar a rede do cliente:
-+
 .. Insira o endereço IPv4 estático, usando a notação CIDR.
 .. Clique em *Salvar*.
 .. Confirme se o endereço IP do gateway de rede do cliente está correto.
@@ -230,8 +247,11 @@ CAUTION: O valor MTU da rede deve corresponder ao valor configurado na porta do 
 .. Clique em *Salvar*.
 
 
-. Se você selecionou *DHCP*, siga estas etapas para configurar a rede do cliente:
-+
+--
+.DHCP
+--
+Se você selecionou *DHCP*, siga estas etapas para configurar a rede do cliente:
+
 .. Depois de selecionar o botão de opção *DHCP*, clique em *Save* (Guardar).
 +
 Os campos *IPv4 Address* e *Gateway* são preenchidos automaticamente. Se o servidor DHCP estiver configurado para atribuir um valor MTU, o campo *MTU* será preenchido com esse valor e o campo se tornará somente leitura.
@@ -251,4 +271,11 @@ CAUTION: O valor MTU da rede deve corresponder ao valor configurado na porta do 
 
 
 
+--
+.Nenhum
+--
+Selecione *Nenhum* para habilitar a Rede do Cliente sem especificar um endereço IP.  A Rede do Cliente precisa apenas de um endereço IP para acesso direto.  Habilitar a rede do cliente sem um endereço IP permite que você configure as interfaces de VLAN da rede do cliente no StorageGRID.
+
+--
+====
 

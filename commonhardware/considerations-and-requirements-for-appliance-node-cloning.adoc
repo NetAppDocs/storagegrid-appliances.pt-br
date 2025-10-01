@@ -14,6 +14,9 @@ summary: Antes de clonar um nó do dispositivo, você precisa entender as consid
 Antes de clonar um nó do dispositivo, você precisa entender as considerações e os requisitos.
 
 
+TIP: O clone do nó está desabilitado para nós de gateway.  Para substituir um nó de gateway, desative-o e execute uma expansão para adicionar um novo nó de gateway do dispositivo.  O procedimento de descomissionamento e expansão é muito mais rápido para um nó de gateway do que para um nó de armazenamento.
+
+
 
 == Requisitos de hardware para o dispositivo de substituição
 
@@ -21,11 +24,11 @@ Certifique-se de que o aparelho de substituição cumpre os seguintes critérios
 
 * O nó de origem (dispositivo sendo substituído) e o dispositivo de destino (novo) devem ser do mesmo tipo de dispositivo:
 +
-** Você só pode clonar um dispositivo Admin Node ou um dispositivo Gateway Node para um novo dispositivo de serviços.
+** Você só pode clonar um dispositivo de nó de administração para um novo dispositivo de serviços.
 ** Você só pode clonar um dispositivo nó de storage para um novo dispositivo de storage.
 
 
-* Para dispositivos Admin Node ou Gateway Node, o dispositivo de nó de origem e o dispositivo de destino não precisam ser o mesmo modelo de dispositivo; no entanto, a alteração do modelo de dispositivo pode exigir a substituição dos cabos ou módulos SFP.
+* Para um dispositivo de nó de administração, o dispositivo de nó de origem e o dispositivo de destino não precisam ser do mesmo modelo; no entanto, alterar o modelo do dispositivo pode exigir a substituição dos cabos ou módulos SFP.
 +
 Por exemplo, você pode substituir um dispositivo de SG1000 nós por um SG100 ou substituir um dispositivo SG100 por um dispositivo SG1000.
 
@@ -37,7 +40,7 @@ Por exemplo, você pode substituir um dispositivo de SG5700 nós por um disposit
 
 ** O dispositivo de destino deve ter um número igual ou maior de volumes de storage de objetos do que o dispositivo de origem.
 +
-Por exemplo, você não pode substituir um dispositivo de SG6000 nós (16 volumes de armazenamento de objetos) por um dispositivo SGF6112 (12 volumes de armazenamento de objetos).
+Por exemplo, você não pode substituir um dispositivo de nó SG6000 (16 volumes de armazenamento de objetos) por um dispositivo SGF6112 (12 volumes de armazenamento de objetos).
 
 
 
@@ -60,9 +63,18 @@ Os endereços IP temporários estão normalmente na mesma sub-rede que o disposi
 
 NOTE: O uso da rede de administração de 1 GbE para clonar a transferência de dados resulta em clonagem mais lenta.
 
-* Determine se a criptografia de nó usando um servidor de gerenciamento de chaves (KMS) será usada no dispositivo de destino, de modo que você possa habilitar a criptografia de nó durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode verificar se a criptografia de nó está ativada no nó do dispositivo de origem, conforme descrito no link:../installconfig/optional-enabling-node-encryption.html["habilitando a criptografia do nó"].
+* Determine se você usará criptografia de nó usando um servidor de gerenciamento de chaves (KMS) no dispositivo de destino, para que você possa habilitar a criptografia de nó durante a instalação inicial do dispositivo de destino antes da clonagem.  Você pode verificar se a criptografia do nó está habilitada no nó do dispositivo de origem, conforme descrito emlink:../installconfig/optional-enabling-node-encryption.html["habilitando a criptografia do nó"] .
 +
-O nó de origem e o dispositivo de destino podem ter configurações diferentes de criptografia de nó. A descriptografia e a criptografia de dados são executadas automaticamente durante a transferência de dados e quando o nó de destino é reiniciado e se junta à grade.
+O nó de origem e o dispositivo de destino podem ter configurações de criptografia de nó diferentes, com as seguintes exceções.  A clonagem de nós não é suportada de origens de nós não criptografados para destinos criptografados por nós para os seguintes dispositivos:
+
++
+** Um dispositivo de nó SGF6112 sem criptografia de nó para um dispositivo SGF6112 com criptografia de nó
+** Um dispositivo de nó SG1100 sem criptografia de nó para um dispositivo SG1100 com criptografia de nó
+** Um dispositivo de nó SG110 sem criptografia de nó para um dispositivo SG110 com criptografia de nó
+
+
++
+A descriptografia e a criptografia de dados são realizadas automaticamente durante a transferência de dados e quando o nó de destino é reiniciado e se junta à grade.
 
 * Determine se o modo RAID no dispositivo de destino deve ser alterado de sua configuração padrão, para que você possa especificar essas informações durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode exibir informações sobre o modo RAID atual do nó do dispositivo de origem na página *NÓS* no Gerenciador de Grade. Selecione a guia *hardware* para o aparelho.
 +

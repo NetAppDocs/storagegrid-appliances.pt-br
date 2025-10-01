@@ -24,6 +24,7 @@ Você pode automatizar a configuração do seguinte:
 ** Modo de ligação da porta
 ** Modo de ligação de rede
 ** Velocidade da ligação
+** Política de hash de transmissão LACP e taxa de PDU
 
 
 
@@ -81,16 +82,13 @@ Depois de gerar um arquivo JSON, você pode automatizar a configuração de um o
 
 .Passos
 . No Instalador de dispositivos StorageGRID, selecione *Avançado* > *Atualizar configuração do dispositivo*. É apresentada a página Update Appliance Configuration (Atualizar configuração do dispositivo).
-. Procure e selecione o arquivo JSON com a configuração que deseja carregar.
+. Na seção Carregar JSON, procure e selecione o arquivo de configuração JSON que você deseja carregar.
 +
 O arquivo é carregado e validado. Quando o processo de validação estiver concluído, o nome do ficheiro é apresentado junto a uma marca de verificação verde.
 
 +
 
 NOTE: Você pode perder a conexão com o dispositivo se a configuração do arquivo JSON incluir seções para `link_config`, `networks` ou ambos. Se você não estiver conetado novamente dentro de 1 minuto, insira novamente o URL do dispositivo usando um dos outros endereços IP atribuídos ao dispositivo.
-
-+
-image::../media/update_appliance_configuration_valid_json.png[Atualizar configuração do dispositivo JSON carregado]
 
 +
 A lista suspensa *Nome do nó* é preenchida com os nomes de nós de nível superior definidos no arquivo JSON.

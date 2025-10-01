@@ -310,9 +310,11 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
-. Se colocar o aparelho no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde que o nó reinicie e volte a ligar a grelha. Este processo pode demorar até 20 minutos. Em seguida, no Gerenciador de Grade, verifique se a página nós exibe um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+. Se você colocou o dispositivo no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde até que o nó seja reinicializado e reconecte-se à rede.  Esse processo pode levar até 20 minutos.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 +
-image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+.. No Grid Manager, selecione *NODES*.
+.. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
+
 
 
 

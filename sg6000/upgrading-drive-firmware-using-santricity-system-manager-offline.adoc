@@ -149,10 +149,12 @@ link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html[
 ** * Reinicie no StorageGRID*.
 ** * Reinicie no modo de manutenção*. Reinicie o controlador e mantenha o nó no modo de manutenção. Selecione esta opção se houver falhas durante o procedimento e você quiser recomeçar. Depois que o nó terminar de reiniciar para o modo de manutenção, reinicie a partir da etapa apropriada no procedimento que falhou.
 +
-Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página de nós deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
+... No Grid Manager, selecione *NODES*.
+... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
+
 
 
 

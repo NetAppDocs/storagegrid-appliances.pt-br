@@ -38,6 +38,9 @@ Arquivo de configuração em branco para uso com o script
 * Criou um `configure-storagegrid.json` ficheiro de configuração. Para criar este ficheiro, pode modificar o ficheiro de configuração de exemplo (`configure-storagegrid.sample.json`) ou o ficheiro de configuração em branco (`configure-storagegrid.blank.json`).
 
 
+
+CAUTION: Armazene a senha de gerenciamento e a senha de provisionamento da seção de senhas do modificado `configure-storagegrid.json` arquivo de configuração em um local seguro.  Essas senhas são necessárias para procedimentos de instalação, expansão e manutenção.  Você também deve fazer backup do arquivo modificado `configure-storagegrid.json` arquivo de configuração e armazene-o em um local seguro.
+
 .Sobre esta tarefa
 Você pode usar o `configure-storagegrid.py` script Python e o `configure-storagegrid.json` arquivo de configuração para automatizar a configuração do seu sistema StorageGRID.
 

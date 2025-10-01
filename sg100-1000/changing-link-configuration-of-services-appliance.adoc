@@ -24,15 +24,13 @@ As opções para alterar a configuração do link Ethernet do dispositivo de ser
 
 * Alterar o modo *Port bond* de fixo para agregado, ou de agregado para fixo
 * Alteração do *modo de ligação de rede* de ative-Backup para LACP ou de LACP para ative-Backup
+* Alterando os valores da *política de hash de transmissão do LACP* e da *taxa de PDU do LACP*
 * Ativar ou desativar a marcação de VLAN ou alterar o valor de uma tag VLAN
 * Alterar a velocidade da ligação
 
 
 .Passos
 . No Instalador de dispositivos StorageGRID, selecione *Configurar rede* > *Configuração de ligação*.
-+
-image::../media/link_configuration_option.gif[Configuração da ligação]
-
 . Faça as alterações desejadas na configuração do link.
 +
 Para obter mais informações sobre as opções, link:../installconfig/configuring-network-links.html["Configurar ligações de rede"]consulte .
@@ -57,13 +55,12 @@ Além de quaisquer outros testes que você escolher executar, confirme que você
 ** Selecione *Reboot into StorageGRID* para reiniciar o controlador com o nó rejuntando a grade. Selecione esta opção se terminar de trabalhar no modo de manutenção e estiver pronto para retornar o nó à operação normal.
 ** Selecione *Reboot into Maintenance Mode* (Reiniciar no modo de manutenção) para reiniciar o controlador com o nó restante no modo de manutenção. (Esta opção só está disponível quando o controlador está no modo de manutenção.) Selecione esta opção se houver operações de manutenção adicionais que você precisa executar no nó antes de voltar a unir a grade.
 +
-image::../media/reboot_controller_from_maintenance_mode.png[Reinicie o controlador no modo de manutenção]
+Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-Pode demorar até 20 minutos para o aparelho reiniciar e voltar a ligar a grelha. Para confirmar que a reinicialização está concluída e que o nó voltou a ingressar na grade, volte ao Gerenciador de Grade. A página *NÓS* deve exibir um status normal (ícone de marca de seleção verde image:../media/icon_alert_green_checkmark.png["marca de verificação verde"]à esquerda do nome do nó) para o nó do dispositivo, indicando que não há alertas ativos e o nó está conetado à grade.
+... No Grid Manager, selecione *NODES*.
+... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
-+
-image::../media/nodes_menu.png[Nó do dispositivo voltou a unir a grade]
 
 
 
