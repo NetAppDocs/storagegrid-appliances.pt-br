@@ -2121,7 +2121,6 @@
   <block id="023a03630e96cd25b69d134411531e8c" category="paragraph">Fonte de alimentação (1 de 2) para o controlador de computação SG6100-CN</block>
   <block id="471615f4f3a518f7bbbe1d1ef8f319de" category="paragraph">Conetores para controlador de computação SG6100-CN</block>
   <block id="cc53c11094cddf3f51bd4537e9e7158b" category="paragraph">Ventilador (1 de 2) para compartimento do controlador E4000</block>
-  <block id="e5a8c894ca52500bc6bcb77e429cb813" category="paragraph">Controlador de armazenamento e-Series E400 (1 de 2) e conetores</block>
   <block id="8e6dd71ab1d82f641fffaf74f1a6f6b8" category="paragraph">Fonte de alimentação (1 de 2) para o compartimento do controlador E4000</block>
   <block id="7f515b7b271e2f2650ab9205041ae23a" category="section-title">SG6100 controladoras</block>
   <block id="e095a9ee88152254e105acb911c6ddc3" category="section-title">Controlador de computação SG6100-CN</block>
@@ -5792,4 +5791,5 @@
   <block id="883368f2f68b2c26ebcfb31f09f529d5" category="sidebar">Atualizar o firmware da unidade SG6160 usando o método offline do SANtricity System Manager</block>
   <block id="58abe205d3265bf2555ee7c37bee89cb" category="sidebar">NIC interna (SGF6112 ou SG6100-CN)</block>
   <block id="b883da35aa37ea53f8afe4d94c8d01ee" category="sidebar">Placa de rede externa (SG6100-CN)</block>
+  <block id="45d6f533deefe293ac89312b73991e3c" category="paragraph">Controlador de armazenamento E-Series E4000 (1 de 2) e conectores</block>
 </blocks>

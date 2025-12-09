@@ -11,7 +11,7 @@ summary: Você atualiza o firmware da sua unidade para garantir que você tenha 
 
 
 [role="lead"]
-Use o método on-line do Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do seu dispositivo para garantir que você tenha todos os recursos e correções de bugs mais recentes.
+Use o método off-line do Gerenciador de sistema do SANtricity para atualizar o firmware nas unidades do seu dispositivo para garantir que você tenha todos os recursos e correções de bugs mais recentes.
 
 .Antes de começar
 * O dispositivo de armazenamento tem um status ideal.

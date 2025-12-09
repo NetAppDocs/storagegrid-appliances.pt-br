@@ -296,7 +296,7 @@ Ventilador (1 de 2) para compartimento do controlador E4000
  a| 
 4
  a| 
-Controlador de armazenamento e-Series E400 (1 de 2) e conetores
+Controlador de armazenamento E-Series E4000 (1 de 2) e conectores
 
 
 
