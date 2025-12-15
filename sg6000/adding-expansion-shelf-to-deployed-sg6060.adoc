@@ -16,7 +16,7 @@ Para aumentar a capacidade de storage, é possível adicionar um ou dois compart
 .Antes de começar
 * Você deve ter a senha de provisionamento.
 * Você deve estar executando o StorageGRID 11,4 ou posterior.
-* Você tem o compartimento de expansão e dois cabos SAS para cada compartimento de expansão.
+* Você tem a prateleira de expansão e quatro cabos SAS para cada prateleira de expansão.
 * Você localizou fisicamente o dispositivo de armazenamento onde está adicionando o compartimento de expansão no data center.
 +
 link:locating-controller-in-data-center.html["Localize o controlador no data center"]

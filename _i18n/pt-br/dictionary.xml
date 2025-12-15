@@ -5792,4 +5792,11 @@
   <block id="58abe205d3265bf2555ee7c37bee89cb" category="sidebar">NIC interna (SGF6112 ou SG6100-CN)</block>
   <block id="b883da35aa37ea53f8afe4d94c8d01ee" category="sidebar">Placa de rede externa (SG6100-CN)</block>
   <block id="45d6f533deefe293ac89312b73991e3c" category="paragraph">Controlador de armazenamento E-Series E4000 (1 de 2) e conectores</block>
+  <block id="d66dc455f8396fdf0a25675ee37c3850" category="paragraph"><block ref="d66dc455f8396fdf0a25675ee37c3850" category="inline-link-macro-rx"></block></block>
+  <block id="c0d04b56c858cb378ce2f78658d31e47" category="paragraph"><block ref="c0d04b56c858cb378ce2f78658d31e47" category="inline-link-macro-rx"></block></block>
+  <block id="e89d5647eeef5607c80ed881e7f2a688" category="paragraph"><block ref="e89d5647eeef5607c80ed881e7f2a688" category="inline-link-macro-rx"></block></block>
+  <block id="33722e85f36a5c0937ae34b929f815cc" category="paragraph"><block ref="33722e85f36a5c0937ae34b929f815cc" category="inline-link-macro-rx"></block></block>
+  <block id="563b1774437ac478e7c976ac7144d4ba" category="paragraph"><block ref="563b1774437ac478e7c976ac7144d4ba" category="inline-link-macro-rx"></block></block>
+  <block id="ecd831cf9ca8bc83bd1bbdbfa1f4f693" category="paragraph"><block ref="ecd831cf9ca8bc83bd1bbdbfa1f4f693" category="inline-link-macro-rx"></block></block>
+  <block id="25c6e9b66962fe13c106a3caf7544197" category="list-text">Você tem a prateleira de expansão e quatro cabos SAS para cada prateleira de expansão.</block>
 </blocks>

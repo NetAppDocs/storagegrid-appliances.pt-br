@@ -35,14 +35,14 @@ Para substituir uma unidade, um recipiente da ventoinha de alimentação, um rec
  a| 
 Condução
  a| 
-Substituição de uma unidade nas gavetas de E2800 12 ou 24 unidades
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Substituição de uma unidade nas gavetas de E2800 12 ou 24 unidades"^]
 
 
 
  a| 
 Depósito da ventoinha de alimentação
  a| 
-Substituição de um recipiente do ventilador elétrico em E2800 prateleiras
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Substituição de um recipiente do ventilador elétrico em E2800 prateleiras"^]
 
 |===
 
@@ -57,27 +57,27 @@ Substituição de um recipiente do ventilador elétrico em E2800 prateleiras
  a| 
 Condução
  a| 
-Substituição de uma unidade em E2860 gavetas
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-12-24-supertask-task.html["Substituição de uma unidade em E2860 gavetas"^]
 
 
 
  a| 
 Depósito de alimentação
  a| 
-Substituição de um recipiente de alimentação em E2860 prateleiras
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-60-replace-power-task.html["Substituição de um recipiente de alimentação em E2860 prateleiras"^]
 
 
 
  a| 
 Recipiente da ventoinha
  a| 
-Substituição de um recipiente do ventilador em E2860 prateleiras
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supertask-task.html["Substituição de um recipiente do ventilador em E2860 prateleiras"^]
 
 
 
  a| 
 Gaveta da unidade
  a| 
-Substituição de uma gaveta de unidades em E2860 gavetas
+link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/drives-60-supertask-task.html["Substituição de uma gaveta de unidades em E2860 gavetas"^]
 
 |===
