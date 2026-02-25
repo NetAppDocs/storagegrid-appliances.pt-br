@@ -23,6 +23,8 @@ indexpage:
       url: "../sg5800/replace-controller-5800sg.html"
     - title: Substitua o controlador de storage E4000
       url: "../sg5800/replace-controller-e4000-simplex.html"
+    - title: Substitua a bateria CMOS
+      url: "../sg5800/replace-cmos-battery-sg5800.html"
     - title: Substitua o recipiente da ventoinha
       url: "../sg5800/replace-fan-canister.html"
     - title: Substitua o recipiente de alimentação

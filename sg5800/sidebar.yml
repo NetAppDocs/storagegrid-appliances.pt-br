@@ -36,10 +36,12 @@ entries:
 - title: Procedimentos de hardware
   pdf-filename: Procedimentos de hardware - SG5800
   entries:
-  - title: Substitua o controlador SG5800
+  - title: Substituir SG5800 controller
     url: "/sg5800/replace-controller-5800sg.html"
   - title: Substitua o controlador E4000
     url: "/sg5800/replace-controller-e4000-simplex.html"
+  - title: Substitua a bateria CMOS
+    url: "/sg5800/replace-cmos-battery-sg5800.html"
   - title: Substitua o ventilador (SG5860)
     url: "/sg5800/replace-fan-canister.html"
   - title: Substituição da fonte de alimentação (SG5812)
