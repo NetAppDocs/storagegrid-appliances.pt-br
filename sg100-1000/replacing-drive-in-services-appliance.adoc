@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, drive, remove, removing, removal, install, installing, installation 
 summary: Os SSDs no dispositivo de serviços contêm o sistema operacional StorageGRID. Além disso, quando o dispositivo é configurado como um nó Admin, os SSDs também contêm logs de auditoria, métricas e tabelas de banco de dados. As unidades são espelhadas usando RAID1 para redundância. Se uma das unidades falhar, você deve substituí-la o mais rápido possível para garantir a redundância. 
 ---
-= Substitua a unidade em SG100 ou SG1000
+= Substituir um disco rígido em um SG100 ou SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,7 +33,7 @@ CAUTION: Se remover a unidade de trabalho, irá reduzir o nó do dispositivo. Co
 .Passos
 . Verifique se a unidade a ser substituída tem o LED esquerdo âmbar intermitente. Se um problema de unidade foi relatado na interface de usuário do Gerenciador de Grade ou do BMC, HDD02 ou HDD2 referem-se à unidade no slot superior e HDD03 ou HDD3 referem-se à unidade no slot inferior.
 +
-Você também pode usar o Gerenciador de Grade para monitorar o status dos SSDs. Selecione *NODES*. Em seguida, selecione `*Appliance Node*` > *hardware*. Se uma unidade tiver falhado, o campo Storage RAID Mode (modo RAID de armazenamento) contém uma mensagem sobre qual unidade falhou.
+Você também pode usar o Gerenciador de Grade para monitorar o status dos SSDs. Selecione *Nós*. Em seguida, selecione  `*Appliance Node*` > *Hardware*. Se uma unidade falhar, o campo Modo RAID de Armazenamento exibirá uma mensagem informando qual unidade apresentou falha.
 
 . Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
 . Desembale a unidade de substituição e coloque-a numa superfície plana e livre de estática perto do aparelho.
@@ -64,8 +64,8 @@ CAUTION: Não utilize força excessiva ao fechar a pega.
 Quando a unidade estiver totalmente inserida, você ouvirá um clique.
 
 +
-A unidade é reconstruída automaticamente com dados espelhados da unidade de trabalho. Você pode verificar o status da reconstrução usando o Gerenciador de Grade. Selecione *NODES*. Em seguida, selecione `*Appliance Node*` > *hardware*. O campo Storage RAID Mode (modo RAID de armazenamento) contém uma mensagem "reconstruindo" até que a unidade seja completamente reconstruída.
+A unidade é reconstruída automaticamente com dados espelhados da unidade em funcionamento. Você pode verificar o status da reconstrução usando o Grid Manager. Selecione *Nodes*. Em seguida, selecione  `*Appliance Node*` > *Hardware*. O campo Storage RAID Mode exibirá a mensagem "`rebuilding`" até que a unidade seja completamente reconstruída.
 
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

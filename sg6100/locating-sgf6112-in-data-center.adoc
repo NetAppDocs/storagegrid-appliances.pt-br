@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, appliance, locate, find, locating, finding, identify, blue led, blue light 
 summary: Localize o dispositivo para que você possa executar a manutenção de hardware ou atualizações. 
 ---
-= Localize o dispositivo SGF6112 ou o controlador SG6100-CN no data center
+= Localize um appliance SGF6112 ou um controlador SG6100-CN em um data center
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2,9 +2,9 @@
 permalink: sg110-1100/power-sg110-and-sg1100-off-on.html 
 sidebar: sidebar 
 keywords: storagegrid, sg110, sg1100, power off, turn off, shut off, shutdown, shut down, power on, turn on, start 
-summary: Pode desligar o aparelho SGF6112 e ligá-lo novamente para efetuar a manutenção. 
+summary: Pode desligar o aparelho SG110 ou SG1100 e ligá-lo novamente para efetuar a manutenção. 
 ---
-= Ligue e desligue o SG110 ou SG1100
+= Desligue e ligue um SG110 ou SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

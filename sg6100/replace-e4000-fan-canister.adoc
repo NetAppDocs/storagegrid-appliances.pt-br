@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rever os tipos e requisitos do recipiente E4000. 
 ---
-= Substitua o recipiente do ventilador na gaveta do controlador de armazenamento ou na gaveta de expansão (SG6160)
+= Substitua o compartimento do ventilador em um controlador de armazenamento SG6160 ou compartimento de expansão
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5800, storage node, storage appliance, Replacing, replace, e4000, controller, remove, removing, removal, install, installing, installation 
 summary: Talvez seja necessário substituir o controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado. 
 ---
-= Substitua o controlador E4000 (SG5800)
+= Substitua o controlador E4000 em um SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ NOTE: Não confie nas instruções da série e para substituir um controlador no
 * Você deve estar conetado ao Gerenciador de Grade usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
 * Acesso ao Gerenciador do sistema SANtricity:
 +
-** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"^] no .
+** No Grid Manager, selecione *Nodes* > *appliance node* > *SANtricity System Manager*. As informações do controlador estão no  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"^].
 ** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 
@@ -359,7 +359,7 @@ O aparelho reinicia e regozija-se com a grelha. Este processo pode demorar até 
 
 . Confirme se a reinicialização foi concluída e se o nó retornou à rede:
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 
@@ -386,4 +386,4 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 .O que se segue?
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
 summary: 'O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.' 
 ---
-= Aparelhos SG110 e SG1100: Visão geral
+= StorageGRID SG110 e SG1100 appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,7 +72,7 @@ Identifique o LED
  a| 
 * Azul intermitente: Identifica o aparelho no gabinete ou rack.
 * Azul, sólido: Identifica o aparelho no gabinete ou rack.
-* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+* Desligado: o aparelho não é visualmente identificável no armário ou rack.
 
 
 |===

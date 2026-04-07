@@ -1,0 +1,84 @@
+---
+permalink: sg6200/reinstalling-sg6200-into-cabinet-or-rack.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, sg6200, sg6200cn, storage node, storage appliance, install, installing, installation, cabinet, rack 
+summary: Remova o SGF6212 de um gabinete ou rack para acessar a tampa superior ou para mover o appliance para um local diferente e, em seguida, reinstale o appliance em um gabinete ou rack quando a manutenção do hardware estiver concluída. 
+---
+= Realoque o SGF6212 ou SG6200-CN no gabinete ou rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Remova o SGF6212 ou SG6200-CN de um gabinete ou rack para acessar a tampa superior ou para mover o dispositivo de storage para um local diferente, em seguida, reinstale o dispositivo de storage em um gabinete ou rack quando a manutenção do hardware estiver concluída.
+
+
+
+== Remova o SGF6212 ou SG6200-CN do gabinete ou rack
+
+.Antes de começar
+* Você tem etiquetas para identificar cada cabo conectado ao SGF6212 ou SG6200-CN.
+* Você link:locating-sg6200-in-data-center.html["localizado fisicamente o SGF6212 ou SG6200-CN"] está realizando a manutenção no data center.
+* Você tem link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["Desligue o SGF6212 ou SG6200-CN"].
++
+
+CAUTION: Não desligue o aparelho utilizando o interrutor de alimentação.
+
+
+
+.Passos
+. Identifique e, em seguida, desligue os cabos de alimentação do aparelho.
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Identifique e desconete os cabos de dados do dispositivo e quaisquer transcetores SFP ou SFP28.
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. Desaperte os dois parafusos integrados no painel frontal do aparelho.
++
+image::../media/s25_rack_retaining_screws.png[Parafusos de fixação do rack SGF6212 ou SG6200-CN]
+
+. Deslize o SGF6212 ou SG6200-CN para fora do rack até que os trilhos de montagem estejam totalmente estendidos e você ouça as travas em ambos os lados clicarem.
++
+A tampa superior do aparelho está acessível.
+
+. Opcional: Se estiver a remover totalmente o aparelho do armário ou do rack, siga as instruções para o kit de calhas para remover o aparelho dos trilhos.
+
+
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.
+
+
+
+== Reinstale o SGF6212 ou SG6200-CN no gabinete ou rack
+
+.Antes de começar
+Você tem link:reinstalling-sg6200-cover.html["volte a instalar a tampa do aparelho"].
+
+.Passos
+. Ao pressionar o trilho azul, ambos os trilhos do rack são liberados simultaneamente. Em seguida, deslize o SGF6212 ou SG6200-CN para dentro do rack até que esteja totalmente encaixado.
++
+Quando não conseguir mover o controlador mais, puxe as travas azuis em ambos os lados do chassi para deslizar o controlador até o fim.
+
++
+image::../media/sg6000_cn_rails_blue_button.gif[SG6000 deslizando sobre trilhos]
+
++
+
+NOTE: Não conete a moldura frontal até que você ligue o controlador.
+
+. Aperte os parafusos integrados no painel frontal do controlador para fixar o controlador no rack.
++
+image::../media/s25_rack_retaining_screws.png[SG6060 parafusos de fixação da cremalheira]
+
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. link:../installconfig/cabling-appliance.html["Reconecte os cabos de dados do controlador e quaisquer transceptores SFP+, SFP28, QSFP+, QSFP28 ou QSFP56"].
++
+
+NOTE: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise nos cabos.
+
+. link:../installconfig/connecting-power-cords-and-applying-power.html["Reconecte os cabos de alimentação do controlador"].
+
+
+.Depois de terminar
+link:power-sg6200-off-on.html#power-on-sgf6212-or-sg6200-cn-and-verify-operation["Reinicie o aparelho"].

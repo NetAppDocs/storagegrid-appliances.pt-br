@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, sgf6112, SG6160, install, information, site, pre-install, preparing, prepare, preinstall, info, preparation, port bond, port bonding, port bond mode, port-bond mode, Network bond, Network bonding, Network bond mode, Network-bond mode, independent, active-backup, active backup 
 summary: Usando as tabelas a seguir, Registre as informações necessárias para cada rede conetada ao aparelho. Esses valores são necessários para instalar e configurar o hardware. 
 ---
-= Reunir informações de rede (SG6100)
+= Reúna informações de rede para o SG6100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

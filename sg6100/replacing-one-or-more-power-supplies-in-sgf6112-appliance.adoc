@@ -75,4 +75,4 @@ image::../media/sg6000_cn_insert_power_supply.gif[Fonte de alimentação desliza
 . link:../installconfig/connecting-power-cords-and-applying-power.html["Conete os cabos de energia às unidades substituídas e ligue a energia"].
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

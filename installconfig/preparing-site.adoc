@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: site prep, site preparation, preparing site, site requirements, requirements, site, dimensions, weight, weights, temperature, humidity, altitude, airflow, heat, wiring, power, grounding, facility 
 summary: Antes de instalar o aparelho, certifique-se de que o local e o gabinete ou rack que pretende utilizar cumprem as especificações de um dispositivo StorageGRID. 
 ---
-= Prepare o local
+= Prepare o local para a instalação do StorageGRID appliance
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -33,6 +33,13 @@ SG100 e SG1000
 SG110 e SG1100
  a| 
 100 a 240 volts AC
+
+
+
+ a| 
+SG120 e SG1200
+ a| 
+240 volts CA
 
 
 
@@ -90,12 +97,22 @@ SG6160
  a| 
 240 volts CA
 
+
+
+ a| 
+SGF6212
+ a| 
+240 volts CA
+
+
+
+ a| 
+SG6260
+ a| 
+240 volts CA
+
 |===
 . Confirme se a sua localização cumpre os requisitos de energia do seu aparelho:
-+
-
-NOTE: As fontes de alimentação nos aparelhos StorageGRID são classificadas para potências significativamente maiores do que as usadas pelo hardware do aparelho StorageGRID, mesmo durante períodos de consumo máximo de energia. A NetApp recomenda o uso dos números da tabela a seguir para determinar se um layout de rack proposto que inclui dispositivos StorageGRID é compatível com o orçamento de energia de rack.
-
 +
 [cols="1a,1a,1a"]
 |===
@@ -135,6 +152,24 @@ SG1100
 422
  a| 
 700
+
+
+
+ a| 
+SG120
+ a| 
+432
+ a| 
+519
+
+
+
+ a| 
+SG1200
+ a| 
+557
+ a| 
+668
 
 
 
@@ -208,7 +243,29 @@ SG6160
  a| 
 1800
 
+
+
+ a| 
+SGF6212
+ a| 
+673
+ a| 
+808
+
+
+
+ a| 
+SG6260
+ a| 
+580
+ a| 
+696
+
 |===
++
+
+NOTE: As fontes de alimentação dos appliances StorageGRID são classificadas para potências significativamente maiores do que as utilizadas pelo hardware dos appliances StorageGRID, mesmo durante períodos de consumo máximo de energia. NetApp recomenda usar o  https://hwu.netapp.com["NetApp Hardware Universe"^] para determinar se um layout de rack proposto que inclua appliances StorageGRID é compatível com o orçamento de energia do seu rack.
+
 . Obtenha um gabinete ou rack de 19 polegadas (48,3 cm) para encaixar prateleiras do seguinte tamanho (sem cabos).
 +
 [role="tabbed-block"]
@@ -262,6 +319,55 @@ SG6160
 13 43,83 lb.
 
 (19,88 kg)
+
+|===
+--
+.SG120 e SG1200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo do aparelho | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+SG120
+ a| 
+1,70 pol.
+
+(4,32 cm)
+ a| 
+18,98 pol.
+
+(48,21 cm)
+ a| 
+30,56 polegadas
+
+(77,62 cm)
+ a| 
+42,13 lb.
+
+(19,11 kg)
+
+
+
+ a| 
+SG1200
+ a| 
+1,70 pol.
+
+(4,32 cm)
+ a| 
+18,98 pol.
+
+(48,21 cm)
+ a| 
+30,56 polegadas
+
+(77,62 cm)
+ a| 
+43,43 lb.
+
+(19,70 kg)
 
 |===
 --
@@ -553,15 +659,90 @@ Compartimento de expansão (SG6160) - Opcional
 
 |===
 --
+.SG6200
+--
+[cols="1a,1a,1a,1a,1a"]
+|===
+| Modelo do aparelho/tipo de prateleira | Altura | Largura | Profundidade | Peso máximo 
+
+
+ a| 
+Appliance SGF6212
+ a| 
+1,70 pol. (4,32 cm)
+ a| 
+18,98 pol. (48,21 cm)
+ a| 
+30,56 pol. (77,62 cm)
+ a| 
+55,98 lb. (25,39 kg)
+
+
+
+ a| 
+Controlador de computação SG6200-CN (SG6260)
+ a| 
+1,70 pol. (4,32 cm)
+ a| 
+18,98 pol. (48,21 cm)
+ a| 
+30,56 pol. (77,62 cm)
+ a| 
+44,0 lb. (19,70 kg)
+
+
+
+ a| 
+Prateleira do controlador E4060 (SG6260)
+ a| 
+6,87 pol.
+
+(17,45 cm)
+ a| 
+17,64 pol.
+
+(44,8 cm)
+ a| 
+36,3 pol.
+
+(97,16 cm)
+ a| 
+13 223,58 lb.
+
+(101,42 kg)
+
+
+
+ a| 
+Compartimento de expansão (SG6260) - Opcional
+ a| 
+6,87 pol.
+
+(17,45 cm)
+ a| 
+17,64 pol.
+
+(44,8 cm)
+ a| 
+36,3 pol.
+
+(97,16 cm)
+ a| 
+13 223,58 lb.
+
+(101,42 kg)
+
+|===
+--
 ====
 . Decida onde vai instalar o aparelho.
 +
 
-CAUTION: Ao instalar o compartimento do controlador E2860 ou E4000 ou as prateleiras de expansão opcionais, instale o hardware da parte inferior para a parte superior do rack ou gabinete para evitar que o equipamento tombe. Para garantir que o equipamento mais pesado esteja na parte inferior do gabinete ou rack, instale o controlador SG6000-CN ou SG6100-CN acima da prateleira de controladores E2860 ou E4000 e prateleiras de expansão.
+CAUTION: Ao instalar a prateleira do controlador E2860 ou E4000 ou as prateleiras de expansão opcionais, instale o hardware de baixo para cima no rack ou gabinete para evitar que o equipamento tombe. Para garantir que o equipamento mais pesado fique na parte inferior do gabinete ou rack, instale o SG6000-CN, SG6100-CN ou SG6200-CN controller acima da prateleira do controlador E2860 ou E4000 e das prateleiras de expansão.
 
 +
 
-NOTE: Antes de se comprometer com a instalação, verifique se os cabos fornecidos com um aparelho SG6000 ou SG6100, ou os cabos que você fornecer, são longos o suficiente para o layout planejado.
+NOTE: Antes de iniciar a instalação, verifique se os cabos fornecidos com o SG6000, SG6100 ou SG6200, ou os cabos que você fornecer, têm comprimento suficiente para o layout planejado.
 
 . Instale todos os switches de rede necessários. Consulte link:https://imt.netapp.com/matrix/#welcome["Ferramenta de Matriz de interoperabilidade do NetApp"^]para obter informações sobre compatibilidade.
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace 60-drive power canister, replacing E4000 power canister, E4000, E-Series, eseries 
 summary: Substitua uma gaveta de controladora de 60 unidades ou uma gaveta de unidade, que inclui dois coletores de energia para redundância de energia. 
 ---
-= Substitua o recipiente de alimentação no SG5860
+= Substitua o cartucho de energia no SG5860
 :allow-uri-read: 
 :experimental: 
 :icons: font

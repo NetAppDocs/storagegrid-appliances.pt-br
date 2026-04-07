@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: sg6000, sg6060, sg6060x, storage appliance 
 summary: Os dispositivos StorageGRID SG6060 e SG6060X incluem um controlador de computação e um compartimento de controladores de storage que contém duas controladoras de storage e 60 unidades. 
 ---
-= Aparelhos SG6060 e SG6060X: Visão geral
+= StorageGRID SG6060 e SG6060X appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -137,7 +137,7 @@ Identifique o LED
  a| 
 * Azul intermitente: Identifica o aparelho no gabinete ou rack.
 * Azul, sólido: Identifica o aparelho no gabinete ou rack.
-* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+* Desligado: o aparelho não é visualmente identificável no armário ou rack.
 
 
 |===

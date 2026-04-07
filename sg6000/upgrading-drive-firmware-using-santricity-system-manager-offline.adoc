@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, upgrade, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Você atualiza o firmware da sua unidade para garantir que você tenha todos os recursos mais recentes e correções de bugs. 
 ---
-= Atualize o firmware da unidade SG6000 usando o Gerenciador de sistema SANtricity usando o método off-line
+= Atualize o firmware da unidade SG6000 usando o método offline do SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -43,7 +43,7 @@ NOTE: Se você estiver atualizando o firmware em unidades SSD que fazem parte de
 . Acesse o Gerenciador de sistemas do SANtricity usando um destes métodos:
 +
 ** Use o Instalador de dispositivos StorageGRID e selecione *Avançado* > *Gerenciador de sistemas SANtricity*
-** Use o Gerenciador de Grade e selecione *NÓS* > *_nó de armazenamento_* > *Gerenciador do sistema SANtricity*
+** Utilize o Gerenciador de Grade e selecione *Nós* > *_Nó de Armazenamento_* > *SANtricity System Manager*
 ** Use o Gerenciador do sistema SANtricity navegando até o IP do controlador de armazenamento:
 +
 `*https://_Storage_Controller_IP_*`
@@ -152,7 +152,7 @@ link:troubleshoot-upgrading-drive-firmware-using-santricity-system-manager.html[
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-... No Grid Manager, selecione *NODES*.
+... No Gerenciador de Grade, selecione *Nós*.
 ... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

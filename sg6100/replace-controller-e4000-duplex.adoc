@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua o controlador de storage E4000 (SG6160)
+= Substitua um controlador de armazenamento E4000 em um SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -312,7 +312,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . Se você colocou o dispositivo no modo de manutenção durante este procedimento, saia do modo de manutenção e aguarde até que o nó seja reinicializado e reconecte-se à rede.  Esse processo pode levar até 20 minutos.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 
@@ -321,4 +321,4 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 .O que se segue?
 A substituição do controlador está concluída. Pode retomar as operações normais.
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

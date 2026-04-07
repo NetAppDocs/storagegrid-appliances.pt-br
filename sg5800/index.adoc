@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Mantenha o aparelho SG5800
+= Realizar a manutenção do appliance SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

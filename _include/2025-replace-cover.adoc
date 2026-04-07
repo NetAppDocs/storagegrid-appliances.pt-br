@@ -1,0 +1,22 @@
+= Passo 2: reinstale a tampa
+:allow-uri-read: 
+
+
+. Destrave a trava da tampa pressionando o botão azul de trava na tampa do appliance.
++
+image:../media/drw_s2025_cover_replace_ieops-2559.svg["Destravando e removendo a tampa do aparelho"]
+
+. Rode o trinco para cima e para trás em direção à parte traseira do chassis do aparelho até parar; em seguida, levante cuidadosamente a tampa do chassis e coloque-a de lado.
+
+
+
+
+== Passo 2: reinstale a tampa
+
+.Passos
+. Com a trava da tampa aberta, alinhe a tampa acima do chassi e abaixe-a cuidadosamente.
+. Rode o trinco da tampa para a frente e para baixo até parar e a tampa assentar totalmente no chassis. Verifique se não existem folgas ao longo da extremidade dianteira da tampa.
++
+Se a tampa não estiver totalmente encaixada, poderá não conseguir deslizar o aparelho para dentro do rack.
+
+

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remap appliance ports, network, internal to external port mapping 
 summary: Opcionalmente, é possível remapear as portas internas em um nó de dispositivo para diferentes portas externas. Por exemplo, talvez seja necessário remapear as portas devido a um problema de firewall. 
 ---
-= Opcional: Remapear as portas de rede para o dispositivo
+= Reconfigurar portas de rede para StorageGRID appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,0 +1,46 @@
+---
+permalink: installconfig/installing-hardware-sg6200.html 
+sidebar: sidebar 
+keywords: install, sg6200, sg6212, expansion shelf, cabinet, rack, drives 
+summary: Para os modelos SG6260 e SGF6212, você instala trilhos no seu gabinete ou rack e desliza a prateleira do controlador, quaisquer prateleiras de expansão e o controlador de computação sobre os trilhos. 
+---
+= Instale o SG6200 em um gabinete ou rack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para os modelos SG6260 e SGF6212, você instala trilhos no seu gabinete ou rack e desliza a prateleira do controlador, quaisquer prateleiras de expansão e o controlador de computação sobre os trilhos.
+
+[cols="1a,2a,2a"]
+|===
+| Modelo | Instale | Para obter informações 
+
+
+ a| 
+SG6260
+ a| 
+compartimento do controlador de 60 unidades e todas as gavetas de expansão de 60 unidades
+ a| 
+link:sg6260-installing-60-drive-shelves-into-cabinet-or-rack.html["Instale as gavetas de 60 unidades"]
+
+
+
+ a| 
+SG6212
+ a| 
+compartimento do dispositivo de 12 unidades
+ a| 
+link:installing-appliance-in-cabinet-or-rack-sgf6212.html["Instale as gavetas de 12 unidades"]
+
+
+
+ a| 
+SG6260
+ a| 
+Controlador de computação SG6200-CN
+ a| 
+link:sg6200-cn-installing-into-cabinet-or-rack.html["Instale o controlador SG6200-CN"]
+
+|===

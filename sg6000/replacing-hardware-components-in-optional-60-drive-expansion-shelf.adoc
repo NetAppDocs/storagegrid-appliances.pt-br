@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, Replacing, replace, hardware, components, remove, removing, removal, install, installing, installation, i/o module, input/output module, power supply, fan, 60-drive expansion shelf, expansion shelf 
 summary: Talvez seja necessário substituir um módulo de entrada/saída, uma fonte de alimentação ou um ventilador no compartimento de expansão. 
 ---
-= Substitua os componentes de hardware no compartimento de expansão de SG6000 60 unidades opcional
+= Substitua os componentes de hardware no compartimento de expansão SG6000 opcional para 60 unidades
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

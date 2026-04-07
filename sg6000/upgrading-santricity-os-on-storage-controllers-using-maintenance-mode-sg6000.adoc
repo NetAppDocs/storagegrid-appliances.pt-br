@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: 'Para controladores de armazenamento que utilizam atualmente o SANtricity os com mais de 08.42.20.00 GB(11,42), tem de utilizar o procedimento de modo de manutenção para aplicar uma atualização.' 
 ---
-= Atualize o SANtricity os em controladores de storage SG6000 usando o modo de manutenção
+= Atualize o sistema operacional SANtricity nos controladores de armazenamento SG6000 com o modo de manutenção
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,7 +49,7 @@ NOTE: Ative os arquivos de atualização imediatamente. Não adiar a ativação.
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-... No Grid Manager, selecione *NODES*.
+... No Gerenciador de Grade, selecione *Nós*.
 ... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

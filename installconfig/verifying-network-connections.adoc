@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: network connections, network connection, network, connection, connectivity, verify, verifying, check, checking, mtu, test, testing 
 summary: Confirme que pode aceder às redes StorageGRID que está a utilizar a partir do dispositivo. Para validar o roteamento por meio de gateways de rede, você deve testar a conetividade entre o Instalador de dispositivos StorageGRID e endereços IP em diferentes sub-redes. Você também pode verificar a configuração MTU. 
 ---
-= Verifique as conexões de rede
+= Verifique as conexões de rede nos appliances StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

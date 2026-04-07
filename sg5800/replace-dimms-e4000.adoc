@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substituir DIMMs em E4000 (SG5800)
+= Substitua os DIMMs no controlador E4000 em um SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,7 +29,7 @@ O nó de armazenamento do dispositivo pode não estar acessível quando você su
 
 * Acesso ao Gerenciador do sistema SANtricity:
 +
-** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** No Grid Manager, selecione *Nós* > *nó do appliance* > *SANtricity System Manager*. As informações do controlador estão no  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"].
 +
 
 NOTE: Você pode não conseguir acessar o Gerenciador de sistema do SANtricity usando o Gerenciador de Grade durante determinadas etapas deste procedimento. Se o controlador SG5800 estiver desligado, terá de aceder ao Gestor do sistema SANtricity utilizando o seu browser.
@@ -263,7 +263,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . Confirme se a reinicialização foi concluída e se o nó retornou à rede:
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 +
 

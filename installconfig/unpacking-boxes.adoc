@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unpack, unbox, prepare, inventory, components, contents 
 summary: Antes de instalar o dispositivo StorageGRID, desembale todas as caixas e compare o conteúdo com os itens no saco de embalagem. 
 ---
-= Desembale caixas
+= Desembale as caixas dos dispositivos StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -72,6 +72,42 @@ Painel frontal::
 image::../media/sgf_6112_front_bezel.png[Painel frontal]
 
 --
+
+
+* *Cabos de alimentação*
++
+
+TIP: O gabinete pode ter cabos de alimentação especiais que você usa em vez dos cabos de alimentação fornecidos com o aparelho.
+
++
+Dois cabos de energia para o seu país::
++
+--
+image::../media/power_cords.gif[Cabos de energia]
+
+--
+
+
+
+
+--
+.SG120 e SG1200
+--
+* *Hardware*
++
+SG120 ou SG1200::
++
+--
+image::../media/sg120_front_view.png[Acionamentos dianteiros para appliances SG120 e SG1200]
+
+--
+Kit de calha com instruções::
++
+--
+image::../media/rail_kit.gif[Kit de calha]
+
+--
+Painel (não mostrado)::
 
 
 * *Cabos de alimentação*
@@ -518,6 +554,128 @@ Painel frontal::
 image::../media/sgf_6112_front_bezel.png[Painel frontal]
 
 --
+
+
+* *Cabos de alimentação*
++
+
+TIP: O gabinete pode ter cabos de alimentação especiais que você usa em vez dos cabos de alimentação fornecidos com o aparelho.
+
++
+Dois cabos de energia para o seu país::
++
+--
+image::../media/power_cords.gif[Cabos de energia]
+
+--
+
+
+
+
+--
+.SG6200
+--
+* *Hardware SG6260*
++
+Controlador SG6200-CN::
++
+--
+image::../media/s25_front_with_ssds.png[Controlador SG6200-CN]
+
+--
+Compartimento de controladora E4000U sem unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Controlador E4000 4U]
+
+--
+Dois painéis frontais (não mostrados)::
++
+--
+image::../media/rail_kit.gif[Kit de calha]
+
+--
+Unidades NL-SAS de 60 TB::
++
+--
+image::../media/sg5760_drive.gif[Unidades NL-SAS de 60 TB]
+
+--
+Quatro alças::
++
+--
+image::../media/handles.gif[Alças E4000]
+
+--
+Suportes traseiros e porcas de gaiola para instalação em rack de orifícios quadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Suportes traseiros e porcas de gaiola para SG5860]
+
+--
+Um cabo de interconexão de 100 GbE a 4x25GbE::
++
+--
+image::../media/sg6100_4x25gbe_spf28_cable.png[Cabo multicondutor de 100 GbE a 4x25GbE]
+
+--
+Quatro cabos de energia para o seu país::
++
+--
+image::../media/power_cords.gif[Cabos de energia]
+
+--
+
+
+* *SG6260 compartimento de expansão*
++
+Compartimento de expansão sem unidades instaladas::
++
+--
+image::../media/de460c_table_size.gif[Controlador E4000 4U]
+
+--
+Painel (não mostrado)::
++
+--
+image::../media/sg5760_drive.gif[Condução]
+
+--
+Um kit de trilho com instruções::
++
+--
+image::../media/rail_kit.gif[Kit de calha]
+
+--
+Quatro alças::
++
+--
+image::../media/handles.gif[Alças E4000]
+
+--
+Suportes traseiros e porcas de gaiola para instalação em rack de orifícios quadrados::
++
+--
+image::../media/back_brackets_table_size.gif[Suportes traseiros e porcas de gaiola para SG5860]
+
+--
+
+
+* *Hardware SGF6212*
++
+SGF6212::
++
+--
+image::../media/s25_front_with_ssds.png[Drives frontais do appliance SGF6212]
+
+--
+Kit de calha com instruções::
++
+--
+image::../media/rail_kit.gif[Kit de calha]
+
+--
+Painel (não mostrado)::
 
 
 * *Cabos de alimentação*

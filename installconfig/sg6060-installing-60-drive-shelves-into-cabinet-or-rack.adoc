@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, install, installing, installation, 60-drive shelves, 60-drive shelf, 60 drive shelves, 60 drive shelf, 60 drive, 60-drive, shelf, shelves, drive, disk, 60 
 summary: Você instala um conjunto de trilhos para o compartimento do controlador E2860 em seu gabinete ou rack e, em seguida, desliza a prateleira do controlador sobre os trilhos. Se você estiver instalando compartimentos de expansão de 60 unidades, o mesmo procedimento será aplicado. 
 ---
-= Instalar gavetas de 60 unidades (SG6060)
+= Instale os compartimentos de 60 discos para um SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

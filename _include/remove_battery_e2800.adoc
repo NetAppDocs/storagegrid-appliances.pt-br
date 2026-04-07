@@ -73,14 +73,14 @@ Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma 
 . Vire o controlador para confirmar que a bateria está instalada corretamente.
 +
 
-CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos.
+CAUTION: *Possível dano ao hardware* -- A aba metálica na parte frontal da bateria deve estar completamente inserida no slot do controlador (como mostrado na primeira figura). Se a bateria não for instalada corretamente (como mostrado na segunda figura), a aba metálica poderá entrar em contato com a placa controladora, causando danos.
 
 +
 ** *Correto -- a flange de metal da bateria é completamente inserida na ranhura do controlador:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flange da bateria conforme]
 
-** *Incorreto -- a flange metálica da bateria não está inserida na ranhura do controlador:*
+** *Incorreto -- A aba metálica da bateria não está inserida no slot do controlador:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flange da bateria incorreta]
 

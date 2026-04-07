@@ -1,0 +1,76 @@
+= 
+:allow-uri-read: 
+
+
+.Passos
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Localize o ventilador que você precisa substituir.
++
+Os sete ventiladores estão localizados nas seguintes posições no chassi (metade frontal do dispositivo StorageGRID com a tampa superior removida mostrada):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Posicionamento dos ventiladores no chassi do StorageGRID appliance]
+
++
+|===
+| Posição do chassi | Grupo motoventilador 
+
+
+ a| 
+1
+ a| 
+Fan_SYS0
+
+
+
+ a| 
+2
+ a| 
+Fan_SYS1
+
+
+
+ a| 
+3
+ a| 
+Fan_SYS2
+
+
+
+ a| 
+4
+ a| 
+Fan_SYS3
+
+
+
+ a| 
+5
+ a| 
+Fan_SYS4
+
+
+
+ a| 
+6
+ a| 
+Fan_SYS5
+
+
+
+ a| 
+7
+ a| 
+Fan_SYS6
+
+|===
+. Usando as abas azuis na ventoinha, levante a ventoinha com falha para fora do chassis.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Removendo uma ventoinha do chassi"]
+
+. Faça deslizar a ventoinha de substituição para a ranhura aberta no chassis.
++
+Alinhe o conector do ventilador com o soquete na placa de circuito.
+
+. Pressione firmemente o conetor da ventoinha na placa de circuito impresso.
+

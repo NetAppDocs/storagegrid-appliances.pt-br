@@ -1,0 +1,40 @@
+---
+section: sg120-1200
+title: Manutenção do hardware SG120 e SG1200
+url: "/landing-maintain-sg1200-120/index.html"
+entries:
+- title: Visão geral
+  pdf-filename: Manutenção de hardware SG120 e SG1200
+  url: "/sg120-1200/index.html"
+- title: Procedimentos de configuração de manutenção
+  pdf-filename: Procedimentos de configuração de manutenção - SG120 e SG1200
+  entries:
+  - title: Ligue e desligue o LED de identificação
+    url: "/sg120-1200/turning-sg120-and-sg1200-identify-led-on-and-off.html"
+  - title: Localize o dispositivo no data center
+    url: "/sg120-1200/locating-sg120-and-sg1200-in-data-center.html"
+  - title: Desligue e ligue o aparelho
+    url: "/sg120-1200/power-sg120-and-sg1200-off-on.html"
+  - title: Alterar a configuração do link
+    url: "/sg120-1200/changing-link-configuration-of-sg120-and-sg1200-appliance.html"
+- title: Procedimentos de manutenção de hardware
+  pdf-filename: Procedimentos de manutenção de hardware - SG120 e SG1200
+  entries:
+  - title: Verifique o componente a substituir
+    url: "/sg120-1200/verify-component-to-replace.html"
+  - title: Substitua uma ou mais fontes de alimentação
+    url: "/sg120-1200/replacing-one-or-more-power-supplies-in-sg120-and-sg1200-appliance.html"
+  - title: Substitua a ventoinha
+    url: "/sg120-1200/replacing-fan-in-sg120-and-sg1200.html"
+  - title: Substitua a transmissão
+    url: "/sg120-1200/replacing-drive-in-sg120-and-sg1200.html"
+  - title: Substitua a NIC
+    url: "/sg120-1200/replace-nic-in-sg120-and-sg1200.html"
+  - title: Substitua a bateria CMOS
+    url: "/sg120-1200/replace-cmos-in-sg120-and-sg1200.html"
+  - title: Volte a colocar a tampa
+    url: "/sg120-1200/reinstalling-sg120-and-sg1200-cover.html"
+  - title: Substitua o aparelho
+    url: "/sg120-1200/replacing-sg120-and-sg1200-appliance.html"
+  - title: Reposicione o aparelho no rack
+    url: "/sg120-1200/reinstalling-sg120-and-sg1200-into-cabinet-or-rack.html"

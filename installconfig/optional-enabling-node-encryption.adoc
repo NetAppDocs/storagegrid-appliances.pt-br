@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: node encryption, encryption, kms, key management server, drive encryption, self-encrypting drives, sed, full-disk encryption, fde 
 summary: Você pode habilitar a criptografia nos níveis de nó e disco para proteger os discos do seu dispositivo contra perda física ou remoção do site. 
 ---
-= Opcional: Habilite a criptografia de nó ou unidade
+= Habilite a criptografia de nó ou unidade para StorageGRID appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -92,11 +92,11 @@ Você pode exibir o status da criptografia do nó, os detalhes do KMS e os certi
 
 A criptografia de unidade é gerenciada no hardware da unidade com autocriptografia (SED) durante os processos de gravação e leitura. O acesso aos dados nessas unidades é controlado por uma senha definida pelo usuário.
 
-A criptografia de unidade pode ser usada para qualquer SSD SED instalado em um nó ou controlador de computação SG100, SG1000, SG110, SG1100, SGF6112 ou SG6100-CN.
+A criptografia de unidade pode ser usada em qualquer SSD SED instalado em um nó de computação ou controlador SG100, SG1000, SG110, SG1100, SG120, SG1200, SGF6112, SGF6212, SG6100-CN ou SG6200-CN.
 
 * Para dispositivos de serviços, os SSDs são os discos raiz do nó.
-* Em um controlador SG6100-CN, os SSDs são usados para armazenamento em cache.
-* Em um SGF6112, os SSDs são os discos raiz de nó e são usados para o armazenamento primário de dados de objeto.
+* Em um controlador SG6100-CN ou SG6200-CN, os SSDs são usados para armazenamento em cache.
+* Em um SGF6112 ou SGF6212, os SSDs são os discos raiz do nó e são usados para o storage primário de dados de objetos.
 
 
 Os SEDs criptografados são bloqueados automaticamente quando o aparelho está desligado ou quando a unidade é removida do aparelho. Um SED criptografado permanece bloqueado após a energia ser restaurada até que a senha correta seja inserida. Para permitir que as unidades sejam acessadas sem reinserir manualmente a senha, a senha é armazenada no dispositivo StorageGRID para desbloquear unidades criptografadas que permanecem no dispositivo quando o dispositivo for reiniciado. Unidades criptografadas com uma senha SED podem ser acessadas por qualquer pessoa que conheça a senha.

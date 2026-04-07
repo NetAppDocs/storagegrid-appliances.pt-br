@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, deploy node, deploying node, node, deploy, deploying 
 summary: Depois de instalar e configurar o dispositivo de storage, você pode implantá-lo como um nó de storage em um sistema StorageGRID. Ao implantar um dispositivo como nó de storage, você usa o Instalador de dispositivos StorageGRID incluído no dispositivo. 
 ---
-= Implante o nó de storage do dispositivo
+= Implante um nó de armazenamento do dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

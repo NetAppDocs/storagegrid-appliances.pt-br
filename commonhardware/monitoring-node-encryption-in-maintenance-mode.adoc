@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: kms, key management server, monitor, monitoring, status, encryption 
 summary: 'Se você ativou a criptografia de nó para o dispositivo durante a instalação, você pode monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).' 
 ---
-= Monitore a criptografia do nó no modo de manutenção
+= Monitorar a criptografia de nó para um dispositivo de StorageGRID em modo de manutenção
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,7 +49,7 @@ CAUTION: Limpar a configuração do KMS exclui os dados do dispositivo, tornando
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-... No Grid Manager, selecione *NODES*.
+... No Gerenciador de Grade, selecione *Nós*.
 ... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

@@ -1,0 +1,257 @@
+---
+permalink: installconfig/hardware-description-sg120-and-1200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg120, sg1200, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
+summary: 'Os StorageGRID SG120 services appliance e SG1200 services appliance podem operar como um Gateway Node e como um Admin Node para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os appliances podem operar como Gateway Nodes e Admin Nodes (primário ou não primário) ao mesmo tempo.' 
+---
+= StorageGRID SG120 e SG1200 appliances
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os dispositivos de serviços StorageGRID SG120 e SG1200 podem operar como um Nó de Gateway e como um Nó de Administração para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como Nós de Gateway e Nós de Administração (primário ou não primário) ao mesmo tempo.
+
+
+
+== Caraterísticas do aparelho
+
+Os aparelhos SG120 e SG1200 oferecem os seguintes recursos:
+
+* Funções de nó de gateway ou nó de administrador para um sistema StorageGRID.
+* O instalador do dispositivo StorageGRID para simplificar a implantação e a configuração de nós.
+* Quando implantado, pode acessar o software StorageGRID de um nó de administrador existente ou de software baixado para uma unidade local. Para simplificar ainda mais o processo de implementação, uma versão recente do software é pré-carregada no dispositivo durante o fabrico.
+* Um controlador de gerenciamento de placa base (BMC) para monitorar e diagnosticar alguns dos hardwares do dispositivo.
+* A capacidade de se conetar a todas as três redes StorageGRID, incluindo a rede de Grade, a rede de Administração e a rede de Cliente:
++
+** O SG120 suporta até quatro conexões de 10 ou 25 GbE à Grid Network e à Client Network.
+** O SG1200 suporta até quatro conexões de 10, 25, 40 ou 100 GbE à Grid Network e Client Network (ou até quatro conexões de 200 GbE com uma 200GbE NIC opcional).
+
+
+
+
+
+
+== Diagramas SG120 e SG1200
+
+Esta figura mostra a parte frontal do SG120 e do SG1200 com o painel removido. Vistos de frente, os dois appliances são idênticos, exceto pelo nome do produto no painel.
+
+image::../media/sg120_sg1200_front_with_ssds.png[Painel frontal com SSDs SG120 e SG1200]
+
+As duas unidades de estado sólido (SSDs), indicadas pelo contorno laranja, são usadas para armazenar o sistema operacional StorageGRID e são espelhadas usando RAID 1 para redundância. Quando o appliance de serviços SG120 ou SG1200 é configurado como um Admin Node, essas unidades podem ser usadas para armazenar logs de auditoria, métricas e tabelas de banco de dados. Os slots de unidade restantes estão vazios.
+
+Esta figura mostra a localização da fonte de alimentação e dos LEDs de identificação na parte traseira do SG120 e do SG1200. LEDs adicionais de status e atividade estão localizados nas portas do appliance. Esses LEDs podem variar de acordo com o modelo do appliance.
+
+image::../media/sg120_sg1200_rear_leds.png[LEDs traseiros SG120 e SG1200]
+
+[cols="1a,2a,3a"]
+|===
+| Legenda | LED | Estado 
+
+
+ a| 
+1
+ a| 
+LED da fonte de alimentação
+ a| 
+* Verde, sólido: Energia aplicada ao aparelho, botão de alimentação está ligado.
+* Verde, intermitente: Alimentação aplicada ao aparelho, o botão de alimentação está desligado.
+* Desligado: sem alimentação aplicada ao aparelho.
+* Âmbar: Falha na alimentação de energia.
+
+
+
+
+ a| 
+2
+ a| 
+Identifique o LED
+ a| 
+* Azul intermitente: Identifica o aparelho no gabinete ou rack.
+* Azul, sólido: Identifica o aparelho no gabinete ou rack.
+* Desligado: o aparelho não é visualmente identificável no armário ou rack.
+
+
+|===
+
+
+== Conectores SG120
+
+Esta figura mostra a parte traseira do SG120, incluindo as portas, ventoinhas e fontes de alimentação.
+
+image::../media/sg120_rear_connectors.png[Conectores traseiros SG120]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Legenda | Porta | Tipo | Utilização 
+
+
+ a| 
+1
+ a| 
+Portas de rede 1-4
+ a| 
+10/25-GbE, com base no tipo de transcetor de cabo ou SFP (os módulos SFP28 e SFP mais são suportados), velocidade do switch e velocidade do link configurada
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta de gerenciamento de BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Ligue ao controlador de gestão da placa de base do aparelho.
+
+
+
+ a| 
+3
+ a| 
+Portas de diagnóstico e suporte
+ a| 
+* Mini display port
+* Porta USB 3.0
+* Porta de console micro-USB
+
+ a| 
+Reservado para uso de suporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port 1
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Ligue o dispositivo à rede de administração para StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network port 2
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Opções:
+
+* Vincular com a porta de gerenciamento 1 para uma conexão redundante com a rede de administração para StorageGRID.
+* Deixe desconetado e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, use a porta 2 para configuração IP se os endereços IP atribuídos pelo DHCP não estiverem disponíveis.
+
+
+|===
+
+
+== Conectores SG1200
+
+Esta figura mostra os conectores na parte traseira do SG1200.
+
+image::../media/sg1200_rear_connectors.png[Conectores traseiros SG1200]
+
+[cols="1a,2a,2a,2a"]
+|===
+| Legenda | Porta | Tipo | Utilização 
+
+
+ a| 
+1
+ a| 
+Portas de rede 1-4
+ a| 
+10/25/40/100/200-GbE, dependendo do tipo de cabo ou transceptor, da velocidade do switch e da velocidade de link configurada.
+
+QSFP56 (máx. 200GbE/porta), QSFP28 (máx. 100GbE/porta) e QSFP+ (40GbE) são suportados nativamente (velocidades de 200GbE exigem opção de NIC 200GbE). Transceptores SFP+ (10GbE) ou SFP28 (25GbE) opcionais podem ser usados com um QSA (vendido separadamente).
+ a| 
+Conete-se à rede de grade e à rede de cliente para StorageGRID.
+
+
+
+ a| 
+2
+ a| 
+Porta de gerenciamento de BMC
+ a| 
+1 GbE (RJ-45)
+ a| 
+Ligue ao controlador de gestão da placa de base do aparelho.
+
+
+
+ a| 
+3
+ a| 
+Portas de diagnóstico e suporte
+ a| 
+* Mini display port
+* Porta USB 3.0
+* Porta de console micro-USB
+
+ a| 
+Reservado para uso de suporte técnico.
+
+
+
+ a| 
+4
+ a| 
+Admin Network port 1
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Ligue o dispositivo à rede de administração para StorageGRID.
+
+
+
+ a| 
+5
+ a| 
+Admin Network port 2
+ a| 
+1/10-GbE (RJ-45)
+ a| 
+Opções:
+
+* Vincular com a porta de gerenciamento 1 para uma conexão redundante com a rede de administração para StorageGRID.
+* Deixe desconetado e disponível para acesso local temporário (IP 169.254.0.1).
+* Durante a instalação, use a porta 2 para configuração IP se os endereços IP atribuídos pelo DHCP não estiverem disponíveis.
+
+
+|===
+
+
+== Aplicações SG120 e SG1200
+
+Você pode configurar os appliances de serviços StorageGRID das seguintes maneiras para fornecer serviços de gateway, bem como redundância de alguns serviços de administração do grid.
+
+* Adicionar a uma grade nova ou existente como um nó de gateway
+* Adicione a uma nova grade como um nó de administração primário ou não primário ou a uma grade existente como um nó de administração não primário
+* Opere como um nó de gateway e um nó de administrador (primário ou não primário) ao mesmo tempo
+
+
+O dispositivo facilita o uso de grupos de alta disponibilidade (HA) e balanceamento de carga inteligente para conexões de caminho de dados S3 ou Swift.
+
+Os exemplos a seguir descrevem como você pode maximizar os recursos do dispositivo:
+
+* Utilize dois appliances SG120 ou dois appliances SG1200 para fornecer serviços de gateway, configurando-os como Gateway Nodes.
++
+
+IMPORTANT: A combinação de appliances de serviços com diferentes níveis de desempenho no mesmo site, como um SG110 ou SG120 com um SG1100 ou SG1200, pode causar resultados imprevisíveis e inconsistentes ao usar vários nós em um grupo de alta disponibilidade ou ao balancear a carga do cliente entre vários appliances de serviços
+
+* Utilize dois appliances SG120 ou dois appliances SG1200 para fornecer redundância de alguns serviços de administração do grid. Faça isso configurando cada appliance como Admin Nodes.
+* Utilize dois dispositivos SG120 ou dois dispositivos SG1200 para fornecer serviços de balanceamento de carga e modelagem de tráfego de alta disponibilidade, acessados por meio de um ou mais endereços IP virtuais. Faça isso configurando os dispositivos como qualquer combinação de Nós de Administração ou Nós de Gateway e adicionando ambos os nós ao mesmo grupo de alta disponibilidade.
++
+
+IMPORTANT: Se você usar uma porta exclusiva do nó de administração e nós de gateway no mesmo grupo de alta disponibilidade, a porta exclusiva do nó de administração não será transferida em caso de falha. Consulte as instruções para  https://docs.netapp.com/us-en/storagegrid/admin/configure-high-availability-group.html["Configuração de grupos de HA"^].
+
+
+
+Quando usados com StorageGRID storage appliances, tanto o SG120 quanto o SG1200 services appliances permitem a implantação de grids compostos exclusivamente por appliances, sem dependência de hipervisores externos ou hardware de computação.

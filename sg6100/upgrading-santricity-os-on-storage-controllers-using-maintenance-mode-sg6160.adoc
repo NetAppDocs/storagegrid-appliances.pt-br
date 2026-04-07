@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6160, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
 summary: 'Para controladores de armazenamento que utilizam atualmente o SANtricity os com mais de 08.42.20.00 GB(11,42), tem de utilizar o procedimento de modo de manutenção para aplicar uma atualização.' 
 ---
-= Atualize o SANtricity os no controlador de armazenamento SG6160 usando o modo de manutenção
+= Atualize o sistema operacional SANtricity nos controladores de armazenamento SG6160 usando o modo de manutenção
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 'Para controladores de armazenamento que utilizam atualmente o SANtrici
 
 [role="lead"]
 Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador SG6160.
-
-Para controladores de storage que atualmente usam o SANtricity os com mais de 08.42.20.00 GB (11,42 GB), você deve usar o procedimento de modo de manutenção para aplicar uma atualização.
 
 
 NOTE: Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a link:upgrading-santricity-os-on-storage-controllers-using-grid-manager-sg6160.html["Use o Gerenciador de Grade para aplicar uma atualização"]. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.
@@ -54,7 +52,7 @@ NOTE: Ative os arquivos de atualização imediatamente. Não adiar a ativação.
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-... No Grid Manager, selecione *NODES*.
+... No Gerenciador de Grade, selecione *Nós*.
 ... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

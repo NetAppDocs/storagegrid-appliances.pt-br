@@ -224,14 +224,14 @@ Quando a trava se encaixa no lugar, a parte inferior da trava se encaixa em uma 
 . Vire o controlador para confirmar que a bateria está instalada corretamente.
 +
 
-CAUTION: *Possíveis danos ao hardware* -- a flange metálica na parte frontal da bateria deve ser completamente inserida na ranhura do controlador (como mostrado na primeira figura). Se a bateria não estiver instalada corretamente (como mostrado na segunda figura), a flange metálica pode entrar em Contato com a placa controladora, causando danos.
+CAUTION: *Possível dano ao hardware* -- A aba metálica na parte frontal da bateria deve estar completamente inserida no slot do controlador (como mostrado na primeira figura). Se a bateria não for instalada corretamente (como mostrado na segunda figura), a aba metálica poderá entrar em contato com a placa controladora, causando danos.
 
 +
 ** *Correto -- a flange de metal da bateria é completamente inserida na ranhura do controlador:*
 +
 image::../media/e2800_battery_flange_ok.gif[Flange da bateria conforme]
 
-** *Incorreto -- a flange metálica da bateria não está inserida na ranhura do controlador:*
+** *Incorreto -- A aba metálica da bateria não está inserida no slot do controlador:*
 +
 image::../media/e2800_battery_flange_not_ok.gif[Flange da bateria incorreta]
 
@@ -381,11 +381,11 @@ O aparelho reinicia e regozija-se com a grelha. Este processo pode demorar até 
 
 . Confirme se a reinicialização foi concluída e se o nó retornou à rede:
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 
 . No Gerenciador de sistemas do SANtricity, confirme se o novo controlador é ideal e colete dados de suporte.
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

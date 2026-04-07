@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
 summary: O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem e o dispositivo de destino. 
 ---
-= Nó do dispositivo clone
+= Clonar um nó de dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: O uso da rede de administração de 1 GbE para clonar a transferência de 
 Depois que o utilitário de destino é configurado e validado, na seção Instalação, *Iniciar clonagem* é ativado no nó de origem.
 
 +
-Se existirem problemas que impeçam a clonagem, *Iniciar clonagem* não está ativada e os problemas que você deve resolver são listados como *estado de conexão*. Esses problemas são listados na página inicial do instalador do dispositivo StorageGRID do nó de origem e do dispositivo de destino. Apenas um problema é exibido de cada vez e o estado é atualizado automaticamente à medida que as condições mudam. Resolva todos os problemas de clonagem para ativar *Iniciar clonagem*.
+Se existirem problemas que impeçam a clonagem, *Iniciar Clonagem* não estará habilitado e os problemas que você precisa resolver serão listados como o *Estado da conexão*. Esses problemas são listados na página inicial do StorageGRID Appliance Installer, tanto no nó de origem quanto no appliance de destino. Apenas um problema é exibido por vez e o estado é atualizado automaticamente conforme as condições mudam. Resolva todos os problemas de clonagem para habilitar *Iniciar Clonagem*.
 
 +
 Quando *Iniciar clonagem* está ativada, o *estado atual* indica a rede StorageGRID selecionada para o tráfego de clonagem, juntamente com informações sobre como usar essa conexão de rede. link:considerations-and-requirements-for-appliance-node-cloning.html["Considerações e requisitos para clonagem de nós do dispositivo"]Consulte .

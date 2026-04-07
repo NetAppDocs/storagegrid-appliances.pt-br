@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, sg6060, expansion shelf, expansion, drive, disk, install, installing, installation, add, adding, expand 
 summary: Para aumentar a capacidade de storage, é possível adicionar uma ou duas gavetas de expansão a um SG6060 implantado em sistema StorageGRID. 
 ---
-= Adicione o compartimento de expansão ao SG6060 implantado
+= Adicione um compartimento de expansão a um appliance SG6060 já instalado
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -185,7 +185,7 @@ Quando a reinicialização estiver concluída, a guia *Tarefas* será exibida co
 
 . Verifique o status do nó de storage do dispositivo e dos novos compartimentos de expansão.
 +
-.. No Gerenciador de Grade, selecione *NÓS* e verifique se o nó de armazenamento do dispositivo tem um ícone de marca de seleção verde.
+.. No Grid Manager, selecione *Nodes* e verifique se o Storage Node do appliance possui um ícone de marca de seleção verde.
 +
 O ícone de marca de seleção verde significa que não há alertas ativos e o nó está conetado à grade. Para obter uma descrição dos ícones de nó, https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["Monitorar os estados de conexão do nó"^]consulte .
 

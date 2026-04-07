@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, sg6000, sg6060, sgf6024, expansion shelf, cabinet, rack, drives 
 summary: Para o SG6060 e o SGF6024, você instala os trilhos em seu gabinete ou rack e desliza o compartimento do controlador, todas as gavetas de expansão e o controlador de computação nos trilhos. Para o SG6060, não instale as unidades em cada gaveta até que as gavetas sejam instaladas. 
 ---
-= Instalar no gabinete ou rack (SG6000)
+= Instale o SG6000 em um gabinete ou rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

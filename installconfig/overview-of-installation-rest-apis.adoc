@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installation REST API, REST API, installation REST APIs, REST APIs, Appliance Installer API, Appliance Installer APIs, Install API, Install APIs, Installer API, Installer APIs, Installation API, Installation APIs, api, apis 
 summary: 'O StorageGRID fornece duas APIs REST para executar tarefas de instalação: A API de instalação do StorageGRID e a API do instalador do dispositivo StorageGRID.' 
 ---
-= Visão geral das APIs REST de instalação
+= APIs REST de instalação do StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

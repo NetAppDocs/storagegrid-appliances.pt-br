@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, sg6000-cn, rail, rails 
 summary: Você instala um conjunto de trilhos para o controlador SG6000-CN em seu gabinete ou rack e, em seguida, deslize o controlador para os trilhos. 
 ---
-= Instale o controlador SG6000-CN (SG6060 e SG6024)
+= Instale o controlador SG6000-CN para um SG6060 e SG6024
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

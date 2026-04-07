@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua DIMMs no compartimento do controlador de armazenamento (SG6160)
+= Substitua os DIMMs em um compartimento de controlador de armazenamento SG6160
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ Para substituir um DIMM, você deve verificar o tamanho do cache do controlador,
 ** Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
 ** Acesso ao Gerenciador do sistema SANtricity:
 +
-*** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+*** No Grid Manager, selecione *Nós* > *nó do appliance* > *SANtricity System Manager*. As informações do controlador estão no  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"].
 *** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, sg5712, sg5760, install, cabinet, rack, rails, drives 
 summary: Você instala um conjunto de trilhos em seu gabinete ou rack e, em seguida, desliza o aparelho sobre os trilhos. Se tiver um SG5760, instale as unidades depois de instalar o aparelho. 
 ---
-= Instalar no gabinete ou rack (SG5700)
+= Instale o SG5700 em um gabinete ou rack
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

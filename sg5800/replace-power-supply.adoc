@@ -33,7 +33,7 @@ NOTE: Não misture PSUs dos diferentes tipos de tensão. Sempre substitua como p
 ** Uma pulseira antiestática, ou você tomou outras precauções antiestáticas.
 ** Acesso ao Gerenciador do sistema SANtricity:
 +
-*** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+*** No Grid Manager, selecione *Nós* > *nó do appliance* > *SANtricity System Manager*. As informações do controlador estão no  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"].
 *** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg1000, SG100, power off, turn off, shut off, shutdown, shut down, 
 summary: Desligue o dispositivo de serviços para executar a manutenção de hardware. 
 ---
-= Encerre o SG100 ou o SG1000
+= Desligue o appliance de serviços SG100 ou SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

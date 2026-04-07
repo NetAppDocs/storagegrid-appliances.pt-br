@@ -136,4 +136,4 @@ CAUTION: Se você quiser manter os dados nas unidades, insira as unidades SSD no
 . Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

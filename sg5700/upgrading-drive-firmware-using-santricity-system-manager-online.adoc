@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, upgrade, upgrading, firmware, drive, disk, SANtricity System Manager, SANtricity 
 summary: Você atualiza o firmware da sua unidade para garantir que você tenha todos os recursos mais recentes e correções de bugs. 
 ---
-= Atualize o firmware da unidade SG5700 usando o método on-line do Gerenciador de sistema do SANtricity
+= Atualize o firmware da unidade SG5700 usando o método online do SANtricity System Manager
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ Você deve usar o link:upgrading-drive-firmware-using-santricity-system-manager-
 . Acesse o Gerenciador de sistemas do SANtricity usando um destes métodos:
 +
 ** Use o Instalador de dispositivos StorageGRID e selecione *Avançado* > *Gerenciador de sistemas SANtricity*
-** Use o Gerenciador de Grade e selecione *NÓS* > *_nó de armazenamento_* > *Gerenciador do sistema SANtricity*
+** Utilize o Gerenciador de Grade e selecione *Nós* > *_Nó de Armazenamento_* > *SANtricity System Manager*
 ** Use o Gerenciador do sistema SANtricity navegando até o IP do controlador de armazenamento:
 +
 `*https://_Storage_Controller_IP_*`

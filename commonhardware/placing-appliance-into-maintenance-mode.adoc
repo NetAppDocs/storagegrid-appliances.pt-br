@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, maintenance mode 
 summary: Deve colocar o aparelho no modo de manutenção antes de efetuar procedimentos de manutenção específicos. 
 ---
-= Coloque o aparelho no modo de manutenção
+= Coloque um dispositivo de StorageGRID em modo de manutenção
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,7 +25,7 @@ Em casos raros, colocar um dispositivo StorageGRID no modo de manutenção pode 
 NOTE: A senha da conta de administrador e as chaves de host SSH para um dispositivo StorageGRID no modo de manutenção permanecem as mesmas que eram quando o dispositivo estava em serviço.
 
 .Passos
-. No Gerenciador de Grade, selecione *NÓS*.
+. No Gerenciador de Grade, selecione *Nós*.
 . Na exibição em árvore da página nós, selecione o nó de storage do dispositivo.
 . Selecione *tarefas*.
 . Selecione *modo de manutenção*. É apresentada uma caixa de diálogo de confirmação.
@@ -54,7 +54,7 @@ NOTE: Se você tiver uma conexão direta com a porta de gerenciamento do disposi
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

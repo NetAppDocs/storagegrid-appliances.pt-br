@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, service appliance, services appliance, gateway Node, admin node, reboot, restart 
 summary: Talvez seja necessário reiniciar o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução. Por exemplo, pode ser necessário reiniciar o aparelho se a instalação falhar. 
 ---
-= Reinicie o dispositivo enquanto o Instalador de dispositivos StorageGRID estiver em execução
+= Reinicie um appliance enquanto o StorageGRID Appliance Installer estiver em execução
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

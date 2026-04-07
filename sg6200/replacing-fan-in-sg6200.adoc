@@ -1,0 +1,118 @@
+---
+permalink: sg6200/replacing-fan-in-sg6200.html 
+sidebar: sidebar 
+keywords: storagegrid, sgf6212, sg6200-cn, sg6260, storage appliance, Replacing, replace, fan, remove, removing, removal, install, installing 
+summary: O appliance SGF6212 e o controlador SG6200-CN possuem sete ventiladores de refrigeração. Se um dos ventiladores falhar, você deve substituí-lo o mais rápido possível para garantir que o appliance tenha refrigeração adequada. 
+---
+= Substitua a ventoinha em um SGF6212 ou SG6200-CN (SG6260)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O appliance SGF6212 e o controlador SG6200-CN possuem sete ventiladores de refrigeração. Se um dos ventiladores falhar, você deve substituí-lo o mais rápido possível para garantir que o appliance tenha refrigeração adequada.
+
+.Sobre esta tarefa
+Para evitar interrupções de serviço, confirme se todos os outros nós de armazenamento estão conetados à grade antes de iniciar a substituição do ventilador ou substitua o ventilador durante uma janela de manutenção programada quando os períodos de interrupção de serviço são aceitáveis. Consulte as informações sobre https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^]o .
+
+
+CAUTION: Se você já usou uma regra ILM que cria apenas uma cópia de um objeto, você deve substituir o ventilador durante uma janela de manutenção programada, porque você pode perder temporariamente o acesso a esses objetos durante este procedimento. Consulte informações sobre https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^]o .
+
+O nó do aparelho não estará acessível enquanto substituir a ventoinha.
+
+
+NOTE: Cada uma das duas unidades de fonte de alimentação também contém um ventilador. As ventoinhas da fonte de alimentação não estão incluídas neste procedimento.
+
+.Antes de começar
+* Tem a ventoinha de substituição correta.
+* Você link:verify-component-to-replace.html["determinada a localização da ventoinha a substituir"]tem .
+* Você está link:locating-sg6200-in-data-center.html["localizou fisicamente o dispositivo SGF6212 ou o controlador SG6200-CN"] no local onde está substituindo o ventilador no data center.
++
+
+NOTE: A link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["corte de funcionamento controlado do aparelho"] é necessária antes de remover o dispositivo do rack.
+
+* Você desconectou todos os cabos e link:reinstalling-sg6200-cover.html["a tampa do aparelho foi removida"].
+* Você confirmou que os outros ventiladores estão instalados e funcionando.
+
+
+.Passos
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Localize o ventilador que você precisa substituir.
++
+Os sete ventiladores estão localizados nas seguintes posições no chassi (metade frontal do dispositivo StorageGRID com a tampa superior removida mostrada):
+
++
+image::../media/drw_fan_position_ieops-2614.svg[Posicionamento dos ventiladores no chassi do StorageGRID appliance]
+
++
+|===
+| Posição do chassi | Grupo motoventilador 
+
+
+ a| 
+1
+ a| 
+Fan_SYS0
+
+
+
+ a| 
+2
+ a| 
+Fan_SYS1
+
+
+
+ a| 
+3
+ a| 
+Fan_SYS2
+
+
+
+ a| 
+4
+ a| 
+Fan_SYS3
+
+
+
+ a| 
+5
+ a| 
+Fan_SYS4
+
+
+
+ a| 
+6
+ a| 
+Fan_SYS5
+
+
+
+ a| 
+7
+ a| 
+Fan_SYS6
+
+|===
+. Usando as abas azuis na ventoinha, levante a ventoinha com falha para fora do chassis.
++
+image:../media/drw_s2025_fan_replace_ieops-2552.svg["Removendo uma ventoinha do chassi"]
+
+. Faça deslizar a ventoinha de substituição para a ranhura aberta no chassis.
++
+Alinhe o conector do ventilador com o soquete na placa de circuito.
+
+. Pressione firmemente o conetor da ventoinha na placa de circuito impresso.
+. link:reinstalling-sg6200-cover.html["Volte a colocar a tampa superior no aparelho"], e pressione a trava para baixo para fixar a tampa no lugar.
+. link:power-sg6200-off-on.html["Ligue o aparelho"] e monitorar os LEDs do dispositivo de storage e os códigos de inicialização.
++
+Use a interface BMC para monitorar o status de inicialização.
+
+. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+
+
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

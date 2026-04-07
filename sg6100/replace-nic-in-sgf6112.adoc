@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6100, storage node, storage appliance, Replacing, replace, NIC, network interface card 
 summary: 'Talvez seja necessário substituir uma placa de interface de rede (NIC) no SGF6112 se não estiver funcionando de forma ideal ou se tiver falhado.' 
 ---
-= Substitua a NIC interna no SGF6112 ou SG6100-CN
+= Substitua a placa de rede interna em um SGF6112 ou SG6100-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -174,4 +174,4 @@ image::../media/sgf6112_one-slot-riser_system-pin.png[Pino-guia no conjunto da r
 .Depois de terminar
 Se não tiver outros procedimentos de manutenção a executar no aparelho, volte a instalar a tampa do aparelho, volte a colocar o aparelho no rack, ligue os cabos e ligue a alimentação.
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

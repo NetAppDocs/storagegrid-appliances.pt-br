@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, power off, turn off, shut off, shutdown, shut down, sg6000-cn, controller, power on, turn on, start 
 summary: Pode desligar o controlador SG6000-CN e ligá-lo novamente para efetuar a manutenção. 
 ---
-= Ligue e desligue o controlador SG6000-CN
+= Desligue e ligue o controlador SG6000-CN
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

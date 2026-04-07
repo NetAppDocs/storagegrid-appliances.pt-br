@@ -27,7 +27,7 @@ Identifique o LED
  a| 
 * Azul intermitente: Identifica o aparelho no gabinete ou rack.
 * Azul, sólido: Identifica o aparelho no gabinete ou rack.
-* Desligado: O aparelho não é visualmente identificável no gabinete ou no rack.
+* Desligado: o aparelho não é visualmente identificável no armário ou rack.
 
 
 |===

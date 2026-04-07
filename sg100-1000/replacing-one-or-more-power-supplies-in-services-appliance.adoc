@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, Replacing, replace, power supply, remove, removing, removal, install, installing, installation 
 summary: O dispositivo de serviços tem duas fontes de alimentação para redundância. Se uma das fontes de alimentação falhar, você deve substituí-la o mais rápido possível para garantir que o aparelho tenha alimentação redundante. Ambas as fontes de alimentação que operam no controlador devem ser do mesmo modelo e potência. 
 ---
-= Substitua uma ou ambas as fontes de alimentação no SG100 ou no SG1000
+= Substitua uma ou ambas as fontes de alimentação em um SG100 ou SG1000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,4 +67,4 @@ image::../media/sg6000_cn_insert_power_supply.gif[Fonte de alimentação desliza
 . link:../installconfig/connecting-power-cords-and-applying-power.html["Conete os cabos de energia às unidades substituídas e ligue a energia"].
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

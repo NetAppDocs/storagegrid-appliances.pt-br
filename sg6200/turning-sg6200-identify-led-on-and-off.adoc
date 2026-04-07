@@ -1,0 +1,43 @@
+---
+permalink: sg6200/turning-sg6200-identify-led-on-and-off.html 
+sidebar: sidebar 
+keywords: sgf6212, locate, find, locating, finding, identify, blue led, blue light 
+summary: O LED de identificação azul na parte frontal e traseira do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados. 
+---
+= Ligue e desligue o LED de identificação do dispositivo SGF6212 ou do controlador SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O LED de identificação azul na parte frontal e traseira do aparelho pode ser ligado para ajudar a localizar o aparelho num centro de dados.
+
+.Antes de começar
+Você tem o endereço IP BMC do dispositivo que deseja identificar.
+
+.Passos
+. link:../installconfig/accessing-bmc-interface.html["Acesse a interface do Appliance BMC"].
+. Selecione *identificação do servidor*.
++
+É selecionado o estado atual do LED Identify.
+
+. Selecione *LIGADO*, *DESLIGADO* ou *PISCAR* e, em seguida, selecione *Executar ação*.
++
+Ao selecionar *LIGADO*, os LEDs azuis de identificação acendem na parte frontal e traseira do appliance.
+
++
+image::../media/s25_front_identify_led.png[LED de identificação dianteira - ligado]
+
++
+
+NOTE: Se um painel frontal estiver instalado no controlador, pode ser difícil ver o LED de identificação frontal.
+
++
+O LED de identificação traseiro está localizado no centro do appliance, próximo ao slot Micro-SD.
+
+. Ligue e desligue os LEDs de identificação, conforme necessário.
+
+
+.Informações relacionadas
+link:locating-sg6200-in-data-center.html["Localize o dispositivo no data center"]

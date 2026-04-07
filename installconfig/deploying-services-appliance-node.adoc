@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, sg100, sg1000, service appliance, services appliance, gateway Node, admin node, deploy node, deploying node, node, deploy, deploying, primary, primary admin node, non-primary admin node, non-primary 
 summary: 'Você pode implantar um dispositivo de serviços como nó de administração principal, um nó de administração não primário ou um nó de gateway. Todos os dispositivos de serviços podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.' 
 ---
-= Nó do dispositivo de serviços de implantação
+= Implante um nó de dispositivo de serviços StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sgf6112, Replacing, replace, remove, removing, removal, install, installing, installation 
 summary: Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado. 
 ---
-= Substitua o aparelho SGF6112
+= Substitua o appliance SGF6112
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -214,7 +214,7 @@ WARNING: Para evitar a perda de dados se o Instalador do dispositivo indicar que
 
 
 .Depois de terminar
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.
 
 .Informações relacionadas
 * link:../installconfig/viewing-status-indicators.html["Ver indicadores de estado"]

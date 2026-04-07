@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Antes de substituir uma unidade E4000, reveja os requisitos e considerações. 
 ---
-= Substitua a visão geral da unidade SG5800
+= Requisitos para substituição da unidade SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, install, installing, installation, cabinet, rack, controller, drive shelf, drive shelves, 24-drive, shelf, shelves, rail, rails 
 summary: Você instala um conjunto de trilhos para o compartimento do controlador EF570 em seu gabinete ou rack e, em seguida, desliza o array para os trilhos. 
 ---
-= Instalar gavetas de 24 unidades (SGF6024)
+= Instale os compartimentos de 24 unidades para um SGF6024
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

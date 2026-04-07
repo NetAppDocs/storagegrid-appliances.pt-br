@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage node, storage appliance, raid, raid mode, change, changing, modify, DDP, ddp16, RAID 6 
 summary: Em alguns modelos de dispositivo, você pode mudar para um modo RAID diferente no dispositivo para acomodar seus requisitos de armazenamento e recuperação. Você só pode alterar o modo antes de implantar o nó de storage do dispositivo. 
 ---
-= Opcional: Alterar o modo RAID (SG5760, SG5860, SG6000 e SG6160)
+= Alterar o modo RAID para um SG5760, SG5860, SG6000, SG6160 ou SG6260
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,6 +14,16 @@ summary: Em alguns modelos de dispositivo, você pode mudar para um modo RAID di
 Em alguns modelos de dispositivo, você pode mudar para um modo RAID diferente no dispositivo para acomodar seus requisitos de armazenamento e recuperação. Você só pode alterar o modo antes de implantar o nó de storage do dispositivo.
 
 Se você estiver usando o ConfigBuilder para gerar um arquivo JSON, poderá alterar o modo RAID automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
+
+Você pode alterar o modo RAID nos seguintes dispositivos:
+
+* SG5760
+* SG5860
+* SGF6024
+* SG6060
+* SG6160
+* SG6260
+
 
 .Sobre esta tarefa
 Se for suportado pelo seu dispositivo, pode escolher uma das seguintes opções de configuração de volume:
@@ -25,7 +35,7 @@ NOTE: Os tamanhos de volume não são consistentes em todos os tipos DDP e RAID.
 +
 ** Em comparação com RAID 6, o DDP oferece melhor performance do sistema, tempos de reconstrução reduzidos após falhas de unidade e facilidade de gerenciamento.
 ** Um pool de discos é criado por dispositivo de storage ou compartimento de expansão.
-** O DDP fornece proteção contra perda de gaveta em dispositivos SG5760, SG5860 e SG6160.
+** O DDP oferece proteção contra perda de gavetas nos appliances SG5760, SG5860, SG6160 e SG6260.
 +
 
 NOTE: O DDP não fornece proteção contra perda de gaveta em dispositivos SG6060 por causa dos dois SSDs. A proteção contra perda de gaveta é eficaz em quaisquer prateleiras de expansão que são adicionadas a um SG6060.
@@ -120,6 +130,30 @@ A página inicial do instalador do dispositivo StorageGRID é exibida.
 
 --
 .SG6160
+--
+.Antes de começar
+* Você está usando qualquer cliente que possa se conetar ao StorageGRID.
+* O cliente tem um  https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
+
+
+.Passos
+. Abra um navegador e insira um dos endereços IP do controlador de computação do dispositivo.
++
+`*https://_Controller_IP_:8443*`
+
++
+`_Controller_IP_` É o endereço IP do controlador de computação (não o controlador de storage) em qualquer uma das três redes StorageGRID.
+
++
+A página inicial do instalador do dispositivo StorageGRID é exibida.
+
+. Selecione *Avançado* > *modo RAID*.
+. Na página *Configurar modo RAID*, selecione o modo RAID desejado na lista suspensa modo.
+. Clique em *Salvar*.
+
+
+--
+.SG6260
 --
 .Antes de começar
 * Você está usando qualquer cliente que possa se conetar ao StorageGRID.

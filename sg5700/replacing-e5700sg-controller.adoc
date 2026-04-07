@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg5700, storage node, storage appliance, Replacing, replace, E5700sg, controller, remove, removing, removal, install, installing, installation 
 summary: Talvez seja necessário substituir o controlador E5700SG se ele não estiver funcionando de forma ideal ou se ele tiver falhado. 
 ---
-= Substituir controlador de computação StorageGRID E5700SG
+= Substitua o controlador de computação StorageGRID E5700SG
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -95,7 +95,7 @@ O estado final é `HA`.
 . Depois que o dispositivo se conectar novamente à rede, confirme se o nó de armazenamento do dispositivo aparece no Grid Manager e se nenhum alarme aparece.
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.
 
 .Informações relacionadas
 https://docs.netapp.com/us-en/e-series-family/index.html["Documentação do NetApp e-Series"^]

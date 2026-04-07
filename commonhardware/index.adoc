@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: maintain overview, maintenance overview, about maintain, about maintenance 
 summary: Use estas instruções para manter o seu sistema StorageGRID. 
 ---
-= Procedimentos comuns para manutenção de nós: Visão geral
+= Procedimentos comuns de manutenção para StorageGRID appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -38,10 +38,12 @@ NOTE: Nestas instruções, "'Linux'" refere-se a uma implementação Red Hat Ent
 
 Os procedimentos de manutenção específicos para cada tipo de dispositivo StorageGRID estão nas secções de manutenção do aparelho:
 
+* link:../sg6200/index.html["Manutenção do dispositivo de storage SG6200"]
 * link:../sg6100/index.html["Mantenha o aparelho SG6100"]
 * link:../sg6000/index.html["Mantenha o aparelho SG6000"]
-* link:../sg5800/index.html["Mantenha o aparelho SG5800"]
 * link:../sg5700/index.html["Mantenha o aparelho SG5700"]
-* link:../sg110-1100/index.html["Mantenha os aparelhos SG110 e SG1100"]
+* link:../sg5800/index.html["Mantenha o aparelho SG5800"]
 * link:../sg100-1000/index.html["Mantenha os aparelhos SG100 e SG1000"]
+* link:../sg110-1100/index.html["Mantenha os aparelhos SG110 e SG1100"]
+* link:../sg120-1200/index.html["Manutenção dos appliances SG120 e SG1200"]
 

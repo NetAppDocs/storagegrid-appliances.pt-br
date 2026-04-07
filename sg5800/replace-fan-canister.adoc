@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: E4000 replace canister, replacing E4000 canister, E4000 replace fan, replacing E4000 fan, E4000, E-Series, eseries 
 summary: Rever os tipos e requisitos do recipiente E4000. 
 ---
-= Substitua o recipiente do ventilador em SG5860
+= Substitua o compartimento do ventilador no SG5860
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

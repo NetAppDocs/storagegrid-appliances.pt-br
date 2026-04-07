@@ -1,0 +1,111 @@
+---
+permalink: sg6200/replace-cmos-in-sg6200.html 
+sidebar: sidebar 
+keywords: storagegrid, sg6200, SGF6212, storage node, storage appliance, Replacing, replace, CMOS, battery, sg6260 
+summary: Utilize este procedimento para substituir as baterias tipo moeda CMOS na placa-mãe. 
+---
+= Substitua as baterias CMOS SGF6212 ou SG6200-CN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilize este procedimento para substituir as baterias tipo moeda CMOS na placa-mãe.
+
+.Sobre esta tarefa
+Para evitar interrupções no serviço, confirme se todos os outros nós de storage estão conectados à grid antes de iniciar a substituição da bateria CMOS ou substitua as baterias durante uma janela de manutenção, quando períodos de interrupção do serviço forem aceitáveis. Consulte as informações sobre  https://docs.netapp.com/us-en/storagegrid/monitor/monitoring-system-health.html#monitor-node-connection-states["monitorização dos estados de ligação do nó"^].
+
+
+CAUTION: Se você já utilizou uma regra ILM que cria apenas uma cópia de um objeto, é necessário substituir as baterias durante uma janela de manutenção, pois você poderá perder temporariamente o acesso a esses objetos durante esse procedimento. Consulte informações sobre  https://docs.netapp.com/us-en/storagegrid/ilm/why-you-should-not-use-single-copy-replication.html["por que você não deve usar replicação de cópia única"^].
+
+.Antes de começar
+* Você tem link:verify-component-to-replace.html["Verifiquei o dispositivo de storage onde as baterias CMOS precisam ser substituídas"].
+* Você tem link:locating-sg6200-in-data-center.html["localizou fisicamente o dispositivo SGF6212 ou o controlador SG6200-CN"] onde as baterias CMOS precisam ser substituídas no data center.
+* Você gravou a configuração atual do BMC do dispositivo, se ele permanecer disponível.
++
+.. Inicie sessão no aparelho a substituir:
++
+... Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+... Digite o seguinte comando para mudar para root: `su -`
+... Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
++
+Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
+
+
+
+.. Enter: `*run-host-command ipmitool lan print*` Para apresentar a configuração atual do BMC para o dispositivo.
++
+
+NOTE: A link:power-sg6200-off-on.html#shut-down-the-sgf6212-appliance-or-sg6200-cn-controller["corte de funcionamento controlado do aparelho"] é necessária antes de remover o dispositivo do rack.
+
+
+
+* Você desconectou todos os cabos e link:reinstalling-sg6200-cover.html["a tampa do aparelho foi removida"].
+
+
+.Passos
+. Enrole a extremidade da correia da pulseira ESD à volta do pulso e fixe a extremidade do clipe a um solo metálico para evitar descargas estáticas.
+. Remova a primeira bateria CMOS.
++
+.. Localize a bateria CMOS na placa-mãe.
+.. Use o dedo ou uma ferramenta de alavanca de plástico para pressionar o clipe de retenção afastando-o da bateria para prendê-lo da tomada.
++
+image::../media/drw_s2025_cmos_battery_replace_ieops-2558.svg[Removendo a bateria CMOS da placa-mãe]
+
+.. Retire a bateria e elimine-a corretamente.
+
+
+. Instale a bateria CMOS de substituição.
++
+.. Retire a bateria CMOS de substituição da embalagem.
+.. Pressione a bateria de substituição para o soquete vazio na placa de sistema com o lado positivo para cima até que a bateria encaixe no lugar.
+
+
+. Repita esses passos para a segunda bateria CMOS.
+. Se não tiver outros procedimentos de manutenção a executar no aparelho, volte a instalar a tampa do aparelho, volte a colocar o aparelho no rack, ligue os cabos e ligue a alimentação.
+. Se o dispositivo que você substituiu tivesse a criptografia de unidade ativada para as unidades SED, você deverá link:../installconfig/optional-enabling-node-encryption.html#access-an-encrypted-drive["introduza a frase-passe de encriptação da unidade"]acessar as unidades criptografadas quando o dispositivo de substituição for iniciado pela primeira vez.
+. Se o dispositivo que você substituiu usou um servidor de gerenciamento de chaves (KMS) para gerenciar chaves de criptografia para criptografia de nó, configuração adicional pode ser necessária antes que o nó possa ingressar na grade. Se o nó não se juntar automaticamente à grade, certifique-se de que essas configurações foram transferidas para o novo dispositivo e configure manualmente quaisquer configurações que não tenham a configuração esperada:
++
+** link:../installconfig/accessing-storagegrid-appliance-installer.html["Configurar conexões StorageGRID"]
+** https://docs.netapp.com/us-en/storagegrid/admin/kms-overview-of-kms-and-appliance-configuration.html#set-up-the-appliance["Configure a criptografia de nó para o dispositivo"^]
+
+
+. Inicie sessão no aparelho:
++
+.. Introduza o seguinte comando: `ssh admin@_grid_node_IP_`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+.. Digite o seguinte comando para mudar para root: `su -`
+.. Introduza a palavra-passe listada no `Passwords.txt` ficheiro.
+
+
+. Restaure a conectividade de rede BMC para o dispositivo usando uma das seguintes opções:
++
+** Use IP estático, máscara de rede e gateway
+** Use DHCP para obter um IP, máscara de rede e gateway
++
+... Para restaurar a configuração do BMC para usar um IP estático, máscara de rede e gateway, digite os seguintes comandos:
++
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
+`*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 netmask _Netmask_IP_*`
+
++
+`*run-host-command ipmitool lan set 1 defgw ipaddr _Default_gateway_*`
+
+... Para restaurar a configuração do BMC para usar DHCP para obter um IP, máscara de rede e gateway, digite o seguinte comando:
++
+`*run-host-command ipmitool lan set 1 ipsrc dhcp*`
+
+
+
+
+
+. Depois de restaurar a conetividade de rede BMC, conete-se à interface BMC para auditar e restaurar qualquer configuração personalizada adicional do BMC que você possa ter aplicado. Por exemplo, você deve confirmar as configurações para destinos de intercetação SNMP e notificações por e-mail. link:../installconfig/configuring-bmc-interface.html["Configurar a interface BMC"]Consulte .
+. Confirme se o nó do dispositivo é exibido no Gerenciador de Grade e se nenhum alerta é exibido.
+

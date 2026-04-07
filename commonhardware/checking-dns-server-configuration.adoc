@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: DNS, server, servers, check, checking, change, changing, modify, modifying, modification 
 summary: Você pode verificar e alterar temporariamente os servidores DNS que estão atualmente em uso por este nó de appliance. 
 ---
-= Verifique a configuração do servidor DNS
+= Verifique a configuração do servidor DNS para um dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -52,7 +52,7 @@ NOTE: Quando o nó reinicializa e realegra a grade, ele usa os servidores DNS de
 Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado à rede.  Para confirmar que a reinicialização foi concluída e que o nó retornou à rede:
 
 +
-... No Grid Manager, selecione *NODES*.
+... No Gerenciador de Grade, selecione *Nós*.
 ... Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 
 

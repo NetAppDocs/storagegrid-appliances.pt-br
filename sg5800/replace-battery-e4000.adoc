@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Substitua a bateria no E4000 (SG5800)
+= Substitua a bateria do controlador E4000 em um SG5800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,7 +23,7 @@ Se você pretende substituir uma bateria com falha, você deve ter:
 * Etiquetas para identificar cada cabo que está ligado ao recipiente do controlador.
 * Acesso ao Gerenciador do sistema SANtricity:
 +
-** No Gerenciador de Grade, selecione *NÓS* > *_Appliance node_* > *Gerenciador do sistema SANtricity*. As informações do controlador estão https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"] no .
+** No Grid Manager, selecione *Nós* > *nó do appliance* > *SANtricity System Manager*. As informações do controlador estão no  https://docs.netapp.com/us-en/storagegrid/monitor/viewing-santricity-system-manager-tab.html["Guia Gerenciador do sistema SANtricity"].
 ** Aponte um navegador na sua estação de gerenciamento para o nome de domínio ou endereço IP do controlador.
 
 
@@ -244,7 +244,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 . Confirme se a reinicialização foi concluída e se o nó retornou à rede:
 +
-.. No Grid Manager, selecione *NODES*.
+.. No Gerenciador de Grade, selecione *Nós*.
 .. Verifique se o nó do dispositivo tem um status normal (ícone de marca de seleção verdeimage:../media/icon_alert_green_checkmark.png["marca de verificação verde"] à esquerda do nome do nó), o que indica que nenhum alerta está ativo e o nó está conectado à rede.
 +
 

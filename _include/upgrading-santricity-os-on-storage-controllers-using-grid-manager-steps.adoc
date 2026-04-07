@@ -103,7 +103,7 @@ CAUTION: Não aprove a atualização do SANtricity os para um nó de armazenamen
 
 NOTE: Se a ordem em que os nós são atualizados for importante, aprove nós ou grupos de nós um de cada vez e aguarde até que a atualização seja concluída em cada nó antes de aprovar o próximo nó.
 
-** Selecione um ou mais botões *Approve* para adicionar um ou mais nós à fila de atualização do SANtricity os. O botão *Approve* é desativado se o Status não for nominal.
+** Selecione um ou mais botões *Aprovar* para adicionar um ou mais nós à fila de atualização do SANtricity OS. O botão *Aprovar* fica desabilitado se o Status não for Nominal.
 +
 Depois de selecionar *Approve*, o processo de atualização determina se o nó pode ser atualizado. Se um nó puder ser atualizado, ele será adicionado à fila de atualização.
 
@@ -149,14 +149,14 @@ Não é necessária qualquer outra ação.
 
 
  a| 
-A atualização do SANtricity os não é aplicável a este nó.
+A atualização do sistema operacional SANtricity não se aplica a este nó.
  a| 
 O nó não tem um controlador de storage que pode ser gerenciado pelo sistema StorageGRID. Conclua o processo de atualização sem atualizar o nó exibindo esta mensagem.
 
 
 
  a| 
-O ficheiro SANtricity os não é compatível com este nó.
+O arquivo do sistema operacional SANtricity não é compatível com este nó.
  a| 
 O nó requer um arquivo SANtricity os diferente do que você selecionou. Depois de concluir a atualização atual, baixe o arquivo SANtricity os correto para o nó e repita o processo de atualização.
 

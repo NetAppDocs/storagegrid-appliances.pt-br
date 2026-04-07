@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, clone appliance node, cloning appliance node 
 summary: Antes de clonar um nó do dispositivo, você precisa entender as considerações e os requisitos. 
 ---
-= Considerações e requisitos para clonagem de nós do dispositivo
+= Requisitos para clonagem de nó do dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -65,18 +65,20 @@ NOTE: O uso da rede de administração de 1 GbE para clonar a transferência de 
 
 * Determine se você usará criptografia de nó usando um servidor de gerenciamento de chaves (KMS) no dispositivo de destino, para que você possa habilitar a criptografia de nó durante a instalação inicial do dispositivo de destino antes da clonagem.  Você pode verificar se a criptografia do nó está habilitada no nó do dispositivo de origem, conforme descrito emlink:../installconfig/optional-enabling-node-encryption.html["habilitando a criptografia do nó"] .
 +
-O nó de origem e o dispositivo de destino podem ter configurações de criptografia de nó diferentes, com as seguintes exceções.  A clonagem de nós não é suportada de origens de nós não criptografados para destinos criptografados por nós para os seguintes dispositivos:
+O nó de origem e o dispositivo de destino podem ter configurações de criptografia de nó diferentes, com as seguintes exceções. A clonagem de nó não é suportada de origens com nós não criptografados para destinos com nós criptografados nos seguintes dispositivos:
 
 +
 ** Um dispositivo de nó SGF6112 sem criptografia de nó para um dispositivo SGF6112 com criptografia de nó
 ** Um dispositivo de nó SG1100 sem criptografia de nó para um dispositivo SG1100 com criptografia de nó
+** Um dispositivo de nó SG1200 sem criptografia de nó para um dispositivo SG1200 com criptografia de nó
 ** Um dispositivo de nó SG110 sem criptografia de nó para um dispositivo SG110 com criptografia de nó
+** Um dispositivo de nó SG120 sem criptografia de nó para um dispositivo SG120 com criptografia de nó
 
 
 +
 A descriptografia e a criptografia de dados são realizadas automaticamente durante a transferência de dados e quando o nó de destino é reiniciado e se junta à grade.
 
-* Determine se o modo RAID no dispositivo de destino deve ser alterado de sua configuração padrão, para que você possa especificar essas informações durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode exibir informações sobre o modo RAID atual do nó do dispositivo de origem na página *NÓS* no Gerenciador de Grade. Selecione a guia *hardware* para o aparelho.
+* Determine se o modo RAID no dispositivo de destino deve ser alterado em relação à configuração padrão, para que você possa especificar essa informação durante a instalação inicial do dispositivo de destino antes da clonagem. Você pode visualizar informações sobre o modo RAID atual do nó do dispositivo de origem na página *Nodes* no Grid Manager. Selecione a guia *Hardware* do dispositivo.
 +
 O nó de origem e o dispositivo de destino podem ter configurações RAID diferentes.
 

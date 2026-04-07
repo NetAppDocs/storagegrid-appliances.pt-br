@@ -27,9 +27,13 @@ indexpage:
       url: "../installconfig/hardware-description-sg6000.html"
     - title: SG6100 dispositivos de armazenamento
       url: "../installconfig/hardware-description-sg6100.html"
+    - title: Dispositivos de storage SG6200
+      url: "../installconfig/hardware-description-sg6200.html"
   - title: Saiba mais sobre os equipamentos de serviços
     links:
     - title: Aparelhos de serviços SG100 e SG1000
       url: "../installconfig/hardware-description-sg100-and-1000.html"
     - title: Aparelhos de serviços SG110 e SG1100
       url: "../installconfig/hardware-description-sg110-and-1100.html"
+    - title: Aparelhos de serviços SG120 e SG1200
+      url: "../installconfig/hardware-description-sg120-and-1200.html"

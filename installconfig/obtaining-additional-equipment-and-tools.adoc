@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: equipment to install appliance, tools for installation 
 summary: Antes de instalar um dispositivo StorageGRID, confirme se tem todos os equipamentos e ferramentas adicionais de que necessita. 
 ---
-= Obtenha equipamentos e ferramentas adicionais
+= Obtenha equipamentos e ferramentas adicionais para StorageGRID appliances
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -83,7 +83,7 @@ Cabos óticos e transcetores::
 *** Adaptador QSFP para SFP de 10 GbE (QSA) e SFP
 *** Adaptador QSFP-to-SFP de 25 GbE (QSA) e SFP28
 *** QSFP de 40 GbE
-*** 100-GbE QFSP28
+*** 100-GbE QSFP28
 
 
 
@@ -121,7 +121,46 @@ Cabos óticos e transcetores::
 *** Adaptador QSFP para SFP de 10 GbE (QSA) e SFP
 *** Adaptador QSFP-to-SFP de 25 GbE (QSA) e SFP28
 *** QSFP de 40 GbE
-*** 100-GbE QFSP28
+*** 100-GbE QSFP28
+
+
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+
+
+--
+.SG120 e SG1200
+--
+Você precisará dos seguintes equipamentos adicionais para instalar e configurar o hardware SG120 e SG1200.
+
+Cabos óticos e transcetores::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 4 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SG120:
++
+*** SFP de 10 GbE
+*** 25-GbE SFP28
+
+
+** SG1200:
++
+*** Adaptador QSFP para SFP de 10 GbE (QSA) e SFP
+*** Adaptador QSFP-to-SFP de 25 GbE (QSA) e SFP28
+*** QSFP de 40 GbE
+*** 100-GbE QSFP28
+*** QSFP56 de 200-GbE (apenas 200-GbE NIC)
 
 
 
@@ -211,6 +250,36 @@ Cabos e transcetores::
 ** SFP de 10 GbE
 ** 25-GbE SFP28
 ** 100-GbE QSFP28
+
+
+
+
+--
+Cabos Ethernet:: RJ-45 (Cat5/Cat5e/Cat6/Cat6a)
+Ferramentas opcionais:: Elevador mecanizado para prateleiras de 60 unidades
+
+
+--
+.SG6200
+--
+Você precisa do seguinte equipamento adicional para instalar e configurar o hardware SG6100.
+
+Cabos e transcetores::
++
+--
+* Cabos, 1 a 4 de:
++
+** Twinax/cobre
+** Fibra/ótica
+
+
+* Transcetores/adaptadores, de 1 a 8 de cada, com base na velocidade do link (velocidades mistas não são suportadas):
++
+** SFP de 10 GbE
+** 25-GbE SFP28
+** QSFP de 40 GbE
+** 100-GbE QSFP28
+** QSFP56 de 200 GbE (somente NIC de 200 GbE)
 
 
 

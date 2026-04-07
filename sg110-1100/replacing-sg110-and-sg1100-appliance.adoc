@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg110, sg1100, Replacing, replace, remove, removing, removal, install, installing, installation 
 summary: Pode ser necessário substituir o aparelho se não estiver a funcionar de forma ideal ou se tiver falhado. 
 ---
-= Substitua os aparelhos SG110 ou SG110
+= Substitua o appliance SG110 ou SG1100
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -145,4 +145,4 @@ WARNING: Para evitar a perda de dados se o Instalador do dispositivo indicar que
 * link:../installconfig/troubleshooting-hardware-installation-sg110-and-sg1100.html#view-error-codes["Veja os códigos de inicialização do aparelho"]
 
 
-Após a substituição da peça, devolva a peça com falha à NetApp, conforme descrito nas instruções de RMA fornecidas com o kit. Consulte a https://mysupport.netapp.com/site/info/rma["Substituição  Devolução artigo"^] página para obter mais informações.
+Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrito nas instruções de RMA que acompanham o kit. Consulte a  https://mysupport.netapp.com/site/info/rma["Devolução e substituição de peças"^] página para obter mais informações.

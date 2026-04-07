@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: appliance installer, installer, access, accessing, start, starting 
 summary: 'Você deve acessar o Instalador do StorageGRID Appliance para verificar a versão do instalador e configurar as conexões entre o appliance e as três redes StorageGRID: A rede de Grade, a rede Admin (opcional) e a rede cliente (opcional).' 
 ---
-= Acesse o Instalador de dispositivos StorageGRID
+= Acesse o instalador do dispositivo StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,6 +13,9 @@ summary: 'Você deve acessar o Instalador do StorageGRID Appliance para verifica
 [role="lead"]
 Você deve acessar o Instalador do StorageGRID Appliance para verificar a versão do instalador e configurar as conexões entre o appliance e as três redes StorageGRID: A rede de grade, a rede de administração (opcional) e a rede de cliente (opcional).
 
+.Sobre esta tarefa
+Para acessar inicialmente o Instalador de dispositivos StorageGRID, você pode usar o endereço IP atribuído por DHCP para a porta de rede Admin no utilitário de serviços ou no controlador de dispositivo de armazenamento (supondo que ele esteja conetado à rede Admin) ou conetar um laptop de serviço diretamente ao controlador de dispositivo de serviços ou dispositivo de armazenamento.
+
 .Antes de começar
 * Você está usando qualquer cliente de gerenciamento que possa se conetar à rede de administração do StorageGRID ou tem um laptop de serviço.
 * O cliente ou laptop de serviço tem um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
@@ -20,9 +23,6 @@ Você deve acessar o Instalador do StorageGRID Appliance para verificar a versã
 * Você conhece o endereço IP, o gateway e a sub-rede do dispositivo de serviços ou do controlador do dispositivo de armazenamento nessas redes.
 * Configurou os comutadores de rede que pretende utilizar.
 
-
-.Sobre esta tarefa
-Para acessar inicialmente o Instalador de dispositivos StorageGRID, você pode usar o endereço IP atribuído por DHCP para a porta de rede Admin no utilitário de serviços ou no controlador de dispositivo de armazenamento (supondo que ele esteja conetado à rede Admin) ou conetar um laptop de serviço diretamente ao controlador de dispositivo de serviços ou dispositivo de armazenamento.
 
 .Passos
 . Se possível, use o endereço DHCP para a porta Admin Network no utilitário de serviços ou no controlador do dispositivo de armazenamento. A porta Admin Network (rede de administração) é realçada na figura a seguir. (Use o endereço IP na rede de grade se a rede de administração não estiver conetada.)
@@ -39,6 +39,11 @@ image::../media/sg100_admin_network_port.png[Porta de rede Admin no SG100]
 image::../media/sg6100_admin_network_port.png[Porta de rede Admin no SG110]
 
 --
+.SG120
+--
+image::../media/sg120_admin_network_port.png[Porta de rede administrativa no SG120]
+
+--
 .SG1000
 --
 image::../media/sg1000_admin_network_port.png[Porta de rede Admin no SG1000]
@@ -47,6 +52,11 @@ image::../media/sg1000_admin_network_port.png[Porta de rede Admin no SG1000]
 .SG1100
 --
 image::../media/sg1100_admin_network_port.png[Porta de rede Admin no SG1100]
+
+--
+.SG1200
+--
+image::../media/sg1200_admin_network_port.png[Porta de rede administrativa no SG1200]
 
 --
 .E5700SG
@@ -89,9 +99,19 @@ image::../media/sg6000_cn_admin_network_port.png[Porta de rede Admin no controla
 image::../media/sg6100_cn_admin_network_port.png[Porta de rede Admin no controlador SG6000-CN]
 
 --
+.SG6200-CN
+--
+image::../media/sg6200_cn_admin_network_port.png[Porta de rede administrativa no controlador SG6200-CN]
+
+--
 .SGF6112
 --
 image::../media/sg6100_admin_network_port.png[Porta de rede Admin no SGF6112]
+
+--
+.SGF6212
+--
+image::../media/sgf6212_admin_network_port.png[Porta de rede administrativa no SGF6212]
 
 --
 ====
@@ -129,6 +149,13 @@ Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do apare
 image::../media/sg6100_link_local_port.png[SG110 ligação local]
 
 --
+.SG120
+--
+Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do aparelho, usando um cabo Ethernet.
+
+image::../media/sg120_link_local_port.png[Conexão link-local SG120]
+
+--
 .SG1000
 --
 Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do dispositivo de serviços, usando um cabo Ethernet.
@@ -141,6 +168,13 @@ image::../media/sg1000_link_local_port.png[SG1000 ligação local]
 Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do aparelho, usando um cabo Ethernet.
 
 image::../media/sg1100_link_local_port.png[SG1100 ligação local]
+
+--
+.SG1200
+--
+Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do aparelho, usando um cabo Ethernet.
+
+image::../media/sg1200_link_local_port.png[Conexão link-local SG1200]
 
 --
 .E5700SG
@@ -171,11 +205,25 @@ Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do contr
 image::../media/sg6100_cn_link_local_port.png[Localização do porto de gestão para SG6100-CN]
 
 --
+.SG6200-CN
+--
+Conecte um laptop de serviço diretamente à porta RJ-45 mais à direita no controlador SG6200-CN, usando um cabo Ethernet.
+
+image::../media/sg6200_cn_link_local_port.png[Localização da porta de gerenciamento para SG6200-CN]
+
+--
 .SGF6112
 --
 Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do aparelho, usando um cabo Ethernet.
 
 image::../media/sg6100_link_local_port.png[SGF6112 ligação local]
+
+--
+.SGF6212
+--
+Conete um laptop de serviço diretamente à porta RJ-45 mais à direita do aparelho, usando um cabo Ethernet.
+
+image::../media/sgf6212_link_local_port.png[Conexão Link-Local SGF6212]
 
 --
 ====

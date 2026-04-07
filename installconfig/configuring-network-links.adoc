@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: links, network links, configure, setup, set up, grid network connections, grid network connection, link speed, bond mode 
 summary: Você pode configurar links de rede para as portas usadas para conetar o dispositivo à rede de Grade, à rede de cliente e à rede de administração. Você pode definir a velocidade do link, bem como os modos de ligação de porta e rede. 
 ---
-= Configurar ligações de rede
+= Configure os links de rede para um dispositivo de storage StorageGRID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -40,10 +40,12 @@ NOTE: As alterações na taxa de PDU do LACP feitas seguindo essas instruções 
 
 * link:gathering-installation-information-sg100-and-sg1000.html#port-bond-modes["Modos de ligação de porta (SG1000 e SG100)"]
 * link:gathering-installation-information-sg110-and-sg1100.html#port-bond-modes["Modos de ligação de porta (SG1100 e SG110)"]
+* link:gathering-installation-information-sg120-and-sg1200.html#port-bond-modes["Modos de ligação de portas (SG1200 e SG120)"]
 * link:gathering-installation-information-sg5700.html#port-bond-modes["Modos de ligação de porta (E5700SG)"]
 * link:gathering-installation-information-sg5800.html#port-bond-modes["Modos de ligação de porta (SG5800)"]
 * link:gathering-installation-information-sg6000.html#port-bond-modes["Modos de ligação de porta (SG6000-CN)"]
 * link:gathering-installation-information-sg6100.html#port-bond-modes["Modos de ligação portuária (SGF6112 e SG6100-CN)"]
+* link:gathering-installation-information-sg6200.html#port-bond-modes["Modos de ligação de portas (SGF6212 e SG6200-CN)"]
 
 
 [role="tabbed-block"]
@@ -313,6 +315,141 @@ image::../media/sg1100_bonded_management_ports.png[Portas de rede Admin ligadas 
 SG110:
 
 image::../media/sgf6112_bonded_management_ports.png[Portas de rede Admin ligadas SG110]
+
+--
+
+
+--
+.SG120 e SG1200
+--
+Modo de ligação de porta fixa (predefinição)::
++
+--
+As figuras mostram como as quatro portas de rede do SG120 e do SG1200 são agregadas no modo de agregação de portas fixas (configuração padrão).
+
+SG120:
+
+image::../media/sg120_fixed_port.png[Modo de ligação de porta fixa SG120]
+
+SG1200:
+
+image::../media/sg1200_fixed_port.png[Modo de ligação de porta fixa SG1200]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+C
+ a| 
+As portas 1 e 3 são Unidas para a rede do cliente, se esta rede for utilizada.
+
+
+
+ a| 
+G
+ a| 
+As portas 2 e 4 são Unidas para a rede de Grade.
+
+|===
+A tabela resume as opções de configuração das quatro portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
+
+
+ a| 
+Ative-Backup (padrão)
+ a| 
+* As portas 2 e 4 usam uma ligação de backup ativo para a rede de Grade.
+* As portas 1 e 3 não são usadas.
+* Uma etiqueta VLAN é opcional.
+
+ a| 
+* As portas 2 e 4 usam uma ligação de backup ativo para a rede de Grade.
+* As portas 1 e 3 usam uma ligação de backup ativo para a rede do cliente.
+* Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+
+
+
+
+ a| 
+Bola de Futsal (802,3ad)
+ a| 
+* As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
+* As portas 1 e 3 não são usadas.
+* Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
+
+ a| 
+* As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
+* As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
+* Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
+
+
+|===
+--
+Modo de ligação de porta agregada::
++
+--
+Estas figuras mostram como as quatro portas de rede são ligadas no modo de ligação de porta agregada.
+
+SG120:
+
+image::../media/sg120_aggregate_ports.png[Modo de ligação de porta agregada SG120]
+
+SG1200:
+
+image::../media/sg1200_aggregate_ports.png[SG1200 Aggregate Port Bond Mode]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+1
+ a| 
+Todas as quatro portas são agrupadas em uma única ligação LACP, permitindo que todas as portas sejam usadas para o tráfego de rede de Grade e rede de Cliente.
+
+|===
+A tabela resume as opções de configuração das portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
+
+
+ a| 
+Apenas LACP (802,3ad)
+ a| 
+* As portas 1-4 usam uma única ligação LACP para a rede de Grade.
+* Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
+
+ a| 
+* As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
+* Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
+
+
+|===
+--
+Modo de ligação de rede ative-Backup para portas de gestão::
++
+--
+Essas figuras mostram como as duas portas de gerenciamento de 1 GbE nos dispositivos são ligadas no modo de ligação de rede do ative-Backup para a rede de administração.
+
+SG120:
+
+image::../media/sg120_bonded_management_ports.png[Portas de rede administrativas agregadas SG120]
+
+SG1200:
+
+image::../media/sg1200_bonded_management_ports.png[Portas de rede administrativas agregadas SG1200]
 
 --
 
@@ -796,6 +933,141 @@ image::../media/sg6100_cn_bonded_management_ports.png[Portas de rede Admin ligad
 
 
 --
+.SG6200
+--
+Modo de ligação de porta fixa (predefinição)::
++
+--
+A figura mostra como as quatro portas de rede são ligadas no modo de ligação de porta fixa (configuração padrão).
+
+*SGF6212*:
+
+image::../media/sgf6212_fixed_port.png[Modo de ligação de porta fixa SGF6212]
+
+*SG6200-CN*:
+
+image::../media/sg6200_cn_fixed_port.png[Modo de ligação de porta fixa SG6200-CN]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+C
+ a| 
+As portas 1 e 3 são Unidas para a rede do cliente, se esta rede for utilizada.
+
+
+
+ a| 
+G
+ a| 
+As portas 2 e 4 são Unidas para a rede de Grade.
+
+|===
+A tabela resume as opções de configuração das portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
+
+
+ a| 
+Ative-Backup (padrão)
+ a| 
+* As portas 2 e 4 usam uma ligação de backup ativo para a rede de Grade.
+* As portas 1 e 3 não são usadas.
+* Uma etiqueta VLAN é opcional.
+
+ a| 
+* As portas 2 e 4 usam uma ligação de backup ativo para a rede de Grade.
+* As portas 1 e 3 usam uma ligação de backup ativo para a rede do cliente.
+* Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+
+
+
+
+ a| 
+Bola de Futsal (802,3ad)
+ a| 
+* As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
+* As portas 1 e 3 não são usadas.
+* Uma etiqueta VLAN é opcional.
+* A taxa de PDU do LACP e os valores da política de hash de transmissão do LACP podem ser especificados na seção Rede de grade.
+
+ a| 
+* As portas 2 e 4 usam uma ligação LACP para a rede de Grade.
+* As portas 1 e 3 usam uma ligação LACP para a rede de clientes.
+* Tags VLAN podem ser especificadas para ambas as redes para a conveniência do administrador de rede.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados nas seções Rede de grade e Rede de cliente.
+
+
+|===
+--
+Modo de ligação de porta agregada::
++
+--
+A figura mostra como as quatro portas de rede são ligadas no modo de ligação de porta agregada.
+
+*SGF6212*:
+
+image::../media/sgf6212_aggregate_ports.png[Modo de ligação de porta agregada SGF6212]
+
+*SG6200*:
+
+image::../media/sg6200_cn_aggregate_ports.png[Modo de ligação de porta agregada SG6200-CN]
+
+[cols="1a,3a"]
+|===
+| Legenda | Quais portas estão coladas 
+
+
+ a| 
+1
+ a| 
+Todas as quatro portas são agrupadas em uma única ligação LACP, permitindo que todas as portas sejam usadas para o tráfego de rede de Grade e rede de Cliente.
+
+|===
+A tabela resume as opções de configuração das portas de rede. Só é necessário configurar as definições na página Configuração de ligação se pretender utilizar uma definição não predefinida.
+
+[cols="1a,2a,2a"]
+|===
+| Modo de ligação de rede | Rede do cliente desabilitada | Rede do cliente habilitada (padrão) 
+
+
+ a| 
+Apenas LACP (802,3ad)
+ a| 
+* As portas 1-4 usam uma única ligação LACP para a rede de Grade.
+* Uma única etiqueta VLAN identifica pacotes de rede de Grade.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
+
+ a| 
+* As portas 1-4 usam uma única ligação LACP para a rede de Grade e a rede do Cliente.
+* Duas etiquetas VLAN permitem que os pacotes de rede de Grade sejam segregados dos pacotes de rede de Cliente.
+* Os valores da taxa de PDU do LACP e da política de hash de transmissão do LACP podem ser especificados na seção Configurações do link.
+
+
+|===
+--
+Modo de ligação de rede ative-Backup para portas de gestão::
++
+--
+Esta figura mostra como as duas portas de gerenciamento de 1 GbE são ligadas no modo de ligação de rede do ative-Backup para a rede Admin.
+
+*SGF6212*:
+
+image::../media/sgf6212_bonded_management_ports.png[Portas de rede administrativas agregadas SGF6212]
+
+*SG6200*:
+
+image::../media/sg6200_cn_bonded_management_ports.png[Portas de rede administrativas agregadas SG6200-CN]
+
+--
+
+
+--
 ====
 .Passos
 . Na barra de menus do Instalador de dispositivos StorageGRID, clique em *Configurar rede* > *Configuração de ligação*.
@@ -827,12 +1099,12 @@ NOTE: Para o SG5800, o estado do link para a porta 1 não está disponível no s
 Os switches de rede que você está usando para a rede de Grade e a rede do cliente também devem suportar e ser configurados para essa velocidade. Você deve usar os adaptadores ou transcetores apropriados para a velocidade de link configurada. Utilize a velocidade de ligação automática quando possível, porque esta opção negocia tanto a velocidade de ligação como o modo de correção de erro de avanço (FEC) com o parceiro de ligação.
 
 +
-Se você planeja usar a velocidade de link de 25 GbE para as portas de rede SG6100, SG6000, SG5800 ou SG5700:
+Se você planeja usar a velocidade de link de 25 GbE para as portas de rede SG6200, SG6100, SG6000, SG5800 ou SG5700:
 
 +
 ** Use transcetores SFP28 e cabos Twinax SFP28 ou cabos óticos.
 ** Para o SG5700, selecione *25GbE* na lista suspensa *Link Speed*.
-** Para o SG5800, SG6000 ou SG6100, selecione *Auto* na lista suspensa *Link Speed*.
+** Para os modelos SG5800, SG6000, SG6100 ou SG6200, selecione *Auto* na lista suspensa *Link speed*.
 
 
 . Ative ou desative as redes StorageGRID que pretende utilizar.

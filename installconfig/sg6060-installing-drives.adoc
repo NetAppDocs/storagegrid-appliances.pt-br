@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storagegrid, sg6000, storage node, storage appliance, drives, drive, disk, disks, install, installing, installation 
 summary: Depois de instalar o compartimento de 60 unidades em um gabinete ou rack, instale todas as unidades 60 na gaveta. O envio para o compartimento de controladora E2860 inclui duas unidades SSD, que devem ser instaladas na gaveta superior do compartimento de controladora. Cada compartimento de expansão opcional inclui 60 unidades HDD e nenhuma unidade SSD. 
 ---
-= Instalar unidades (SG6060)
+= Instale as unidades nos compartimentos de unidades SG6060
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
