@@ -82,7 +82,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de controlo de
 
 
 
-== [[poweron]]Ligue o controlador SG6000-CN e verifique a operação
+== Ligue o controlador SG6000-CN e verifique a operação
 
 Ligue o controlador após concluir a manutenção.
 

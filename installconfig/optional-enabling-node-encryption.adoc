@@ -29,7 +29,7 @@ Se você ativar a criptografia de nó, os discos do seu dispositivo podem ser pr
 
 Se você estiver usando o ConfigBuilder para gerar um arquivo JSON, você poderá habilitar a criptografia de nó automaticamente. link:automating-appliance-installation-and-configuration.html["Automatize a instalação e a configuração do dispositivo"]Consulte .
 
-Além disso, quando você habilita o modo FIPS após habilitar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografar dados em repouso. Consulte https://review.docs.netapp.com/us-en/storagegrid_storagegrid-120-dev/admin/manage-tls-ssh-policy.html#select-a-security-policy["Selecione uma política de segurança"^] para maiores informações.
+Além disso, ao ativar o modo FIPS após ativar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografia de dados em repouso. Consulte  https://docs.netapp.com/us-en/storagegrid/admin/manage-tls-ssh-policy.html#select-a-security-policy["Selecione uma política de segurança"^] para mais informações.
 
 .Antes de começar
 Reveja as informações https://docs.netapp.com/us-en/storagegrid/admin/kms-configuring.html["Configurando o KMS"^] sobre o .
