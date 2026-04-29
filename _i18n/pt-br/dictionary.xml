@@ -6570,4 +6570,5 @@
   <block id="2ba40bc143304c6482f4d84aed967cc7" category="sidebar">Controlador SG6200-CN (SG6260)</block>
   <block id="966b0abd256df531996f5779b0267572" category="sidebar">Controlador E4000 (SG6260)</block>
   <block id="7a6eea70e2a063993169b9f20b674a54" category="paragraph">Além disso, ao ativar o modo FIPS após ativar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografia de dados em repouso. Consulte <block ref="fb536484ccdd3f2f62bef4c60558bb81" category="inline-link-rx"></block> para mais informações.</block>
+  <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Ligue o controlador SG6000-CN e verifique o funcionamento</block>
 </blocks>
