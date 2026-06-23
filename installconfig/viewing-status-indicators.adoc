@@ -330,6 +330,7 @@ Estado/avaria da transmissão
  a| 
 * Azul (sólido): A unidade está online
 * Âmbar (sólido): Falha da unidade
+* Âmbar (intermitente): Luz de localização da unidade acesa
 * Desligado: A ranhura está vazia
 
 
@@ -1302,6 +1303,7 @@ Estado/avaria da transmissão
  a| 
 * Azul (sólido): A unidade está online
 * Âmbar (sólido): Falha da unidade
+* Âmbar (intermitente): Luz de localização da unidade acesa
 * Desligado: A ranhura está vazia
 
 
