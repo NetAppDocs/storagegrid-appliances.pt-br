@@ -4,6 +4,7 @@
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Passo 4: Mova a bateria para o novo controlador
 
 Remova a bateria do controlador com falha e instale-a no controlador de substituição.

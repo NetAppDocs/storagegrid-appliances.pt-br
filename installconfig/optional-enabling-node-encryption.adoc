@@ -23,6 +23,7 @@ Consulte https://docs.netapp.com/us-en/storagegrid/admin/reviewing-storagegrid-e
 
 
 
+[[enable-node-encryption]]
 == Habilite a criptografia do nó
 
 Se você ativar a criptografia de nó, os discos do seu dispositivo podem ser protegidos pela criptografia de servidor de gerenciamento de chaves (KMS) seguro contra perda física ou remoção do site. Você deve selecionar e ativar a criptografia de nó durante a instalação do dispositivo. Não é possível desativar a criptografia de nó após o início do processo de criptografia KMS.
@@ -88,6 +89,7 @@ Você pode exibir o status da criptografia do nó, os detalhes do KMS e os certi
 
 
 
+[[drive-encryption]]
 == Criptografia de unidade
 
 A criptografia de unidade é gerenciada no hardware da unidade com autocriptografia (SED) durante os processos de gravação e leitura. O acesso aos dados nessas unidades é controlado por uma senha definida pelo usuário.
@@ -118,6 +120,7 @@ CAUTION: Certifique-se de que armazena a frase-passe de encriptação da unidade
 
 
 
+[[enable-drive-encryption]]
 === Ativar a encriptação da unidade
 
 . Acesse o Instalador de dispositivos StorageGRID.
@@ -156,6 +159,7 @@ Salve a senha e a senha exibem o texto em um local seguro, como um aplicativo de
 
 
 
+[[view-drive-encryption-status]]
 === Ver o estado da encriptação da unidade
 
 . link:../commonhardware/placing-appliance-into-maintenance-mode.html["Coloque o aparelho no modo de manutenção"].
@@ -164,6 +168,7 @@ Salve a senha e a senha exibem o texto em um local seguro, como um aplicativo de
 
 
 
+[[access-an-encrypted-drive]]
 === Acesse um disco criptografado
 
 Você deve inserir a senha para acessar uma unidade criptografada após a substituição do nó de computação ou depois que uma unidade for movida para um novo nó de computação.
@@ -196,6 +201,7 @@ Os banners de aviso deixarão de ser apresentados quando as unidades forem desbl
 
 
 
+[[change-the-drive-encryption-passphrase]]
 === Altere a frase-passe de encriptação da unidade
 
 . Acesse o Instalador de dispositivos StorageGRID.
@@ -227,6 +233,7 @@ CAUTION: Depois de definir uma nova senha, as unidades criptografadas não podem
 
 
 
+[[disable-drive-encryption]]
 === Desativar a encriptação da unidade
 
 . Acesse o Instalador de dispositivos StorageGRID.

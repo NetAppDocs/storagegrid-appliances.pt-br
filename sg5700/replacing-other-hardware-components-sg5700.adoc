@@ -25,6 +25,7 @@ Para substituir uma unidade, um recipiente da ventoinha de alimentação, um rec
 
 
 
+[[sg5712-component-replacement-instructions]]
 == SG5712 instruções de substituição de componentes
 
 [cols="1a,3a"]
@@ -47,6 +48,7 @@ link:https://docs.netapp.com/us-en/e-series/maintenance-e2800/canisters-fan-supe
 |===
 
 
+[[sg5760-component-replacement-instructions]]
 == SG5760 instruções de substituição de componentes
 
 [cols="1a,3a"]

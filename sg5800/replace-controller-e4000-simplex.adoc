@@ -44,6 +44,7 @@ O nó de storage do dispositivo não estará acessível quando você substituir 
 
 
 
+[[step-1-prepare-to-replace-controller]]
 == Passo 1: Prepare-se para substituir o controlador
 
 Prepare-se para substituir um recipiente de controlador salvando a chave de segurança da unidade, fazendo backup da configuração e coletando dados de suporte. Em seguida, você pode parar as operações de e/S do host e desligar o compartimento de controladora.
@@ -105,6 +106,7 @@ O arquivo é salvo na pasta Downloads do seu navegador com o nome *support-data.
 
 
 
+[[step-2-place-the-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
 Coloque o controlador offline e confirme que todas as operações estão concluídas.
@@ -127,6 +129,7 @@ O LED verde Cache ative na parte de trás do controlador fica aceso quando os da
 
 
 
+[[step-3-remove-e4000-controller-canister]]
 == Etapa 3: Remova o recipiente do controlador E4000
 
 Retire um recipiente do controlador E4000.
@@ -146,6 +149,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 
 
 
+[[step-4-determine-parts-to-transfer-to-replacement-controller]]
 == Passo 4: Determine as peças a transferir para o controlador de substituição
 
 O controlador de substituição pode vir com peças pré-instaladas. Determine quais peças devem ser transferidas para o recipiente do controlador de substituição.
@@ -162,6 +166,8 @@ O controlador de substituição pode vir com peças pré-instaladas. Determine q
 
 
 
+[[step-5-remove-the-battery]]
+[[step5_remove_battery]]
 == Passo 5: Retire a bateria
 
 Removida a bateria do controlador desativado e instale-a no controlador de substituição.
@@ -200,6 +206,8 @@ image::../media/legend_icon_02.png[Referência de legenda 2]
 
 
 
+[[step-6-move-the-dimms]]
+[[step6_remove_dimm]]
 == Passo 6: Mova os DIMMs
 
 Remova os DIMMs do recipiente do controlador danificado e instale-os no recipiente do controlador de substituição.
@@ -257,6 +265,8 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-7-install-the-battery]]
+[[step7_install_battery]]
 == Passo 7: Instale a bateria
 
 Instale a bateria no recipiente do controlador de substituição.
@@ -273,6 +283,8 @@ Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
 
 
+[[step-8-replace-controller]]
+[[step8_replace_controller]]
 == Passo 8: Substitua o controlador
 
 Instale o controlador de substituição e verifique se o nó voltou a unir a grade.

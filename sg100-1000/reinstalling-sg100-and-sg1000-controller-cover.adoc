@@ -15,6 +15,7 @@ Retire a tampa do aparelho para aceder aos componentes internos para manutençã
 
 
 
+[[remove-sg100-or-sg1000-appliance-cover]]
 == Retire a tampa do aparelho SG100 ou SG1000
 
 Retire a tampa do aparelho para aceder aos componentes internos para manutenção.
@@ -40,6 +41,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sg100-or-sg1000-appliance-cover]]
 == Volte a instalar a tampa do aparelho SG100 ou SG1000
 
 Volte a instalar a tampa do aparelho quando a manutenção interna do hardware estiver concluída.

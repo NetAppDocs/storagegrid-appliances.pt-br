@@ -18,6 +18,7 @@ TIP: O clone do nó está desabilitado para nós de gateway.  Para substituir um
 
 
 
+[[hardware-requirements-for-the-replacement-appliance]]
 == Requisitos de hardware para o dispositivo de substituição
 
 Certifique-se de que o aparelho de substituição cumpre os seguintes critérios:
@@ -50,6 +51,7 @@ Entre em Contato com seu representante de vendas da StorageGRID para obter ajuda
 
 
 
+[[prepare-to-clone-an-appliance-node]]
 == Prepare-se para clonar um nó de dispositivo
 
 Você precisa ter as seguintes informações antes de clonar um nó de dispositivo:
@@ -58,6 +60,7 @@ Você precisa ter as seguintes informações antes de clonar um nó de dispositi
 +
 Os endereços IP temporários estão normalmente na mesma sub-rede que o dispositivo de nó de origem que está sendo clonado e não são necessários após a conclusão da clonagem. Os dispositivos de origem e destino devem se conectar ao nó de administrador principal do StorageGRID para estabelecer uma conexão de clonagem.
 
+* Se você estiver habilitando o DHCP em alguma porta do nó de destino que tenha sido configurada como estática no nó de origem, certifique-se de que não haja concessões DHCP permanentes para nenhum dos endereços MAC do nó de origem. Se não fizer isso, poderá ocorrer um conflito de endereço IP ao final do processo de clonagem.
 * Determinar qual rede usar para clonar o tráfego de transferência de dados que forneça a melhor performance de transferência de dados sem prejudicar a performance da rede StorageGRID ou a disponibilidade de dados.
 +
 

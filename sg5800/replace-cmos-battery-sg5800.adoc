@@ -18,6 +18,7 @@ Você não poderá acessar o nó de armazenamento do appliance ao substituir a b
 
 
 
+[[step-1-shut-down-the-sg5800-controller]]
 == Etapa 1: desligue o controlador SG5800
 
 .Passos
@@ -40,6 +41,7 @@ Quando você estiver conetado como root, o prompt mudará de `$` para `#`.
 
 
 
+[[step-2-remove-the-controller-from-the-appliance]]
 == Passo 2: remova o controlador do aparelho
 
 .Passos
@@ -64,6 +66,7 @@ image::../media/drw_sg5800_open_controller_module_cover_IEOPS-695.svg[Abra a tam
 
 
 
+[[step-3-replace-the-cmos-battery]]
 == Passo 3: substituir a bateria CMOS
 
 .Passos
@@ -89,6 +92,7 @@ NOTE: Observe a polaridade da bateria ao removê-la do suporte. A bateria é mar
 
 
 
+[[step-4-reinstall-the-controller-into-the-appliance]]
 == Passo 4: reinstale o controlador no aparelho
 
 .Passos

@@ -15,6 +15,7 @@ Pode desligar o controlador SG6000-CN e ligá-lo novamente para efetuar a manute
 
 
 
+[[shut-down-sg6000-cn-controller]]
 == Desligue o controlador SG6000-CN
 
 Desligue o controlador SG6000-CN para efetuar a manutenção do hardware.
@@ -82,6 +83,7 @@ image::../media/bmc_power_control_page_controller_off.png[Página de controlo de
 
 
 
+[[poweronpower-on-sg6000-cn-controller-and-verify-operation]]
 == [[poweron]]Ligue o controlador SG6000-CN e verifique o funcionamento
 
 Ligue o controlador após concluir a manutenção.

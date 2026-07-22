@@ -15,6 +15,8 @@ Retire o SGF6112 ou SG6100-CN de um gabinete ou rack para acessar a tampa superi
 
 
 
+[[remove-sgf6112-or-sg6100-cn-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Remova SGF6112 ou SG6100-CN do gabinete ou rack
 
 .Antes de começar
@@ -50,6 +52,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sgf6112-or-sg6100-cn-into-cabinet-or-rack]]
 == Reinstale SGF6112 ou SG6100-CN no gabinete ou rack
 
 .Antes de começar

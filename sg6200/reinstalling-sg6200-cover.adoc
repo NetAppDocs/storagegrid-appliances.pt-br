@@ -15,6 +15,7 @@ Retire a tampa do aparelho para aceder aos componentes internos para manutençã
 
 
 
+[[step-1-remove-cover]]
 == Passo 1: Remova a tampa
 
 .Passos
@@ -31,6 +32,7 @@ image:../media/drw_s2025_cover_replace_ieops-2559.svg["Destravando e removendo a
 
 
 
+[[step-2-reinstall-cover]]
 == Passo 2: reinstale a tampa
 
 .Passos

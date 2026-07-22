@@ -15,6 +15,7 @@ Antes de substituir uma unidade em um SG5812 ou SG5860, revise os requisitos e c
 
 
 
+[[drive-handling]]
 == Condução
 
 As unidades do seu aparelho são frágeis. O manuseio inadequado da unidade é uma das principais causas de falha da unidade.

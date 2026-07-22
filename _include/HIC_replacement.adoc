@@ -4,6 +4,7 @@
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Passo 5: Mova o HIC para o novo controlador, se necessário
 
 Se o controlador com falha incluir uma placa de interface do host (HIC), mova o HIC do controlador com falha para o controlador de substituição.

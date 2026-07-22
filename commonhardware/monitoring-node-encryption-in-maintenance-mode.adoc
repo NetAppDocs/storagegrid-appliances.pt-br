@@ -2,7 +2,7 @@
 permalink: commonhardware/monitoring-node-encryption-in-maintenance-mode.html 
 sidebar: sidebar 
 keywords: kms, key management server, monitor, monitoring, status, encryption 
-summary: 'Se você ativou a criptografia de nó para o dispositivo durante a instalação, você pode monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).' 
+summary: 'Se você ativou a criptografia de nó para o dispositivo durante a instalação, poderá monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).' 
 ---
 = Monitorar a criptografia de nó para um dispositivo de StorageGRID em modo de manutenção
 :allow-uri-read: 
@@ -59,6 +59,7 @@ Pode levar até 20 minutos para que o aparelho seja reinicializado e reconectado
 
 
 
+[[clear-key-management-server-configuration]]
 == Limpar a configuração do servidor de gerenciamento de chaves
 
 Limpar a configuração do servidor de gerenciamento de chaves (KMS) desativa a criptografia de nó no seu dispositivo. Depois de limpar a configuração do KMS, os dados do seu aparelho são excluídos permanentemente e não são mais acessíveis. Estes dados não são recuperáveis.

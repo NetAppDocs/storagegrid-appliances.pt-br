@@ -15,6 +15,7 @@ Remova o controlador SG6000-CN de um gabinete ou rack para acessar a tampa super
 
 
 
+[[remove-sg6000-cn-controller-from-cabinet-or-rack]]
 == Remova o controlador SG6000-CN do gabinete ou rack
 
 Remova o controlador SG6000-CN de um gabinete ou rack para acessar a tampa superior ou mover o controlador para um local diferente.
@@ -55,6 +56,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sg6000-cn-controller-into-cabinet-or-rack]]
 == Reinstale o controlador SG6000-CN no gabinete ou rack
 
 Reinstale o controlador em um gabinete ou rack quando a manutenção do hardware estiver concluída.

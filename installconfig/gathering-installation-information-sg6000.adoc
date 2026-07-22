@@ -18,6 +18,7 @@ TIP: Em vez de usar as tabelas, use a pasta de trabalho fornecida com o ConfigBu
 
 
 
+[[information-needed-to-connect-to-santricity-system-manager-on-storage-controllers]]
 == Informações necessárias para se conectar ao Gerenciador de sistema do SANtricity em controladores de storage
 
 Você conecta ambos os controladores de storage no dispositivo (controladores da série E2800 ou controladores EF570) à rede de gerenciamento usada no Gerenciador de sistema do SANtricity. Os controladores estão localizados em cada dispositivo da seguinte forma:
@@ -122,6 +123,7 @@ Deve ser:
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-admin-network]]
 == Informações necessárias para conetar o controlador SG6000-CN à rede de administração
 
 A rede de administração para StorageGRID é uma rede opcional, usada para administração e manutenção do sistema. O dispositivo se coneta à rede Admin usando as seguintes portas de gerenciamento de 1 GbE no controlador SG6000-CN.
@@ -204,6 +206,7 @@ Sub-redes de rede Admin (CIDR)
 |===
 
 
+[[information-needed-to-connect-and-configure-1025-gbe-ports-on-sg6000-cn-controller]]
 == Informações necessárias para conetar e configurar portas 10/25-GbE no controlador SG6000-CN
 
 As quatro portas 10/25-GbE no controlador SG6000-CN conetam-se à rede de Grade StorageGRID e à rede de Cliente opcional.
@@ -261,6 +264,7 @@ Porta do switch para a porta 4 (rede de grade para modo fixo)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-grid-network]]
 == Informações necessárias para conetar o controlador SG6000-CN à rede de Grade
 
 A rede de Grade para StorageGRID é uma rede necessária, usada para todo o tráfego interno de StorageGRID. O dispositivo se coneta à rede de Grade usando as portas 10/25-GbE no controlador SG6000-CN.
@@ -326,6 +330,7 @@ Sub-redes de rede de rede (CIDR)
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-client-network]]
 == Informações necessárias para conetar o controlador SG6000-CN à rede do cliente
 
 A rede de cliente para StorageGRID é uma rede opcional, normalmente usada para fornecer acesso de protocolo de cliente à grade. O dispositivo se coneta à rede do cliente usando as portas 10/25-GbE no controlador SG6000-CN.
@@ -396,6 +401,7 @@ Endereço IP estático que pretende utilizar para o nó de armazenamento do disp
 |===
 
 
+[[information-needed-to-connect-sg6000-cn-controller-to-bmc-management-network]]
 == Informações necessárias para conetar o controlador SG6000-CN à rede de gerenciamento BMC
 
 Você pode acessar a interface BMC no controlador SG6000-CN usando a seguinte porta de gerenciamento de 1 GbE. Esta porta suporta a gestão remota do hardware do controlador através de Ethernet, utilizando a norma IPMI (Intelligent Platform Management Interface).
@@ -435,12 +441,14 @@ Endereço IP estático que pretende utilizar para a porta de gestão BMC
 |===
 
 
+[[port-bond-modes]]
 == Modos de ligação de porta
 
 Quando link:configuring-network-links.html["configurando links de rede"] para o controlador SG6000-CN, você pode usar a ligação de porta para as portas 10/25-GbE que se conetam à rede de Grade e à rede de cliente opcional, e as portas de gerenciamento de 1-GbE que se conetam à rede de administração opcional. A ligação de portas ajuda a proteger os seus dados fornecendo caminhos redundantes entre as redes StorageGRID e o dispositivo.
 
 
 
+[[network-bond-modes-for-1025-gbe-ports]]
 === Modos de ligação de rede para portas de 10/25 GbE
 
 As portas de rede 10/25-GbE no controlador SG6000-CN suportam o modo de ligação de porta fixa ou modo de ligação de porta agregada para as conexões de rede de Grade e rede de cliente.
@@ -516,6 +524,7 @@ NOTE: Se você optar por usar menos de quatro portas, esteja ciente de que um ou
 
 
 
+[[network-bond-modes-for-1-gbe-management-ports]]
 === Modos de ligação de rede para portas de gerenciamento de 1 GbE
 
 Para as duas portas de gerenciamento de 1 GbE no controlador SG6000-CN, você pode escolher o modo de ligação de rede independente ou o modo de ligação de rede ative-Backup para se conetar à rede Admin opcional.

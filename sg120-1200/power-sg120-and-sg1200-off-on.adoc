@@ -15,6 +15,7 @@ Você pode desligar o appliance SG120 ou SG1200 e ligá-lo novamente para realiz
 
 
 
+[[shut-down-the-sg120-or-sg1200-appliance]]
 == Desligue o appliance SG120 ou SG1200
 
 Desligue o aparelho para efetuar a manutenção do hardware.
@@ -60,6 +61,7 @@ Esse comando pode levar até 10 minutos para ser concluído.
 
 
 
+[[power-on-sg120-or-sg1200-and-verify-operation]]
 == Ligue o SG120 ou SG1200 e verifique o funcionamento
 
 Ligue o controlador após concluir a manutenção.

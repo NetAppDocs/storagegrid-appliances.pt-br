@@ -83,6 +83,9 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 +
 ... Para restaurar a configuração do BMC para usar um IP estático, máscara de rede e gateway, digite os seguintes comandos:
 +
+`*run-host-command ipmitool lan set 1 ipsrc static*`
+
++
 `*run-host-command ipmitool lan set 1 ipaddr _Appliance_IP_*`
 
 +

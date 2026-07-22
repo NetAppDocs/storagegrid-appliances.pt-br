@@ -17,6 +17,7 @@ Opcionalmente, é possível adicionar gavetas de expansão de 60 unidades a ambo
 
 
 
+[[sg6060-and-sg6060x-components]]
 == Componentes SG6060 e SG6060X
 
 Os aparelhos SG6060 e SG6060X incluem os seguintes componentes:
@@ -64,12 +65,14 @@ O compartimento e-Series DE460C é um compartimento de 4U TB que inclui:
 
 
 
+[[sg6060-and-sg6060x-diagrams]]
 == Diagramas SG6060D e SG6060XD.
 
 As frentes dos anos SG6060 e SG6060X são idênticas.
 
 
 
+[[sg6060-or-sg6060x-front-view]]
 === Vista frontal SG6060 ou SG6060X
 
 Esta figura mostra a frente do SG6060 ou SG6060X, que inclui uma controladora de computação de 1U TB e uma gaveta de 4U TB que contém duas controladoras de storage e 60 unidades em cinco gavetas de unidades.
@@ -143,6 +146,7 @@ Identifique o LED
 |===
 
 
+[[sg6060-rear-view]]
 === Vista traseira de SG6060 mm
 
 Essa figura mostra a parte traseira do SG6060, incluindo controladores de computação e storage, ventiladores e fontes de alimentação.
@@ -190,6 +194,7 @@ Fonte de alimentação (1 de 2) para o compartimento do controlador E2860
 |===
 
 
+[[sg6060x-rear-view]]
 === Vista traseira de SG6060X mm
 
 Esta figura mostra a parte de trás do SG6060X.
@@ -237,6 +242,7 @@ Fonte de alimentação (1 de 2) para o compartimento do controlador E2860
 |===
 
 
+[[expansion-shelf]]
 === Compartimento de expansão
 
 Esta figura mostra a parte traseira do compartimento de expansão opcional para o SG6060 e SG6060X, incluindo os módulos de entrada/saída (IOMs), ventiladores e fontes de alimentação. Cada SG6060 pode ser instalado com uma ou duas prateleiras de expansão, que podem ser incluídas na instalação inicial ou adicionadas posteriormente.
@@ -270,12 +276,14 @@ Fonte de alimentação (1 de 2) para o compartimento de expansão
 |===
 
 
+[[sg6000-controllers]]
 == SG6000 controladoras
 
 Cada modelo do dispositivo StorageGRID SG6000 inclui um controlador de computação SG6000-CN em um compartimento 1U e controladores de storage duplex e-Series em um compartimento 2U ou 4U, dependendo do modelo. Reveja os diagramas para saber mais sobre cada tipo de controlador.
 
 
 
+[[sg6000-cn-compute-controller]]
 === Controlador de computação SG6000-CN
 
 * Fornece recursos de computação para o dispositivo.
@@ -374,6 +382,7 @@ Opções:
 |===
 
 
+[[sgf6024-ef570-storage-controllers]]
 === SGF6024: EF570 controladoras de storage
 
 * Duas controladoras para suporte a failover.
@@ -447,6 +456,7 @@ Ethernet de 1 GB (RJ-45)
 |===
 
 
+[[sg6060-and-sg6060x-e2800-storage-controllers]]
 === SG6060 e SG6060X: E2800 controladoras de storage
 
 * Duas controladoras para suporte a failover.
@@ -632,6 +642,7 @@ Conete as portas às portas de expansão da unidade nas IOMs no compartimento de
 |===
 
 
+[[sg6060-and-sg6060x-ioms-for-optional-expansion-shelves]]
 === SG6060 e SG6060X: IOMs para compartimentos de expansão opcionais
 
 O compartimento de expansão contém dois módulos de entrada/saída (IOMs) que se conectam aos controladores de storage ou a outros compartimentos de expansão.

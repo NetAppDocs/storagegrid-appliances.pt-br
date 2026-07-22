@@ -16,6 +16,7 @@ CAUTION: Enrole a extremidade da correia de uma pulseira ESD à volta do pulso e
 
 
 
+[[reinstall-cover]]
 == Reinstale a tampa
 
 .Antes de começar

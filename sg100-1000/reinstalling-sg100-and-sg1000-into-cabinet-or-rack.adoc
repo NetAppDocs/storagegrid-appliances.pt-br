@@ -15,6 +15,7 @@ Retire o aparelho SG100 ou SG1000 de um gabinete ou rack para acessar a tampa su
 
 
 
+[[remove-sg100-or-sg1000-from-cabinet-or-rack]]
 == Remova SG100 ou SG1000 do gabinete ou rack
 
 Retire o SG100 ou o SG1000 de um armário ou rack para aceder à tampa superior ou para mover o aparelho para um local diferente.
@@ -55,6 +56,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sg100-or-sg1000-into-cabinet-or-rack]]
 == Reinstale SG100 ou SG1000 no gabinete ou rack
 
 Reinstale o aparelho em um gabinete ou rack quando a manutenção do hardware estiver concluída.

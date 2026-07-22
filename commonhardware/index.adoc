@@ -15,6 +15,7 @@ Use estas instruções para manter o seu sistema StorageGRID.
 
 
 
+[[about-these-instructions]]
 == Sobre estas instruções
 
 Essas instruções descrevem procedimentos comuns a todos os nós, como aplicar um hotfix de software, recuperar nós de grade, recuperar um site com falha, desativar nós de grade ou um site inteiro, executar manutenção de rede, executar procedimentos de manutenção de nível de host e middleware e executar procedimentos de nó de grade.
@@ -24,6 +25,7 @@ NOTE: Nestas instruções, "'Linux'" refere-se a uma implementação Red Hat Ent
 
 
 
+[[before-you-begin]]
 == Antes de começar
 
 * Você tem uma ampla compreensão do sistema StorageGRID.
@@ -34,6 +36,7 @@ NOTE: Nestas instruções, "'Linux'" refere-se a uma implementação Red Hat Ent
 
 
 
+[[maintenance-procedures-for-appliances]]
 == Procedimentos de manutenção para aparelhos
 
 Os procedimentos de manutenção específicos para cada tipo de dispositivo StorageGRID estão nas secções de manutenção do aparelho:

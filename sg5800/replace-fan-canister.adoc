@@ -32,6 +32,7 @@ CAUTION: *Possíveis danos ao equipamento* -- se você executar este procediment
 
 
 
+[[step-1-prepare-to-replace-fan-canister]]
 == Passo 1: Prepare-se para substituir o recipiente do ventilador
 
 Prepare-se para substituir um recipiente de ventilador coletando dados de suporte sobre sua matriz de armazenamento e localizando o componente com falha.
@@ -77,6 +78,7 @@ Tem de substituir o recipiente da ventoinha que tem o respetivo LED de atenção
 
 
 
+[[step-2-remove-failed-fan-canister-and-install-new-one]]
 == Passo 2: Remova o recipiente do ventilador com falha e instale um novo
 
 Remova um recipiente do ventilador com falha para que você possa substituí-lo por um novo.
@@ -96,6 +98,7 @@ Guarde todo o material de embalagem para utilização quando devolver o ventilad
 
 
 
+[[step-3-complete-fan-canister-replacement]]
 == Passo 3: Substituição completa do recipiente do ventilador
 
 Confirme se o novo recipiente da ventoinha está a funcionar corretamente, recolha dados de suporte e retome as operações normais.

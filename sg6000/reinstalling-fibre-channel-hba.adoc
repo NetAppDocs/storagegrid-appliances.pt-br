@@ -15,6 +15,7 @@ Talvez seja necessário substituir um HBA Fibre Channel se ele não estiver func
 
 
 
+[[verify-fibre-channel-hba-to-replace]]
 == Verifique o HBA Fibre Channel para substituir
 
 Se não tiver a certeza de qual adaptador de barramento de host (HBA) Fibre Channel deve ser substituído, execute este procedimento para identificá-lo.
@@ -52,6 +53,7 @@ Pode utilizar este endereço IP para link:turning-controller-identify-led-on-and
 
 
 
+[[remove-fibre-channel-hba]]
 == Remova o HBA Fibre Channel
 
 Talvez seja necessário substituir o adaptador de barramento de host (HBA) Fibre Channel no controlador SG6000-CN se ele não estiver funcionando de forma ideal ou se tiver falhado.
@@ -100,6 +102,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-fibre-channel-hba]]
 == Reinstale o HBA Fibre Channel
 
 O HBA Fibre Channel de substituição é instalado no mesmo local que o que foi removido.

@@ -34,10 +34,47 @@ As três placas de rede (NICs) do dispositivo estão em três conjuntos de cabos
 +
 image:../media/drw_s2025_io_numbers_ieops-2554.svg["Localização das placas de rede no dispositivo"]
 
++
+[cols="1a,3a,5a"]
+|===
+|  | Nome do dispositivo ou da peça | Descrição 
+
+
+ a| 
+1
+ a| 
+NIC 1 no conjunto riser de um slot
+ a| 
+Portas de rede Ethernet 10/25-GbE para as redes Grid e de clientes
+
+
+
+ a| 
+2
+ a| 
+NIC 2 no conjunto riser de um slot
+ a| 
+Portas de rede Ethernet 1/10-GbE para Admin Network
+
+
+
+ a| 
+3
+ a| 
+NIC 3 no conjunto riser de um slot
+ a| 
+Portas de rede Ethernet 10/25-GbE para as redes Grid e de clientes
+
+|===
++
+
+NOTE: Alguns appliances suportam portas de rede de alta velocidade e podem ter NICs de alta velocidade instaladas.
 
 
 
 
+
+[[step-1-remove-the-nic]]
 == Passo 1: Remova a NIC
 
 [role="tabbed-block"]
@@ -82,6 +119,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Removendo uma placa de 
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Etapa 2: reinstale a placa de rede interna
 
 Instale a NIC de substituição no mesmo local que a que foi removida.

@@ -34,6 +34,7 @@ Enquanto executa esta tarefa, o outro recipiente de alimentação fornece alimen
 
 
 
+[[step-1-prepare-to-replace-power-canister]]
 == Passo 1: Prepare-se para substituir o recipiente de alimentação
 
 Prepare-se para substituir um recipiente de energia em um compartimento de controladora de 60 unidades ou compartimento de unidades.
@@ -80,6 +81,7 @@ Tem de substituir o recipiente de alimentação que tem o respetivo LED de aten�
 
 
 
+[[step-2-remove-failed-power-canister]]
 == Passo 2: Remova o recipiente de alimentação com falha
 
 Remova um recipiente de alimentação com falha para que você possa substituí-lo por um novo.
@@ -102,6 +104,7 @@ CAUTION: Ao remover um recipiente de alimentação, utilize sempre duas mãos pa
 
 
 
+[[step-3-install-new-power-canister]]
 == Passo 3: Instale o novo recipiente de alimentação
 
 Instale um novo depósito de alimentação para substituir o que falhou.
@@ -120,6 +123,7 @@ CAUTION: Não utilize força excessiva ao deslizar o recipiente de alimentação
 
 
 
+[[step-4-complete-power-canister-replacement]]
 == Passo 4: Substituição completa do recipiente de alimentação
 
 Confirme se o novo depósito de alimentação está a funcionar corretamente, recolha dados de suporte e retome as operações normais.

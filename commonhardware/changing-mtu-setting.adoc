@@ -26,6 +26,7 @@ Se a rede cliente ou administrador não tiver sido configurada no Instalador de 
 
 
 
+[[change-the-mtu-setting-using-the-change-ip-tool]]
 == Altere a configuração MTU usando a ferramenta alterar IP
 
 .Antes de começar
@@ -36,6 +37,7 @@ Acesse a ferramenta alterar IP e atualize as configurações de MTU conforme des
 
 
 
+[[change-the-mtu-setting-using-maintenance-mode]]
 == Altere a definição MTU utilizando o modo de manutenção
 
 Altere a configuração MTU usando o modo de manutenção se você não conseguir acessar essas configurações usando a ferramenta alterar IP.

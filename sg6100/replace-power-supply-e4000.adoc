@@ -43,6 +43,7 @@ NOTE: Não misture PSUs dos diferentes tipos de tensão. Sempre substitua como p
 
 
 
+[[step-1-prepare-to-replace-power-supply]]
 == Passo 1: Prepare-se para substituir a fonte de alimentação
 
 Prepare-se para substituir uma fonte de alimentação em um compartimento de unidades ou gaveta de controladora de 12 ou 24 unidades.
@@ -88,6 +89,7 @@ Tem de substituir a fonte de alimentação que tem o respetivo LED de atenção 
 
 
 
+[[step-2-remove-failed-power-supply]]
 == Etapa 2: Remova a fonte de alimentação com falha
 
 Remova uma fonte de alimentação com falha para que você possa substituí-la por uma nova.
@@ -114,6 +116,7 @@ CAUTION: Ao remover uma fonte de alimentação, utilize sempre duas mãos para s
 
 
 
+[[step-3-install-new-power-supply]]
 == Passo 3: Instale a nova fonte de alimentação
 
 Instale uma nova fonte de alimentação para substituir a que falhou.
@@ -140,6 +143,7 @@ CAUTION: Não utilize força excessiva ao deslizar a fonte de alimentação para
 
 
 
+[[step-4-complete-power-supply-replacement]]
 == Passo 4: Substituição completa da fonte de alimentação
 
 Confirme se a nova fonte de alimentação está funcionando corretamente, colete dados de suporte e retome as operações normais.

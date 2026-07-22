@@ -2,7 +2,7 @@
 permalink: sg6200/upgrading-santricity-os-on-storage-controllers-using-maintenance-mode-sg6260.html 
 sidebar: sidebar 
 keywords: storagegrid, sg6260, storage node, storage appliance, controller, storage controller, upgrade, upgrading, SANtricity OS, SANtricity, maintenance mode 
-summary: 'Para controladores de armazenamento que utilizam atualmente o SANtricity os com mais de 08.42.20.00 GB(11,42), tem de utilizar o procedimento de modo de manutenção para aplicar uma atualização.' 
+summary: 'Para controladores de storage que atualmente usam o SANtricity os com mais de 08.42.20.00 GB (11,42 GB), você deve usar o procedimento de modo de manutenção para aplicar uma atualização.' 
 ---
 = Atualize o sistema operacional SANtricity no controlador de armazenamento SG6260 usando o modo de manutenção
 :allow-uri-read: 

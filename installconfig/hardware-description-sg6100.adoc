@@ -45,10 +45,12 @@ O SG6160 fornece os seguintes recursos de proteção de dados:
 
 
 
+[[sg6100-hardware-components]]
 == SG6100 componentes de hardware
 
 
 
+[[sgf6112-appliance]]
 === SGF6112 aparelho
 
 O aparelho SGF6112 inclui os seguintes componentes:
@@ -70,6 +72,7 @@ Plataforma de computação e storage:: Um servidor de unidade de um rack (1UU) q
 
 
 
+[[sg6160-appliance]]
 === SG6160 aparelho
 
 O aparelho SG6160 inclui os seguintes componentes:
@@ -114,10 +117,12 @@ O compartimento e-Series DE460C é um compartimento de 4U TB que inclui:
 
 
 
+[[sgf6112-and-sg6160-diagrams]]
 == Diagramas SGF6112D e SG6160D.
 
 
 
+[[sgf6112-front-view]]
 === Vista dianteira SGF6112D.
 
 Esta figura mostra a parte frontal do SGF6112 sem a moldura. O dispositivo inclui uma plataforma de computação e storage 1U que contém 12 unidades SSD.
@@ -126,6 +131,7 @@ image::../media/sgf6112_front_with_ssds.png[SGF6112 Vista frontal]
 
 
 
+[[sgf6112-rear-view]]
 === Vista traseira de SGF6112 mm
 
 Esta figura mostra a parte de trás do SGF6112, incluindo as portas, os ventiladores e as fontes de alimentação.
@@ -235,6 +241,7 @@ Identifique o LED
 |===
 
 
+[[sg6160-front-view]]
 === Vista dianteira SG6160D.
 
 Esta figura mostra a parte frontal do SG6160, que inclui uma controladora de computação de 1U TB e uma gaveta de 4U TB contendo duas controladoras de storage e 60 unidades em cinco gavetas de unidades.
@@ -261,6 +268,7 @@ Compartimento do controlador E4000 com painel frontal removido (o compartimento 
 |===
 
 
+[[sg6160-rear-view]]
 === Vista traseira de SG6160 mm
 
 Essa figura mostra a parte traseira do SG6160, incluindo controladores de computação e storage, ventiladores e fontes de alimentação.
@@ -308,10 +316,12 @@ Fonte de alimentação (1 de 2) para o compartimento do controlador E4000
 |===
 
 
+[[sg6100-controllers]]
 == SG6100 controladoras
 
 
 
+[[sg6100-cn-compute-controller]]
 === Controlador de computação SG6100-CN
 
 * Fornece recursos de computação para o dispositivo.
@@ -444,6 +454,7 @@ Identifique o LED
 |===
 
 
+[[sg6160-e4000-storage-controller]]
 === SG6160: Controlador de armazenamento E4000
 
 * Duas controladoras para suporte a failover.
@@ -519,6 +530,7 @@ Existem quatro ligações ao controlador SG6100-CN (duas de cada E4000).
 |===
 
 
+[[sg6160-ioms-for-optional-expansion-shelves]]
 === SG6160: IOMs para compartimentos de expansão opcionais
 
 O compartimento de expansão contém dois módulos de entrada/saída (IOMs) que se conectam aos controladores de storage ou a outros compartimentos de expansão.

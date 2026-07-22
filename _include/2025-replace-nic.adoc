@@ -4,6 +4,7 @@
 
 
 
+[[step-1-remove-the-nic]]
 == Passo 1: Remova a NIC
 
 [role="tabbed-block"]
@@ -48,6 +49,7 @@ image:../media/drw_s2025_IO_card_replace_ieops-2557.svg["Removendo uma placa de 
 ====
 
 
+[[step-2-reinstall-the-internal-nic]]
 == Etapa 2: reinstale a placa de rede interna
 
 Instale a NIC de substituição no mesmo local que a que foi removida.

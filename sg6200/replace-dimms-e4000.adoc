@@ -35,6 +35,7 @@ Para substituir um DIMM, você deve verificar o tamanho do cache do controlador,
 
 
 
+[[step-1-determine-if-you-need-to-replace-a-dimm]]
 == Etapa 1: Determine se você precisa substituir um DIMM
 
 Verifique o tamanho do cache do controlador antes de substituir os DIMMS.
@@ -52,6 +53,7 @@ Verifique o tamanho do cache do controlador antes de substituir os DIMMS.
 
 
 
+[[step-2-place-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
 Coloque o controlador offline para que possa remover e substituir os DIMMs com segurança.
@@ -98,6 +100,7 @@ NOTE: Não inicie quaisquer outras operações até que o estado tenha sido atua
 
 
 
+[[step-3-remove-controller-canister]]
 == Etapa 3: Remova o recipiente do controlador
 
 Retire o recipiente do controlador do sistema e, em seguida, retire a tampa do recipiente do controlador.
@@ -119,6 +122,7 @@ image::../media/drw_E4000_open_controller_module_cover_IEOPS-870.png[Abra a tamp
 
 
 
+[[step-4-replace-the-dimms]]
 == Etapa 4: Substitua os DIMMs
 
 Localize o DIMM dentro do controlador, remova-o e substitua-o.
@@ -190,6 +194,7 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-5-reinstall-the-controller-canister]]
 == Etapa 5: Reinstale o recipiente do controlador
 
 Volte a instalar o recipiente do controlador no chassis.
@@ -223,6 +228,7 @@ O controlador começa a arrancar assim que estiver sentado no chassis.
 
 
 
+[[step-6-complete-dimms-replacement]]
 == Etapa 6: Substituição completa de DIMMs
 
 Coloque o controlador on-line, colete dados de suporte e retome as operações.

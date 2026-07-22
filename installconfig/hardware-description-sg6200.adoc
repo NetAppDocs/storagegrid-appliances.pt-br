@@ -17,10 +17,12 @@ O appliance StorageGRID SG6260 inclui um controlador de computação com dois SS
 
 
 
+[[appliance-features]]
 == Caraterísticas do aparelho
 
 
 
+[[general-features]]
 === Características gerais
 
 Os aparelhos SGF6212 e SG6260 oferecem os seguintes recursos:
@@ -32,6 +34,7 @@ Os aparelhos SGF6212 e SG6260 oferecem os seguintes recursos:
 
 
 
+[[data-protection-features]]
 === Recursos de proteção de dados
 
 O SGF6212 oferece os seguintes recursos de proteção de dados:
@@ -57,10 +60,12 @@ O SG6260 oferece os seguintes recursos de proteção de dados:
 
 
 
+[[sg6200-hardware-components]]
 == Componentes de hardware SG6200
 
 
 
+[[sgf6212-appliance]]
 === Appliance SGF6212
 
 O appliance SGF6212 inclui os seguintes componentes:
@@ -68,8 +73,9 @@ O appliance SGF6212 inclui os seguintes componentes:
 Plataforma de computação e storage:: Um servidor de unidade de um rack (1UU) que inclui:
 +
 --
+* Um processador AMD de 3,55 GHz fornecendo 32 núcleos (64 threads)
 * 256 GB DE RAM
-* Unidade de inicialização interna de 240 GB (inclui o software StorageGRID)
+* Unidade de inicialização interna de 256 GB (inclui o software StorageGRID)
 * 2 portas Gbase-T de 1/10 mm
 * 4 × portas Ethernet 10/25/40/100GbE para tráfego de rede Grid/cliente (ou 4 × 200GbE com placa de rede 200GbE opcional)
 * 12 SSDs NVMe para storage
@@ -82,6 +88,7 @@ Plataforma de computação e storage:: Um servidor de unidade de um rack (1UU) q
 
 
 
+[[sg6260-appliance]]
 === Appliance SG6260
 
 O appliance SG6260 inclui os seguintes componentes:
@@ -89,8 +96,9 @@ O appliance SG6260 inclui os seguintes componentes:
 Controlador de computação:: O controlador SG6200-CN é um servidor de uma unidade de rack (1U) que inclui:
 +
 --
+* Um processador AMD de 3,55 GHz fornecendo 32 núcleos (64 threads)
 * 256 GB DE RAM
-* Unidade de inicialização interna de 240 GB (inclui o software StorageGRID)
+* Unidade de inicialização interna de 256 GB (inclui o software StorageGRID)
 * 2 portas Gbase-T de 1/10 mm
 * 4 × portas Ethernet 10/25/40/100GbE para tráfego de rede Grid/cliente (ou 4 × 200GbE com placa de rede 200GbE opcional)
 * 1 porta de interconexão de storage 100 GbE
@@ -124,10 +132,12 @@ O compartimento e-Series DE460C é um compartimento de 4U TB que inclui:
 
 
 
+[[sgf6212-and-sg6260-diagrams]]
 == Diagramas SGF6212 e SG6260
 
 
 
+[[sgf6212-front-view]]
 === Vista frontal do SGF6212
 
 Esta figura mostra a parte frontal do SGF6212 sem o painel. O dispositivo inclui uma plataforma de storage 1U de computação e storage que contém 12 unidades SSD.
@@ -136,6 +146,7 @@ image::../media/s25_front_with_ssds.png[Vista frontal do SGF6212]
 
 
 
+[[sgf6212-rear-view]]
 === Vista traseira do SGF6212
 
 Esta figura mostra a parte traseira do SGF6212, incluindo as portas, ventoinhas e fontes de alimentação.
@@ -246,6 +257,7 @@ Identifique o LED
 |===
 
 
+[[sg6260-front-view]]
 === SG6260 vista frontal
 
 Esta figura mostra a parte frontal do SG6260, que inclui um controlador de computação 1U e um shelf 4U contendo dois controladores de storage e 60 drives em cinco gavetas para drives.
@@ -272,6 +284,7 @@ Compartimento do controlador E4000 com painel frontal removido (o compartimento 
 |===
 
 
+[[sg6260-rear-view]]
 === Vista traseira do SG6260
 
 Esta figura mostra a parte traseira do SG6260, incluindo os controladores de computação e storage, as ventoinhas e as fontes de alimentação.
@@ -307,7 +320,7 @@ Ventilador (1 de 2) para compartimento do controlador E4000
  a| 
 4
  a| 
-Controlador de storage E-Series E400 (1 de 2) e conectores
+Controlador de armazenamento E-Series E4000 (1 de 2) e conectores
 
 
 
@@ -319,10 +332,12 @@ Fonte de alimentação (1 de 2) para o compartimento do controlador E4000
 |===
 
 
+[[sg6200-controllers]]
 == Controladores SG6200
 
 
 
+[[sg6200-cn-compute-controller]]
 === Controlador de computação SG6200-CN
 
 * Fornece recursos de computação para o dispositivo.
@@ -452,6 +467,7 @@ Identifique o LED
 |===
 
 
+[[sg6260-e4000-storage-controller]]
 === SG6260: Controlador de storage E4000
 
 * Duas controladoras para suporte a failover.
@@ -527,6 +543,7 @@ Existem quatro conexões para o controlador SG6200-CN (duas de cada E4000).
 |===
 
 
+[[sg6260-ioms-for-optional-expansion-shelves]]
 === SG6260: IOMs para prateleiras de expansão opcionais
 
 O compartimento de expansão contém dois módulos de entrada/saída (IOMs) que se conectam aos controladores de storage ou a outros compartimentos de expansão.

@@ -36,11 +36,14 @@ Este guia do usuário do BMC é para a versão mais recente do firmware do BMC d
 
 
 
+[[bmc-use-for-storagegrid-appliances]]
 == BMC Use para aparelhos StorageGRID
 
 Os seguintes procedimentos do BMC são documentados para uso com dispositivos StorageGRID compatíveis:
 
 * link:../installconfig/accessing-bmc-interface.html["Acesse o painel do BMC"]
+* https://docs.netapp.com/us-en/storagegrid/harden/hardening-guidelines-for-storagegrid-nodes.html#change-appliance-bmc-password["Alterar a senha do BMC do appliance no Grid Manager"^]
+* https://docs.netapp.com/us-en/storagegrid/maintain/changing-nodes-network-configuration.html#change-appliance-node-bmc-lan-ip-settings["Configurar as configurações de endereço IP da LAN BMC"^]
 * link:../installconfig/configuring-snmp-settings-for-bmc.html["Configurar as definições de SNMP do BMC"]
 * link:../installconfig/setting-up-email-notifications-for-alerts.html["Configurar notificações de alerta por e-mail"]
 * Solucionar problemas de instalação de hardware:
@@ -77,6 +80,7 @@ Os seguintes procedimentos do BMC são documentados para uso com dispositivos St
 
 
 
+[[bmc-features-not-supported-for-storagegrid-appliances]]
 == Os recursos do BMC não são compatíveis com dispositivos StorageGRID
 
 Os seguintes recursos do BMC entram em conflito com a configuração específica do StorageGRID e não devem ser usados.

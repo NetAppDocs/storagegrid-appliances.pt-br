@@ -15,6 +15,7 @@ Pode desligar o aparelho SGF6112 ou o controlador SG6100-CN e ligá-lo novamente
 
 
 
+[[shut-down-the-sgf6112-appliance-or-sg6100-cn-controller]]
 == Desligue o aparelho SGF6112 ou o controlador SG6100-CN
 
 Desligue o aparelho para efetuar a manutenção do hardware.
@@ -60,6 +61,7 @@ Esse comando pode levar até 10 minutos para ser concluído.
 
 
 
+[[power-on-sgf6112-or-sg6100-cn-and-verify-operation]]
 == Ligue SGF6112 ou SG6100-CN e verifique o funcionamento
 
 Ligue o controlador após concluir a manutenção.

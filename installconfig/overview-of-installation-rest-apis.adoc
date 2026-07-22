@@ -2,7 +2,7 @@
 permalink: installconfig/overview-of-installation-rest-apis.html 
 sidebar: sidebar 
 keywords: installation REST API, REST API, installation REST APIs, REST APIs, Appliance Installer API, Appliance Installer APIs, Install API, Install APIs, Installer API, Installer APIs, Installation API, Installation APIs, api, apis 
-summary: 'O StorageGRID fornece duas APIs REST para executar tarefas de instalação: A API de instalação do StorageGRID e a API do instalador do dispositivo StorageGRID.' 
+summary: StorageGRID fornece duas APIs REST para realizar tarefas de instalação, a StorageGRID Installation API e a StorageGRID Appliance Installer API. 
 ---
 = APIs REST de instalação do StorageGRID
 :allow-uri-read: 
@@ -22,6 +22,7 @@ Cada comando REST API inclui o URL da API, uma ação HTTP, quaisquer parâmetro
 
 
 
+[[storagegrid-installation-api]]
 == API de instalação do StorageGRID
 
 A API de instalação do StorageGRID só está disponível quando você estiver configurando inicialmente o sistema StorageGRID e se precisar executar uma recuperação do nó de administração principal. A API de instalação pode ser acessada por HTTPS a partir do Gerenciador de Grade.
@@ -37,10 +38,12 @@ A API de instalação do StorageGRID inclui as seguintes seções:
 * *Recovery*: Operações de recuperação do nó de administração primário. Você pode redefinir informações, carregar o pacote de recuperação, iniciar a recuperação e exibir o status da operação de recuperação.
 * *Recovery-package*: Operações para baixar o Recovery Package.
 * *Sites*: Operações de configuração no nível do site. Você pode criar, exibir, excluir e modificar um site.
+* *senha-temporária*: Operações na senha temporária para proteger a mgmt-api durante a instalação.
 
 
 
 
+[[storagegrid-appliance-installer-api]]
 == API do instalador do dispositivo StorageGRID
 
 A API do instalador do dispositivo StorageGRID pode ser acessada por HTTPS a partir `_Controller_IP_:8443`do .

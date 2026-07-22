@@ -15,6 +15,7 @@ Antes de instalar um dispositivo StorageGRID, confirme se tem todos os equipamen
 
 
 
+[[all-appliances]]
 == Todos os aparelhos
 
 Você precisa do seguinte equipamento para instalar e configurar todos os aparelhos.
@@ -53,6 +54,7 @@ Ferramentas opcionais::
 
 
 
+[[appliance-specific-equipment-and-tools]]
 == Equipamentos e ferramentas específicos para o aparelho
 
 [role="tabbed-block"]

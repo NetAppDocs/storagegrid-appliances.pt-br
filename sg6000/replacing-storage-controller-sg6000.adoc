@@ -57,6 +57,7 @@ NOTE: Os controladores de storage na maioria dos modelos de dispositivos não in
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Passo 1: Prepare o controlador de substituição
 
 Prepare o controlador E2800A ou E2800B de substituição.
@@ -114,6 +115,7 @@ A placa de interface de host (HIC) de 4 portas. Esta placa tem de ser movida par
 |===
 
 
+[[step-2-take-the-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
 Prepare-se para remover o controlador com falha e colocá-lo offline.
@@ -146,6 +148,7 @@ NOTE: A coleta de dados de suporte antes e depois da substituição de um compon
 
 
 
+[[step-3-remove-the-controller]]
 == Passo 3: Remova o controlador
 
 Retire o controlador com falha do aparelho.
@@ -169,6 +172,7 @@ CAUTION: Utilize sempre duas mãos para suportar o peso do controlador.
 
 
 
+[[step-4-move-battery-to-the-new-controller]]
 == Passo 4: Mova a bateria para o novo controlador
 
 Remova a bateria do controlador com falha e instale-a no controlador de substituição.
@@ -256,6 +260,7 @@ image::../media/e2800_battery_flange_not_ok.gif[Flange da bateria incorreta]
 
 
 
+[[step-5-move-hic-to-new-controller-if-needed]]
 == Passo 5: Mova o HIC para o novo controlador, se necessário
 
 Se o controlador com falha incluir uma placa de interface do host (HIC), mova o HIC do controlador com falha para o controlador de substituição.
@@ -364,6 +369,8 @@ image::../media/28_dwg_e2800_hic_faceplace_screws_maint-e2800.png[E2800A parafus
 ====
 
 
+[[step-6-replace-controller]]
+[[step6_replace_controller]]
 == Passo 6: Substitua o controlador
 
 Instale o controlador de substituição e verifique se ele voltou a se unir à grade.

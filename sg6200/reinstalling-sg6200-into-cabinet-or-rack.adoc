@@ -15,6 +15,8 @@ Remova o SGF6212 ou SG6200-CN de um gabinete ou rack para acessar a tampa superi
 
 
 
+[[remove-sgf6212-or-sg6200-cn-from-cabinet-or-rack]]
+[[remove-from-rack]]
 == Remova o SGF6212 ou SG6200-CN do gabinete ou rack
 
 .Antes de começar
@@ -50,6 +52,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sgf6212-or-sg6200-cn-into-cabinet-or-rack]]
 == Reinstale o SGF6212 ou SG6200-CN no gabinete ou rack
 
 .Antes de começar

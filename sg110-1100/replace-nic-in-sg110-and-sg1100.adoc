@@ -21,6 +21,7 @@ Use estes procedimentos para:
 
 
 
+[[remove-the-nic]]
 == Remova a NIC
 
 .Antes de começar
@@ -115,6 +116,7 @@ image::../media/one-slot-assembly-sgf6112.png[NIC no conjunto riser de um slot]
 
 
 
+[[reinstall-the-internal-nic]]
 == Reinstale a NIC interna
 
 Instale a NIC de substituição no mesmo local que a que foi removida.

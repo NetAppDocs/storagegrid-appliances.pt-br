@@ -32,6 +32,7 @@ Se você pretende substituir uma bateria com falha, você deve ter:
 
 
 
+[[step-1-prepare-to-replace-battery]]
 == Passo 1: Prepare-se para substituir a bateria
 
 Tem de colocar o controlador afetado offline para poder remover com segurança a bateria avariada. O controlador que você não está colocando off-line deve estar on-line (no estado ideal).
@@ -100,6 +101,7 @@ NOTE: Se você estiver acessando o Gerenciador de sistema do SANtricity usando o
 
 
 
+[[step-2-remove-e4000-controller-canister]]
 == Etapa 2: Remova o recipiente do controlador E4000
 
 Você precisa remover o recipiente do controlador da prateleira do controlador, para que você possa remover a bateria.
@@ -124,6 +126,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 
 
 
+[[step-3-install-the-new-battery]]
 == Passo 3: Instale a nova bateria
 
 Você deve remover a bateria com falha e substituí-la.
@@ -180,6 +183,7 @@ Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
 
 
+[[step-4-reinstall-the-controller-canister]]
 == Etapa 4: Reinstale o recipiente do controlador
 
 Depois de substituir os componentes no recipiente do controlador, volte a instalá-lo no chassis.
@@ -212,6 +216,7 @@ O controlador começa a arrancar assim que estiver sentado no chassis.
 
 
 
+[[step-5-complete-battery-replacement]]
 == Passo 5: Substituição completa da bateria
 
 Coloque o controlador online.

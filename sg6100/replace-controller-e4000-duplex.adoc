@@ -49,6 +49,7 @@ NOTE: Se a segunda controladora na gaveta não tiver o status ideal ou se o Reco
 
 
 
+[[step-1-prepare-the-replacement-controller]]
 == Passo 1: Prepare o controlador de substituição
 
 Prepare o controlador E4000 de substituição.
@@ -63,6 +64,7 @@ Guarde os materiais de embalagem a utilizar ao enviar o controlador avariado.
 
 
 
+[[step-2-take-the-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
 Prepare-se para remover o controlador com falha e colocá-lo offline. Você pode usar o Gerenciador de sistema do SANtricity para executar estas etapas.
@@ -108,6 +110,7 @@ Se ocorrer um problema ao remover um controlador, você pode usar o arquivo salv
 
 
 
+[[step-3-remove-controller-canister]]
 == Etapa 3: Remova o recipiente do controlador
 
 Remova um recipiente do controlador.
@@ -127,6 +130,7 @@ CAUTION: Para evitar um desempenho degradado, não torça, dobre, aperte ou pise
 
 
 
+[[step-4-determine-parts-to-transfer-to-replacement-controller]]
 == Passo 4: Determine as peças a transferir para o controlador de substituição
 
 O controlador de substituição pode vir com peças pré-instaladas. Determine quais peças devem ser transferidas para o recipiente do controlador de substituição.
@@ -143,6 +147,8 @@ O controlador de substituição pode vir com peças pré-instaladas. Determine q
 
 
 
+[[step-5-remove-the-battery]]
+[[step5_remove_battery]]
 == Passo 5: Retire a bateria
 
 Retire a bateria do controlador desativado e instale-a no controlador de substituição, se necessário.
@@ -181,6 +187,8 @@ image::../media/legend_icon_02.png[Referência de legenda 2]
 
 
 
+[[step-6-move-the-dimms]]
+[[step6_remove_dimm]]
 == Passo 6: Mova os DIMMs
 
 Remova os DIMMs do recipiente do controlador danificado e instale-os no recipiente do controlador de substituição.
@@ -238,6 +246,8 @@ NOTE: Inspecione visualmente o DIMM para verificar se ele está alinhado uniform
 
 
 
+[[step-7-install-the-battery]]
+[[step7_install_battery]]
 == Passo 7: Instale a bateria
 
 Instale a bateria no recipiente do controlador de substituição.
@@ -254,6 +264,8 @@ Certifique-se de que a ficha se fixa à tomada da bateria na placa-mãe.
 
 
 
+[[step-8-replace-controller]]
+[[step8_replace_controller]]
 == Passo 8: Substitua o controlador
 
 Instale o controlador de substituição e verifique se o nó voltou a unir a grade.

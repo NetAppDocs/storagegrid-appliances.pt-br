@@ -31,11 +31,12 @@ Você pode automatizar a configuração do seguinte:
 
 
 
+[[automation-options]]
 == Opções de automação
 
 Para automatizar a instalação e a configuração do dispositivo, use uma ou mais das seguintes opções:
 
-* Gerar um arquivo JSON que contém detalhes de configuração. Trabalhe com seu consultor de serviços profissionais da NetApp para link:https://configbuilder.netapp.com/index.aspx["Ferramenta NetApp ConfigBuilder"^]executar estas etapas:
+* Gere um arquivo JSON contendo os detalhes de configuração. Trabalhe com seu consultor de Serviços Profissionais da NetApp para usar o link:https://configbuilder.netapp.com/Index.aspx["Ferramenta NetApp ConfigBuilder"^] (login necessário) para concluir estas etapas:
 +
 .. Consulte os Serviços profissionais da NetApp para obter um número de pedido de vendas.
 .. Obtenha a pasta de trabalho do ConfigBuilder.
@@ -69,6 +70,8 @@ NOTE: Você pode usar os scripts Python de automação do StorageGRID diretament
 
 
 
+[[automate-appliance-configuration-using-storagegrid-appliance-installer]]
+[[automate-with-appliance-installer]]
 == Automatize a configuração do dispositivo usando o Instalador de dispositivos StorageGRID
 
 Depois de gerar um arquivo JSON, você pode automatizar a configuração de um ou mais dispositivos usando o Instalador de dispositivos StorageGRID para fazer o upload do arquivo JSON.
@@ -109,6 +112,8 @@ A configuração é aplicada ao nó selecionado.
 
 
 
+[[automate-appliance-installation-and-configuration-using-configure-sga-py-script]]
+[[automate-with-configure-sga-py-script]]
 == Automatize a instalação e a configuração do dispositivo usando o script configure-sga.py
 
 Se você é um usuário avançado, pode usar o `configure-sga.py` script para automatizar muitas das tarefas de instalação e configuração para os nós de dispositivos StorageGRID, incluindo a instalação e configuração de um nó de administrador principal. Este script pode ser útil se você tiver um grande número de dispositivos para configurar.

@@ -15,6 +15,7 @@ Retire a tampa do aparelho para aceder aos componentes internos para manutençã
 
 
 
+[[remove-sg6000-cn-controller-cover]]
 == Remova a tampa do controlador SG6000-CN
 
 Retire a tampa do controlador para aceder aos componentes internos para manutenção.
@@ -40,6 +41,7 @@ Após substituir a peça, devolva a peça defeituosa à NetApp, conforme descrit
 
 
 
+[[reinstall-sg6000-cn-controller-cover]]
 == Reinstale a tampa do controlador SG6000-CN
 
 Reinstale a tampa do controlador quando a manutenção interna do hardware estiver concluída.

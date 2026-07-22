@@ -2,7 +2,7 @@
 permalink: commonhardware/appliance-node-cloning-procedure.html 
 sidebar: sidebar 
 keywords: storagegrid, appliance node clone, appliance node cloning, node clone, node cloning 
-summary: O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem e o dispositivo de destino. 
+summary: 'O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem (o dispositivo está sendo substituído) e o dispositivo de destino (novo).' 
 ---
 = Clonar um nó de dispositivo StorageGRID
 :allow-uri-read: 
@@ -19,6 +19,7 @@ O processo de clonagem pode levar vários dias para transferir dados entre o nó
 * Você configurou o dispositivo de destino, incluindo a configuração de conexões StorageGRID, o Gerenciador de sistema do SANtricity (somente dispositivos de storage) e a interface do BMC.
 +
 ** Ao configurar conexões StorageGRID, use os endereços IP temporários.
+** Se você estiver habilitando o DHCP em alguma porta do nó de destino que tenha sido configurada como estática no nó de origem, certifique-se de que não haja concessões DHCP permanentes para nenhum dos endereços MAC do nó de origem. Se não fizer isso, poderá ocorrer um conflito de endereço IP ao final do processo de clonagem.
 ** Ao configurar links de rede, use a configuração final do link.
 
 
@@ -87,6 +88,10 @@ Quando a clonagem for concluída com sucesso:
 * Os nós de origem e destino trocam endereços IP:
 +
 ** O nó de destino agora usa os endereços IP originalmente atribuídos ao nó de origem para redes de Grade, Admin e Cliente.
++
+
+NOTE: Se você encontrar um conflito de endereço IP ao final do processo de clonagem, verifique se não havia concessões DHCP permanentes atribuídas a nenhum dos endereços MAC das portas que tinham endereços IP estáticos no nó de origem e que estavam habilitadas para DHCP no nó de destino. Remova ou atualize as concessões DHCP permanentes no servidor DHCP para resolver esse conflito.
+
 ** O nó de origem agora usa o endereço IP temporário inicialmente atribuído ao nó de destino.
 
 

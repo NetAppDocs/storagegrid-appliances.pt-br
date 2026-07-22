@@ -18,6 +18,7 @@ TIP: Em vez de usar as tabelas, use a pasta de trabalho fornecida com o ConfigBu
 
 
 
+[[check-storagegrid-version]]
 == Verifique a versão do StorageGRID
 
 Antes de instalar um dispositivo SGF6112 ou SG6160, confirme se o sistema StorageGRID está a utilizar uma versão necessária do software StorageGRID.
@@ -42,6 +43,7 @@ SG6160
 |===
 
 
+[[connect-to-santricity-system-manager]]
 == Conete-se ao Gerenciador do sistema SANtricity
 
 Você conecta ambos os controladores de storage no dispositivo SG6160 à rede de gerenciamento usada no Gerenciador de sistemas do SANtricity. O controlador A está na parte superior e o controlador B está na parte inferior.
@@ -142,6 +144,7 @@ Deve ser:
 |===
 
 
+[[administration-and-maintenance-ports]]
 == Portas de administração e manutenção
 
 A rede de administração para StorageGRID é uma rede opcional, usada para administração e manutenção do sistema. O dispositivo se coneta à rede Admin usando as seguintes portas de 1/10 GbE no dispositivo.
@@ -222,6 +225,7 @@ Sub-redes de rede Admin (CIDR)
 |===
 
 
+[[networking-ports]]
 == Portas de rede
 
 As quatro portas de rede no dispositivo se conetam à rede de grade StorageGRID e à rede de cliente opcional.
@@ -281,6 +285,7 @@ Porta do switch para a porta 4 (rede de grade para modo fixo)
 |===
 
 
+[[grid-network-ports]]
 == Portas de rede de grade
 
 A rede de Grade para StorageGRID é uma rede necessária, usada para todo o tráfego interno de StorageGRID. O dispositivo se coneta à rede de grade usando as quatro portas de rede.
@@ -352,6 +357,7 @@ Definição máxima da unidade de transmissão (MTU) (opcional). Você pode usar
 |===
 
 
+[[client-network-ports]]
 == Portas de rede do cliente
 
 A rede de cliente para StorageGRID é uma rede opcional, normalmente usada para fornecer acesso de protocolo de cliente à grade. O dispositivo se coneta à rede do cliente usando as quatro portas de rede.
@@ -422,6 +428,7 @@ Endereço IP estático que pretende utilizar para o nó de dispositivo na rede C
 |===
 
 
+[[bmc-management-network-ports]]
 == Portas de rede de gerenciamento BMC
 
 Você pode acessar a interface BMC no dispositivo usando a porta de gerenciamento de 1 GbE circulada no diagrama. Esta porta suporta a gestão remota do hardware do controlador através de Ethernet, utilizando a norma IPMI (Intelligent Platform Management Interface).
@@ -469,12 +476,14 @@ Endereço IP estático que pretende utilizar para a porta de gestão BMC
 |===
 
 
+[[port-bond-modes]]
 == Modos de ligação de porta
 
 Quando link:configuring-network-links.html["configurando links de rede"] para o dispositivo SGF6112, você pode usar a ligação de porta para as portas que se conetam à rede de Grade e à rede de cliente opcional e as portas de gerenciamento 1/10-GbE que se conetam à rede de administração opcional. A ligação de portas ajuda a proteger os seus dados fornecendo caminhos redundantes entre as redes StorageGRID e o dispositivo.
 
 
 
+[[network-bond-modes]]
 === Modos de ligação de rede
 
 As portas de rede no dispositivo suportam o modo de ligação de porta fixa ou o modo de ligação de porta agregada para as ligações de rede de grelha e rede de cliente.
@@ -560,6 +569,7 @@ NOTE: Se você optar por usar menos de quatro portas de rede, esteja ciente de q
 
 
 
+[[network-bond-modes-for-management-ports]]
 === Modos de ligação de rede para portas de gestão
 
 Para as duas portas de gerenciamento de 1/10 GbE, você pode escolher o modo de ligação de rede independente ou o modo de ligação de rede ative-Backup para se conetar à rede Admin opcional.

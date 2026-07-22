@@ -49,9 +49,23 @@ NOTE: Você precisa configurar e ter acesso ao SANtricity System Manager se o re
 
 
 
+[[set-up-and-access-santricity-system-manager]]
 == Configure e acesse o Gerenciador de sistema do SANtricity
 
 Talvez seja necessário acessar o Gerenciador de sistema do SANtricity no controlador de storage para monitorar o hardware no compartimento de controladora de storage ou para configurar o e-Series AutoSupport.
+
+.Antes de começar
+* Você está usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
+* Para acessar o Gerenciador de sistema do SANtricity por meio do Gerenciador de Grade, você instalou o StorageGRID e tem a permissão de administrador do dispositivo de armazenamento ou a permissão de acesso à raiz.
+* Para acessar o Gerenciador de sistema do SANtricity usando o Instalador de dispositivos do StorageGRID, você tem o nome de usuário e a senha do administrador do Gerenciador de sistema do SANtricity.
+* Para acessar diretamente o Gerenciador de sistema do SANtricity usando um navegador da Web, você tem o nome de usuário e a senha do administrador do Gerenciador de sistema do SANtricity.
+
+
+
+NOTE: Você deve ter o firmware 8,70 ou superior do SANtricity para acessar o Gerenciador de sistema do SANtricity usando o Gerenciador de Grade ou o Instalador de dispositivos StorageGRID. Pode verificar a versão do firmware utilizando o Instalador de aplicações StorageGRID e selecionando *Ajuda* > *acerca*.
+
+
+NOTE: O acesso ao Gerenciador de sistema do SANtricity a partir do Gerenciador de Grade ou do Instalador de dispositivos é geralmente destinado apenas para monitorar seu hardware e configurar o e-Series AutoSupport. Muitos recursos e operações dentro do Gerenciador de sistema do SANtricity, como atualização de firmware, não se aplicam ao monitoramento do dispositivo StorageGRID. Para evitar problemas, siga sempre as instruções de instalação e manutenção do hardware do seu aparelho.
 
 .Sobre esta tarefa
 Há três maneiras de acessar o Gerenciador de sistema do SANtricity, dependendo de qual estágio do processo de instalação e configuração você está:
@@ -69,37 +83,6 @@ Este procedimento inclui etapas para o seu acesso inicial ao Gerenciador de sist
 
 
 NOTE: O uso do Gerenciador de Grade ou do Instalador de dispositivos StorageGRID permite que você acesse o Gerenciador de sistema do SANtricity sem ter que configurar ou conetar a porta de gerenciamento do dispositivo.
-
-Você usa o Gerenciador de sistema do SANtricity para monitorar o seguinte:
-
-* Dados de performance, como performance em nível de storage array, latência de e/S, utilização de CPU e taxa de transferência
-* Status do componente de hardware
-* Funções de suporte, incluindo visualização de dados de diagnóstico
-
-
-Você pode usar o Gerenciador de sistema do SANtricity para configurar as seguintes configurações:
-
-* Alertas de e-mail, alertas SNMP ou alertas syslog para os componentes no compartimento do controlador de armazenamento
-* Configurações do e-Series AutoSupport para os componentes no compartimento do controlador de storage.
-+
-Para obter detalhes adicionais sobre o e-Series AutoSupport, consulte https://docs.netapp.com/us-en/e-series-family/index.html["Documentação do NetApp e-Series"^].
-
-* Chaves de segurança da unidade, que são necessárias para desbloquear unidades seguras (esta etapa é necessária se o recurso Segurança da unidade estiver ativado)
-* Senha de administrador para acessar o Gerenciador de sistema do SANtricity
-
-
-.Antes de começar
-* Você está usando um https://docs.netapp.com/us-en/storagegrid/admin/web-browser-requirements.html["navegador da web suportado"^].
-* Para acessar o Gerenciador de sistema do SANtricity por meio do Gerenciador de Grade, você instalou o StorageGRID e tem a permissão de administrador do dispositivo de armazenamento ou a permissão de acesso à raiz.
-* Para acessar o Gerenciador de sistema do SANtricity usando o Instalador de dispositivos do StorageGRID, você tem o nome de usuário e a senha do administrador do Gerenciador de sistema do SANtricity.
-* Para acessar diretamente o Gerenciador de sistema do SANtricity usando um navegador da Web, você tem o nome de usuário e a senha do administrador do Gerenciador de sistema do SANtricity.
-
-
-
-NOTE: Você deve ter o firmware 8,70 ou superior do SANtricity para acessar o Gerenciador de sistema do SANtricity usando o Gerenciador de Grade ou o Instalador de dispositivos StorageGRID. Pode verificar a versão do firmware utilizando o Instalador de aplicações StorageGRID e selecionando *Ajuda* > *acerca*.
-
-
-NOTE: O acesso ao Gerenciador de sistema do SANtricity a partir do Gerenciador de Grade ou do Instalador de dispositivos é geralmente destinado apenas para monitorar seu hardware e configurar o e-Series AutoSupport. Muitos recursos e operações dentro do Gerenciador de sistema do SANtricity, como atualização de firmware, não se aplicam ao monitoramento do dispositivo StorageGRID. Para evitar problemas, siga sempre as instruções de instalação e manutenção do hardware do seu aparelho.
 
 .Passos
 . Execute um dos seguintes procedimentos:
@@ -212,6 +195,7 @@ O dispositivo de storage SG6260 pode ser equipado com unidades compatíveis com 
 
 
 
+[[review-hardware-status-in-santricity-system-manager]]
 == Revise o status do hardware no Gerenciador do sistema do SANtricity
 
 Você pode usar o Gerenciador de sistema do SANtricity para monitorar e gerenciar componentes de hardware individuais no compartimento de controladora de storage e analisar informações ambientais e de diagnóstico de hardware, como temperaturas dos componentes, bem como problemas relacionados às unidades.
@@ -263,6 +247,7 @@ Se o status de qualquer componente for necessário atenção, siga as etapas no 
 
 
 
+[[set-ip-addresses-for-storage-controllers-using-storagegrid-appliance-installer]]
 == Defina endereços IP para controladores de armazenamento usando o Instalador de dispositivos StorageGRID
 
 A porta de gerenciamento 1 em cada controlador de storage coneta o dispositivo à rede de gerenciamento do Gerenciador de sistema do SANtricity. Se você não conseguir acessar o Gerenciador de sistema do SANtricity a partir do Instalador de dispositivos StorageGRID, defina um endereço IP estático para cada controlador de armazenamento para garantir que você não perca sua conexão de gerenciamento com o hardware e o firmware do controlador no compartimento de controladora.

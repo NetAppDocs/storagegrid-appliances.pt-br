@@ -386,7 +386,6 @@
   <block id="fd9d7864d85ad77481d8d273f86b177a" category="inline-xref">Baixe o SANtricity os</block>
   <block id="c7119a01ad3a0246d6e502fcf1542526" category="list-text">Quando estiver pronto para continuar aprovando nós, <block ref="221485128cc3179c422734dcada4a2d7" category="inline-xref-macro-rx"></block>reinicie o processo de atualização.</block>
   <block id="b55351ef221e1f7c56efb85a5e93ea93" category="admonition">Os nós já aprovados e atualizados sem erros permanecem atualizados.</block>
-  <block id="5848604b5fe59288c4b2e70e183c15f3" category="summary">O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem e o dispositivo de destino.</block>
   <block id="2dfb9b9fe663376184bfd65a4deb94fd" category="doc">Nó do dispositivo clone</block>
   <block id="0235e20f203c294d37deda19de63884d" category="paragraph">O processo de clonagem pode levar vários dias para transferir dados entre o nó de origem (o dispositivo está sendo substituído) e o dispositivo de destino (novo).</block>
   <block id="47e8652b2101615daf061495f94fd6e3" category="list-text">Você instalou o dispositivo de destino compatível em um gabinete ou rack, conetou todos os cabos e aplicou energia.</block>
@@ -536,8 +535,6 @@
   <block id="5662450490d384590a15e305a3d7dbf1" category="paragraph">Se algum dos seguintes problemas for encontrado durante a clonagem, o processo de clonagem será interrompido e uma mensagem de erro será gerada:</block>
   <block id="6b6698841d4a344fe258deb6bde48008" category="list-text">Configuração de rede incorreta</block>
   <block id="b330203392074bd8387d32b32cbd4c30" category="list-text">Falta de conetividade entre os dispositivos de origem e destino</block>
-  <block id="59d2f54bed9c6d1ff315a058a4a52671" category="list-text">Incompatibilidade de dispositivos de origem e destino</block>
-  <block id="89e16c9efc1a3195a41f4ac0343ca036" category="list-text">Para nós de storage, um dispositivo de substituição de capacidade insuficiente</block>
   <block id="82a441e64c838645d368374b712e97b3" category="paragraph">Para continuar, é necessário resolver cada problema de clonagem.</block>
   <block id="e4652cabe8177b6898c3fceccf7e0889" category="summary">Use estas instruções para manter o seu sistema StorageGRID.</block>
   <block id="0eb7986c87b6853bd0db330cbf27b26c" category="section-title">Sobre estas instruções</block>
@@ -571,7 +568,6 @@
   <block id="a79e81724891718056b140bfa1a514de" category="list-text">Peça ao administrador da rede para associar o DNS/rede e o endereço IP do dispositivo removido com o endereço MAC do dispositivo de substituição.</block>
   <block id="8953cf6acd035e33305d53707b5a433b" category="admonition">Deve certificar-se de que todos os endereços IP do aparelho original foram atualizados antes de ligar a alimentação ao aparelho de substituição. Caso contrário, o dispositivo obterá novos endereços IP DHCP quando inicializa e poderá não conseguir reconetar-se ao StorageGRID. Esta etapa se aplica a todas as redes StorageGRID conetadas ao dispositivo.</block>
   <block id="e94bdaef0d9cae7ec49505ca7dc2034e" category="admonition">Se o dispositivo original tiver utilizado um endereço IP estático, o novo dispositivo irá adotar automaticamente os endereços IP do aparelho que removeu.</block>
-  <block id="e485a2bb58eff1a96bc2f6c877e4c6e8" category="summary">Se você ativou a criptografia de nó para o dispositivo durante a instalação, você pode monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).</block>
   <block id="66bb499d1d6e9c0a4e1c872e5a1742db" category="doc">Monitore a criptografia do nó no modo de manutenção</block>
   <block id="a7a12ea1a4c80643b85cc22b459bd606" category="paragraph">Se você ativou a criptografia de nó para o dispositivo durante a instalação, poderá monitorar o status de criptografia de nó de cada nó do dispositivo, incluindo os detalhes do estado de criptografia de nó e do servidor de gerenciamento de chaves (KMS).</block>
   <block id="91fba6642e220c9d6b627c272ca1f4b0" category="inline-link">Configurar servidores de gerenciamento de chaves</block>
@@ -654,7 +650,6 @@
   <block id="ccff858e243f2d310a8c9501d4e241f9" category="paragraph">Você pode usar o Gerenciador de sistema do SANtricity para configurar as seguintes configurações:</block>
   <block id="7480b3d5b96758e9706895f9f09074a6" category="list-text">Alertas de e-mail, alertas SNMP ou alertas syslog para os componentes no compartimento do controlador de armazenamento</block>
   <block id="2afb5eeba8ea3c04fefb11c5aac8aaa0" category="list-text">Configurações do e-Series AutoSupport para os componentes no compartimento do controlador de storage.</block>
-  <block id="0d50ff542a20edfdc030f87225abed8a" category="list-text">Chaves de segurança da unidade, que são necessárias para desbloquear unidades seguras (esta etapa é necessária se o recurso Segurança da unidade estiver ativado)</block>
   <block id="ee9d34135078ea9745c7862276886545" category="list-text">Senha de administrador para acessar o Gerenciador de sistema do SANtricity</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">Execute um dos seguintes procedimentos:</block>
   <block id="d88448093f00932101bdf21de1585cc1" category="list-text">Use o Instalador de dispositivos StorageGRID e selecione *Avançado* &gt; *Gerenciador de sistemas SANtricity*</block>
@@ -714,7 +709,6 @@
   <block id="4cc186df234138a57b2e8c5d8e5f7f8d" category="list-text">Clique em *Salvar*.</block>
   <block id="3c7ae12db7024ffd08d2bca474f5ed35" category="paragraph">Pode levar alguns minutos para que suas alterações sejam aplicadas.</block>
   <block id="fa819e302c806f17c39d49ed55f0265d" category="paragraph">Quando você se conetar ao Gerenciador de sistema do SANtricity, você usará o novo endereço IP estático como URL<block ref="29c66d4541758aec7932976994c3319a" prefix=" " category="inline-code"></block></block>
-  <block id="f68ea530857d41d84c76df868f9eb7d9" category="summary">Você pode acessar a interface BMC usando o DHCP ou o endereço IP estático para a porta de gerenciamento BMC nos seguintes modelos de appliance:</block>
   <block id="f1cde1d926b27bece1f9766d9fb81481" category="doc">Acesse a interface BMC</block>
   <block id="b2c25fe42d77ac47cb90bf69bf420964" category="paragraph">Você pode acessar a interface BMC usando o DHCP ou o endereço IP estático para a porta de gerenciamento BMC nos seguintes modelos de appliance:</block>
   <block id="216097879e0143a0b255ae614bf78914" category="list-text">SG100</block>
@@ -743,7 +737,6 @@
   <block id="fef21d15f408a7007b8e7b6030675b49" category="list-text">Selecione *entrar*.</block>
   <block id="6adb423f68265e8ab58f5f8a15224a84" category="list-text">Opcionalmente, crie usuários adicionais selecionando *Configurações* &gt; *Gerenciamento de usuários* e clicando em qualquer usuário "habilitado".</block>
   <block id="5248cb4c17800f67dc54c68ab7192ff2" category="admonition">Quando os usuários entram pela primeira vez, eles podem ser solicitados a alterar sua senha para aumentar a segurança.</block>
-  <block id="f8f92f8e3df4caaa331a15ebf21c66fe" category="summary">Você deve acessar o Instalador do StorageGRID Appliance para verificar a versão do instalador e configurar as conexões entre o appliance e as três redes StorageGRID: A rede de Grade, a rede Admin (opcional) e a rede cliente (opcional).</block>
   <block id="d9eed14fc7b66e99ca0a9535fc8de32c" category="doc">Acesse o Instalador de dispositivos StorageGRID</block>
   <block id="5ec7f22d3e51b38237d9e49f06df79c2" category="paragraph">Você deve acessar o Instalador do StorageGRID Appliance para verificar a versão do instalador e configurar as conexões entre o appliance e as três redes StorageGRID: A rede de grade, a rede de administração (opcional) e a rede de cliente (opcional).</block>
   <block id="be86e83cca4c5d05fe7d5b6b9a6e55ee" category="list-text">O dispositivo de serviços ou o controlador do dispositivo de armazenamento está ligado a todas as redes StorageGRID que pretende utilizar.</block>
@@ -811,7 +804,6 @@
   <block id="637d84093e47a2d311f70c16efd1fbaf" category="section-title">Opções de automação</block>
   <block id="860c87a182ca31f44cc41655b6ef0e38" category="paragraph">Para automatizar a instalação e a configuração do dispositivo, use uma ou mais das seguintes opções:</block>
   <block id="580a5e0ce39ae2ec5351c812bce2c0fd" category="inline-link-macro">Ferramenta NetApp ConfigBuilder</block>
-  <block id="37d45de60b7a8ed97f4f0abd5b1f4fe7" category="list-text">Gerar um arquivo JSON que contém detalhes de configuração. Trabalhe com seu consultor de serviços profissionais da NetApp para <block ref="6e01088b801244abaf1606b43aa333bc" category="inline-link-macro-rx"></block>executar estas etapas:</block>
   <block id="47d00aac8daab338422a3465a9886690" category="list-text">Consulte os Serviços profissionais da NetApp para obter um número de pedido de vendas.</block>
   <block id="28f34d834b7a27ef978d9d87c9083c40" category="list-text">Obtenha a pasta de trabalho do ConfigBuilder.</block>
   <block id="f927657604cba8e17d1d86e40d1cf59f" category="list-text">Consulte os Serviços profissionais para concluir a pasta de trabalho.</block>
@@ -1337,7 +1329,6 @@
   <block id="0205d951b300647dabcd3e7f7910a010" category="admonition">Se você precisar acessar a página Instalação do Monitor manualmente, clique em *Instalação do Monitor*.</block>
   <block id="6782fad0edf81ef678da67ab11346ff5" category="list-text">Se a grade incluir vários nós de storage do dispositivo, repita estas etapas para cada dispositivo.</block>
   <block id="be0e8fe07ca77469afbcaeb6936ac72e" category="admonition">Se você precisar implantar vários nós de armazenamento de dispositivos de uma só vez, você pode automatizar o processo de instalação usando o link:../installconfig/automatismos-appliance-installation-and-Configuration.script de instalação do dispositivo automate-with-configure-sga-py-script<block ref="287394aa9bc3d5a7764ce106a0aaf10d" prefix="[" category="inline-code"></block>].</block>
-  <block id="7ed8cfd7589ccb16457b793b3fcdbe4a" category="summary">Você pode implantar um dispositivo de serviços como nó de administração principal, um nó de administração não primário ou um nó de gateway. Todos os dispositivos de serviços podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.</block>
   <block id="336299dd63542543d20b9e2473db44b8" category="doc">Nó do dispositivo de serviços de implantação</block>
   <block id="c6e7000dc5b49d6aeef69c46f89c0fda" category="paragraph">Você pode implantar um dispositivo de serviços como nó de administração principal, um nó de administração não primário ou um nó de gateway. Todos os dispositivos de serviços podem operar como nós de gateway e nós de administração (primários ou não primários) ao mesmo tempo.</block>
   <block id="5982956d1cd896b46b04ee40aafef91c" category="section-title">Implante o dispositivo de serviços como nó de administração principal</block>
@@ -1676,7 +1667,6 @@
   <block id="e7a05e6341e2d073ca044e302240251a" category="image-alt">Portas de gerenciamento de rede SG6100-CN</block>
   <block id="b9dc90ddecf3fdce27b1b9a59f3bffb1" category="paragraph">No modo independente, apenas a porta de gerenciamento à esquerda está conetada à rede de administração. Este modo não fornece um caminho redundante. A porta de gerenciamento à direita está desconetada e disponível para conexões locais temporárias (usa o endereço IP 169.254.0.1).</block>
   <block id="035d21d2bcec7422fe085239c95f5f51" category="admonition">Se você precisar fazer uma conexão local temporária com o dispositivo quando as portas de gerenciamento 1/10-GbE estiverem configuradas para o modo ative-Backup, remova os cabos de ambas as portas de gerenciamento, conete o cabo temporário à porta de gerenciamento à direita e acesse o dispositivo usando o endereço IP 169.254.0.1.</block>
-  <block id="16eb8283e310826145f33fe6116ba3eb" category="summary">O dispositivo de serviços StorageGRID SG100 e o dispositivo de serviços SG1000 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.</block>
   <block id="6d0ade2fa24dcd390db4eebf8a1390df" category="paragraph">O dispositivo de serviços StorageGRID SG100 e o dispositivo de serviços SG1000 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administração (primários ou não primários) ao mesmo tempo.</block>
   <block id="07c7e7e8da60c1194366cb92a963b708" category="section-title">Caraterísticas do aparelho</block>
   <block id="b9d4703bd7bc28d5d3523eb88d7e2146" category="paragraph">Ambos os modelos do dispositivo de serviços fornecem os seguintes recursos:</block>
@@ -1729,7 +1719,6 @@
   <block id="2f9c95fc4e3ccbe2083cecf3223335a4" category="list-text">Use dois dispositivos SG100 ou dois SG1000 para fornecer serviços de balanceamento de carga e modelagem de tráfego altamente disponíveis acessados por meio de um ou mais endereços IP virtuais. Faça isso configurando os dispositivos como qualquer combinação de nós de administrador ou nós de gateway e adicionando ambos os nós ao mesmo grupo de HA.</block>
   <block id="09364c9c0c9f9ee4525254510fbd39cb" category="inline-link">Configuração de grupos de HA</block>
   <block id="ab213d2e85f6a2233d40369c0c2f5cbc" category="paragraph">Quando usados com dispositivos de storage do StorageGRID, os dispositivos de serviços SG100 e SG1000 permitem a implantação de grades somente de dispositivos sem dependências em hipervisores externos ou hardware de computação.</block>
-  <block id="835d59e48069a93606ecd047daaf1f61" category="summary">O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.</block>
   <block id="df039f5a970acf6d438e3773b9545296" category="paragraph">O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administração (primários ou não primários) ao mesmo tempo.</block>
   <block id="78fe9ec70c03c307edaf827b55bf78d3" category="list-text">O SG110 suporta até quatro conexões de 10 ou 25 GbE à rede de Grade e à rede do cliente.</block>
   <block id="da5b95c24564c9b901b35d67fe3e06f9" category="list-text">O SG1100 suporta até quatro conexões de 10, 25, 40 ou 100 GbE à rede de Grade e à rede de Cliente.</block>
@@ -1751,7 +1740,6 @@
   <block id="8ea4bf911293cfb2bf04ca96e05c3f41" category="list-text">Use dois dispositivos SG110 ou dois SG1100 para fornecer redundância de alguns serviços de administração de rede. Faça isso configurando cada dispositivo como nós de administração.</block>
   <block id="9a36aee0eed152f42afba806fe379d97" category="list-text">Use dois dispositivos SG110 ou dois SG1100 para fornecer serviços de balanceamento de carga e modelagem de tráfego altamente disponíveis acessados por meio de um ou mais endereços IP virtuais. Faça isso configurando os dispositivos como qualquer combinação de nós de administrador ou nós de gateway e adicionando ambos os nós ao mesmo grupo de HA.</block>
   <block id="d8a93d72c559dd827dcc442c95aad95b" category="paragraph">Quando usados com dispositivos de storage do StorageGRID, os dispositivos de serviços SG110 e SG1100 permitem a implantação de grades somente de dispositivos sem dependências em hipervisores externos ou hardware de computação.</block>
-  <block id="fcf672ea93cdf70821fc498932b88f50" category="summary">O dispositivo SG5700 StorageGRID é uma plataforma de storage e computação integrada que opera como nó de storage em uma grade StorageGRID. O dispositivo pode ser usado em um ambiente de grade híbrida que combina nós de storage de dispositivo e nós de storage virtuais baseados em software.</block>
   <block id="9988d2e8cbe0869dd21d6284c017b853" category="paragraph">O dispositivo SG5700 StorageGRID é uma plataforma de storage e computação integrada que opera como nó de storage em uma grade StorageGRID. O dispositivo pode ser usado em um ambiente de grade híbrida que combina nós de storage do dispositivo e nós de storage virtuais (baseados em software).</block>
   <block id="bfdc9d1fb0dc76b1f5af63251ca8d737" category="paragraph">O dispositivo da série StorageGRID SG5700 oferece os seguintes recursos:</block>
   <block id="63c4aebff5dcf4232c42fbc5ca0e270e" category="list-text">Integre os elementos de storage e computação para um nó de storage StorageGRID.</block>
@@ -1861,7 +1849,6 @@
   <block id="62ae5513520dd9eba331169cfd4484f8" category="paragraph">*Nota*: StorageGRID 11,5 ou superior e SANtricity 11,70 ou superior são necessários quando você deixa a porta 1 sem fio.</block>
   <block id="54d7ecac4234801a52c82cee53356b93" category="list-text">A porta 2 está reservada para uso de suporte técnico.</block>
   <block id="575f5da1297a9d208194e631fe305bac" category="paragraph">Portas de expansão da unidade.</block>
-  <block id="dcba35698266a429ba97a9df72d33ecb" category="summary">O dispositivo SG5800 StorageGRID é uma plataforma de storage e computação integrada que opera como nó de storage em uma grade StorageGRID. O dispositivo pode ser usado em um ambiente de grade híbrida que combina nós de storage de dispositivo e nós de storage virtuais baseados em software.</block>
   <block id="8a1c3c9cb6907d54c29c5857f2f86c34" category="paragraph">Os dispositivos StorageGRID da série SG5800 são plataformas de storage e computação integradas que operam como nós de storage em uma grade StorageGRID.</block>
   <block id="ce9252228bd4540f9b37b3a78a50b7d7" category="paragraph">Os aparelhos da série StorageGRID SG5800 oferecem os seguintes recursos:</block>
   <block id="0c83dd3ac0dc38df69e11e248214a5fe" category="list-text">Inclua o e-Series SANtricity System Manager para gerenciamento e monitoramento de hardware.</block>
@@ -3548,7 +3535,6 @@
   <block id="0da2eb69068c217b0fc7a5d5adde18dc" category="list-text">Você tem <block ref="452dbc820d5040c6f7a26972163c857d" category="inline-link-macro-rx"></block> onde você está substituindo a bateria CMOS no data center.</block>
   <block id="ccee7529d7d175aca9c5b67b93650e4d" category="admonition">É necessário um <block ref="af671dbc17aabf78e439327329fcfaf5" category="inline-link-macro-rx"></block>antes de retirar o aparelho do rack.</block>
   <block id="6c5d9be04e7c66d804e9922fc591088c" category="list-text">Desligou todos os cabos e <block ref="dc7225cbd8d4b68386891f4f43bfe53f" category="inline-link-macro-rx"></block>.</block>
-  <block id="4cac03fe582c6e9c7b00f6150d8de44e" category="summary">Talvez seja necessário substituir uma placa de interface de rede (NIC) no SG110 ou SG1100 se não estiver funcionando de forma ideal ou se tiver falhado.</block>
   <block id="4c68b0943e79e049731958e525193bbd" category="paragraph">Talvez seja necessário substituir uma placa de interface de rede (NIC) no SG110 ou SG1100 se não estiver funcionando de forma ideal ou se tiver falhado.</block>
   <block id="025553a609b217df0cc104ad958d9e8c" category="list-text">Remova a NIC</block>
   <block id="39e51c89e2fbc9bd58b8301b9be1e07e" category="list-text">Reinstale a NIC</block>
@@ -3783,7 +3769,6 @@
   <block id="e2d5d64348676cf446dfd44a976e3c5a" category="paragraph">Você deve usar o <block ref="179e42b86c56e7fde01fd62621c30190" category="inline-link-macro-rx"></block> ao atualizar unidades SSD.</block>
   <block id="eb0c0381a2ecab0a05e0025157eeb4e5" category="list-text">Selecione *Atualizar todas as unidades on-line* – atualiza as unidades que podem suportar um download de firmware enquanto a matriz de armazenamento está processando e/S Você não precisa parar a e/S para os volumes associados usando essas unidades quando você selecionar esse método de atualização.</block>
   <block id="4d849ca8d43b5f8df234fb4e1c51c74a" category="admonition">Uma atualização online pode demorar várias horas mais do que uma atualização offline.</block>
-  <block id="d1bb1de66e65ddf766b2dc80cb3a706c" category="summary">Para controladores de armazenamento que utilizam atualmente o SANtricity os com mais de 08.42.20.00 GB(11,42), tem de utilizar o procedimento de modo de manutenção para aplicar uma atualização.</block>
   <block id="c29cf29a2bce34e5013e1a82ec72ef4a" category="doc">Atualize o SANtricity os no controlador E2800 usando o modo de manutenção</block>
   <block id="fe39b5535f4e6df2b9e600318b2459d3" category="paragraph">Para controladores de storage que atualmente usam o SANtricity os com mais de 08.42.20.00 GB (11,42 GB), você deve usar o procedimento de modo de manutenção para aplicar uma atualização.</block>
   <block id="1ad48ec3a7913e569a91ccc60227023f" category="list-text">Consultou o<block ref="59eff0a7409a2083b143c03284b14f62" category="inline-link-rx"></block> para confirmar que a versão do SANtricity os que está a utilizar para a atualização é compatível com o seu dispositivo.</block>
@@ -3806,7 +3791,6 @@
   <block id="74ceff9053279940581d22d040771644" category="list-text">Se o controlador de armazenamento estiver usando o SANtricity os 08.42.20.00 (11,42) ou mais recente, use o Gerenciador de Grade para executar a atualização.</block>
   <block id="459b2d61785b202f6e87131bca916dcc" category="list-text">Se a controladora de storage estiver usando uma versão do SANtricity os anterior a 08.42.20.00 (11,42), use o modo de manutenção para executar a atualização.</block>
   <block id="646d87e1de76b95beee2ac952a5c5653" category="paragraph"><block ref="646d87e1de76b95beee2ac952a5c5653" category="inline-link-macro-rx"></block></block>
-  <block id="9742999f9fee77777cbda7af8a8b8ebc" category="summary">Para os controladores de armazenamento que utilizam atualmente o SANtricity os 08.42.20.00 (11,42) ou mais recente, tem de utilizar o Gestor de grelha para aplicar uma atualização.</block>
   <block id="73e6ae3c7ecd9bcb5330f9692132c087" category="doc">Atualize o SANtricity os em controladores de storage SG5700 usando o Gerenciador de Grade</block>
   <block id="be5478803b1a452fb672a118c66f1f8e" category="paragraph">Para controladores de storage que atualmente usam o SANtricity os 08.42.20.00 (11,42) ou mais recente, você deve usar o Gerenciador de Grade para aplicar uma atualização.</block>
   <block id="29c81145f8df4c302d2a5db797d28b64" category="paragraph"><block ref="29c81145f8df4c302d2a5db797d28b64" category="inline-link-rx"></block></block>
@@ -4795,11 +4779,9 @@
   <block id="3b33e5703e1569451a346dd29af50b51" category="list-text">Desembale o novo recipiente da ventoinha e coloque-o numa superfície nivelada perto do aparelho.</block>
   <block id="002c473abb16ba8030a796dbd755e33d" category="list-text">Utilize a pega do recipiente da ventoinha para retirar o recipiente da ventoinha do aparelho.</block>
   <block id="64c29ebf8cd32413c80f6ffda96405ee" category="list-text">Deslize o recipiente da ventoinha de substituição totalmente para dentro do aparelho e, em seguida, mova o manípulo do recipiente da ventoinha até este encaixar com a patilha cor-de-laranja.</block>
-  <block id="bf04cfba5d2cd0ba1be7c4d7cde79fba" category="summary">Talvez seja necessário substituir uma placa de interface de rede (NIC) no SGF6112 se não estiver funcionando de forma ideal ou se tiver falhado.</block>
   <block id="a0b8dc2f72b7fa0a7a9e2847b1bc6127" category="paragraph">Talvez seja necessário substituir uma placa de interface de rede (NIC) interna no SGF6112 ou SG6100-CN se não estiver funcionando de forma ideal ou se tiver falhado.</block>
   <block id="9117d0edd9082c7e8935fe435a82d383" category="section-title">Remova a NIC interna</block>
   <block id="95cff60cffad0f5715137f9d67567b88" category="list-text">Você tem <block ref="8a600a3d3695735e4213dc5c6fac3a3e" category="inline-link-macro-rx"></block> onde você está substituindo a NIC no data center.</block>
-  <block id="45c26226adb5ac780361eb67562102b4" category="summary">Pode ser necessário substituir uma placa de interface de rede (NIC) no SG6100-CN se não estiver funcionando de forma otimizada ou se tiver falhado.</block>
   <block id="68389729ef500c851bd175b61c435629" category="paragraph">Talvez seja necessário substituir uma placa de interface de rede (NIC) externa no SG6100-CN se não estiver funcionando de forma otimizada ou se tiver falhado.</block>
   <block id="873f4e1b6b1acfd0f6ea7fc4a7cee73c" category="image-alt">Placa frontal NIC.</block>
   <block id="a906778e494f0b40580e1e85dcb33e85" category="inline-link-macro">Fisicamente localizado o controlador SG6100-CN</block>
@@ -4867,7 +4849,6 @@
   <block id="0a16752dda40f74073b67a15b505a4f7" category="paragraph">As unidades pertencentes a volumes que não têm redundância devem ser atualizadas usando o <block ref="179e42b86c56e7fde01fd62621c30190" category="inline-link-macro-rx"></block>. O método off-line deve ser usado para qualquer pool ou grupo de volume que esteja degradado atualmente.</block>
   <block id="7d89acc46dd310b10933ef52e057b958" category="list-text">Você deve colocar o controlador SG5800 no <block ref="66517df9b2a708b9947fc0143b4273f5" category="inline-link-macro-rx"></block>, o que interrompe a conexão com o controlador E4000.</block>
   <block id="67ecfade4f78d4256e50f887e4676271" category="list-text">Siga as instruções no Guia de atualização de software e firmware do SANtricity _E4000 e E5800_ ou na ajuda on-line do Gerenciador de sistema do SANtricity para atualizar o firmware e a NVSRAM da controladora E4000.</block>
-  <block id="7a70e2c3c98205b7029ea7982add5e80" category="summary">Para controladores de armazenamento que utilizam atualmente o SANtricity os 08.42.20.00 (11,42) ou mais recente, pode utilizar o Gestor de grelha ou o modo de manutenção para aplicar uma atualização.</block>
   <block id="80bcdb369c1aaaea9daefaf6cf5773ae" category="inline-link-macro">Atualize o SANtricity os no controlador SG6160 usando o modo de manutenção</block>
   <block id="26057f35f4601a7c8747345c376102c0" category="paragraph">Você pode usar o modo de manutenção para atualizar o SANtricity os no controlador SG6160.</block>
   <block id="60f3c8de41561e30c6a1bb54457dead2" category="admonition">Para controladores de storage que atualmente usam o SANtricity os mais recente que o 08.42.20.00 (11,42), recomenda-se a <block ref="676f8e0aaa6d1091bae102dc63249cf0" category="inline-link-macro-rx"></block>. No entanto, pode utilizar o procedimento de modo de manutenção se preferir ou tiver sido instruído a fazê-lo através da assistência técnica.</block>
@@ -5562,8 +5543,6 @@
   <block id="8fce7c0144a940f37356de4b05f9ac03" category="list-text"><block ref="20c889cb497b19c6d78c457067272345" category="inline-link-macro-rx"></block> .</block>
   <block id="8ac73f13e2902ea7b6ebc3206cf4e576" category="doc">Atualizar o firmware da unidade SG6160 automaticamente durante a reinicialização do dispositivo</block>
   <block id="a53555787eb9101bec73830602e0bb62" category="list-text">Durante um<block ref="b3a7463520c62d140f81699021ea94dc" category="inline-link-macro-rx"></block> usando o modo de manutenção</block>
-  <block id="b7daca44acbdce2ad9adb9ec5b318f4b" category="inline-link">Documentação do StorageGRID 12.0</block>
-  <block id="9dfc67a67b34935b9d51d04e94d0bd2f" category="paragraph">Vá para<block ref="b9e47dcffd0e3534b2aa2e23c80b77c4" category="inline-link-rx"></block> para aprender como configurar e usar um sistema StorageGRID 12.0.</block>
   <block id="63e3b64d9d602e40bbccab8712d1918a" category="list-text"><block ref="63e3b64d9d602e40bbccab8712d1918a" category="inline-link-rx"></block></block>
   <block id="4acae57d3119f0b81d2bfd14c9585f13" category="doc">Soluções e recursos do StorageGRID</block>
   <block id="7a4f669ff4b9f9df5860c2049386e61b" category="paragraph">Vá para<block ref="f382e11c205630073ea43ce3c4862094" category="inline-link-rx"></block> para aprender como testar e habilitar aplicativos em seu ambiente StorageGRID .</block>
@@ -5816,7 +5795,6 @@
   <block id="aad8333d9e08949cd787302910775fbd" category="inline-link-macro">Instruções para adicionar um compartimento de expansão a um SG6200 já instalado</block>
   <block id="77541c94006da9bb86a8b552d9150ad3" category="list-text">Se o seu dispositivo de storage incluir um compartimento de expansão, consulte as <block ref="3c6d222471db8085e113525c8d296c6e" category="inline-link-macro-rx"></block> informações de cabeamento.</block>
   <block id="0b778849bc67a68c1504430e6f89c910" category="doc">Altere a senha de administrador ou root do BMC em um dispositivo StorageGRID</block>
-  <block id="1e4d0568052c73aee41b0cb2ff1595bd" category="summary">A interface de usuário para o controlador de gerenciamento da placa-mãe (BMC) nos dispositivos SG6200, SG6100, SG6000 ou de serviços fornece informações de status sobre o hardware e permite configurar as definições de SNMP e outras opções para os dispositivos.</block>
   <block id="adf9a7e2462899f094ee8d99eacd965c" category="doc">BMC interface para dispositivos de storage SG6000, SG6100 e SG6200 StorageGRID e appliances de serviços</block>
   <block id="75fa8c64fee9e263091f2aabe5ba9979" category="paragraph">A interface de usuário para o controlador de gerenciamento da placa-mãe (BMC) fornece informações de status sobre o seu hardware e permite acesso de baixo nível ao hardware para configuração, monitoramento e diagnóstico do dispositivo.</block>
   <block id="1b198eee3944850f4a8e4e9951682d03" category="paragraph">Você pode usar o BMC para:</block>
@@ -5937,7 +5915,6 @@
   <block id="1338bd416f1abedfada7187cbfb63e8d" category="image-alt">Portas de gerenciamento de rede SG6200-CN</block>
   <block id="3148745e05a92a83fbcdbccae31be2ff" category="doc">StorageGRID SG100 e SG1000 appliances</block>
   <block id="8a9e7a4a0ba3117db1340bac2975d997" category="doc">StorageGRID SG110 e SG1100 appliances</block>
-  <block id="54dff7bc9e8851c674baa85e0141c6e2" category="summary">Os StorageGRID SG120 services appliance e SG1200 services appliance podem operar como um Gateway Node e como um Admin Node para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os appliances podem operar como Gateway Nodes e Admin Nodes (primário ou não primário) ao mesmo tempo.</block>
   <block id="72d14a85defc92fd5fda26789faa138e" category="doc">StorageGRID SG120 e SG1200 appliances</block>
   <block id="570d10e11394117783d8c8dab12bf825" category="paragraph">Os dispositivos de serviços StorageGRID SG120 e SG1200 podem operar como um Nó de Gateway e como um Nó de Administração para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como Nós de Gateway e Nós de Administração (primário ou não primário) ao mesmo tempo.</block>
   <block id="d5df4584b0480b86b0b995c289936913" category="paragraph">Os aparelhos SG120 e SG1200 oferecem os seguintes recursos:</block>
@@ -5983,7 +5960,6 @@
   <block id="3d925e4ac6c7edb56daad072a9390dbf" category="section-title">Componentes de hardware SG6200</block>
   <block id="483be79b3dc8c7471d09aae41e9bdf85" category="section-title">Appliance SGF6212</block>
   <block id="cef36d6e2f38b36fe14bff6966550a5a" category="paragraph">O appliance SGF6212 inclui os seguintes componentes:</block>
-  <block id="af670023b4c4ecbebf3b7158d7faf276" category="list-text">Unidade de inicialização interna de 240 GB (inclui o software StorageGRID)</block>
   <block id="a1e9cd3e861e4270eeaaad03d992621e" category="list-text">4 × portas Ethernet 10/25/40/100GbE para tráfego de rede Grid/cliente (ou 4 × 200GbE com placa de rede 200GbE opcional)</block>
   <block id="625a5060aef941dce2ab4f1a83799fff" category="list-text">12 SSDs NVMe para storage</block>
   <block id="3b0c38c561c81b8b7610b9dce48319ec" category="section-title">Appliance SG6260</block>
@@ -6009,7 +5985,6 @@
   <block id="24c4f54304a2b2a1f8221451d3337f81" category="image-alt">SG6260 Vista Traseira</block>
   <block id="652eb9f76a7f5eb8d212f34d0750c8fc" category="paragraph">Fonte de alimentação (1 de 2) para o controlador de computação SG6200-CN</block>
   <block id="78029a54d37a7b9067334796ad30c931" category="paragraph">Conectores para o controlador de computação SG6200-CN</block>
-  <block id="e5a8c894ca52500bc6bcb77e429cb813" category="paragraph">Controlador de storage E-Series E400 (1 de 2) e conectores</block>
   <block id="d753a76a0baf8f1c6857bce395567f76" category="section-title">Controladores SG6200</block>
   <block id="aac0c58f7aca8c4f08a48de6a596c61d" category="section-title">Controlador de computação SG6200-CN</block>
   <block id="a09cfb881650bb87069f49e82edd9a62" category="paragraph">Esta figura mostra as portas na parte traseira do controlador de computação SG6200-CN.</block>
@@ -6233,7 +6208,6 @@
   <block id="d623147a5f7d75bb8912c700c2393455" category="list-text">Você está <block ref="1f791f788031021f9297b1694c7fd1de" category="inline-link-macro-rx"></block> no local onde está substituindo as baterias CMOS no data center.</block>
   <block id="21530853daff50ee68eb3826cbdc3d23" category="admonition">A <block ref="aacef6b8aacbdb58a17a36f8322c5fa8" category="inline-link-macro-rx"></block> é necessária antes de remover o aparelho do rack.</block>
   <block id="7bd65d76c2104f3111ba3e70e63f679b" category="list-text">Você desconectou todos os cabos e <block ref="c69f25429c7763eb6c3c9bf0c5f5c46e" category="inline-link-macro-rx"></block>.</block>
-  <block id="2a2e917b8f70968ad6c8b3c645b9a2bc" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SG120 ou SG1200 se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
   <block id="9e7295186913519c3b66f256adc3bcbc" category="doc">Substituir placa de rede em um SG120 ou SG1200</block>
   <block id="e5c0747c33f9c713cf1e76eeac41700c" category="paragraph">Pode ser necessário substituir a placa de interface de rede (NIC) do SG120 ou SG1200 se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
   <block id="ad2860de0ccbcf99211869ef137b43df" category="list-text">Você está <block ref="1f791f788031021f9297b1694c7fd1de" category="inline-link-macro-rx"></block> onde está substituindo a placa de rede no data center.</block>
@@ -6438,13 +6412,11 @@
   <block id="7ec81f7c59287b2ec24608a13dbeef87" category="paragraph">É possível substituir o compartimento do ventilador em um SG6260.</block>
   <block id="401ba8db4cfce3b1103d073d1ca8e572" category="doc">Substitua o cartucho de energia no compartimento do controlador de armazenamento ou compartimento de expansão (SG6260)</block>
   <block id="1e0769c0e45b3c53ce145d67fc0fa62a" category="paragraph">É possível substituir um compartimento de alimentação em um shelf de controlador de storage SG6260 ou compartimento de expansão (DE460C).</block>
-  <block id="c85adbc7b90b709c79f5f11a6473e485" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SGF6212 se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
   <block id="e1c697f14a5f48d1180fc721ee2847f8" category="doc">Substitua a placa de rede interna no SGF6212 ou SG6200-CN</block>
   <block id="aadb26ed1258e60d5437e37df86b363b" category="paragraph">Pode ser necessário substituir a placa de interface de rede (NIC) interna do SGF6212 ou SG6200-CN se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
   <block id="e90ea74cdd5b93d7b4771e731f1e1a12" category="list-text">Você está <block ref="a553a7500f49ff052d8271ae45ee79db" category="inline-link-macro-rx"></block> onde está substituindo a placa de rede no data center.</block>
   <block id="a10d08d1cc67ca2a00e50e2c259fd686" category="inline-image-macro">Localização das placas de rede no dispositivo</block>
   <block id="a5509df1d5502655fac5ba26da0f1f0e" category="paragraph"><block ref="a5509df1d5502655fac5ba26da0f1f0e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0480b9d04998086ac97bce91f3527114" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) do SG6200-CN se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
   <block id="d34c29ed7eba5e18d02dde98ce165589" category="doc">Substitua a placa de rede externa no SG6200-CN</block>
   <block id="8525225888042219b00b3182f1404adb" category="paragraph">Pode ser necessário substituir a placa de interface de rede (NIC) externa do SG6200-CN se ela não estiver funcionando de forma ideal ou se apresentar defeito.</block>
   <block id="f23564587172dfdbfe2370e00a02a9e5" category="paragraph">Para evitar interrupções de serviço, confirme se todos os outros nós de storage estão conectados à grid antes de iniciar a substituição da Network Interface Card (NIC) ou substitua a NIC durante uma janela de manutenção programada, quando períodos de interrupção de serviço forem aceitáveis. Consulte informações sobre <block ref="5059dc4531f4f3adf649d818b95a89ff" category="inline-link-macro-rx"></block>.</block>
@@ -6571,4 +6543,44 @@
   <block id="966b0abd256df531996f5779b0267572" category="sidebar">Controlador E4000 (SG6260)</block>
   <block id="7a6eea70e2a063993169b9f20b674a54" category="paragraph">Além disso, ao ativar o modo FIPS após ativar a criptografia do nó, o módulo NetApp StorageGRID Kernel Crypto API 6.1.129-1-ntap1-amd64 é usado para criptografia de dados em repouso. Consulte <block ref="fb536484ccdd3f2f62bef4c60558bb81" category="inline-link-rx"></block> para mais informações.</block>
   <block id="8eca4ebb793a1236eac6e1dd47dd0f10" category="section-title">[[poweron]]Ligue o controlador SG6000-CN e verifique o funcionamento</block>
+  <block id="a02c04f57c9d24a09341ad188ad5056d" category="list-text">Se você estiver habilitando o DHCP em alguma porta do nó de destino que tenha sido configurada como estática no nó de origem, certifique-se de que não haja concessões DHCP permanentes para nenhum dos endereços MAC do nó de origem. Se não fizer isso, poderá ocorrer um conflito de endereço IP ao final do processo de clonagem.</block>
+  <block id="96478ad56343da4a15ef813226b04122" category="admonition">Se você encontrar um conflito de endereço IP ao final do processo de clonagem, verifique se não havia concessões DHCP permanentes atribuídas a nenhum dos endereços MAC das portas que tinham endereços IP estáticos no nó de origem e que estavam habilitadas para DHCP no nó de destino. Remova ou atualize as concessões DHCP permanentes no servidor DHCP para resolver esse conflito.</block>
+  <block id="59f7e3046921d51c539dddae36c2f01e" category="list-text">Clonagem já em andamento</block>
+  <block id="898b0a39f4fcce4a02baaef85f8249ed" category="list-text">O appliance de destino não consegue alcançar o nó de administração primário</block>
+  <block id="ada492f01e47b0cf2cb0325cfb6b126b" category="list-text">Os dispositivos de origem e destino não são compatíveis</block>
+  <block id="d891b9ae76665fdd65302619a8cab907" category="list-text">Os dispositivos de origem e destino estão em estados de modo de manutenção diferentes</block>
+  <block id="a1d0f709a30e4dd825cc3f94604ddc58" category="list-text">As versões do instalador do StorageGRID Appliance nos dispositivos de origem e de destino não correspondem</block>
+  <block id="5bfb9b8aced7a740a38c3bd0db4afb0f" category="list-text">Para Storage Nodes, o appliance de destino possui armazenamento incompatível ou capacidade insuficiente</block>
+  <block id="c5cf1be6c0cbbea4909300064ca7fda2" category="list-text">O appliance Target não está pronto</block>
+  <block id="ec0af0bbc716d1a5abbaca3cb637701b" category="inline-link">Alterar a senha do BMC do appliance no Grid Manager</block>
+  <block id="7cd10a307ffaa778f670752af271bec0" category="list-text"><block ref="7cd10a307ffaa778f670752af271bec0" category="inline-link-rx"></block></block>
+  <block id="aa0d1628396078d94f836e15c538d5f9" category="inline-link">Configurar as configurações de endereço IP da LAN BMC</block>
+  <block id="1b40980b31e6fbd345cb7b3dfbdcc7e2" category="list-text"><block ref="1b40980b31e6fbd345cb7b3dfbdcc7e2" category="inline-link-rx"></block></block>
+  <block id="7f6a4921bb59e8bb7057d8d99f29ceba" category="summary">Você pode acessar a interface BMC usando o endereço IP DHCP ou estático da porta de gerenciamento do BMC em alguns modelos de appliance.</block>
+  <block id="5c295dca198e2a97205f66e0540b51da" category="summary">Você deve acessar o StorageGRID Appliance Installer para verificar a versão do instalador e configurar as conexões entre o appliance e as três redes StorageGRID: a Grid Network, a Admin Network (opcional) e a Client Network (opcional).</block>
+  <block id="f923e1c5f5f06ed886029456eda68f25" category="list-text">Gere um arquivo JSON contendo os detalhes de configuração. Trabalhe com seu consultor de Serviços Profissionais da NetApp para usar o <block ref="cb38605f979ad15fdfe0937bcdfa8b06" category="inline-link-macro-rx"></block> (login necessário) para concluir estas etapas:</block>
+  <block id="030b6039a516e96f184d0033c5814913" category="summary">A interface de usuário para o controlador de gerenciamento da placa-mãe (BMC) nos appliances SG6200, SG6100, SG6000 ou de serviços fornece informações de status sobre o hardware e permite que você configure as configurações de SNMP e outras opções para os appliances.</block>
+  <block id="ce3beac288ae30a03c252463cd88a868" category="list-text">Um processador AMD de 3,65 GHz com 16 núcleos (32 threads)</block>
+  <block id="d7b98c4ffe3354b92b68c3db83a903b6" category="summary">O appliance StorageGRID SG5800 é uma plataforma integrada de armazenamento e computação que opera como um Nó de Armazenamento em uma grade StorageGRID. O appliance pode ser usado em um ambiente de grade híbrido que combina Nós de Armazenamento appliance e Nós de Armazenamento virtuais (baseados em software).</block>
+  <block id="54230842be04c518b856973c6c5538dd" category="list-text">Um processador AMD de 3,55 GHz fornecendo 32 núcleos (64 threads)</block>
+  <block id="966a50ab5dd74b514ad3fc94147789aa" category="list-text">Unidade de inicialização interna de 256 GB (inclui o software StorageGRID)</block>
+  <block id="13fb2c57cf2bf7b44f9e7cd6f877ca18" category="summary">StorageGRID fornece duas APIs REST para realizar tarefas de instalação, a StorageGRID Installation API e a StorageGRID Appliance Installer API.</block>
+  <block id="46c643cc3d01be44e67474011d1dd8b3" category="list-text">*senha-temporária*: Operações na senha temporária para proteger a mgmt-api durante a instalação.</block>
+  <block id="8c4a2e17b81ab2d77d98df9bed08e6b9" category="paragraph"><block ref="8c4a2e17b81ab2d77d98df9bed08e6b9" category="inline-link-rx"></block></block>
+  <block id="282418dc956670d70cbccc928ae61570" category="paragraph">NIC 1 no conjunto riser de um slot</block>
+  <block id="c95e915262dda80ae4ee7b439321663d" category="paragraph">Portas de rede Ethernet 10/25-GbE para as redes Grid e de clientes</block>
+  <block id="9ca0a6cf757875ae6fac7bb5191dd0d2" category="paragraph">NIC 2 no conjunto riser de um slot</block>
+  <block id="2568c6c63541d1ca1e03cf2d69d3b8f6" category="paragraph">Portas de rede Ethernet 1/10-GbE para Admin Network</block>
+  <block id="d96661054a63102b40cffbc0a3c80934" category="paragraph">NIC 3 no conjunto riser de um slot</block>
+  <block id="24b89649152883ff93478293160852c4" category="admonition">O dispositivo SG1200 suporta portas de rede de alta velocidade e pode ter NICs de alta velocidade instaladas.</block>
+  <block id="8c088bcedd8df5fd658d18dd1f766f49" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SGF6112 se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
+  <block id="29c5953fe558bfdf13f8371d885e60da" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SG6100-CN se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
+  <block id="b03c6be97f39c7f0ba4c6b57360c5c24" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SGF6212 se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
+  <block id="ea0f3ca004bd8c54c135a08d619fd276" category="admonition">Alguns appliances suportam portas de rede de alta velocidade e podem ter NICs de alta velocidade instaladas.</block>
+  <block id="09edbf13f6b5850cdc6dfc569bc775ad" category="summary">Pode ser necessário substituir a placa de interface de rede (NIC) no SG6200-CN se ela não estiver funcionando corretamente ou se tiver apresentado defeito.</block>
+  <block id="73b13828240be2d4ed9ff2f029c5ac9c" category="summary">Para controladores de armazenamento que atualmente usam SANtricity OS 08.42.20.00 (11.42) ou mais recente, você pode usar o Grid Manager ou o modo de manutenção para aplicar uma atualização.</block>
+  <block id="3d2cdd02c109aa569f1302e572d040ba" category="inline-link">Documentação do StorageGRID 12.1</block>
+  <block id="04d321322c8bed5ea3ecf52d0cc925ff" category="paragraph">Acesse <block ref="96bdbd25d3882b5d0b14b10ec28bb02d" category="inline-link-rx"></block> para aprender como configurar e usar um sistema StorageGRID 12.1.</block>
+  <block id="db37c78d5faa7061d7b5039209b440c1" category="list-text"><block ref="db37c78d5faa7061d7b5039209b440c1" category="inline-link-rx"></block></block>
+  <block id="d70a1ab70742f2af598f9acb795fc0f2" category="sidebar">Documentação do StorageGRID 12.1</block>
 </blocks>

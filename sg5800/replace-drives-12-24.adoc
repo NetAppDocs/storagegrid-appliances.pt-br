@@ -34,6 +34,7 @@ O Gerenciador de Grade do StorageGRID monitora o status do dispositivo e gera al
 
 
 
+[[step-1-prepare-to-replace-drive]]
 == Passo 1: Prepare-se para substituir a unidade
 
 Prepare-se para substituir uma unidade verificando o Guru de recuperação no Gerenciador de sistema do SANtricity e completando quaisquer etapas de pré-requisito. Em seguida, você pode localizar o componente com falha.
@@ -63,6 +64,7 @@ NOTE: Se você estiver substituindo uma unidade em uma prateleira que tenha um p
 
 
 
+[[step-2-remove-failed-drive]]
 == Etapa 2: Remover a unidade com falha
 
 Remova uma unidade com falha para substituí-la por uma nova.
@@ -86,6 +88,7 @@ NOTE: Se remover acidentalmente uma unidade ativa, aguarde pelo menos 30 segundo
 
 
 
+[[step-3-install-new-drive]]
 == Passo 3: Instale a nova unidade
 
 Instale uma nova unidade para substituir a que falhou.
@@ -108,6 +111,7 @@ NOTE: Dependendo da sua configuração, o controlador pode reconstruir automatic
 
 
 
+[[step-4-complete-drive-replacement]]
 == Passo 4: Substituição completa da unidade
 
 Conclua a substituição da unidade para confirmar se a nova unidade está funcionando corretamente.

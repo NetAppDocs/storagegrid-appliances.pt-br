@@ -46,6 +46,7 @@ image:../media/manage_drives_tab_details.png["Guia gerir unidades Detalhes da un
 
 
 
+[[turn-locator-light-on-or-off]]
 == Ligue ou desligue a luz do localizador
 
 Para localizar fisicamente uma unidade no aparelho:
@@ -66,6 +67,7 @@ O painel de detalhes da unidade é exibido.
 
 
 
+[[logically-replace-drivelogically-replace-drive]]
 == [[logicamente-replace-drive]]logicamente substitua a unidade
 
 Se uma unidade no dispositivo de armazenamento precisar ser reconstruída ou reinicializada:
@@ -83,6 +85,7 @@ No painel de detalhes da unidade, o status da unidade indica _reconstruindo_. A 
 
 
 
+[[fail-drive]]
 == Falha na unidade
 
 Para a solução de problemas, você pode "falhar" manualmente uma unidade que você suspeita estar com defeito. O sistema funcionará sem essa unidade.

@@ -2,7 +2,7 @@
 permalink: installconfig/hardware-description-sg110-and-1100.html 
 sidebar: sidebar 
 keywords: storagegrid, sg110, sg1100, service appliance, services appliance, gateway Node, admin node, overview, models, features, applications, how to use, services 
-summary: 'O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administrador (primários ou não primários) ao mesmo tempo.' 
+summary: 'O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100 podem operar como um nó de gateway e como um nó de administrador para fornecer serviços de balanceamento de carga de alta disponibilidade em um sistema StorageGRID. Ambos os dispositivos podem operar como nós de gateway e nós de administração (primários ou não primários) ao mesmo tempo.' 
 ---
 = StorageGRID SG110 e SG1100 appliances
 :allow-uri-read: 
@@ -15,6 +15,7 @@ O dispositivo de serviços StorageGRID SG110 e o dispositivo de serviços SG1100
 
 
 
+[[appliance-features]]
 == Caraterísticas do aparelho
 
 Ambos os modelos do dispositivo de serviços fornecem os seguintes recursos:
@@ -33,6 +34,7 @@ Ambos os modelos do dispositivo de serviços fornecem os seguintes recursos:
 
 
 
+[[sg110-and-sg1100-diagrams]]
 == Diagramas SG110D e SG1100D.
 
 Esta figura mostra a parte frontal do SG110 e do SG1100 com a moldura removida. Pela frente, os dois aparelhos são idênticos, exceto o nome do produto na moldura.
@@ -78,6 +80,7 @@ Identifique o LED
 |===
 
 
+[[sg110-connectors]]
 == Conetores SG110
 
 Esta figura mostra a parte de trás do SG110, incluindo as portas, os ventiladores e as fontes de alimentação.
@@ -154,6 +157,7 @@ Opções:
 |===
 
 
+[[sg1100-connectors]]
 == Conetores SG1100
 
 Esta figura mostra os conetores na parte de trás do SG1100.
@@ -230,6 +234,7 @@ Opções:
 |===
 
 
+[[sg110-and-sg1100-applications]]
 == Aplicações SG110 e SG1100
 
 Você pode configurar os dispositivos de serviços StorageGRID de várias maneiras para fornecer serviços de gateway, bem como redundância de alguns serviços de administração de grade.

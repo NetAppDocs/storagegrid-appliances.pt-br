@@ -20,6 +20,7 @@ Você instala um conjunto de trilhos em seu gabinete ou rack e, em seguida, desl
 
 
 
+[[install-sg5712]]
 == Instale o SG5712
 
 Siga estas etapas para instalar um dispositivo SG5712 em um rack ou gabinete.
@@ -40,6 +41,7 @@ CAUTION: Instale o hardware a partir da parte inferior do rack ou gabinete ou ra
 
 
 
+[[install-sg5760]]
 == Instale o SG5760
 
 Siga estas etapas para instalar um dispositivo SG5760 e quaisquer prateleiras de expansão em um rack ou gabinete.

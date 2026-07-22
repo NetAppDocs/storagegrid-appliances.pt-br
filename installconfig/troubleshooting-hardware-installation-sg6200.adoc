@@ -15,6 +15,7 @@ Se você encontrar problemas durante a instalação, talvez seja útil revisar i
 
 
 
+[[view-boot-codesview-boot-up-codes-sgf6212-and-sg6260-only]]
 == [[view-boot-codes]]Exibir códigos de inicialização (somente SGF6212 e SG6260)
 
 Quando você aplica energia ao aparelho, o BMC Registra uma série de códigos de inicialização. Você pode exibir esses códigos em um console gráfico conetado à porta de gerenciamento do BMC.
@@ -188,6 +189,7 @@ O StorageGRID está em execução.
 
 
 
+[[view-error-codesview-error-codes-sgf6212-and-sg6260-only]]
 == [[view-error-codes]]Exibir códigos de erro (somente SGF6212 e SG6260)
 
 Se ocorrer um erro de hardware quando o aparelho está inicializando, o BMC Registra um código de erro. Conforme necessário, você pode visualizar esses códigos de erro usando a porta serial do dispositivo e, em seguida, trabalhar com suporte técnico para resolver o problema.
@@ -560,6 +562,8 @@ MRC: ERR_INTERLEAVE_FAILURE
 
 
 
+[[hardware-setup-appears-to-hang]]
+[[hardware-setup-hangs]]
 == A configuração do hardware parece travar
 
 O Instalador de dispositivos StorageGRID pode não estar disponível se falhas de hardware ou erros de cabeamento impedirem que o aparelho conclua seu processamento de inicialização.
@@ -571,10 +575,12 @@ O Instalador de dispositivos StorageGRID pode não estar disponível se falhas d
 
 
 
+[[connection-issues]]
 == Problemas de conexão
 
 
 
+[[expansion-shelves-dont-appear-in-appliance-installer-sg6260]]
 === Os compartimentos de expansão não aparecem no Appliance Installer (SG6260)
 
 Se você instalou prateleiras de expansão e elas não aparecem no Instalador de dispositivos StorageGRID, verifique se as prateleiras foram completamente instaladas e ligadas.
@@ -599,6 +605,7 @@ Se as páginas do Instalador do StorageGRID Appliance não indicarem que as prat
 
 
 
+[[unable-to-connect-to-appliance]]
 === Não foi possível ligar ao aparelho
 
 Se você não conseguir se conetar ao dispositivo de armazenamento, pode haver um problema de rede ou a instalação de hardware pode não ter sido concluída com êxito.

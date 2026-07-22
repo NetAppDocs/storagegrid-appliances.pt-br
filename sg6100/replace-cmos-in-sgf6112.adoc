@@ -21,6 +21,7 @@ Use estes procedimentos para:
 
 
 
+[[remove-the-cmos-battery]]
 == Retire a bateria CMOS
 
 .Antes de começar
@@ -76,6 +77,7 @@ image::../media/SGF6112-battery-cmos.png[Clipe de bateria CMOS]
 
 
 
+[[reinstall-the-cmos-battery]]
 == Volte a instalar a bateria CMOS
 
 Instale a bateria CMOS de substituição na tomada na placa de sistema.
