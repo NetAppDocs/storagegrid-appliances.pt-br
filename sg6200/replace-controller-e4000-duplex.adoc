@@ -67,7 +67,7 @@ Guarde os materiais de embalagem a utilizar ao enviar o controlador avariado.
 [[step-2-take-the-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
-Prepare-se para remover o controlador com falha e colocá-lo offline. Você pode usar o Gerenciador de sistema do SANtricity para executar estas etapas.
+Prepare-se para remover o controlador com falha e tirá-lo de operação. Você pode usar o SANtricity System Manager para realizar estas etapas.
 
 .Passos
 . Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.

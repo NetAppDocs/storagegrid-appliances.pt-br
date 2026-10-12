@@ -4564,8 +4564,6 @@
   <block id="ac4aec48ca363c61bde0b90a6357d2e0" category="list-text">Desembale o novo controlador e coloque-o numa superfície plana e livre de estática.</block>
   <block id="71e69069470b78afcfd4256b5538ddde" category="paragraph">Guarde os materiais de embalagem a utilizar ao enviar o controlador avariado.</block>
   <block id="e5a03effd8c40e9251d96a430d99a606" category="list-text">Localize o endereço MAC e as etiquetas de número de peça FRU na parte traseira do controlador de substituição.</block>
-  <block id="7dc8820948fbd0653bf70cd43dd02d4c" category="paragraph">Prepare-se para remover o controlador com falha e colocá-lo offline.</block>
-  <block id="e8eb7bc58567e1c605a82158f0f62428" category="list-text">Prepare-se para remover o controlador. Use o Gerenciador de sistema do SANtricity para executar estas etapas.</block>
   <block id="270d6e2086af600326a1899c14eefca1" category="list-text">Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.</block>
   <block id="3a3cd7aeaa367cf5f0aa0b6e9c59f5d6" category="paragraph">Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, você pode procurar o controlador na guia *base*.</block>
   <block id="96f2b7281e6f62383360de5bc3626f95" category="admonition">*Possível perda de acesso aos dados e n.o 8212;* se os dois números de peça não forem os mesmos, não tente este procedimento.</block>
@@ -4729,7 +4727,6 @@
   <block id="4172e18c4b5f5ded61ea837b6d174a70" category="paragraph">Talvez seja necessário substituir um controlador E4000 se ele não estiver funcionando de forma ideal ou se ele tiver falhado.</block>
   <block id="58bdf6822075a4522e563db052cfb6b5" category="list-text">Um alerta do Gerenciador de Grade indica uma condição de falha do controlador de armazenamento e o Gerenciador de Grade ou o Guru de recuperação no Gerenciador de sistema do SANtricity direcionam você para substituir o controlador.</block>
   <block id="6699424a5a659b766310c519be0f253d" category="paragraph">Prepare o controlador E4000 de substituição.</block>
-  <block id="360f56d807bee32cc6fcc9d9bfb9b6f5" category="paragraph">Prepare-se para remover o controlador com falha e colocá-lo offline. Você pode usar o Gerenciador de sistema do SANtricity para executar estas etapas.</block>
   <block id="fe4869120ffec76b394daa282d99bd5b" category="paragraph">Remova um recipiente do controlador.</block>
   <block id="1a2315b8628ae30414325b0eac31bb35" category="paragraph">Retire a bateria do controlador desativado e instale-a no controlador de substituição, se necessário.</block>
   <block id="29f964bec5ac520e4a2bd92eb3884f71" category="list-text">Mova a bateria para o recipiente do controlador de substituição e instale-a:</block>
@@ -5552,7 +5549,6 @@
   <block id="9cb2effa5447f497640162f9043211b9" category="section-title">A rede do cliente pode ser configurada sem um endereço IP</block>
   <block id="9b21fb91c113bca08c0dafc981fbde3c" category="paragraph">Agora você pode habilitar a Rede do Cliente sem especificar um endereço IP.  Isso permite que a rede do cliente tenha interfaces VLAN configuradas no StorageGRID sem exigir um endereço IP extra para a própria interface. Consulte <block ref="eed0824756b778339518fbc737f79ca8" category="inline-link-macro-rx"></block> .</block>
   <block id="35fbd63802091eabd711a8d6c290ea7e" category="section-title">Números de versão do software StorageGRID e do Appliance Installer alinhados</block>
-  <block id="07df4015289344b98ba5f422f4375357" category="paragraph">Com o StorgeGRID versão 12.0, o número da versão do StorageGRID Appliance Installer corresponde à versão do software StorageGRID .  Os usuários não precisam mais descobrir quais versões funcionam juntas. Consulte <block ref="d2475d6316f915c8f13cbc6042a2740a" category="inline-link-macro-rx"></block> .</block>
   <block id="cc40ed7be5c299ae5a8b275911b0f977" category="paragraph">Informações detalhadas sobre o uso da interface BMC do dispositivo StorageGRID agora estão disponíveis. Consulte <block ref="df528c7928eba5c1226970c2705dfb3a" category="inline-link-macro-rx"></block> .</block>
   <block id="7fb4dbe99c9c5f63516376b6bf611317" category="sidebar">Documentação do StorageGRID 12.0</block>
   <block id="ca92eb1bedb20765e52302f985f5f837" category="sidebar">Atualizar firmware da unidade (método de reinicialização automática)</block>
@@ -6583,4 +6579,8 @@
   <block id="04d321322c8bed5ea3ecf52d0cc925ff" category="paragraph">Acesse <block ref="96bdbd25d3882b5d0b14b10ec28bb02d" category="inline-link-rx"></block> para aprender como configurar e usar um sistema StorageGRID 12.1.</block>
   <block id="db37c78d5faa7061d7b5039209b440c1" category="list-text"><block ref="db37c78d5faa7061d7b5039209b440c1" category="inline-link-rx"></block></block>
   <block id="d70a1ab70742f2af598f9acb795fc0f2" category="sidebar">Documentação do StorageGRID 12.1</block>
+  <block id="773b50832a8313c20ea7f7ec3cb3c5e4" category="paragraph">Prepare-se para remover o controlador com falha e tirá-lo de operação. Você usa o SANtricity System Manager para realizar estas etapas.</block>
+  <block id="5e4e9f34966ee54cc6cc4af50cd4835c" category="paragraph">Pode ser necessário substituir o controlador E4000 se ele não estiver funcionando corretamente ou se apresentar defeito.</block>
+  <block id="d23e59635824c5cc5d1b8b63a31f939f" category="paragraph">Prepare-se para remover o controlador com falha e tirá-lo de operação. Você pode usar o SANtricity System Manager para realizar estas etapas.</block>
+  <block id="46d7056058f07da95a8d94d297493eb9" category="paragraph">Com a versão 12.0 do StorageGRID, o número da versão do StorageGRID Appliance Installer corresponde à versão do software StorageGRID. Você não precisa mais descobrir quais versões funcionam juntas. Consulte <block ref="d2475d6316f915c8f13cbc6042a2740a" category="inline-link-macro-rx"></block>.</block>
 </blocks>

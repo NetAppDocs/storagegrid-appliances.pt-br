@@ -118,12 +118,10 @@ A placa de interface de host (HIC) de 4 portas. Esta placa tem de ser movida par
 [[step-2-take-the-controller-offline]]
 == Passo 2: Coloque o controlador offline
 
-Prepare-se para remover o controlador com falha e colocá-lo offline.
+Prepare-se para remover o controlador com falha e tirá-lo de operação. Você usa o SANtricity System Manager para realizar estas etapas.
 
 .Passos
-. Prepare-se para remover o controlador. Use o Gerenciador de sistema do SANtricity para executar estas etapas.
-+
-.. Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.
+. Confirme se o número de peça de substituição para o controlador com falha é o mesmo que o número de peça FRU para o controlador de substituição.
 +
 Quando um controlador tem uma falha e precisa ser substituído, o número de peça de substituição é exibido na área Detalhes do Recovery Guru. Se você precisar encontrar esse número manualmente, você pode procurar o controlador na guia *base*.
 
@@ -131,19 +129,16 @@ Quando um controlador tem uma falha e precisa ser substituído, o número de pe�
 
 CAUTION: *Possível perda de acesso aos dados e n.o 8212;* se os dois números de peça não forem os mesmos, não tente este procedimento.
 
-.. Faça uma cópia de segurança da base de dados de configuração.
+. Faça uma cópia de segurança da base de dados de configuração.
 +
 Se ocorrer um problema ao remover um controlador, pode utilizar o ficheiro guardado para restaurar a configuração.
 
-.. Colete dados de suporte para o dispositivo.
+. Colete dados de suporte para o dispositivo.
 +
 
 NOTE: A coleta de dados de suporte antes e depois da substituição de um componente garante que você possa enviar um conjunto completo de logs para o suporte técnico se a substituição não resolver o problema.
 
-.. Leve o controlador que pretende substituir offline.
-
-
-. Desligue o compartimento do controlador.
+. Leve o controlador que pretende substituir offline.
 
 
 
